@@ -1,0 +1,1962 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>02_关联容器 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_动态内存.html" />
+    
+    
+    <link rel="prev" href="01_泛型算法.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01_泛型算法.html">
+            
+                <a href="01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.2" data-path="02_关联容器.html">
+            
+                <a href="02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="03_动态内存.html">
+            
+                <a href="03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04_拷贝控制.html">
+            
+                <a href="04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="05_重载运算与类型转换.html">
+            
+                <a href="05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06_面向对象程序设计.html">
+            
+                <a href="06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="07_模板与泛型编程.html">
+            
+                <a href="07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="08_标准库特殊设施.html">
+            
+                <a href="08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="09_用于大型程序的工具.html">
+            
+                <a href="09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="10_特殊工具与技术.html">
+            
+                <a href="10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="11_lambda表达式的类型.html">
+            
+                <a href="11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="12_nullptr.html">
+            
+                <a href="12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Effective-Modern-C++/">
+            
+                <a href="../Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >02_关联容器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#c-关联容器详解"><b></b>C++ 关联容器详解</a></li><ul><li><span class="title-icon "></span><a href="#关联容器概述"><b></b>关联容器概述</a></li><ul><li><span class="title-icon "></span><a href="#头文件和容器类型"><b></b>头文件和容器类型</a></li></ul><li><span class="title-icon "></span><a href="#1-使用关联容器"><b></b>1. 使用关联容器</a></li><ul><li><span class="title-icon "></span><a href="#11-map-容器"><b></b>1.1 map 容器</a></li><li><span class="title-icon "></span><a href="#12-set-容器"><b></b>1.2 set 容器</a></li><li><span class="title-icon "></span><a href="#13-multi-容器"><b></b>1.3 multi 容器</a></li></ul><li><span class="title-icon "></span><a href="#2-关键字类型的要求"><b></b>2. 关键字类型的要求</a></li><ul><li><span class="title-icon "></span><a href="#默认排序准则"><b></b>默认排序准则</a></li><li><span class="title-icon "></span><a href="#自定义排序准则"><b></b>自定义排序准则</a></li></ul><li><span class="title-icon "></span><a href="#3-pair-类型"><b></b>3. pair 类型</a></li><ul><li><span class="title-icon "></span><a href="#pair-的操作"><b></b>pair 的操作</a></li><li><span class="title-icon "></span><a href="#创建和使用pair"><b></b>创建和使用pair</a></li></ul><li><span class="title-icon "></span><a href="#4-关联容器操作"><b></b>4. 关联容器操作</a></li><li><span class="title-icon "></span><a href="#5-关联容器迭代器"><b></b>5. 关联容器迭代器</a></li><ul><li><span class="title-icon "></span><a href="#51-解引用关联容器迭代器"><b></b>5.1 解引用关联容器迭代器</a></li><li><span class="title-icon "></span><a href="#52-set-的迭代器是常量迭代器"><b></b>5.2 set 的迭代器是常量迭代器</a></li><li><span class="title-icon "></span><a href="#53-遍历关联容器"><b></b>5.3 遍历关联容器</a></li><li><span class="title-icon "></span><a href="#54-关联容器和泛型算法"><b></b>5.4 关联容器和泛型算法</a></li></ul><li><span class="title-icon "></span><a href="#6-添加元素"><b></b>6. 添加元素</a></li><ul><li><span class="title-icon "></span><a href="#61-pair的四种创建方式"><b></b>6.1 pair的四种创建方式</a></li><li><span class="title-icon "></span><a href="#62-insert和emplace操作"><b></b>6.2 insert和emplace操作</a></li><li><span class="title-icon "></span><a href="#63-检测插入操作的返回值"><b></b>6.3 检测插入操作的返回值</a></li></ul><li><span class="title-icon "></span><a href="#7-删除元素"><b></b>7. 删除元素</a></li><ul><li><span class="title-icon "></span><a href="#71-erase操作"><b></b>7.1 erase操作</a></li></ul><li><span class="title-icon "></span><a href="#8-map的下标操作"><b></b>8. map的下标操作</a></li><ul><li><span class="title-icon "></span><a href="#81-下标操作和at函数"><b></b>8.1 下标操作和at函数</a></li><li><span class="title-icon "></span><a href="#82-下标运算符的特性"><b></b>8.2 下标运算符的特性</a></li></ul><li><span class="title-icon "></span><a href="#9-访问元素"><b></b>9. 访问元素</a></li><ul><li><span class="title-icon "></span><a href="#91-查找元素"><b></b>9.1 查找元素</a></li><li><span class="title-icon "></span><a href="#92-处理multimap或multiset中的元素"><b></b>9.2 处理multimap或multiset中的元素</a></li></ul><li><span class="title-icon "></span><a href="#10-无序容器"><b></b>10. 无序容器</a></li><ul><li><span class="title-icon "></span><a href="#101-无序容器的基本原理"><b></b>10.1 无序容器的基本原理</a></li><li><span class="title-icon "></span><a href="#102-桶管理"><b></b>10.2 桶管理</a></li><li><span class="title-icon "></span><a href="#103-自定义类型的要求"><b></b>10.3 自定义类型的要求</a></li></ul></ul></ul></div><a href="#c-关联容器详解" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#c-关联容器详解">C++ 关联容器详解</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#关联容器概述">关联容器概述</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#头文件和容器类型">头文件和容器类型</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#1-使用关联容器">1. 使用关联容器</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#11-map-容器">1.1 map 容器</a><i></i></div></li>
+<li><div><a href="#12-set-容器">1.2 set 容器</a><i></i></div></li>
+<li><div><a href="#13-multi-容器">1.3 multi 容器</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2-关键字类型的要求">2. 关键字类型的要求</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#默认排序准则">默认排序准则</a><i></i></div></li>
+<li><div><a href="#自定义排序准则">自定义排序准则</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#3-pair-类型">3. pair 类型</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#pair-的操作">pair 的操作</a><i></i></div></li>
+<li><div><a href="#创建和使用pair">创建和使用pair</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#4-关联容器操作">4. 关联容器操作</a><i></i></div></li>
+<li><div><a href="#5-关联容器迭代器">5. 关联容器迭代器</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#51-解引用关联容器迭代器">5.1 解引用关联容器迭代器</a><i></i></div></li>
+<li><div><a href="#52-set-的迭代器是常量迭代器">5.2 set 的迭代器是常量迭代器</a><i></i></div></li>
+<li><div><a href="#53-遍历关联容器">5.3 遍历关联容器</a><i></i></div></li>
+<li><div><a href="#54-关联容器和泛型算法">5.4 关联容器和泛型算法</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#6-添加元素">6. 添加元素</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#61-pair的四种创建方式">6.1 pair的四种创建方式</a><i></i></div></li>
+<li><div><a href="#62-insert和emplace操作">6.2 insert和emplace操作</a><i></i></div></li>
+<li><div><a href="#63-检测插入操作的返回值">6.3 检测插入操作的返回值</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#7-删除元素">7. 删除元素</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#71-erase操作">7.1 erase操作</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#8-map的下标操作">8. map的下标操作</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#81-下标操作和at函数">8.1 下标操作和at函数</a><i></i></div></li>
+<li><div><a href="#82-下标运算符的特性">8.2 下标运算符的特性</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#9-访问元素">9. 访问元素</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#91-查找元素">9.1 查找元素</a><i></i></div></li>
+<li><div><a href="#92-处理multimap或multiset中的元素">9.2 处理multimap或multiset中的元素</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#方法一：使用find和count">方法一：使用find和count</a><i></i></div></li>
+<li><div><a href="#方法二：使用lowerbound和upperbound">方法二：使用lower_bound和upper_bound</a><i></i></div></li>
+<li><div><a href="#方法三：使用equalrange">方法三：使用equal_range</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#10-无序容器">10. 无序容器</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#101-无序容器的基本原理">10.1 无序容器的基本原理</a><i></i></div></li>
+<li><div><a href="#102-桶管理">10.2 桶管理</a><i></i></div></li>
+<li><div><a href="#103-自定义类型的要求">10.3 自定义类型的要求</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="c-关联容器详解"><a name="c-关联容器详解" class="anchor-navigation-ex-anchor" href="#c-关联容器详解"><i class="fa fa-link" aria-hidden="true"></i></a>C++ 关联容器详解</h1>
+<h2 id="关联容器概述"><a name="关联容器概述" class="anchor-navigation-ex-anchor" href="#关联容器概述"><i class="fa fa-link" aria-hidden="true"></i></a>关联容器概述</h2>
+<p>关联容器是C++标准库中的一类重要容器，它们将值与键关联起来，并通过键快速访问值。两个主要的关联容器类型是 <strong>map</strong> 和 <strong>set</strong>。</p>
+<p>C++标准库提供了8种关联容器，它们之间的区别主要体现在三个方面：</p>
+<ol>
+<li>容器类型：<strong>map</strong>（键值对）或 <strong>set</strong>（仅键）</li>
+<li>键的唯一性：键可以重复（multi）或必须唯一</li>
+<li>元素顺序：有序存储或无序（哈希表实现）存储</li>
+</ol>
+<p>下表展示了8种关联容器的特点：</p>
+<p><img src="assets/table 11.1.png" alt="关联容器类型表"></img></p>
+<h3 id="头文件和容器类型"><a name="头文件和容器类型" class="anchor-navigation-ex-anchor" href="#头文件和容器类型"><i class="fa fa-link" aria-hidden="true"></i></a>头文件和容器类型</h3>
+<ul>
+<li><p><strong>有序容器</strong>：</p>
+<ul>
+<li><code>map</code> 和 <code>multimap</code> 定义在 <code>&lt;map&gt;</code> 头文件中</li>
+<li><code>set</code> 和 <code>multiset</code> 定义在 <code>&lt;set&gt;</code> 头文件中</li>
+</ul>
+</li>
+<li><p><strong>无序容器</strong>：</p>
+<ul>
+<li><code>unordered_map</code> 和 <code>unordered_multimap</code> 定义在 <code>&lt;unordered_map&gt;</code> 头文件中</li>
+<li><code>unordered_set</code> 和 <code>unordered_multiset</code> 定义在 <code>&lt;unordered_set&gt;</code> 头文件中</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-使用关联容器"><a name="1-使用关联容器" class="anchor-navigation-ex-anchor" href="#1-使用关联容器"><i class="fa fa-link" aria-hidden="true"></i></a>1. 使用关联容器</h2>
+<p>所有关联容器都提供高效的关键字查询和访问操作。<strong>关联容器的迭代器都是双向迭代器</strong>，支持前向和后向遍历。</p>
+<h3 id="11-map-容器"><a name="11-map-容器" class="anchor-navigation-ex-anchor" href="#11-map-容器"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 map 容器</h3>
+<p><code>map</code> 是键值对（key-value pair）的集合，每个键对应一个值。</p>
+<pre><code class="lang-cpp">map&lt;string, <span class="hljs-type">int</span>&gt; word_count; <span class="hljs-comment">// 字符串到整数的映射</span>
+word_count[<span class="hljs-string">"hello"</span>] = <span class="hljs-number">1</span>;     <span class="hljs-comment">// 插入键值对 {"hello", 1}</span>
+</code></pre>
+<p><code>map</code> 类型通常被称为<strong>关联数组</strong>（associative array），与普通数组相比，其最大的不同在于<strong>下标（键）不必是整数</strong>，可以是任何能比较大小的类型。</p>
+<h3 id="12-set-容器"><a name="12-set-容器" class="anchor-navigation-ex-anchor" href="#12-set-容器"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 set 容器</h3>
+<p><code>set</code> 是关键字的简单集合，值就是键，每个键只能出现一次。</p>
+<pre><code class="lang-cpp">set&lt;string&gt; exclude = {<span class="hljs-string">"the"</span>, <span class="hljs-string">"but"</span>, <span class="hljs-string">"and"</span>, <span class="hljs-string">"or"</span>, <span class="hljs-string">"an"</span>, <span class="hljs-string">"a"</span>};
+<span class="hljs-keyword">if</span> (exclude.<span class="hljs-built_in">find</span>(<span class="hljs-string">"the"</span>) != exclude.<span class="hljs-built_in">end</span>())
+    cout &lt;&lt; <span class="hljs-string">"Found 'the'"</span> &lt;&lt; endl;  <span class="hljs-comment">// 将会执行</span>
+</code></pre>
+<p>当我们只需要知道一个值是否存在时，<code>set</code> 是最有用的容器类型。</p>
+<h3 id="13-multi-容器"><a name="13-multi-容器" class="anchor-navigation-ex-anchor" href="#13-multi-容器"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 multi 容器</h3>
+<p>带有 <code>multi</code> 前缀的关联容器（<code>multimap</code>, <code>multiset</code>）允许多个元素具有相同的键。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 允许一个作者有多本书</span>
+multimap&lt;string, string&gt; authors;  <span class="hljs-comment">// 作者到书名的映射</span>
+authors.<span class="hljs-built_in">insert</span>({<span class="hljs-string">"Tolkien"</span>, <span class="hljs-string">"The Hobbit"</span>});
+authors.<span class="hljs-built_in">insert</span>({<span class="hljs-string">"Tolkien"</span>, <span class="hljs-string">"The Lord of the Rings"</span>});  <span class="hljs-comment">// 同一作者的另一本书</span>
+
+<span class="hljs-comment">// 允许集合中有重复元素</span>
+multiset&lt;<span class="hljs-type">int</span>&gt; nums = {<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>};  <span class="hljs-comment">// 包含多个1和3</span>
+cout &lt;&lt; <span class="hljs-string">"Count of 1: "</span> &lt;&lt; nums.<span class="hljs-built_in">count</span>(<span class="hljs-number">1</span>) &lt;&lt; endl;  <span class="hljs-comment">// 输出：Count of 1: 3</span>
+</code></pre>
+<p>对于普通的 <code>set</code> 和 <code>map</code>，插入重复键的元素不会产生任何效果，而 <code>multiset</code> 和 <code>multimap</code> 则会存储所有具有相同键的多个元素。</p>
+<h2 id="2-关键字类型的要求"><a name="2-关键字类型的要求" class="anchor-navigation-ex-anchor" href="#2-关键字类型的要求"><i class="fa fa-link" aria-hidden="true"></i></a>2. 关键字类型的要求</h2>
+<p>关联容器中的关键字必须能够<strong>比较大小</strong>，以便容器能对元素进行排序和查找。</p>
+<h3 id="默认排序准则"><a name="默认排序准则" class="anchor-navigation-ex-anchor" href="#默认排序准则"><i class="fa fa-link" aria-hidden="true"></i></a>默认排序准则</h3>
+<p>默认情况下，标准库使用关键字类型的 <code>&lt;</code> 运算符进行比较。这意味着：</p>
+<ul>
+<li>关键字类型必须定义 <code>&lt;</code> 运算符</li>
+<li>或者，必须提供自定义的比较函数</li>
+</ul>
+<h3 id="自定义排序准则"><a name="自定义排序准则" class="anchor-navigation-ex-anchor" href="#自定义排序准则"><i class="fa fa-link" aria-hidden="true"></i></a>自定义排序准则</h3>
+<p>如果要使用自定义的比较方式，可以在模板参数中提供一个函数类型：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 使用自定义的比较函数</span>
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">compareLength</span><span class="hljs-params">(<span class="hljs-type">const</span> string &amp;a, <span class="hljs-type">const</span> string &amp;b)</span> </span>{
+    <span class="hljs-keyword">return</span> a.<span class="hljs-built_in">size</span>() &lt; b.<span class="hljs-built_in">size</span>();  <span class="hljs-comment">// 按字符串长度比较</span>
+}
+
+<span class="hljs-comment">// 需要在类型后指定比较函数类型</span>
+<span class="hljs-function">map&lt;string, <span class="hljs-type">int</span>, <span class="hljs-title">decltype</span><span class="hljs-params">(compareLength)</span>*&gt; <span class="hljs-title">word_count</span><span class="hljs-params">(compareLength)</span></span>;
+</code></pre>
+<p>自定义的比较函数必须满足严格弱序（strict weak ordering）的要求，确保能够正确排序元素。</p>
+<h2 id="3-pair-类型"><a name="3-pair-类型" class="anchor-navigation-ex-anchor" href="#3-pair-类型"><i class="fa fa-link" aria-hidden="true"></i></a>3. pair 类型</h2>
+<p><code>pair</code> 是一个简单的模板类，用于将两个值组合在一起：</p>
+<ol>
+<li>定义在头文件 <code>&lt;utility&gt;</code> 中</li>
+<li>是一个模板：<code>pair&lt;T1, T2&gt;</code></li>
+<li>数据成员是 <code>public</code> 的，分别为 <code>first</code> 和 <code>second</code></li>
+</ol>
+<h3 id="pair-的操作"><a name="pair-的操作" class="anchor-navigation-ex-anchor" href="#pair-的操作"><i class="fa fa-link" aria-hidden="true"></i></a>pair 的操作</h3>
+<p><img src="assets/table 11.2.png" alt="pair操作表"></img></p>
+<h3 id="创建和使用pair"><a name="创建和使用pair" class="anchor-navigation-ex-anchor" href="#创建和使用pair"><i class="fa fa-link" aria-hidden="true"></i></a>创建和使用pair</h3>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 几种创建pair的方式</span>
+pair&lt;string, <span class="hljs-type">int</span>&gt; word_count1;                  <span class="hljs-comment">// 默认构造</span>
+<span class="hljs-function">pair&lt;string, <span class="hljs-type">int</span>&gt; <span class="hljs-title">word_count2</span><span class="hljs-params">(<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>)</span></span>;      <span class="hljs-comment">// 提供两个值构造</span>
+pair&lt;string, <span class="hljs-type">int</span>&gt; word_count3 = {<span class="hljs-string">"world"</span>, <span class="hljs-number">2</span>};   <span class="hljs-comment">// 列表初始化</span>
+<span class="hljs-keyword">auto</span> p = <span class="hljs-built_in">make_pair</span>(<span class="hljs-string">"C++"</span>, <span class="hljs-number">3</span>);                   <span class="hljs-comment">// 自动推断类型</span>
+
+<span class="hljs-comment">// 访问pair成员</span>
+cout &lt;&lt; p.first &lt;&lt; <span class="hljs-string">": "</span> &lt;&lt; p.second &lt;&lt; endl;    <span class="hljs-comment">// 输出：C++: 3</span>
+</code></pre>
+<h2 id="4-关联容器操作"><a name="4-关联容器操作" class="anchor-navigation-ex-anchor" href="#4-关联容器操作"><i class="fa fa-link" aria-hidden="true"></i></a>4. 关联容器操作</h2>
+<p>关联容器除了支持普通容器操作外，还提供了特定于关联容器的操作，如按键查找等。</p>
+<p><img src="assets/table 11.3.png" alt="关联容器操作表"></img></p>
+<p>使用作用域运算符(<code>::</code>)可以访问容器的类型成员，例如 <code>map&lt;string, int&gt;::key_type</code> 表示 map 的键类型。</p>
+<h2 id="5-关联容器迭代器"><a name="5-关联容器迭代器" class="anchor-navigation-ex-anchor" href="#5-关联容器迭代器"><i class="fa fa-link" aria-hidden="true"></i></a>5. 关联容器迭代器</h2>
+<p>关联容器的迭代器有一些特殊性质，了解这些特性对于正确使用它们非常重要。</p>
+<h3 id="51-解引用关联容器迭代器"><a name="51-解引用关联容器迭代器" class="anchor-navigation-ex-anchor" href="#51-解引用关联容器迭代器"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 解引用关联容器迭代器</h3>
+<p>当我们解引用一个关联容器的迭代器时，得到的是一个 <code>value_type</code> 类型的值的引用：</p>
+<pre><code class="lang-cpp">map&lt;string, <span class="hljs-type">int</span>&gt;::iterator it = word_count.<span class="hljs-built_in">begin</span>();
+<span class="hljs-comment">// *it 是一个 pair&lt;const string, int&gt;&amp; 类型</span>
+cout &lt;&lt; it-&gt;first &lt;&lt; <span class="hljs-string">": "</span> &lt;&lt; it-&gt;second &lt;&lt; endl;
+</code></pre>
+<p>对于 <code>map</code>，<code>value_type</code> 是 <code>pair&lt;const KeyType, ValueType&gt;</code>，第一个成员（键）是常量，不能被修改。</p>
+<blockquote>
+<p><strong>注意</strong>：map 的 value_type 是一个 pair，我们可以改变 pair 的值部分，但不能改变关键字部分。</p>
+</blockquote>
+<h3 id="52-set-的迭代器是常量迭代器"><a name="52-set-的迭代器是常量迭代器" class="anchor-navigation-ex-anchor" href="#52-set-的迭代器是常量迭代器"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 set 的迭代器是常量迭代器</h3>
+<p>由于 <code>set</code> 中元素的值就是键，且键是常量，因此 <code>set</code> 的迭代器是常量迭代器，不能用来修改元素值：</p>
+<pre><code class="lang-cpp">set&lt;<span class="hljs-type">int</span>&gt; iset = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>};
+set&lt;<span class="hljs-type">int</span>&gt;::iterator it = iset.<span class="hljs-built_in">begin</span>();
+<span class="hljs-comment">// *it = 42;  // 错误：set的元素是const的，不能修改</span>
+</code></pre>
+<h3 id="53-遍历关联容器"><a name="53-遍历关联容器" class="anchor-navigation-ex-anchor" href="#53-遍历关联容器"><i class="fa fa-link" aria-hidden="true"></i></a>5.3 遍历关联容器</h3>
+<p>可以使用 <code>begin()</code> 和 <code>end()</code> 操作，以及范围for循环来遍历关联容器：</p>
+<pre><code class="lang-cpp">map&lt;string, <span class="hljs-type">int</span>&gt; word_count = {{<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>}, {<span class="hljs-string">"world"</span>, <span class="hljs-number">2</span>}};
+
+<span class="hljs-comment">// 使用迭代器</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> it = word_count.<span class="hljs-built_in">begin</span>(); it != word_count.<span class="hljs-built_in">end</span>(); ++it) {
+    cout &lt;&lt; it-&gt;first &lt;&lt; <span class="hljs-string">": "</span> &lt;&lt; it-&gt;second &lt;&lt; endl;
+}
+
+<span class="hljs-comment">// 使用范围for循环</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; pair : word_count) {
+    cout &lt;&lt; pair.first &lt;&lt; <span class="hljs-string">": "</span> &lt;&lt; pair.second &lt;&lt; endl;
+}
+</code></pre>
+<h3 id="54-关联容器和泛型算法"><a name="54-关联容器和泛型算法" class="anchor-navigation-ex-anchor" href="#54-关联容器和泛型算法"><i class="fa fa-link" aria-hidden="true"></i></a>5.4 关联容器和泛型算法</h3>
+<p>通常不对关联容器使用泛型算法，原因有两个：</p>
+<ol>
+<li><p><strong>关键字是常量</strong>：关联容器的关键字是 <code>const</code> 的，这意味着算法无法修改 <code>set</code> 的元素和 <code>map</code> 元素（pair）的第一个成员，因此不能用于修改或重排容器元素的算法。</p>
+</li>
+<li><p><strong>查找效率</strong>：关联容器提供的查找算法通常比泛型算法快得多，因为它们利用了关联容器的内部结构。</p>
+</li>
+</ol>
+<p>在实际使用中，如果要对关联容器使用算法，通常有两种情况：</p>
+<ul>
+<li>将关联容器作为输入源序列</li>
+<li>将关联容器作为目标位置（通常需要使用插入迭代器）</li>
+</ul>
+<h2 id="6-添加元素"><a name="6-添加元素" class="anchor-navigation-ex-anchor" href="#6-添加元素"><i class="fa fa-link" aria-hidden="true"></i></a>6. 添加元素</h2>
+<p>向关联容器中添加元素通常使用 <code>insert()</code> 方法，可以插入一个元素或一个范围的元素。</p>
+<h3 id="61-pair的四种创建方式"><a name="61-pair的四种创建方式" class="anchor-navigation-ex-anchor" href="#61-pair的四种创建方式"><i class="fa fa-link" aria-hidden="true"></i></a>6.1 pair的四种创建方式</h3>
+<p>向 <code>map</code> 添加元素时，我们需要创建键值对（pair）。C++提供了多种创建 pair 的方式：</p>
+<p><img src="assets/make_pair.png" alt="pair的创建方式"></img></p>
+<h3 id="62-insert和emplace操作"><a name="62-insert和emplace操作" class="anchor-navigation-ex-anchor" href="#62-insert和emplace操作"><i class="fa fa-link" aria-hidden="true"></i></a>6.2 insert和emplace操作</h3>
+<p>关联容器提供了多种插入元素的方法：</p>
+<p><img src="assets/table 11.4.png" alt="关联容器插入操作"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 向map中插入元素的不同方式</span>
+map&lt;string, <span class="hljs-type">int</span>&gt; word_count;
+
+<span class="hljs-comment">// 方式1：使用insert和value_type</span>
+word_count.<span class="hljs-built_in">insert</span>(map&lt;string, <span class="hljs-type">int</span>&gt;::<span class="hljs-built_in">value_type</span>(<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>));
+
+<span class="hljs-comment">// 方式2：使用insert和pair</span>
+word_count.<span class="hljs-built_in">insert</span>(<span class="hljs-built_in">pair</span>&lt;string, <span class="hljs-type">int</span>&gt;(<span class="hljs-string">"world"</span>, <span class="hljs-number">2</span>));
+
+<span class="hljs-comment">// 方式3：使用insert和花括号列表初始化</span>
+word_count.<span class="hljs-built_in">insert</span>({<span class="hljs-string">"C++"</span>, <span class="hljs-number">3</span>});
+
+<span class="hljs-comment">// 方式4：使用emplace直接构造</span>
+word_count.<span class="hljs-built_in">emplace</span>(<span class="hljs-string">"programming"</span>, <span class="hljs-number">4</span>);
+
+<span class="hljs-comment">// 插入范围</span>
+map&lt;string, <span class="hljs-type">int</span>&gt; other_words = {{<span class="hljs-string">"book"</span>, <span class="hljs-number">5</span>}, {<span class="hljs-string">"pen"</span>, <span class="hljs-number">6</span>}};
+word_count.<span class="hljs-built_in">insert</span>(other_words.<span class="hljs-built_in">begin</span>(), other_words.<span class="hljs-built_in">end</span>());
+</code></pre>
+<h3 id="63-检测插入操作的返回值"><a name="63-检测插入操作的返回值" class="anchor-navigation-ex-anchor" href="#63-检测插入操作的返回值"><i class="fa fa-link" aria-hidden="true"></i></a>6.3 检测插入操作的返回值</h3>
+<p>对于不允许重复键的容器（<code>map</code>、<code>set</code>），添加<strong>单一元素</strong>的 <code>insert</code> 和 <code>emplace</code> 返回一个pair：</p>
+<pre><code class="lang-cpp">pair&lt;iterator, <span class="hljs-type">bool</span>&gt;
+</code></pre>
+<p>其中：</p>
+<ul>
+<li>第一个成员是一个迭代器，指向具有给定键的元素</li>
+<li>第二个成员是一个布尔值，如果插入成功则为true，如果键已存在则为false</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 检测插入是否成功</span>
+<span class="hljs-keyword">auto</span> ret = word_count.<span class="hljs-built_in">insert</span>({<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>});
+<span class="hljs-keyword">if</span> (ret.second) {
+    cout &lt;&lt; <span class="hljs-string">"插入成功"</span> &lt;&lt; endl;
+} <span class="hljs-keyword">else</span> {
+    cout &lt;&lt; <span class="hljs-string">"元素已存在，插入失败"</span> &lt;&lt; endl;
+    cout &lt;&lt; <span class="hljs-string">"已存在的值："</span> &lt;&lt; ret.first-&gt;second &lt;&lt; endl;
+}
+</code></pre>
+<p><strong>注意</strong>：对于允许重复键的容器（<code>multimap</code>、<code>multiset</code>），<code>insert</code> 仅返回指向新插入元素的迭代器，不返回布尔值，因为插入总是成功的。</p>
+<h2 id="7-删除元素"><a name="7-删除元素" class="anchor-navigation-ex-anchor" href="#7-删除元素"><i class="fa fa-link" aria-hidden="true"></i></a>7. 删除元素</h2>
+<p>从关联容器中删除元素通常使用 <code>erase()</code> 方法。</p>
+<h3 id="71-erase操作"><a name="71-erase操作" class="anchor-navigation-ex-anchor" href="#71-erase操作"><i class="fa fa-link" aria-hidden="true"></i></a>7.1 erase操作</h3>
+<p>关联容器支持三种形式的 <code>erase</code> 操作：</p>
+<ol>
+<li><strong>删除指定迭代器指向的元素</strong></li>
+<li><strong>删除一个迭代器范围内的所有元素</strong></li>
+<li><strong>删除所有匹配特定键的元素</strong>（关联容器特有）</li>
+</ol>
+<p><img src="assets/table 11.5.png" alt="关联容器删除操作"></img></p>
+<pre><code class="lang-cpp">map&lt;string, <span class="hljs-type">int</span>&gt; word_count = {{<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>}, {<span class="hljs-string">"world"</span>, <span class="hljs-number">2</span>}, {<span class="hljs-string">"C++"</span>, <span class="hljs-number">3</span>}};
+
+<span class="hljs-comment">// 通过迭代器删除</span>
+<span class="hljs-keyword">auto</span> it = word_count.<span class="hljs-built_in">find</span>(<span class="hljs-string">"hello"</span>);
+<span class="hljs-keyword">if</span> (it != word_count.<span class="hljs-built_in">end</span>())
+    word_count.<span class="hljs-built_in">erase</span>(it);  <span class="hljs-comment">// 删除"hello"</span>
+
+<span class="hljs-comment">// 通过键删除</span>
+<span class="hljs-type">size_t</span> removed = word_count.<span class="hljs-built_in">erase</span>(<span class="hljs-string">"world"</span>);  <span class="hljs-comment">// 返回值是1，表示删除了一个元素</span>
+
+<span class="hljs-comment">// 删除一个范围</span>
+word_count.<span class="hljs-built_in">erase</span>(word_count.<span class="hljs-built_in">begin</span>(), word_count.<span class="hljs-built_in">end</span>());  <span class="hljs-comment">// 清空map</span>
+</code></pre>
+<p>当使用键作为参数调用 <code>erase</code> 时，函数返回实际删除的元素数量。这对于 <code>multimap</code> 和 <code>multiset</code> 特别有用，可以知道有多少具有相同键的元素被删除了。</p>
+<h2 id="8-map的下标操作"><a name="8-map的下标操作" class="anchor-navigation-ex-anchor" href="#8-map的下标操作"><i class="fa fa-link" aria-hidden="true"></i></a>8. map的下标操作</h2>
+<p><code>map</code> 类型提供了下标运算符(<code>[]</code>)和 <code>at()</code> 函数来直接访问与特定键关联的值。</p>
+<h3 id="81-下标操作和at函数"><a name="81-下标操作和at函数" class="anchor-navigation-ex-anchor" href="#81-下标操作和at函数"><i class="fa fa-link" aria-hidden="true"></i></a>8.1 下标操作和at函数</h3>
+<pre><code class="lang-cpp">map&lt;string, <span class="hljs-type">int</span>&gt; word_count;
+
+<span class="hljs-comment">// 使用下标操作 - 如果键不存在，会创建元素并进行值初始化</span>
+word_count[<span class="hljs-string">"hello"</span>] = <span class="hljs-number">1</span>;  <span class="hljs-comment">// 添加新元素</span>
+word_count[<span class="hljs-string">"hello"</span>]++;    <span class="hljs-comment">// 更新现有元素</span>
+
+<span class="hljs-comment">// 使用at函数 - 如果键不存在，会抛出异常</span>
+<span class="hljs-keyword">try</span> {
+    word_count.<span class="hljs-built_in">at</span>(<span class="hljs-string">"world"</span>)++;  <span class="hljs-comment">// 如果"world"不存在，抛出out_of_range异常</span>
+} <span class="hljs-built_in">catch</span> (<span class="hljs-type">const</span> out_of_range&amp; e) {
+    cout &lt;&lt; <span class="hljs-string">"键不存在: "</span> &lt;&lt; e.<span class="hljs-built_in">what</span>() &lt;&lt; endl;
+}
+</code></pre>
+<h3 id="82-下标运算符的特性"><a name="82-下标运算符的特性" class="anchor-navigation-ex-anchor" href="#82-下标运算符的特性"><i class="fa fa-link" aria-hidden="true"></i></a>8.2 下标运算符的特性</h3>
+<p><img src="assets/table 11.6.png" alt="map下标和at操作"></img></p>
+<p><strong>重要特性</strong>：</p>
+<ol>
+<li><p><strong>Set不支持下标操作</strong>，因为set的元素本身就是键，没有对应的值可以获取或修改。</p>
+</li>
+<li><p><strong>下标运算符的自动插入行为</strong>：</p>
+<blockquote>
+<p>使用下标运算符时，如果关键字不在map中，会自动创建一个新元素并插入到map中，关联值将进行值初始化（对于内置类型是0，对于类类型调用默认构造函数）。</p>
+</blockquote>
+</li>
+<li><p><strong>下标运算符仅适用于非const map</strong>：
+由于下标操作可能插入新元素，因此只能对非const的map使用下标运算符。</p>
+</li>
+<li><p><strong>下标操作vs解引用</strong>：</p>
+<ul>
+<li>下标操作返回 <code>mapped_type</code> 对象（值类型）</li>
+<li>解引用迭代器返回 <code>value_type</code> 对象（键值对）</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 区别示例</span>
+map&lt;string, <span class="hljs-type">int</span>&gt; word_count = {{<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>}};
+<span class="hljs-type">int</span>&amp; count1 = word_count[<span class="hljs-string">"hello"</span>];  <span class="hljs-comment">// 下标返回值类型的引用</span>
+pair&lt;<span class="hljs-type">const</span> string, <span class="hljs-type">int</span>&gt;&amp; pair1 = *word_count.<span class="hljs-built_in">find</span>(<span class="hljs-string">"hello"</span>);  <span class="hljs-comment">// 解引用返回pair的引用</span>
+</code></pre>
+<h2 id="9-访问元素"><a name="9-访问元素" class="anchor-navigation-ex-anchor" href="#9-访问元素"><i class="fa fa-link" aria-hidden="true"></i></a>9. 访问元素</h2>
+<p>关联容器提供了多种访问元素的方法，包括查找特定元素和范围内的元素。</p>
+<p><img src="assets/table 11.7.png" alt="访问元素操作表"></img></p>
+<h3 id="91-查找元素"><a name="91-查找元素" class="anchor-navigation-ex-anchor" href="#91-查找元素"><i class="fa fa-link" aria-hidden="true"></i></a>9.1 查找元素</h3>
+<p>在关联容器中，查找特定键的元素通常使用 <code>find</code> 函数：</p>
+<pre><code class="lang-cpp">map&lt;string, <span class="hljs-type">int</span>&gt; word_count = {{<span class="hljs-string">"hello"</span>, <span class="hljs-number">1</span>}, {<span class="hljs-string">"world"</span>, <span class="hljs-number">2</span>}};
+<span class="hljs-keyword">auto</span> it = word_count.<span class="hljs-built_in">find</span>(<span class="hljs-string">"hello"</span>);
+<span class="hljs-keyword">if</span> (it != word_count.<span class="hljs-built_in">end</span>())
+    cout &lt;&lt; it-&gt;first &lt;&lt; <span class="hljs-string">": "</span> &lt;&lt; it-&gt;second &lt;&lt; endl;
+</code></pre>
+<p><strong>对map使用find而非下标操作</strong>：如果只是想检查一个键是否存在而不想修改容器，应该使用 <code>find</code> 而非下标操作。下标操作会在键不存在时插入新元素。</p>
+<h3 id="92-处理multimap或multiset中的元素"><a name="92-处理multimap或multiset中的元素" class="anchor-navigation-ex-anchor" href="#92-处理multimap或multiset中的元素"><i class="fa fa-link" aria-hidden="true"></i></a>9.2 处理multimap或multiset中的元素</h3>
+<p>对于允许重复键的容器，需要特殊的技术来处理具有相同键的多个元素。</p>
+<h4 id="方法一：使用find和count"><a name="方法一：使用find和count" class="anchor-navigation-ex-anchor" href="#方法一：使用find和count"><i class="fa fa-link" aria-hidden="true"></i></a>方法一：使用find和count</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 在multimap中查找特定作者的所有书籍</span>
+<span class="hljs-function">string <span class="hljs-title">search_item</span><span class="hljs-params">(<span class="hljs-string">"Alain de Botton"</span>)</span></span>;
+<span class="hljs-keyword">auto</span> entries = authors.<span class="hljs-built_in">count</span>(search_item);  <span class="hljs-comment">// 获取元素的数量</span>
+<span class="hljs-keyword">auto</span> iter = authors.<span class="hljs-built_in">find</span>(search_item);      <span class="hljs-comment">// 获取第一个匹配元素的迭代器</span>
+
+<span class="hljs-comment">// 遍历所有匹配的元素</span>
+<span class="hljs-keyword">while</span> (entries) {
+    cout &lt;&lt; iter-&gt;second &lt;&lt; endl;  <span class="hljs-comment">// 打印书名</span>
+    ++iter;      <span class="hljs-comment">// 移动到下一个元素</span>
+    --entries;   <span class="hljs-comment">// 减少计数</span>
+}
+</code></pre>
+<h4 id="方法二：使用lowerbound和upperbound"><a name="方法二：使用lowerbound和upperbound" class="anchor-navigation-ex-anchor" href="#方法二：使用lowerbound和upperbound"><i class="fa fa-link" aria-hidden="true"></i></a>方法二：使用lower_bound和upper_bound</h4>
+<p><code>lower_bound</code> 返回指向第一个具有给定键的元素的迭代器，<code>upper_bound</code> 返回指向最后一个具有给定键之后位置的迭代器：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 使用迭代器范围查找特定作者的所有书籍</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> beg = authors.<span class="hljs-built_in">lower_bound</span>(search_item),
+         end = authors.<span class="hljs-built_in">upper_bound</span>(search_item);
+     beg != end; ++beg) {
+    cout &lt;&lt; beg-&gt;second &lt;&lt; endl;  <span class="hljs-comment">// 打印书名</span>
+}
+</code></pre>
+<h4 id="方法三：使用equalrange"><a name="方法三：使用equalrange" class="anchor-navigation-ex-anchor" href="#方法三：使用equalrange"><i class="fa fa-link" aria-hidden="true"></i></a>方法三：使用equal_range</h4>
+<p><code>equal_range</code> 函数一次性返回一对迭代器，表示具有给定键的元素范围：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// equal_range返回表示范围的迭代器对</span>
+<span class="hljs-keyword">auto</span> range = authors.<span class="hljs-built_in">equal_range</span>(search_item);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> it = range.first; it != range.second; ++it) {
+    cout &lt;&lt; it-&gt;second &lt;&lt; endl;  <span class="hljs-comment">// 打印书名</span>
+}
+</code></pre>
+<p><code>equal_range</code> 返回一个 <code>pair</code>，其中 <code>first</code> 成员等价于 <code>lower_bound</code> 的返回值，<code>second</code> 成员等价于 <code>upper_bound</code> 的返回值。</p>
+<h2 id="10-无序容器"><a name="10-无序容器" class="anchor-navigation-ex-anchor" href="#10-无序容器"><i class="fa fa-link" aria-hidden="true"></i></a>10. 无序容器</h2>
+<p>C++11新增了四种无序关联容器（unordered_map、unordered_set、unordered_multimap和unordered_multiset），它们不是使用比较运算符来组织元素，而是使用<strong>哈希函数</strong>（hash function）和键类型的<strong>相等运算符</strong>（<code>==</code>）。</p>
+<h3 id="101-无序容器的基本原理"><a name="101-无序容器的基本原理" class="anchor-navigation-ex-anchor" href="#101-无序容器的基本原理"><i class="fa fa-link" aria-hidden="true"></i></a>10.1 无序容器的基本原理</h3>
+<p><strong>哈希组织</strong>：无序容器使用哈希技术来组织元素，相比于有序容器的树形结构，哈希表通常提供更好的平均查找性能。</p>
+<p><strong>基本操作</strong>：除了组织方式不同外，无序容器的大部分操作与有序容器相同。所有适用于有序容器的操作（如插入、删除、查找等）都可以用于对应的无序容器。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 无序容器示例</span>
+unordered_map&lt;string, <span class="hljs-type">int</span>&gt; word_count;
+word_count[<span class="hljs-string">"hello"</span>] = <span class="hljs-number">1</span>;
+word_count[<span class="hljs-string">"world"</span>] = <span class="hljs-number">2</span>;
+
+<span class="hljs-comment">// 查找操作与有序map相同</span>
+<span class="hljs-keyword">auto</span> it = word_count.<span class="hljs-built_in">find</span>(<span class="hljs-string">"hello"</span>);
+<span class="hljs-keyword">if</span> (it != word_count.<span class="hljs-built_in">end</span>())
+    cout &lt;&lt; it-&gt;first &lt;&lt; <span class="hljs-string">": "</span> &lt;&lt; it-&gt;second &lt;&lt; endl;
+</code></pre>
+<h3 id="102-桶管理"><a name="102-桶管理" class="anchor-navigation-ex-anchor" href="#102-桶管理"><i class="fa fa-link" aria-hidden="true"></i></a>10.2 桶管理</h3>
+<p>无序容器在内部组织为一组<strong>桶</strong>（bucket），每个桶保存零个或多个元素：</p>
+<ol>
+<li><p><strong>哈希过程</strong>：</p>
+<ul>
+<li>容器使用哈希函数将键转换为哈希值</li>
+<li>哈希值决定元素应存储在哪个桶中</li>
+<li>所有具有相同哈希值的元素都存储在同一个桶中</li>
+</ul>
+</li>
+<li><p><strong>性能影响因素</strong>：</p>
+<ul>
+<li>哈希函数的质量（避免冲突）</li>
+<li>桶的数量（足够多以减少冲突）</li>
+<li>桶的大小（每个桶中元素过多会降低查找性能）</li>
+</ul>
+</li>
+</ol>
+<p>无序容器提供了一组桶管理函数：</p>
+<p><img src="assets/table 11.8.png" alt="桶管理操作"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 检查和管理桶</span>
+unordered_map&lt;string, <span class="hljs-type">int</span>&gt; word_count;
+<span class="hljs-comment">// 填充容器...</span>
+
+<span class="hljs-comment">// 显示容器状态</span>
+cout &lt;&lt; <span class="hljs-string">"桶数量: "</span> &lt;&lt; word_count.<span class="hljs-built_in">bucket_count</span>() &lt;&lt; endl;
+cout &lt;&lt; <span class="hljs-string">"负载因子: "</span> &lt;&lt; word_count.<span class="hljs-built_in">load_factor</span>() &lt;&lt; endl;
+
+<span class="hljs-comment">// 重组容器</span>
+word_count.<span class="hljs-built_in">rehash</span>(<span class="hljs-number">2</span> * word_count.<span class="hljs-built_in">bucket_count</span>());  <span class="hljs-comment">// 增加桶数量</span>
+</code></pre>
+<h3 id="103-自定义类型的要求"><a name="103-自定义类型的要求" class="anchor-navigation-ex-anchor" href="#103-自定义类型的要求"><i class="fa fa-link" aria-hidden="true"></i></a>10.3 自定义类型的要求</h3>
+<p>要将自定义类型用作无序容器的键，必须满足两个要求：</p>
+<ol>
+<li><strong>相等比较</strong>：必须定义 <code>==</code> 运算符</li>
+<li><strong>哈希函数</strong>：必须提供计算哈希值的函数</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 为自定义类型提供哈希支持</span>
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Person</span> {
+    string name;
+    <span class="hljs-type">int</span> age;
+
+    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>==(<span class="hljs-type">const</span> Person&amp; p) <span class="hljs-type">const</span> {
+        <span class="hljs-keyword">return</span> name == p.name &amp;&amp; age == p.age;
+    }
+};
+
+<span class="hljs-comment">// 为Person类型定义哈希函数</span>
+<span class="hljs-keyword">namespace</span> std {
+    <span class="hljs-keyword">template</span>&lt;&gt;
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">hash</span>&lt;Person&gt; {
+        <span class="hljs-function"><span class="hljs-type">size_t</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-type">const</span> Person&amp; p)</span> <span class="hljs-type">const</span> </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">hash</span>&lt;string&gt;()(p.name) ^ <span class="hljs-built_in">hash</span>&lt;<span class="hljs-type">int</span>&gt;()(p.age);
+        }
+    };
+}
+
+<span class="hljs-comment">// 现在可以使用Person作为键了</span>
+unordered_map&lt;Person, string&gt; person_map;
+</code></pre>
+<p>标准库为所有内置类型（包括指针）和一些标准库类型（如<code>string</code>和智能指针）提供了哈希函数。</p>
+<p>例如:</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">size_t</span> <span class="hljs-title">hasher</span> <span class="hljs-params">(<span class="hljs-type">const</span> Sales_data &amp;sd)</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">hash</span>&lt;string&gt;() ( sd.<span class="hljs-built_in">isbn</span>() );<span class="hljs-comment">//hash&lt;string&gt;() 产生一个string的hash对象,调用()运算符来运算 sd.isbn() 的hash值.</span>
+
+<span class="hljs-comment">// 推荐：避免不必要的构造或插入时，可以使用 C++17 的 try_emplace。</span>
+<span class="hljs-comment">// try_emplace 只有在键不存在时才构造对应的 mapped_type，且不会发生额外的拷贝或移动。</span>
+<span class="hljs-comment">// 例如：</span>
+<span class="hljs-comment">// auto [it, inserted] = word_count.try_emplace("new_key", 42);</span>
+<span class="hljs-comment">// if (inserted) cout &lt;&lt; "Inserted new_key with value 42" &lt;&lt; endl;</span>
+
+}
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">eqOp</span> <span class="hljs-params">(<span class="hljs-type">const</span> Sales_data &amp;lhs, <span class="hljs-type">const</span> Sales_data &amp;rhs)</span> </span>{
+  <span class="hljs-keyword">return</span> lhs.<span class="hljs-built_in">isbn</span>() == rhs.<span class="hljs-built_in">isbn</span>() ;
+}
+
+<span class="hljs-function">unordered_multiset&lt;Sales_data, <span class="hljs-title">decltype</span><span class="hljs-params">(hasher)</span>*, <span class="hljs-title">decltype</span><span class="hljs-params">(eqOp)</span>*&gt; <span class="hljs-title">bookStore</span> <span class="hljs-params">(<span class="hljs-number">42</span>, hasher, eqOp)</span></span>;<span class="hljs-comment">//传递hash和==的函数指针</span>
+</code></pre>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:16
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 02_关联容器</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_泛型算法.html" class="navigation navigation-prev " aria-label="Previous page: 01_泛型算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_动态内存.html" class="navigation navigation-next " aria-label="Next page: 03_动态内存">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02_关联容器","level":"1.4.1.2","depth":3,"next":{"title":"03_动态内存","level":"1.4.1.3","depth":3,"path":"docs/Cpp/C++-Primer/03_动态内存.md","ref":"docs/Cpp/C++-Primer/03_动态内存.md","articles":[]},"previous":{"title":"01_泛型算法","level":"1.4.1.1","depth":3,"path":"docs/Cpp/C++-Primer/01_泛型算法.md","ref":"docs/Cpp/C++-Primer/01_泛型算法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/C++-Primer/02_关联容器.md","mtime":"2025-09-07T09:41:16.877Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

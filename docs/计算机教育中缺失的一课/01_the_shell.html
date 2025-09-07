@@ -1,0 +1,1747 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>01_the_shell · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02_Shell_Tools_and_Scripting.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="01_the_shell.html">
+            
+                <a href="01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02_Shell_Tools_and_Scripting.html">
+            
+                <a href="02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04_Data_Wrangling.html">
+            
+                <a href="04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05_Command-line_Environment.html">
+            
+                <a href="05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="07_Debugging_and_Profiling.html">
+            
+                <a href="07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="08_Metaprogramming.html">
+            
+                <a href="08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >01_the_shell</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#the-shell"><b></b>the Shell</a></li><ul><li><span class="title-icon "></span><a href="#shell-是什么？"><b></b>shell 是什么？</a></li><li><span class="title-icon "></span><a href="#使用shell"><b></b>使用Shell</a></li><li><span class="title-icon "></span><a href="#在-shell-中导航"><b></b>在 shell 中导航</a></li><li><span class="title-icon "></span><a href="#文件权限"><b></b>文件权限</a></li><li><span class="title-icon "></span><a href="#在程序间创建连接"><b></b>在程序间创建连接</a></li><li><span class="title-icon "></span><a href="#一个功能全面又强大的工具"><b></b>一个功能全面又强大的工具</a></li><li><span class="title-icon "></span><a href="#课后习题"><b></b>课后习题</a></li></ul></ul></div><a href="#the-shell" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#the-shell">the Shell</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#使用shell">使用Shell</a><i></i></div></li>
+<li><div><a href="#在-shell-中导航">在 shell 中导航</a><i></i></div></li>
+<li><div><a href="#文件权限">文件权限</a><i></i></div></li>
+<li><div><a href="#在程序间创建连接">在程序间创建连接</a><i></i></div></li>
+<li><div><a href="#一个功能全面又强大的工具">一个功能全面又强大的工具</a><i></i></div></li>
+<li><div><a href="#课后习题">课后习题</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="the-shell"><a name="the-shell" class="anchor-navigation-ex-anchor" href="#the-shell"><i class="fa fa-link" aria-hidden="true"></i></a>the Shell</h1>
+<h2 id="shell-是什么？"><a name="shell-是什么？" class="anchor-navigation-ex-anchor" href="#shell-是什么？"><i class="fa fa-link" aria-hidden="true"></i></a>shell 是什么？</h2>
+<p>文字接口：Shell</p>
+<blockquote>
+<p>允许你执行程序，输入并获取某种半结构化的输出</p>
+</blockquote>
+<hr></hr>
+<h2 id="使用shell"><a name="使用shell" class="anchor-navigation-ex-anchor" href="#使用shell"><i class="fa fa-link" aria-hidden="true"></i></a>使用Shell</h2>
+<ul>
+<li>打开终端，看到一个提示符:<code>missing:~$</code></li>
+</ul>
+<blockquote>
+<p>shell 是最主要的文本接口</p>
+<p>主机名是 <code>missing</code></p>
+<p>当前的工作目录（”current working directory”）或者说您当前所在的位置是 <code>~</code> (表示 “home”)</p>
+<p><code>$</code> 符号表示您现在的身份不是 root 用户</p>
+</blockquote>
+<ul>
+<li><p>传递的参数中包含空格（例如一个名为 My Photos 的文件夹），用使用单引号，双引号将其包裹起来，要么使用转义符号 <code>\</code> 进行处理（<code>My\ Photos</code>）。</p>
+</li>
+<li><pre><code class="lang-shell">missing:~$ date
+Fri 10 Jan 2020 11:49:31 AM EST
+missing:~$ echo hello
+hello
+</code></pre>
+</li>
+<li><p>对于命令<code>date 和 echo</code>,shell 是一个编程环境，所以它具备变量、条件、循环和函数，在 shell 中执行命令时，您实际上是在执行一段 shell 可以解释执行的简短代码，该指令并不是 shell 所了解的编程关键字，那么它会去咨询 <em>环境变量</em> <code>$PATH</code></p>
+</li>
+<li><pre><code class="lang-bash">missing:~$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span>
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+missing:~$ <span class="hljs-built_in">which</span> <span class="hljs-built_in">echo</span>
+/bin/echo
+missing:~$ /bin/echo <span class="hljs-variable">$PATH</span>
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre>
+</li>
+<li><p>例如：执行 <code>echo</code> 命令时，shell 会在 <code>$PATH</code> 中搜索由 <code>:</code> 所分割的一系列目录，基于名字搜索该程序。（定某个程序名代表的是哪个具体的程序，可以使用 <code>which</code> 程序）。</p>
+</li>
+<li><p>所以我们也可以绕过 <code>$PATH</code>，通过直接指定需要执行的程序的路径来执行该程序</p>
+</li>
+</ul>
+<hr></hr>
+<h2 id="在-shell-中导航"><a name="在-shell-中导航" class="anchor-navigation-ex-anchor" href="#在-shell-中导航"><i class="fa fa-link" aria-hidden="true"></i></a>在 shell 中导航</h2>
+<ul>
+<li><p>shell 中的路径是一组被分割的目录，在 Linux 和 macOS 上使用 <code>/</code> 分割</p>
+</li>
+<li><p>路径 <code>/</code> 代表的是系统的根目录</p>
+<blockquote>
+<ul>
+<li>某个路径以 <code>/</code> 开头，那么它是一个 <em>绝对路径</em></li>
+<li>不是以<code>/</code>开头的其他的都是 <em>相对路径</em>，相对路径是指相对于当前工作目录的路径</li>
+</ul>
+</blockquote>
+</li>
+<li><p>当前工作目录可以使用 <code>pwd</code> 命令来获取</p>
+</li>
+<li><p>切换目录需要使用 <code>cd</code> 命令。在路径中，<code>.</code> 表示的是当前目录，而 <code>..</code> 表示上级目录：</p>
+</li>
+<li><pre><code class="lang-shell">missing:~$ pwd
+/home/missing
+missing:~$ cd /home
+missing:/home$ pwd
+/home
+missing:/home$ cd ..
+missing:/$ pwd
+/
+missing:/$ cd ./home
+missing:/home$ pwd
+/home
+missing:/home$ cd missing
+missing:~$ pwd
+/home/missing
+missing:~$ ../../bin/echo hello
+hello
+</code></pre>
+</li>
+<li><p><code>mv</code>（用于重命名或移动文件）、 <code>cp</code>（拷贝文件）以及 <code>mkdir</code>（新建文件夹）</p>
+</li>
+<li><code>man</code> 这个程序。它会接受一个程序名作为参数，然后将它的文档（用户手册）展现</li>
+</ul>
+<hr></hr>
+<h2 id="文件权限"><a name="文件权限" class="anchor-navigation-ex-anchor" href="#文件权限"><i class="fa fa-link" aria-hidden="true"></i></a>文件权限</h2>
+<pre><code class="lang-bash">missing:~$ <span class="hljs-built_in">ls</span> -l /home
+drwxr-xr-x 1 missing  <span class="hljs-built_in">users</span>  4096 Jun 15  2019 missing
+</code></pre>
+<ol>
+<li>第一栏共有十个字符，第一栏代表这个文件的<strong>类型与权限</strong>(permission)：</li>
+</ol>
+<blockquote>
+<ul>
+<li><p>第一个字符代表这个文件是『目录、文件或链接文件等等』：</p>
+<ul>
+<li><p>当为[ <strong>d</strong> ]则是目录，例如<a href="http://cn.linux.vbird.org/linux_basic/0210filepermission.php#table2.1.1" target="_blank">上表</a>档名为『.gconf』的那一行；</p>
+</li>
+<li><p>当为[ <strong>-</strong> ]则是文件，例如<a href="http://cn.linux.vbird.org/linux_basic/0210filepermission.php#table2.1.1" target="_blank">上表</a>档名为『install.log』那一行；</p>
+</li>
+<li>若是[ <strong>l</strong> ]则表示为连结档(link file)；</li>
+<li>若是[ <strong>b</strong> ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</li>
+<li>若是[ <strong>c</strong> ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</li>
+</ul>
+</li>
+<li><p>下来的字符中，以三个为一组，且均为『rwx』 的三个参数的组合。</p>
+<ul>
+<li>[ r ]代表可读(read)、[ w ]代表可写(write)、[ x ]代表可执行(execute)。</li>
+<li>第一组为『文件拥有者的权限』；</li>
+<li>第二组为『同群组的权限』；</li>
+<li>第三组为『其他非本群组的权限』。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ol>
+<li><p>第二栏表示有多少档名连结到此节点(i-node)</p>
+</li>
+<li><p>第三栏表示这个文件(或目录)的『拥有者账号』</p>
+</li>
+<li><p>第四栏表示这个文件的所属群组</p>
+</li>
+<li><p>第五栏为这个文件的容量大小，默认单位为bytes；</p>
+</li>
+<li><p>第六栏为这个文件的建档日期或者是最近的修改日期</p>
+</li>
+<li><p>第七栏为这个文件的档名</p>
+<blockquote>
+<p>如果档名之前多一个『 . 』，则代表这个文件为『隐藏档』</p>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><strong>权限意义</strong></li>
+<li>权限对于文件：文件是实际含有数据的地方，包括一般文本文件、数据库内容文件、二进制可执行文件(binary program)等等</li>
+</ul>
+<blockquote>
+<ul>
+<li>r (read)：可读取此一文件的实际内容，如读取文本文件的文字内容等；</li>
+<li>w (write)：可以编辑、新增或者是修改该文件的内容(但不含删除该文件)；</li>
+<li>x (execute)：该文件具有可以被系统执行的权限。</li>
+</ul>
+</blockquote>
+<ul>
+<li>权限对于目录：目录主要的内容在记录文件名列表，文件名与目录有强烈的关连</li>
+</ul>
+<blockquote>
+<ul>
+<li><p><strong>r (read contents in directory)</strong>：</p>
+<p>表示具有读取目录结构列表的权限，表示你可以查询该目录下的文件名数据。</p>
+<ul>
+<li>w (modify contents of directory)</li>
+</ul>
+<p>具有异动该目录结构列表的权限，也就是底下这些权限：</p>
+<ul>
+<li>建立新的文件与目录；</li>
+<li>删除已经存在的文件与目录(不论该文件的权限为何！)</li>
+<li>将已存在的文件或目录进行更名；</li>
+<li>搬移该目录内的文件、目录位置。</li>
+</ul>
+<p>总之，目录的w权限就与该目录底下的文件名异动有关</p>
+</li>
+<li><p><strong>x (access directory)</strong>：</p>
+<p>目录的x代表的是用户能否进入该目录成为工作目录的用途！ 所谓的工作目录(work directory)就是你目前所在的目录</p>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr></hr>
+<h2 id="在程序间创建连接"><a name="在程序间创建连接" class="anchor-navigation-ex-anchor" href="#在程序间创建连接"><i class="fa fa-link" aria-hidden="true"></i></a>在程序间创建连接</h2>
+<p>在 shell 中，程序有两个主要的“流”：它们的<strong>输入流和输出流</strong>。</p>
+<ul>
+<li>当程序尝试读取信息时，它们会从输入流中进行读取</li>
+<li>当程序打印信息时，它们会将信息输出到输出流中</li>
+</ul>
+<p>通常，一个程序的输入输出流都是您的终端</p>
+<ul>
+<li><p>最简单的重定向是 <code>&lt; file</code> 和 <code>&gt; file</code></p>
+</li>
+<li><p>还可以使用 <code>&gt;&gt;</code> 来向一个文件追加内容。</p>
+</li>
+<li><p><code>|</code> 操作符允许我们将一个程序的输出和另外一个程序的输入连接起来</p>
+</li>
+<li><pre><code class="lang-bash">missing:~$ <span class="hljs-built_in">ls</span> -l / | <span class="hljs-built_in">tail</span> -n1
+drwxr-xr-x 1 root  root  4096 Jun 20  2019 var
+missing:~$ curl --<span class="hljs-built_in">head</span> --silent google.com | grep --ignore-case content-length | <span class="hljs-built_in">cut</span> --delimiter=<span class="hljs-string">' '</span> -f2
+219
+</code></pre>
+</li>
+</ul>
+<hr></hr>
+<h2 id="一个功能全面又强大的工具"><a name="一个功能全面又强大的工具" class="anchor-navigation-ex-anchor" href="#一个功能全面又强大的工具"><i class="fa fa-link" aria-hidden="true"></i></a>一个功能全面又强大的工具</h2>
+<ul>
+<li>根用户（root user）<ul>
+<li>用户几乎不受任何限制，他可以创建、读取、更新和删除系统中的任何文件</li>
+<li><code>sudo</code> 命令：可以以 su（super user 或 root 的简写）的身份执行一些操作</li>
+</ul>
+</li>
+</ul>
+<hr></hr>
+<h2 id="课后习题"><a name="课后习题" class="anchor-navigation-ex-anchor" href="#课后习题"><i class="fa fa-link" aria-hidden="true"></i></a>课后习题</h2>
+<ol>
+<li><p>本课程需要使用类 Unix shell，例如 Bash 或 ZSH。如果您在 Linux 或者 MacOS 上面完成本课程的练习，则不需要做任何特殊的操作。如果您使用的是 Windows，则您不应该使用 cmd 或是 Powershell；您可以使用 <a href="https://docs.microsoft.com/en-us/windows/wsl/" target="_blank">Windows Subsystem for Linux</a> 或者是 Linux 虚拟机。使用 <code>echo $SHELL</code> 命令可以查看您的 shell 是否满足要求。如果打印结果为 <code>/bin/bash</code> 或 <code>/usr/bin/zsh</code> 则是可以的。</p>
+</li>
+<li><p>在 <code>/tmp</code> 下新建一个名为 <code>missing</code> 的文件夹。</p>
+</li>
+<li><p>用 <code>man</code> 查看程序 <code>touch</code> 的使用手册。</p>
+</li>
+<li><p>用 <code>touch</code> 在 <code>missing</code> 文件夹中新建一个叫 <code>semester</code> 的文件。</p>
+</li>
+<li><p>将以下内容一行一行地写入</p>
+<pre><code class="lang-plaintext">semester
+</code></pre>
+<p>文件：</p>
+<pre><code> #!/bin/sh
+ curl --head --silent https://missing.csail.mit.edu
+</code></pre><p>第一行可能有点棘手， <code>#</code> 在 Bash 中表示注释，而 <code>!</code> 即使被双引号（<code>"</code>）包裹也具有特殊的含义。 单引号（<code>'</code>）则不一样，此处利用这一点解决输入问题。更多信息请参考 <a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html" target="_blank">Bash quoting 手册</a></p>
+</li>
+<li><p>尝试执行这个文件。例如，将该脚本的路径（<code>./semester</code>）输入到您的 shell 中并回车。如果程序无法执行，请使用 <code>ls</code> 命令来获取信息并理解其不能执行的原因。</p>
+</li>
+<li><p>查看 <code>chmod</code> 的手册(例如，使用 <code>man chmod</code> 命令)</p>
+</li>
+<li><p>使用 <code>chmod</code> 命令改变权限，使 <code>./semester</code> 能够成功执行，不要使用 <code>sh semester</code> 来执行该程序。您的 shell 是如何知晓这个文件需要使用 <code>sh</code> 来解析呢？更多信息请参考：<a href="https://en.wikipedia.org/wiki/Shebang_(Unix" target="_blank">shebang</a>)</p>
+</li>
+<li><p>使用 <code>|</code> 和 <code>&gt;</code> ，将 <code>semester</code> 文件输出的最后更改日期信息，写入主目录下的 <code>last-modified.txt</code> 的文件中</p>
+</li>
+</ol>
+<pre><code class="lang-bash">./semester |grep <span class="hljs-string">"last-modified"</span> &gt; last-modified.txt
+</code></pre>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.277Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 01_the_shell</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 计算机教育中缺失的一课">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02_Shell_Tools_and_Scripting.html" class="navigation navigation-next " aria-label="Next page: 02_Shell_Tools_and_Scripting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"01_the_shell","level":"1.2.1","depth":2,"next":{"title":"02_Shell_Tools_and_Scripting","level":"1.2.2","depth":2,"path":"docs/计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.md","ref":"docs/计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.md","articles":[]},"previous":{"title":"计算机教育中缺失的一课","level":"1.2","depth":1,"path":"docs/计算机教育中缺失的一课/README.md","ref":"docs/计算机教育中缺失的一课/README.md","articles":[{"title":"01_the_shell","level":"1.2.1","depth":2,"path":"docs/计算机教育中缺失的一课/01_the_shell.md","ref":"docs/计算机教育中缺失的一课/01_the_shell.md","articles":[]},{"title":"02_Shell_Tools_and_Scripting","level":"1.2.2","depth":2,"path":"docs/计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.md","ref":"docs/计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.md","articles":[]},{"title":"03_Editors (Vim)","level":"1.2.3","depth":2,"path":"docs/计算机教育中缺失的一课/03_Editors_(Vim","ref":"docs/计算机教育中缺失的一课/03_Editors_(Vim","articles":[]},{"title":"04_Data_Wrangling","level":"1.2.4","depth":2,"path":"docs/计算机教育中缺失的一课/04_Data_Wrangling.md","ref":"docs/计算机教育中缺失的一课/04_Data_Wrangling.md","articles":[]},{"title":"05_Command-line Environment","level":"1.2.5","depth":2,"path":"docs/计算机教育中缺失的一课/05_Command-line_Environment.md","ref":"docs/计算机教育中缺失的一课/05_Command-line_Environment.md","articles":[]},{"title":"06_Version Control (Git)","level":"1.2.6","depth":2,"path":"docs/计算机教育中缺失的一课/06_Version_Control_(Git","ref":"docs/计算机教育中缺失的一课/06_Version_Control_(Git","articles":[]},{"title":"07_Debugging and Profiling","level":"1.2.7","depth":2,"path":"docs/计算机教育中缺失的一课/07_Debugging_and_Profiling.md","ref":"docs/计算机教育中缺失的一课/07_Debugging_and_Profiling.md","articles":[]},{"title":"08_Metaprogramming","level":"1.2.8","depth":2,"path":"docs/计算机教育中缺失的一课/08_Metaprogramming.md","ref":"docs/计算机教育中缺失的一课/08_Metaprogramming.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/计算机教育中缺失的一课/01_the_shell.md","mtime":"2025-09-07T09:41:17.202Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

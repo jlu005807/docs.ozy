@@ -1,0 +1,29 @@
+/* 为 Giscus 容器添加样式 */
+#giscus-container {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eaecef;
+  transition: border-color 0.3s;
+}
+
+/* 在深色主题下的样式调整 - 支持多种可能的深色主题标记 */
+.honkit-dark #giscus-container,
+.dark #giscus-container,
+.night #giscus-container,
+body.dark #giscus-container,
+body[data-theme="dark"] #giscus-container {
+  border-top-color: #444;
+}
+
+/* 隐藏 iframe 加载时的闪烁 */
+iframe.giscus-frame {
+  transition: opacity 0.3s;
+}
+
+/* 为 Giscus 提供更好的响应式支持 */
+@media (max-width: 768px) {
+  #giscus-container {
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+}

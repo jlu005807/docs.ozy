@@ -1,0 +1,2151 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>02_进程管理 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_中断和处理器调度.html" />
+    
+    
+    <link rel="prev" href="01_概论.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="01_概论.html">
+            
+                <a href="01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="02_进程管理.html">
+            
+                <a href="02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="03_中断和处理器调度.html">
+            
+                <a href="03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="04_互斥同步与通讯.html">
+            
+                <a href="04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="05_死锁与饥饿.html">
+            
+                <a href="05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="06_主存管理.html">
+            
+                <a href="06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="07_虚拟存储器管理.html">
+            
+                <a href="07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="08_文件与文件系统.html">
+            
+                <a href="08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="09_设备与IO管理.html">
+            
+                <a href="09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="review.html">
+            
+                <a href="review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >02_进程管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#进程、线程与作业"><b></b>进程、线程与作业</a></li><li><span class="title-icon "></span><a href="#多道程序设计"><b></b>多道程序设计</a></li><li><span class="title-icon "></span><a href="#进程的引入"><b></b>进程的引入</a></li><ul><li><span class="title-icon "></span><a href="#进程状态及状态转换"><b></b>进程状态及状态转换</a></li><li><span class="title-icon "></span><a href="#pcb进程控制块"><b></b>PCB(进程控制块)</a></li><li><span class="title-icon "></span><a href="#进程的组成与上下文"><b></b>进程的组成与上下文</a></li><ul><li><span class="title-icon "></span><a href="#进程的组成（进程映像）"><b></b>进程的组成（进程映像）</a></li><li><span class="title-icon "></span><a href="#进程的上下文"><b></b>进程的上下文</a></li></ul><li><span class="title-icon "></span><a href="#进程的队列"><b></b>进程的队列</a></li><li><span class="title-icon "></span><a href="#进程的类型与特征"><b></b>进程的类型与特征</a></li><li><span class="title-icon "></span><a href="#进程类型"><b></b>进程类型</a></li><li><span class="title-icon "></span><a href="#进程特征"><b></b>进程特征</a></li><li><span class="title-icon "></span><a href="#进程间相互联系与相互作用"><b></b>进程间相互联系与相互作用</a></li><ul><li><span class="title-icon "></span><a href="#相互联系"><b></b>相互联系</a></li><li><span class="title-icon "></span><a href="#相互作用"><b></b>相互作用</a></li></ul><li><span class="title-icon "></span><a href="#进程的创建与撤销"><b></b>进程的创建与撤销</a></li><ul><li><span class="title-icon "></span><a href="#进程创建"><b></b>进程创建</a></li><li><span class="title-icon "></span><a href="#进程撤销"><b></b>进程撤销</a></li><li><span class="title-icon "></span><a href="#进程汇聚和等待，唤醒"><b></b>进程汇聚和等待，唤醒</a></li></ul><li><span class="title-icon "></span><a href="#考虑生灭的进程状态转换图"><b></b>考虑生灭的进程状态转换图</a></li><li><span class="title-icon "></span><a href="#进程与程序-的联系与差别"><b></b>进程与程序 的联系与差别</a></li><li><span class="title-icon "></span><a href="#思考题"><b></b>思考题</a></li></ul><li><span class="title-icon "></span><a href="#线程与轻进程"><b></b>线程与轻进程</a></li><ul><li><span class="title-icon "></span><a href="#线程的概念"><b></b>线程的概念</a></li><li><span class="title-icon "></span><a href="#线程控制块（tcb）"><b></b>线程控制块（TCB）</a></li><ul><li><span class="title-icon "></span><a href="#线程的操作"><b></b>线程的操作</a></li></ul><li><span class="title-icon "></span><a href="#线程的实现"><b></b>线程的实现</a></li><ul><li><span class="title-icon "></span><a href="#用户级线程"><b></b>用户级线程</a></li><li><span class="title-icon "></span><a href="#核心级别线程"><b></b>核心级别线程</a></li><li><span class="title-icon "></span><a href="#混合线程"><b></b>混合线程</a></li></ul><li><span class="title-icon "></span><a href="#作业"><b></b>作业</a></li><ul><li><span class="title-icon "></span><a href="#批处理作业"><b></b>批处理作业</a></li><li><span class="title-icon "></span><a href="#交互式作业"><b></b>交互式作业</a></li></ul></ul><li><span class="title-icon "></span><a href="#处理机调度"><b></b>处理机调度</a></li><ul><li><span class="title-icon "></span><a href="#高级调度"><b></b>高级调度</a></li><li><span class="title-icon "></span><a href="#中级调度"><b></b>中级调度</a></li><li><span class="title-icon "></span><a href="#低级调度"><b></b>低级调度</a></li></ul><li><span class="title-icon "></span><a href="#小结："><b></b>小结：</a></li></ul></div><a href="#进程、线程与作业" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#进程、线程与作业">进程、线程与作业</a><i></i></div></li>
+<li><div><a href="#多道程序设计">多道程序设计</a><i></i></div></li>
+<li><div><a href="#进程的引入">进程的引入</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#进程状态及状态转换">进程状态及状态转换</a><i></i></div></li>
+<li><div><a href="#pcb进程控制块">PCB(进程控制块)</a><i></i></div></li>
+<li><div><a href="#进程的组成与上下文">进程的组成与上下文</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#进程的组成（进程映像）">进程的组成（进程映像）</a><i></i></div></li>
+<li><div><a href="#进程的上下文">进程的上下文</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#进程的队列">进程的队列</a><i></i></div></li>
+<li><div><a href="#进程的类型与特征">进程的类型与特征</a><i></i></div></li>
+<li><div><a href="#进程类型">进程类型</a><i></i></div></li>
+<li><div><a href="#进程特征">进程特征</a><i></i></div></li>
+<li><div><a href="#进程间相互联系与相互作用">进程间相互联系与相互作用</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#相互联系">相互联系</a><i></i></div></li>
+<li><div><a href="#相互作用">相互作用</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#进程的创建与撤销">进程的创建与撤销</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#进程创建">进程创建</a><i></i></div></li>
+<li><div><a href="#进程撤销">进程撤销</a><i></i></div></li>
+<li><div><a href="#进程汇聚和等待，唤醒">进程汇聚和等待，唤醒</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#考虑生灭的进程状态转换图">考虑生灭的进程状态转换图</a><i></i></div></li>
+<li><div><a href="#进程与程序-的联系与差别">进程与程序 的联系与差别</a><i></i></div></li>
+<li><div><a href="#思考题">思考题</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#线程与轻进程">线程与轻进程</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#线程的概念">线程的概念</a><i></i></div></li>
+<li><div><a href="#线程控制块（tcb）">线程控制块（TCB）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#线程的操作">线程的操作</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#线程的实现">线程的实现</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#用户级线程">用户级线程</a><i></i></div></li>
+<li><div><a href="#核心级别线程">核心级别线程</a><i></i></div></li>
+<li><div><a href="#混合线程">混合线程</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#作业">作业</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#批处理作业">批处理作业</a><i></i></div></li>
+<li><div><a href="#交互式作业">交互式作业</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#处理机调度">处理机调度</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#高级调度">高级调度</a><i></i></div></li>
+<li><div><a href="#中级调度">中级调度</a><i></i></div></li>
+<li><div><a href="#低级调度">低级调度</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#小结：">小结：</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="进程、线程与作业"><a name="进程、线程与作业" class="anchor-navigation-ex-anchor" href="#进程、线程与作业"><i class="fa fa-link" aria-hidden="true"></i></a>进程、线程与作业</h1>
+<h1 id="多道程序设计"><a name="多道程序设计" class="anchor-navigation-ex-anchor" href="#多道程序设计"><i class="fa fa-link" aria-hidden="true"></i></a>多道程序设计</h1>
+<blockquote>
+<p>[!tip]</p>
+<p>单道程序设计：一次只允许一个程序进入系统的程序设计方法</p>
+<p>缺点：资源利用率低.</p>
+</blockquote>
+<ul>
+<li>多道程序设计：多个程序同时进入系统并投入执行的一种程序设计方法</li>
+</ul>
+<blockquote>
+<ul>
+<li>例题</li>
+</ul>
+<p>§进程P对磁盘数据进行处理，其<strong>处理流程</strong>为：</p>
+<p>§① 读入一块磁盘数据；</p>
+<p>§② 处理该块数据；</p>
+<p>§③ 把处理后的该块数据写到磁带上。</p>
+<p>§假设：进程P要处理3个磁盘块的数据，读一个磁盘块数据需要40ms，处理一块数据需要20ms，写一块磁带数据需要80ms，并假设系统只有进程P运行。在不考虑系统开销的情况下，</p>
+<p>§<strong>问</strong> <strong>题</strong>：</p>
+<p>§ <strong>⑴</strong> 进程P把3块数据<strong>处理流程</strong>都完成，画出CPU运行、磁盘输入、磁带输出的时序图；</p>
+<p>§ <strong>⑵</strong> 依据⑴画出的时序图，计算进程P等待设备I/O的时间。</p>
+<p>[!warning]</p>
+<p>对于内存中的程序数量：</p>
+<p>道数过少，<strong>系统资源利用率低</strong></p>
+<p>道数过多，<strong>系统开销(system overhead)增大，程序响应速度下降</strong></p>
+</blockquote>
+<ul>
+<li>多道程序设计的问题</li>
+</ul>
+<blockquote>
+<ul>
+<li>如何分配处理资源</li>
+<li>对于存储资源的管理</li>
+<li>设备资源管理：即分配策略</li>
+</ul>
+</blockquote>
+<h1 id="进程的引入"><a name="进程的引入" class="anchor-navigation-ex-anchor" href="#进程的引入"><i class="fa fa-link" aria-hidden="true"></i></a>进程的引入</h1>
+<blockquote>
+<p>[!note]</p>
+<p>暂停：保存现场(PSW+PC，寄存器）</p>
+<p>推进：恢复现场(寄存器，PSW+PC)</p>
+<p>暂停原因：(1) 自身原因：等待资源，启动IO  (2) 剥夺CPU—给其它程序运行机会</p>
+</blockquote>
+<ul>
+<li><strong>进程的定义</strong></li>
+</ul>
+<blockquote>
+<p>进程是程序的一次执行</p>
+<p>进程是可以参与并发执行的程序</p>
+<p>进程是程序和数据一道通过处理器执行时所发生的活动</p>
+<p>进程是具有一定独立功能的程序关于一个数据集合的一次运行活动.</p>
+<ol>
+<li>进程是进程实体的运行过程，是系统进行资源分配和<strong>调度（对于没有内核级线程的前提下）</strong>的一个独立单位。</li>
+</ol>
+<p>[!important]</p>
+<p>动态：是程序的一次执行过程。<strong>同一程序多次执行会对应多个进程</strong>。这是进程和程序的本质差异</p>
+<p>并发：可与其它进程同时执行，宏观同时，微观上“交替执行”，不要求多个CPU</p>
+</blockquote>
+<hr></hr>
+<h2 id="进程状态及状态转换"><a name="进程状态及状态转换" class="anchor-navigation-ex-anchor" href="#进程状态及状态转换"><i class="fa fa-link" aria-hidden="true"></i></a>进程状态及状态转换</h2>
+<ul>
+<li>进程状态（基本状态）</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>创建态：系统创建进程，操作系统给进程分配系统资源、PCB等等</li>
+<li>就绪态：已经具备运行条件，等待空闲的CPU，进行调用</li>
+<li>运行态：当CPU处于空闲阶段就会在就绪态的进程里面选择一个进行执行，也就是把CPU占据进入了运行态，一核的CPU就只可以一次运行一个进程，多少核的CPU可以有多少个进程处于运行态</li>
+<li>阻塞态：因为某个事件而暂时不可用运行</li>
+<li>终止态：运行进程从CPU撤销，操作系统就会回收资源、撤销PCB</li>
+</ul>
+</blockquote>
+<p><img src="assets/94dbfef2b59b28e1ce86c35a236abcca.png" alt="img"></img></p>
+<ul>
+<li>进程状态转换由<strong>操作系统</strong>完成，对用户是透明的</li>
+<li>进程在其生存期内经过多次状态转换</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>进程状态转换原因:</p>
+<ul>
+<li>CPU调度</li>
+<li>进程在运行过程中需要等待某一事件</li>
+<li>进程等待的事件发生.</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="pcb进程控制块"><a name="pcb进程控制块" class="anchor-navigation-ex-anchor" href="#pcb进程控制块"><i class="fa fa-link" aria-hidden="true"></i></a>PCB(进程控制块)</h2>
+<blockquote>
+<p>[!note]</p>
+<p>标志进程存在的数据结构，其中保存系统管理<strong>进程所需的全部信息</strong></p>
+<p>例如：进程标识(pid)，进程状态，现场信息，调度参数，所属用户(uid)</p>
+</blockquote>
+<ul>
+<li><p>作用</p>
+<blockquote>
+<p>当调度某进程执行时，需要从该进程的PCB中<strong>查询其状态及优先级等参数</strong></p>
+<p>当调度到某进程后，根据PCB中的现场信息<strong>恢复现场</strong>，并根据PCB中的程序和数据的内存地址找到程序和数据</p>
+<p>进程执行过程中，当需要与其它进程<strong>通信</strong>时，也要访问PCB</p>
+<p>当进程发生进程切换时，需要将现场信息从系统栈弹出，保存于PCB中</p>
+<p>系统建立进程时建立PCB，撤销进程时撤销PCB.</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h2 id="进程的组成与上下文"><a name="进程的组成与上下文" class="anchor-navigation-ex-anchor" href="#进程的组成与上下文"><i class="fa fa-link" aria-hidden="true"></i></a>进程的组成与上下文</h2>
+<h3 id="进程的组成（进程映像）"><a name="进程的组成（进程映像）" class="anchor-navigation-ex-anchor" href="#进程的组成（进程映像）"><i class="fa fa-link" aria-hidden="true"></i></a>进程的组成（进程映像）</h3>
+<ol>
+<li><p><strong>进程控制块</strong>（PCB）</p>
+</li>
+<li><p>程序</p>
+<blockquote>
+<ul>
+<li><p><strong>代码</strong>(程序段)：实现相应的功能</p>
+</li>
+<li><p><strong>数据</strong>(数据段)：静态数据+动态堆和动态栈</p>
+<ul>
+<li><p>堆栈(stack+heap)</p>
+<p>栈：保存返回值、参数、断点、局部变量</p>
+<p>堆：动态变量</p>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>进程的表记</p>
+<blockquote>
+<p><strong>进程的程序</strong>(PCB，代码和数据)称为进程影像(Process Image)</p>
+<p><img src="assets/image-20250303092201704-1740964924920-3.png" alt="image-20250303092201704"></img></p>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<h3 id="进程的上下文"><a name="进程的上下文" class="anchor-navigation-ex-anchor" href="#进程的上下文"><i class="fa fa-link" aria-hidden="true"></i></a>进程的上下文</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>PCB+程序</li>
+<li>系统环境：地址空间，系统栈，打开文件表，…</li>
+</ul>
+</blockquote>
+<ol>
+<li><p>上下文的切换</p>
+<p>由一个进程的上下文转到另外一个进程的上下文</p>
+</li>
+<li><p>系统开销（system overhead)</p>
+<p>运行操作系统程序完成系统管理工作所花费的时间和空间</p>
+</li>
+<li><p>进程切换时需要保存的现场信息</p>
+<blockquote>
+<p><strong>地址寄存器</strong>:保存当前CPU所访问的内存单元的地址</p>
+<p><strong>通用寄存器</strong>:用于传送和暂存数据，也可参与算术逻辑运算，并保存运算结果</p>
+<p><strong>浮点寄存器</strong>:用于存储浮点数字，它决定着计算机的计算精度。</p>
+<p><strong>SP</strong>(系统栈指针)</p>
+<p><strong>PSW</strong>(程序状态字)</p>
+<p><strong>PC</strong>(指令计数器)</p>
+<p><strong>打开文件表</strong>(页表)</p>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<h2 id="进程的队列"><a name="进程的队列" class="anchor-navigation-ex-anchor" href="#进程的队列"><i class="fa fa-link" aria-hidden="true"></i></a>进程的队列</h2>
+<blockquote>
+<p>[!note]</p>
+<p>PCB构成的队列：（不一定FIFO，单向或双向）</p>
+<ol>
+<li>就绪队列：系统一个或若干个（根据调度算法确定）</li>
+<li>等待队列：每个等待事件一个（可能对应不同设备各有一个，甚至对于一个设备不同请求一个）</li>
+<li>运行队列</li>
+</ol>
+</blockquote>
+<p><img src="assets/image-20250303092623413-1740965190456-5.png" alt="image-20250303092623413"></img></p>
+<hr></hr>
+<h2 id="进程的类型与特征"><a name="进程的类型与特征" class="anchor-navigation-ex-anchor" href="#进程的类型与特征"><i class="fa fa-link" aria-hidden="true"></i></a>进程的类型与特征</h2>
+<h2 id="进程类型"><a name="进程类型" class="anchor-navigation-ex-anchor" href="#进程类型"><i class="fa fa-link" aria-hidden="true"></i></a>进程类型</h2>
+<ol>
+<li><p>系统进程（内核态运行）</p>
+<blockquote>
+<p>运行操作系统程序，管态，完成系统管理(服务)功能</p>
+<p>一个系统进程所完成的内容相对独立和具体，在进程生存周期保持不变，因而它们通常对应一个无限循环程序，在系统启动后便一直存在，直到系统关闭</p>
+<p>系统进程承担系统的管理和维护性任务，优先级高于一般用户进程</p>
+</blockquote>
+</li>
+<li><p>用户进程（用户态运行）</p>
+<blockquote>
+<p>在操作系统之上运行的所有程序</p>
+<p>运行用户(应用)程序，为用户服务</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="进程特征"><a name="进程特征" class="anchor-navigation-ex-anchor" href="#进程特征"><i class="fa fa-link" aria-hidden="true"></i></a>进程特征</h2>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>并发性：可以与其它进程一道向前推进；</li>
+<li>动态性：动态产生、消亡，生存期内动态变化；</li>
+<li>独立性：一个进程是可以调度的基本单位；</li>
+<li>交互性：同时运行的进程可能发生相互作用；</li>
+<li>异步性：进程以各自独立，不可预知的速度向前推进；</li>
+<li>结构性：每个进程有一个PCB。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="进程间相互联系与相互作用"><a name="进程间相互联系与相互作用" class="anchor-navigation-ex-anchor" href="#进程间相互联系与相互作用"><i class="fa fa-link" aria-hidden="true"></i></a>进程间相互联系与相互作用</h2>
+<h3 id="相互联系"><a name="相互联系" class="anchor-navigation-ex-anchor" href="#相互联系"><i class="fa fa-link" aria-hidden="true"></i></a>相互联系</h3>
+<ol>
+<li><p>相关进程</p>
+<blockquote>
+<p>同一家族的进程</p>
+<p>可以共享文件，需要相互通讯，协调推进速度…</p>
+<p>父进程可以监视子进程，子进程完成父进程交给的任务</p>
+</blockquote>
+</li>
+<li><p>无关进程</p>
+<blockquote>
+<p><strong>没有逻辑</strong>关系、同时执行的进程。</p>
+<p>有<strong>资源竞争</strong>关系，互斥、死锁、饿死。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="相互作用"><a name="相互作用" class="anchor-navigation-ex-anchor" href="#相互作用"><i class="fa fa-link" aria-hidden="true"></i></a>相互作用</h3>
+<ol>
+<li><p>直接相互作用</p>
+<blockquote>
+<p>发生在相关进程之间，进程之间不需要通过媒介而发生相互作用</p>
+<p><img src="assets/image-20250303093238754-1740965560176-7.png" alt="image-20250303093238754"></img></p>
+</blockquote>
+</li>
+<li><p>间接相互作用</p>
+<blockquote>
+<p>发生在任何进程之间</p>
+<p><img src="assets/image-20250303093305901-1740965587162-9.png" alt="image-20250303093305901"></img></p>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<h2 id="进程的创建与撤销"><a name="进程的创建与撤销" class="anchor-navigation-ex-anchor" href="#进程的创建与撤销"><i class="fa fa-link" aria-hidden="true"></i></a>进程的创建与撤销</h2>
+<h3 id="进程创建"><a name="进程创建" class="anchor-navigation-ex-anchor" href="#进程创建"><i class="fa fa-link" aria-hidden="true"></i></a>进程创建</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>向系统申请一个空闲<strong>PCB</strong>，并指定唯一的进程标识</li>
+<li><strong>为新进程分配资源</strong></li>
+<li>初始化新进程的PCB<strong>加载程序</strong></li>
+<li>将PCB入<strong>就绪队列</strong>.</li>
+</ul>
+<p>例如：用户登录，作业调度，提供服务，应用请求.</p>
+</blockquote>
+<hr></hr>
+<h3 id="进程撤销"><a name="进程撤销" class="anchor-navigation-ex-anchor" href="#进程撤销"><i class="fa fa-link" aria-hidden="true"></i></a>进程撤销</h3>
+<blockquote>
+<p>[!note]</p>
+<p>从系统PCB表中找到<strong>被撤销进程的PCB</strong></p>
+<p><strong>检查被撤销进程的状态是否为执行状态</strong>。若是，则立即停止该进程的执行</p>
+<p><strong>设置重新调度标志</strong>，以便在该进程撤销后将处理器分配给其它进程</p>
+<p><strong>检查被撤销进程是否有子孙进程</strong>，若有子孙进程还应撤销该进程的子孙进程</p>
+<p>回收该进程占有的全部资源并回收其<strong>PCB</strong>.</p>
+<p>例如：正常结束，异常结束，外界干预</p>
+</blockquote>
+<h3 id="进程汇聚和等待，唤醒"><a name="进程汇聚和等待，唤醒" class="anchor-navigation-ex-anchor" href="#进程汇聚和等待，唤醒"><i class="fa fa-link" aria-hidden="true"></i></a>进程汇聚和等待，唤醒</h3>
+<ol>
+<li><p>进程汇聚</p>
+<blockquote>
+<p>例如：</p>
+<ul>
+<li>Java语言中，子线程汇聚到父线程</li>
+<li>用于数学计算，例如矩阵。，</li>
+</ul>
+</blockquote>
+</li>
+<li><p>进程等待</p>
+<blockquote>
+<p><strong>停止</strong>当前进程的执行</p>
+<p>保存该进程的<strong>现场信息</strong>。</p>
+<p>将进程状态改为<strong>等待</strong>.</p>
+<p>引起进程等待事件，例如：请求系统服务，启动某种操作，新数据未获取，无新工作</p>
+</blockquote>
+</li>
+<li><p>进程唤醒</p>
+<blockquote>
+<p>将被唤醒进程从相应的<strong>等待队列</strong>中移除</p>
+<p>将进程状态改为就绪，并将该进程插入<strong>就绪</strong>队列.</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[!important]</p>
+<p>父进程创建子进程与主程序调用子程序区别?</p>
+<ol>
+<li>进程创建子进程后，<strong>父进程与子进程可并发执行</strong></li>
+<li>主程序调用子程序后，<strong>主程序暂停在调用点</strong>，子程序开始执行，直到子程序执行完毕返回，主程序才开始执行</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h2 id="考虑生灭的进程状态转换图"><a name="考虑生灭的进程状态转换图" class="anchor-navigation-ex-anchor" href="#考虑生灭的进程状态转换图"><i class="fa fa-link" aria-hidden="true"></i></a>考虑生灭的进程状态转换图</h2>
+<blockquote>
+<p>[!important]</p>
+<p><img src="assets/image-20250303102526397.png" alt="image-20250303102526397"></img></p>
+<p><img src="assets/f47a2d1767909475276fc3c571869422.png" alt="img"></img></p>
+<p><img src="assets/f4ca6f8da2838487a76e73ab3eb1daf3.png" alt="img"></img></p>
+</blockquote>
+<h2 id="进程与程序-的联系与差别"><a name="进程与程序-的联系与差别" class="anchor-navigation-ex-anchor" href="#进程与程序-的联系与差别"><i class="fa fa-link" aria-hidden="true"></i></a>进程与程序 的联系与差别</h2>
+<ol>
+<li><p>进程与程序的联系</p>
+<blockquote>
+<p>进程包括一个程序</p>
+<p>进程存在的目的就是执行这个程序</p>
+</blockquote>
+</li>
+<li><p>进程与程序的差别</p>
+<blockquote>
+<p>程序静态，进程动态</p>
+<p>程序可长期保存，进程有生存期</p>
+<p>一个程序可对应多个进程，一个进程只能执行一个程序</p>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<h2 id="思考题"><a name="思考题" class="anchor-navigation-ex-anchor" href="#思考题"><i class="fa fa-link" aria-hidden="true"></i></a>思考题</h2>
+<blockquote>
+<p>[!note]</p>
+<ol>
+<li><p><strong>若系统中没有运行进程，是否一定没有就绪进程？</strong><br></br><strong>是的</strong>。当系统中没有运行进程时，操作系统会立即触发调度程序。若就绪队列中存在进程，调度程序必然选择一个进程投入运行。因此，没有运行进程的唯一可能是就绪队列为空，即没有就绪进程。</p>
+</li>
+<li><p><strong>若系统中既没有运行进程，也没有就绪进程，系统中是否就没有进程？</strong><br></br><strong>否</strong>。系统中可能存在处于<strong>阻塞状态</strong>的进程（如等待I/O或事件），这些进程不占用CPU也不在就绪队列中，但仍然是系统中的有效进程。</p>
+</li>
+<li><p><strong>在采用优先级调度时，运行进程是否一定是系统中优先级最高的进程？</strong><br></br><strong>否</strong>。若系统采用<strong>非抢占式调度</strong>，即使有更高优先级的进程进入就绪队列，当前运行进程仍会继续执行，直到主动释放CPU。只有在<strong>抢占式调度</strong>下，运行进程才保证是优先级最高的。</p>
+</li>
+<li><p><strong>某进程被唤醒后立即投入运行，是否说明系统采用剥夺式调度？</strong><br></br><strong>否</strong>。例如，若原运行进程已主动阻塞（如等待I/O），此时唤醒的进程可能是唯一就绪进程，无需剥夺即可运行。这种情况与调度策略是否为剥夺式无关，因此不能以此判断。</p>
+</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h1 id="线程与轻进程"><a name="线程与轻进程" class="anchor-navigation-ex-anchor" href="#线程与轻进程"><i class="fa fa-link" aria-hidden="true"></i></a>线程与轻进程</h1>
+<h2 id="线程的概念"><a name="线程的概念" class="anchor-navigation-ex-anchor" href="#线程的概念"><i class="fa fa-link" aria-hidden="true"></i></a>线程的概念</h2>
+<ul>
+<li><p>进程中一个<strong>相对独立的执行流</strong>。（轻量级进程）</p>
+<blockquote>
+<p>进程是CPU<strong>资源分配</strong>的最小单位</p>
+<p>线程是CPU调度和执行的最小单位（仅仅对于内核级线程，而用户级线程对于内核透明）</p>
+</blockquote>
+</li>
+<li><p>多线程优点</p>
+<blockquote>
+<p>切换速度快（地址空间不变）(light weighted)</p>
+<p>系统开销小（用户级线程）</p>
+<p>通讯容易（共享数据空间）</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>进程与线程的区别和联系</p>
+<p>区别：</p>
+<ol>
+<li><strong>调度</strong>：线程作为<strong>调度和分配</strong>的基本单位，进程作为<strong>拥有资源</strong>的基本单位；</li>
+<li><strong>并发性</strong>：不仅进程之间可以并发执行，同一个进程的多个线程之间也可并发执行；</li>
+<li><strong>拥有资源</strong>：进程是拥有资源的一个独立单位，线程不拥有系统资源，但可以访问隶属于进程的资源。进程所维护的是<strong>程序所包含的资源</strong>（静态资源）， 如：地址空间，打开的文件句柄集，文件系统状态，信号处理handler等；线程所维护的<strong>运行相关的资源</strong>（动态资源），如：运行栈，调度相关的控制信息，待处理的信号集等；</li>
+<li><strong>系统开销</strong>：在创建或撤消进程时，由于系统都要为之分配和回收资源，导致系统的开销明显大于创建或撤消线程时的开销。但是进程有独立的地址空间，一个进程崩溃后，在保护模式下不会对其它进程产生影响，而线程只是一个进程中的不同执行路径。线程有自己的堆栈和局部变量，但线程之间没有单独的地址空间，一个进程死掉就等于所有的线程死掉，所以<strong>多进程的程序要比多线程的程序健壮，但在进程切换时，耗费资源较大，效率要差一些。</strong></li>
+</ol>
+<p>联系：</p>
+<ol>
+<li><strong>一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程</strong>；</li>
+<li>资源分配给进程，同一进程的所有线程共享该进程的所有资源；</li>
+<li>处理机分给线程，即<strong>真正在处理机上运行的是线程</strong>；</li>
+<li>线程在执行过程中，需要协作同步。不同进程的线程间要利用消息通信的办法实现同步。</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h2 id="线程控制块（tcb）"><a name="线程控制块（tcb）" class="anchor-navigation-ex-anchor" href="#线程控制块（tcb）"><i class="fa fa-link" aria-hidden="true"></i></a>线程控制块（TCB）</h2>
+<blockquote>
+<p>[!note]</p>
+<p>标志线程存在的数据结构，其中包含对线程管理需要的全部信息</p>
+<p>内容：线程的标志和状态，调度参数，现场（寄存器，PC，SP），链接指针</p>
+<p>存放位置：用户级线程位于目态空间，内核级线程位于系统空间</p>
+</blockquote>
+<hr></hr>
+<h3 id="线程的操作"><a name="线程的操作" class="anchor-navigation-ex-anchor" href="#线程的操作"><i class="fa fa-link" aria-hidden="true"></i></a>线程的操作</h3>
+<ol>
+<li>在进程创建时，同时为该进程创建第一个线程，用以运行程序，在以后适当的时候，通过“<strong>线程创建</strong>”系统调用创建线程</li>
+<li>线程<strong>共享进程的代码段和数据段</strong>。<strong>但是线程有各自的用户栈</strong>，可以独立调用，占用CPU运行</li>
+<li>当线程被剥夺处理器时，只需将其线程现场保存在该线程对应的栈区</li>
+<li>当进程内的所有线程结束时，意味着进程结束，从而释放进程所占用的所有资源.</li>
+</ol>
+<hr></hr>
+<h2 id="线程的实现"><a name="线程的实现" class="anchor-navigation-ex-anchor" href="#线程的实现"><i class="fa fa-link" aria-hidden="true"></i></a>线程的实现</h2>
+<h3 id="用户级线程"><a name="用户级线程" class="anchor-navigation-ex-anchor" href="#用户级线程"><i class="fa fa-link" aria-hidden="true"></i></a>用户级线程</h3>
+<ol>
+<li><p>实现方法：</p>
+<blockquote>
+<p>基于library函数（线程库），<strong>系统不可见</strong></p>
+<p>线程创建、撤销、<strong>状态转换在目态完成</strong></p>
+<p>TCB<strong>在用户空间</strong>，每个进程一个系统栈.</p>
+</blockquote>
+</li>
+<li><p>优缺点：</p>
+<blockquote>
+<p>优点：</p>
+<ul>
+<li>不依赖于操作系统，<strong>调度灵活</strong></li>
+<li><strong>同一进程中多线程切换速度快</strong>(不需进入操作系统)</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>同一进程中多个线程不能真正并行，即使在多处理器环境中</li>
+<li>一个线程进入系统受阻，进程中其它线程不能执行</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>线程状态和进程状态</p>
+<ul>
+<li>若同一进程中的多个线程至少有一个处于运行态，则该进程的状态为运行态</li>
+<li>若同一进程中的多个线程均不处于运行态，但至少有一个线程处于就绪态，则该进程的状态为就绪态</li>
+<li>若同一进程中的多个线程均处于等待态，则该进程的状态为等待态</li>
+</ul>
+</blockquote>
+<h3 id="核心级别线程"><a name="核心级别线程" class="anchor-navigation-ex-anchor" href="#核心级别线程"><i class="fa fa-link" aria-hidden="true"></i></a>核心级别线程</h3>
+<ol>
+<li><p>实现方法：</p>
+<blockquote>
+<ul>
+<li>基于<strong>系统调用</strong>由操作系统创建</li>
+<li>创建、撤销、状态转换由<strong>操作系统完成</strong></li>
+<li><p>线程是处理器调度的基本单位</p>
+</li>
+<li><p>TCB在操作系统空间，每个线程一个系统栈</p>
+</li>
+<li><p>对于核心级别线程，进程状态不具有实际意义</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>优缺点：</p>
+<blockquote>
+<p>优点：</p>
+<ol>
+<li>同一进程内多线程可以<strong>并行执行</strong>（多CPU）</li>
+<li>进程中的一个线程被阻塞了，内核可以调度同一进程的其它线程占有处理器运行</li>
+</ol>
+<p>缺点：线程的控制和状态转换需要进入操作系统，<strong>系统开销大</strong></p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[!note]</p>
+<p>用户级别线程和核心级别线程区别</p>
+<ul>
+<li>核心级别线程操作系统可见；用户级别线程操作系统不可见</li>
+<li>用户级别线程的创建、撤销和调度不需要操作系统的支持，且是在<strong>（程序）语言这一级处理</strong>的。核心级别线程的创建、撤销和调度都需要操作系统内核的支持</li>
+<li>用户级别线程执行系统调用命令将导致其所属进程被中断，核心级别线程执行系统调用命令将导致线程被中断</li>
+<li>在仅有用户线程的系统内，CPU调度以进程为单位。在有核心级别线程的系统内，CPU调度以线程为单位</li>
+<li>用户级别线程的实体是运行在用户态下的程序，而核心级别线程的实体则是可以运行在任何状态下的程序</li>
+</ul>
+</blockquote>
+<h3 id="混合线程"><a name="混合线程" class="anchor-navigation-ex-anchor" href="#混合线程"><i class="fa fa-link" aria-hidden="true"></i></a>混合线程</h3>
+<ul>
+<li><p>Solaris系统</p>
+</li>
+<li><p>Light weighted process(LWP)</p>
+<blockquote>
+<p>由Lib程序支持</p>
+<p>每个task至少一个LWP</p>
+<p>用戶级别线程与LWP可以多对多</p>
+<p>LWP对操作系统可见</p>
+<p>只有与LWP相联系的用户线程向前推进</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<blockquote>
+<p>[!tip]</p>
+<p>多线程与多任务的区别：</p>
+<ul>
+<li>多任务是针对操作系统而言的，代表操作系统可以同时执行的程序个数</li>
+<li>多线程是针对一个进程而言的，代表一个进程内部可以同时执行的线程个数，每个线程完成不同的任务.</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="作业"><a name="作业" class="anchor-navigation-ex-anchor" href="#作业"><i class="fa fa-link" aria-hidden="true"></i></a>作业</h2>
+<blockquote>
+<p>[!note]</p>
+<p>作业概念:</p>
+<p>用户要求计算机系统为其完成的<strong>计算任务集合</strong></p>
+</blockquote>
+<ol>
+<li><p>作业步</p>
+<blockquote>
+<p>作业处理过程中一个<strong>相对独立的步骤</strong></p>
+<p>一般一个作业步可由一个进程完成</p>
+<p>某些作业步之间可以并行</p>
+</blockquote>
+</li>
+<li><p>作业分类:批处理作业，交互式作业.</p>
+</li>
+<li><p><strong>作业控制块</strong></p>
+<blockquote>
+<p>标志作业存在的数据结构，其中包含对作业进行管理所需要的全部信息</p>
+<p>如作业名称、作业状态、调度参数、资源请求、相关进程、作业长度、在输入井与输出井中的存放位置、记账信息等</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>作业和进程的区别</p>
+<ul>
+<li>作业是用户向计算机提交的<strong>任务实体</strong>，而进程则是完成用户任务的<strong>执行实体</strong>，是向操作系统申请分配资源的基本单位</li>
+<li>一个作业可由多个进程组成，一个作业至少由一个进程组成</li>
+<li>作业的概念主要用在批处理系统中，而进程的概念则用在所有的多道程序系统中.</li>
+</ul>
+</blockquote>
+<h3 id="批处理作业"><a name="批处理作业" class="anchor-navigation-ex-anchor" href="#批处理作业"><i class="fa fa-link" aria-hidden="true"></i></a>批处理作业</h3>
+<ol>
+<li><p>作业控制语言(JCL)：描述批处理作业控制意图的语言</p>
+</li>
+<li><p>作业说明书(JCL语句的序列）：一般以特殊符号起始</p>
+</li>
+<li><p>作业控制进程：解释并处理作业说明书的程序，执行作业控制程序的进程.</p>
+</li>
+<li><p>批处理作业的工作过程：</p>
+<blockquote>
+<ul>
+<li><p>作业由<strong>假脱机输入程序</strong>控制进入输入井</p>
+</li>
+<li><p>经由操作系统的<strong>作业调度程序</strong>选中进入内存</p>
+</li>
+<li><p>同时由<strong>作业调度程序</strong>为其建立作业控制进程执行作业控制程序</p>
+</li>
+<li><p><strong>作业控制进程</strong>解读作业说明书中的语句，并根据作业步的要求为其建立相应的进程</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h3 id="交互式作业"><a name="交互式作业" class="anchor-navigation-ex-anchor" href="#交互式作业"><i class="fa fa-link" aria-hidden="true"></i></a>交互式作业</h3>
+<ol>
+<li><p>账户管理</p>
+<blockquote>
+<p><code>/etc/passwd</code>文件(创建用户时，系统将设置口令文件)</p>
+<p>passwd中包括注册用户的所有信息(用户名,口令,用户根目录,同组用户,余额…)，为系统文件</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="处理机调度"><a name="处理机调度" class="anchor-navigation-ex-anchor" href="#处理机调度"><i class="fa fa-link" aria-hidden="true"></i></a>处理机调度</h1>
+<ul>
+<li>调度分为三个层次，分别为高级调度，中级调度，初级调度。</li>
+</ul>
+<h2 id="高级调度"><a name="高级调度" class="anchor-navigation-ex-anchor" href="#高级调度"><i class="fa fa-link" aria-hidden="true"></i></a>高级调度</h2>
+<ul>
+<li>确定某种规则来决定将作业调入内存的顺序。即作业调度</li>
+<li>按一定的原则从外存上处于后备队列的作业中挑选一个(或多个）作业，给他们分配内存等必要资源，并建立相应的进程（建立PCB)，以使它（们）获得竞争处理机的权利。</li>
+<li>辅存（外存）与内存之间的调度</li>
+</ul>
+<h2 id="中级调度"><a name="中级调度" class="anchor-navigation-ex-anchor" href="#中级调度"><i class="fa fa-link" aria-hidden="true"></i></a>中级调度</h2>
+<ul>
+<li>暂时调到外存等待的进程状态为挂起状态。即决定将哪个处于<strong>挂起状态</strong>的进程重新调入内存。</li>
+<li>PCB并不会一起调到外存，而是会常驻内存。</li>
+</ul>
+<h2 id="低级调度"><a name="低级调度" class="anchor-navigation-ex-anchor" href="#低级调度"><i class="fa fa-link" aria-hidden="true"></i></a>低级调度</h2>
+<p><strong>从就绪队列中选取一个进程，将处理机分配给它。</strong></p>
+<p><img src="assets/c0abf8cdc66560ceb81f932464cf014b.png" alt="img"></img></p>
+<h1 id="小结："><a name="小结：" class="anchor-navigation-ex-anchor" href="#小结："><i class="fa fa-link" aria-hidden="true"></i></a>小结：</h1>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><p>作业与进程</p>
+<ul>
+<li>作业进入内存后变为进程</li>
+<li>一个作业通常与多个进程相对应</li>
+</ul>
+</li>
+<li><p>进程与线程</p>
+<ul>
+<li>一个进程一般包含多个线程，至少包含一个线程</li>
+<li>不支持多线程的系统，可视为单线程进程</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr></hr>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 02_进程管理</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_概论.html" class="navigation navigation-prev " aria-label="Previous page: 01_概论">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_中断和处理器调度.html" class="navigation navigation-next " aria-label="Next page: 03_中断和处理器调度">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02_进程管理","level":"1.6.2","depth":2,"next":{"title":"03_中断和处理器调度","level":"1.6.3","depth":2,"path":"docs/Operating_System/03_中断和处理器调度.md","ref":"docs/Operating_System/03_中断和处理器调度.md","articles":[]},"previous":{"title":"01_概论","level":"1.6.1","depth":2,"path":"docs/Operating_System/01_概论.md","ref":"docs/Operating_System/01_概论.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Operating_System/02_进程管理.md","mtime":"2025-09-07T09:41:17.160Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

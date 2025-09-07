@@ -1,0 +1,2868 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>16_贪心算法 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="17_回溯.html" />
+    
+    
+    <link rel="prev" href="15_动态规划.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01_算法在计算中的作用.html">
+            
+                <a href="01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02_算法基础.html">
+            
+                <a href="02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03_函数的增长.html">
+            
+                <a href="03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="04_分治策略.html">
+            
+                <a href="04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="15_动态规划.html">
+            
+                <a href="15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.6" data-path="16_贪心算法.html">
+            
+                <a href="16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="17_回溯.html">
+            
+                <a href="17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="18_分支限界.html">
+            
+                <a href="18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="19_NP问题.html">
+            
+                <a href="19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Data_structure/">
+            
+                <a href="../Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Data_structure/01_Introduction.html">
+            
+                <a href="../Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Data_structure/02_Linear_List.html">
+            
+                <a href="../Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Data_structure/05_Character_String.html">
+            
+                <a href="../Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Data_structure/06_Tree.html">
+            
+                <a href="../Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Data_structure/07_Graph.html">
+            
+                <a href="../Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Data_structure/08_Sort.html">
+            
+                <a href="../Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Data_structure/09_Search.html">
+            
+                <a href="../Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Data_structure/data_structure.html">
+            
+                <a href="../Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Cpp/">
+            
+                <a href="../../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Cpp/C++-Primer/">
+            
+                <a href="../../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Cpp/Effective-Modern-C++/">
+            
+                <a href="../../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Cpp/Pre-knowledge/">
+            
+                <a href="../../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >16_贪心算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#贪心算法"><b></b>贪心算法</a></li><ul><li><span class="title-icon "></span><a href="#活动选择问题"><b></b>活动选择问题</a></li><ul><li><span class="title-icon "></span><a href="#活动选择问题的最优子结构"><b></b>活动选择问题的最优子结构</a></li><li><span class="title-icon "></span><a href="#贪心选择（最早结束）"><b></b>贪心选择（最早结束）</a></li><li><span class="title-icon "></span><a href="#另一贪心选择（最晚开始）"><b></b>另一贪心选择（最晚开始）</a></li><li><span class="title-icon "></span><a href="#不合理的贪心选择"><b></b>不合理的贪心选择</a></li></ul><li><span class="title-icon "></span><a href="#区间着色问题"><b></b>区间着色问题</a></li><ul><li><span class="title-icon "></span><a href="#方法一：优先队列"><b></b>方法一：优先队列</a></li><li><span class="title-icon "></span><a href="#方法二：有序化"><b></b>方法二：有序化</a></li></ul><li><span class="title-icon "></span><a href="#权值之和最大的兼容活动子集"><b></b>权值之和最大的兼容活动子集</a></li><ul><li><span class="title-icon "></span><a href="#方法一：动态规划（区间两个端点都不固定）_1"><b></b>方法一：动态规划（区间两个端点都不固定）</a></li><li><span class="title-icon "></span><a href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）_1"><b></b>方法二：动态规划（区间一个端点固定，另一个端点不固定）</a></li><li><span class="title-icon "></span><a href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化_1"><b></b>方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</a></li></ul><li><span class="title-icon "></span><a href="#小数背包"><b></b>小数背包</a></li><ul><li><span class="title-icon "></span><a href="#问题"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#带有期限的作业调度问题"><b></b>带有期限的作业调度问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_1"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_1"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#最小生成树问题"><b></b>最小生成树问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_2"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_2"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#补水点选择问题"><b></b>补水点选择问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_3"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_3"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#覆盖点问题"><b></b>覆盖点问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_4"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_4"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#哈夫曼编码"><b></b>哈夫曼编码</a></li><ul><li><span class="title-icon "></span><a href="#编码问题"><b></b>编码问题</a></li><li><span class="title-icon "></span><a href="#前缀无关编码prefix-free-codes"><b></b>前缀无关编码(Prefix-free codes)</a></li><li><span class="title-icon "></span><a href="#构造哈夫曼编码constructing-a-huffman-code"><b></b>构造哈夫曼编码(Constructing a Huffman code)</a></li><li><span class="title-icon "></span><a href="#哈夫曼算法的正确性correctness-of-huffmans-algorithm"><b></b>哈夫曼算法的正确性(Correctness of Huffman's algorithm)</a></li></ul><li><span class="title-icon "></span><a href="#最优归并树"><b></b>最优归并树</a></li><li><span class="title-icon "></span><a href="#离线缓存"><b></b>离线缓存</a></li><ul><li><span class="title-icon "></span><a href="#问题_5"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_5"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#贪心算法原理"><b></b>贪心算法原理</a></li><ul><li><span class="title-icon "></span><a href="#贪心选择性质greedy-choice-property"><b></b>贪心选择性质(Greedy-choice property)</a></li><li><span class="title-icon "></span><a href="#最优子结构optimal-substructure"><b></b>最优子结构(Optimal substructure)</a></li><li><span class="title-icon "></span><a href="#贪心vs动态规划greedy-versus-dynamic-programming"><b></b>贪心VS动态规划(Greedy versus dynamic programming)</a></li></ul></ul></ul></div><a href="#贪心算法" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#贪心算法">贪心算法</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#活动选择问题">活动选择问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#活动选择问题的最优子结构">活动选择问题的最优子结构</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#方法一：动态规划（区间两个端点都不固定）">方法一：动态规划（区间两个端点都不固定）</a><i></i></div></li>
+<li><div><a href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）">方法二：动态规划（区间一个端点固定，另一个端点不固定）</a><i></i></div></li>
+<li><div><a href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化">方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#贪心选择（最早结束）">贪心选择（最早结束）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#定理161theorem-161">定理16.1(Theorem 16.1)</a><i></i></div></li>
+<li><div><a href="#递归贪心算法a-recursive-greedy-algorithm">递归贪心算法(A recursive greedy algorithm)</a><i></i></div></li>
+<li><div><a href="#迭代贪心算法an-iterative-greedy-algorithm">迭代贪心算法(An iterative greedy algorithm)</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#另一贪心选择（最晚开始）">另一贪心选择（最晚开始）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#递归贪心算法">递归贪心算法</a><i></i></div></li>
+<li><div><a href="#迭代贪心算法">迭代贪心算法</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#不合理的贪心选择">不合理的贪心选择</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#区间着色问题">区间着色问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#方法一：优先队列">方法一：优先队列</a><i></i></div></li>
+<li><div><a href="#方法二：有序化">方法二：有序化</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#权值之和最大的兼容活动子集">权值之和最大的兼容活动子集</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#方法一：动态规划（区间两个端点都不固定）">方法一：动态规划（区间两个端点都不固定）</a><i></i></div></li>
+<li><div><a href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）">方法二：动态规划（区间一个端点固定，另一个端点不固定）</a><i></i></div></li>
+<li><div><a href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化">方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#小数背包">小数背包</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#动态规划">动态规划</a><i></i></div></li>
+<li><div><a href="#贪心算法">贪心算法</a><i></i></div></li>
+<li><div><a href="#类似的模型">类似的模型</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#最佳装载">最佳装载</a><i></i></div></li>
+<li><div><a href="#顾客等待时间问题">顾客等待时间问题</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#带有期限的作业调度问题">带有期限的作业调度问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基于插入排序的带有限期的作业排序">基于插入排序的带有限期的作业排序</a><i></i></div></li>
+<li><div><a href="#基于集合数（并查集）的作业排序算法">基于集合数（并查集）的作业排序算法</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#最小生成树问题">最小生成树问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#kruskal方法">Kruskal方法</a><i></i></div></li>
+<li><div><a href="#prim算法（加点法）">Prim算法（加点法）</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#补水点选择问题">补水点选择问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#覆盖点问题">覆盖点问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#哈夫曼编码">哈夫曼编码</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#编码问题">编码问题</a><i></i></div></li>
+<li><div><a href="#前缀无关编码prefix-free-codes">前缀无关编码(Prefix-free codes)</a><i></i></div></li>
+<li><div><a href="#构造哈夫曼编码constructing-a-huffman-code">构造哈夫曼编码(Constructing a Huffman code)</a><i></i></div></li>
+<li><div><a href="#哈夫曼算法的正确性correctness-of-huffman39s-algorithm">哈夫曼算法的正确性(Correctness of Huffman's algorithm)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#引理152lemma-152">引理15.2(Lemma 15.2)</a><i></i></div></li>
+<li><div><a href="#引理153lemma-153">引理15.3(Lemma 15.3)</a><i></i></div></li>
+<li><div><a href="#定理154theorem-154">定理15.4(Theorem 15.4)</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#最优归并树">最优归并树</a><i></i></div></li>
+<li><div><a href="#离线缓存">离线缓存</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#离线缓存的最优子结构optimal-substructure-of-offline-caching">离线缓存的最优子结构(Optimal substructure of offline caching)</a><i></i></div></li>
+<li><div><a href="#离线缓存的贪心选择性质greedy-choice-property-of-offline-caching">离线缓存的贪心选择性质(Greedy-choice property of offline caching)</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#贪心算法原理">贪心算法原理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#贪心选择性质greedy-choice-property">贪心选择性质(Greedy-choice property)</a><i></i></div></li>
+<li><div><a href="#最优子结构optimal-substructure">最优子结构(Optimal substructure)</a><i></i></div></li>
+<li><div><a href="#贪心vs动态规划greedy-versus-dynamic-programming">贪心VS动态规划(Greedy versus dynamic programming)</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="贪心算法"><a name="贪心算法" class="anchor-navigation-ex-anchor" href="#贪心算法"><i class="fa fa-link" aria-hidden="true"></i></a>贪心算法</h1>
+<blockquote>
+<p>[!note]</p>
+<p>贪心算法(greedy algorithm)就是这样的算法，每一步都做出<strong>当时看起来最佳的选择</strong>。总是做出局部最优的选择</p>
+<p>贪心方法是一种”只顾眼前”的分级处理方法：</p>
+<ul>
+<li>根据题意选取一种量度标准；</li>
+<li>按该标准一次选中一个输入；</li>
+<li>如果这个输入和当前的部分解加在一起满足约束条件，则将其加入到部分解中；否则舍弃掉。</li>
+</ul>
+<p>[!warning]</p>
+<p>贪心算法并<strong>不保证得到最优解</strong>，但对很多问题确实可以求得最优解。</p>
+<p>贪心法设计求解的核心问题：选择能产生问题最优解的量度标准，即<strong>最优量度标准</strong></p>
+</blockquote>
+<h2 id="活动选择问题"><a name="活动选择问题" class="anchor-navigation-ex-anchor" href="#活动选择问题"><i class="fa fa-link" aria-hidden="true"></i></a>活动选择问题</h2>
+<p><strong>活动选择问题(activity-selection problem)</strong>：是一个<strong>调度多个活动问题</strong>，这些活动需要互斥竞争共享资源。从一个活动日程表中选出<strong>规模最大的相互兼容</strong>的活动(activity)的集合。</p>
+<p>有 n 个活动构成的集合 <code>S={a1,a2,…,an}</code> ，这些活动都需要占用会议室，且每个时刻会议室只能给一场活动提供服务。每个活动 ai 的开始时间<code>(start time)为 si</code> ，结束时间<code>(finish time)为 fi</code>，其中 <code>0≤si&lt;fi&lt;∞</code>。如果活动 ai 占用的时间为左闭右开区间 [si,fi) 。如果活动 ai 和 aj 的时间区间 <code>[si,fi) 和 [sj,fj) 没有重叠</code>，那么活动 ai 和 aj 相互兼容</p>
+<p>活动选择问题目标是从所有活动中选出一个总时间规模最大相互兼容的活动子集</p>
+<blockquote>
+<p>[!tip]</p>
+<p>假设这些活动已经按照<strong>结束时间</strong>从小到大排序，即：<code>f1≤f2≤f3≤⋯≤fn</code></p>
+</blockquote>
+<h3 id="活动选择问题的最优子结构"><a name="活动选择问题的最优子结构" class="anchor-navigation-ex-anchor" href="#活动选择问题的最优子结构"><i class="fa fa-link" aria-hidden="true"></i></a>活动选择问题的最优子结构</h3>
+<blockquote>
+<p>[!important]</p>
+<p>定义 Sij 为 ai 结束后 aj 开始前的活动集合，定义 Aij 为 Sij 中规模最大且相互兼容的活动子集。</p>
+<p> Aij中包含活动 ak ，和<strong>两个子问题 Aik 和 Akj</strong> 。定义 <code>Aik=Aij∩Sik 且 Akj=Aij∩Skj</code>，这样有 <code>Aik=Aik∪{ak}∪Akj ，所以有 |Aij|=|Aik|+|Akj|+1</code> 。</p>
+<p>剪切粘贴方法可以证明最优解 Aij 一定包含两个子问题 Sik 和 Skj 的最优解</p>
+<p>如果你能找到一个由 Skj 相互兼容的活动组成的集合 Akj′ ，其中<code>|Akj′|&gt;|Akj|</code> ，那么你就可以用 Akj′ 替换 Akj 。此时就能构造出规模为<code>|Aik|+|Akj′|+1&gt;|Aik|+|Akj|+1=|Aij|</code>的相互兼容的活动集合，与 Aij 是最优解矛盾。同理也可以用于证明子问题 Sik </p>
+</blockquote>
+<ul>
+<li>最优解</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>定义 Sij 的最优解的规模为 c[i,j] ，运用<a href="https://zhida.zhihu.com/search?content_id=214481794&amp;content_type=Article&amp;match_order=1&amp;q=动态规划&amp;zhida_source=entity" target="_blank">动态规划</a>方法可以写出递归式： <code>c[i,j]=c[i,k]+c[k,j]+1</code> 。</p>
+<p>如果不知道 Sij 的最优解包含活动 ak ，就需要考察 Sij 中的所有活动，<strong>寻找哪个活动可以构造最优解</strong>:</p>
+<p><img src="assets/image-20250324193925217.png" alt="image-20250324193925217"></img></p>
+</blockquote>
+<h4 id="方法一：动态规划（区间两个端点都不固定）"><a name="方法一：动态规划（区间两个端点都不固定）" class="anchor-navigation-ex-anchor" href="#方法一：动态规划（区间两个端点都不固定）"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法一：动态规划（区间两个端点都不固定）</strong></h4>
+<p>这个方法实际意义是找到<strong>分割点</strong></p>
+<ul>
+<li>对于子问题 Sij ，当 j−i≥2 时，我们要找到活动 ak ，使得 <code>i&lt;k&lt;j,fi≤sk,fk≤sj</code>。</li>
+<li>构造两个<strong>虚拟活动</strong> a0 和 an+1 ，活动 a0 的结束时间 <code>f0=0</code> ，活动 an+1 的开始时间 <code>sn+1=+∞</code> </li>
+<li>构造 Aij 规模 c[i,j] 表格 c[0:n+1,0:n+1] 和对应的 act[i,j] 选择表格 act[0:n+1,0:n+1] 。</li>
+<li><code>c[i][j]</code> 表示在虚拟活动 <code>i</code> 和 <code>j</code> 之间（即活动 <code>i</code> 结束后开始、活动 <code>j</code> 开始前结束的活动）能选择的最大兼容活动数</li>
+</ul>
+<pre><code class="lang-cpp">DP-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, n) {
+    let c[<span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>] be <span class="hljs-keyword">new</span> tables
+    <span class="hljs-comment">//开区间，所以（i，i)和（i，i+1)之间没有活动</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n
+        c[i, i] = <span class="hljs-number">0</span>
+        c[i, i + <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+    c[n + <span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-comment">//区间长度（i,i+l)中间有l-1个活动</span>
+    <span class="hljs-keyword">for</span> l = <span class="hljs-number">2</span> to n + <span class="hljs-number">1</span>
+        <span class="hljs-comment">//起始点</span>
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n - l + <span class="hljs-number">1</span>
+            <span class="hljs-comment">//结束点</span>
+            j = i + l
+            c[i, j] = <span class="hljs-number">0</span>
+            <span class="hljs-comment">//从后往前遍历分割点</span>
+            k = j - <span class="hljs-number">1</span>
+            <span class="hljs-keyword">while</span> f[i] &lt; f[k]
+                <span class="hljs-keyword">if</span> f[i] ≤ s[k] <span class="hljs-keyword">and</span> f[k] ≤ s[j] <span class="hljs-keyword">and</span> c[i, k] + c[k, j] + <span class="hljs-number">1</span> &gt; c[i, j]
+                    c[i, j] = c[i, k] + c[k, j] + <span class="hljs-number">1</span>
+                    act[i, j] = k
+                k = k - <span class="hljs-number">1</span>
+    print <span class="hljs-string">"A maximum size set of mutually compatible activities has size"</span> c[<span class="hljs-number">0</span>, n + <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"The set contains"</span>
+    PRINT-<span class="hljs-built_in">ACTIVITIES</span>(c, act, <span class="hljs-number">0</span>, n + <span class="hljs-number">1</span>)
+}
+
+PRINT-<span class="hljs-built_in">ACTIVITIES</span>(c, act, i, j)
+    <span class="hljs-keyword">if</span> c[i, j] &gt; <span class="hljs-number">0</span>
+        k = act[i, j]
+        print k
+        PRINT-<span class="hljs-built_in">ACTIVITIES</span>(c, act, i, k)
+        PRINT-<span class="hljs-built_in">ACTIVITIES</span>(c, act, k, j)
+</code></pre>
+<ul>
+<li>DP-ACTIVITY-SELECTOR的运行时间为 O(n^3) 。</li>
+</ul>
+<h4 id="方法二：动态规划（区间一个端点固定，另一个端点不固定）"><a name="方法二：动态规划（区间一个端点固定，另一个端点不固定）" class="anchor-navigation-ex-anchor" href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法二：动态规划（区间一个端点固定，另一个端点不固定）</strong></h4>
+<p>这个方法则是从左到右判断是否<strong>选择该活动</strong></p>
+<p>假定所有活动已经按照结束时间从小到大排序。</p>
+<p>只需要从单端开始拓展就行，构造数组 c[0,n] ，构造一个虚拟活动 a0 ，活动 a0 的结束时间 ，<code>f0=0，v0=0</code> ，<strong>c[i] 表示前 i 个活动能够取得的最大规模</strong>，即子问题 S0,i 中规模最大且相互兼容的活动子集 A0,i 的规模，对应的活动序列为 act[i] 。则求解 c[i] 的递归式如下：</p>
+<p><img src="assets/image-20250324200219764.png" alt="image-20250324200219764"></img></p>
+<p>当 i≠0 时， c[i] 在<strong>选择第 i 个活动 c[k]+1</strong> （ k 为结束时间小于等于且最接近 si 的活动下标）和<strong>不选择第 i 个活动 c[i−1]</strong> 之间取最大值</p>
+<p>DP-ACTIVITY-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let c[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> arrays
+    c[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        k = i - <span class="hljs-number">1</span>
+        <span class="hljs-comment">//找到不冲突的活动</span>
+        <span class="hljs-keyword">while</span> k &gt; <span class="hljs-number">0</span>
+            <span class="hljs-keyword">if</span> f[k] ≤ s[i]
+                <span class="hljs-keyword">break</span>
+            k = k - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">if</span> c[k] + <span class="hljs-number">1</span> &gt; c[i - <span class="hljs-number">1</span>]
+            c[i] = c[k] + <span class="hljs-number">1</span>
+            act[i] = act[k]
+            act[i] = act[i] ∪ {i} 
+        <span class="hljs-keyword">else</span> 
+            c[i] = c[i - <span class="hljs-number">1</span>]
+            act[i] = act[i - <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"A maximum size set of mutually compatible activities has size"</span> c[n]
+    print <span class="hljs-string">"The set contains"</span>
+    print act[n]
+</code></pre>
+<p>DP-ACTIVITY-SELECTOR的运行时间为 O(n^2) 。</p>
+<h4 id="方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化"><a name="方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化" class="anchor-navigation-ex-anchor" href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</strong></h4>
+<p>方法二中查找 k 的步骤因为<strong>f[n]是有序的</strong>，可以用<strong>二分查找进一步优化</strong>：</p>
+<pre><code class="lang-cpp">DP-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let c[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> arrays
+    c[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        l = <span class="hljs-number">1</span>
+        r = i
+        <span class="hljs-keyword">while</span> l ≤ r
+            mid = ⌊(l + r) / <span class="hljs-number">2</span>⌋ 
+            <span class="hljs-keyword">if</span> f[mid] ≤ s[i]
+                l = mid + <span class="hljs-number">1</span>
+            <span class="hljs-keyword">else</span>
+                r = mid - <span class="hljs-number">1</span>
+        k = r
+        <span class="hljs-keyword">if</span> c[k] + <span class="hljs-number">1</span> &gt; c[i - <span class="hljs-number">1</span>]
+            c[i] = c[k] + <span class="hljs-number">1</span>
+            act[i] = act[k]
+            act[i] = act[i] ∪ {i}
+        <span class="hljs-keyword">else</span> 
+            c[i] = c[i - <span class="hljs-number">1</span>]
+            act[i] = act[i - <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"A maximum size set of mutually compatible activities has size"</span> c[n]
+    print <span class="hljs-string">"The set contains"</span>
+    print act[n]
+</code></pre>
+<p>DP-ACTIVITY-SELECTOR的运行时间为 O(nlg⁡n) 。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>全源最短路径<a href="https://zhida.zhihu.com/search?content_id=214481794&amp;content_type=Article&amp;match_order=1&amp;q=Floyd算法&amp;zhida_source=entity" target="_blank">Floyd算法</a>、单源最短路径<a href="https://zhida.zhihu.com/search?content_id=214481794&amp;content_type=Article&amp;match_order=1&amp;q=Dijkstra算法&amp;zhida_source=entity" target="_blank">Dijkstra算法</a>、单源最短路径<strong>Dijkstra算法优先队列优化</strong>的运行时间依次为 O(n^3) 、 O(n^2) 、 O(nlg⁡n) 。</p>
+<p>两者非常相似。</p>
+</blockquote>
+<h3 id="贪心选择（最早结束）"><a name="贪心选择（最早结束）" class="anchor-navigation-ex-anchor" href="#贪心选择（最早结束）"><i class="fa fa-link" aria-hidden="true"></i></a>贪心选择（最早结束）</h3>
+<p>对于活动选择问题，我们只需要考虑一个选择，那就是贪心选择。</p>
+<p>贪心选择一个能够<strong>尽早结束活动</strong>，这样留下尽可能多的资源供接下来的活动使用。</p>
+<p>由于所有活动已经按照结束时间从小到大排序，贪心选择 a1 ，接下来只有一个子问题要处理，<strong>选择一个在 a1 结束后开始的活动</strong>。为什么没必要考察在 a1 开始前的活动呢？因为 s1&lt;f1 ， f1 是最早结束的活动，所以<strong>不会有活动结束时间早于 s1</strong> ，可以贪心选择活动 a1 </p>
+<p>令 <code>Sk={ai∈S:si≥fk}</code> 为在 <strong>ak 结束后开始</strong>的任务集合。当贪心选择 a1 后， S1 是唯一需要求解的子问题。</p>
+<h4 id="定理161theorem-161"><a name="定理161theorem-161" class="anchor-navigation-ex-anchor" href="#定理161theorem-161"><i class="fa fa-link" aria-hidden="true"></i></a><strong>定理16.1(Theorem 16.1)</strong></h4>
+<blockquote>
+<p>[!note]</p>
+<p>考虑任意非空子问题Sk, 令am 是Sk 中结束时间最早的活动，则 am 在sk 的某个 最大兼容活动子集中。</p>
+<p>证明：定义 Ak 是 Sk 的最大兼容活动子集，且 aj 是 Ak 中结束时间最早的活动。</p>
+<ol>
+<li>若 aj=am ，则已证明 am∈Ak 。</li>
+<li>若 aj≠am ，令 <code>Ak′=(Ak−{aj})∪{am}</code>，则 |Ak|=|Ak′| 。又 aj 是 Ak 中结束时间最早的活动，am 是 Ak′ 中结束时间最早的活动， fm≤fj 。所以 Ak′ 是 Sk 的最大兼容活动子集， am∈Ak′ 。</li>
+</ol>
+</blockquote>
+<p>我们每次选择<strong>结束时间最早的且与当前活动兼容</strong>的活动，重复执行这个过程直到没有剩余活动可以选择。所选择的活动的结束时间必然是严格递增的。所以我们只需要按照结束时间单调递增的顺序处理所有活动，每个活动仅需要考察一次。</p>
+<p>由于<a href="https://zhida.zhihu.com/search?content_id=214481794&amp;content_type=Article&amp;match_order=1&amp;q=贪心算法&amp;zhida_source=entity" target="_blank">贪心算法</a>只有一个子问题，所以用自顶向下的方法进行求解也非常方便。</p>
+<h4 id="递归贪心算法a-recursive-greedy-algorithm"><a name="递归贪心算法a-recursive-greedy-algorithm" class="anchor-navigation-ex-anchor" href="#递归贪心算法a-recursive-greedy-algorithm"><i class="fa fa-link" aria-hidden="true"></i></a>递归贪心算法(A recursive greedy algorithm)</h4>
+<p>可以增加一个<strong>虚拟活动 a0</strong> 放在所有活动之前，其结束时间 f0=0 。这样子问题 S0 就是完整的活动集合 S 。RECURSIVE-ACTIVITY-SELECTOR的伪代码如下：</p>
+<pre><code class="lang-c">RECURSIVE-ACTIVITY-SELECTOR(s, f, k, n) 
+    m = k + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> m ≤ n and s[m] &lt; f[k]    <span class="hljs-comment">// find the first activity in S_k to finish</span>
+        m = m + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> m ≤ n
+        <span class="hljs-keyword">return</span> {a_m} ∪ RECURSIVE-ACTIVITY-SELECTOR(s, f, m, n) 
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> ∅
+
+RECURSIVE-ACTIVITY-SELECTOR(s, f, <span class="hljs-number">0</span>, n) <span class="hljs-comment">// call function</span>
+</code></pre>
+<p>假定所有活动<strong>已经按照结束时间从小到大排序</strong>，则递归调用 RECURSIVE-ACTIVITY-SELECTOR(s,f,0,n) 的运行时间为 Θ(n) 。</p>
+<h4 id="迭代贪心算法an-iterative-greedy-algorithm"><a name="迭代贪心算法an-iterative-greedy-algorithm" class="anchor-navigation-ex-anchor" href="#迭代贪心算法an-iterative-greedy-algorithm"><i class="fa fa-link" aria-hidden="true"></i></a>迭代贪心算法(An iterative greedy algorithm)</h4>
+<p>RECURSIVE-ACTIVITY-SELECTOR几乎就是<strong><a href="https://zhida.zhihu.com/search?content_id=214481794&amp;content_type=Article&amp;match_order=1&amp;q=尾递归&amp;zhida_source=entity" target="_blank">尾递归</a>(tail recursive)</strong>，</p>
+<blockquote>
+<p>如果一个函数中所有递归形式的调用都出现在函数的末尾，我们称这个递归函数是尾递归的。（详见思考题7-5）</p>
+</blockquote>
+<p>将尾部递归过程转换为迭代形式通常是一项简单的任务。事实上，<strong>某些编程语言的编译器会自动执行此任务。</strong></p>
+<p>RECURSIVE-ACTIVITY-SELECTOR可以转化为迭代版本GREEDY-ACTIVITY-SELECTOR，伪代码如下：</p>
+<pre><code class="lang-cpp">GREEDY-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, n)
+    A = {a_1}
+    k = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">for</span> m = <span class="hljs-number">2</span> to n
+        <span class="hljs-keyword">if</span> s[m] ≥ f[k]    <span class="hljs-comment">// is a_m in S_k</span>
+            A = A ∪ {a_m}    <span class="hljs-comment">// yes, so choose it</span>
+            k = m    <span class="hljs-comment">// and continue from there</span>
+    <span class="hljs-keyword">return</span> A
+</code></pre>
+<p>变量 k 记录了<strong>最近加入集合 A 的活动下标</strong>，对应递归算法中的活动 ak ，由于我们按照结束时间单调递增处理活动。 fk 是 A 中活动的的最大结束时间，也就是说，</p>
+<p><img src="assets/image-20250325092748854.png" alt="image-20250325092748854"></img></p>
+<p>假定所有活动已经按照结束时间从小到大排序，则递归调用 GREEDY-ACTIVITY-SELECTOR(s,f,n) 的运行时间为 Θ(n) 。</p>
+<h3 id="另一贪心选择（最晚开始）"><a name="另一贪心选择（最晚开始）" class="anchor-navigation-ex-anchor" href="#另一贪心选择（最晚开始）"><i class="fa fa-link" aria-hidden="true"></i></a>另一贪心选择（最晚开始）</h3>
+<p>不再一直选择最早结束的活动，而是<strong>选择最晚开始</strong>的活动，前提仍然是与之前 选出的所有活动均兼容</p>
+<p>这个策略和选择最早结束的方案是完全对称的，假设时间倒流，所有活动倒过来执行。</p>
+<p>有 n 个活动构成的集合 <code>S={a1,a2,…,an}</code> ，假设这些活动已经按照<strong>开始时间从大到小</strong>排序，即：<code>s1≥s2≥s3≥⋯≥sn</code>。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>令 <code>Sk={ai∈S:fk≤si}</code> 为在 ak <strong>开始前结束</strong>的任务集合。当贪心选择 a1 后， S1 是唯一需要求解的子问题。</p>
+<p>考虑任意非空子问题 Sk ，如果 am 是 Sk 中开始时间最晚的活动，那么 am 在 Sk 的某个最大兼容活动子集中。</p>
+<p>证明：定义 Ak 是 Sk 的最大兼容活动子集，且 aj 是 Ak 中开始时间最晚的活动。</p>
+<ol>
+<li>若 aj=am ，则已证明 am∈Ak 。</li>
+<li>若 aj≠am ，令 <code>Ak′=(Ak−{aj})∪{am}</code>，则 |Ak|=|Ak′| 。又 aj 是 Ak 中开始时间最晚的活动，am 是 Ak′ 中开始时间最晚的活动， sm≥sj 。所以 Ak′ 是 Sk 的最大兼容活动子集， am∈Ak′ 。</li>
+</ol>
+</blockquote>
+<p>我们每次选择开始时间最晚的且与当前活动兼容的活动，重复执行这个过程直到没有剩余活动可以选择。所选择的活动的开始时间必然是严格递减的。所以我们只需要按照开始时间单调递减的顺序处理所有活动，每个活动仅需要考察一次</p>
+<h4 id="递归贪心算法"><a name="递归贪心算法" class="anchor-navigation-ex-anchor" href="#递归贪心算法"><i class="fa fa-link" aria-hidden="true"></i></a><strong>递归贪心算法</strong></h4>
+<p>可以增加一个<strong>虚拟活动 a0</strong> 放在所有活动之后，其开始时间 s0=f1 。这样子问题 S0 就是完整的活动集合 S 。RECURSIVE-ACTIVITY-SELECTOR的伪代码如下：</p>
+<pre><code class="lang-cpp">RECURSIVE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, k, n) 
+    m = k + <span class="hljs-number">1</span>
+    <span class="hljs-comment">//越往后开始时间越早，f[m]&gt;s[k]则保证兼容</span>
+    <span class="hljs-keyword">while</span> m ≤ n <span class="hljs-keyword">and</span> f[m] &gt; s[k]    <span class="hljs-comment">// find the first activity in S_k to start</span>
+        m = m + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> m ≤ n
+        <span class="hljs-keyword">return</span> {a_m} ∪ RECURSIVE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, m, n) 
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> ∅
+
+RECURSIVE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, <span class="hljs-number">0</span>, n) <span class="hljs-comment">// call function</span>
+</code></pre>
+<p>假定所有活动已经按照开始时间排好序，则递归调用 </p>
+<p>RECURSIVE-ACTIVITY-SELECTOR(s,f,0,n) 的运行时间为 Θ(n) 。</p>
+<h4 id="迭代贪心算法"><a name="迭代贪心算法" class="anchor-navigation-ex-anchor" href="#迭代贪心算法"><i class="fa fa-link" aria-hidden="true"></i></a><strong>迭代贪心算法</strong></h4>
+<p>迭代版本GREEDY-ACTIVITY-SELECTOR，伪代码如下：</p>
+<pre><code class="lang-cpp">GREEDY-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, n)
+    A = {a_1}
+    k = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">for</span> m = <span class="hljs-number">2</span> to n
+        <span class="hljs-keyword">if</span> f[m] ≤ s[k]    <span class="hljs-comment">// is a_m in S_k</span>
+            A = A ∪ {a_m}    <span class="hljs-comment">// yes, so choose it</span>
+            k = m    <span class="hljs-comment">// and continue from there</span>
+    <span class="hljs-keyword">return</span> A
+</code></pre>
+<p>假定所有活动已经按照开始时间排好序，则调用 GREEDY-ACTIVITY-SELECTOR(s,f,n) 的运行时间为 Θ(n) 。</p>
+<h3 id="不合理的贪心选择"><a name="不合理的贪心选择" class="anchor-navigation-ex-anchor" href="#不合理的贪心选择"><i class="fa fa-link" aria-hidden="true"></i></a>不合理的贪心选择</h3>
+<p>在剩余活动中选择<strong>持续时间最短</strong>的活动不能得到最大兼容的活动子集。</p>
+<p>在剩余活动中选择<strong>与其它活动重叠最少</strong>的活动不能得到最大兼容的活动子集。</p>
+<p>在剩余活动中<strong>选择最早开始</strong>的活动不能得到最大兼容的活动子集。</p>
+<h2 id="区间着色问题"><a name="区间着色问题" class="anchor-navigation-ex-anchor" href="#区间着色问题"><i class="fa fa-link" aria-hidden="true"></i></a>区间着色问题</h2>
+<p>假设有一组活动，将它们安排到一些讲堂，任意活动都可以在任意讲堂进行，我们希望用<strong>最少的教室完成所有活动</strong>，设计一个贪心算法求每个活动所在讲堂进行分配。</p>
+<blockquote>
+<p>[!note]</p>
+<p>这个问题可以视为<strong>区间图着色问题(interval-graph coloring problem)</strong>。区间图着色问题：构造一个区间图，顶点表示给定的活动，边连接不兼容的活动。要求用最少的颜色对顶点进行着色，相邻顶点的颜色不能相同。</p>
+</blockquote>
+<ul>
+<li>设活动数组为 A ，总共有 n 个活动。每个活动保存为一个结构体，包含活动id，开始时间，结束时间，讲堂id。</li>
+</ul>
+<h3 id="方法一：优先队列"><a name="方法一：优先队列" class="anchor-navigation-ex-anchor" href="#方法一：优先队列"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法一：优先队列</strong></h3>
+<p>朴素思想：每当有新活动时，就遍历所有讲堂，查看是否有空闲讲堂。如果没有空闲讲堂，就新开一个讲堂。为了方便<strong>选出空闲讲堂</strong>，我们可以使用优先队列。</p>
+<blockquote>
+<ol>
+<li>按照<strong>开始时间</strong>对活动进行排序。</li>
+<li>初始化一个<strong>小顶堆</strong>，按照<strong>结束时间排序</strong>，堆顶活动为最早结束的活动。</li>
+<li>遍历检查每一个活动<ol>
+<li>如果<strong>堆为空</strong>，增加一个新讲堂，选好讲堂后将<strong>活动加入堆中</strong>，同时将该活动记录到所在讲堂举行的活动名单中。</li>
+<li>如果<strong>堆不为空</strong>，和堆顶活动进行比较，如果堆顶活动的结束时间小于或等于当前活动的开始时间即检查当前有无空闲讲堂，将堆顶活动出队，并将当前活动放在堆顶活动所在讲堂进行，否则开辟一个新讲堂。选好讲堂后将活动加入堆中，同时将该活动记录到所在讲堂举行的活动名单中</li>
+</ol>
+</li>
+<li>所有活动检查结束后，输出所有讲堂举行的活动名单。</li>
+</ol>
+</blockquote>
+<pre><code class="lang-cpp">LECTURE-HALLS-<span class="hljs-built_in">SCHEDULE</span>(A, n) 
+    sort A by start time in ascending order
+    <span class="hljs-comment">//A[i]={start_time,finsh_time,hall-id，activity_id}</span>
+    let PQ be a <span class="hljs-keyword">new</span> min-priority queue keyed by end time
+    let H be a <span class="hljs-keyword">new</span> table
+    hall-count = <span class="hljs-number">0</span>
+    <span class="hljs-comment">//遍历活动</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        <span class="hljs-keyword">if</span> PQ.<span class="hljs-built_in">empty</span>() == <span class="hljs-literal">true</span>
+            hall-count = hall-count + <span class="hljs-number">1</span>
+            A[i].hall-id = hall-count 
+            PQ.<span class="hljs-built_in">push</span>(A[i])
+            H[hall-count] = H[hall-count] ∪ {A[i]}
+        <span class="hljs-keyword">else</span> 
+            <span class="hljs-comment">//有空闲讲堂</span>
+            <span class="hljs-keyword">if</span> A[i].start-time ≥ PQ.<span class="hljs-built_in">top</span>().end-time
+                A[i].hall-id = PQ.<span class="hljs-built_in">top</span>().hall-id
+                H[A[i].hall-id] = H[A[i].hall-id] ∪ {A[i]}
+                PQ.<span class="hljs-built_in">pop</span>()
+            <span class="hljs-keyword">else</span>
+                hall-count = hall-count + <span class="hljs-number">1</span>
+                A[i].hall-id = hall-count
+                let h be a <span class="hljs-keyword">new</span> array
+                H.<span class="hljs-built_in">push_back</span>(h)
+                H[A[i].hall-id] = H[A[i].hall-id] ∪ {A[i]}
+            PQ.<span class="hljs-built_in">push</span>(A[i])
+    <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span> to hall-count
+        print <span class="hljs-string">"the activities lecture hall"</span> j <span class="hljs-string">"will hold are: "</span>
+        <span class="hljs-keyword">for</span> k = <span class="hljs-number">1</span> to H[j].<span class="hljs-built_in">size</span>()
+            print H[j][k].activity-id <span class="hljs-string">", "</span>
+</code></pre>
+<p>LECTURE-HALLS-SCHEDULE运行时间为 <strong>Θ(nlg⁡n)</strong> ，排序运行时间为 Θ(nlg⁡n) ，每个活动要检查一次，优先队列调整运行时间为 O(lg⁡n) ，总共有 n 个活动，总计 O(nlg⁡n) 。所以总的运行时间为 Θ(nlg⁡n) 。</p>
+<p>LECTURE-HALLS-SCHEDULE需要的辅助空间大小为 <strong>Θ(n)</strong> ，最坏情况下所有活动都需要一个独立的讲堂，优先队列最大为 O(n) ，表格 H 记录所有活动，大小为 Θ(n) 。所以总的辅助空间大小为 Θ(n) 。</p>
+<h3 id="方法二：有序化"><a name="方法二：有序化" class="anchor-navigation-ex-anchor" href="#方法二：有序化"><i class="fa fa-link" aria-hidden="true"></i></a>方法二：有序化</h3>
+<ol>
+<li>将活动数组分别按照开始时间和结束时间从小到大排序。按照开始时间从小到大排序的数组称为活动开始数组，按照结束时间从小到大排序的数组称为活动结束数组，</li>
+<li>维护两个指针，活动开始数组指针 sp ，跟踪活动开始，活动结束数组 fp ，跟踪活动结束。</li>
+<li>当考虑 sp 指向的特定活动时，<strong>检查该开始时间是否大于或等于 fp 指向的活动</strong>。若如此，则说明 fp 开始时，已经有活动结束。于是我们可以重用讲堂。否则，我们就需要开新讲堂，同时<strong>记录新开讲堂</strong>。处理结束后自增 sp ，处理下一个活动。</li>
+<li><strong>若有活动结束，则记录空闲讲堂</strong>（可以用栈或者队列维护所有空闲讲堂），自增 fp </li>
+<li>重复这一过程，直到 sp 处理完所有活动。</li>
+</ol>
+<pre><code class="lang-python">LECTURE-HALLS-SCHEDULE(A, n) 
+    sort A by start time <span class="hljs-keyword">in</span> ascending order
+    A<span class="hljs-string">' = A
+    sort A'</span> by start time <span class="hljs-keyword">in</span> ascending order
+    let H be a new table
+    hall-count = <span class="hljs-number">0</span>
+    sp = <span class="hljs-number">1</span>
+    fp = <span class="hljs-number">1</span>
+    let Q be a new queue
+    <span class="hljs-keyword">while</span> sp ≤ n
+        //有空闲讲堂或者说有活动结束
+        <span class="hljs-keyword">if</span> A[sp].start-time ≥ A<span class="hljs-string">'[fp].finish-time
+            hall-id = Q.pop()
+            A[sp].hall-id = hall-id
+            H[hall-id] = H[hall-id] ∪ {A[sp]}
+            Q.push(A'</span>[fp].hall-<span class="hljs-built_in">id</span>) //放入当前活动
+            fp = fp + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>
+            hall-count = hall-count + <span class="hljs-number">1</span>
+            A[sp].hall-<span class="hljs-built_in">id</span> = hall-count
+            let h be a new array
+            H.push_back(h)
+            H[A[sp].hall-<span class="hljs-built_in">id</span>] = H[A[sp].hall-<span class="hljs-built_in">id</span>] ∪ {A[sp]}
+        sp = sp + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span> to hall-count
+        <span class="hljs-built_in">print</span> <span class="hljs-string">"the activities lecture hall"</span> j <span class="hljs-string">"will hold are: "</span>
+        <span class="hljs-keyword">for</span> k = <span class="hljs-number">1</span> to H[j].size()
+            <span class="hljs-built_in">print</span> H[j][k].activity-<span class="hljs-built_in">id</span> <span class="hljs-string">", "</span>
+</code></pre>
+<p>LECTURE-HALLS-SCHEDULE运行时间为 <strong>Θ(nlg⁡n)</strong> ，排序运行时间为 Θ(nlg⁡n) ，每个活动要检查一次，运行时间为 Θ(1) ，总共有 n 个活动，总计 Θ(n) 。所以总的运行时间为 Θ(nlg⁡n) 。</p>
+<p>LECTURE-HALLS-SCHEDULE需要的辅助空间大小为 Θ(n) ，复制数组 A′ 记录所有活动大小为 Θ(n) ，辅助队列 Q 大小为 O(n) ，表格 H 记录所有活动，大小为 Θ(n) 。所以总的辅助空间大小为 Θ(n) 。</p>
+<h2 id="权值之和最大的兼容活动子集"><a name="权值之和最大的兼容活动子集" class="anchor-navigation-ex-anchor" href="#权值之和最大的兼容活动子集"><i class="fa fa-link" aria-hidden="true"></i></a>权值之和最大的兼容活动子集</h2>
+<p>每个活动或者说作业ai除了开始和结束时间外，还有一个值v作为权值或者收益值,。目 求<strong>权值之和最大</strong>的兼容活动子集。也就是选择一个活动集合 A ，使得 <code>∑Vk(ak∈A)</code> 最大化。设计一个多项式时间的算法求解该问题</p>
+<ul>
+<li>解答：每个活动新增了权值属性，而且原问题为求权值总和最大的活动子集，我们无法再用贪心策略求解，因为即便参加活动多活动权值总和未必大，所以本题只能用<strong>动态规划</strong>求解</li>
+</ul>
+<h3 id="方法一：动态规划（区间两个端点都不固定）_1"><a name="方法一：动态规划（区间两个端点都不固定）_1" class="anchor-navigation-ex-anchor" href="#方法一：动态规划（区间两个端点都不固定）_1"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法一：动态规划（区间两个端点都不固定）</strong></h3>
+<ol>
+<li><p>所有活动已经按照<strong>结束时间从小到大</strong>排序</p>
+</li>
+<li><p>定义 Aij 为 Sij 中权值总和最大且相互兼容的活动子集，定义 <strong>val[i,j] 为子问题 Sij 的最大权值总和</strong>，则求解 val[i,j] 的递归式如下</p>
+<p><img src="assets/image-20250331193753263.png" alt="image-20250331193753263"></img></p>
+</li>
+</ol>
+<ul>
+<li>构造两个<strong>虚拟活动</strong> a0 和 an+1 ，活动 a0 的结束时间 f0=0 ，活动 an+1 的开始时间 sn+1=+∞ </li>
+<li>原问题转化为求子问题 <strong>S0,n+1 中权值总和最大且相互兼容的活动子集 A0,n+1</strong> 。</li>
+<li>构造 Aij 权值总和 val[i,j] 表格 val[0:n+1,0:n+1] 和对应的 <strong>act[i,j] 选择表格</strong> act[0:n+1,0:n+1] 。</li>
+</ul>
+<p>MAX-VALUE-ACTIVITY-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">MAX-VALUE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let val[<span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>] be <span class="hljs-keyword">new</span> tablbs
+    <span class="hljs-comment">//依旧是开区间，（i，i）和（i，i+1)都没有元素</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n
+        val[i, i] = <span class="hljs-number">0</span>
+        val[i, i + <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+    val[n + <span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+
+    <span class="hljs-comment">//区间长度</span>
+    <span class="hljs-keyword">for</span> l = <span class="hljs-number">2</span> to n + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n - l + <span class="hljs-number">1</span>
+        j = i + l
+        val[i, j] = <span class="hljs-number">0</span>
+        k = j - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">while</span> f[i] &lt; f[k]
+            <span class="hljs-keyword">if</span> f[i] ≤ s[k] <span class="hljs-keyword">and</span> f[k] ≤ s[j] <span class="hljs-keyword">and</span> val[i, k] + val[k, j] + v_k &gt; val[i, j]
+                val[i, j] = val[i, k] + val[k, j] + v[k]
+                act[i, j] = k
+            k = k - <span class="hljs-number">1</span>
+    print <span class="hljs-string">"A maximum-value set of mutually compatible activities has value"</span> val[<span class="hljs-number">0</span>, n + <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"The set contains"</span>
+    PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, <span class="hljs-number">0</span>, n + <span class="hljs-number">1</span>)
+
+PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, i, j)
+    <span class="hljs-keyword">if</span> val[i, j] &gt; <span class="hljs-number">0</span>
+        k = act[i, j]
+        print k
+        PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, i, k)
+        PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, k, j)
+</code></pre>
+<p>MAX-VALUE-ACTIVITY-SELECTOR的运行时间为 O(n^3) 。</p>
+<h3 id="方法二：动态规划（区间一个端点固定，另一个端点不固定）_1"><a name="方法二：动态规划（区间一个端点固定，另一个端点不固定）_1" class="anchor-navigation-ex-anchor" href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）_1"><i class="fa fa-link" aria-hidden="true"></i></a>方法二：动态规划（区间一个端点固定，另一个端点不固定）</h3>
+<ul>
+<li>需要从单端开始拓展就行，构造数组 val[0,n] </li>
+<li>构造一个虚拟活动 a0 ，活动 a0 的结束时间 ，f0=0，v0=0 </li>
+<li>val[i] 表示前 i 个活动能够取得的最大权值总和，即子问题 S0,i 中权值总和最大且相互兼容的活动子集 A0,i 的权值总和，对应的活动序列为 act[i] 。</li>
+<li>求解 val[i] 的递归式如下：</li>
+</ul>
+<p><img src="assets/image-20250331194951540.png" alt="image-20250331194951540"></img></p>
+<p>当 i≠0 时， val[i] 在<strong>选择第 i 个活动 val[k]+vi</strong> （ k 为结束时间小于等于且最接近 si 的活动下标）和<strong>不选择第 i 个活动 val[i−1]</strong> 之间取最大值</p>
+<p>MAX-VALUE-ACTIVITY-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">MAX-VALUE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let val[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> arrays
+    <span class="hljs-comment">//第一个虚拟活动价值为0</span>
+    val[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        k = i - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">while</span> k &gt; <span class="hljs-number">0</span>
+            <span class="hljs-keyword">if</span> f[k] ≤ s[i]
+                <span class="hljs-keyword">break</span>
+            k = k - <span class="hljs-number">1</span>
+        <span class="hljs-comment">//前k活动加上活动i收益大于不选则i的收益</span>
+        <span class="hljs-keyword">if</span> val[k] + v[i] &gt; val[i - <span class="hljs-number">1</span>]
+            val[i] = val[k] + v[i]
+            act[i] = act[k]
+            act[i] = act[i] ∪ {i}
+        <span class="hljs-keyword">else</span> 
+            val[i] = val[i - <span class="hljs-number">1</span>]
+            act[i] = act[i - <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"A maximum-value set of mutually compatible activities has value"</span> val[n]
+    print <span class="hljs-string">"The set contains"</span>
+    print act[n]
+</code></pre>
+<p>MAX-VALUE-ACTIVITY-SELECTOR的运行时间为 O(n^2) 。</p>
+<h3 id="方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化_1"><a name="方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化_1" class="anchor-navigation-ex-anchor" href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化_1"><i class="fa fa-link" aria-hidden="true"></i></a>方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</h3>
+<ul>
+<li>可以看出方法二在查找第一个结束时间小于等于且最接近 si 的活动下标类似于求左边界，即f[k]&lt;=s[i]的最大下标</li>
+<li>利用二分查找或者STL中的upper_bound</li>
+</ul>
+<pre><code class="lang-cpp">MAX-VALUE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let val[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> arrays
+    val[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        l = <span class="hljs-number">1</span>
+        r = n - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">while</span> l ≤ r
+            mid = l+((r-l)&gt;&gt;<span class="hljs-number">1</span>)
+            <span class="hljs-keyword">if</span> f[mid] ≤ s[i]
+                l = mid + <span class="hljs-number">1</span>
+            <span class="hljs-keyword">else</span>
+                r = mid - <span class="hljs-number">1</span>
+        k = r
+        <span class="hljs-keyword">if</span> val[k] + v[i] &gt; val[i - <span class="hljs-number">1</span>]
+            val[i] = val[k] + v[i]
+            act[i] = act[k]
+            act[i] = act[i] ∪ {i}
+        <span class="hljs-keyword">else</span> 
+            val[i] = val[i - <span class="hljs-number">1</span>]
+            act[i] = act[i - <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"A maximum-value set of mutually compatible activities has value"</span> val[n]
+    print <span class="hljs-string">"The set contains"</span>
+    print act[n]
+</code></pre>
+<p>MAX-VALUE-ACTIVITY-SELECTOR的运行时间为 O(nlg⁡n) 。</p>
+<h2 id="小数背包"><a name="小数背包" class="anchor-navigation-ex-anchor" href="#小数背包"><i class="fa fa-link" aria-hidden="true"></i></a>小数背包</h2>
+<h3 id="问题"><a name="问题" class="anchor-navigation-ex-anchor" href="#问题"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>已知有n种物品和一个可容纳M重量的背包，每种物品i的重量为wi，效益值为pi ,假定将物品i的某一部分xi放入背包就会得到<code>pi*xi(0≤xi≤1,pi&gt;0)</code>的效益，采用怎样的装包方法会使装入背包物品的<strong>总效益为最大</strong></p>
+<p>不同于0/1背包，物品无法分割只能选择放一个或者不放，而小数背包可以切割物品的一部分或者说按比例放入，同时获取比例收益</p>
+<h3 id="解答"><a name="解答" class="anchor-navigation-ex-anchor" href="#解答"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<h4 id="动态规划"><a name="动态规划" class="anchor-navigation-ex-anchor" href="#动态规划"><i class="fa fa-link" aria-hidden="true"></i></a>动态规划</h4>
+<ul>
+<li><p>最优子结构：</p>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>假设总容量为 <em>W</em>，当前选择装入某物品的 <em>x</em> 单位（x≤ 该物品总重量），则剩余容量 W−x 构成一个子问题。</li>
+<li>剩余容量必须继续按照最优策略分配，即选择剩余物品中单位价值最高的装入。这一子问题的最优解与原问题的部分解结合，形成全局最优解。</li>
+<li>若剩余容量未按最优方式分配，则整体解必然不是最优，因此子问题的最优性保证了全局最优。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="贪心算法_1"><a name="贪心算法_1" class="anchor-navigation-ex-anchor" href="#贪心算法_1"><i class="fa fa-link" aria-hidden="true"></i></a>贪心算法</h4>
+<p>但是对于这个问题可以利用<strong>人的思维惯性</strong>，先放入价值最高的物品，再放入价值次优的物品，直至背包被装满</p>
+<blockquote>
+<p>[!note]</p>
+<p>这就是贪心算法，然后选择量度标准即价值高低的定义，因为有重量的约束并且物品可分则使用<strong>单位重量的效益</strong>作为标准</p>
+<ol>
+<li>将物品按单位重量效益的非增次序排序（递减）</li>
+<li>按该次序逐一放物品，直到背包装满</li>
+</ol>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-comment">//先将物品按pi/wi比值的非增次序排序(降序)</span>
+<span class="hljs-type">int</span> GREEDY-<span class="hljs-built_in">KNAPSACK</span>(vector&lt;<span class="hljs-type">int</span>&gt; weight,vector&lt;<span class="hljs-type">int</span>&gt;value,<span class="hljs-type">int</span> bagweight)
+{
+    <span class="hljs-type">int</span> max_value=<span class="hljs-number">0</span>;
+    <span class="hljs-type">int</span> now_weight=bagweight;
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">object</span><span class="hljs-params">(weight.size())</span></span>;<span class="hljs-comment">//记录物品放入比例</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.<span class="hljs-built_in">size</span>();i++){
+        <span class="hljs-comment">//无法装入完整物品</span>
+        <span class="hljs-keyword">if</span>(weight[i]&gt;now_weight)
+        {
+            <span class="hljs-comment">//按比例放入</span>
+            object[i]=now_weight/weight[i];
+            max_value+=value[i]*object[i];
+            <span class="hljs-keyword">break</span>;
+        }
+        max_value+=value[i];
+        now_weight-=weight[i];
+        object[i]=<span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> max_value;
+}
+</code></pre>
+<hr></hr>
+<h4 id="类似的模型"><a name="类似的模型" class="anchor-navigation-ex-anchor" href="#类似的模型"><i class="fa fa-link" aria-hidden="true"></i></a>类似的模型</h4>
+<h5 id="最佳装载"><a name="最佳装载" class="anchor-navigation-ex-anchor" href="#最佳装载"><i class="fa fa-link" aria-hidden="true"></i></a>最佳装载</h5>
+<p>有编号为1,2,…,n的集装箱准备装上轮船，其中集装箱i的重量是wi , i=1,2,…,n.  已知轮船最大承重量是C，轮船对集装箱没有体积限制。如何选择装载，可使船上集装箱数量最多。</p>
+<blockquote>
+<p>[!note]</p>
+<p>为了使轮船上装载的集装箱数量最多，最优量度标准是：优先选择重量最小的集装箱进行装载，直到无法再装载新的集装箱为止。</p>
+</blockquote>
+<p>船可容纳的最大重量为C</p>
+<p>设贪心解选择的集装箱数量为 m，即 SG={wi1,wi2,...,wim}，其中 wi1≤wi2≤...≤wim} </p>
+<p>设最优解选择的集装箱数量为 k，即 SO={wj1,wj2,...,wjk}</p>
+<p>证明贪心解是最优解：</p>
+<blockquote>
+<ol>
+<li><p>假设贪心解不是最优解，即 m&lt;k</p>
+<ol>
+<li>m&gt;k，与最优解矛盾</li>
+<li><p>m&lt;k，由于最优解 SO 选择了 k 个集装箱，因此其总重量必然满足小于等于C</p>
+<ol>
+<li>若贪心解比最优解少装了某些集装箱，即 m&lt;k，贪心策略按重量从小到大选择，未被贪心选中的集装箱重量均不小于 wjm。</li>
+<li>又因为未被贪心选中的集装箱重量如果在最优解里那么也可以在贪心解里，所以未被贪心选中的集装箱不在最优解里，所以m&gt;=k与m&lt;k矛盾，m不小于k.</li>
+</ol>
+</li>
+<li><p>m=k，如果SO=SG，则贪心解就是最优解</p>
+<ol>
+<li>如果SO!=SG，则找到第一个不相等的集装箱<code>wia!=wjb</code>，贪心策略按重量从小到大选择，所以wia&lt;=wjb，a&lt;=b；</li>
+<li>所以将wjb替换成wia，依旧为最优解，重复执行替换，可以将最优解变为贪心解，证明得m=k</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>   总上m=k，即贪心解就是最优解</p>
+</blockquote>
+<p>排序的时间复杂度为O(nlgn)，遍历weight时间复杂度为O(n)，所以总的时间复杂度为O(nlgn).</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">max_number</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; weight,<span class="hljs-type">int</span> boat)</span>
+</span>{
+    <span class="hljs-comment">//使weight按非递增次序排序</span>
+    <span class="hljs-built_in">sort</span>(weight.<span class="hljs-built_in">begin</span>(),weight.<span class="hljs-built_in">end</span>());
+    <span class="hljs-type">int</span> number=<span class="hljs-number">0</span>;
+    <span class="hljs-type">int</span> now_weight=boat;
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.<span class="hljs-built_in">size</span>()&amp;&amp;weight[i]&lt;=now_weight;i++)
+        <span class="hljs-keyword">if</span>(weight[i]&lt;now_weight){
+            number++;
+            now_weight-=weight[i];
+        }    
+   <span class="hljs-keyword">return</span> number;
+}
+</code></pre>
+<h5 id="顾客等待时间问题"><a name="顾客等待时间问题" class="anchor-navigation-ex-anchor" href="#顾客等待时间问题"><i class="fa fa-link" aria-hidden="true"></i></a>顾客等待时间问题</h5>
+<p>设有 n 个顾客同时等待一项服务，顾客需要的服务时间为 ti, i=1,2,...,n. 从时刻0开始计时.若在时刻 t 开始对顾客 i 服务,那么 i 的等待时间就是 t. 应该怎样安排 n 个顾客的服务次序，使得总的等待时间（每个顾客等待时间的总和）最少？</p>
+<blockquote>
+<p>[!note]</p>
+<p>最优量度标准：在每个步骤，总是选择 需要服务时间最短的顾客 进行服务，即 按照服务时间 ti 递增排序 进行服务。</p>
+</blockquote>
+<p>假设给定一个任意调度方案 S，其中某两个相邻的顾客 i 和 j 满足：</p>
+<ul>
+<li><code>ti&gt;tj</code>，但在调度方案 S 中，顾客 i 被安排在 j 之前。</li>
+</ul>
+<p>我们交换 i 和 j 的位置，新的方案 S′ 相比 S 具有：</p>
+<ul>
+<li>顾客 j 的等待时间减少了 <code>ti−tj</code>。</li>
+<li>顾客 i 的等待时间增加了 <code>ti−tj</code>。</li>
+</ul>
+<p>由于 <code>ti&gt;tj</code>，交换后，整体的等待时间减少了。因此，始终按从小到大排序能获得更优的调度方案。</p>
+<p>经过有限次交换，我们可以得到一个 <strong>按照服务时间递增排序</strong> 的最优调度方案。因此，贪心策略是最优的。</p>
+<p>排序的时间复杂度为O(nlgn)，遍历Customer时间复杂度为O(n)，所以总的时间复杂度为O(nlgn).</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">min_wait</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; customer)</span>
+</span>{
+    <span class="hljs-comment">//排序，顾客需要时间从小到大</span>
+    <span class="hljs-built_in">sort</span>(customer.<span class="hljs-built_in">begin</span>(),customer.<span class="hljs-built_in">end</span>());
+    <span class="hljs-type">int</span> time=<span class="hljs-number">0</span>;
+    <span class="hljs-type">int</span> wait_time=<span class="hljs-number">0</span>;
+    <span class="hljs-comment">//最后一个顾客的服务时间不计入等待</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;customer.<span class="hljs-built_in">size</span>();i++)
+    {
+        time+=wait_time;
+        wait_time+=customer[i];
+    }
+
+    <span class="hljs-keyword">return</span> time;
+}
+</code></pre>
+<h2 id="带有期限的作业调度问题"><a name="带有期限的作业调度问题" class="anchor-navigation-ex-anchor" href="#带有期限的作业调度问题"><i class="fa fa-link" aria-hidden="true"></i></a>带有期限的作业调度问题</h2>
+<h3 id="问题_1"><a name="问题_1" class="anchor-navigation-ex-anchor" href="#问题_1"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>假定只能在一台机器上处理n个作业：</p>
+<ul>
+<li>每个作业均可在单位时间内完成; </li>
+<li>又假定每个作业i都有一个截止期限di&gt;0(di是整数), 当且仅当作业i在它的期限截止之前被完成时，方可获得pi&gt;0的效益</li>
+<li>求具有最大效益值的可行解（最优解）</li>
+</ul>
+<h3 id="解答_1"><a name="解答_1" class="anchor-navigation-ex-anchor" href="#解答_1"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<p>贪心算法，以目标函数∑pj作为量度标准, 将各作业按效益pi降序排列:<code>p1≥ p2≥ …≥ pn</code></p>
+<pre><code class="lang-cpp"><span class="hljs-function">procedure <span class="hljs-title">GREEDY_JOB</span><span class="hljs-params">(D, J, n)</span>
+<span class="hljs-comment">//作业按p1≥ p2≥ …≥ pn的次序输入；期限值D(1:n)≥1；J是最优解//</span>
+J←</span>{<span class="hljs-number">1</span>}
+<span class="hljs-keyword">for</span> i ← <span class="hljs-number">2</span>  <span class="hljs-function">to  n  <span class="hljs-keyword">do</span>
+      <span class="hljs-title">if</span>  <span class="hljs-params">(J ∪ {i}的所有作业都能在它们的截止期限前完成)</span>
+           then   J ← <span class="hljs-params">(J ∪ {i})</span><span class="hljs-comment">//最优解加上i</span>
+      endif
+repeat
+end GREEDY_JOB
+</span></code></pre>
+<ul>
+<li><p>证明：J是贪心方法求出的作业集合，I是一个最优解的作业集合</p>
+<blockquote>
+<p>找一个属于J不属于I的元素，替换I中对应的元素，获得I’</p>
+<p>证明I’仍然最优</p>
+<p>重复步骤，间接证明J最优</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>定理5.3：设J是k个作业的集合, <code>б=i1,i2,…,ik</code>是J中作业的一种排列, 它使得<code>di1≤di2≤…≤dik</code>。J是一个可行解, 当且仅当J中的作业可以按照б的次序而又不违反任何一个期限的情况来处理</p>
+<ul>
+<li>证明思路：</li>
+<li>如果J中的作业可以按照б的次序而又不违反任何一个期限，则J是一个可行解</li>
+<li>l若J是可行解，则必存在<code>б’=r1,r2,…,rk，使得drj≥j，1≤j≤k</code>。<ul>
+<li>假设<code>б’≠б</code>，令a是使得<code>ra≠ia</code>的最小下标；设<code>rb=ia</code>，显然b&gt;a。</li>
+<li>在б’中交换ra与rb的位置，产生新的可行排列б”，仍然是可行的。</li>
+</ul>
+</li>
+<li>连续使用这种方法，就将б’转换成б且不违反任何一个期限</li>
+</ul>
+<p>注意如果各个作业的<strong>时间片不一样</strong>定理依旧成立，可以通过相邻交换证明</p>
+</blockquote>
+<ul>
+<li><p>根据以上定理，可以验证可行解</p>
+<blockquote>
+<p>假设已处理了i–1个作业, 有k个作业已存入J中, 且<code>D[J(1)]≤D[J(2)]≤…≤D[J(k)]</code></p>
+<p>在J中从后向前为作业i寻找位置r+1，插入r+1位置后，J中作业<strong>仍按照期限值从小到大排列，且不违反期限值</strong></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="基于插入排序的带有限期的作业排序"><a name="基于插入排序的带有限期的作业排序" class="anchor-navigation-ex-anchor" href="#基于插入排序的带有限期的作业排序"><i class="fa fa-link" aria-hidden="true"></i></a>基于插入排序的带有限期的作业排序</h4>
+<p>作业数 n 和包含在解J中的作业数 s ，JS算法所需要的总时间为O(sn)，由于s&lt;=n，所以JS算法的最坏时间复杂度为O(n^2)</p>
+<p>其中作业按收益非递增次序排序，并且从一号作业开始</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">JS</span><span class="hljs-params">(std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; D, std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; J, <span class="hljs-type">int</span> n, <span class="hljs-type">int</span>&amp; k)</span> </span>{
+    D[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+    J[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+    k = <span class="hljs-number">1</span>;
+    J[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;
+    <span class="hljs-comment">//处理第i个作业</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">2</span>; i &lt;= n; ++i) {
+        <span class="hljs-type">int</span> r = k;
+        <span class="hljs-comment">//找到插入的位置r</span>
+        <span class="hljs-keyword">while</span> (D[J[r]] &gt; D[i] &amp;&amp; D[J[r]] != r) {
+            --r;
+        }
+        <span class="hljs-comment">//表示找到了插入位置r</span>
+        <span class="hljs-keyword">if</span> (D[J[r]] &lt;= D[i] &amp;&amp; D[i] &gt; r) {
+            <span class="hljs-comment">//实现作业r+1到作业k依次往后移动一个位置</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> l = k; l &gt;= r + <span class="hljs-number">1</span>; --l) {
+                J[l + <span class="hljs-number">1</span>] = J[l];
+            }
+            <span class="hljs-comment">//插入</span>
+            J[r + <span class="hljs-number">1</span>] = i;
+            ++k;
+        }
+    }
+}
+</code></pre>
+<h4 id="基于集合数（并查集）的作业排序算法"><a name="基于集合数（并查集）的作业排序算法" class="anchor-navigation-ex-anchor" href="#基于集合数（并查集）的作业排序算法"><i class="fa fa-link" aria-hidden="true"></i></a>基于集合数（并查集）的作业排序算法</h4>
+<ul>
+<li>对作业i分配时间时, 尽可能<strong>推迟</strong>对作业i的处理。 (在其截止期前最靠后的空时间片)</li>
+<li>作出一些以期限值为元素的集合，且使同一集合中所有元素有<strong>相同的最大空时间片</strong></li>
+<li>对于每个期限值i，用F(i)表示当前最大空时间片，即 <code>F(i)=ni</code></li>
+<li>时间复杂度：O(n)</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>使用集合树表示法，<strong>把每个集合表示成树</strong>。P(i)把期限值i链接到它的父节点</li>
+<li>判断<strong>作业<em>h</em>的可用空时间片</strong>，即找<code>min{n,dh}</code>的根j，若<code>F(j)!=0</code>,说明有时间片可以分配，则<code>F(j)</code>是最接近期限值的时间片，把F(j)时间片分配给作业h并做标记。</li>
+<li>以 <em>j</em> 为根的集合树必须与包含期限<code>F(j)-1</code>的集合树合并。</li>
+</ul>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 并查集路径压缩查找,根节点为-1</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">find</span><span class="hljs-params">(std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; parent, <span class="hljs-type">int</span> x)</span> </span>{
+    <span class="hljs-keyword">return</span> parent[x]&gt;<span class="hljs-number">0</span>?x:parent[x]=<span class="hljs-built_in">find</span>(parent,parent[x]);
+}
+
+<span class="hljs-comment">//注意parent的绝对值才是个数，这里是小树合并到大树</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">UNION</span><span class="hljs-params">(std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; parent,<span class="hljs-type">int</span> i,<span class="hljs-type">int</span> j)</span>
+</span>{
+    <span class="hljs-type">int</span> x=parent[i]+parent[j];
+    <span class="hljs-keyword">if</span>(parent[i]&gt;parent[j]){
+        parent[i]=j;
+        parent[j]=x;
+    }<span class="hljs-keyword">else</span> {
+        parent[j]=i;
+        parent[i]=x;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">FJS</span><span class="hljs-params">(std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; D, <span class="hljs-type">int</span> n, <span class="hljs-type">int</span> b, std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; J, <span class="hljs-type">int</span>&amp; k)</span> </span>{
+    <span class="hljs-type">int</span> b = <span class="hljs-built_in">min</span>(n,*<span class="hljs-built_in">max_element</span>(D.<span class="hljs-built_in">begin</span>(),D.<span class="hljs-built_in">end</span>()));
+    <span class="hljs-comment">// 初始化F数组，F[0..b]代表时间槽的父指针</span>
+    <span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">F</span><span class="hljs-params">(b + <span class="hljs-number">1</span>)</span></span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= b; ++i) {
+        F[i] = i;
+    }
+
+    k = <span class="hljs-number">0</span>; <span class="hljs-comment">// 可行作业数</span>
+    J.<span class="hljs-built_in">resize</span>(n + <span class="hljs-number">1</span>); <span class="hljs-comment">// J[1..k]存储可行作业</span>
+
+    <span class="hljs-comment">// 按利润降序处理作业（假设输入已排序）</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; ++i) {
+        <span class="hljs-type">int</span> d = std::<span class="hljs-built_in">min</span>(n, D[i]); <span class="hljs-comment">// 计算有效截止时间</span>
+        <span class="hljs-type">int</span> j = <span class="hljs-built_in">find</span>(F, d); <span class="hljs-comment">// 找到最晚可用时间槽</span>
+
+        <span class="hljs-keyword">if</span> (F[j] != <span class="hljs-number">0</span>) { <span class="hljs-comment">// 存在可用时间槽</span>
+            J[++k] = i; <span class="hljs-comment">// 将作业i加入解集</span>
+            <span class="hljs-type">int</span> l = <span class="hljs-built_in">find</span>(F, F[j] - <span class="hljs-number">1</span>); <span class="hljs-comment">// 找到下一个可用位置</span>
+            <span class="hljs-built_in">UNION</span>(F,l,j);<span class="hljs-comment">//合并集合</span>
+            F[j] = F[l]; <span class="hljs-comment">// 合并时间槽，路径压缩</span>
+        }
+    }
+}
+</code></pre>
+<h2 id="最小生成树问题"><a name="最小生成树问题" class="anchor-navigation-ex-anchor" href="#最小生成树问题"><i class="fa fa-link" aria-hidden="true"></i></a>最小生成树问题</h2>
+<h3 id="问题_2"><a name="问题_2" class="anchor-navigation-ex-anchor" href="#问题_2"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>最小生成树的定义：</p>
+<p>设G=(V,E)是一个<strong>加权无向连通图</strong>。V表示顶点集合，E表示边集合。G的一棵生成树是一棵<strong>无向树T=(V, E’)</strong>，其中E’是E的子集。生成树的权是E’的所有权之和。<strong>G的最小生成树是G的具有最小权值的生成树。</strong></p>
+<h3 id="解答_2"><a name="解答_2" class="anchor-navigation-ex-anchor" href="#解答_2"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<h4 id="kruskal方法"><a name="kruskal方法" class="anchor-navigation-ex-anchor" href="#kruskal方法"><i class="fa fa-link" aria-hidden="true"></i></a>Kruskal方法</h4>
+<ul>
+<li>考虑预排序，从边的个数入手分析，时间复杂度为O(eloge)</li>
+<li>这里贪心算法的度量标准就是<strong>边的权值</strong>，先选择权值小的</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>证明：用e替换掉ej，获得新的可行解T ’’,证明新解也是最小生成树。反复替换，从而命题得证</p>
+</blockquote>
+<ul>
+<li>从小到大选择边，如果将其加入最小生成树的集合T生成回路则放弃边否则加入T</li>
+<li>这里判断回路则使用了并查集处理</li>
+</ul>
+<pre><code class="lang-cpp">    <span class="hljs-comment">//克鲁斯卡尔 (Kruskal)算法，可称为“加边法”，适用于稀疏图</span>
+    <span class="hljs-comment">//每次选出权值最小并且无法使现有的树形成环的边加入最小支撑树,返回一个图</span>
+    <span class="hljs-function">std::vector&lt;Edge&gt; <span class="hljs-title">MiniSpanTree_Kruskal</span><span class="hljs-params">(std::vector&lt;Edge&gt; graph,<span class="hljs-type">int</span> number)</span>
+    </span>{
+        <span class="hljs-comment">//非连通图</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Connected_Component</span>(graph,number) != <span class="hljs-number">1</span>)
+        {
+            <span class="hljs-keyword">return</span>{};
+        }
+        std::vector&lt;Edge&gt; MiniSpanTree;
+        <span class="hljs-comment">//在Edge增加了weight成员存储权值，可以直接用sort排序</span>
+        std::<span class="hljs-built_in">sort</span>(graph.<span class="hljs-built_in">begin</span>(), graph.<span class="hljs-built_in">end</span>(), [](<span class="hljs-type">const</span> Edge&amp; a, <span class="hljs-type">const</span> Edge&amp; b)-&gt;<span class="hljs-type">bool</span> {<span class="hljs-keyword">return</span> a.weight &lt; b.weight; });
+
+        <span class="hljs-comment">//辅助数组Vexset,标识各个顶点所属的连通分量,类似于并查集</span>
+        std::vector&lt;<span class="hljs-type">int</span>&gt; Vexset;
+        Vexset.<span class="hljs-built_in">resize</span>(number,<span class="hljs-number">0</span>);
+        <span class="hljs-comment">//初始化,表示各顶点自成一个连通分址</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; number; i++)
+        {
+            Vexset[i] = i;
+        }
+
+        <span class="hljs-comment">//开始创建最小支撑树</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; graph.<span class="hljs-built_in">size</span>(); i++)
+        {
+            <span class="hljs-type">int</span> v1 = graph[i].u;
+            <span class="hljs-type">int</span> v2 = graph[i].v;
+            <span class="hljs-type">int</span> vs1 = Vexset[v1];
+            <span class="hljs-type">int</span> vs2 = Vexset[v2];
+
+            <span class="hljs-comment">//边的两个顶点不在同一连通分量</span>
+            <span class="hljs-keyword">if</span> (vs1 != vs2)
+            {
+                <span class="hljs-comment">//加入此边</span>
+                MiniSpanTree.<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">Edge</span>(v1, v2));
+
+                <span class="hljs-comment">//合并vs1和vs2两个分量，即两个集合统一编号</span>
+                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; number; j++)
+                {
+                    <span class="hljs-keyword">if</span> (Vexset[j] == vs2)Vexset[j] = vs1;
+                }
+            }
+        }
+
+        <span class="hljs-comment">//返回</span>
+        <span class="hljs-keyword">return</span> MiniSpanTree;
+    }
+</code></pre>
+<h4 id="prim算法（加点法）"><a name="prim算法（加点法）" class="anchor-navigation-ex-anchor" href="#prim算法（加点法）"><i class="fa fa-link" aria-hidden="true"></i></a>Prim算法（加点法）</h4>
+<ul>
+<li>选择任一点u做为起点，放入集合S，即令S={u}(u属于V)；</li>
+<li>找最小跨集合边(u, v) ，即端点分别属于集合S和V-S且权值 最小的边，将该边加入最小支撑树，并将点v放入S；</li>
+<li>执行②，直至S=V</li>
+</ul>
+<p>如果只是需要权值和则不需要构造出最小生成树</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 普里姆算法优化，使用优先队列</span>
+<span class="hljs-function">Adj_Matrix <span class="hljs-title">MiniSpanTree_Prim</span><span class="hljs-params">(<span class="hljs-type">const</span> Adj_Matrix&amp; adj, <span class="hljs-type">int</span> u = <span class="hljs-number">0</span> <span class="hljs-comment">/*起始点*/</span>)</span> </span>{
+    <span class="hljs-comment">// 非连通图，返回空图</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Connected_Component</span>(adj) != <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Adj_Matrix</span>(<span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-type">int</span> n = adj.graph.<span class="hljs-built_in">size</span>();  <span class="hljs-comment">// 图的顶点数</span>
+    <span class="hljs-function">Adj_Matrix <span class="hljs-title">MiniSpanTree</span><span class="hljs-params">(n, adj.is_direct)</span></span>;  <span class="hljs-comment">// 最小生成树</span>
+
+    <span class="hljs-comment">// 记录顶点是否已经加入生成树</span>
+    <span class="hljs-function">std::vector&lt;<span class="hljs-type">bool</span>&gt; <span class="hljs-title">vis</span><span class="hljs-params">(n, <span class="hljs-literal">false</span>)</span></span>;
+
+    <span class="hljs-comment">// 使用优先队列（最小堆）保存未加入生成树的点和其对应的最小边权值</span>
+    <span class="hljs-comment">// 队列中存储的是 (边权值, 顶点) 的 pair</span>
+    std::priority_queue&lt;std::pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;, std::vector&lt;std::pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt;, std::greater&lt;&gt;&gt; pq;
+
+    <span class="hljs-comment">// 初始化：从起始点u开始，加入队列，权值为0</span>
+    pq.<span class="hljs-built_in">push</span>({<span class="hljs-number">0</span>, u});
+
+    <span class="hljs-comment">// 选择其他n-1个顶点，生成n-1条边</span>
+    <span class="hljs-keyword">while</span> (!pq.<span class="hljs-built_in">empty</span>()) {
+        <span class="hljs-comment">// 取出当前权值最小的边</span>
+        <span class="hljs-type">int</span> current_weight = pq.<span class="hljs-built_in">top</span>().first;
+        <span class="hljs-type">int</span> u0 = pq.<span class="hljs-built_in">top</span>().second;
+        pq.<span class="hljs-built_in">pop</span>();
+
+        <span class="hljs-comment">// 如果顶点u0已经加入生成树，则跳过</span>
+        <span class="hljs-keyword">if</span> (vis[u0]) <span class="hljs-keyword">continue</span>;
+
+        <span class="hljs-comment">// 标记u0为已访问</span>
+        vis[u0] = <span class="hljs-literal">true</span>;
+
+        <span class="hljs-comment">// 更新最小生成树的边</span>
+        <span class="hljs-keyword">if</span> (u0 != u) {  <span class="hljs-comment">// 排除起始点</span>
+            <span class="hljs-type">int</span> v0 = pq.<span class="hljs-built_in">top</span>().second;  <span class="hljs-comment">// 顶点u0的前驱</span>
+            MiniSpanTree.graph[u0][v0] = current_weight;
+
+            <span class="hljs-comment">// 无向图则增加对称边</span>
+            <span class="hljs-keyword">if</span> (!MiniSpanTree.is_direct) {
+                MiniSpanTree.graph[v0][u0] = current_weight;
+            }
+        }
+
+        <span class="hljs-comment">// 更新与u0的相邻节点的最小边，并加入优先队列</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">if</span> (!vis[i] &amp;&amp; adj.graph[u0][i] &lt; INT_MAX) {  <span class="hljs-comment">// 如果i未访问且有边</span>
+                pq.<span class="hljs-built_in">push</span>({adj.graph[u0][i], i});
+            }
+        }
+    }
+
+    <span class="hljs-comment">// 返回生成的最小生成树</span>
+    <span class="hljs-keyword">return</span> MiniSpanTree;
+}
+</code></pre>
+<hr></hr>
+<h2 id="补水点选择问题"><a name="补水点选择问题" class="anchor-navigation-ex-anchor" href="#补水点选择问题"><i class="fa fa-link" aria-hidden="true"></i></a>补水点选择问题</h2>
+<h3 id="问题_3"><a name="问题_3" class="anchor-navigation-ex-anchor" href="#问题_3"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>Gekko教授想横穿North Darkota州，教授在起点带着两公升水，在喝光水之前能滑行 m 英里，他还携带了一份路线图，上面标明了沿途补水点距离起点的距离。</p>
+<p>教授的目标是最小化横穿途中的补水次数，请设计一个高效的算法，以帮助教授确定在哪些补水点进行补水。证明该算法能生成最优解，并给出该算法的运行时间。</p>
+<h3 id="解答_3"><a name="解答_3" class="anchor-navigation-ex-anchor" href="#解答_3"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<p><strong>假设一定能够到达终点</strong>，并且起点也是一个补水点，假想教授在起点处进行了一次补水，若每次补水点位置为 x ，教授能够滑行的区间为 [x,x+m] </p>
+<p>采用贪心策略，教授是需要在在<strong>喝光水之前的一个补水点进行补水</strong>就行。</p>
+<p>设途中有 n 个补水点，起点坐标为 0 ，终点坐标为 d ，第 i 个补水点坐标为 xi ，有 <code>0&lt;x1&lt;x2&lt;⋯&lt;xn&lt;D ，设 x={x1,x2,…,xn}</code>，集合 S 保存补水点编号。</p>
+<p>GREEDY-INTERVAL-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">GREEDY-INTERVAL-<span class="hljs-built_in">SELECTOR</span>(m, d, x, n) 
+    let S be a <span class="hljs-keyword">new</span> set
+    i = <span class="hljs-number">1</span>
+    s = <span class="hljs-number">0</span> <span class="hljs-comment">//当前前进距离</span>
+
+    <span class="hljs-comment">//直到终点</span>
+    <span class="hljs-keyword">while</span> (s + m &lt; d)
+        prev = s
+        <span class="hljs-comment">//找到最远并且在喝完水前可以到达的点</span>
+        <span class="hljs-keyword">while</span> (i ≤ n <span class="hljs-keyword">and</span> x[i] ≤ prev + m)
+            s = x[i]
+            i = i + <span class="hljs-number">1</span>
+        S = S ∪ {i - <span class="hljs-number">1</span>}
+    <span class="hljs-keyword">return</span> S
+</code></pre>
+<p>优化为二分查找</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//有n个补水点包括起点</span>
+GREEDY-INTERVAL-<span class="hljs-built_in">SELECTOR</span>(m, d, x, n) 
+    let S be a <span class="hljs-keyword">new</span> set
+    i = <span class="hljs-number">0</span><span class="hljs-comment">//目前补水点</span>
+    s = <span class="hljs-number">0</span> <span class="hljs-comment">//当前前进距离</span>
+
+    <span class="hljs-comment">//直到终点</span>
+    <span class="hljs-keyword">while</span> (s + m &lt; d)
+        prev = s
+        <span class="hljs-comment">//二分查找最远并且在喝完水前可以到达的点</span>
+           <span class="hljs-type">int</span> l=i<span class="hljs-number">+1</span>
+        <span class="hljs-type">int</span> r=n<span class="hljs-number">-1</span>
+        <span class="hljs-keyword">while</span>(l&lt;=r)
+        {
+            <span class="hljs-type">int</span> mid=l+(r-l)&gt;&gt;<span class="hljs-number">1</span>
+               <span class="hljs-keyword">if</span>(x[mid]&lt;=prev+m){
+                i=mid;
+                l=mid<span class="hljs-number">+1</span>;
+            }<span class="hljs-keyword">else</span> r=mid<span class="hljs-number">-1</span>;
+        }
+        s = x[i];
+        S = S ∪ {i}
+    <span class="hljs-keyword">return</span> S
+</code></pre>
+<p>c++</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//n个补水点包括终点</span>
+<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">GreedyIntervalSelector</span><span class="hljs-params">(<span class="hljs-type">int</span> m, <span class="hljs-type">int</span> d, vector&lt;<span class="hljs-type">int</span>&gt;&amp; x)</span> </span>{
+    vector&lt;<span class="hljs-type">int</span>&gt; S;
+    <span class="hljs-type">int</span> n = x.<span class="hljs-built_in">size</span>();
+    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span> || x[<span class="hljs-number">0</span>] &gt; m) <span class="hljs-keyword">return</span> {}; <span class="hljs-comment">// 初始位置不可达第一个点</span>
+
+    <span class="hljs-type">int</span> s = <span class="hljs-number">0</span>;       <span class="hljs-comment">// 当前已到达的最远位置</span>
+    <span class="hljs-type">int</span> current = <span class="hljs-number">0</span>; <span class="hljs-comment">// 当前选中的点索引</span>
+
+    <span class="hljs-keyword">while</span> (s + m &lt; d) {
+        <span class="hljs-type">int</span> prev = s;
+        <span class="hljs-type">int</span> left = current + <span class="hljs-number">1</span>;
+        <span class="hljs-type">int</span> right = n - <span class="hljs-number">1</span>;
+        <span class="hljs-type">int</span> best = <span class="hljs-number">-1</span>;
+
+        <span class="hljs-comment">// 二分查找最大可达点</span>
+        <span class="hljs-keyword">while</span> (left &lt;= right) {
+            <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
+            <span class="hljs-keyword">if</span> (x[mid] &lt;= prev + m) {
+                best = mid;
+                left = mid + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                right = mid - <span class="hljs-number">1</span>;
+            }
+        }
+
+        <span class="hljs-keyword">if</span> (best == <span class="hljs-number">-1</span>) <span class="hljs-keyword">return</span> {}; <span class="hljs-comment">// 没有可达点</span>
+
+        S.<span class="hljs-built_in">push_back</span>(best);
+        s = x[best];
+        current = best;
+    }
+    <span class="hljs-keyword">return</span> S;
+}
+</code></pre>
+<hr></hr>
+<h2 id="覆盖点问题"><a name="覆盖点问题" class="anchor-navigation-ex-anchor" href="#覆盖点问题"><i class="fa fa-link" aria-hidden="true"></i></a>覆盖点问题</h2>
+<h3 id="问题_4"><a name="问题_4" class="anchor-navigation-ex-anchor" href="#问题_4"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>给定实数轴上的一个点集 {x1,x2,…,xn} ，请设计一个高效的算法，求一个能够包含所有点的单位长度的闭区间的集合，使得该集合最小，并证明该算法的正确性。</p>
+<h3 id="解答_4"><a name="解答_4" class="anchor-navigation-ex-anchor" href="#解答_4"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<p>设 <code>x1,x2,…,xn</code> 已经按照坐标从小到大排序，我们先考虑 x1 ，不存在值比 x1 更小了，我们选择闭区间 [x1,x1+1] ，设第一个大于 x1+1 的点为 xi ，剩下子问题的点集为 <code>{xi,xi+1,…,xn}</code>。重复执行上述步骤直到剩下子问题的<strong>点集为 ∅</strong> 。集合 S 为单位长度的闭区间的集合。</p>
+<p>方法一：线性查找 + 线性查找</p>
+<p>GREEDY-INTERVAL-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">GREEDY-INTERVAL-<span class="hljs-built_in">SELECTOR</span>(x, n)
+    <span class="hljs-comment">//无点集</span>
+    <span class="hljs-keyword">if</span> n = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span> ∅
+    let S be a <span class="hljs-keyword">new</span> set
+    <span class="hljs-comment">//集合x[1:n]</span>
+    i = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> (i ≤ n)
+        S = S ∪ {[x[i], x[i] + <span class="hljs-number">1</span>]}
+        prev = i
+        <span class="hljs-comment">//找到第一个未能覆盖到的点</span>
+        <span class="hljs-keyword">while</span> (i ≤ n &amp;&amp; x[i] ≤ x[prev] + <span class="hljs-number">1</span>)
+            i = i + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> S
+</code></pre>
+<p>GREEDY-INTERVAL-SELECTOR的运行时间为 Θ(n) 。</p>
+<p>方法二：线性查找 + 二分查找</p>
+<p>while循环中线性查找下一个区间的左端点可以用二分查找加速，修改后GREEDY-INTERVAL-SELECTOR伪代码如下：</p>
+<p>GREEDY-INTERVAL-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">GREEDY-INTERVAL-<span class="hljs-built_in">SELECTOR</span>(x, n) 
+    <span class="hljs-keyword">if</span> n = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span> ∅
+    let S be a <span class="hljs-keyword">new</span> set
+    i = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> (i ≤ n)
+        S = S ∪ {[x[i], x[i] + <span class="hljs-number">1</span>]}
+        prev = i
+        l = i
+        r = n
+        <span class="hljs-keyword">while</span> (l ≤ n)
+            mid = ⌊(l + r) / <span class="hljs-number">2</span>⌋
+            <span class="hljs-keyword">if</span> (x[mid] ≤ x[prev] + <span class="hljs-number">1</span>) 
+                l = mid + <span class="hljs-number">1</span>
+            <span class="hljs-keyword">else</span>
+                r = mid - <span class="hljs-number">1</span>
+        i = l<span class="hljs-comment">//更新单位长度的起点</span>
+    <span class="hljs-keyword">return</span> S
+</code></pre>
+<p>GREEDY-INTERVAL-SELECTOR的运行时间为 O(n) 。</p>
+<hr></hr>
+<h2 id="哈夫曼编码"><a name="哈夫曼编码" class="anchor-navigation-ex-anchor" href="#哈夫曼编码"><i class="fa fa-link" aria-hidden="true"></i></a>哈夫曼编码</h2>
+<h3 id="编码问题"><a name="编码问题" class="anchor-navigation-ex-anchor" href="#编码问题"><i class="fa fa-link" aria-hidden="true"></i></a>编码问题</h3>
+<blockquote>
+<p>[!important]</p>
+<p>设计<strong>二进制字符编码(binary character code)</strong>问题：每个字符用唯一的二进制编码表示，称为码字(codeword)。</p>
+<ol>
+<li><strong>定长编码(fixed-length code)</strong>：所有字符的码字长度相同，需要使用 ⌈lg⁡n⌉ 个比特位表示 n≥2 个字符。</li>
+<li><strong>变长编码(variable-length code)</strong>：高频字符使用短码字，低频字符使用长码字。</li>
+</ol>
+</blockquote>
+<p><img src="assets/v2-44b9938ea6749eae96849ae37345e0b9_r-1744180607955-6.jpg" alt="img"></img></p>
+<h3 id="前缀无关编码prefix-free-codes"><a name="前缀无关编码prefix-free-codes" class="anchor-navigation-ex-anchor" href="#前缀无关编码prefix-free-codes"><i class="fa fa-link" aria-hidden="true"></i></a>前缀无关编码(Prefix-free codes)</h3>
+<p><strong>前缀无关编码(prefix-free codes)</strong>：<strong>任何一个码字都不是其它码字的前缀的编码</strong>。在所有编码中，前缀无关编码的数据压缩效果是最优的。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>评：第三版中称为前缀编码(prefix codes)，在第四版和《计算理论导论》第三版中都已经改成前缀无关编码(prefix-free codes)，个人认为称为前缀无关编码更加准确，充分表达出定义中“不是”的含义。当然free比较难翻译，可以翻译成自由，空闲，无关等，为了方便，本人统一翻译成无关。</p>
+</blockquote>
+<ul>
+<li><strong>编码(encoding)</strong>：任何二进制字符编码的编码很简单，直接将字符的码字按照<strong>顺序拼接</strong>。</li>
+<li><strong>解码(decoding)</strong>：由于任何一个码字都不是其它码字的前缀的编码，所以每个字符的编码都是无歧义的。所以可以<strong>按照顺序识别码字</strong>，并将其转换为原来字符。</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>前缀无关编码可以用一棵<strong>二叉树</strong>表示，<strong>叶结点存储字符</strong>，左指针表示 0 ，右指针表示 1 (0意味着“转向左孩子"'，1意味着“转向右孩子＂)，从根结点到某叶结点的路径表示该叶结点存储的字符的码字。</p>
+<p>同时文件的最优编码可以用一棵<strong>满二叉树(full binary tree)</strong>表示，即每个非叶结点都有两个孩子结点。</p>
+</blockquote>
+<ul>
+<li>这里的满二叉树不是数据结构上的满二叉树而是一种更广义上的满二叉树或者说<strong>严格的二叉树</strong>，即所有非叶节点的度都为2，而不是树的每层数量都达到最大</li>
+</ul>
+<ul>
+<li><p>如有字符集 C ，最优前缀无关编码对应的二叉树中有 |C| 个叶结点和 |C|−1 个非叶结点。</p>
+</li>
+<li><p>设给定某文件的<strong>前缀无关编码</strong>，对应的二叉树为 T ，字符集 C 中每个字符 c 在该文件中出现的频率为 <code>c.freq</code> ，对应的叶结点在二叉树中的深度为 <code>dT(c)&gt;0</code> ， dT(c) 也是字符 c 的<strong>码字的长度</strong>。该文件的编码需要的比特位数为：</p>
+<p><img src="assets/image-20250409145027393.png" alt="image-20250409145027393"></img></p>
+</li>
+<li><p>定义 B(T) 为树 T 的<strong>代价(cost)</strong>。</p>
+</li>
+</ul>
+<p><img src="assets/v2-54631f497be4e05e41d4bd03cfe97acd_r-1744181454974-10.jpg" alt="img"></img></p>
+<ul>
+<li>定长编码和变长编码的编码方案</li>
+</ul>
+<h3 id="构造哈夫曼编码constructing-a-huffman-code"><a name="构造哈夫曼编码constructing-a-huffman-code" class="anchor-navigation-ex-anchor" href="#构造哈夫曼编码constructing-a-huffman-code"><i class="fa fa-link" aria-hidden="true"></i></a>构造哈夫曼编码(Constructing a Huffman code)</h3>
+<p>哈夫曼编码</p>
+<ul>
+<li>首先目标是使编码方案对应的二叉树的代价最小，因此可以推出贪心策略对应的最优度量标准，即频率越高的字符深度越小</li>
+<li>假定字符集 C 中包含 n 个字符，每个字符 c∈C 的频率为 c.freq ，我们采用自底向上的方法构造哈夫曼树，该算法使用了小根堆（最小优先队列） Q ，小根堆的关键字为属性 freq 。</li>
+<li>识别两个最低频率的对象将其合并。当合并两个对象时， 得到的新对象的频率设置为原来<strong>两个对象的频率之和</strong>。</li>
+<li>合并时顺序是任意的，交换左右孩子会生成一个不同的编码，但代价完全一样</li>
+</ul>
+<p>HUFFMAN的伪代码如下：</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">HUFFMAN</span>(C)
+    n = |C|
+    <span class="hljs-comment">//构建小根堆</span>
+    let PQ be a <span class="hljs-keyword">new</span> min-priority queue keyed by freq
+    PQ = C
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n - <span class="hljs-number">1</span>
+        allocate a <span class="hljs-keyword">new</span> node z
+        <span class="hljs-comment">//选出频率最小的两颗树</span>
+        x = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        y = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        z.left = x
+        z.right = y
+        z.freq = x.freq + y.freq
+        <span class="hljs-built_in">INSERT</span>(PQ, z)
+    <span class="hljs-keyword">return</span> EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)    <span class="hljs-comment">// the root of the tree is the only node left</span>
+</code></pre>
+<ul>
+<li>简化</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-built_in">HUFFMAN</span>(C)
+    n = |C|
+    <span class="hljs-comment">//构建小根堆</span>
+    let PQ be a <span class="hljs-keyword">new</span> min-priority queue keyed by freq
+    PQ = C
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n - <span class="hljs-number">1</span>
+        allocate a <span class="hljs-keyword">new</span> node z
+        <span class="hljs-comment">//选出频率最小的两颗树</span>
+        z.left = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        z.right = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        z.freq = x.freq + y.freq
+        <span class="hljs-built_in">INSERT</span>(PQ, z)
+    <span class="hljs-keyword">return</span> EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)    <span class="hljs-comment">// the root of the tree is the only node left</span>
+</code></pre>
+<p>需要合并 n−1 次，每次优先队列调整的运行时间为 O(lg⁡n) ，所以HUFFMAN的运行时间为 <strong>O(nlg⁡n)</strong> 。</p>
+<ul>
+<li>图解过程</li>
+</ul>
+<p><img src="assets/v2-8928550b58546f0008350ea20290d7f8_1440w-1744181898769-14.jpg" alt="img"></img></p>
+<h3 id="哈夫曼算法的正确性correctness-of-huffmans-algorithm"><a name="哈夫曼算法的正确性correctness-of-huffmans-algorithm" class="anchor-navigation-ex-anchor" href="#哈夫曼算法的正确性correctness-of-huffmans-algorithm"><i class="fa fa-link" aria-hidden="true"></i></a>哈夫曼算法的正确性(Correctness of Huffman's algorithm)</h3>
+<p>为了证明贪心算法HUFFMAN是正确的，需要证明最优前缀无关编码问题具有<strong>贪心选择和最优子结构性质</strong>。</p>
+<h4 id="引理152lemma-152"><a name="引理152lemma-152" class="anchor-navigation-ex-anchor" href="#引理152lemma-152"><i class="fa fa-link" aria-hidden="true"></i></a><strong>引理15.2(Lemma 15.2)</strong></h4>
+<p>这条引理将证明构造最优前缀无关编码问题具有贪心选择性质。</p>
+<blockquote>
+<p>[!note]</p>
+<p>给定一个字母表 C ，每个字符 c∈C 的频率为 c.freq ，若 x 和 y 是 C 中频率最低的两个字符，则<strong>存在一个 C 的最优前缀无关编码</strong>，其中 x 和 y 的码字长度相同且只有最后一个比特位不同。</p>
+</blockquote>
+<p>证明：</p>
+<blockquote>
+<p>令 T 表示<strong>任一</strong>最优前缀无关编码对应的一棵二叉树，修改得到另一个最优前缀无关编码对应的二叉树，其中 x 和 y 对应的结点是深度最大的结点，且两者为兄弟结点。x 和 y 的码字长度相同且只有最后一个比特位不同。</p>
+<p>设字符 a 和 b 在 T 中对应的结点是深度最大的结点，假设 <code>a.freq≤b.freq 且 x.freq≤y.freq</code> ，由于<code>x.freq 和 y.freq</code> 是所有字符频率中最小的两个频率，故 <code>x.freq≤a.freq 且 y.freq≤b.freq</code> 。</p>
+<p>若<code>x.freq=b.freq ，则 a.freq=b.freq=x.freq=y.freq</code> 。此时引理成立。</p>
+<p><img src="assets/image-20250409164637777.png" alt="image-20250409164637777"></img></p>
+<p>假设<code>x.freq≠b.freq</code> ，意味着 x≠b 。</p>
+<p><img src="assets/v2-c2e2fbbe11970c05523023a450d0e355_1440w-1744188380495-3.jpg" alt="img"></img></p>
+<p>如图15-7所示，在 T 中交换 a 和 x 生成 T′ ，在 T′ 中交换 b 和 y 生成 T″ ， T 和 T′ 的代价差值为：</p>
+<p><img src="assets/image-20250409164704690-1744188426209-5.png" alt="image-20250409164704690"></img></p>
+<p>即 B(T)≥B(T′) ，同理可得， B(T′)≥B(T″) ，由不等式的传递性， B(T)≥B(T″) ，又 <strong>T 表示任一最优前缀无关编码对应的一棵二叉树</strong>，有 B(T)≤B(T″) ，得 <code>B(T)=B(T″)</code> ，故 T″ 也表示某一最优前缀无关编码对应的一棵二叉树。</p>
+</blockquote>
+<p>引理16.2 说明，不失一般性，通过合并来构造最优树的过程，可以从合并出现频率最低的 两个字符这样一个贪心选择开始。</p>
+<h4 id="引理153lemma-153"><a name="引理153lemma-153" class="anchor-navigation-ex-anchor" href="#引理153lemma-153"><i class="fa fa-link" aria-hidden="true"></i></a><strong>引理15.3(Lemma 15.3)</strong></h4>
+<p>这条引理将证明构造最优前缀无关编码问题具有最优子结构性质</p>
+<blockquote>
+<p>[!note]</p>
+<p>给定一个字母表 C ，每个字符 c∈C 的频率为 c.freq ，若 x 和 y 是 C 中频率最低的两个字符，定义字符 z 且 <code>z.freq=x.freq+y.freq</code> ，定义字母表 <code>C′=(C−{x,y})∪{z}</code>，字母表 C′ 的任一最优前缀无关编码对应的一棵二叉树 T′ ，将 T′ 中的字符 z 对应的叶结点修改为一个内部结点且两个孩子结点分别为字符 x 和 y 对应的叶结点，这样可以得到字母表 C 的某一最优前缀无关编码对应的一棵二叉树 T 。</p>
+</blockquote>
+<ul>
+<li><p>证明：</p>
+<blockquote>
+<p>由 <code>C′=(C−{x,y})∪{z}</code></p>
+<p><code>z.freq=x.freq+y.freq</code></p>
+<p><code>dT(x)=dT(y)=dT′(z)+1</code></p>
+<p>`B(T)=∑c∈Cc.freq⋅dT(c)``</p>
+<p><code>`B(T′)=∑c∈C′c.freq⋅dT′(c)</code> ，</p>
+<p>可得 <code>B(T)=B(T′)+x.freq+y.freq</code>。</p>
+<p>用反证法可证明，</p>
+<p><img src="assets/image-20250409165315172-1744188796576-7.png" alt="image-20250409165315172"></img></p>
+<p>二叉树 T′ 能够表示字母表 C′ 的某一最优前缀无关编码，则二叉树 T 能够表示字母表 C 的某一最优前缀无关编码。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="定理154theorem-154"><a name="定理154theorem-154" class="anchor-navigation-ex-anchor" href="#定理154theorem-154"><i class="fa fa-link" aria-hidden="true"></i></a><strong>定理15.4(Theorem 15.4)</strong></h4>
+<p>算法HUFFMAN能够生成一个最优前缀无关编码。</p>
+<p>证明：由引理15.2和引理15.3可得。</p>
+<hr></hr>
+<h2 id="最优归并树"><a name="最优归并树" class="anchor-navigation-ex-anchor" href="#最优归并树"><i class="fa fa-link" aria-hidden="true"></i></a>最优归并树</h2>
+<p>构造一棵<strong>最优<a href="https://zhida.zhihu.com/search?content_id=215766440&amp;content_type=Article&amp;match_order=1&amp;q=三路归并树&amp;zhida_source=entity" target="_blank">三路归并树</a>(optimal ternary merge tree)</strong> T=(V,E) ，其中只有度为 0 的结点和度为 3 的结点，设度为 i 的结点个数为 ni ，由|V|=|E|+1，可得 <code>n0+n3=3*n3+1</code>。</p>
+<p>当叶子节点数不够时，构造权值为0的虚字符节点用来构造归并树</p>
+<p>设给定一个由 n 个字符组成的字符集 C ，设需要补充的虚字符个数为 μ ，每个虚字符的频率为 0 。</p>
+<p>由于 <code>n0=n+μ</code>，解得 μ 最小为 <code>μ=3−1−((n−1)mod(3−1))=2−((n−1)mod2)</code> 。</p>
+<p>同理可得：k叉归并树的<code>μ=k−1−((n−1)mod(k−1))</code></p>
+<p>构造最优三进制编码和构造哈夫曼编码的过程类似。哈夫曼树是<strong>最优二路归并树(optimal binary merge tree)</strong>。</p>
+<p>采用自底向上的方法构造三路归并树，该算法使用了小根堆 Q ，小根堆的关键字为属性 freq 。</p>
+<p>设合并次数为 <em>k</em>，则总减少的节点数为 2<em>k</em>。初始总叶子数为<em>n</em>+<em>μ</em>，最终剩下1个根节点，所以循环(<em>n</em>+<em>μ</em>−1)/2 </p>
+<p>OPTIMAL-TERNARY-MERGE的伪代码如下：</p>
+<pre><code class="lang-cpp">OPTIMAL-TERNARY-<span class="hljs-built_in">MERGE</span>(C)
+    n = |C|
+    μ = <span class="hljs-number">2</span> - ((n - <span class="hljs-number">1</span>) mod <span class="hljs-number">2</span>)<span class="hljs-comment">//虚字符个数</span>
+    let PQ be a <span class="hljs-keyword">new</span> min-priority queue keyed by freq
+    PQ = C
+    <span class="hljs-comment">//构造虚节点</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to μ
+        allocate a <span class="hljs-keyword">new</span> node x
+        x.freq = <span class="hljs-number">0</span>
+        <span class="hljs-built_in">INSERT</span>(PQ, x)
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> <span class="hljs-built_in">to</span> (n + μ - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>
+        allocate a <span class="hljs-keyword">new</span> node w
+        x = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        y = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        z = EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)
+        w.first = x
+        w.second = y
+        w.third = z
+        w.freq = x.freq + y.freq + z.freq
+        <span class="hljs-built_in">INSERT</span>(PQ, w)
+    <span class="hljs-keyword">return</span> EXTRACT-<span class="hljs-built_in">MIN</span>(PQ)    <span class="hljs-comment">// the root of the tree is the only node left</span>
+</code></pre>
+<p>需要合并 (n+μ−1)/2 次，每次优先队列调整的运行时间为 O(lg⁡n) ，所以OPTIMAL-TERNARY-MERGE的运行时间为 <strong>O(nlg⁡n)</strong> 。</p>
+<p>评：参考《数据结构（C语言版）》11.5 最佳归并树。</p>
+<hr></hr>
+<h2 id="离线缓存"><a name="离线缓存" class="anchor-navigation-ex-anchor" href="#离线缓存"><i class="fa fa-link" aria-hidden="true"></i></a>离线缓存</h2>
+<blockquote>
+<p>[!note]</p>
+<p><strong>缓存(cache)</strong>：容量比主存小，速度比主存快的<strong>存储器(memory)</strong>。计算机通过把需要访问的数据的一部分储存在缓存中，可以减少数据的访问时间。缓存将数据有组织地存放在<strong>缓存块(cache blocks)</strong>中，缓存块大小一般是 32 、 64 或 128 字节。</p>
+<p><strong>主存(main memory)</strong>：虚拟内存系统中，主内存可以被视为驻留在磁盘上的数据的缓存。这些主存<strong>块(blocks)</strong>被称为<strong>页(pages)</strong>，页大小一般是 4096 字节。</p>
+</blockquote>
+<h3 id="问题_5"><a name="问题_5" class="anchor-navigation-ex-anchor" href="#问题_5"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>当一个程序执行时，需要进行一系列的存储器请求。假设有 n 个访存请求，这些数据按照请求顺序分别在 b1,b2,…,bn 块中。事实上，这些请求不会完全不同，多个请求有可能需要访问同一个块。</p>
+<p>当需要访问 bi 时，会出现以下三种情况：</p>
+<ul>
+<li>情况一：由于之前访问过 bi ， bi 已经在缓存中，当需要再次访问 bi 时，可以直接访问缓存，称为<strong><a href="https://zhida.zhihu.com/search?content_id=216238624&amp;content_type=Article&amp;match_order=1&amp;q=缓存命中&amp;zhida_source=entity" target="_blank">缓存命中</a>(cache hit)</strong>。</li>
+<li>情况二：bi 不在缓存中，<strong>缓存未满</strong>，当需要访问 bi 时，直接将 bi 填充到空闲的缓存块。</li>
+<li>情况三：bi 不在缓存中，<strong>缓存已满</strong>，当需要访问 bi 时，需要预先将某一个缓存块空出来，然后将 bi 填充到空闲的缓存块。</li>
+</ul>
+<p>情况二和情况三称为<strong>缓存未命中(cache miss)</strong>。情况二称为<strong>强制未命中(compulsory miss)</strong>。</p>
+<p>一般情况下，由于计算机无法知道未来的请求，因此<strong>缓存(caching)</strong>是一个在线问题。这里我们仅仅考虑<strong>缓存问题的离线版本，即已知完整的访存请求序列和缓存块数量</strong>，我们的目标是<strong>最小化缓存未命中，最大化缓存命中</strong>。</p>
+<blockquote>
+<p>[!important]</p>
+<p>我们采用称为<strong>将来最久(furthest-in-future)</strong>的贪心策略求解离线缓存问题，即如果缓存已满，那么<strong>选择已在缓存中且访存序列中将来最久到达的块</strong>进行置换。在有些情况下，我们可以提前知道完整的访存请求序列，例如，我们可以将主存视为磁盘或者固态硬盘中所有数据的缓存，即已经有一些算法可以预先计划整个读写操作集。此外，我们可以使用最优算法的缓存未命中数作为比较多种在线算法性能的基线。这些我们将在27.3节中进行说明。</p>
+</blockquote>
+<p>离线缓存也可以用于现实生活中的问题的建模。</p>
+<h3 id="解答_5"><a name="解答_5" class="anchor-navigation-ex-anchor" href="#解答_5"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<p>采用称为<strong>将来最久(furthest-in-future)</strong>的贪心策略求解离线缓存问题，即如果缓存已满，那么<strong>选择已在缓存中且访存序列中将来最久到达的块</strong>进行置换。</p>
+<p>则接下来讨论贪心策略的最优子结构和贪心选择性质</p>
+<h4 id="离线缓存的最优子结构optimal-substructure-of-offline-caching"><a name="离线缓存的最优子结构optimal-substructure-of-offline-caching" class="anchor-navigation-ex-anchor" href="#离线缓存的最优子结构optimal-substructure-of-offline-caching"><i class="fa fa-link" aria-hidden="true"></i></a>离线缓存的最优子结构(<strong>Optimal substructure of offline caching</strong>)</h4>
+<ul>
+<li><p>定义子问题 (C,i) ，缓存块集合为 C ，访存请求序列为 <code>bi,bi+1,…,bn</code> ，当前需要请求 bi ，设可用的缓存块数量最多为 k ， |C|≤k 。子问题 (C,i) 的最优解要求使得缓存未命中数最小</p>
+</li>
+<li><p>设子问题 (C,i) 的最优解为 S ，请求 bi 完成后缓存块集合为 C′ ，子问题 (C′,i+1) 的最优解为 S′ 。</p>
+</li>
+<li><p>定义 RC,i 为子问题 (C,i) 请求 bi 完成后可能的缓存块集合的集合，有：</p>
+<ul>
+<li>情况一： <code>RC,i={C}</code>，对应缓存命中</li>
+<li>情况二： <code>RC,i={C∪{bi}}</code>，对应缓存强制未命中</li>
+<li>情况三： <code>RC,i={(C−x)∪{bi}:x∈C}</code>，对应缓存未命中且满</li>
+</ul>
+<p>定义 miss(C,i) 为子问题 (C,i) 的最优解的<strong>缓存未命中数</strong>。递归式如下：</p>
+<p><img src="assets/image-20250411191805955.png" alt="image-20250411191805955"></img></p>
+</li>
+</ul>
+<hr></hr>
+<h4 id="离线缓存的贪心选择性质greedy-choice-property-of-offline-caching"><a name="离线缓存的贪心选择性质greedy-choice-property-of-offline-caching" class="anchor-navigation-ex-anchor" href="#离线缓存的贪心选择性质greedy-choice-property-of-offline-caching"><i class="fa fa-link" aria-hidden="true"></i></a>离线缓存的贪心选择性质(Greedy-choice property of offline caching)</h4>
+<p>最优离线缓存具有贪心选择性质(Optimal offline caching has the greedy-choice property)</p>
+<p>考虑子问题 (C,i) ，缓存块集合为 C 有 k 个缓存块，即此时缓存已满，且出现缓存未命中。当前需要请求 bi ，设 z=bm 为 C 中将来最久被请求的缓存块，（如果有缓存块将来不再被访问，优先考虑这样的缓存块成为 z ，所以可以增加虚缓存块，使得 z=bm=bn+1 。）我们可以移除缓存块 z ，然后将增加缓存块 bi ，如此操作可以得到子问题 (C,i) 的某一个最优解。</p>
+<p>证明详见<a href="https://zhuanlan.zhihu.com/p/576474832" target="_blank">算法导论（第四版）第十五章：贪心算法　第四节：离线缓存 - 知乎</a></p>
+<hr></hr>
+<h2 id="贪心算法原理"><a name="贪心算法原理" class="anchor-navigation-ex-anchor" href="#贪心算法原理"><i class="fa fa-link" aria-hidden="true"></i></a>贪心算法原理</h2>
+<blockquote>
+<p>[!note]</p>
+<p>以通过贪心选择来改进最优子结构，使得选择后只留下一 个子问题</p>
+<p>也就是优化动态规划的子问题数量</p>
+</blockquote>
+<ul>
+<li>以下步骤设计贪心算法。</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<ol>
+<li>最优化问题为你做出选择后只有一个子问题需要求解。</li>
+<li>证明每次做出贪心选择后，原问题总是有最优解，所以贪心选择总是安全的。</li>
+<li>证明做出贪心选择后的子问题和贪心选择一起构成原问题的最优解，即原问题具有最优子结构。</li>
+</ol>
+<p>能够用贪心算法求解的问题具有<strong>贪心选择性质</strong>和<strong>最优子结构</strong>。</p>
+</blockquote>
+<h3 id="贪心选择性质greedy-choice-property"><a name="贪心选择性质greedy-choice-property" class="anchor-navigation-ex-anchor" href="#贪心选择性质greedy-choice-property"><i class="fa fa-link" aria-hidden="true"></i></a>贪心选择性质(Greedy-choice property)</h3>
+<p><strong>贪心选择性质(greedy-choice property)</strong>：可以通过作出局部最优（贪心）选择来构造全局最优解。</p>
+<blockquote>
+<p>[!important]</p>
+<p>贪心算法和动态规划的对比：</p>
+<ul>
+<li>动态规划的选择依赖于子问题的解，所以一般采用<strong>自底向上</strong>的方法求解问题。</li>
+<li>贪心算法不依赖于子问题的解，所以一般采用<strong>自顶向下</strong>的方法求解问题。</li>
+</ul>
+</blockquote>
+<ul>
+<li>因此必须证明每个步骤做出贪心选择能生成全局最优解：<ul>
+<li>首先考查<strong>某个子问题的最优解</strong>，然后用贪心选择替换某个其他选择来修改此解，从而得到一个相似但更小的子问题。</li>
+</ul>
+</li>
+</ul>
+<p>如果我们进行贪心选择时不得不考虑众多选择，我们必须提高进行贪心选择的效率。通过对输入数据进行<strong>预处理</strong>或者选择<strong>合适的数据结构</strong>（通常是优先队列），我们可以快速做出贪心选择，从而得到高效的算法。</p>
+<h3 id="最优子结构optimal-substructure"><a name="最优子结构optimal-substructure" class="anchor-navigation-ex-anchor" href="#最优子结构optimal-substructure"><i class="fa fa-link" aria-hidden="true"></i></a>最优子结构(Optimal substructure)</h3>
+<blockquote>
+<p>[!note]</p>
+<p>如果一个问题的最优解包含其子问题的最优解，则称此问题具有最优子结构性质。</p>
+</blockquote>
+<p>贪心算法通常采用一个非常直接的方法运用最优子结构，<strong>假定通过对原问题的贪心选择就可以得到子问题</strong>，我们只需要证明做出贪心选择后的子问题和贪心选择一起构成原问题的最优解。</p>
+<p>该方法隐式地运用了<strong>归纳法</strong>证明了每一步贪心选择都能构成原问题的最优解。</p>
+<h3 id="贪心vs动态规划greedy-versus-dynamic-programming"><a name="贪心vs动态规划greedy-versus-dynamic-programming" class="anchor-navigation-ex-anchor" href="#贪心vs动态规划greedy-versus-dynamic-programming"><i class="fa fa-link" aria-hidden="true"></i></a>贪心VS动态规划(Greedy versus dynamic programming)</h3>
+<p>虽然贪心和动态规划方法都对问题的最优子结构进行了研究，但是如何选择两种方法求解问题却是个难点，所以我们用下面两个问题进行举例。</p>
+<p><strong>0-1<a href="https://zhida.zhihu.com/search?content_id=215541408&amp;content_type=Article&amp;match_order=1&amp;q=背包问题&amp;zhida_source=entity" target="_blank">背包问题</a>(0-1 knapsack problem)</strong>：商店里有 n 个商品，第 i 个商品价值为 vi ，重量为 wi ，现在有一个可容纳最大重量为 W 的背包，目标使得背包中的商品总价值最大，每个商品只能选择一次，且要不选择整个某商品要不不选择某商品，应该选择哪些商品。</p>
+<p><strong>分数背包问题(fractional knapsack problem)</strong>：问题场景和0-1背包问题一样，唯一区别是可以选择拿走商品的一部分，应该选择哪些商品。</p>
+<p>可以将0-1 背包问题中的商品想象为金锭，而分数背包问题中的商品更像金砂。</p>
+<p>两个<strong>背包问题(knapsack problem)</strong>都具有最优子结构。</p>
+<p>分数背包问题可以用<strong>贪心策略</strong>求解，练习15.2-1要求你证明分数背包问题的贪心选择性质。首先计算每个商品的每磅价值v./w,。遵循贪心策略，小偷尽量多地拿走每磅价值最高的商品</p>
+<p>0-1背包问题只能用<strong>动态规划</strong>求解，练习15.2-2要求你用动态规划求解0-1背包问题。因为可能无法法装满背包，空闲空间降低了案的有效每磅价值导致贪心策略失败</p>
+<blockquote>
+<p>[!note]</p>
+<p>给定两个集合 A 和 B ，每个集合都包含 n 个正整数，你可以按照任意顺序重排每个集合。重排后，令 ai 为集合 A 中第 i 个元素， bi 为集合 B 中第 i 个元素，请设计一个算法，使得<code>ai^bi</code>的和最大化，给出该算法的运行时间，并证明该算法的正确性。</p>
+<p>将集合 A 和 B 中元素分别按值进行降序排序，此时 <code>ai^bi</code>的<strong>和</strong>最大。</p>
+<p><img src="assets/image-20250408193425036.png" alt="image-20250408193425036"></img></p>
+</blockquote>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.277Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 16_贪心算法</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="15_动态规划.html" class="navigation navigation-prev " aria-label="Previous page: 15_动态规划">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="17_回溯.html" class="navigation navigation-next " aria-label="Next page: 17_回溯">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"16_贪心算法","level":"1.3.1.6","depth":3,"next":{"title":"17_回溯","level":"1.3.1.7","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/17_回溯.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/17_回溯.md","articles":[]},"previous":{"title":"15_动态规划","level":"1.3.1.5","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/15_动态规划.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/15_动态规划.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/DataStructure_and_Algorithms/Algorithms/16_贪心算法.md","mtime":"2025-09-07T09:41:17.124Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

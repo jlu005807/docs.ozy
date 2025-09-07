@@ -1,0 +1,3310 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>15_动态规划 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="16_贪心算法.html" />
+    
+    
+    <link rel="prev" href="04_分治策略.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01_算法在计算中的作用.html">
+            
+                <a href="01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02_算法基础.html">
+            
+                <a href="02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03_函数的增长.html">
+            
+                <a href="03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="04_分治策略.html">
+            
+                <a href="04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.5" data-path="15_动态规划.html">
+            
+                <a href="15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="16_贪心算法.html">
+            
+                <a href="16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="17_回溯.html">
+            
+                <a href="17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="18_分支限界.html">
+            
+                <a href="18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="19_NP问题.html">
+            
+                <a href="19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Data_structure/">
+            
+                <a href="../Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Data_structure/01_Introduction.html">
+            
+                <a href="../Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Data_structure/02_Linear_List.html">
+            
+                <a href="../Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Data_structure/05_Character_String.html">
+            
+                <a href="../Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Data_structure/06_Tree.html">
+            
+                <a href="../Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Data_structure/07_Graph.html">
+            
+                <a href="../Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Data_structure/08_Sort.html">
+            
+                <a href="../Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Data_structure/09_Search.html">
+            
+                <a href="../Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Data_structure/data_structure.html">
+            
+                <a href="../Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Cpp/">
+            
+                <a href="../../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Cpp/C++-Primer/">
+            
+                <a href="../../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Cpp/Effective-Modern-C++/">
+            
+                <a href="../../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Cpp/Pre-knowledge/">
+            
+                <a href="../../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >15_动态规划</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#动态规划"><b></b>动态规划</a></li><ul><li><span class="title-icon "></span><a href="#钢条切割"><b></b>钢条切割</a></li><ul><li><span class="title-icon "></span><a href="#自顶向下递归实现"><b></b>自顶向下递归实现</a></li><li><span class="title-icon "></span><a href="#动态规划方法求解"><b></b>动态规划方法求解</a></li><li><span class="title-icon "></span><a href="#子问题图"><b></b>子问题图</a></li><li><span class="title-icon "></span><a href="#重构解"><b></b>重构解</a></li></ul><li><span class="title-icon "></span><a href="#矩阵链乘法"><b></b>矩阵链乘法</a></li><ul><li><span class="title-icon "></span><a href="#矩阵相乘"><b></b>矩阵相乘</a></li><li><span class="title-icon "></span><a href="#矩阵链乘法问题"><b></b>矩阵链乘法问题</a></li><li><span class="title-icon "></span><a href="#计算括号化方案数量"><b></b>计算括号化方案数量</a></li><li><span class="title-icon "></span><a href="#应用动态规划方法"><b></b>应用动态规划方法</a></li></ul><li><span class="title-icon "></span><a href="#动态规划原理"><b></b>动态规划原理</a></li><ul><li><span class="title-icon "></span><a href="#最优子结构"><b></b>最优子结构</a></li><li><span class="title-icon "></span><a href="#重叠子问题"><b></b>重叠子问题</a></li><li><span class="title-icon "></span><a href="#重构最优解"><b></b>重构最优解</a></li><li><span class="title-icon "></span><a href="#备忘"><b></b>备忘</a></li></ul><li><span class="title-icon "></span><a href="#最长公共子序列"><b></b>最长公共子序列</a></li><ul><li><span class="title-icon "></span><a href="#问题概念"><b></b>问题概念</a></li><li><span class="title-icon "></span><a href="#步骤-1--刻画最长公共子序列的特征"><b></b>步骤 1 : 刻画最长公共子序列的特征</a></li><li><span class="title-icon "></span><a href="#步骤2-一个递归解"><b></b>步骤2: 一个递归解</a></li><li><span class="title-icon "></span><a href="#步骤3-计算lcs的长度"><b></b>步骤3: 计算LCS的长度</a></li><li><span class="title-icon "></span><a href="#步骤4-构造lcs"><b></b>步骤4: 构造LCS</a></li><li><span class="title-icon "></span><a href="#改进代码"><b></b>改进代码</a></li></ul><li><span class="title-icon "></span><a href="#最长递增子序列问题"><b></b>最长递增子序列问题</a></li><li><span class="title-icon "></span><a href="#最优二叉搜索树"><b></b>最优二叉搜索树</a></li><ul><li><span class="title-icon "></span><a href="#问题概念_1"><b></b>问题概念</a></li><li><span class="title-icon "></span><a href="#步骤-1--最优二叉搜索树的结构"><b></b>步骤 1 : 最优二叉搜索树的结构</a></li><li><span class="title-icon "></span><a href="#步骤2-一个递归算法"><b></b>步骤2: 一个递归算法</a></li><li><span class="title-icon "></span><a href="#步骤3-计算最优二叉搜索树的期望搜索代价"><b></b>步骤3: 计算最优二叉搜索树的期望搜索代价</a></li><li><span class="title-icon "></span><a href="#构造最优解"><b></b>构造最优解</a></li><li><span class="title-icon "></span><a href="#优化"><b></b>优化</a></li></ul><li><span class="title-icon "></span><a href="#有向无环图中的最长路径问题"><b></b>有向无环图中的最长路径问题</a></li><ul><li><span class="title-icon "></span><a href="#问题"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#最长回文子序列"><b></b>最长回文子序列</a></li><ul><li><span class="title-icon "></span><a href="#问题："><b></b>问题：</a></li><li><span class="title-icon "></span><a href="#类似题目：最长回文子串"><b></b>类似题目：最长回文子串</a></li></ul><li><span class="title-icon "></span><a href="#双调欧几里得旅行商问题"><b></b>双调欧几里得旅行商问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_1"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_1"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#多段图问题"><b></b>多段图问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_2"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_2"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#货郎担问题（欧几里得旅行商问题）"><b></b>货郎担问题（欧几里得旅行商问题）</a></li><ul><li><span class="title-icon "></span><a href="#问题_3"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_3"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#01背包问题"><b></b>0/1背包问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_4"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解法一：动态规划"><b></b>解法一：动态规划</a></li><li><span class="title-icon "></span><a href="#解法二：记忆化搜索"><b></b>解法二：记忆化搜索</a></li><li><span class="title-icon "></span><a href="#解法三：序偶对法"><b></b>解法三：序偶对法</a></li></ul><li><span class="title-icon "></span><a href="#权值之和最大的兼容活动子集"><b></b>权值之和最大的兼容活动子集</a></li><ul><li><span class="title-icon "></span><a href="#方法一：动态规划（区间两个端点都不固定）"><b></b>方法一：动态规划（区间两个端点都不固定）</a></li><li><span class="title-icon "></span><a href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）"><b></b>方法二：动态规划（区间一个端点固定，另一个端点不固定）</a></li><li><span class="title-icon "></span><a href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化"><b></b>方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</a></li></ul><li><span class="title-icon "></span><a href="#可靠性设计问题"><b></b>可靠性设计问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_5"><b></b>问题</a></li><li><span class="title-icon "></span><a href="#解答_4"><b></b>解答</a></li></ul><li><span class="title-icon "></span><a href="#流水线调度问题"><b></b>流水线调度问题</a></li><ul><li><span class="title-icon "></span><a href="#问题_6"><b></b>问题</a></li></ul></ul></ul></div><a href="#动态规划" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#动态规划">动态规划</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#钢条切割">钢条切割</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#自顶向下递归实现">自顶向下递归实现</a><i></i></div></li>
+<li><div><a href="#动态规划方法求解">动态规划方法求解</a><i></i></div></li>
+<li><div><a href="#子问题图">子问题图</a><i></i></div></li>
+<li><div><a href="#重构解">重构解</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#矩阵链乘法">矩阵链乘法</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#矩阵相乘">矩阵相乘</a><i></i></div></li>
+<li><div><a href="#矩阵链乘法问题">矩阵链乘法问题</a><i></i></div></li>
+<li><div><a href="#计算括号化方案数量">计算括号化方案数量</a><i></i></div></li>
+<li><div><a href="#应用动态规划方法">应用动态规划方法</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1最优括号化方案的结构特征">1.最优括号化方案的结构特征</a><i></i></div></li>
+<li><div><a href="#2-一个递归求解方案">2. 一个递归求解方案</a><i></i></div></li>
+<li><div><a href="#3计算最优代价">3.计算最优代价</a><i></i></div></li>
+<li><div><a href="#4-构造最优解">4. 构造最优解</a><i></i></div></li>
+<li><div><a href="#实现矩阵链最优代价乘法计算的真正计算过程">实现矩阵链最优代价乘法计算的真正计算过程</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#动态规划原理">动态规划原理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#最优子结构">最优子结构</a><i></i></div></li>
+<li><div><a href="#重叠子问题">重叠子问题</a><i></i></div></li>
+<li><div><a href="#重构最优解">重构最优解</a><i></i></div></li>
+<li><div><a href="#备忘">备忘</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#最长公共子序列">最长公共子序列</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题概念">问题概念</a><i></i></div></li>
+<li><div><a href="#步骤-1--刻画最长公共子序列的特征">步骤 1 : 刻画最长公共子序列的特征</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#定理141（lcs的最优子结构）theorem-141-optimal-substructure-of-an-lcs">定理14.1（LCS的最优子结构）(Theorem 14.1 (Optimal substructure of an LCS))</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#步骤2-一个递归解">步骤2: 一个递归解</a><i></i></div></li>
+<li><div><a href="#步骤3-计算lcs的长度">步骤3: 计算LCS的长度</a><i></i></div></li>
+<li><div><a href="#步骤4-构造lcs">步骤4: 构造LCS</a><i></i></div></li>
+<li><div><a href="#改进代码">改进代码</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#最长递增子序列问题">最长递增子序列问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#方法一：自底向上动态规划">方法一：自底向上动态规划</a><i></i></div></li>
+<li><div><a href="#方法二：贪心动态规划二分查找">方法二：贪心+动态规划+二分查找</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#最优二叉搜索树">最优二叉搜索树</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题概念">问题概念</a><i></i></div></li>
+<li><div><a href="#步骤-1--最优二叉搜索树的结构">步骤 1 : 最优二叉搜索树的结构</a><i></i></div></li>
+<li><div><a href="#步骤2-一个递归算法">步骤2: 一个递归算法</a><i></i></div></li>
+<li><div><a href="#步骤3-计算最优二叉搜索树的期望搜索代价">步骤3: 计算最优二叉搜索树的期望搜索代价</a><i></i></div></li>
+<li><div><a href="#构造最优解">构造最优解</a><i></i></div></li>
+<li><div><a href="#优化">优化</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#有向无环图中的最长路径问题">有向无环图中的最长路径问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#最长回文子序列">最长回文子序列</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题：">问题：</a><i></i></div></li>
+<li><div><a href="#类似题目：最长回文子串">类似题目：最长回文子串</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#双调欧几里得旅行商问题">双调欧几里得旅行商问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#多段图问题">多段图问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#多段图向后处理递推关系式">多段图向后处理递推关系式</a><i></i></div></li>
+<li><div><a href="#多段图的向前处理算法">多段图的向前处理算法</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#货郎担问题（欧几里得旅行商问题）">货郎担问题（欧几里得旅行商问题）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#01背包问题">0/1背包问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解法一：动态规划">解法一：动态规划</a><i></i></div></li>
+<li><div><a href="#解法二：记忆化搜索">解法二：记忆化搜索</a><i></i></div></li>
+<li><div><a href="#解法三：序偶对法">解法三：序偶对法</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#权值之和最大的兼容活动子集">权值之和最大的兼容活动子集</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#方法一：动态规划（区间两个端点都不固定）">方法一：动态规划（区间两个端点都不固定）</a><i></i></div></li>
+<li><div><a href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）">方法二：动态规划（区间一个端点固定，另一个端点不固定）</a><i></i></div></li>
+<li><div><a href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化">方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#可靠性设计问题">可靠性设计问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+<li><div><a href="#解答">解答</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#流水线调度问题">流水线调度问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#问题">问题</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="动态规划"><a name="动态规划" class="anchor-navigation-ex-anchor" href="#动态规划"><i class="fa fa-link" aria-hidden="true"></i></a>动态规划</h1>
+<blockquote>
+<p>[!note]</p>
+<p>动态规划(dynamic programming)与分治方法相似，都是通过<strong>组合子问题的解</strong>来求解原问题（在这里， <code>programming</code>指的是一种表格法，并非编写计算机程序）。</p>
+</blockquote>
+<ul>
+<li>动态规划应用于<strong>子问题重叠</strong>的情况，即不同的子问题具有<strong>公共的子问题</strong>（子问题 的求解是递归进行的，将其划分为更小的子子问题）</li>
+<li>在这种情况下，分治算法会做许多不必要的 工作，它会反复地求解那些公共子子问题。而动态规划算法对每个子子问题只求解一次，将其解<strong>保存在一个表格</strong>中，从而无需每次求解一个子子问题时都重新计算，避免了这种不必要的计算工作。</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>动态规划方法通常用来求解<strong>最优化问题</strong>(optimization problem)。这类问题可以有很多可行解，每个解都有一个值，我们希望寻找具有最优值（最小值或最大值）的解。我们称这样的解为问题的<strong>一个</strong>最优解(an optimal solution),</p>
+<ul>
+<li><p>四个步骤设计一个动态规划算法</p>
+</li>
+<li><p>刻画一个最优解的<strong>结构特征</strong>。 </p>
+</li>
+<li><strong>递归地定义</strong>最优解的值。 （动态转移方程）</li>
+<li>计算最优解的值，通常采用<strong>自底向上</strong>的方法。 </li>
+<li>利用计算出的信息构造一个最优解。</li>
+</ul>
+<p>如果我们仅仅需要一个<strong>最优解的值</strong>，而非解本身，可以忽略步骤4。例如求最大子数组的值，并不需要求出最大子数组的范围</p>
+<p>需要在执行步骤3 的过程中维护一些额外信息，以便用来构造一个最优解。</p>
+</blockquote>
+<hr></hr>
+<h2 id="钢条切割"><a name="钢条切割" class="anchor-navigation-ex-anchor" href="#钢条切割"><i class="fa fa-link" aria-hidden="true"></i></a>钢条切割</h2>
+<ul>
+<li><p>钢条切割问题是这样的：给定一段长度为n英寸的钢条和一个价格表<code>pi(i=l, 2, …, n)</code>,  求切割钢条方案，使得销售收益r最大。</p>
+<blockquote>
+<ul>
+<li>注意，如果长度为n英寸的钢条的价格Pn足够大，最优解可能就是完全不需要切割。</li>
+<li>长度为n英寸的钢条共有<code>2^n-1</code>种不同的切割方案，因为在距离钢条左端<code>i(i=l, 2, …, n—1)</code>英寸处，我们总是可以选择<strong>切割或不切割</strong></li>
+<li>用普通的加法符号表示切割方案：<code>n= i1+i2+...+ik</code>，将钢条切割为长度分别为<code>i1,i2 , …， ik</code>的小段</li>
+<li>得到最大收益 <code>rn = P(i1), + P(i2)+…+ P(ik)</code>. </li>
+</ul>
+</blockquote>
+</li>
+<li><p>更一般地，对于r.(n~l), 我们可以用更短的钢条的最优切割收益来描述它： </p>
+<blockquote>
+<p><img src="assets/image-20250316192438846-1742124279838-1.png" alt="image-20250316192438846"></img></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>先求解形式完全一样，但规模更小的子问题：当完成首次切割后，我们将两段钢条看成两个独立的钢条切割问题实例</p>
+<p>通过组合两个相关子问题的最优解，并在所有可能的两段切割方案中选取组合收益最大者，构成原问题的最优解</p>
+<p>称钢条切割问题满足<strong>最优子结构(optimal substructure)</strong>性质：问题的最优解由相关子问题的最优解组合而成，而这些子问题可以独立求解。</p>
+</blockquote>
+<h3 id="自顶向下递归实现"><a name="自顶向下递归实现" class="anchor-navigation-ex-anchor" href="#自顶向下递归实现"><i class="fa fa-link" aria-hidden="true"></i></a><strong>自顶向下</strong>递归实现</h3>
+<blockquote>
+<p>[!tip]</p>
+<p>钢条切割问题还存在一种相似的但更为简单的递归求解方法</p>
+<ul>
+<li><p>问题分解的方式为：将长度为n的钢条分解为左边开始一段， 以及剩余部分继续分解的结果。</p>
+</li>
+<li><p>即从钢条上切下长度为 i 的一段，且这段不再分割，对剩下的长度为 n−i 进行递归求解。</p>
+<p><img src="assets/image-20250606195256776.png" alt="image-20250606195256776"></img></p>
+</li>
+<li><p><strong>自顶向下</strong>递归实现</p>
+</li>
+<li><p>CUT-ROD反复地用相同的参数值对自身进行递归调用，即它<strong>反复求解相同的子问题</strong>，导致CUT-ROD 的效率这么差？</p>
+</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-comment">//价格数组p[l.. n]和整数n为输入，返回长度为n的钢条的最大收益</span>
+CUT-<span class="hljs-built_in">ROD</span>(p, n) 
+ <span class="hljs-keyword">if</span>    n==O 
+     <span class="hljs-keyword">return</span> O 
+ q = -oo 
+ <span class="hljs-keyword">for</span> i=l to n 
+     q=<span class="hljs-built_in">max</span>(q,p[i]+CUT-<span class="hljs-built_in">ROD</span>(p,n-i)) 
+<span class="hljs-keyword">return</span> q
+</code></pre>
+</blockquote>
+<h3 id="动态规划方法求解"><a name="动态规划方法求解" class="anchor-navigation-ex-anchor" href="#动态规划方法求解"><i class="fa fa-link" aria-hidden="true"></i></a>动态规划方法求解</h3>
+<ul>
+<li>动态规划方法仔细安排求解顺序，对每个子问题只求解一次，并将结果保存下来</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p><strong>空间换时间</strong></p>
+<p>动态规划方法是付出额外的内存空间来节省计算时间，是典型的<strong>时空权衡</strong>(time-memory trade-off) 的例子</p>
+</blockquote>
+<p>动态规划有两种等价的实现方法:</p>
+<blockquote>
+<ol>
+<li><p>第一种方法称为带备忘的<strong>自顶向下</strong>法(记忆化搜索)</p>
+<p>按自然的递归形式编写过程，但<strong>过程会保存每个子问题的解</strong>（通常保存在一个数组或散列表中）</p>
+</li>
+<li><p>第二种方法称为<strong>自底向上</strong>法</p>
+<p>一般需要恰当<strong>定义子问题”规模"</strong> 的概念，使得任何子问题的求解都只依赖于“更小的“子问题的求解，以将子问题按规模排序，按<strong>由小至大</strong>的顺序进行求解，即求出状态转移方程</p>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>自顶向下CUT-ROD过程的伪代码，加入了备忘机制：</p>
+<pre><code class="lang-cpp">MEMOIZED-CUT-<span class="hljs-built_in">ROD</span>(p,n)  
+    let r[ <span class="hljs-number">0</span> .. n]be a <span class="hljs-keyword">new</span> array 
+    <span class="hljs-comment">//将辅助数组 r[O.. n]的元素均初始化为MIN, 这是一种常见的表示“未知值”的方法</span>
+    <span class="hljs-keyword">for</span> j = <span class="hljs-number">0</span> ton 
+        r[i]=-oo
+    <span class="hljs-keyword">return</span> MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p,n,r) 
+
+MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p,n,r)  
+    <span class="hljs-keyword">if</span> r[n]&gt;=<span class="hljs-number">0</span> 
+        <span class="hljs-keyword">return</span> r[n] 
+    <span class="hljs-keyword">if</span> n==<span class="hljs-number">0</span> 
+        q = <span class="hljs-number">0</span> 
+    <span class="hljs-keyword">else</span> q= —oo 
+        <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span> to n 
+            q=<span class="hljs-built_in">max</span>(q,p[i]+MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p,n—i, r)) 
+    r[n]=q 
+    <span class="hljs-keyword">return</span> q
+</code></pre>
+</li>
+<li><p>重构解版本：通过s数组记录切割方案</p>
+</li>
+</ul>
+<pre><code class="lang-cpp">MEMOIZED-CUT-<span class="hljs-built_in">ROD</span>(p, n)
+    let r[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> s[<span class="hljs-number">0</span> : n] be a <span class="hljs-keyword">new</span> array    
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n
+        r[i] = -∞
+    (val, s) = MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, n, r, s)
+    j = n
+    <span class="hljs-keyword">while</span> j &gt; <span class="hljs-number">0</span>
+        print s[j]    <span class="hljs-comment">// cut location for length n</span>
+        j = j - s[j]    <span class="hljs-comment">// length of the remainder of the rod</span>
+
+MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, n, r, s)
+    <span class="hljs-keyword">if</span> r[n] ≥ <span class="hljs-number">0</span>    <span class="hljs-comment">// already have a solution for length n ?</span>
+        <span class="hljs-keyword">return</span> r[n]
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>
+        q = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">else</span> q = -∞
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n    <span class="hljs-comment">// i is the position of the first cut</span>
+            (val, s) = MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, n - i, r, s)
+            <span class="hljs-keyword">if</span> q &lt; p[i] + val
+                q = p[i] + val
+                s[n] = i
+    r[n] = q    <span class="hljs-comment">// remember the solution value for length n</span>
+    <span class="hljs-built_in">return</span> (q, s)
+</code></pre>
+<ul>
+<li>修改CUT-ROD和MEMOIZED-CUT-ROD-AUX，使得其for循环轮数降为 ⌊n/2⌋ 而不是 n ，需要如何对过程进行修改？运行时间如何变化？</li>
+</ul>
+<pre><code class="lang-cpp">MEMOIZED-CUT-<span class="hljs-built_in">ROD</span>(p, n)
+    let r[<span class="hljs-number">0</span> : n] be a <span class="hljs-keyword">new</span> array    <span class="hljs-comment">// will remember solution values in r</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n
+        r[i] = -∞
+    <span class="hljs-keyword">return</span> MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, n, r)
+
+MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, n, r)
+    <span class="hljs-keyword">if</span> r[n] ≥ <span class="hljs-number">0</span>    <span class="hljs-comment">// already have a solution for length n ?</span>
+        <span class="hljs-keyword">return</span> r[n]
+    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>
+        q = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">else</span> q = p[n]
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to ⌊n / <span class="hljs-number">2</span>⌋   <span class="hljs-comment">// i is the position of the first cut</span>
+            q = max{q, MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, i, r) + MEMOIZED-CUT-ROD-<span class="hljs-built_in">AUX</span>(p, n - i, r)}
+    r[n] = q    <span class="hljs-comment">// remember the solution value for length n</span>
+    <span class="hljs-keyword">return</span> q
+</code></pre>
+<ul>
+<li><p>自底向上版本</p>
+<pre><code class="lang-cpp">BOTTOM-UP-CUT-<span class="hljs-built_in">ROD</span>(p,n)  
+    let r[O .. n]be a <span class="hljs-keyword">new</span> array 
+    r[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span> 
+    <span class="hljs-keyword">for</span> j=<span class="hljs-number">1</span> to n 
+        q= —oo 
+           <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span> to j 
+            q=<span class="hljs-built_in">max</span>(q,p[i]+r[j-i])
+        r[j]=q
+     <span class="hljs-keyword">return</span> r[n]
+</code></pre>
+</li>
+</ul>
+<h3 id="子问题图"><a name="子问题图" class="anchor-navigation-ex-anchor" href="#子问题图"><i class="fa fa-link" aria-hidden="true"></i></a>子问题图</h3>
+<p>子问题图：动态规划问题所涉及的子问题及子问题之间的依赖关系</p>
+<blockquote>
+<p>它是一个<strong>有向图</strong>，每个顶点唯一地对应一个子问题。 若求子问题x的最优解时<strong>需要直接用到子问题y的最优解</strong>，那么在子问题图中就会有一条从子问题x的顶 点到子问题y的顶点的有向边。</p>
+<p>可以将子问题图看做自顶向下<strong>递归调用树的“简化版”或 “收缩版“</strong>，因为树中所有对应相同子问题的结点合并为图中的单一顶点，相关的所有边都从父结点指向子结点</p>
+</blockquote>
+<ul>
+<li><p><strong>自底向上的动态规划</strong>方法处理子问题图中顶点的顺序</p>
+<blockquote>
+<p>对于一个给定的子问题x, 在求解它之前求解邻接至它的子问题y</p>
+<p>自底向上动态规划算法是按“<strong>逆拓扑序"或“反序的拓扑序"</strong> 来处理子问题图中的顶点</p>
+<p>对于任何子问题，直至它依赖的所有子问题均已求解完成，才会求解它</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="重构解"><a name="重构解" class="anchor-navigation-ex-anchor" href="#重构解"><i class="fa fa-link" aria-hidden="true"></i></a>重构解</h3>
+<p>以扩展动态规划算法，使之对每个子问题不仅保 存最优收益值，还<strong>保存对应的切割方案</strong>。利用这些信息，我们就能输出最优解。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//切割下来的每段钢条的长度 s[l.. n]，例如s[5]=1表示长度为5的钢条切割为1和s[4]继续切割</span>
+EXTENDED-BOTTOM-UP-CUT如<span class="hljs-built_in">ROD</span>(p,n) 
+    let r[O .. n]<span class="hljs-keyword">and</span> s[O .. n]be <span class="hljs-keyword">new</span> arrays 
+    r[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span> 
+    <span class="hljs-keyword">for</span> j=<span class="hljs-number">1</span> to n 
+        q=-oo 
+        <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span> to j 
+            <span class="hljs-keyword">if</span> q&lt;p[i]+r[j-i]
+                q=p[i]+r[j-i]
+                s[j]=i
+            r[j]=q
+    <span class="hljs-keyword">return</span> r <span class="hljs-keyword">and</span> s
+</code></pre>
+<blockquote>
+<p>对钢条切割问题进行一点修改，除了切割下的钢条段具有不同价格 pi 外，每次切割还要付出固定的成本c。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//切割下来的每段钢条的长度 s[l.. n]，例如s[5]=1表示长度为5的钢条切割为1和s[4]继续切割</span>
+EXTENDED-BOTTOM-UP-CUT如<span class="hljs-built_in">ROD</span>(p,n) 
+    let r[O .. n]<span class="hljs-keyword">and</span> s[O .. n]be <span class="hljs-keyword">new</span> arrays 
+    r[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> j=<span class="hljs-number">1</span> to n 
+        q=p[j]
+         s[j]=j
+        <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span> to j<span class="hljs-number">-1</span>
+            <span class="hljs-comment">//等于自身时不切割            </span>
+            <span class="hljs-keyword">if</span> q&lt;p[i]+r[j-i]+c
+                q=p[i]+r[j-i]+c
+                s[j]=i
+         r[j]=q
+    <span class="hljs-keyword">return</span> r <span class="hljs-keyword">and</span> s
+</code></pre>
+<p>[!note]</p>
+<p>斐波那契数列可以用递归式(3.22)定义。设计一个 O(n)时间的动态规划算法计算第 n 个斐波那契数。</p>
+<ul>
+<li>写出动态转移方程：</li>
+<li>num[0]=1,num[1]=1;</li>
+<li>i&gt;1;num[i]=num[i-1]+num[i-2];</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-comment">//求前n个斐波那契数</span>
+<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">Fib</span><span class="hljs-params">(n)</span></span>;
+{
+    vector&lt;<span class="hljs-type">int</span>&gt; num;
+    <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span>)<span class="hljs-keyword">return</span> {<span class="hljs-number">1</span>};
+    <span class="hljs-keyword">else</span> num.<span class="hljs-built_in">push_back</span>(<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span>(n==<span class="hljs-number">2</span>)<span class="hljs-keyword">return</span> {<span class="hljs-number">1</span>,<span class="hljs-number">1</span>};
+    <span class="hljs-keyword">else</span> num.<span class="hljs-built_in">push_back</span>(<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">2</span>;i&lt;n;i++)
+    {
+        num.<span class="hljs-built_in">push_back</span>(num[i<span class="hljs-number">-1</span>]+num[i<span class="hljs-number">-2</span>]);
+    }
+    <span class="hljs-keyword">return</span> num;
+}
+</code></pre>
+</blockquote>
+<hr></hr>
+<h2 id="矩阵链乘法"><a name="矩阵链乘法" class="anchor-navigation-ex-anchor" href="#矩阵链乘法"><i class="fa fa-link" aria-hidden="true"></i></a>矩阵链乘法</h2>
+<h3 id="矩阵相乘"><a name="矩阵相乘" class="anchor-navigation-ex-anchor" href="#矩阵相乘"><i class="fa fa-link" aria-hidden="true"></i></a>矩阵相乘</h3>
+<ul>
+<li><p>给定一个n个矩阵的序列（矩阵链）<a1, a2,="" …，="" an="">，我们希望计算它们的乘积<code>A1A2...An</code></a1,></p>
+</li>
+<li><p>可以先用括号明确计算次序，由于矩阵乘法满足结合律，因此任何加括号的方法都会得到相同的计算结果，然后利用标准的矩阵相乘算法进行计算。</p>
+</li>
+<li><blockquote>
+<p>[!note]</p>
+<p>们称有 如下性质的矩阵乘积链为<strong>完全括号化</strong>的(fully parenthesized) : 它是<strong>单一矩阵</strong>，或者是<strong>两个完全括号化的矩阵乘积链的积</strong>，且已外加括号。</p>
+<p><a1, a2,="" a3,="" a4="">则共有 5 种 完全括号化的矩阵乘积链：</a1,></p>
+<p><img src="assets/image-20250317175217320.png" alt="image-20250317175217320"></img></p>
+</blockquote>
+</li>
+<li><p>两个矩阵A和B只有相容(compatible), 即 A 的列数等于B 的行数时，才能相乘。</p>
+</li>
+<li><p>A 是<code>pXq</code>的矩阵， B是<code>qXr</code>的矩阵，那么乘积C是<code>pXr</code>的矩阵，标量乘法的次数决定，即<code>pqr</code>。</p>
+</li>
+<li><p>对矩阵链加括号的方式会对乘积运算的代价产生巨大影响，不同加括号方式进行标量乘法的次数不同</p>
+</li>
+</ul>
+<h3 id="矩阵链乘法问题"><a name="矩阵链乘法问题" class="anchor-navigation-ex-anchor" href="#矩阵链乘法问题"><i class="fa fa-link" aria-hidden="true"></i></a>矩阵链乘法问题</h3>
+<blockquote>
+<p>[!important]</p>
+<p>给定 n 个矩阵的链<a1,a2, …="" ,="" an="">，相邻的矩阵相容，求完全括号化方案，使得计算乘积A1A2…An所需标量乘法次数最少。</a1,a2,></p>
+</blockquote>
+<h3 id="计算括号化方案数量"><a name="计算括号化方案数量" class="anchor-navigation-ex-anchor" href="#计算括号化方案数量"><i class="fa fa-link" aria-hidden="true"></i></a>计算括号化方案数量</h3>
+<p>穷举所有可能的括号化方案：<img src="assets/image-20250317175957514.png" alt="image-20250317175957514"></img></p>
+<p>一个相似的递归公式产生的序列为卡特兰数(Catalan numbers) , 这个 序列的增长速度为<code>O(4^n/n^(3/2))= 0(2^n)</code></p>
+<h3 id="应用动态规划方法"><a name="应用动态规划方法" class="anchor-navigation-ex-anchor" href="#应用动态规划方法"><i class="fa fa-link" aria-hidden="true"></i></a>应用动态规划方法</h3>
+<ol>
+<li>刻画一个最优解的结构特征。 </li>
+<li>递归地定义最优解的值。</li>
+<li>计算最优解的值，通常采用自底向上的方法。</li>
+<li>利用计算出的信息构造一个最优解。</li>
+</ol>
+<h4 id="1最优括号化方案的结构特征"><a name="1最优括号化方案的结构特征" class="anchor-navigation-ex-anchor" href="#1最优括号化方案的结构特征"><i class="fa fa-link" aria-hidden="true"></i></a>1.最优括号化方案的结构特征</h4>
+<p>动态规划方法的第一步是寻找最优子结构</p>
+<blockquote>
+<p>本问题的最优子结构:</p>
+<ul>
+<li>假设AiAi+i…Aj; 的最优括号化方案的分割点在Ak和 Ak+1之间</li>
+<li>继续对“前缀“子链AiAi+1…Ak 进行括号化时，我们应该直接采用<strong>独立</strong>求解它时所得的最优方案。</li>
+</ul>
+<p>有相似的结论： 在原问题AiAi+1...Aj的最优括号化方案中，对子链Ak+1Ak+2...Aj进行括号化的方法，就是它<strong>自身的最优括号化</strong>方案。</p>
+</blockquote>
+<p>为了构造一个矩阵链乘法问题实例的最优解，我们可以将问题划分为两个子问题(AiAi+1...Ak 和Ak+1Ak+2…Aj的最优括号化问题），求出子问题实例的最优解，然后将子问题的最优解<strong>组合</strong>起来。</p>
+<h4 id="2-一个递归求解方案"><a name="2-一个递归求解方案" class="anchor-navigation-ex-anchor" href="#2-一个递归求解方案"><i class="fa fa-link" aria-hidden="true"></i></a>2. 一个递归求解方案</h4>
+<p>令<code>m[i, j]</code>表示计算矩阵Ai..Aj;所需标量乘法次数的最小值，那么，原问题的最优解计算Ai..An 所需的最低代价就 是<code>m[1, n]</code>。</p>
+<blockquote>
+<p>递归定义m[i, j]:</p>
+<p><img src="assets/image-20250317182245016.png" alt="image-20250317182245016"></img></p>
+<p>分割点在矩阵Ak 和Ak+1之间，其中<code>i&lt;=k&lt;j</code></p>
+</blockquote>
+<p>用<code>s[i,j]</code>保存<code>AiAi+1…Aj</code> 最优括号化方案的分割点位置k' 即使得<code>m[i, j]=m[i, k]+  m[k+ 1, j] + Pi-1PkPj</code> 成立的 K 值。</p>
+<h4 id="3计算最优代价"><a name="3计算最优代价" class="anchor-navigation-ex-anchor" href="#3计算最优代价"><i class="fa fa-link" aria-hidden="true"></i></a>3.计算最优代价</h4>
+<p>每个子问题<code>Ai:j</code> 都需要对应 i 和 j ，且满足 <code>1≤i≤j≤n</code> ，可以推导出</p>
+<p><img src="assets/image-20250317182844800.png" alt="image-20250317182844800"></img></p>
+<p>递归算法会在递归树的多个不同分支中遇到<strong>同一个子问题</strong>。这里总结出能够运用动态规划求解的问题的两个重要特征：</p>
+<ul>
+<li>该问题具有<strong>最优子结构(optimal structure)</strong>。</li>
+<li>该问题具有<strong>重叠子问题(overlapping subproblems)</strong>。</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>采用<strong>表格(tabular)</strong>法，自底向上动态规划</p>
+<p>m[i, j]只依赖于那些少于<code>j-i+1</code>个矩阵链相乘的最优计算代价</p>
+<p>p=<p0, p1,="" …,="" pn=""></p0,></p>
+<pre><code class="lang-cpp">MATRIX-CHAIN-<span class="hljs-built_in">ORDER</span>(p, n)
+    let m[<span class="hljs-number">1</span> : n, <span class="hljs-number">1</span> : n] <span class="hljs-keyword">and</span> s[<span class="hljs-number">1</span> : n - <span class="hljs-number">1</span>, <span class="hljs-number">2</span> : n] be <span class="hljs-keyword">new</span> tables
+    <span class="hljs-comment">//单一矩阵计算代价为0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        m[i, i] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> l = <span class="hljs-number">2</span> to n    <span class="hljs-comment">// l is the chain length</span>
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n - l + <span class="hljs-number">1</span>    <span class="hljs-comment">// chain begins at A_i</span>
+            j = i + l - <span class="hljs-number">1</span>    <span class="hljs-comment">// chain ends at A_j</span>
+            m[i, j] = ∞
+            <span class="hljs-keyword">for</span> k = i to j - <span class="hljs-number">1</span>    <span class="hljs-comment">// try A_i:k A_k+1:j</span>
+                q = m[i, k] + m[k + <span class="hljs-number">1</span>, j] + p_i<span class="hljs-number">-1</span> * p_k * p_j
+                <span class="hljs-keyword">if</span> q &lt; m[i, j]
+                    m[i, j] = q    <span class="hljs-comment">// remember this cost</span>
+                    s[i, j] = k    <span class="hljs-comment">// remember this index</span>
+   <span class="hljs-keyword">return</span> m <span class="hljs-keyword">and</span> s
+</code></pre>
+<p><img src="assets/v2-f426461870e25117dc3accd36088e2aa_r.jpg" alt="img"></img></p>
+</blockquote>
+<h4 id="4-构造最优解"><a name="4-构造最优解" class="anchor-navigation-ex-anchor" href="#4-构造最优解"><i class="fa fa-link" aria-hidden="true"></i></a>4. 构造最优解</h4>
+<p>表格<code>s[1:n−1,2:n]</code> 保持了构造最优解的所需信息</p>
+<pre><code class="lang-cpp">PRINT-OPTIMAL-<span class="hljs-built_in">PARENS</span>(s, i, j)
+    <span class="hljs-keyword">if</span> i == j
+        print <span class="hljs-string">"A"</span>_i
+    <span class="hljs-keyword">else</span> print <span class="hljs-string">"("</span>
+        PRINT-OPTIMAL-<span class="hljs-built_in">PARENS</span>(s, i, s[i, j])
+        PRINT-OPTIMAL-<span class="hljs-built_in">PARENS</span>(s, s[i, j] + <span class="hljs-number">1</span>, j)
+        print <span class="hljs-string">")"</span>
+</code></pre>
+<hr></hr>
+<h4 id="实现矩阵链最优代价乘法计算的真正计算过程"><a name="实现矩阵链最优代价乘法计算的真正计算过程" class="anchor-navigation-ex-anchor" href="#实现矩阵链最优代价乘法计算的真正计算过程"><i class="fa fa-link" aria-hidden="true"></i></a>实现矩阵链最优代价乘法计算的真正计算过程</h4>
+<p>其输入序列为矩阵链 ⟨A1,A2,…,An⟩ ，表格 s 是通过调用 MATRIX-CHAIN-ORDER 计算出来的</p>
+<pre><code class="lang-cpp">MATRIX-CHAIN-<span class="hljs-built_in">MULTIPLY</span>(A, s, i, j)
+    <span class="hljs-keyword">if</span> i == j
+        <span class="hljs-keyword">return</span> A[i]
+    <span class="hljs-keyword">if</span> i + <span class="hljs-number">1</span> == j
+        <span class="hljs-keyword">return</span> A[i] · A[j]
+    <span class="hljs-keyword">return</span> MATRIX-CHAIN-<span class="hljs-built_in">MULTIPLY</span>(A, s, i, s[i, j]) · MATRIX-CHAIN-<span class="hljs-built_in">MULTIPLY</span>(A, s, s[i, j] + <span class="hljs-number">1</span>, j)
+
+MATRIX-CHAIN-<span class="hljs-built_in">MULTIPLY</span>(A, s, <span class="hljs-number">1</span>, n)
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<p>类似题目：1. <a href="D:\Internt_of_Thing\e_book\coding_problem\312. 戳气球.md" target="_blank">戳气球</a>;2. <a href="D:\Internt_of_Thing\e_book\coding_problem\546. 移除盒子.md" target="_blank">移除盒子</a></p>
+</blockquote>
+<h2 id="动态规划原理"><a name="动态规划原理" class="anchor-navigation-ex-anchor" href="#动态规划原理"><i class="fa fa-link" aria-hidden="true"></i></a>动态规划原理</h2>
+<blockquote>
+<p>[!important]</p>
+<p>适合应用动态规划方法求解的最优化问题应该具备的两个要素：</p>
+<p><strong>最优子结构</strong>和<strong>子问题重叠</strong>。</p>
+</blockquote>
+<h3 id="最优子结构"><a name="最优子结构" class="anchor-navigation-ex-anchor" href="#最优子结构"><i class="fa fa-link" aria-hidden="true"></i></a>最优子结构</h3>
+<p>用动态规划方法求解最优化问题的第一步就是<strong>刻画最优解的结构</strong></p>
+<blockquote>
+<ul>
+<li>如果一个问题的最优解包含其子问题的最优解，我们就称此问题具有<strong>最优子结构性质</strong></li>
+<li>当然，具有最优子结构性质也可能意味着适合应用贪心策略</li>
+</ul>
+</blockquote>
+<p>使用动态规划方法时，我们用<strong>子问题的最优解</strong>来构造原问题的最优解，所以心确保考察了最优解中用到的<strong>所有</strong>子问题</p>
+<p>发掘最优子结构性质的过程中，实际上遵循了如下的通用模式：</p>
+<blockquote>
+<p>[!note]</p>
+<ol>
+<li>证明问题最优解的第一个组成部分是<strong>做出一个选择</strong>，做出这次选择会产生一个或多个待解的子问题。</li>
+<li>对于一个给定问题，在其可能的第一步选择中，你<strong>假定已经知道</strong>哪种选择才会得到最优解。</li>
+<li>给定可获得最优解的选择后，你确定这次选择会<strong>产生哪些子问题</strong>，以及如何最好地刻画子问题空间。</li>
+<li>利用“剪切—粘贴"(cut-and-paste)技术<strong>证明</strong>：作为构成原问题最优解的组成部分，每个子问题的解<strong>就是它本身的最优解</strong>。<ul>
+<li>如果原问题的最优解包含多个子问题，通常它们都很相似，我们可以将针对一个子问题的＂剪切—粘贴“论证方法稍加修改，<strong>用于其他子问题</strong></li>
+<li>一个刻画子问题空间的好经验是：保持子问题空间<strong>尽可能简单</strong>，只在必要时才扩展它。</li>
+<li>对于不同问题领域，最优子结构的不同体现在两个方面：<ul>
+<li>原问题的最优解中涉及<strong>多少个子问题</strong>，</li>
+<li>以及在确定最优解使用哪些子问题时，我们需要<strong>考察多少种选择</strong>。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>[!tip]</p>
+<ol>
+<li>可以用子问题的总数和每个子问题需要考察多少种选择这两个因素的乘积来粗略分析动态规划算法的运行时间<ol>
+<li>对于钢条切割问题，共有 ®(n)个子问题，每个子问题最多需要考察n种选择，因此运行时间为O(n^2)。</li>
+<li>矩阵链乘法问题共有 ®(n^2)个子问题，每个子问 题最多需要考察n-1 种选择，因此运行时间为O(n3)。</li>
+</ol>
+</li>
+<li>子问题图也可用来做同样的分析。图中<strong>每个顶点对应一个子问题</strong>，而需要考察的<strong>选择对应关联至子问题顶点的边</strong>。</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>在动态规划方法中，我们通常<strong>自底向上地使用最优子结构</strong>。也就是说，首先求得子问题的最优解，然后求原问题的最优解。</p>
+<blockquote>
+<ol>
+<li>求解原问题过程中，我们需要在<strong>涉及的子问题</strong>中做出选择，选 出能得到原问题最优解的子问题</li>
+<li>原问题最优解的代价通常就是<strong>子问题最优解的代价</strong>再加上由 <strong>此次选择直接产生的代价</strong>。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<p>贪心算法和动态规划最大的不同在千，它并不是首先寻找子问题的最优解，然后在其中进行选择，而是首先做出<strong>一次“贪心”选择</strong>——在当时（局 部）看来最优的选择然后求解选出的子问题，从而不必费心求解所有可能相关的子问题。</p>
+<p>[!note]</p>
+<p>但两个最长简单路径子问题是相关的，而两个最短路径子问题是无关的(independent)</p>
+<p>子问题无关的含义是，同一个原问题的一个子问题的解不影响另一个子问题的解。</p>
+<p>说两个子问题是相关的：求解一个子问题时用到了<strong>某些资源</strong>（在本例中是顶点），导致这些资源在求解其他子问题时不可用。</p>
+<p>无权最短路径和无权最长路径的根本区别：</p>
+<ul>
+<li>无权最短路径问题的子问题是<strong>独立(independent)</strong>的。根本原因是子问题之间是不共享资源的。可以用反证法证明，如果从 u 到 v 的最短路径经过 w ，即 u⇝p1w⇝p2v ，除 w 外不存在别的顶点同时位于 p1 和 p2 上。</li>
+<li>无权最长简单路径问题的子问题不是独立的。根本原因是子问题之间是可以共享资源的。</li>
+</ul>
+<p>评：独立一定不相关，不相关不一定独立。</p>
+</blockquote>
+<h3 id="重叠子问题"><a name="重叠子问题" class="anchor-navigation-ex-anchor" href="#重叠子问题"><i class="fa fa-link" aria-hidden="true"></i></a>重叠子问题</h3>
+<p>适合用动态规划方法求解的最优化问题应该具备的第二个性质是子问题空间必须足够“小"'，即问题的递归算法会反复地求解相同的子间题，而不是一直生成新的子问题</p>
+<p>类似于递归出口，递归的基本情况，或者最小子问题</p>
+<blockquote>
+<p>如果递归算法<strong>反复求解相同</strong>的子问题，我们就称最优化问题具有重叠子问题(overlapping subproblems)性质</p>
+<p>与之相对的，适合用分治方法求解的问题通常在递归的每一步都生成<strong>全新的子间题</strong>。</p>
+<p>所以动态规划算法通常这样利用<strong>重叠子问题性质</strong>： 对每个子问题求解一次，将解存入一个表中，当再次需要这个子问题时直接查表，每次查表的代价为常量时间</p>
+<p>[!tip]</p>
+<p>将自顶向下的递归算法（无备忘）与自底向上的动态规划算法进行比较，后者要高效得多， 因为它利用了重叠子问题性质。</p>
+</blockquote>
+<hr></hr>
+<h3 id="重构最优解"><a name="重构最优解" class="anchor-navigation-ex-anchor" href="#重构最优解"><i class="fa fa-link" aria-hidden="true"></i></a>重构最优解</h3>
+<ul>
+<li><p>记录选择</p>
+<blockquote>
+<p>从实际考虑，我们通常将每个子问题所做的选择存在一个表中，这样就不必根据代价值来 重构这些信息。</p>
+</blockquote>
+</li>
+<li><p>按选择回溯，或者递推</p>
+<blockquote>
+<p>对矩阵链乘法问题，利用表s[i, j], 我们重构最优解时可以节省很多时间</p>
+<p>第一次选择：s[i,j]</p>
+<p>第二层：左：<code>s[i,s[i,j]]</code>，右：<code>s[s[i,j],j]</code></p>
+<p>……</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="备忘"><a name="备忘" class="anchor-navigation-ex-anchor" href="#备忘"><i class="fa fa-link" aria-hidden="true"></i></a>备忘</h3>
+<ul>
+<li><p>可以保持自顶向下策略，同时达到与自底向上动态规划方法相似的效率。</p>
+<blockquote>
+<p>思路就是对自然但低效的递归算法加入<strong>备忘机制</strong></p>
+<p>维护一个表记录子问题的解，但仍保持递归算法的控制流程。</p>
+<p>带备忘的递归算法为每个子问题维护一个表项来保存它的解。每个表项的初值设为一个<strong>特殊值，表示尚未填入子问题的解</strong>。</p>
+<p>递归调用过程中第一次遇到子问题时，计算其解，并存入对 应表项。随后每次遇到同一个子问题，只是<strong>简单地查表</strong>，返回其解</p>
+</blockquote>
+</li>
+</ul>
+<p>矩阵链式乘法备忘版本自顶而下递归O(n^3)</p>
+<pre><code class="lang-cpp">MEMOIZED-MATRIX-<span class="hljs-built_in">CHAIN</span>(p, n)
+    let m[<span class="hljs-number">1</span> : n, <span class="hljs-number">1</span> : n] be a <span class="hljs-keyword">new</span> table
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        <span class="hljs-keyword">for</span> j = i to n
+            m[i, j] = ∞
+    <span class="hljs-keyword">return</span> LOOKUP-<span class="hljs-built_in">CHAIN</span>(m, p, <span class="hljs-number">1</span>, n)
+
+<span class="hljs-comment">//区间左闭右开[i,j)</span>
+<span class="hljs-built_in">LOOKUP_CHAIN</span>(m, p, i, j)
+    <span class="hljs-keyword">if</span> m[i, j] &lt; ∞
+        <span class="hljs-keyword">return</span> m[i, j]
+    <span class="hljs-keyword">if</span> i == j
+        <span class="hljs-keyword">return</span> m[i, j] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">else</span> 
+        <span class="hljs-keyword">for</span> k = i to j - <span class="hljs-number">1</span>
+            q = LOOKUP-<span class="hljs-built_in">CHAIN</span>(m, p, i, k) + LOOKUP-<span class="hljs-built_in">CHAIN</span>(m, p, k + <span class="hljs-number">1</span>, j) + p_i<span class="hljs-number">-1</span> · p_k · p_j
+            <span class="hljs-keyword">if</span> q &lt; m[i, j]
+                m[i, j] = q
+    <span class="hljs-keyword">return</span> m[i, j]
+</code></pre>
+<ul>
+<li>自底而上动态规划</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">MATRIX_CHAIN_ORDER</span>(<span class="hljs-params">p</span>):
+    n = <span class="hljs-built_in">len</span>(p) - <span class="hljs-number">1</span>  <span class="hljs-comment"># 矩阵的数量</span>
+    m = [[<span class="hljs-number">0</span>] * (n + <span class="hljs-number">1</span>) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n + <span class="hljs-number">1</span>)]  <span class="hljs-comment"># 初始化二维表 m</span>
+
+    <span class="hljs-comment"># 自底向上计算所有子问题</span>
+    <span class="hljs-keyword">for</span> length <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n + <span class="hljs-number">1</span>):  <span class="hljs-comment"># 当前链的长度，从2到n</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n - length + <span class="hljs-number">2</span>):  <span class="hljs-comment"># 子链的起始位置</span>
+            j = i + length - <span class="hljs-number">1</span>  <span class="hljs-comment"># 子链的结束位置</span>
+            m[i][j] = <span class="hljs-built_in">float</span>(<span class="hljs-string">'inf'</span>)  <span class="hljs-comment"># 初始化为无穷大</span>
+            <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(i, j):  <span class="hljs-comment"># 尝试所有可能的分割点</span>
+                q = m[i][k] + m[k + <span class="hljs-number">1</span>][j] + p[i - <span class="hljs-number">1</span>] * p[k] * p[j]
+                <span class="hljs-keyword">if</span> q &lt; m[i][j]:
+                    m[i][j] = q  <span class="hljs-comment"># 更新最小代价</span>
+
+    <span class="hljs-keyword">return</span> m[<span class="hljs-number">1</span>][n]  <span class="hljs-comment"># 返回整个矩阵链的最小代价</span>
+</code></pre>
+<hr></hr>
+<blockquote>
+<p>[!note]</p>
+<p><strong><a href="https://zhida.zhihu.com/search?content_id=213588837&amp;content_type=Article&amp;match_order=3&amp;q=自底向上&amp;zhida_source=entity" target="_blank">自底向上</a>动态规划和自顶向下动态规划的比较</strong></p>
+<ul>
+<li>如果<strong>每个子问题都必须求解一次</strong>，自底向上动态规划比自顶向下动态规划快，虽然渐近时间一致，但是自底向上动态规划的隐藏系数比自顶向下动态规划的隐藏系数小，因为自底向上动态规划没有递归调用的开销，维护表格的开销也更小。而且通过访问表格，可以进一步减少额外空间开销。</li>
+<li>当<strong>子问题不需要完全求解</strong>时，自顶向下动态规划就比较有优势了，自顶向下动态规划可以只求解那些需要求解的子问题。</li>
+</ul>
+</blockquote>
+<h2 id="最长公共子序列"><a name="最长公共子序列" class="anchor-navigation-ex-anchor" href="#最长公共子序列"><i class="fa fa-link" aria-hidden="true"></i></a>最长公共子序列</h2>
+<h3 id="问题概念"><a name="问题概念" class="anchor-navigation-ex-anchor" href="#问题概念"><i class="fa fa-link" aria-hidden="true"></i></a>问题概念</h3>
+<blockquote>
+<p>[!tip]</p>
+<p>相似性：如果将一个串转换为另一个串所需的操作很少，那么可以说两个串是相似的</p>
+<p>最后一种相似度的概念命名为最长公共子序列问题：</p>
+<p>另一种衡量串S 和S2 的相似度的方式是：寻找第三个串S3, 它的所有碱基也都出现在S1 和S2 中，且<strong>在三个串中出现的顺序都相同</strong>，但<strong>在S1 和S2 中不要求连续出现</strong>。可以找到的 S3 越长，就可以认为 S1 和 S2 的相似度越高。</p>
+<p>[!note]</p>
+<p><strong>最长公共子序列问题</strong>:</p>
+<p>简称LCS问题，给定序列 <code>X=⟨x1,x2,…,xm⟩</code>和 <code>Y=⟨y1,y2,…,yn⟩</code> ，求 X 和 Y 的公共子序列中<strong>最长的子序列</strong>。</p>
+<p>[!warning]</p>
+<p>一个<strong>给定序列的子序列</strong>，就是将给定序列中零个或多个元素去掉之后得到的结果</p>
+<p><strong>子序列(subsequence)</strong>：给定序列<code>X=⟨x1,x2,…,xm⟩</code>，有子序列 <code>Z=⟨z1,z2,…,zk⟩</code>，那么一定存在一个<strong>严格递增</strong>序列 ⟨i1,i2,…,ik⟩ ，对于所有的 j=1,2,…,k ，都有 <code>xij=zj</code>。</p>
+<p>简单说就是从序列 X 中随机选出 k 个元素按照原来顺序组成序列 Z 。或者从序列 X 中随机删除 m−k 个元素剩余元素组成序列 Z 。</p>
+<p>子序列和子串的区别:</p>
+<ul>
+<li>子序列中相邻的两个元素在原序列中不一定相邻，仅仅是<strong>相对顺序保持不变</strong></li>
+<li>子串是从原序列中<strong>截取连续</strong>的 k 个元素，子串中相邻的两个元素在原序列中一定相邻且相对顺序保持不变</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h3 id="步骤-1--刻画最长公共子序列的特征"><a name="步骤-1--刻画最长公共子序列的特征" class="anchor-navigation-ex-anchor" href="#步骤-1--刻画最长公共子序列的特征"><i class="fa fa-link" aria-hidden="true"></i></a>步骤 1 : 刻画最长公共子序列的特征</h3>
+<ul>
+<li>可以用暴力法求解LCS问题，枚举 X 的所有子序列，逐个检查这些子序列是否是 Y 的子序列，过程中始终保存当前能够找到的最长的那一个。由于 X 有 m 个元素，所以 X 有 2^m 个，<strong>暴力法的运行时间为指数级</strong>。</li>
+</ul>
+<p>LCS问题符合最优子结构特征:</p>
+<blockquote>
+<p>子问题的自然分类对应两个输入序列的“前缀“对</p>
+<p>前缀的严谨定义如下：给定一个序列 <code>X=⟨x1,x2,…,xm⟩</code>定义 X 的第i 前缀为 <code>X=⟨x1,x2,…,xi⟩</code></p>
+</blockquote>
+<h4 id="定理141（lcs的最优子结构）theorem-141-optimal-substructure-of-an-lcs"><a name="定理141（lcs的最优子结构）theorem-141-optimal-substructure-of-an-lcs" class="anchor-navigation-ex-anchor" href="#定理141（lcs的最优子结构）theorem-141-optimal-substructure-of-an-lcs"><i class="fa fa-link" aria-hidden="true"></i></a>定理14.1（LCS的最优子结构）(<strong>Theorem 14.1 (Optimal substructure of an LCS)</strong>)</h4>
+<p>给定序列<code>X=⟨x1,x2,…,xm⟩</code> 和 <code>Y=⟨y1,y2,…,yn⟩</code> ，子序列 <code>Z=⟨z1,z2,…,zk⟩</code>是 X 和 Y 的最长子序列。</p>
+<blockquote>
+<ol>
+<li>如果<code>xm=yn</code>，那么 <code>zk=xm=yn</code> ，且 Zk−1 是 Xm−1 和 Yn−1 的一个LCS。</li>
+<li>如果<code>xm≠yn</code> 且 <code>zk≠xm</code> ，那么 Z 是 Xm−1 和 Y 的一个LCS。</li>
+<li>如果<code>xm≠yn</code>且 <code>zk≠yn</code>，那么 Z 是 X 和 Yn−1 的一个LCS。</li>
+</ol>
+</blockquote>
+<p>定理15. 1 告诉我们，两个序列的 LCS包含两个序列的前缀的 LCS。</p>
+<hr></hr>
+<h3 id="步骤2-一个递归解"><a name="步骤2-一个递归解" class="anchor-navigation-ex-anchor" href="#步骤2-一个递归解"><i class="fa fa-link" aria-hidden="true"></i></a>步骤2: 一个递归解</h3>
+<p>根据定理14.1，求解序列 <code>X=⟨x1,x2,…,xm⟩</code>和 <code>Y=⟨y1,y2,…,yn⟩</code>的LCS时：</p>
+<blockquote>
+<ol>
+<li>如果<code>xm=yn</code>，需要求解<strong>一个</strong>子问题，求 Xm−1 和 Yn−1 的一个LCS，将 xm=yn 追加在这个LCS末尾。</li>
+<li>如果 <code>xm≠yn</code> ，需要求解<strong>两个</strong>子问题， Xm−1 和 Y 的一个LCS和 X 和 Yn−1 的一个LCS，取两者中较长的为 X 和 Y 的一个LCS。</li>
+</ol>
+</blockquote>
+<p>所以LCS的问题具有<a href="https://zhida.zhihu.com/search?content_id=213773901&amp;content_type=Article&amp;match_order=1&amp;q=重叠子问题&amp;zhida_source=entity" target="_blank">重叠子问题</a>性质。</p>
+<ul>
+<li>定义·<code>c[i,j] 为序列 Xi 和 Yj 的一个LCS的长度</code>，则求解LCS问题的递归式如下：</li>
+</ul>
+<p><img src="assets/image-20250319140700851.png" alt="image-20250319140700851"></img></p>
+<blockquote>
+<p>[!tip]</p>
+<p>对比钢条切割问题，LCS问题加入了判断条件，根据判断条件求解对应的子问题，同时排除了另一部分子问题。</p>
+<p>类似地，<strong>编辑距离问题(edit-distance problem)</strong>具有这样的特点，详见思考题14-5。</p>
+</blockquote>
+<hr></hr>
+<h3 id="步骤3-计算lcs的长度"><a name="步骤3-计算lcs的长度" class="anchor-navigation-ex-anchor" href="#步骤3-计算lcs的长度"><i class="fa fa-link" aria-hidden="true"></i></a>步骤3: 计算LCS的长度</h3>
+<p>LCS问题有 Θ(mn) 个不同的子问题，可以采用自底向上<a href="https://zhida.zhihu.com/search?content_id=213773901&amp;content_type=Article&amp;match_order=1&amp;q=动态规划&amp;zhida_source=entity" target="_blank">动态规划</a>进行计算。</p>
+<p>构造表格 <code>c[0:m,0:n] 用于保存 c[i,j]</code> ，并按照<strong>行优先顺序(行主次序)</strong>计算表项，即首先由左至右计算c的第一行，然后计算第二行。过程中维护一个表格·<code>b[1:m,1:n]</code>帮助构造最优解， b[i,j] 保存构造最优解 c[i,j] 的选择。</p>
+<pre><code class="lang-cpp">LCS-<span class="hljs-built_in">LENGTH</span>(X, Y, m, n)
+    let b[<span class="hljs-number">1</span> : m, <span class="hljs-number">1</span> : n] <span class="hljs-keyword">and</span> c[<span class="hljs-number">0</span> : m, <span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> tables
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to m
+        c[i, <span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> j = <span class="hljs-number">0</span> to n
+        c[<span class="hljs-number">0</span>, j] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to m   <span class="hljs-comment">// compute table entries in row-major order</span>
+        <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span> to n
+            <span class="hljs-keyword">if</span> x_i == y_j
+                c[i, j] = c[i - <span class="hljs-number">1</span>, j - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>
+                b[i, j] = <span class="hljs-string">"↖"</span>
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> c[i - <span class="hljs-number">1</span>, j] ≥ c[i, j - <span class="hljs-number">1</span>]
+                c[i, j] = c[i - <span class="hljs-number">1</span>, j]
+                b[i, j] = <span class="hljs-string">"↑"</span>
+            <span class="hljs-keyword">else</span> c[i, j] = c[i, j - <span class="hljs-number">1</span>]
+                b[i, j] = <span class="hljs-string">"←"</span>
+    <span class="hljs-keyword">return</span> c <span class="hljs-keyword">and</span> b
+</code></pre>
+<p><img src="assets/v2-a62bfbf3bfa76dee436447461ec3fd59_r.jpg" alt="img"></img></p>
+<p>图14.8展示了当 <code>X=⟨A,B,C,B,D,A,B⟩</code> 和 <code>Y=⟨B,D,C,A,B,A⟩</code> 时LCS-LENGTH的示意图。</p>
+<p>评：辅助表格 b[1:m,1:n] 在代码中一般用<code>int</code>值表示。</p>
+<p>另，本题也可以使用记忆化自顶向下动态规划求解，过程MEMOIZED-LIS-LENGTH的伪代码如下：</p>
+<pre><code class="lang-cpp">MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, i, j, c, b)
+    <span class="hljs-comment">//查表</span>
+    <span class="hljs-keyword">if</span> c[i, j] &gt; <span class="hljs-number">-1</span>
+        <span class="hljs-keyword">return</span> c[i, j]
+    <span class="hljs-keyword">if</span> i == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> j == <span class="hljs-number">0</span>
+        c[i, j] = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span> c[i, j]
+    <span class="hljs-keyword">if</span> x_i == y_j
+        b[i, j] = <span class="hljs-string">"↖"</span>
+        c[i, j] = MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, i - <span class="hljs-number">1</span>, j - <span class="hljs-number">1</span>, c, b) + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, i - <span class="hljs-number">1</span>, j, c, b) ≥ MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, i, j - <span class="hljs-number">1</span>, c, b)
+        b[i, j] = <span class="hljs-string">"↑"</span>
+        c[i, j] = MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, i - <span class="hljs-number">1</span>, j, c, b)
+    <span class="hljs-keyword">else</span>
+        b[i, j] = <span class="hljs-string">"←"</span>
+        c[i, j] = MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, i, j - <span class="hljs-number">1</span>, c, b)
+    <span class="hljs-keyword">return</span> c[i, j]
+
+MEMOIZED-LCS-<span class="hljs-built_in">LENGTH</span>(X, Y)
+    let b[<span class="hljs-number">1</span> : m, <span class="hljs-number">1</span> : n] <span class="hljs-keyword">and</span> c[<span class="hljs-number">0</span> : m, <span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> tables
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to m
+        <span class="hljs-keyword">for</span> j = <span class="hljs-number">0</span> to n
+            c[i, j] = <span class="hljs-number">-1</span>
+    MEMOIZED-LCS-LENGTH-<span class="hljs-built_in">AUX</span>(X, Y, m, n, c, b)
+    <span class="hljs-keyword">return</span> c <span class="hljs-keyword">and</span> b
+</code></pre>
+<ul>
+<li>不需要构造最优解时</li>
+</ul>
+<pre><code class="lang-cpp">MEMOIZED-LCS-<span class="hljs-built_in">LENGTH</span>(c, X, Y, i, j)
+    <span class="hljs-keyword">if</span> c[i, j] &gt; <span class="hljs-number">-1</span>
+        <span class="hljs-keyword">return</span> c[i, j]
+    <span class="hljs-keyword">if</span> i == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> j == <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span> c[i, j] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">if</span> x_i == y_j
+        <span class="hljs-keyword">return</span> c[i, j] = LCS-<span class="hljs-built_in">LENGTH</span>(X, Y, i - <span class="hljs-number">1</span>, j - <span class="hljs-number">1</span>) + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> c[i, j] = max{LCS-<span class="hljs-built_in">LENGTH</span>(X, Y, i - <span class="hljs-number">1</span>, j), LCS-<span class="hljs-built_in">LENGTH</span>(X, Y, i, j - <span class="hljs-number">1</span>)}
+
+LCS-<span class="hljs-built_in">LENGTH</span>(X, Y, m, n)
+    let c[<span class="hljs-number">0</span> : m, <span class="hljs-number">0</span> : n] be a <span class="hljs-keyword">new</span> table
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to m
+        <span class="hljs-keyword">for</span> j = <span class="hljs-number">0</span> to n
+            c[i, j] = <span class="hljs-number">-1</span>
+    MEMOIZED-LCS-<span class="hljs-built_in">LENGTH</span>(c, X, Y, m, n)
+    <span class="hljs-keyword">return</span> c
+</code></pre>
+<hr></hr>
+<h3 id="步骤4-构造lcs"><a name="步骤4-构造lcs" class="anchor-navigation-ex-anchor" href="#步骤4-构造lcs"><i class="fa fa-link" aria-hidden="true"></i></a>步骤4: 构造LCS</h3>
+<p>通过LCS-LENGTH返回的表格，从 b[m,n] 开始，在表格中按照箭头方向追踪下去，可以逆序找出构造LCS的所有元素。递归调用<a href="https://zhida.zhihu.com/search?content_id=213773901&amp;content_type=Article&amp;match_order=1&amp;q=PRINT-LCS&amp;zhida_source=entity" target="_blank">PRINT-LCS</a>可以按照正确顺序打印出 X 和 Y 的一个LCS，伪代码如下：</p>
+<pre><code class="lang-cpp">PRINT-<span class="hljs-built_in">LCS</span>(b, X, i, j)
+    <span class="hljs-keyword">if</span> i == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> j == <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span>    <span class="hljs-comment">// the LCS has length 0</span>
+    <span class="hljs-keyword">if</span> b[i, j] == <span class="hljs-string">"↖"</span>
+        PRINT-<span class="hljs-built_in">LCS</span>(b, X, i - <span class="hljs-number">1</span>, j - <span class="hljs-number">1</span>)
+        print x_i    <span class="hljs-comment">// same as y_i</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> b[i, j] == <span class="hljs-string">"↑"</span>
+        PRINT-<span class="hljs-built_in">LCS</span>(b, X, i - <span class="hljs-number">1</span>, j)
+    <span class="hljs-keyword">else</span> PRINT-<span class="hljs-built_in">LCS</span>(b, X, i, j - <span class="hljs-number">1</span>)
+
+PRINT-<span class="hljs-built_in">LCS</span>(b, X, m, n)
+</code></pre>
+<p>因为每次递归调用 i 和 j 至少有一个会减少一，所以PRINT-LCS的运行时间为 O(m+n) </p>
+<h3 id="改进代码"><a name="改进代码" class="anchor-navigation-ex-anchor" href="#改进代码"><i class="fa fa-link" aria-hidden="true"></i></a>改进代码</h3>
+<p>对于LCS问题，我们可以去除表格 b ，由于 <code>c[i,j] 仅由 c[i−1,j−1] 或 c[i,j−1] 或 c[i−1,j] 这三项确定</code>，很容易在 O(1) 时间内计算出最优选择方案，这样你可以用类似PRINT-LCS的过程重构LCS代码</p>
+<pre><code class="lang-cpp">PRINT-<span class="hljs-built_in">LCS</span>(c, X, Y, i, j)
+    <span class="hljs-keyword">if</span> c[i, j] == <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span>    <span class="hljs-comment">// the LCS has length 0</span>
+    <span class="hljs-keyword">if</span> x_i == y_j
+        PRINT-<span class="hljs-built_in">LCS</span>(c, X, Y, i - <span class="hljs-number">1</span>, j - <span class="hljs-number">1</span>)
+        print x_i    <span class="hljs-comment">// same as y_i</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> c[i - <span class="hljs-number">1</span>, j] &gt; c[i, j - <span class="hljs-number">1</span>]
+        PRINT-<span class="hljs-built_in">LCS</span>(c, X, Y, i - <span class="hljs-number">1</span>, j)
+    <span class="hljs-keyword">else</span>
+        PRINT-<span class="hljs-built_in">LCS</span>(c, X, Y, i, j - <span class="hljs-number">1</span>)
+
+PRINT-<span class="hljs-built_in">LCS</span>(c, X, Y, m, n)
+</code></pre>
+<p>其实表格 c 只需要两行，由于每次表格 <strong>c 中下一行的计算仅仅依赖于上一行</strong>，练习14.4-4要求实现这个方案。但如果仅仅需要求解一个LCS的长度，这个方案是可行的，但是要构造出一个LCS，那么这个表格中保存的信息不支持在 Θ(m+n) 时间内完成构造。</p>
+<p>这里提到了用<a href="https://zhida.zhihu.com/search?content_id=213773901&amp;content_type=Article&amp;match_order=1&amp;q=滚动数组&amp;zhida_source=entity" target="_blank">滚动数组</a>优化空间复杂度，但是滚动数组的缺陷也是显而易见的</p>
+<blockquote>
+<p>这里构造的两行或者两列下标分别为 0 和 1 ，因为<code>0=¬1</code>  <code>1=¬0</code></p>
+<p>所以直接对<strong>下标取反就行进行下标切换</strong>，相当于进行了exchange操作。</p>
+<pre><code class="lang-cpp">LCS-<span class="hljs-built_in">LENGTH</span>(X, Y, m, n)
+
+    <span class="hljs-keyword">if</span> m&gt;n{<span class="hljs-built_in">swap</span>(m,n), <span class="hljs-built_in">swap</span>(X,Y)}      
+        let c[<span class="hljs-number">0</span> : m, <span class="hljs-number">0</span> : <span class="hljs-number">1</span>] be a <span class="hljs-keyword">new</span> table
+        c[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to m
+            c[i, <span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+        curr = <span class="hljs-number">1</span>    <span class="hljs-comment">// current column index</span>
+        prev = <span class="hljs-number">0</span>    <span class="hljs-comment">// previous column index</span>
+        <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span> to n   <span class="hljs-comment">// compute table entries in row-major order</span>
+            <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to m
+                <span class="hljs-keyword">if</span> x_i == y_j
+                    c[i, curr] = c[i - <span class="hljs-number">1</span>, prev] + <span class="hljs-number">1</span>
+                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> c[i, prev] ≥ c[i - <span class="hljs-number">1</span>, curr]
+                    c[i, curr] = c[i, prev]
+                <span class="hljs-keyword">else</span> c[i, curr] = c[i - <span class="hljs-number">1</span>, curr]
+                curr = ┐curr
+                prev = ┐prev
+        <span class="hljs-keyword">return</span> c[m, curr]
+</code></pre>
+</blockquote>
+<h2 id="最长递增子序列问题"><a name="最长递增子序列问题" class="anchor-navigation-ex-anchor" href="#最长递增子序列问题"><i class="fa fa-link" aria-hidden="true"></i></a>最长递增子序列问题</h2>
+<p>简称 LIS (longest increasing subsequence problem)问题，是一道非常经典的动态规划问题。设给定序列 X=⟨x1,x2,…,xn⟩ 。求出X中最长的递增子序列</p>
+<p>注意，这里要求出<strong>一个序列</strong>，不仅仅是序列长度。</p>
+<p>最长递增子序列可能存在多个，这里仅求其中之一。</p>
+<h4 id="方法一：自底向上动态规划"><a name="方法一：自底向上动态规划" class="anchor-navigation-ex-anchor" href="#方法一：自底向上动态规划"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法一：自底向上动态规划</strong></h4>
+<p>构造数组 <code>C[0:n] ，其中 ci 为以 X 第 i 数 xi 结尾的 LIS 的长度</code>，构造数组<code>B[1:n] ，其中 bi 为以 X 第 i 数 xi 结尾的 LIS 的前一个数的下标</code>。构造边界 x0=−∞ 。</p>
+<p><img src="assets/image-20250319143545922.png" alt="image-20250319143545922"></img></p>
+<p>该LIS算法的运行时间为 O(n^2) 。</p>
+<p><img src="assets/image-20250319143709273.png" alt="image-20250319143709273"></img></p>
+<h4 id="方法二：贪心动态规划二分查找"><a name="方法二：贪心动态规划二分查找" class="anchor-navigation-ex-anchor" href="#方法二：贪心动态规划二分查找"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法二：贪心+动态规划+二分查找</strong></h4>
+<p>一个简单的贪心，如果我们要使上升子序列尽可能的长，则我们需要让序列<strong>上升得尽可能慢</strong>，因此我们希望每次在上升子序列<strong>最后加上的那个数尽可能的小</strong></p>
+<p>基于上面的贪心思路，我们维护一个数组 D ， <code>d[i] 表示长度为 i 的最长上升子序列的末尾元素的最小值</code>，用<code>lis-length 记录目前最长上升子序列的长度</code>，起始时 lis-length=1 ， d[1]=x1 。</p>
+<p>依次遍历数组 X=⟨x1,x2,…,xn⟩ 中的每个元素，并<strong>更新数组 d 和 lis-len</strong> 的值。如果 <code>xi&gt;d[lis-len]</code> ，那么更新<code>lis-length=lis-length+1 且 d[lis-length]=xi</code>，否则在 <code>d[1:lis-length]</code><strong>二分查找</strong>到第一个大于等于 xi 的元素 d[k] ，并将 d[k] 替换为 xi 。</p>
+<p>运行时间为 O(nlg⁡n) </p>
+<p><img src="assets/image-20250319143959038.png" alt="image-20250319143959038"></img></p>
+<hr></hr>
+<hr></hr>
+<h2 id="最优二叉搜索树"><a name="最优二叉搜索树" class="anchor-navigation-ex-anchor" href="#最优二叉搜索树"><i class="fa fa-link" aria-hidden="true"></i></a>最优二叉搜索树</h2>
+<h3 id="问题概念_1"><a name="问题概念_1" class="anchor-navigation-ex-anchor" href="#问题概念_1"><i class="fa fa-link" aria-hidden="true"></i></a>问题概念</h3>
+<blockquote>
+<p>[!note]</p>
+<p><strong>最优二叉搜索树(optimal binary search tree)</strong>：给定一个由 n 个互不相同的关键字组成的序列 <code>K=⟨k1,k2,…,kn⟩，其中 k1&lt;k2&lt;⋯&lt;kn</code>，用这些关键字构<strong>造一棵二叉搜索树</strong>。</p>
+<p>对于每个关键字 ki ，查找其的的概率为 pi ，可能有些被查找的关键字不在 K 中，我们需要构造 n+1 个<strong>虚关键字</strong><code>d0,d1,d2,…,dn ，其中 d0&lt;k1 ， dn&gt;kn， ki&lt;di&lt;ki+1 ，其中 i=1,2,…,n−1</code> ，对于每个关键字 di ，查找其的的概率为 qi 。每个关键字 ki 对应二叉搜索树中一个内部结点，每个虚关键字 di 对应二叉搜索树中一个叶结点，这样每次查找关键字如果查找成功，那么最终落在 ki ，如果查找失败，那么最终落在 di 。</p>
+<p><img src="assets/image-20250321140945634.png" alt="image-20250321140945634"></img></p>
+<p>给定一棵二叉搜索树 T ，假定一次搜索代价为访问的结点数，即此次搜索找到的结点在 T中的深度再加1，那么在 T 中进行一次搜索期望的代价为：</p>
+<p><img src="assets/image-20250321141048695.png" alt="image-20250321141048695"></img></p>
+<p>i对于一个给定的概率集合，我们希望构造一棵<strong>期望搜索代价最小</strong>的二叉搜索树，我们称这样一棵二叉搜索树为最优二叉搜索树。</p>
+<p>最优二叉搜索树<strong>不一定是高度最矮</strong>的，最优二叉搜索树的<strong>根结点中的关键字也不一定是概率最高的关键字</strong>。</p>
+</blockquote>
+<hr></hr>
+<h3 id="步骤-1--最优二叉搜索树的结构"><a name="步骤-1--最优二叉搜索树的结构" class="anchor-navigation-ex-anchor" href="#步骤-1--最优二叉搜索树的结构"><i class="fa fa-link" aria-hidden="true"></i></a>步骤 1 : 最优二叉搜索树的结构</h3>
+<ul>
+<li><p>从观察子树特征开始。考虑一棵二叉搜索树的<strong>任意子树</strong>。</p>
+<blockquote>
+<ol>
+<li>给定一棵二叉搜索树，考虑其中任意一棵子树，包含关键字 ki…kj ，其中 1≤i≤j&lt;n ，同时，子树有包含虚关键字<code>di−1,di,…,dj</code>的叶结点。</li>
+<li><a href="https://zhida.zhihu.com/search?content_id=213995150&amp;content_type=Article&amp;match_order=1&amp;q=最优子结构&amp;zhida_source=entity" target="_blank">最优子结构</a>：如果一棵最优二叉搜索树 T 有一棵包含关键字 ki,…,kj 的子树 T′ ，那么 T′ 一定是包含关键字 ki…kj 和虚关键字 di−1,di,…,dj 的<strong>子问题的最优解</strong></li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="步骤2-一个递归算法"><a name="步骤2-一个递归算法" class="anchor-navigation-ex-anchor" href="#步骤2-一个递归算法"><i class="fa fa-link" aria-hidden="true"></i></a>步骤2: 一个递归算法</h3>
+<ol>
+<li><p>设最优二叉搜索树问题的子问题中包含关键字 ki…kj ，其中 i≥1,j≤n,j≥i−1 （<strong>当 j=i−1 时，只只包含虚关键字 di−1</strong> ）。定义 e[i,j] 为在包含关键字 ki…kj 的最优二叉搜索树中进行一次关键字搜索的<strong>期望代价</strong>。最终我们的目标是求出 e[1,n] 。</p>
+</li>
+<li><p>当 j=i−1 时，子问题只包含虚关键字 di−1 ，搜索的期望代价为 <code>e[i,i−1]=qi−1</code> 。</p>
+</li>
+<li><p>当 j≥i 时，设子树根结点关键字为 kr ，左子树包含关键字 ki,…,kr−1 ，右子树包含关键字 kr+1,…,kj 。</p>
+</li>
+<li><p>当一棵树成为一个结点的一个子树时，树中所有结点的深度都要加一。</p>
+<p>包含关键字 ki…kj 的子树，定义子树中所有关键字和虚关键字的概率和为：</p>
+<p><img src="assets/image-20250321144650552.png" alt="image-20250321144650552"></img></p>
+</li>
+</ol>
+<h3 id="步骤3-计算最优二叉搜索树的期望搜索代价"><a name="步骤3-计算最优二叉搜索树的期望搜索代价" class="anchor-navigation-ex-anchor" href="#步骤3-计算最优二叉搜索树的期望搜索代价"><i class="fa fa-link" aria-hidden="true"></i></a>步骤3: 计算最优二叉搜索树的期望搜索代价</h3>
+<p>解最优二叉搜索树和矩阵链乘法的一些相似之处。它们的子问题都由<strong>连续的下标子域组成</strong></p>
+<ol>
+<li><p>将 e[i,j] 保存在表格<code>e[1:n+1,0:n]</code> ，第一个下标到 n+1 是因为需要考虑<strong>只包含伪关键字dn</strong> 的子树 的情况，即 e[n+1,n] ，第二个下标从 0 开始是因为需要考虑于<strong>只包含伪关键字d0</strong> 的子树的情况，即 e[1,0] 。</p>
+</li>
+<li><p>为了避免每次计算 e[i,j] 时花费 Θ(j−i) 次加法重新计算 w(i,j) ，将 w[i,j] 保存在表格 <code>w[1:n+1,0:n]</code> ，递归式：</p>
+<p><img src="assets/image-20250321145057189.png" alt="image-20250321145057189"></img></p>
+</li>
+<li><p>程序OPTIMAL-BST输入为概率表 p1,…,pn 和 q0,…,qn 以及规模 n ，输出表格 e 和 root ，伪代码如下：</p>
+<pre><code class="lang-cpp">OPTIMAL-<span class="hljs-built_in">BST</span>(p, q, n)
+    let e[<span class="hljs-number">1</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n], w[<span class="hljs-number">1</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n], <span class="hljs-keyword">and</span> root[<span class="hljs-number">1</span> : n, <span class="hljs-number">1</span> : n] be <span class="hljs-keyword">new</span> tables
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n + <span class="hljs-number">1</span>    <span class="hljs-comment">// base cases</span>
+        e[i, i - <span class="hljs-number">1</span>] = q_{i<span class="hljs-number">-1</span>}    <span class="hljs-comment">// equation (14.14)</span>
+        w[i, i - <span class="hljs-number">1</span>] = q_{i<span class="hljs-number">-1</span>}
+    <span class="hljs-keyword">for</span> l = <span class="hljs-number">1</span> to n
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n - l + <span class="hljs-number">1</span>
+            j = i + l - <span class="hljs-number">1</span>
+            e[i, j] = ∞
+            w[i, j] = w[i, j - <span class="hljs-number">1</span>] + p_j + q_j    <span class="hljs-comment">// equation (14.15)</span>
+            <span class="hljs-keyword">for</span> r = i to j     <span class="hljs-comment">// try all possibles roots r</span>
+                t = e[i, r - <span class="hljs-number">1</span>] + e[r + <span class="hljs-number">1</span>, j] + w[i, j]    <span class="hljs-comment">//equation (14.14)</span>
+                <span class="hljs-keyword">if</span> t &lt; e[i, j]    <span class="hljs-comment">// new minimum?</span>
+                    e[i, j] = t
+                    root[i, j] = r
+    <span class="hljs-keyword">return</span> e <span class="hljs-keyword">and</span> root
+</code></pre>
+<p>程序OPTIMAL-BST的运行时间为 Θ(n3) 。</p>
+</li>
+</ol>
+<h3 id="构造最优解"><a name="构造最优解" class="anchor-navigation-ex-anchor" href="#构造最优解"><i class="fa fa-link" aria-hidden="true"></i></a>构造最优解</h3>
+<p>写出程序 CONSTRUCT-OPTIMAL-BST(root,n) 的伪代码，给定表格<code>root[1:n,1:n]</code> ，输出最优二叉搜索树的结构。</p>
+<p>解答：</p>
+<p>对应第三版15.5-1。</p>
+<pre><code class="lang-cpp">CONSTRUCT-OPTIMAL-BST-<span class="hljs-built_in">AUX</span>(root, i, j, r)
+    <span class="hljs-keyword">if</span> i == j
+        <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">if</span> r == <span class="hljs-number">0</span>
+        print root[i, j] + <span class="hljs-string">"is the root"</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> j &lt; r
+        print root[i, j] + <span class="hljs-string">"is the left child of"</span> + r
+    <span class="hljs-keyword">else</span>
+        print root[i, j] + <span class="hljs-string">"is the right child of"</span> + r
+    CONSTRUCT-OPTIMAL-BST-<span class="hljs-built_in">AUX</span>(root, i, root[i, j] - <span class="hljs-number">1</span>, root[i, j])
+    CONSTRUCT-OPTIMAL-BST-<span class="hljs-built_in">AUX</span>(root, root[i, j] + <span class="hljs-number">1</span>, j, root[i, j])
+
+CONSTRUCT-OPTIMAL-<span class="hljs-built_in">BST</span>(root, n)
+    CONSTRUCT-OPTIMAL-BST-<span class="hljs-built_in">AUX</span>(root, <span class="hljs-number">1</span>, n, root[<span class="hljs-number">1</span>, n])
+</code></pre>
+<h3 id="优化"><a name="优化" class="anchor-navigation-ex-anchor" href="#优化"><i class="fa fa-link" aria-hidden="true"></i></a>优化</h3>
+<p>对所有 1≤i&lt;j≤n ，存在最优二叉搜索树，其根满足 root[i,j−1]≤root[i,j]≤root[i+1,j] ，利用这一性质改写程序OPTIMAL-BST，使得其运行时间下降为 Θ(n^2) 。</p>
+<p>解答：</p>
+<p>对应第三版15.5-4。</p>
+<p>仅需要修改OPTIMAL-BST第10行代码，修改后伪代码如下：</p>
+<pre><code class="lang-cpp">OPTIMAL-<span class="hljs-built_in">BST</span>(p, q, n)
+    let e[<span class="hljs-number">1</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n], w[<span class="hljs-number">1</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n], <span class="hljs-keyword">and</span> root[<span class="hljs-number">1</span> : n, <span class="hljs-number">1</span> : n] be <span class="hljs-keyword">new</span> tables
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n + <span class="hljs-number">1</span>    <span class="hljs-comment">// base cases</span>
+        e[i, i - <span class="hljs-number">1</span>] = q_{i<span class="hljs-number">-1</span>}    <span class="hljs-comment">// equation (14.14)</span>
+        w[i, i - <span class="hljs-number">1</span>] = q_{i<span class="hljs-number">-1</span>}
+    <span class="hljs-keyword">for</span> l = <span class="hljs-number">1</span> to n
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n - l + <span class="hljs-number">1</span>
+            j = i + l - <span class="hljs-number">1</span>
+            e[i, j] = ∞
+            w[i, j] = w[i, j - <span class="hljs-number">1</span>] + p_j + q_j    <span class="hljs-comment">// equation (14.15)</span>
+                <span class="hljs-keyword">for</span> r = r[i, j - <span class="hljs-number">1</span>] to r[i + <span class="hljs-number">1</span>, j]     <span class="hljs-comment">// try all possibles roots r</span>
+                t = e[i, r - <span class="hljs-number">1</span>] + e[r + <span class="hljs-number">1</span>, j] + w[i, j]    <span class="hljs-comment">//equation (14.14)</span>
+                <span class="hljs-keyword">if</span> t &lt; e[i, j]    <span class="hljs-comment">// new minimum?</span>
+                    e[i, j] = t
+                    root[i, j] = r
+    <span class="hljs-keyword">return</span> e <span class="hljs-keyword">and</span> root
+</code></pre>
+<h2 id="有向无环图中的最长路径问题"><a name="有向无环图中的最长路径问题" class="anchor-navigation-ex-anchor" href="#有向无环图中的最长路径问题"><i class="fa fa-link" aria-hidden="true"></i></a>有向无环图中的最长路径问题</h2>
+<h3 id="问题"><a name="问题" class="anchor-navigation-ex-anchor" href="#问题"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<ul>
+<li>Longest Path in DAG </li>
+</ul>
+<p>给定一个<strong>有向图</strong>(Directed Acyclic Graph)以及一个起点s，求该图中s点到其余所有点的最长路径。</p>
+<h3 id="解答"><a name="解答" class="anchor-navigation-ex-anchor" href="#解答"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<p>最长路径问题不具有最优子结构属性。事实上，<strong>最长路径</strong>问题对于一般的图来说是<strong>NP-Hard</strong>问题。然而，对于有向无环图的最长路径问题，其具有线性时间解。这个想法类似于有向无环图中<a href="https://so.csdn.net/so/search?q=最短路径&amp;spm=1001.2101.3001.7020" target="_blank">最短路径</a>的线性时间解决方案，我们使用拓扑排序</p>
+<ol>
+<li><p>将到所有顶点的距离初始化为负无穷大，到源点的距离初始化为 0</p>
+</li>
+<li><p>图的拓扑排序。图的拓扑排序表示图的线性排序（图b是图a的线性表示）</p>
+</li>
+<li><p>按照拓扑顺序一一处理所有顶点。对于正在处理的每个顶点，我们使用当前顶点的距离更新其相邻的距离。</p>
+<blockquote>
+<p>按拓扑顺序对每个顶点 u 执行以下作。</p>
+<ul>
+<li>..对 u 的每个相邻顶点 v 执行以下作</li>
+<li>……if （dist[v] &lt; dist[u] + weight（u， v））</li>
+<li>………距离[v] = 距离[u] + 权重（u， v）</li>
+</ul>
+</blockquote>
+</li>
+<li><p>使用 DP 求最长路，使时间复杂度优化到 O(m+n)。状态转移方程为<code>dis_v = max(dis_v, dis_u + w_{u,v})</code>。</p>
+</li>
+</ol>
+<p><img src="assets/LongestPath-2.png" alt="LongestPath （最长路径）"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// The function to find longest distances from a given vertex.  </span>
+<span class="hljs-comment">// It uses recursive topologicalSortUtil() to get topological  </span>
+<span class="hljs-comment">// sorting.  </span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Graph::longestPath</span><span class="hljs-params">(<span class="hljs-type">int</span> s)</span>  
+</span>{  
+    stack&lt;<span class="hljs-type">int</span>&gt; Stack;  
+    <span class="hljs-type">int</span> dist[V];  
+
+    <span class="hljs-comment">// Mark all the vertices as not visited  </span>
+    <span class="hljs-type">bool</span>* visited = <span class="hljs-keyword">new</span> <span class="hljs-type">bool</span>[V];  
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; V; i++)  
+        visited[i] = <span class="hljs-literal">false</span>;  
+
+    <span class="hljs-comment">// Call the recursive helper function to store Topological  </span>
+    <span class="hljs-comment">// Sort starting from all vertices one by one  </span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; V; i++)  
+        <span class="hljs-keyword">if</span> (visited[i] == <span class="hljs-literal">false</span>)  
+            <span class="hljs-built_in">topologicalSortUtil</span>(i, visited, Stack);  
+
+    <span class="hljs-comment">// Initialize distances to all vertices as infinite and  </span>
+    <span class="hljs-comment">// distance to source as 0  </span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; V; i++)  
+        dist[i] = NINF;  
+    dist[s] = <span class="hljs-number">0</span>;  
+    <span class="hljs-comment">// Process vertices in topological order  </span>
+    <span class="hljs-keyword">while</span> (Stack.<span class="hljs-built_in">empty</span>() == <span class="hljs-literal">false</span>) {  
+        <span class="hljs-comment">// Get the next vertex from topological order  </span>
+        <span class="hljs-type">int</span> u = Stack.<span class="hljs-built_in">top</span>();  
+        Stack.<span class="hljs-built_in">pop</span>();  
+
+        <span class="hljs-comment">// Update distances of all adjacent vertices  </span>
+        list&lt;AdjListNode&gt;::iterator i;  
+        <span class="hljs-keyword">if</span> (dist[u] != NINF) {  
+            <span class="hljs-keyword">for</span> (i = adj[u].<span class="hljs-built_in">begin</span>(); i != adj[u].<span class="hljs-built_in">end</span>(); ++i){  
+
+                <span class="hljs-keyword">if</span> (dist[i-&gt;<span class="hljs-built_in">getV</span>()] &lt; dist[u] + i-&gt;<span class="hljs-built_in">getWeight</span>())  
+                    dist[i-&gt;<span class="hljs-built_in">getV</span>()] = dist[u] + i-&gt;<span class="hljs-built_in">getWeight</span>(); 
+            } 
+        }  
+    }
+</code></pre>
+<hr></hr>
+<h2 id="最长回文子序列"><a name="最长回文子序列" class="anchor-navigation-ex-anchor" href="#最长回文子序列"><i class="fa fa-link" aria-hidden="true"></i></a>最长回文子序列</h2>
+<h3 id="问题："><a name="问题：" class="anchor-navigation-ex-anchor" href="#问题："><i class="fa fa-link" aria-hidden="true"></i></a>问题：</h3>
+<p> 回文(palindrome)是正序与逆序相同的非空字符串。</p>
+<p>设计高效算法，求给定输入字符串的最长回文子序列。</p>
+<p>最优子结构：是回文子序列，并且长度大于 2，那么将它首尾的<strong>两个字符去除之后，它仍然是个回文子序列</strong>。因此可以用动态规划的方法计算给定字符串的最长回文子序列。</p>
+<p><em>dp</em>[<em>i</em>][<em>j</em>] 表示字符串 <em>s</em> 的下标范围 [<em>i</em>,<em>j</em>] 内的最长回文子序列的长度。</p>
+<ol>
+<li><p>由于任何<strong>长度为 1 的子序列都是回文子序列</strong>，因此动态规划的边界情况是，对任意 0≤<em>i</em>&lt;<em>n</em>，都有 <em>dp</em>[<em>i</em>][<em>i</em>]=1。</p>
+</li>
+<li><p>当 <em>i</em>&lt;<em>j</em> 时，计算 <em>dp</em>[<em>i</em>][<em>j</em>] 需要分别考虑 <em>s</em>[<em>i</em>] 和 <em>s</em>[<em>j</em>] 相等和不相等的情况</p>
+<blockquote>
+<ul>
+<li>如果 <code>s[i]=s[j]</code>，则<strong>首先得到 s 的下标范围 [i+1,j−1] 内的最长回文子序列</strong>，然后在该子序列的首尾分别添加 s[i] 和 s[j]，即可得到 s 的下标范围 [i,j] 内的最长回文子序列，因此 dp[i][j]=dp[i+1][j−1]+2；</li>
+<li>如果 s[i]!=s[j]，则 s[i] 和 s[j] 不可能同时作为同一个回文子序列的首尾，因此 <strong>dp[i][j]=max(dp[i+1][j],dp[i][j−1])</strong></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">longestPalindromeSubseq</span><span class="hljs-params">(string s)</span> </span>{
+        <span class="hljs-type">int</span> n=s.<span class="hljs-built_in">size</span>();
+        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-function">vector <span class="hljs-title">m</span><span class="hljs-params">(n,vector&lt;<span class="hljs-type">int</span>&gt;(n,<span class="hljs-number">0</span>))</span></span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)m[i][i]=<span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=n<span class="hljs-number">-2</span>;i&gt;=<span class="hljs-number">0</span>;i--)
+            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=i<span class="hljs-number">+1</span>;j&lt;n;j++)
+            {
+                m[i][j]=s[i]==s[j]?m[i<span class="hljs-number">+1</span>][j<span class="hljs-number">-1</span>]<span class="hljs-number">+2</span>:<span class="hljs-built_in">max</span>(m[i<span class="hljs-number">+1</span>][j],m[i][j<span class="hljs-number">-1</span>]);
+            }
+        <span class="hljs-keyword">return</span> m[<span class="hljs-number">0</span>][n<span class="hljs-number">-1</span>];
+    }
+};
+</code></pre>
+<h3 id="类似题目：最长回文子串"><a name="类似题目：最长回文子串" class="anchor-navigation-ex-anchor" href="#类似题目：最长回文子串"><i class="fa fa-link" aria-hidden="true"></i></a>类似题目：最长回文子串</h3>
+<p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的 回文 子串。</p>
+<p>对于一个子串而言，如果它是回文串，并且长度大于 2，那么将它首尾的两个字母去除之后，它仍然是个回文串。这样就有了最优子结构</p>
+<p>依次构造动态转移方程</p>
+<blockquote>
+<ol>
+<li><p>首先每个字符为最小回文子串长度为一</p>
+</li>
+<li><p><em>P</em>(<em>i</em>,<em>j</em>) 表示字符串 <em>s</em> 的第 <em>i</em> 到 <em>j</em> 个字母组成的串（下文表示成 <em>s</em>[<em>i</em>:<em>j</em>]）是否为回文串</p>
+</li>
+<li><p>长度大于3时：<em>P</em>(<em>i</em>,<em>j</em>)=<em>P</em>(<em>i</em>+1,<em>j</em>−1)∧(<em>Si</em>==<em>Sj</em>)</p>
+<p>只有 <em>s</em>[<em>i</em>+1:<em>j</em>−1] 是回文串，并且 <em>s</em> 的第 <em>i</em> 和 <em>j</em> 个字母相同时，<em>s</em>[<em>i</em>:<em>j</em>] 才会是回文串。</p>
+</li>
+<li><p>长度为2或者3时：对于长度为 2 的子串，只要它的两个字母相同，它就是一个回文串</p>
+</li>
+</ol>
+<p>最终的答案即为所有 <em>P</em>(<em>i</em>,<em>j</em>)=true 中 <em>j</em>−<em>i</em>+1（即子串长度）的最大值</p>
+</blockquote>
+<p>其实这道题就是回文子序列的基础上<strong>增加了约束条件，即必须是连续字串</strong></p>
+<p>直接考虑自底而上的动态规划</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function">string <span class="hljs-title">longestPalindrome</span><span class="hljs-params">(string s)</span> </span>{
+        <span class="hljs-type">int</span> n=s.<span class="hljs-built_in">size</span>();
+        vector&lt;vector&lt;<span class="hljs-type">bool</span>&gt;&gt; <span class="hljs-built_in">m</span>(n,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">bool</span>&gt;(n,<span class="hljs-literal">false</span>));
+        <span class="hljs-comment">//长度为一的回文字串</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)m[i][i]=<span class="hljs-literal">true</span>;
+        <span class="hljs-type">int</span> l=<span class="hljs-number">1</span>,begin=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=n<span class="hljs-number">-2</span>;i&gt;=<span class="hljs-number">0</span>;i--)
+            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=i<span class="hljs-number">+1</span>;j&lt;n;j++)
+            {
+                <span class="hljs-type">int</span> tmp=j-i<span class="hljs-number">+1</span>;
+                <span class="hljs-comment">//长度为2或者3</span>
+                <span class="hljs-keyword">if</span>(tmp&lt;=<span class="hljs-number">3</span>)m[i][j]=(s[i]==s[j]);
+                <span class="hljs-keyword">else</span> m[i][j]=m[i<span class="hljs-number">+1</span>][j<span class="hljs-number">-1</span>]&amp;&amp;(s[i]==s[j]);
+                <span class="hljs-comment">//更新最长回文子串               </span>
+                <span class="hljs-keyword">if</span>(m[i][j]&amp;&amp;l&lt;tmp){
+                   l=tmp;
+                   begin=i;
+                }
+            }
+       <span class="hljs-keyword">return</span> s.<span class="hljs-built_in">substr</span>(begin,l);
+    }
+};
+</code></pre>
+<h2 id="双调欧几里得旅行商问题"><a name="双调欧几里得旅行商问题" class="anchor-navigation-ex-anchor" href="#双调欧几里得旅行商问题"><i class="fa fa-link" aria-hidden="true"></i></a>双调欧几里得旅行商问题</h2>
+<h3 id="问题_1"><a name="问题_1" class="anchor-navigation-ex-anchor" href="#问题_1"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>旅行商问题描述：平面上n个点，确定一条连接各点的最短闭合旅程。这个解的一般形式为NP的（在多项式时间内可以求出）</p>
+<p>J.L. Bentley 建议通过只考虑<strong>双调旅程(bitonictour)</strong>来简化问题,这种旅程即为从最左点开始，严格地从左到右直至最右点，然后严格地从右到左直至出发点。下图(b)显示了同样的7个点的最短双调路线。在这种情况下，多项式的算法是可能的。事实上，存在确定的最优双调路线的O(n*n)时间的算法。
+<img src="assets/image-20250324191924694.png" alt="image-20250324191924694"></img></p>
+<p>设计一个O(n2)时间的最优双调巡游路线算法。你可以认为任何两个点的x坐标均不 同，且所有实数运算都花费单位时间。（提示：由左至右扫描，对巡游路线的两个部分分别维护可能的最优解。）</p>
+<h3 id="解答_1"><a name="解答_1" class="anchor-navigation-ex-anchor" href="#解答_1"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<ol>
+<li><p>首先将各点按照x坐标从小到大<strong>排列</strong>，时间复杂度为O(nlgn)。</p>
+</li>
+<li><p>最优子结构：定义从Pi到Pj的路径为：从Pi开始，从右到左一直到P1，然后从左到右一直到Pj。在这个路径上，会经过P1到Pmax(i,j)之间的所有点且只经过一次。</p>
+</li>
+<li><p>定义d(i,j)为满足这一条件的最短路径。我们只考虑i&gt;=j的情况</p>
+</li>
+<li><p>最优解：需要求的是d(n,n)</p>
+<blockquote>
+<ol>
+<li><p>当j &lt; i - 1时，<code>d(i,j) = d(i-1,j) + dist(i - 1,i)</code>。</p>
+<p>由定义可知，点Pi-1一定在路径Pi-Pj上，而且又由于j&lt;i-1,因此Pi的左边的相邻点一定是Pi-1</p>
+</li>
+<li><p>当j = i - 1时，<code>d(i,j) = d(i,i-1) = min{d(k,j) + dist(i,k)},其中1 &lt;= k &lt;= j</code></p>
+<p>与Pi左相邻的那个点可能是P1到Pi-1总的任何一个。因此需要递归求出最小的那个路径：</p>
+</li>
+<li><p>当j=i时，<code>d(i,i) = min{d(i,1)+dist(1,i),...,d(i,i-1),dist(i-1,i)}.</code></p>
+<p>路径上最后相连的两个点可能是P1-Pi、P2-Pi...Pi-1-Pi。</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<pre><code class="lang-c"><span class="hljs-type">double</span> <span class="hljs-title function_">DP</span><span class="hljs-params">(tagPoint *points,<span class="hljs-type">int</span> n)</span>
+{
+    <span class="hljs-type">double</span> b[MaxLen][MaxLen];<span class="hljs-comment">//记录最短路径的长度</span>
+    <span class="hljs-comment">//计算所有情况下的b[i][j]，1 &lt;= i &lt;= j</span>
+    <span class="hljs-comment">//初始化</span>
+    b[<span class="hljs-number">1</span>][<span class="hljs-number">2</span>] = distance(points,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">3</span>;j &lt;= n;++j)
+    {
+        <span class="hljs-comment">//i &lt; j-1</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>;i &lt;= j - <span class="hljs-number">2</span>;++i)
+        {
+            b[i][j] = b[i][j - <span class="hljs-number">1</span>] + distance(points,j - <span class="hljs-number">1</span>,j);
+        }
+        <span class="hljs-comment">//i = j - 1,b[i][j] = min(b[k][j - 1] + distance(k,j));</span>
+        b[j - <span class="hljs-number">1</span>][j] = MaxVal;
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">1</span>;k &lt;= j - <span class="hljs-number">2</span>;++k)
+        {
+            <span class="hljs-type">double</span> temp = b[k][j - <span class="hljs-number">1</span>] + distance(points,k,j);
+            <span class="hljs-keyword">if</span> (temp &lt; b[j - <span class="hljs-number">1</span>][j])
+            {
+                b[j - <span class="hljs-number">1</span>][j] = temp;
+            }
+        }
+    }
+
+    b[n][n] = b[n - <span class="hljs-number">1</span>][n] + distance(points,n - <span class="hljs-number">1</span>,n);
+
+    <span class="hljs-keyword">return</span> b[n][n];
+}
+</code></pre>
+<h2 id="多段图问题"><a name="多段图问题" class="anchor-navigation-ex-anchor" href="#多段图问题"><i class="fa fa-link" aria-hidden="true"></i></a>多段图问题</h2>
+<h3 id="问题_2"><a name="问题_2" class="anchor-navigation-ex-anchor" href="#问题_2"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<ul>
+<li>设图 G =（V,E）是一个带权有向图，如果把顶点集合 V 划分成 k 个互不相交的子集 <code>Vi（2&lt;=k&lt;=n,1&lt;=i&lt;=k）</code>，使得 E 中的任何一条边 <code>&lt;u,v&gt;，必有 u∈Vi, v∈Vi + m(1&lt;=i&lt;k, 1&lt;i+m&lt;=k)</code>,则称图 G 为多段图，称 s∈V1 为源点，t∈Vk 为终点。多段图的最短路径问题为从<strong>源点到终点的最小代价路径</strong>。</li>
+</ul>
+<p><img src="assets/1774310-20201130100936059-770495814.png" alt="img"></img></p>
+<h3 id="解答_2"><a name="解答_2" class="anchor-navigation-ex-anchor" href="#解答_2"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<ol>
+<li><p>最优子结构：</p>
+<blockquote>
+<p>[!important]</p>
+<p>设一个多段图有且仅有一个起点 S，有且仅有一个终点 T，<code>S-&gt;S1-&gt;S2-&gt;…Sn-&gt;T</code> 为从起点 S 到终点 T 的最短路径。其中<code>`Si属于Vi</code></p>
+<p>设 V0-&gt;V1 的开销已经求出，则从起点 S 到终点 T 的最小开销的求解将转换为对<strong>V1 到终点 T 的最小开销</strong>进行求解。
+假设 S1-&gt;S2-&gt;S3…Sn-&gt;T 不是点 S1 到终点 T 的最短路径，则必然存在另一条路径 S1-&gt;R1-&gt;R2…Rn-&gt;T 的开销小于 S1-&gt;S2-&gt;S3…Sn-&gt;T 的路径开销，进而推出起点 S 到终点 T 的最短路径为 S-&gt;S1-&gt;R1-&gt;R2…Rn-&gt;T。然而已知路径 S-&gt;S1-&gt;S2-&gt;…Sn-&gt;T 为起点 S 到终点 T 的最短路径，不可能存在其他路径的总开销比该路径的开销还要小，产生了矛盾，因此多段图的最短路径问题满足最优子结构。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="多段图向后处理递推关系式"><a name="多段图向后处理递推关系式" class="anchor-navigation-ex-anchor" href="#多段图向后处理递推关系式"><i class="fa fa-link" aria-hidden="true"></i></a>多段图向后处理递推关系式</h4>
+<ol>
+<li><p>设 Cuv 为多段图有向边 <strong><u,v> 的权值</u,v></strong>，源点 s 到终点 v 的最短路径长为 <code>d(s,v)</code>，终点为 t，则可以得到该问题的状态转移方程为：</p>
+<p><img src="assets/1774310-20201130101133177-1217414455-1743471262723-11.png" alt="img"></img></p>
+<p>COST(j)= min{COST(l)+ c(l , j)}</p>
+</li>
+</ol>
+<p>这里其实类似于Dijkstra最短路径算法，因为多段图其实也是一个图，只不过是一个特殊的图，被分成k个集合，只有相邻集合的节点之间才可能有边</p>
+<p>其实就是<strong>类似于最长递增子序列</strong>，不过这里更新的条件是更小的距离</p>
+<p><strong>O(n^2)</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//邻接矩阵g,多段图v</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">FGRAPH</span><span class="hljs-params">(vector&lt;vectro&lt;pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt;&gt;&gt; g,vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; v)</span>
+</span>{
+    <span class="hljs-type">int</span> n=g.<span class="hljs-built_in">size</span>();
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">cost</span><span class="hljs-params">(n,INT_MAX)</span></span>;
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">path</span><span class="hljs-params">(n,<span class="hljs-number">-1</span>)</span></span>;<span class="hljs-comment">//记录前驱节点</span>
+    cost[<span class="hljs-number">0</span>]=<span class="hljs-number">0</span>;<span class="hljs-comment">//到自身距离为0</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)
+    {
+        <span class="hljs-comment">//使用u,v便于理解</span>
+        <span class="hljs-type">int</span> v=i;
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> u=<span class="hljs-number">0</span>;u&lt;i;u++)
+            <span class="hljs-keyword">if</span>(g[u][v]!=INT_MAX)<span class="hljs-comment">//&lt;u,v&gt;有边</span>
+            {
+                <span class="hljs-type">int</span> now_cost=cost[u]+g[u][v];
+                <span class="hljs-keyword">if</span>(cost[v]&gt;now_cost){
+                    cost[v]=now_cost;
+                    path[v]=u;
+                }
+            }
+    }
+    <span class="hljs-keyword">return</span> cost[n<span class="hljs-number">-1</span>];
+}
+</code></pre>
+<h4 id="多段图的向前处理算法"><a name="多段图的向前处理算法" class="anchor-navigation-ex-anchor" href="#多段图的向前处理算法"><i class="fa fa-link" aria-hidden="true"></i></a>多段图的向前处理算法</h4>
+<ul>
+<li>从后往前递推</li>
+</ul>
+<p><code>COST(i, j)= min{ c(j, l)+ COST(i+1, l)}, l∈Vi+1 , &lt;j, l&gt;∈E,  c(j, l)该边的成本</code></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//邻接矩阵g,多段图v</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">FGRAPH</span><span class="hljs-params">(vector&lt;vectro&lt;<span class="hljs-type">int</span>&gt;&gt;&gt; g,vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; v)</span>
+</span>{
+    <span class="hljs-type">int</span> n=g.<span class="hljs-built_in">size</span>();
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">cost</span><span class="hljs-params">(n,INT_MAX)</span></span>;
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">path</span><span class="hljs-params">(n,<span class="hljs-number">-1</span>)</span></span>;<span class="hljs-comment">//记录后驱节点</span>
+    cost[n<span class="hljs-number">-1</span>]=<span class="hljs-number">0</span>;<span class="hljs-comment">//到自身距离为0</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=n<span class="hljs-number">-1</span>;i&gt;<span class="hljs-number">0</span>;i++)
+    {
+       <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=i<span class="hljs-number">-1</span>;j&gt;=<span class="hljs-number">0</span>;j++)
+          <span class="hljs-keyword">if</span>(g[j][i]!=INT_MAX)
+          {
+            <span class="hljs-type">int</span> now_cost=cost[i]+g[j][i];
+              <span class="hljs-keyword">if</span>(cost[j]&gt;now_cost){
+                  cost[j]=now_cost;
+                  path[j]=i;
+              }
+          }
+    }
+    <span class="hljs-keyword">return</span> cost[n<span class="hljs-number">-1</span>];
+}
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<p>多段图的应用</p>
+<p>考虑把n个资源分配给r个项目的问题，要求使得总净利达到最大值</p>
+</blockquote>
+<p>例题：<img src="assets/image-20250423164242404.png" alt="image-20250423164242404" style="zoom:50%;"></img></p>
+<p><img src="assets/image-20250423164310124.png" alt="image-20250423164310124" style="zoom:50%;"></img></p>
+<h2 id="货郎担问题（欧几里得旅行商问题）"><a name="货郎担问题（欧几里得旅行商问题）" class="anchor-navigation-ex-anchor" href="#货郎担问题（欧几里得旅行商问题）"><i class="fa fa-link" aria-hidden="true"></i></a>货郎担问题（欧几里得旅行商问题）</h2>
+<h3 id="问题_3"><a name="问题_3" class="anchor-navigation-ex-anchor" href="#问题_3"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<p>有n个城市，用1，2，…，n表示，城i,j之间的距离为dij，有一个货郎从城1出发到其他城市一次且仅一次，最后回到城市1，求解经过所有点的最短巡游路线</p>
+<blockquote>
+<p>[!tip]</p>
+<p>经典模型</p>
+<ul>
+<li><p>邮车收集邮件的邮路问题</p>
+<p>假定有一辆邮车要到n个不同的地点收集邮件，最后回到起始点
+邮车所行经的路线是一条周游路线，希望求出具有最小长度的周游路线。</p>
+</li>
+<li><p>机械手臂在装配线上的移动问题
+机械手由其初始位置(该位置在第一个要紧固的螺帽的上方)开始，
+依次移动到其余的每一个螺帽，最后返回到初始位置。
+机械手移动的路线就是以螺帽为结点的一个图中的一条周游路线。
+一条最小成本周游路线将使这机械手完成其工作所用的时间取最小值。</p>
+</li>
+<li><p>机械手臂在装配线上的移动问题</p>
+<p>第三个例子是产品的生产安排问题。
+假设要在同一组机器上制造n种不同的产品，生产是周期性进行的，
+即在每一个生产周期这n种产品都要被制造。
+要生产这些产品有两种开销，一种是制造第i种产品时所耗费的资金(1≤i≤n)，称为<strong>生产成本</strong>，
+另一种是这些机器由制造第i种产品变到制造第j种产品时所耗费的开支cij称为<strong>转换成本</strong>。
+显然，生产成本与生产顺序无关。
+于是，我们希望找到一种<strong>制造这些产品的顺序</strong>，
+使得制造这n种产品的转换成本和为最小。
+由于生产是周期进行的，因此在开始下一周期生产时也要开支转换成本，
+它等于由最后一种产品变到制造第一种产品的转换成本。
+于是，可以把这个问题看成是一个具有n个结点，边成本为cij图的货郎担问题。</p>
+</li>
+</ul>
+</blockquote>
+<p>等价于求图的<strong>最短哈密尔顿回路</strong>问题）令G=(V, E)是一个带权重的有向图，顶点集V=(v0, v1, ..., vn-1)。从图中任一顶点vi出发，经图中所有其他顶点一次且只有一次，最后回到同一顶点vi的最短路径。</p>
+<h3 id="解答_3"><a name="解答_3" class="anchor-navigation-ex-anchor" href="#解答_3"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<ul>
+<li><p>最优子结构：</p>
+<blockquote>
+<p>[!note]</p>
+<p>如果这条周游路线是最优的, 则这条由k到1的路径必定是通过V-{1,k}中所有结点的由k到1的最短路径</p>
+</blockquote>
+</li>
+<li><p>设<code>g(i,S)</code>是由结点i开始, 通过S中的所有结点, 在结点1终止的一条最短路径长度。</p>
+<ul>
+<li><p>所以<code>g(1,V-{1})</code>是一条最优的周游路线长度</p>
+<p><img src="assets/image-20250418150100593.png" alt="image-20250418150100593"></img></p>
+</li>
+<li><p>递推的时候需要遍历集合 S 中的所有节点，找到最小成本路线</p>
+</li>
+<li><p>初始时，集合 S 为空集，节点 i 到节点 1 的成本就是两点之间的距离</p>
+</li>
+<li><p>依次求出 <code>|S|=k</code> 的所有 <code>g(i,S) ，k=0,1...n-1</code></p>
+</li>
+<li><p>当 <code>k&lt;n−1 时，</code>i≠1，1∉S 且 i∉S`</p>
+</li>
+<li><p>当 <code>k=n−1</code> 时，求 <code>g(1,V−{1})</code> ，问题得解</p>
+</li>
+<li><p><code>|S|=k，k=0,1,…n-2</code>时，对于k的每一种取值，g(i,S)中的结点i都有n-1种选择， 即i=2,3,..,n，对应每个i的S的个数为Ckn-2 ，S是V-{1,i}的子集</p>
+<p><img src="assets/image-20250401112600217.png" alt="image-20250401112600217"></img></p>
+</li>
+<li><p>时间复杂度（n^2*2^n)</p>
+</li>
+</ul>
+</li>
+<li><p>例题<img src="assets/2288178-20220726222701194-2072675606.png" alt="image-20220726222650534"></img></p>
+</li>
+</ul>
+<ul>
+<li>deepseek代码：</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">tsp_dynamic_programming</span>(<span class="hljs-params">dist</span>):
+    n = <span class="hljs-built_in">len</span>(dist)
+    m = <span class="hljs-number">1</span> &lt;&lt; n
+    INF = <span class="hljs-built_in">float</span>(<span class="hljs-string">'inf'</span>)
+
+    <span class="hljs-comment"># 初始化dp表，dp[mask][i]表示经过mask表示的城市，最后停在i的最短路径</span>
+    dp = [[INF] * n <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m)]
+    dp[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>  <span class="hljs-comment"># 初始状态：只有城市0被访问，停在0，路径长度为0</span>
+
+    <span class="hljs-comment"># 按子集大小从小到大处理</span>
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n):
+        <span class="hljs-keyword">for</span> S <span class="hljs-keyword">in</span> [mask <span class="hljs-keyword">for</span> mask <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m) <span class="hljs-keyword">if</span> <span class="hljs-built_in">bin</span>(mask).count(<span class="hljs-string">'1'</span>) == k]:
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+                <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> (S &amp; (<span class="hljs-number">1</span> &lt;&lt; i)) <span class="hljs-keyword">or</span> dp[S][i] == INF:
+                    <span class="hljs-keyword">continue</span>  <span class="hljs-comment"># 跳过未访问i或不可达的状态</span>
+                <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+                    <span class="hljs-keyword">if</span> S &amp; (<span class="hljs-number">1</span> &lt;&lt; j):
+                        <span class="hljs-keyword">continue</span>  <span class="hljs-comment"># j已在S中</span>
+                    new_S = S | (<span class="hljs-number">1</span> &lt;&lt; j)
+                    dp[new_S][j] = <span class="hljs-built_in">min</span>(dp[new_S][j], dp[S][i] + dist[i][j])
+
+    <span class="hljs-comment"># 计算最终结果，访问所有城市后回到起点</span>
+    full_S = (<span class="hljs-number">1</span> &lt;&lt; n) - <span class="hljs-number">1</span>
+    min_cost = INF
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n):
+        <span class="hljs-keyword">if</span> dp[full_S][i] + dist[i][<span class="hljs-number">0</span>] &lt; min_cost:
+            min_cost = dp[full_S][i] + dist[i][<span class="hljs-number">0</span>]
+
+    <span class="hljs-keyword">return</span> min_cost
+</code></pre>
+<ul>
+<li>c++:利用掩码表示集合，而非利用vector表示集合</li>
+<li>例如，101表示已经访问0号节点和二号节点</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 自定义哈希函数用于pair&lt;int, int&gt;</span>
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">PairHash</span> {
+    <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T1</span>, <span class="hljs-keyword">class</span> <span class="hljs-title class_">T2</span>&gt;
+    <span class="hljs-function"><span class="hljs-type">size_t</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-type">const</span> pair&lt;T1, T2&gt;&amp; p)</span> <span class="hljs-type">const</span> </span>{
+        <span class="hljs-keyword">auto</span> hash1 = hash&lt;T1&gt;{}(p.first);
+        <span class="hljs-keyword">auto</span> hash2 = hash&lt;T2&gt;{}(p.second);
+        <span class="hljs-keyword">return</span> hash1 ^ (hash2 &lt;&lt; <span class="hljs-number">1</span>);
+    }
+};
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> {
+<span class="hljs-keyword">private</span>:
+    unordered_map&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;, <span class="hljs-type">int</span>, PairHash&gt; memo; <span class="hljs-comment">// 记忆化缓存</span>
+    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; edge;  <span class="hljs-comment">// 邻接矩阵</span>
+    <span class="hljs-type">int</span> n;  <span class="hljs-comment">// 城市总数</span>
+
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">tsp</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; distances)</span> </span>{
+        edge = distances;
+        n = edge.<span class="hljs-built_in">size</span>();
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+        <span class="hljs-comment">// 初始状态：从0号城市出发，已访问集合只有0号城市（掩码为0b1）</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">dfs</span>(<span class="hljs-number">0</span>, <span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">0</span>);
+    }
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> currentCity, <span class="hljs-type">int</span> visitedMask)</span> </span>{
+        <span class="hljs-comment">// 递归终止条件：所有城市已访问，掩码全为1</span>
+        <span class="hljs-keyword">if</span> (visitedMask == (<span class="hljs-number">1</span> &lt;&lt; n) - <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> edge[currentCity][<span class="hljs-number">0</span>]; <span class="hljs-comment">// 返回起点</span>
+        }
+
+        <span class="hljs-comment">// 检查缓存，记忆化搜索</span>
+        <span class="hljs-keyword">auto</span> key = <span class="hljs-built_in">make_pair</span>(currentCity, visitedMask);
+        <span class="hljs-keyword">if</span> (memo.<span class="hljs-built_in">count</span>(key)) {
+            <span class="hljs-keyword">return</span> memo[key];
+        }
+
+        <span class="hljs-type">int</span> minCost = INT_MAX;
+        <span class="hljs-comment">// 遍历所有可能的下一个城市</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> nextCity = <span class="hljs-number">0</span>; nextCity &lt; n; ++nextCity) {
+            <span class="hljs-comment">// 跳过已访问的城市和当前城市，利用位运算</span>
+            <span class="hljs-keyword">if</span> (nextCity == currentCity || (visitedMask &amp; (<span class="hljs-number">1</span> &lt;&lt; nextCity))) {
+                <span class="hljs-keyword">continue</span>;
+            }
+
+            <span class="hljs-comment">// 计算新的访问掩码</span>
+            <span class="hljs-type">int</span> newMask = visitedMask | (<span class="hljs-number">1</span> &lt;&lt; nextCity);
+            <span class="hljs-comment">// 递归计算子问题</span>
+            <span class="hljs-type">int</span> cost = edge[currentCity][nextCity] + <span class="hljs-built_in">dfs</span>(nextCity, newMask);
+            <span class="hljs-comment">// 更新最小值</span>
+            minCost = <span class="hljs-built_in">min</span>(minCost, cost);
+        }
+
+        <span class="hljs-comment">// 缓存结果</span>
+        memo[key] = minCost;
+        <span class="hljs-keyword">return</span> minCost;
+    }
+};
+</code></pre>
+<h2 id="01背包问题"><a name="01背包问题" class="anchor-navigation-ex-anchor" href="#01背包问题"><i class="fa fa-link" aria-hidden="true"></i></a>0/1背包问题</h2>
+<blockquote>
+<p>[!note]</p>
+<p>拓展：</p>
+<p><img src="assets/20210117171307407.png" alt="416.分割等和子集1"></img></p>
+<p>完全背包又是也是01背包稍作变化而来，即：完全背包的物品数量是无限的。</p>
+<p><strong>所以背包问题的理论基础重中之重是01背包，一定要理解透</strong>！</p>
+</blockquote>
+<h3 id="问题_4"><a name="问题_4" class="anchor-navigation-ex-anchor" href="#问题_4"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<ul>
+<li>对于n个物品，容量为M的背包，要求物品或者整件装入背包中,  或者根本不装入，即xi限定只能取0或1值。</li>
+<li>有N件物品和一个最多能被重量为W 的背包。第i件物品的重量是weight[i]，得到的价值是value[i] 。<strong>每件物品只能用一次</strong>，求解将哪些物品装入背包里物品<strong>价值总和最大</strong>。</li>
+</ul>
+<h3 id="解法一：动态规划"><a name="解法一：动态规划" class="anchor-navigation-ex-anchor" href="#解法一：动态规划"><i class="fa fa-link" aria-hidden="true"></i></a>解法一：动态规划</h3>
+<ul>
+<li><p>最优子结构：首先问题具有最优子结构，对于原问题的最优解，可以分为不同的最优子问题，即及有最大收益的子集同时背包重量减去对于最优解少的那个物品重量</p>
+<blockquote>
+<p>对于容量为W<em>W</em>的背包和n<em>n</em>个物品，考虑是否选择第n<em>n</em>个物品：</p>
+<ul>
+<li><strong>不选第n个物品</strong>：问题转化为前n−1个物品在容量<code>W</code>下的最大价值。</li>
+<li><strong>选第n个物品</strong>：问题转化为前n−1个物品在剩余容量<code>W−wn</code>下的最大价值，加上vn。</li>
+</ul>
+</blockquote>
+<p>依此获取动态规划转移方程（递推式）：假设物品依照重量递增排序</p>
+<p>设dp[i][j]表示<strong>前<code>i</code>个</strong>物品在容量<code>j</code>下的最大价值，则：</p>
+<p><code>dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i])</code></p>
+<ul>
+<li><p>初始化：</p>
+<ol>
+<li><p>当容量为0时无论几个物品价值都为0：<code>dp[i][0] = 0</code></p>
+</li>
+<li><pre><code class="lang-cpp"><span class="hljs-comment">//dp[0][j]，即：i为0，存放编号0的物品的时候，各个容量的背包所能存放的最大价值</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = weight[<span class="hljs-number">0</span>]; j &lt;= bagweight; j++) {
+    dp[<span class="hljs-number">0</span>][j] = value[<span class="hljs-number">0</span>];
+}
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>最终的初始化</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 初始化 dp</span>
+vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">dp</span>(weight.<span class="hljs-built_in">size</span>(), <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(bagweight + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>));
+<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = weight[<span class="hljs-number">0</span>]; j &lt;= bagweight; j++) {
+    dp[<span class="hljs-number">0</span>][j] = value[<span class="hljs-number">0</span>];
+}
+</code></pre>
+</li>
+<li><p>先遍历物品，然后遍历背包重量</p>
+</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;weight.<span class="hljs-built_in">size</span>();i++)
+{
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;bagweight;j++)
+    {
+        <span class="hljs-comment">//无法装下物品i，前i-1个物品的最大价值就是当前的最大价值</span>
+        <span class="hljs-keyword">if</span>(j&lt;weight[i])dp[i][j]=dp[i<span class="hljs-number">-1</span>][j];
+        <span class="hljs-keyword">else</span> dp[i][j]=<span class="hljs-built_in">max</span>(dp[i<span class="hljs-number">-1</span>][j],dp[i<span class="hljs-number">-1</span>][j-weight[i]]+value[i]);<span class="hljs-comment">//是否选择物品i</span>
+    }
+}
+</code></pre>
+<ol>
+<li><strong>先遍历背包，再遍历物品</strong></li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;=bagweight;j++)
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;weight.<span class="hljs-built_in">size</span>();i++)
+    {
+        <span class="hljs-keyword">if</span>(j&lt;weight[i])dp[i][j]=dp[i<span class="hljs-number">-1</span>][j];
+        <span class="hljs-keyword">else</span> dp[i][j]=<span class="hljs-built_in">max</span>(dp[i<span class="hljs-number">-1</span>][j],dp[i<span class="hljs-number">-1</span>][j-weight[i]]+value[i]);
+    }
+</code></pre>
+<ul>
+<li>完整代码（注意重量数组不需要排序）</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">max_value</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;weight,vector&lt;<span class="hljs-type">int</span>&gt; value,<span class="hljs-type">int</span> bagweight)</span>
+</span>{
+    <span class="hljs-type">int</span> n = weight.<span class="hljs-built_in">size</span>();
+    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">dp</span>(n, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(bagweight + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = weight[<span class="hljs-number">0</span>]; j &lt;= bagweight; j++)dp[<span class="hljs-number">0</span>][j] = value[<span class="hljs-number">0</span>];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt;= bagweight; j++)
+            <span class="hljs-keyword">if</span> (j &lt; weight[i])dp[i][j] = dp[i - <span class="hljs-number">1</span>][j];
+            <span class="hljs-keyword">else</span> dp[i][j] = <span class="hljs-built_in">max</span>(dp[i - <span class="hljs-number">1</span>][j], dp[i - <span class="hljs-number">1</span>][j - weight[i]] + value[i]);
+
+    <span class="hljs-keyword">return</span> dp[n - <span class="hljs-number">1</span>][bagweight];
+}
+</code></pre>
+<h3 id="解法二：记忆化搜索"><a name="解法二：记忆化搜索" class="anchor-navigation-ex-anchor" href="#解法二：记忆化搜索"><i class="fa fa-link" aria-hidden="true"></i></a>解法二：记忆化搜索</h3>
+<ul>
+<li>在动态规划即自底而上的动态规划可以推出自顶而下的动态规划即记忆化搜索</li>
+<li>边界条件剩余空间小于当前物品重量或者到达最后一个物品</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">max_value</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; dp,<span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt;&amp;weight,<span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt;&amp; value,<span class="hljs-type">int</span> i,<span class="hljs-type">int</span> now_weight)</span>
+</span>{
+    <span class="hljs-comment">//已经记录了子问题的解</span>
+    <span class="hljs-keyword">if</span> (dp[i][now_weight] != <span class="hljs-number">-1</span>)<span class="hljs-keyword">return</span> dp[i][now_weight];
+
+    <span class="hljs-comment">//最后一个物品能装就装</span>
+    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>)<span class="hljs-keyword">return</span> dp[i][now_weight] = weight[<span class="hljs-number">0</span>] &lt;= now_weight ? value[<span class="hljs-number">0</span>] : <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">//根据物品重量判断是否能装下，并判断装的利润大还是不装</span>
+    <span class="hljs-keyword">return</span> dp[i][now_weight]=weight[i] &gt; now_weight ? <span class="hljs-built_in">max_value</span>(dp, weight, value, i - <span class="hljs-number">1</span>, now_weight) : <span class="hljs-built_in">max</span>(<span class="hljs-built_in">max_value</span>(dp, weight, value, i - <span class="hljs-number">1</span>, now_weight), <span class="hljs-built_in">max_value</span>(dp, weight, value, i - <span class="hljs-number">1</span>, now_weight - weight[i]) + value[i]);
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> n, bagweight;
+    cin &gt;&gt; n &gt;&gt; bagweight;
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">weight</span><span class="hljs-params">(n)</span>, <span class="hljs-title">value</span><span class="hljs-params">(n)</span></span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)cin &gt;&gt; weight[i];
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)cin &gt;&gt; value[i];
+
+    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">dp</span>(n, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(bagweight + <span class="hljs-number">1</span>, <span class="hljs-number">-1</span>));
+    cout &lt;&lt; <span class="hljs-built_in">max_value</span>(dp, weight, value, n - <span class="hljs-number">1</span>, bagweight) &lt;&lt; endl;
+}
+</code></pre>
+<h3 id="解法三：序偶对法"><a name="解法三：序偶对法" class="anchor-navigation-ex-anchor" href="#解法三：序偶对法"><i class="fa fa-link" aria-hidden="true"></i></a>解法三：序偶对法</h3>
+<ul>
+<li>支配规则:已知<code>(Pj,Wj)∈Si-1，(Pk,Wk)∈Si1</code>，并且在<code>Wj≥Wk&amp;&amp;Pj≤Pk</code>， 那么序偶(Pj,Wj)被放弃，称为(Pk,Wk)支配(Pj,Wj)。</li>
+</ul>
+<p>步骤：</p>
+<blockquote>
+<ol>
+<li>S0=<code>{(0,0)}</code></li>
+<li><code>Si1= {(p,w)|(p-pi,w-wi) ∈Si-1}</code></li>
+<li>在支配规则下将Si-1和Si1归并成Si。</li>
+<li>在生成Si时, 将W&gt;M的那些序偶(p,w)去掉, 它们不能导出满足约束 条件的可行解。即装不下的序偶对</li>
+<li>Sn中最末序偶对的P值，是问题的最优解</li>
+</ol>
+</blockquote>
+<p><img src="assets/image-20250417191325705.png" alt="image-20250417191325705"></img></p>
+<p>空间复杂度是<code>O(2^n)</code></p>
+<p>时间复杂度为 <code>O(min{2^n, n∑1≤j≤n(Pj) , nM})</code>，所以最坏情况为指数级</p>
+<p>最坏情况，即集合里序偶对不可支配性，每次合并时无法通过支配规则剔除一些序偶对</p>
+<p>例如：每阶段序偶集合大小满足 ∣Si∣=2^i，需要确保每次处理物品时，新增的序偶均不被已有序偶支配，从而无法合并。</p>
+<blockquote>
+<ul>
+<li><strong>物品数量</strong>：<em>n</em> 件。</li>
+<li><strong>重量与效益</strong>：物品 i 的重量 <code>wi=2i−1</code>，效益 <code>pi=2i−1</code>。</li>
+<li><strong>背包容量</strong>：<code>M=2^n−1</code>（足够大以容纳所有可能的组合）</li>
+</ul>
+</blockquote>
+<h2 id="权值之和最大的兼容活动子集"><a name="权值之和最大的兼容活动子集" class="anchor-navigation-ex-anchor" href="#权值之和最大的兼容活动子集"><i class="fa fa-link" aria-hidden="true"></i></a>权值之和最大的兼容活动子集</h2>
+<p>每个活动或者说作业ai除了开始和结束时间外，还有一个值v作为权值或者收益值,。目 求<strong>权值之和最大</strong>的兼容活动子集。也就是选择一个活动集合 A ，使得 <code>∑Vk(ak∈A)</code> 最大化。设计一个多项式时间的算法求解该问题</p>
+<ul>
+<li>解答：每个活动新增了权值属性，而且原问题为求权值总和最大的活动子集，我们无法再用贪心策略求解，因为即便参加活动多活动权值总和未必大，所以本题只能用<strong>动态规划</strong>求解</li>
+</ul>
+<h3 id="方法一：动态规划（区间两个端点都不固定）"><a name="方法一：动态规划（区间两个端点都不固定）" class="anchor-navigation-ex-anchor" href="#方法一：动态规划（区间两个端点都不固定）"><i class="fa fa-link" aria-hidden="true"></i></a><strong>方法一：动态规划（区间两个端点都不固定）</strong></h3>
+<ol>
+<li><p>所有活动已经按照<strong>结束时间从小到大</strong>排序</p>
+</li>
+<li><p>定义 Aij 为 Sij 中权值总和最大且相互兼容的活动子集，定义 <strong>val[i,j] 为子问题 Sij 的最大权值总和</strong>，则求解 val[i,j] 的递归式如下</p>
+<p><img src="assets/image-20250331193753263.png" alt="image-20250331193753263"></img></p>
+</li>
+</ol>
+<ul>
+<li>构造两个<strong>虚拟活动</strong> a0 和 an+1 ，活动 a0 的结束时间 f0=0 ，活动 an+1 的开始时间 sn+1=+∞ </li>
+<li>原问题转化为求子问题 <strong>S0,n+1 中权值总和最大且相互兼容的活动子集 A0,n+1</strong> 。</li>
+<li>构造 Aij 权值总和 val[i,j] 表格 val[0:n+1,0:n+1] 和对应的 <strong>act[i,j] 选择表格</strong> act[0:n+1,0:n+1] 。</li>
+</ul>
+<p>MAX-VALUE-ACTIVITY-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">MAX-VALUE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let val[<span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>, <span class="hljs-number">0</span> : n + <span class="hljs-number">1</span>] be <span class="hljs-keyword">new</span> tablbs
+    <span class="hljs-comment">//依旧是开区间，（i，i）和（i，i+1)都没有元素</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n
+        val[i, i] = <span class="hljs-number">0</span>
+        val[i, i + <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+    val[n + <span class="hljs-number">1</span>, n + <span class="hljs-number">1</span>] = <span class="hljs-number">0</span>
+
+    <span class="hljs-comment">//区间长度</span>
+    <span class="hljs-keyword">for</span> l = <span class="hljs-number">2</span> to n + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> to n - l + <span class="hljs-number">1</span>
+        j = i + l
+        val[i, j] = <span class="hljs-number">0</span>
+        k = j - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">while</span> f[i] &lt; f[k]
+            <span class="hljs-keyword">if</span> f[i] ≤ s[k] <span class="hljs-keyword">and</span> f[k] ≤ s[j] <span class="hljs-keyword">and</span> val[i, k] + val[k, j] + v_k &gt; val[i, j]
+                val[i, j] = val[i, k] + val[k, j] + v[k]
+                act[i, j] = k
+            k = k - <span class="hljs-number">1</span>
+    print <span class="hljs-string">"A maximum-value set of mutually compatible activities has value"</span> val[<span class="hljs-number">0</span>, n + <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"The set contains"</span>
+    PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, <span class="hljs-number">0</span>, n + <span class="hljs-number">1</span>)
+
+PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, i, j)
+    <span class="hljs-keyword">if</span> val[i, j] &gt; <span class="hljs-number">0</span>
+        k = act[i, j]
+        print k
+        PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, i, k)
+        PRINT-<span class="hljs-built_in">ACTIVITIES</span>(val, act, k, j)
+</code></pre>
+<p>MAX-VALUE-ACTIVITY-SELECTOR的运行时间为 O(n^3) 。</p>
+<h3 id="方法二：动态规划（区间一个端点固定，另一个端点不固定）"><a name="方法二：动态规划（区间一个端点固定，另一个端点不固定）" class="anchor-navigation-ex-anchor" href="#方法二：动态规划（区间一个端点固定，另一个端点不固定）"><i class="fa fa-link" aria-hidden="true"></i></a>方法二：动态规划（区间一个端点固定，另一个端点不固定）</h3>
+<ul>
+<li>需要从单端开始拓展就行，构造数组 val[0,n] </li>
+<li>构造一个虚拟活动 a0 ，活动 a0 的结束时间 ，f0=0，v0=0 </li>
+<li>val[i] 表示前 i 个活动能够取得的最大权值总和，即子问题 S0,i 中权值总和最大且相互兼容的活动子集 A0,i 的权值总和，对应的活动序列为 act[i] 。</li>
+<li>求解 val[i] 的递归式如下：</li>
+</ul>
+<p><img src="assets/image-20250331194951540.png" alt="image-20250331194951540"></img></p>
+<p>当 i≠0 时， val[i] 在<strong>选择第 i 个活动 val[k]+vi</strong> （ k 为结束时间小于等于且最接近 si 的活动下标）和<strong>不选择第 i 个活动 val[i−1]</strong> 之间取最大值</p>
+<p>MAX-VALUE-ACTIVITY-SELECTOR伪代码如下：</p>
+<pre><code class="lang-cpp">MAX-VALUE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let val[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> arrays
+    <span class="hljs-comment">//第一个虚拟活动价值为0</span>
+    val[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        k = i - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">while</span> k &gt; <span class="hljs-number">0</span>
+            <span class="hljs-keyword">if</span> f[k] ≤ s[i]
+                <span class="hljs-keyword">break</span>
+            k = k - <span class="hljs-number">1</span>
+        <span class="hljs-comment">//前k活动加上活动i收益大于不选则i的收益</span>
+        <span class="hljs-keyword">if</span> val[k] + v[i] &gt; val[i - <span class="hljs-number">1</span>]
+            val[i] = val[k] + v[i]
+            act[i] = act[k]
+            act[i] = act[i] ∪ {i}
+        <span class="hljs-keyword">else</span> 
+            val[i] = val[i - <span class="hljs-number">1</span>]
+            act[i] = act[i - <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"A maximum-value set of mutually compatible activities has value"</span> val[n]
+    print <span class="hljs-string">"The set contains"</span>
+    print act[n]
+</code></pre>
+<p>MAX-VALUE-ACTIVITY-SELECTOR的运行时间为 O(n^2) 。</p>
+<h3 id="方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化"><a name="方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化" class="anchor-navigation-ex-anchor" href="#方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化"><i class="fa fa-link" aria-hidden="true"></i></a>方法三：动态规划（区间一个端点固定，另一个端点不固定）二分查找优化</h3>
+<ul>
+<li>可以看出方法二在查找第一个结束时间小于等于且最接近 si 的活动下标类似于求左边界，即f[k]&lt;=s[i]的最大下标</li>
+<li>利用二分查找或者STL中的upper_bound</li>
+</ul>
+<pre><code class="lang-cpp">MAX-VALUE-ACTIVITY-<span class="hljs-built_in">SELECTOR</span>(s, f, v, n)
+    let val[<span class="hljs-number">0</span> : n] <span class="hljs-keyword">and</span> act[<span class="hljs-number">0</span> : n] be <span class="hljs-keyword">new</span> arrays
+    val[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span> to n
+        l = <span class="hljs-number">1</span>
+        r = n - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">while</span> l ≤ r
+            mid = l+((r-l)&gt;&gt;<span class="hljs-number">1</span>)
+            <span class="hljs-keyword">if</span> f[mid] ≤ s[i]
+                l = mid + <span class="hljs-number">1</span>
+            <span class="hljs-keyword">else</span>
+                r = mid - <span class="hljs-number">1</span>
+        k = r
+        <span class="hljs-keyword">if</span> val[k] + v[i] &gt; val[i - <span class="hljs-number">1</span>]
+            val[i] = val[k] + v[i]
+            act[i] = act[k]
+            act[i] = act[i] ∪ {i}
+        <span class="hljs-keyword">else</span> 
+            val[i] = val[i - <span class="hljs-number">1</span>]
+            act[i] = act[i - <span class="hljs-number">1</span>]
+    print <span class="hljs-string">"A maximum-value set of mutually compatible activities has value"</span> val[n]
+    print <span class="hljs-string">"The set contains"</span>
+    print act[n]
+</code></pre>
+<p>MAX-VALUE-ACTIVITY-SELECTOR的运行时间为 O(nlg⁡n) 。</p>
+<hr></hr>
+<h2 id="可靠性设计问题"><a name="可靠性设计问题" class="anchor-navigation-ex-anchor" href="#可靠性设计问题"><i class="fa fa-link" aria-hidden="true"></i></a>可靠性设计问题</h2>
+<h3 id="问题_5"><a name="问题_5" class="anchor-navigation-ex-anchor" href="#问题_5"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<ul>
+<li>设计一个系统由若干个以串联方式连接在一起的不同设备(Di)所组成。</li>
+<li>设ri是设备Di正常运转的概率，即可靠性。</li>
+<li>在最大成本c的约束下，求整个系统的最大化可靠性（各个可靠性的乘积）</li>
+<li>已知系统中每种设备至少有一台，设cj是一台设备j的成本，j允 许配置的台数至多为：<code>uj=  [c+cj-∑ck)/cj]</code></li>
+</ul>
+<h3 id="解答_4"><a name="解答_4" class="anchor-navigation-ex-anchor" href="#解答_4"><i class="fa fa-link" aria-hidden="true"></i></a>解答</h3>
+<p><img src="assets/image-20250417192211121.png" alt="image-20250417192211121"></img></p>
+<ul>
+<li>支配规则:对于(f1,x1)和(f2,x2)，当且仅当<code>f1≥f2而x1≤x2</code>时， (f1,x1)支配(f2,x2)。 (f2,x2)从序偶集合中舍去。</li>
+</ul>
+<p><img src="assets/image-20250417192632635.png" alt="image-20250417192632635"></img></p>
+<p><img src="assets/image-20250417192558736.png" alt="image-20250417192558736"></img></p>
+<ul>
+<li>例子</li>
+</ul>
+<p><img src="assets/image-20250423164600970.png" alt="image-20250423164600970"></img></p>
+<p><img src="assets/image-20250423164616867.png" alt="image-20250423164616867"></img></p>
+<p><img src="assets/image-20250423164625685.png" alt="image-20250423164625685"></img></p>
+<ul>
+<li>deepseek</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">reliability_design</span>(<span class="hljs-params">n, c, c_list, phi_list, u_list</span>):
+    <span class="hljs-comment"># 初始化动态规划数组</span>
+    dp = [<span class="hljs-number">0.0</span>] * (c + <span class="hljs-number">1</span>)
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">1.0</span>  <span class="hljs-comment"># 前0级，成本0的可靠性为1</span>
+
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):  <span class="hljs-comment"># 处理第1级到第n级</span>
+        current_c = c_list[i]
+        current_phi = phi_list[i]
+        max_u = u_list[i]
+        temp = [<span class="hljs-number">0.0</span>] * (c + <span class="hljs-number">1</span>)
+
+        <span class="hljs-keyword">for</span> s_prev <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(c + <span class="hljs-number">1</span>):
+            <span class="hljs-keyword">if</span> dp[s_prev] == <span class="hljs-number">0</span>:
+                <span class="hljs-keyword">continue</span>
+            <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, max_u + <span class="hljs-number">1</span>):
+                cost = m * current_c
+                s_current = s_prev + cost
+                <span class="hljs-keyword">if</span> s_current &gt; c:
+                    <span class="hljs-keyword">continue</span>
+                reliability = dp[s_prev] * current_phi(m)
+                <span class="hljs-keyword">if</span> reliability &gt; temp[s_current]:
+                    temp[s_current] = reliability
+
+        dp = temp.copy()
+
+    max_reliability = <span class="hljs-built_in">max</span>(dp)
+    <span class="hljs-keyword">return</span> max_reliability
+</code></pre>
+<hr></hr>
+<h2 id="流水线调度问题"><a name="流水线调度问题" class="anchor-navigation-ex-anchor" href="#流水线调度问题"><i class="fa fa-link" aria-hidden="true"></i></a>流水线调度问题</h2>
+<h3 id="问题_6"><a name="问题_6" class="anchor-navigation-ex-anchor" href="#问题_6"><i class="fa fa-link" aria-hidden="true"></i></a>问题</h3>
+<ul>
+<li>处理一个作业通常需要若干个不同的任务。 </li>
+<li>假设有n个作业，每个作业<code>i</code>要求执行<code>m</code>个任务：<code>T1i,T2i,…Tmi,1≤i≤n</code>。 </li>
+<li>任务<code>Tji</code>只能在设备<code>Pj</code>上执行，<code>1≤j≤m</code>。 </li>
+<li>对于任一作业i，在任务<code>Tj-1,i</code>没完成以前，不能对任务<code>Tji</code>开始处理。 </li>
+<li>同一台设备在任何时刻只能处理一个任务</li>
+</ul>
+<p><img src="assets/image-20250423170952668.png" alt="image-20250423170952668" style="zoom:50%;"></img></p>
+<blockquote>
+<p>[!note]</p>
+<p>假设完成任务Tji所要求的时间是<code>tji，1≤j≤m，1≤i≤n</code>，那么如何将 这n×m个任务分配给这m台设备，才能使这n个作业在以上要求下顺利完成呢？</p>
+<p>只考虑非抢先式调度：当前任务一旦被设备处理就不能被中断，直到完成</p>
+<p>这里只讨论m=2 时，获取OFT（非抢先调度下最优时间）调度这一特殊情况。</p>
+</blockquote>
+<ul>
+<li>在m=2的OFT调度问题中，每个作业只有两个任务。为简便起见，令<code>ai表示 t1i,bi表示t2i</code>，假定<code>ai≠0，1≤i≤n</code>。</li>
+<li>每个任务都应在<strong>最早的可能时间开始执行</strong>，排列在后面的作业可以先被执行</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>最优子结构：在给出了这个排列的第一个作业后，剩下的排列相对于这两台设备在完成第一个作业时所处的状态而言是最优的</p>
+</blockquote>
+<ul>
+<li>令<code>t</code>表示设备P1完成任务后，设备P2还需要花费的执行时间，即后继任务在 P1可用后，还需要等待<code>t</code>时间才可以使用P2。</li>
+<li>设<code>g(S,t)</code>是上述t下作业集合S的最优调度长度</li>
+</ul>
+<p><img src="assets/image-20250423172138826.png" alt="image-20250423172138826"></img></p>
+<ul>
+<li>min不等式</li>
+</ul>
+<p><img src="assets/image-20250423172513241.png" alt="image-20250423172513241"></img></p>
+<ul>
+<li>对于对于作业i和j，当ai或bj最小时，min不等式成立，即先i后j处理作业长度更短</li>
+<li>轮换法：若一个作业调度中，<strong>每一对相邻的作业都满足min不等式关系</strong>，则获得一个最 优长度，该调度也是一个最优调度</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>最后得到最优调度规则</p>
+<ul>
+<li>把全部ai和bj非降次序排序后，考察该序列： </li>
+<li>如果下一个元素是aj且作业j还没调度，那么在还没使用的<strong>最左</strong>位置调度作业j；</li>
+<li>如果下一个元素是bj且作业j还没调度，那么在还没使用的<strong>最右</strong>位置调度作业j； </li>
+<li>如果已经调度了作业j，则考查下一个元素，直到n个作业都分配完为止。</li>
+</ul>
+<p>该规则也适用于存在<code>ai=0</code>的作业集合。</p>
+<p>通俗理解：就是如果一个作业的第一个任务即<code>a</code>小于<code>b</code>则尽量往左边靠，先执行使后面的作业可以提前。相反如果<code>a</code>大于<code>b</code>，则放在后面，后执行以便减少前面作业<code>a</code>和<code>b</code>任务的间隔时间</p>
+</blockquote>
+<ul>
+<li>例题：</li>
+</ul>
+<p><img src="assets/image-20250423172751092.png" alt="image-20250423172751092"></img></p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">optimal_job_scheduling</span>(<span class="hljs-params">jobs</span>):
+    <span class="hljs-string">"""
+    根据最优调度规则生成作业顺序
+    :param jobs: 列表，每个元素为元组 (a_i, b_i) 表示第i个作业的参数
+    :return: 最优调度顺序的作业索引列表
+    """</span>
+    n = <span class="hljs-built_in">len</span>(jobs)
+    elements = []
+
+    <span class="hljs-comment"># 生成包含所有a和b元素的列表，并标记类型和作业索引</span>
+    <span class="hljs-keyword">for</span> job_id <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
+        a, b = jobs[job_id]
+        elements.append((a, <span class="hljs-string">'a'</span>, job_id))
+        elements.append((b, <span class="hljs-string">'b'</span>, job_id))
+
+    <span class="hljs-comment"># 按照元素值升序排序</span>
+    elements.sort(key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">0</span>])
+
+    schedule = [<span class="hljs-literal">None</span>] * n  <span class="hljs-comment"># 初始化调度结果容器</span>
+    left, right = <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>  <span class="hljs-comment"># 左右指针</span>
+    scheduled = <span class="hljs-built_in">set</span>()       <span class="hljs-comment"># 记录已调度的作业</span>
+
+    <span class="hljs-keyword">for</span> elem <span class="hljs-keyword">in</span> elements:
+        value, elem_type, job_id = elem
+
+        <span class="hljs-comment"># 跳过已调度的作业</span>
+        <span class="hljs-keyword">if</span> job_id <span class="hljs-keyword">in</span> scheduled:
+            <span class="hljs-keyword">continue</span>
+
+        <span class="hljs-comment"># 处理a类型元素（放在最左可用位置）</span>
+        <span class="hljs-keyword">if</span> elem_type == <span class="hljs-string">'a'</span>:
+            schedule[left] = job_id
+            left += <span class="hljs-number">1</span>
+        <span class="hljs-comment"># 处理b类型元素（放在最右可用位置）</span>
+        <span class="hljs-keyword">else</span>:
+            schedule[right] = job_id
+            right -= <span class="hljs-number">1</span>
+
+        scheduled.add(job_id)
+
+    <span class="hljs-keyword">return</span> schedule
+</code></pre>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.277Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 15_动态规划</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04_分治策略.html" class="navigation navigation-prev " aria-label="Previous page: 04_分治策略">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="16_贪心算法.html" class="navigation navigation-next " aria-label="Next page: 16_贪心算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"15_动态规划","level":"1.3.1.5","depth":3,"next":{"title":"16_贪心算法","level":"1.3.1.6","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/16_贪心算法.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/16_贪心算法.md","articles":[]},"previous":{"title":"04_分治策略","level":"1.3.1.4","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/04_分治策略.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/04_分治策略.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/DataStructure_and_Algorithms/Algorithms/15_动态规划.md","mtime":"2025-09-07T09:41:17.123Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2118 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>09_设备与IO管理 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="review.html" />
+    
+    
+    <link rel="prev" href="08_文件与文件系统.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="01_概论.html">
+            
+                <a href="01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="02_进程管理.html">
+            
+                <a href="02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="03_中断和处理器调度.html">
+            
+                <a href="03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="04_互斥同步与通讯.html">
+            
+                <a href="04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="05_死锁与饥饿.html">
+            
+                <a href="05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="06_主存管理.html">
+            
+                <a href="06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="07_虚拟存储器管理.html">
+            
+                <a href="07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="08_文件与文件系统.html">
+            
+                <a href="08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.9" data-path="09_设备与IO管理.html">
+            
+                <a href="09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="review.html">
+            
+                <a href="review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >09_设备与IO管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#设备与io管理"><b></b>设备与IO管理</a></li><ul><li><span class="title-icon "></span><a href="#设备管理的功能"><b></b>设备管理的功能</a></li><ul><li><span class="title-icon "></span><a href="#设备管理过程"><b></b>设备管理过程</a></li></ul><li><span class="title-icon "></span><a href="#设备的分类"><b></b>设备的分类</a></li><li><span class="title-icon "></span><a href="#设备的物理特性"><b></b>设备的物理特性</a></li><ul><li><span class="title-icon "></span><a href="#磁带的物理特性"><b></b>磁带的物理特性</a></li></ul><li><span class="title-icon "></span><a href="#io传输方式"><b></b>IO传输方式</a></li><ul><li><span class="title-icon "></span><a href="#程序控制查询"><b></b>程序控制查询</a></li><li><span class="title-icon "></span><a href="#中断驱动"><b></b>中断驱动</a></li><li><span class="title-icon "></span><a href="#内存映射"><b></b>内存映射</a></li><li><span class="title-icon "></span><a href="#dma方式"><b></b>DMA方式</a></li><li><span class="title-icon "></span><a href="#通道方式"><b></b>通道方式</a></li><li><span class="title-icon "></span><a href="#io设备控制器（接口）"><b></b>IO设备控制器（接口）</a></li></ul><li><span class="title-icon "></span><a href="#io软件的层次"><b></b>IO软件的层次</a></li><ul><li><span class="title-icon "></span><a href="#io软件设计的基本思想"><b></b>IO软件设计的基本思想</a></li><li><span class="title-icon "></span><a href="#用户io软件"><b></b>用户IO软件</a></li><li><span class="title-icon "></span><a href="#与设备无关的系统软件"><b></b>与设备无关的系统软件</a></li><li><span class="title-icon "></span><a href="#设备驱动程序"><b></b>设备驱动程序</a></li><li><span class="title-icon "></span><a href="#中断处理程序"><b></b>中断处理程序</a></li><li><span class="title-icon "></span><a href="#具体过程"><b></b>具体过程</a></li></ul><li><span class="title-icon "></span><a href="#设备的分配与去配"><b></b>设备的分配与去配</a></li><ul><li><span class="title-icon "></span><a href="#相关数据结构"><b></b>相关数据结构</a></li><li><span class="title-icon "></span><a href="#独占设备的分配与去配"><b></b>独占设备的分配与去配</a></li><li><span class="title-icon "></span><a href="#共享设备的分配与去配"><b></b>共享设备的分配与去配</a></li></ul><li><span class="title-icon "></span><a href="#设备驱动"><b></b>设备驱动</a></li><ul><li><span class="title-icon "></span><a href="#设备驱动特点"><b></b>设备驱动特点</a></li><li><span class="title-icon "></span><a href="#设备驱动过程"><b></b>设备驱动过程</a></li></ul><li><span class="title-icon "></span><a href="#设备调度"><b></b>设备调度</a></li><ul><li><span class="title-icon "></span><a href="#磁盘io参数"><b></b>磁盘IO参数</a></li><li><span class="title-icon "></span><a href="#磁头引臂调度"><b></b>磁头引臂调度</a></li></ul><li><span class="title-icon "></span><a href="#缓冲与缓存"><b></b>缓冲与缓存</a></li><ul><li><span class="title-icon "></span><a href="#缓冲"><b></b>缓冲</a></li><li><span class="title-icon "></span><a href="#公共缓冲的管理"><b></b>公共缓冲的管理</a></li><li><span class="title-icon "></span><a href="#高速缓存"><b></b>高速缓存</a></li></ul></ul></ul></div><a href="#设备与io管理" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#设备与io管理">设备与IO管理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#设备管理的功能">设备管理的功能</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#设备管理过程">设备管理过程</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#设备的分类">设备的分类</a><i></i></div></li>
+<li><div><a href="#设备的物理特性">设备的物理特性</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#磁带的物理特性">磁带的物理特性</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#io传输方式">IO传输方式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#程序控制查询">程序控制查询</a><i></i></div></li>
+<li><div><a href="#中断驱动">中断驱动</a><i></i></div></li>
+<li><div><a href="#内存映射">内存映射</a><i></i></div></li>
+<li><div><a href="#dma方式">DMA方式</a><i></i></div></li>
+<li><div><a href="#通道方式">通道方式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#通道">通道</a><i></i></div></li>
+<li><div><a href="#通道在io设备的作用">通道在IO设备的作用</a><i></i></div></li>
+<li><div><a href="#通道类型">通道类型</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#io设备控制器（接口）">IO设备控制器（接口）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#io端口">IO端口</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#io软件的层次">IO软件的层次</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#io软件设计的基本思想">IO软件设计的基本思想</a><i></i></div></li>
+<li><div><a href="#用户io软件">用户IO软件</a><i></i></div></li>
+<li><div><a href="#与设备无关的系统软件">与设备无关的系统软件</a><i></i></div></li>
+<li><div><a href="#设备驱动程序">设备驱动程序</a><i></i></div></li>
+<li><div><a href="#中断处理程序">中断处理程序</a><i></i></div></li>
+<li><div><a href="#具体过程">具体过程</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#设备的分配与去配">设备的分配与去配</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#相关数据结构">相关数据结构</a><i></i></div></li>
+<li><div><a href="#独占设备的分配与去配">独占设备的分配与去配</a><i></i></div></li>
+<li><div><a href="#共享设备的分配与去配">共享设备的分配与去配</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#有通道情形">有通道情形</a><i></i></div></li>
+<li><div><a href="#无通道情形">无通道情形</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#设备驱动">设备驱动</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#设备驱动特点">设备驱动特点</a><i></i></div></li>
+<li><div><a href="#设备驱动过程">设备驱动过程</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#设备调度">设备调度</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#磁盘io参数">磁盘IO参数</a><i></i></div></li>
+<li><div><a href="#磁头引臂调度">磁头引臂调度</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#先到先服务（fcfs）">先到先服务（FCFS）</a><i></i></div></li>
+<li><div><a href="#最短寻找时间优先（sstf">最短寻找时间优先（SSTF)</a><i></i></div></li>
+<li><div><a href="#扫描算法（电梯算法）">扫描算法（电梯算法）</a><i></i></div></li>
+<li><div><a href="#循环扫描算法">循环扫描算法</a><i></i></div></li>
+<li><div><a href="#n-step-scan（n步扫描）">N-step SCAN（N步扫描）</a><i></i></div></li>
+<li><div><a href="#fscan（freezing-scan，冻结扫描">FSCAN（Freezing SCAN，冻结扫描)</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#缓冲与缓存">缓冲与缓存</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#缓冲">缓冲</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#缓冲的分类">缓冲的分类</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#公共缓冲的管理">公共缓冲的管理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#单缓冲">单缓冲</a><i></i></div></li>
+<li><div><a href="#双缓冲">双缓冲</a><i></i></div></li>
+<li><div><a href="#循环缓冲">循环缓冲</a><i></i></div></li>
+<li><div><a href="#缓冲池">缓冲池</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#高速缓存">高速缓存</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="设备与io管理"><a name="设备与io管理" class="anchor-navigation-ex-anchor" href="#设备与io管理"><i class="fa fa-link" aria-hidden="true"></i></a>设备与IO管理</h1>
+<h2 id="设备管理的功能"><a name="设备管理的功能" class="anchor-navigation-ex-anchor" href="#设备管理的功能"><i class="fa fa-link" aria-hidden="true"></i></a>设备管理的功能</h2>
+<ol>
+<li><p>设备管理的目标</p>
+<blockquote>
+<ul>
+<li>合理的<strong>分配和调度</strong>设备资源</li>
+<li>负责设备<strong>驱动和中断</strong>处理</li>
+</ul>
+</blockquote>
+</li>
+<li><p>现代设备管理采用缓冲和并行技术</p>
+<blockquote>
+<ul>
+<li>处理器远快于设备</li>
+<li>设备与CPU，以及设备与设备并行</li>
+</ul>
+</blockquote>
+</li>
+<li><p>虚拟设备（假脱机技术，SPOOLing技术）</p>
+<blockquote>
+<p>利用共享设备来构造数量较多、速度较快的虚拟设备，或者将独占性设备利用代理进程变为共享性设备</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="设备管理过程"><a name="设备管理过程" class="anchor-navigation-ex-anchor" href="#设备管理过程"><i class="fa fa-link" aria-hidden="true"></i></a>设备管理过程</h3>
+<ul>
+<li>设备分配与去配<ul>
+<li>设备分配：将设备分配到哪一个要求该类设备的<strong>进程</strong></li>
+<li>设备去配：收回由某占有资源的进程处的设备资源</li>
+</ul>
+</li>
+<li>设备处理：设备驱动，实现I/O 进程与设备控制器之间的通信</li>
+<li>缓冲管理：提高 CPU 和 设备的并行度，尽量减少中断</li>
+</ul>
+<h2 id="设备的分类"><a name="设备的分类" class="anchor-navigation-ex-anchor" href="#设备的分类"><i class="fa fa-link" aria-hidden="true"></i></a>设备的分类</h2>
+<ul>
+<li>交互对象分类：人机交互（显示器，键盘鼠标），与CPU等交互（磁盘磁带），计算机间通信（网卡）</li>
+<li>交互方向：输入（键盘），输出（显示器），双向（软硬盘，网卡）</li>
+<li>外设特性：使用特征（存储，输入输出），数据传输率，信息组织特征（字符，块，网络）</li>
+<li>用途：存储，IO，网络</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>数据传输基本单位：块型设备（磁盘磁带光盘），字符型设备（输入输出通信），时钟和显示器</p>
+</blockquote>
+<ul>
+<li><p>从资源管理角度</p>
+<blockquote>
+<ul>
+<li>共享型设备（块型）<ul>
+<li>多个进程的IO操作以块交叉</li>
+<li>无需申请和释放设备</li>
+<li>包括除<strong>磁带机</strong>之外的所有块型设备</li>
+<li>属于<strong>有结构</strong>设备，传输速度高，可寻址</li>
+</ul>
+</li>
+<li>独占型设备（块型）<ul>
+<li>多个进程的IO操作以块为单位不能交叉</li>
+<li>只能顺序访问（磁带机）</li>
+</ul>
+</li>
+<li>独占型设备（字符型）<ul>
+<li>多个进程的IO操作以字符为单位不能交叉</li>
+<li>使用时，向系统申请。时常采用<strong>中断I/O方式</strong></li>
+<li>属于<strong>无结构</strong>设备，传输速率低，不可寻址</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="设备的物理特性"><a name="设备的物理特性" class="anchor-navigation-ex-anchor" href="#设备的物理特性"><i class="fa fa-link" aria-hidden="true"></i></a>设备的物理特性</h2>
+<ul>
+<li><p>字符型设备的物理特性</p>
+<blockquote>
+<p>每传送一个字符发生一次I/O中断。如打印机、键盘、鼠标等</p>
+<p>低速、不可寻址，在输入/输出时常采用<strong>中断驱动</strong>方式</p>
+<p><strong>独占型设备</strong>，为此需要提供打开和关闭操作，实现<strong>互斥</strong></p>
+</blockquote>
+</li>
+<li><p>存储型设备的物理特性</p>
+<blockquote>
+<p><strong>以块为单位</strong>进行数据传送，如磁盘。每传输完一块，发生一次中断</p>
+<p>高速、可寻址，磁盘设备的I/O常采用<strong>DAM</strong>方式</p>
+<p>块设备接口将磁盘的所有<strong>扇区从0到n-1依次编码</strong>，这样将三维结构变成一种线性序列</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="磁带的物理特性"><a name="磁带的物理特性" class="anchor-navigation-ex-anchor" href="#磁带的物理特性"><i class="fa fa-link" aria-hidden="true"></i></a>磁带的物理特性</h3>
+<ul>
+<li>磁带的物理特性：<strong>启停设备</strong></li>
+</ul>
+<p><img src="assets/image-20250512085449457.png" alt="image-20250512085449457"></img></p>
+<p>一维地址，顺序结构（一个文件占若干连续块）</p>
+<h2 id="io传输方式"><a name="io传输方式" class="anchor-navigation-ex-anchor" href="#io传输方式"><i class="fa fa-link" aria-hidden="true"></i></a>IO传输方式</h2>
+<h3 id="程序控制查询"><a name="程序控制查询" class="anchor-navigation-ex-anchor" href="#程序控制查询"><i class="fa fa-link" aria-hidden="true"></i></a>程序控制查询</h3>
+<ul>
+<li><strong>探询</strong>(polling）又称程序控制输入输出，是最早的输入输出控制<ul>
+<li>硬件提供输入输出指令</li>
+<li>内存操作指令：IO设备与内存统一编址</li>
+</ul>
+</li>
+<li>处理器代表进程向相应的设备模块发出输入输出请求，</li>
+<li>然后处理器<strong>反复查询</strong>设备的状态，直至输入输出完成</li>
+</ul>
+<h3 id="中断驱动"><a name="中断驱动" class="anchor-navigation-ex-anchor" href="#中断驱动"><i class="fa fa-link" aria-hidden="true"></i></a>中断驱动</h3>
+<p>当需要输入输出时，从当前程序处转入中断服务程序进行IO操作，然后返回断点</p>
+<h3 id="内存映射"><a name="内存映射" class="anchor-navigation-ex-anchor" href="#内存映射"><i class="fa fa-link" aria-hidden="true"></i></a>内存映射</h3>
+<ul>
+<li>采用取数和送数指令<strong>（MOV）</strong></li>
+<li>操作简单具有即时完成的特点，即指令执行完输入输出操作也就执行完了，没有中断需要处理</li>
+</ul>
+<h3 id="dma方式"><a name="dma方式" class="anchor-navigation-ex-anchor" href="#dma方式"><i class="fa fa-link" aria-hidden="true"></i></a>DMA方式</h3>
+<ul>
+<li>不经过CPU而直接从主存存取数据</li>
+<li><p>通过总线在外设和主存之间开辟直接的数据交换通路</p>
+</li>
+<li><p>DMA特点</p>
+<ul>
+<li>数据块传输</li>
+<li>数据是从设备送到内存，或者相反</li>
+<li>DMA控制器</li>
+<li>在DMA控制器的控制下，每传送一块，向CPU发送<strong>一次中断</strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li>开始DMA传输时，主机向内存写入<strong>DMA命令块</strong>，向DMA控制器写入该<strong>命令块的地址</strong>，<strong>启动I/O设备</strong></li>
+<li>CPU继续执行其它工作(<strong>不占用总线</strong>），DMA控制器直接操作内存总线，将地址放到总线上开始传输。整个传输完成后，DMA控制器<strong>中断CPU</strong></li>
+</ol>
+</blockquote>
+<p><img src="assets/image-20250512092010761.png" alt="image-20250512092010761"></img></p>
+<blockquote>
+<p>[!important]</p>
+<p>DMA和中断驱动</p>
+<ul>
+<li>中断驱动在每个数据（字节）传输后中断CPU，DMA一个数据块后中断</li>
+<li>中断驱动数据传送是在中断处理时由<strong>CPU控制</strong>完成</li>
+<li>DMA方式的数据传送是在<strong>DMA控制器</strong>的控制下完成。</li>
+</ul>
+</blockquote>
+<h3 id="通道方式"><a name="通道方式" class="anchor-navigation-ex-anchor" href="#通道方式"><i class="fa fa-link" aria-hidden="true"></i></a>通道方式</h3>
+<ul>
+<li>一个专门负责输入/输出的<strong>硬件</strong>——通道来控制数据传送<strong>方向</strong>、存放数据的<strong>内存始址</strong>及传送的数据块<strong>长度</strong></li>
+<li>负责IO操作的<strong>处理机</strong>，独立于CPU，有自己的指令系统</li>
+<li>DMA(一个数据块)发展为通道（一组数据块）</li>
+<li>实现CPU、通道和I/O设备三者的并行操作</li>
+</ul>
+<h4 id="通道"><a name="通道" class="anchor-navigation-ex-anchor" href="#通道"><i class="fa fa-link" aria-hidden="true"></i></a>通道</h4>
+<ul>
+<li>负责IO操作的处理机</li>
+<li>指令系统：基本操作（控制，读写，转移，结束）；指令格式（操作码，传输量，特征位，地址）</li>
+<li>运控部件：CAW,CCW,CSW,CDW</li>
+<li>存储区域：与CPU共用内存，通道内有缓冲区 </li>
+</ul>
+<h4 id="通道在io设备的作用"><a name="通道在io设备的作用" class="anchor-navigation-ex-anchor" href="#通道在io设备的作用"><i class="fa fa-link" aria-hidden="true"></i></a>通道在IO设备的作用</h4>
+<ul>
+<li>通道指令单一，没有独占的内存</li>
+<li>通道程序是放在主机的内存中</li>
+<li>一条通道指令可以传送一组数据，全部传输完毕后才向处理器发一次中断</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>具有通道结构的计算机系统</li>
+<li>主机、通道、控制器和设备之间采用四级连接，实施三级控制<ul>
+<li>一个CPU连接若干通道；一个通道连接若干控制器；一个控制器连接若干设备</li>
+<li>CPU通过执行I/O指令对通道实施控制，通道执行通道指令对控制器实施控制，控制器发出动作序列对设备实施控制，设备执行相应输入输出操作</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img src="assets/image-20250512093151443.png" alt="image-20250512093151443"></img></p>
+<blockquote>
+<p>[!important]</p>
+<p>通道与DMA</p>
+<ul>
+<li>DMA需要CPU来控制传输数据库的大小、传输的内存位置，通道自己控制</li>
+<li>设置通道后，CPU只需向通道发出一条I/O指令。</li>
+<li>DMA控制器对应一台设备与内存传送数据，</li>
+<li>一个通道可以控制多台设备与内存的数据交换</li>
+</ul>
+</blockquote>
+<h4 id="通道类型"><a name="通道类型" class="anchor-navigation-ex-anchor" href="#通道类型"><i class="fa fa-link" aria-hidden="true"></i></a>通道类型</h4>
+<ul>
+<li>字节多路通道：字节交换，许多非分配型子通道分别连接一台IO设备，子通道按时间片轮转共享主通道，用于低速IO</li>
+<li>数组选择通道：块交换，一个分配型子通道，一段时间内执行一个通道程序，用于高速IO</li>
+<li>数据多路通道：分时的方式执行几个通道程序</li>
+</ul>
+<p><img src="assets/image-20250512093720254.png" alt="image-20250512093720254"></img></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/ffa0fe9c2e7ad19461e9f7bd3abdb46a.png" alt="img"></img></p>
+<hr></hr>
+<h3 id="io设备控制器（接口）"><a name="io设备控制器（接口）" class="anchor-navigation-ex-anchor" href="#io设备控制器（接口）"><i class="fa fa-link" aria-hidden="true"></i></a>IO设备控制器（接口）</h3>
+<ul>
+<li>接受识别CPU指令</li>
+<li>数据交换</li>
+<li><strong>标识和报告设备的状态</strong>，以供CPU处理</li>
+<li>地址识别，数据缓冲，差错控制</li>
+</ul>
+<h4 id="io端口"><a name="io端口" class="anchor-navigation-ex-anchor" href="#io端口"><i class="fa fa-link" aria-hidden="true"></i></a>IO端口</h4>
+<p>I/O端口指设备控制器中可被CPU之间访问的寄存器</p>
+<ul>
+<li>数据寄存器：数据缓冲</li>
+<li>状态寄存器：执行结果以及设备状态信息</li>
+<li>控制寄存器：由CPU写入，启动命令或者更改设备模式</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>采用通道实现IO操作的具体数据输入过程</p>
+<ul>
+<li>进程需要输入数据，CPU向通道发出IO指令，给出要执行的<strong>通道程序的首地址</strong>和要<strong>访问的I/O设备</strong></li>
+<li>通道接收启动指令，读出内存的通道程序并执行，控制设备传送数据</li>
+<li>数据传送结束，通道向CPU发出中断请求</li>
+<li>CPU收到中断信号转至中断处理程序，<strong>唤醒等待输入完成的进程</strong>，返回断点</li>
+<li>在以后某个时刻，进程调度程序选中提出请求输入的进程，该进程从指定的内存单元中取出数据做进一步处理.</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="io软件的层次"><a name="io软件的层次" class="anchor-navigation-ex-anchor" href="#io软件的层次"><i class="fa fa-link" aria-hidden="true"></i></a>IO软件的层次</h2>
+<h3 id="io软件设计的基本思想"><a name="io软件设计的基本思想" class="anchor-navigation-ex-anchor" href="#io软件设计的基本思想"><i class="fa fa-link" aria-hidden="true"></i></a>IO软件设计的基本思想</h3>
+<ul>
+<li>设备管理软件组成<strong>层次结构</strong>，向下接入硬件，向上与用户交互</li>
+<li>与进程管理、存储器管理、文件管理存在一定联系</li>
+<li>I/O软件有清晰结构，<strong>良好的可移植性和适应性</strong></li>
+<li>分为四个层次，其中设备驱动和中断处理最为接近硬件</li>
+</ul>
+<p><img src="assets/image-20250512102225711.png" alt="image-20250512102225711"></img></p>
+<h3 id="用户io软件"><a name="用户io软件" class="anchor-navigation-ex-anchor" href="#用户io软件"><i class="fa fa-link" aria-hidden="true"></i></a>用户IO软件</h3>
+<ul>
+<li>实现与用户交互的接口，用户利用与IO操作有关的API对设备操作</li>
+<li>操作系统的系统调用也是以函数界面形式供用户程序调用，如 <code>Linux:open()、read()、write()、close()</code>等</li>
+<li><strong>为相应的系统调用提供参数</strong>，进而获取操作系统服务</li>
+</ul>
+<h3 id="与设备无关的系统软件"><a name="与设备无关的系统软件" class="anchor-navigation-ex-anchor" href="#与设备无关的系统软件"><i class="fa fa-link" aria-hidden="true"></i></a>与设备无关的系统软件</h3>
+<ul>
+<li><p>本层往下一般在操作系统内核中实现。为上层提供<strong>系统调用接口</strong>，对下则通过<strong>设备驱动接口</strong>调用设备驱动程序</p>
+</li>
+<li><p><strong>系统调用处理程序</strong></p>
+</li>
+<li><p>实现设备无关性，引入了逻辑设备和物理设备概念。在系统实际执行时，必须将<strong>逻辑设备名映射成物理设备名</strong>使用</p>
+</li>
+<li><p>主要功能</p>
+<blockquote>
+<ul>
+<li>向设备驱动程序提供<strong>统一接口</strong>：将逻辑设备名映射为物理设备名</li>
+<li>向用户层提供统一接口</li>
+<li>设备保护，禁止用户直接访问设备</li>
+<li>缓冲，其中缓冲区在系统区</li>
+<li>提供与设备无关的块尺寸</li>
+<li>错误报告</li>
+<li>设备分配与去分配</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="设备驱动程序"><a name="设备驱动程序" class="anchor-navigation-ex-anchor" href="#设备驱动程序"><i class="fa fa-link" aria-hidden="true"></i></a>设备驱动程序</h3>
+<ul>
+<li>设备驱动程序是I/O<strong>进程</strong>与设备<strong>控制器</strong>之间的通信程序</li>
+<li>实现<strong>物理I/O操作的启动和执行</strong>，即用来具体实现系统对设备发出的操作指令，驱动I/O设备工作</li>
+<li>响应通道中断请求，根据中断类型调用相应中断处理</li>
+<li>与硬件直接有关，如构建通道程序，启动设备，响应通道中断</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li>接收到的上层软件发来的抽象要求（函数）转换为具体要求（指令）</li>
+<li>检查用户请求合法性，了解设备状态，传参，设置设备工作方式</li>
+<li>发出IO命令，启动分配的设备，完成IO操作并响应中断转到相应类型的中断处理</li>
+<li>对于设置有通道的计算机系统，驱动程序还应能够根据用户的 I/O 请求，<strong>自动地构成通道程序</strong></li>
+</ol>
+</blockquote>
+<hr></hr>
+<h3 id="中断处理程序"><a name="中断处理程序" class="anchor-navigation-ex-anchor" href="#中断处理程序"><i class="fa fa-link" aria-hidden="true"></i></a>中断处理程序</h3>
+<ul>
+<li>用于<strong>保存被中断进程现场</strong>，转入相应的中断处理程序进行处理</li>
+<li>处理完后<strong>恢复现场</strong>，并返回到被中断的进程</li>
+</ul>
+<h3 id="具体过程"><a name="具体过程" class="anchor-navigation-ex-anchor" href="#具体过程"><i class="fa fa-link" aria-hidden="true"></i></a>具体过程</h3>
+<blockquote>
+<p>[!important]</p>
+<p>当用户程序想要读取文件中的数据时，执行步骤：</p>
+<ul>
+<li>用户I/O软件对用户的I/O请求进行解释，调用系统调用接口，假设调用read接口</li>
+<li>与设备无关的系统软件首先在高速缓存中查找该数据块</li>
+<li>若未找到，则调用设备驱动程序向硬件发出相应请求，用户进程阻塞直到数据块被读出</li>
+<li>当磁盘操作完成，硬件产生一个中断，并转入中断处理程序</li>
+<li>中断处理程序检查中断原因（传输是否出错，传输是否继续等），唤醒被阻塞进程以结束此次 I/O 请求，使用户进程继续执行</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="设备的分配与去配"><a name="设备的分配与去配" class="anchor-navigation-ex-anchor" href="#设备的分配与去配"><i class="fa fa-link" aria-hidden="true"></i></a>设备的分配与去配</h2>
+<ul>
+<li>独占型设备的分配与去配<ul>
+<li>块型独占</li>
+<li>字符型独占</li>
+</ul>
+</li>
+<li>共享型设备的分配与去配<ul>
+<li>块型共享</li>
+</ul>
+</li>
+</ul>
+<h3 id="相关数据结构"><a name="相关数据结构" class="anchor-navigation-ex-anchor" href="#相关数据结构"><i class="fa fa-link" aria-hidden="true"></i></a>相关数据结构</h3>
+<ul>
+<li>设备控制块（UCB)：设备的标识，状态，相连通道，占有设备进程</li>
+<li>控制器控制块（CUCB）：控制器标志，状态，相连通道，占有控制器进程</li>
+<li>通道控制块（CCB）：通道标识，状态，类型，占有通道进程</li>
+</ul>
+<p><img src="assets/image-20250512105138466.png" alt="image-20250512105138466"></img></p>
+<ul>
+<li>系统设备表（SDT)</li>
+<li>记录设备类别，以及各个类别的总数，确定设备的等待队列，以及队列的UCB（设备控制块）表的指针</li>
+</ul>
+<p><img src="assets/image-20250512105310422.png" alt="image-20250512105310422"></img></p>
+<hr></hr>
+<h3 id="独占设备的分配与去配"><a name="独占设备的分配与去配" class="anchor-navigation-ex-anchor" href="#独占设备的分配与去配"><i class="fa fa-link" aria-hidden="true"></i></a>独占设备的分配与去配</h3>
+<ul>
+<li><p>用户需要申请后再使用，最后释放</p>
+</li>
+<li><p>申请：根据设备类查SDT表，P(Sm)，查UCB表找以空闲设备分配</p>
+</li>
+<li>使用：分配通道和控制器，形成通道程序，启动设备进行操作，通道中断，去配</li>
+<li>访问SDT表，查UCB表去配，V(Sm)</li>
+</ul>
+<h3 id="共享设备的分配与去配"><a name="共享设备的分配与去配" class="anchor-navigation-ex-anchor" href="#共享设备的分配与去配"><i class="fa fa-link" aria-hidden="true"></i></a>共享设备的分配与去配</h3>
+<h4 id="有通道情形"><a name="有通道情形" class="anchor-navigation-ex-anchor" href="#有通道情形"><i class="fa fa-link" aria-hidden="true"></i></a>有通道情形</h4>
+<ul>
+<li><p>用户使用共享型设备的活动只有使用，没有申请和分配</p>
+</li>
+<li><p>特征</p>
+<blockquote>
+<ul>
+<li>来自文件系统，虚拟存储管理系统，输入井/输出井</li>
+<li>每次读写一块</li>
+<li>通常经过缓存并且有排队优化</li>
+</ul>
+</blockquote>
+</li>
+<li><p>使用：分配通道；形成通道程序，启动通道，IO操作，中断处理；释放通道</p>
+</li>
+</ul>
+<h4 id="无通道情形"><a name="无通道情形" class="anchor-navigation-ex-anchor" href="#无通道情形"><i class="fa fa-link" aria-hidden="true"></i></a>无通道情形</h4>
+<p>主要是使用不同于通道</p>
+<ul>
+<li>分配缓冲，填写头部<ul>
+<li>写：信息复制到缓冲区后链入IO链尾部，若设备空闲则启动设备，IO结束后释放缓冲区</li>
+<li>读：缓冲区链入IO链尾部，若设备空闲则启动设备，等待数据，中断唤醒后复制信息到进程空间，释放缓冲区</li>
+</ul>
+</li>
+</ul>
+<h2 id="设备驱动"><a name="设备驱动" class="anchor-navigation-ex-anchor" href="#设备驱动"><i class="fa fa-link" aria-hidden="true"></i></a>设备驱动</h2>
+<h3 id="设备驱动特点"><a name="设备驱动特点" class="anchor-navigation-ex-anchor" href="#设备驱动特点"><i class="fa fa-link" aria-hidden="true"></i></a>设备驱动特点</h3>
+<blockquote>
+<p>与硬件密切相关</p>
+<p>每类设备需要配置驱动</p>
+<p>有设备厂商根据OS编写</p>
+<p>OS仅对驱动接口有要求</p>
+</blockquote>
+<h3 id="设备驱动过程"><a name="设备驱动过程" class="anchor-navigation-ex-anchor" href="#设备驱动过程"><i class="fa fa-link" aria-hidden="true"></i></a>设备驱动过程</h3>
+<ul>
+<li>通道程序：CCW指令序列，具体编制或者动态生成，多通道并行执行通道程序</li>
+<li>设备启动：<ul>
+<li>CPU将通道程序的起址放到内存指定单元，然后执行通道启动指令</li>
+<li>通道启动，指定单元取出通道程序起址，放入通道地址字，依次执行通道指令</li>
+</ul>
+</li>
+<li>中断处理：通道向CPU发出中断请求</li>
+</ul>
+<hr></hr>
+<h2 id="设备调度"><a name="设备调度" class="anchor-navigation-ex-anchor" href="#设备调度"><i class="fa fa-link" aria-hidden="true"></i></a>设备调度</h2>
+<ul>
+<li>主要是优化服务顺序，比如寻道，旋转延迟，传输</li>
+<li>需要考虑公平（防止饿死）和高效（减少磁盘引臂移动）</li>
+</ul>
+<h3 id="磁盘io参数"><a name="磁盘io参数" class="anchor-navigation-ex-anchor" href="#磁盘io参数"><i class="fa fa-link" aria-hidden="true"></i></a>磁盘IO参数</h3>
+<blockquote>
+<p>[!note]</p>
+<p>读写磁盘块时间三个因素：</p>
+<ol>
+<li>寻道时间（seek time）：将磁盘引臂移动到指定柱面所需要的时间；</li>
+<li>旋转延迟（rotational delay）：指定扇区旋转到磁头下的时间；</li>
+<li>传输时间（transfer time）：读/写一个扇区的时间。</li>
+</ol>
+</blockquote>
+<ul>
+<li>寻道时间<code>Ts = m * n + s</code>，n为跨越磁道数，m为跨越一个磁道时间，s启动时间</li>
+<li>旋转延迟<code>Tr = 1 / (2*r)</code>，r为磁盘转速</li>
+<li>传输时间<code>Tt = b / (r*N)</code>，b为读写字节数，r磁盘转速，N一条磁道字节数</li>
+</ul>
+<p>所以访问时间<code>Ta</code>为<img src="assets/image-20250514084432940.png" alt="image-20250514084432940"></img></p>
+<p>一个扇区的访问时间：M为一个磁道上的扇区数</p>
+<p><img src="assets/image-20250514084452548.png" alt="image-20250514084452548"></img></p>
+<h3 id="磁头引臂调度"><a name="磁头引臂调度" class="anchor-navigation-ex-anchor" href="#磁头引臂调度"><i class="fa fa-link" aria-hidden="true"></i></a>磁头引臂调度</h3>
+<h4 id="先到先服务（fcfs）"><a name="先到先服务（fcfs）" class="anchor-navigation-ex-anchor" href="#先到先服务（fcfs）"><i class="fa fa-link" aria-hidden="true"></i></a>先到先服务（FCFS）</h4>
+<ul>
+<li>按照输入输出请求的<strong>次序</strong>为各个进程服务<ul>
+<li>例如：130，42，180，15，108，68，97</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20250514090329324.png" alt="image-20250514090329324"></img></p>
+<p>则移动量：(130-53)+(130-42)+(180-42)+(180-15)+(108-15)+(108-68)+(97-68)=630</p>
+<h4 id="最短寻找时间优先（sstf"><a name="最短寻找时间优先（sstf" class="anchor-navigation-ex-anchor" href="#最短寻找时间优先（sstf"><i class="fa fa-link" aria-hidden="true"></i></a>最短寻找时间优先（SSTF)</h4>
+<ul>
+<li>优先为距离磁头当前所在位置<strong>最近柱面</strong>的请求服务。</li>
+<li>例如：130，42，180，15，108，68，97</li>
+</ul>
+<p><img src="assets/image-20250514090446544.png" alt="image-20250514090446544"></img></p>
+<p>移动量：(53-42)+(180-42)+(180-15)=314</p>
+<h4 id="扫描算法（电梯算法）"><a name="扫描算法（电梯算法）" class="anchor-navigation-ex-anchor" href="#扫描算法（电梯算法）"><i class="fa fa-link" aria-hidden="true"></i></a>扫描算法（电梯算法）</h4>
+<ul>
+<li>无访问请求时，磁头引臂停止不动；</li>
+<li>当有访问请求时，引臂按照<strong>电梯移动规律运动</strong>，并为路经柱面的访问请求服务。</li>
+<li>例如：130，42，180，15，108，68，97</li>
+</ul>
+<p><img src="assets/image-20250514090644683.png" alt="image-20250514090644683"></img></p>
+<p>移动量: (53-15)+(180-15)=203</p>
+<h4 id="循环扫描算法"><a name="循环扫描算法" class="anchor-navigation-ex-anchor" href="#循环扫描算法"><i class="fa fa-link" aria-hidden="true"></i></a>循环扫描算法</h4>
+<ul>
+<li>磁头仅在<strong>单方向移动过程中才为路经的请求服务</strong>，但只是移动到最内（外）请求柱面为止。</li>
+<li>请求序列：130，42，180，15，108，68，97</li>
+</ul>
+<p><img src="assets/image-20250514090812753.png" alt="image-20250514090812753"></img></p>
+<ul>
+<li>存在磁头黏性</li>
+</ul>
+<h4 id="n-step-scan（n步扫描）"><a name="n-step-scan（n步扫描）" class="anchor-navigation-ex-anchor" href="#n-step-scan（n步扫描）"><i class="fa fa-link" aria-hidden="true"></i></a>N-step SCAN（N步扫描）</h4>
+<ul>
+<li><p>将磁盘请求队列分为若干个长度为N的子队列，每个队列内采用SCAN算法</p>
+</li>
+<li><p>例如</p>
+<blockquote>
+<p>例子：磁道由外向内编号0-99,磁头当前位置20,向内移动,N=4</p>
+<ul>
+<li>12, 5, 7, 30, 60, 77, 13, 26, 61, 80, 53, 66</li>
+<li>20→30→12→7→5→13→26→60→77→80→66→61 →53</li>
+</ul>
+</blockquote>
+</li>
+<li><p>当N很大时，接近SCAN算法</p>
+</li>
+<li>当N=1时，蜕化为FCFS算法</li>
+</ul>
+<h4 id="fscan（freezing-scan，冻结扫描"><a name="fscan（freezing-scan，冻结扫描" class="anchor-navigation-ex-anchor" href="#fscan（freezing-scan，冻结扫描"><i class="fa fa-link" aria-hidden="true"></i></a>FSCAN（Freezing SCAN，冻结扫描)</h4>
+<ul>
+<li>将磁盘请求分为<strong>两个子队列</strong>：服务队列，请求队列</li>
+<li>用SCAN算法扫描服务队列，并为请求服务，服务期间新到达的请求入请求队列</li>
+<li>扫描完成后<strong>交换两个队列的地位</strong></li>
+<li>特点:克服磁道粘性, 防止饿死</li>
+</ul>
+<hr></hr>
+<h2 id="缓冲与缓存"><a name="缓冲与缓存" class="anchor-navigation-ex-anchor" href="#缓冲与缓存"><i class="fa fa-link" aria-hidden="true"></i></a>缓冲与缓存</h2>
+<h3 id="缓冲"><a name="缓冲" class="anchor-navigation-ex-anchor" href="#缓冲"><i class="fa fa-link" aria-hidden="true"></i></a>缓冲</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>引入缓冲的原因</li>
+<li>缓和CPU与I/O设备间速度不匹配的矛盾</li>
+<li>减少对CPU的中断频率，放宽对中断响应时间的限制</li>
+<li><p>提高CPU和I/O设备之间的并行性</p>
+</li>
+<li><p>Buffering vs. Caching</p>
+</li>
+<li>buffering: <strong>处理数据到达与离开速度不一致</strong>所采用的技术。</li>
+<li>caching: 将慢速存储器上活动信息缓冲到快速存储设备上的技术。</li>
+</ul>
+</blockquote>
+<h4 id="缓冲的分类"><a name="缓冲的分类" class="anchor-navigation-ex-anchor" href="#缓冲的分类"><i class="fa fa-link" aria-hidden="true"></i></a>缓冲的分类</h4>
+<ul>
+<li>硬缓冲与软缓冲<ul>
+<li>硬缓冲：设备里</li>
+<li>软缓冲：内存系统空间（OS管理）</li>
+</ul>
+</li>
+<li>私用与共用<ul>
+<li>私用缓冲: 一个缓冲区与一个固定设备相联系，不同设备使用不同的缓冲区，利用率低</li>
+<li>公用缓冲: 缓冲区由系统统一管理，按需要<strong>动态分派</strong>给正在进行I/O传输的设备</li>
+</ul>
+</li>
+</ul>
+<h3 id="公共缓冲的管理"><a name="公共缓冲的管理" class="anchor-navigation-ex-anchor" href="#公共缓冲的管理"><i class="fa fa-link" aria-hidden="true"></i></a>公共缓冲的管理</h3>
+<h4 id="单缓冲"><a name="单缓冲" class="anchor-navigation-ex-anchor" href="#单缓冲"><i class="fa fa-link" aria-hidden="true"></i></a>单缓冲</h4>
+<ul>
+<li>一个IO请求，OS在主存中分配一个缓冲区</li>
+<li>设备与处理器对缓冲区的操作是<strong>串行</strong>的</li>
+<li>并且无法同时双向通信，半双工</li>
+</ul>
+<p><img src="assets/image-20250514091658470.png" alt="image-20250514091658470"></img></p>
+<h4 id="双缓冲"><a name="双缓冲" class="anchor-navigation-ex-anchor" href="#双缓冲"><i class="fa fa-link" aria-hidden="true"></i></a>双缓冲</h4>
+<ul>
+<li>双缓冲提供两个缓冲区。<ul>
+<li>进程和设备传送数据时（输入），信息由设备传送到一个缓冲区</li>
+<li>如满后，信息由设备传到第二个缓冲区，同时处理器将第一个缓冲区内容复制到进程空间</li>
+<li>然后，再将输入信息传到第一个缓冲区</li>
+</ul>
+</li>
+<li>如此交替，可以提供设备和CPU之间的并行性。</li>
+<li>但双缓冲只是一种说明设备与设备、CPU与设备并行操作的简单模型，并不适用于实际系统中的并行操作。 </li>
+</ul>
+<p><img src="assets/image-20250514091836004.png" alt="image-20250514091836004"></img></p>
+<h4 id="循环缓冲"><a name="循环缓冲" class="anchor-navigation-ex-anchor" href="#循环缓冲"><i class="fa fa-link" aria-hidden="true"></i></a>循环缓冲</h4>
+<ul>
+<li>在设备与进程之间设置多个缓冲区，这些缓冲区连成<strong>环状</strong>。</li>
+<li>有两个指针 in 和 out，in 指向当前输入的位置，out 指向当前取出的位置。</li>
+<li>通过增加<strong>缓冲区的个数</strong>，可使并行程度得到明显提高。</li>
+<li>循环缓冲包括以下两部分。(1) 多个缓冲区，(2) 多个指针</li>
+</ul>
+<p><img src="assets/image-20250514092024016.png" alt="image-20250514092024016"></img></p>
+<h4 id="缓冲池"><a name="缓冲池" class="anchor-navigation-ex-anchor" href="#缓冲池"><i class="fa fa-link" aria-hidden="true"></i></a>缓冲池</h4>
+<ul>
+<li>由多个系统公用的缓冲区组成</li>
+<li>缓冲池结构：<strong>相同类型</strong>的缓冲区链成一个队列<ul>
+<li>一组用于块型设备，其长度通常与外围设备物理块的长度相同</li>
+<li>一组用于字符型设备，其长度通常为8 B、16 B 等</li>
+</ul>
+</li>
+<li>三个队列：空缓冲，输入，输出</li>
+<li>多用于多道程序并发设计</li>
+</ul>
+<h3 id="高速缓存"><a name="高速缓存" class="anchor-navigation-ex-anchor" href="#高速缓存"><i class="fa fa-link" aria-hidden="true"></i></a>高速缓存</h3>
+<ul>
+<li>Cache</li>
+<li>通过磁盘高速缓存技术提高磁盘的I/O速度，对访问高速缓存要比访问原始磁盘数据更高效</li>
+</ul>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 09_设备与IO管理</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08_文件与文件系统.html" class="navigation navigation-prev " aria-label="Previous page: 08_文件与文件系统">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="review.html" class="navigation navigation-next " aria-label="Next page: review">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"09_设备与IO管理","level":"1.6.9","depth":2,"next":{"title":"review","level":"1.6.10","depth":2,"path":"docs/Operating_System/review.md","ref":"docs/Operating_System/review.md","articles":[]},"previous":{"title":"08_文件与文件系统","level":"1.6.8","depth":2,"path":"docs/Operating_System/08_文件与文件系统.md","ref":"docs/Operating_System/08_文件与文件系统.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Operating_System/09_设备与IO管理.md","mtime":"2025-09-07T09:41:17.161Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

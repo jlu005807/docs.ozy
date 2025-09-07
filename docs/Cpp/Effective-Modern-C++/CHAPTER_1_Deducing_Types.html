@@ -1,0 +1,1913 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>CHAPTER_1_Deducing_Types · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CHAPTER_2_auto.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../C++-Primer/">
+            
+                <a href="../C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../C++-Primer/01_泛型算法.html">
+            
+                <a href="../C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../C++-Primer/02_关联容器.html">
+            
+                <a href="../C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../C++-Primer/03_动态内存.html">
+            
+                <a href="../C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../C++-Primer/04_拷贝控制.html">
+            
+                <a href="../C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../C++-Primer/12_nullptr.html">
+            
+                <a href="../C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.2.1" data-path="CHAPTER_1_Deducing_Types.html">
+            
+                <a href="CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="CHAPTER_2_auto.html">
+            
+                <a href="CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >CHAPTER_1_Deducing_Types</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#第一章-类型推导"><b></b>第一章 类型推导</a></li><ul><li><span class="title-icon "></span><a href="#item-1-understand-template-type-deduction"><b></b>Item 1: Understand template type deduction</a></li><ul><li><span class="title-icon "></span><a href="#情景一：paramtype是一个指针或引用，但不是通用引用"><b></b>情景一：ParamType是一个指针或引用，但不是通用引用</a></li><li><span class="title-icon "></span><a href="#情景二：paramtype是一个通用引用"><b></b>情景二：ParamType是一个通用引用</a></li><li><span class="title-icon "></span><a href="#情景三：paramtype既不是指针也不是引用"><b></b>情景三：ParamType既不是指针也不是引用</a></li><li><span class="title-icon "></span><a href="#数组形参"><b></b>数组形参</a></li><li><span class="title-icon "></span><a href="#函数实参"><b></b>函数实参</a></li><li><span class="title-icon "></span><a href="#总结"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-2-understand-auto-type-deduction"><b></b>Item 2: Understand auto type deduction</a></li><ul><li><span class="title-icon "></span><a href="#和模板类型推导相同点"><b></b>和模板类型推导相同点</a></li><li><span class="title-icon "></span><a href="#和模板类型推导的区别"><b></b>和模板类型推导的区别</a></li><li><span class="title-icon "></span><a href="#总结_1"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-3-understand-decltype"><b></b>Item 3: Understand decltype</a></li><ul><li><span class="title-icon "></span><a href="#主要作用"><b></b>主要作用</a></li><li><span class="title-icon "></span><a href="#总结_2"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-4-know-how-to-view-deduced-types"><b></b>Item 4: Know how to view deduced types</a></li><ul><li><span class="title-icon "></span><a href="#1-ide编辑器"><b></b>1. IDE编辑器</a></li><li><span class="title-icon "></span><a href="#2-编译器诊断"><b></b>2. 编译器诊断</a></li><li><span class="title-icon "></span><a href="#3-运行时输出"><b></b>3. 运行时输出</a></li></ul></ul></ul></div><a href="#第一章-类型推导" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#第一章-类型推导">第一章 类型推导</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#item-1-understand-template-type-deduction">Item 1: Understand template type deduction</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#情景一：paramtype是一个指针或引用，但不是通用引用">情景一：ParamType是一个指针或引用，但不是通用引用</a><i></i></div></li>
+<li><div><a href="#情景二：paramtype是一个通用引用">情景二：ParamType是一个通用引用</a><i></i></div></li>
+<li><div><a href="#情景三：paramtype既不是指针也不是引用">情景三：ParamType既不是指针也不是引用</a><i></i></div></li>
+<li><div><a href="#数组形参">数组形参</a><i></i></div></li>
+<li><div><a href="#函数实参">函数实参</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-2-understand-auto-type-deduction">Item 2: Understand auto type deduction</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#和模板类型推导相同点">和模板类型推导相同点</a><i></i></div></li>
+<li><div><a href="#和模板类型推导的区别">和模板类型推导的区别</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-3-understand-decltype">Item 3: Understand decltype</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#主要作用">主要作用</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-4-know-how-to-view-deduced-types">Item 4: Know how to view deduced types</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1-ide编辑器">1. IDE编辑器</a><i></i></div></li>
+<li><div><a href="#2-编译器诊断">2. 编译器诊断</a><i></i></div></li>
+<li><div><a href="#3-运行时输出">3. 运行时输出</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+
+
+<p>[TOC]</p>
+<h1 id="第一章-类型推导"><a name="第一章-类型推导" class="anchor-navigation-ex-anchor" href="#第一章-类型推导"><i class="fa fa-link" aria-hidden="true"></i></a>第一章 类型推导</h1>
+<h2 id="item-1-understand-template-type-deduction"><a name="item-1-understand-template-type-deduction" class="anchor-navigation-ex-anchor" href="#item-1-understand-template-type-deduction"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 1: Understand template type deduction</strong></h2>
+<p>对于</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(ParamType param)</span></span>;
+
+<span class="hljs-built_in">f</span>(expr);                        <span class="hljs-comment">//从expr中推导T和ParamType</span>
+</code></pre>
+<ul>
+<li>在编译期间，编译器使用<code>expr</code>进行两个类型推导：</li>
+<li>一个是针对<code>T</code>的，另一个是针对<code>ParamType</code>的。</li>
+<li>这两个类型通常是不同的，因为<code>ParamType</code>包含一些修饰，比如<code>const</code>和引用修饰符。</li>
+</ul>
+<hr></hr>
+<h3 id="情景一：paramtype是一个指针或引用，但不是通用引用"><a name="情景一：paramtype是一个指针或引用，但不是通用引用" class="anchor-navigation-ex-anchor" href="#情景一：paramtype是一个指针或引用，但不是通用引用"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item1.html#情景一paramtype是一个指针或引用但不是通用引用" target="_blank">情景一：<code>ParamType</code>是一个指针或引用，但不是通用引用</a></h3>
+<p>最简单的情况是<code>ParamType</code>是一个指针或者引用，但非通用引用。在这种情况下，类型推导会这样进行：</p>
+<ol>
+<li>如果<code>expr</code>的类型是一个引用，<strong>忽略引用部分</strong></li>
+<li>然后<code>expr</code>的类型与<code>ParamType</code>进行模式匹配来决定<code>T</code></li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; param)</span></span>;         <span class="hljs-comment">//param现在是reference-to-const</span>
+
+<span class="hljs-type">int</span> x = <span class="hljs-number">27</span>;                     <span class="hljs-comment">//如之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> cx = x;               <span class="hljs-comment">//如之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span>&amp; rx = x;              <span class="hljs-comment">//如之前一样</span>
+
+<span class="hljs-built_in">f</span>(x);                           <span class="hljs-comment">//T是int，param的类型是const int&amp;</span>
+<span class="hljs-built_in">f</span>(cx);                          <span class="hljs-comment">//T是int，param的类型是const int&amp;</span>
+<span class="hljs-built_in">f</span>(rx);                          <span class="hljs-comment">//T是int，param的类型是const int&amp;</span>
+</code></pre>
+<ul>
+<li><code>rx</code>的reference-ness在类型推导中被忽略了。</li>
+</ul>
+<p>指针类似：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T* param)</span></span>;               <span class="hljs-comment">//param现在是指针</span>
+
+<span class="hljs-type">int</span> x = <span class="hljs-number">27</span>;                     <span class="hljs-comment">//同之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> *px = &amp;x;             <span class="hljs-comment">//px是指向作为const int的x的指针</span>
+
+<span class="hljs-built_in">f</span>(&amp;x);                          <span class="hljs-comment">//T是int，param的类型是int*</span>
+<span class="hljs-built_in">f</span>(px);                          <span class="hljs-comment">//T是const int，param的类型是const int*</span>
+</code></pre>
+<p><code>px</code>的point-ness在类型推导中被忽略了</p>
+<hr></hr>
+<h3 id="情景二：paramtype是一个通用引用"><a name="情景二：paramtype是一个通用引用" class="anchor-navigation-ex-anchor" href="#情景二：paramtype是一个通用引用"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item1.html#情景二paramtype是一个通用引用" target="_blank">情景二：<code>ParamType</code>是一个通用引用</a></h3>
+<p>这样的形参被声明为像右值引用一样（也就是，在函数模板中假设有一个类型形参<code>T</code>，那么通用引用声明形式就是<code>T&amp;&amp;</code>或者是<code>auto&amp;&amp;</code>)</p>
+<ul>
+<li>如果<code>expr</code>是左值，<code>T</code>和<code>ParamType</code>都会被推导为左值引用。这非常不寻常，第一，这是模板类型推导中唯一一种<code>T</code>被推导为引用的情况。第二，虽然<code>ParamType</code>被声明为右值引用类型，但是最后推导的结果是左值引用。</li>
+<li>如果<code>expr</code>是右值，就使用正常的（也就是<strong>情景一</strong>）推导规则</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; param)</span></span>;              <span class="hljs-comment">//param现在是一个通用引用类型</span>
+
+<span class="hljs-type">int</span> x=<span class="hljs-number">27</span>;                       <span class="hljs-comment">//如之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> cx=x;                 <span class="hljs-comment">//如之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; rx=cx;              <span class="hljs-comment">//如之前一样</span>
+
+<span class="hljs-built_in">f</span>(x);                           <span class="hljs-comment">//x是左值，所以T是int&amp;，</span>
+                                <span class="hljs-comment">//param类型也是int&amp;</span>
+
+<span class="hljs-built_in">f</span>(cx);                          <span class="hljs-comment">//cx是左值，所以T是const int&amp;，</span>
+                                <span class="hljs-comment">//param类型也是const int&amp;</span>
+
+<span class="hljs-built_in">f</span>(rx);                          <span class="hljs-comment">//rx是左值，所以T是const int&amp;，</span>
+                                <span class="hljs-comment">//param类型也是const int&amp;</span>
+
+<span class="hljs-built_in">f</span>(<span class="hljs-number">27</span>);                          <span class="hljs-comment">//27是右值，所以T是int，</span>
+                                <span class="hljs-comment">//param类型就是int&amp;&amp;</span>
+</code></pre>
+<hr></hr>
+<h3 id="情景三：paramtype既不是指针也不是引用"><a name="情景三：paramtype既不是指针也不是引用" class="anchor-navigation-ex-anchor" href="#情景三：paramtype既不是指针也不是引用"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item1.html#情景三paramtype既不是指针也不是引用" target="_blank">情景三：<code>ParamType</code>既不是指针也不是引用</a></h3>
+<p>当<code>ParamType</code>既不是指针也不是引用时，我们通过<strong>传值（pass-by-value）</strong>的方式处理：</p>
+<ol>
+<li>和之前一样，如果<code>expr</code>的类型是一个引用，<strong>忽略这个引用部分</strong></li>
+<li>如果忽略<code>expr</code>的引用性（reference-ness）之后，<code>expr</code>是一个<code>const</code>，那就再忽略<code>const</code>。如果它是<code>volatile</code>，也忽略<code>volatile</code>（<code>volatile</code>对象不常见，它通常用于驱动程序的开发中。关于<code>volatile</code>的细节请参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/7.TheConcurrencyAPI/item40.html" target="_blank">Item40</a>）</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T param)</span></span>;                <span class="hljs-comment">//以传值的方式处理param</span>
+
+<span class="hljs-type">int</span> x=<span class="hljs-number">27</span>;                       <span class="hljs-comment">//如之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> cx=x;                 <span class="hljs-comment">//如之前一样</span>
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> &amp; rx=cx;              <span class="hljs-comment">//如之前一样</span>
+
+<span class="hljs-built_in">f</span>(x);                           <span class="hljs-comment">//T和param的类型都是int</span>
+<span class="hljs-built_in">f</span>(cx);                          <span class="hljs-comment">//T和param的类型都是int</span>
+<span class="hljs-built_in">f</span>(rx);                          <span class="hljs-comment">//T和param的类型都是int</span>
+</code></pre>
+<ul>
+<li><code>param</code>是一个完全独立于<code>cx</code>和<code>rx</code>的对象——是<code>cx</code>或<code>rx</code>的一个拷贝。</li>
+<li>具有常量性的<code>cx</code>和<code>rx</code>不可修改并不代表<code>param</code>也是一样。</li>
+</ul>
+<p>只有在传值给形参时才会忽略<code>const</code>（和<code>volatile</code>）这一点很重要:</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T param)</span></span>;                <span class="hljs-comment">//仍然以传值的方式处理param</span>
+
+<span class="hljs-type">const</span> <span class="hljs-type">char</span>* <span class="hljs-type">const</span> ptr =         <span class="hljs-comment">//ptr是一个常量指针，指向常量对象 </span>
+    <span class="hljs-string">"Fun with pointers"</span>;
+
+<span class="hljs-built_in">f</span>(ptr);                         <span class="hljs-comment">//传递const char * const类型的实参</span>
+</code></pre>
+<ul>
+<li>像这种情况，<code>ptr</code><strong>自身的值会被传给形参</strong>，根据类型推导的第三条规则，<code>ptr</code>自身的常量性<code>const</code>ness将会被省略，所以<code>param</code>是<code>const char*</code></li>
+<li>在类型推导中，这个指针指向的数据的常量性<code>const</code>ness将会被保留，但是当拷贝<code>ptr</code>来创造一个新指针<code>param</code>时，<code>ptr</code>自身的常量性<code>const</code>ness将会被忽略。</li>
+</ul>
+<hr></hr>
+<h3 id="数组形参"><a name="数组形参" class="anchor-navigation-ex-anchor" href="#数组形参"><i class="fa fa-link" aria-hidden="true"></i></a>数组形参</h3>
+<pre><code class="lang-cpp"><span class="hljs-type">const</span> <span class="hljs-type">char</span> name[] = <span class="hljs-string">"J. P. Briggs"</span>;     <span class="hljs-comment">//name的类型是const char[13]</span>
+
+<span class="hljs-type">const</span> <span class="hljs-type">char</span> * ptrToName = name;          <span class="hljs-comment">//数组退化为指针</span>
+</code></pre>
+<p>在这里<code>const char*</code>指针<code>ptrToName</code>会由<code>name</code>初始化，而<code>name</code>的类型为<code>const char[13]</code>，这<strong>两种类型（<code>const char*</code>和<code>const char[13]</code>）是不一样的</strong>，但是由于<strong>数组退化为指针</strong>的规则，编译器允许这样的代码。</p>
+<ul>
+<li>传值给模板的一个数组类型会被推导为一个指针类型</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">myFunc</span><span class="hljs-params">(<span class="hljs-type">int</span> param[])</span></span>;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">myFunc</span><span class="hljs-params">(<span class="hljs-type">int</span>* param)</span></span>;                <span class="hljs-comment">//与上面相同的函数</span>
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T param)</span></span>;                        <span class="hljs-comment">//传值形参的模板</span>
+
+<span class="hljs-built_in">f</span>(name);                        <span class="hljs-comment">//name是一个数组，但是T被推导为const char*</span>
+</code></pre>
+<ul>
+<li>函数不能声明形参为真正的数组，但是<strong>可以</strong>接受指向数组的<strong>引用</strong>，使得<code>T</code>被推导为了真正的数组。</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp; param)</span></span>;                       <span class="hljs-comment">//传引用形参的模板</span>
+<span class="hljs-built_in">f</span>(name);                                <span class="hljs-comment">//T被推导为const char[13]</span>
+</code></pre>
+<p>借助可声明指向数组的引用的能力，使得我们可以<strong>创建一个模板函数来推导出数组的大小</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//在编译期间返回一个数组大小的常量值（//数组形参没有名字，</span>
+<span class="hljs-comment">//因为我们只关心数组的大小）</span>
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T, std::<span class="hljs-type">size_t</span> N&gt;                     <span class="hljs-comment">//关于</span>
+<span class="hljs-function"><span class="hljs-keyword">constexpr</span> std::<span class="hljs-type">size_t</span> <span class="hljs-title">arraySize</span><span class="hljs-params">(T (&amp;)[N])</span> <span class="hljs-keyword">noexcept</span>      <span class="hljs-comment">//constexpr</span>
+</span>{                                                       <span class="hljs-comment">//和noexcept</span>
+    <span class="hljs-keyword">return</span> N;                                           <span class="hljs-comment">//的信息</span>
+}                                                       <span class="hljs-comment">//请看下面</span>
+</code></pre>
+<p>（<code>constexpr</code>是一种比<code>const</code>更加严格的常量定义，<code>noexcept</code>是说明函数永远都不会抛出异常——译者注）</p>
+<hr></hr>
+<h3 id="函数实参"><a name="函数实参" class="anchor-navigation-ex-anchor" href="#函数实参"><i class="fa fa-link" aria-hidden="true"></i></a>函数实参</h3>
+<p>在C++中不只是数组会退化为指针，<strong>函数类型也会退化为一个函数指针</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">someFunc</span><span class="hljs-params">(<span class="hljs-type">int</span>, <span class="hljs-type">double</span>)</span></span>;         <span class="hljs-comment">//someFunc是一个函数，</span>
+                                    <span class="hljs-comment">//类型是void(int, double)</span>
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f1</span><span class="hljs-params">(T param)</span></span>;                   <span class="hljs-comment">//传值给f1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f2</span><span class="hljs-params">(T &amp; param)</span></span>;                 <span class="hljs-comment">//传引用给f2</span>
+
+<span class="hljs-built_in">f1</span>(someFunc);                       <span class="hljs-comment">//param被推导为指向函数的指针，</span>
+                                    <span class="hljs-comment">//类型是void(*)(int, double)</span>
+<span class="hljs-built_in">f2</span>(someFunc);                       <span class="hljs-comment">//param被推导为指向函数的引用，</span>
+                                    <span class="hljs-comment">//类型是void(&amp;)(int, double)</span>
+</code></pre>
+<hr></hr>
+<h3 id="总结"><a name="总结" class="anchor-navigation-ex-anchor" href="#总结"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>在模板类型推导时，有引用的实参会被视为无引用，他们的<strong>引用会被忽略</strong></li>
+<li>对于通用引用的推导，<strong>左值实参会被特殊对待</strong></li>
+<li>对于传值类型推导，<code>const</code>和/或<code>volatile</code>实参会被认为是non-<code>const</code>的和non-<code>volatile</code>的</li>
+<li>在模板类型推导时，<strong>数组名或者函数名实参会退化为指针</strong>，除非它们被用于初始化引用</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-2-understand-auto-type-deduction"><a name="item-2-understand-auto-type-deduction" class="anchor-navigation-ex-anchor" href="#item-2-understand-auto-type-deduction"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 2: Understand <code>auto</code> type deduction</strong></h2>
+<h3 id="和模板类型推导相同点"><a name="和模板类型推导相同点" class="anchor-navigation-ex-anchor" href="#和模板类型推导相同点"><i class="fa fa-link" aria-hidden="true"></i></a>和模板类型推导相同点</h3>
+<p>当一个变量使用<code>auto</code>进行声明时，<code>auto</code>扮演了模板中<code>T</code>的角色，变量的类型说明符扮演了<code>ParamType</code>的角色。</p>
+<p>在使用<code>auto</code>作为类型说明符的变量声明中，类型说明符代替了<code>ParamType</code>，因此Item1描述的三个情景稍作修改就能适用于auto：</p>
+<ul>
+<li>情景一：类型说明符是一个指针或引用但不是通用引用</li>
+<li>情景二：类型说明符一个通用引用</li>
+<li>情景三：类型说明符既不是指针也不是引用</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> x = <span class="hljs-number">27</span>;                    <span class="hljs-comment">//情景三（x既不是指针也不是引用）</span>
+<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span> cx = x;              <span class="hljs-comment">//情景三（cx也一样）</span>
+<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span> &amp; rx=cx;             <span class="hljs-comment">//情景一（rx是非通用引用）</span>
+
+<span class="hljs-comment">//情景二：</span>
+<span class="hljs-keyword">auto</span>&amp;&amp; uref1 = x;               <span class="hljs-comment">//x是int左值，</span>
+                                <span class="hljs-comment">//所以uref1类型为int&amp;</span>
+<span class="hljs-keyword">auto</span>&amp;&amp; uref2 = cx;              <span class="hljs-comment">//cx是const int左值，</span>
+                                <span class="hljs-comment">//所以uref2类型为const int&amp;</span>
+<span class="hljs-keyword">auto</span>&amp;&amp; uref3 = <span class="hljs-number">27</span>;              <span class="hljs-comment">//27是int右值，</span>
+                                <span class="hljs-comment">//所以uref3类型为int&amp;&amp;</span>
+
+<span class="hljs-comment">//数组和函数名如何退化为指针。那些内容也同样适用于auto类型推导：</span>
+<span class="hljs-type">const</span> <span class="hljs-type">char</span> name[] =             <span class="hljs-comment">//name的类型是const char[13]</span>
+ <span class="hljs-string">"R. N. Briggs"</span>;
+
+<span class="hljs-keyword">auto</span> arr1 = name;               <span class="hljs-comment">//arr1的类型是const char*</span>
+<span class="hljs-keyword">auto</span>&amp; arr2 = name;              <span class="hljs-comment">//arr2的类型是const char (&amp;)[13]</span>
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">someFunc</span><span class="hljs-params">(<span class="hljs-type">int</span>, <span class="hljs-type">double</span>)</span></span>;     <span class="hljs-comment">//someFunc是一个函数，</span>
+                                <span class="hljs-comment">//类型为void(int, double)</span>
+
+<span class="hljs-keyword">auto</span> func1 = someFunc;          <span class="hljs-comment">//func1的类型是void (*)(int, double)</span>
+<span class="hljs-keyword">auto</span>&amp; func2 = someFunc;         <span class="hljs-comment">//func2的类型是void (&amp;)(int, double)</span>
+</code></pre>
+<hr></hr>
+<h3 id="和模板类型推导的区别"><a name="和模板类型推导的区别" class="anchor-navigation-ex-anchor" href="#和模板类型推导的区别"><i class="fa fa-link" aria-hidden="true"></i></a>和模板类型推导的区别</h3>
+<p><strong>当用<code>auto</code>声明的变量使用花括号进行初始化，<code>auto</code>类型推导推出的类型则为<code>std::initializer_list</code>。</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> x1 = <span class="hljs-number">27</span>;                   <span class="hljs-comment">//类型是int，值是27</span>
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">x2</span><span class="hljs-params">(<span class="hljs-number">27</span>)</span></span>;                    <span class="hljs-comment">//同上</span>
+<span class="hljs-keyword">auto</span> x3 = { <span class="hljs-number">27</span> };               <span class="hljs-comment">//类型是std::initializer_list&lt;int&gt;，</span>
+                                <span class="hljs-comment">//值是{ 27 }</span>
+<span class="hljs-keyword">auto</span> x4{ <span class="hljs-number">27</span> };                  <span class="hljs-comment">//同上</span>
+</code></pre>
+<blockquote>
+<p>[!warning]</p>
+<p><code>auto x4{27}</code> 在书中称 <code>auto</code> 推导出 <code>std::initializer_list&lt;int&gt;</code>。然而，在 <a href="https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html" target="_blank">N3922</a> 之后，将会推导出 <code>int</code>。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> x1 = {<span class="hljs-number">3</span>}; <span class="hljs-comment">// x1 is std::initializer_list&lt;int&gt;</span>
+<span class="hljs-keyword">auto</span> x2{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>}; <span class="hljs-comment">// error: not a single element</span>
+<span class="hljs-keyword">auto</span> x3{<span class="hljs-number">3</span>};    <span class="hljs-comment">// x3 is int</span>
+               <span class="hljs-comment">// (before N3922 x2 and x3 were both std::initializer_list&lt;int&gt;)</span>
+</code></pre>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> x5 = { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.0</span> };        <span class="hljs-comment">//错误！无法推导std::initializer_list&lt;T&gt;中的T</span>
+</code></pre>
+<p>这里确实发生了两种类型推导是很重要的。</p>
+<ul>
+<li>一种是由于<code>auto</code>的使用：<code>x5</code>使用花括号的方式进行初始化，<code>x5</code>必须被推导为<code>std::initializer_list</code>。</li>
+<li><code>std::initializer_list&lt;T&gt;</code>会被某种类型<code>T</code>实例化，<code>T</code>也会被推导，推导之所以失败，是因为在花括号中的值并不是同一种类型。</li>
+</ul>
+<hr></hr>
+<p>对于模板类型推导这样就行不通：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> x = { <span class="hljs-number">11</span>, <span class="hljs-number">23</span>, <span class="hljs-number">9</span> };         <span class="hljs-comment">//x的类型是std::initializer_list&lt;int&gt;</span>
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;            <span class="hljs-comment">//带有与x的声明等价的</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T param)</span></span>;                <span class="hljs-comment">//形参声明的模板</span>
+
+<span class="hljs-built_in">f</span>({ <span class="hljs-number">11</span>, <span class="hljs-number">23</span>, <span class="hljs-number">9</span> });               <span class="hljs-comment">//错误！不能推导出T</span>
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(std::initializer_list&lt;T&gt; initList)</span></span>;
+
+<span class="hljs-built_in">f</span>({ <span class="hljs-number">11</span>, <span class="hljs-number">23</span>, <span class="hljs-number">9</span> });               <span class="hljs-comment">//T被推导为int，initList的类型为</span>
+                                <span class="hljs-comment">//std::initializer_list&lt;int&gt;</span>
+</code></pre>
+<blockquote>
+<p>[!note]</p>
+<p><code>auto</code>类型推导和模板类型推导的真正区别在于，<code>auto</code>类型推导假定花括号表示<code>std::initializer_list</code>而模板类型推导不会这样</p>
+</blockquote>
+<hr></hr>
+<p>但是C++14允许<code>auto</code>用于函数返回值并会被推导（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item3.html" target="_blank">Item3</a>），而且C++14的<em>lambda</em>函数也允许在形参声明中使用<code>auto</code>。但是在这些情况下<code>auto</code>实际上使用<strong>模板类型推导</strong>的那一套规则在工作，而不是<code>auto</code>类型推导。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">createInitList</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">return</span> { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> };         <span class="hljs-comment">//错误！不能推导{ 1, 2, 3 }的类型</span>
+}
+
+std::vector&lt;<span class="hljs-type">int</span>&gt; v;
+…
+<span class="hljs-keyword">auto</span> resetV = 
+    [&amp;v](<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; newValue){ v = newValue; };        <span class="hljs-comment">//C++14</span>
+…
+<span class="hljs-built_in">resetV</span>({ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> });            <span class="hljs-comment">//错误！不能推导{ 1, 2, 3 }的类型</span>
+</code></pre>
+<h3 id="总结_1"><a name="总结_1" class="anchor-navigation-ex-anchor" href="#总结_1"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><code>auto</code>类型推导通常和模板类型推导相同，但是<code>auto</code>类型推导假定花括号初始化代表<code>std::initializer_list</code>，而模板类型推导不这样做</li>
+<li>在C++14中<code>auto</code>允许出现在函数返回值或者<em>lambda</em>函数形参中，但是它的工作机制是<strong>模板类型推导</strong>那一套方案，而不是<code>auto</code>类型推导</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-3-understand-decltype"><a name="item-3-understand-decltype" class="anchor-navigation-ex-anchor" href="#item-3-understand-decltype"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 3: Understand decltype</strong></h2>
+<h3 id="主要作用"><a name="主要作用" class="anchor-navigation-ex-anchor" href="#主要作用"><i class="fa fa-link" aria-hidden="true"></i></a>主要作用</h3>
+<p><code>decltype</code>只是简单的返回<strong>名字或者表达式的类型</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-type">const</span> <span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;                <span class="hljs-comment">//decltype(i)是const int</span>
+
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> Widget&amp; w)</span></span>;        <span class="hljs-comment">//decltype(w)是const Widget&amp;</span>
+                                <span class="hljs-comment">//decltype(f)是bool(const Widget&amp;)</span>
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span>{
+    <span class="hljs-type">int</span> x,y;                    <span class="hljs-comment">//decltype(Point::x)是int</span>
+};                              <span class="hljs-comment">//decltype(Point::y)是int</span>
+
+Widget w;                       <span class="hljs-comment">//decltype(w)是Widget</span>
+
+<span class="hljs-keyword">if</span> (<span class="hljs-built_in">f</span>(w))…                      <span class="hljs-comment">//decltype(f(w))是bool</span>
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;            <span class="hljs-comment">//std::vector的简化版本</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">vector</span>{
+<span class="hljs-keyword">public</span>:
+    …
+    T&amp; <span class="hljs-keyword">operator</span>[](std::<span class="hljs-type">size_t</span> index);
+    …
+};
+
+vector&lt;<span class="hljs-type">int</span>&gt; v;                  <span class="hljs-comment">//decltype(v)是vector&lt;int&gt;</span>
+…
+<span class="hljs-keyword">if</span> (v[<span class="hljs-number">0</span>] == <span class="hljs-number">0</span>)…                 <span class="hljs-comment">//decltype(v[0])是int&amp;</span>
+</code></pre>
+<p>C++11，<code>decltype</code>最主要的用途就是用于<strong>声明函数模板</strong>，而这个函数返回类型依赖于形参类型。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> Container, <span class="hljs-keyword">typename</span> Index&gt;    <span class="hljs-comment">//最终的C++14版本</span>
+<span class="hljs-function"><span class="hljs-keyword">decltype</span>(<span class="hljs-keyword">auto</span>)
+<span class="hljs-title">authAndAccess</span><span class="hljs-params">(Container&amp;&amp; c, Index i)</span>
+</span>{
+    <span class="hljs-built_in">authenticateUser</span>();
+    <span class="hljs-keyword">return</span> std::forward&lt;Container&gt;(c)[i];
+}
+</code></pre>
+<p><code>decltype(auto)</code>的使用不仅仅局限于函数返回类型，当你想对初始化表达式使用<code>decltype</code>推导的规则，你也可以使用：</p>
+<pre><code class="lang-cpp">Widget w;
+
+<span class="hljs-type">const</span> Widget&amp; cw = w;
+
+<span class="hljs-keyword">auto</span> myWidget1 = cw;                    <span class="hljs-comment">//auto类型推导</span>
+                                        <span class="hljs-comment">//myWidget1的类型为Widget</span>
+<span class="hljs-keyword">decltype</span>(<span class="hljs-keyword">auto</span>) myWidget2 = cw;          <span class="hljs-comment">//decltype类型推导</span>
+                                        <span class="hljs-comment">//myWidget2的类型是const Widget&amp;</span>
+</code></pre>
+<blockquote>
+<p>[!warning]</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">decltype</span>(<span class="hljs-keyword">auto</span>) <span class="hljs-title">f1</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>;
+    …
+    <span class="hljs-keyword">return</span> x;                            <span class="hljs-comment">//decltype(x）是int，所以f1返回int</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">decltype</span>(<span class="hljs-keyword">auto</span>) <span class="hljs-title">f2</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> x = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> (x);                          <span class="hljs-comment">//decltype((x))是int&amp;，所以f2返回int&amp;</span>
+}
+</code></pre>
+<p>注意不仅<code>f2</code>的返回类型不同于<code>f1</code>，而且它还引用了一个局部变量！</p>
+</blockquote>
+<hr></hr>
+<h3 id="总结_2"><a name="总结_2" class="anchor-navigation-ex-anchor" href="#总结_2"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><code>decltype</code>总是<strong>不加修改</strong>的产生变量或者表达式的类型。</li>
+<li>对于<code>T</code>类型的不是单纯的变量名的左值表达式，<code>decltype</code>总是产出<code>T</code>的引用即<code>T&amp;</code>。</li>
+<li>C++14支持<code>decltype(auto)</code>，就像<code>auto</code>一样，推导出类型，但是它使<strong>用<code>decltype</code>的规则</strong>进行推导。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-4-know-how-to-view-deduced-types"><a name="item-4-know-how-to-view-deduced-types" class="anchor-navigation-ex-anchor" href="#item-4-know-how-to-view-deduced-types"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 4: Know how to view deduced types</strong></h2>
+<p>我们探究三种方案：在你编辑代码的时候获得类型推导的结果，在编译期间获得结果，在运行时获得结果。</p>
+<h3 id="1-ide编辑器"><a name="1-ide编辑器" class="anchor-navigation-ex-anchor" href="#1-ide编辑器"><i class="fa fa-link" aria-hidden="true"></i></a>1. <a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item4.html#ide编辑器" target="_blank">IDE编辑器</a></h3>
+<ul>
+<li>在IDE中的代码编辑器通常可以显示程序代码中变量，函数，参数的类型，你只需要简单的把鼠标移到它们的上面</li>
+<li>为此，你的代码必须或多或少的处于可编译状态，因为IDE之所以能提供这些信息是因为一个C++编译器（或者至少是前端中的一个部分）运行于IDE中。</li>
+</ul>
+<hr></hr>
+<h3 id="2-编译器诊断"><a name="2-编译器诊断" class="anchor-navigation-ex-anchor" href="#2-编译器诊断"><i class="fa fa-link" aria-hidden="true"></i></a>2. <a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item4.html#编译器诊断" target="_blank">编译器诊断</a></h3>
+<p>使用编译器出错时提供的错误消息。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                <span class="hljs-comment">//只对TD进行声明</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TD</span>;                           <span class="hljs-comment">//TD == "Type Displayer"</span>
+
+TD&lt;<span class="hljs-keyword">decltype</span>(x)&gt; xType;              <span class="hljs-comment">//引出包含x和y</span>
+TD&lt;<span class="hljs-keyword">decltype</span>(y)&gt; yType;              <span class="hljs-comment">//的类型的错误消息</span>
+</code></pre>
+<p><strong><em>variableName**</em></strong>Type**的结构来命名变量，因为这样它们产生的错误消息可以有助于我们查找</p>
+<hr></hr>
+<h3 id="3-运行时输出"><a name="3-运行时输出" class="anchor-navigation-ex-anchor" href="#3-运行时输出"><i class="fa fa-link" aria-hidden="true"></i></a>3. <a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item4.html#运行时输出" target="_blank">运行时输出</a></h3>
+<p>使用<code>printf</code>的方法（并不是说我推荐你使用<code>printf</code>）类型信息要在运行时才会显示出来，但是它提供了一种格式化输出的方法。</p>
+<pre><code class="lang-cpp">std::cout &lt;&lt; <span class="hljs-built_in">typeid</span>(x).<span class="hljs-built_in">name</span>() &lt;&lt; <span class="hljs-string">'\n'</span>;  <span class="hljs-comment">//显示x和y的类型</span>
+std::cout &lt;&lt; <span class="hljs-built_in">typeid</span>(y).<span class="hljs-built_in">name</span>() &lt;&lt; <span class="hljs-string">'\n'</span>;
+</code></pre>
+<p>对一个对象如<code>x</code>或<code>y</code>调用<code>typeid</code>产生一个<code>std::type_info</code>的对象，然后<code>std::type_info</code>里面的成员函数<code>name()</code>来产生一个C风格的字符串（即一个<code>const char*</code>）表示变量的名字。</p>
+<p><code>td::type_info::name</code>的结果并不总是可信的</p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - CHAPTER_1_Deducing_Types</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Effective-Modern-C++">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CHAPTER_2_auto.html" class="navigation navigation-next " aria-label="Next page: CHAPTER_2_auto">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CHAPTER_1_Deducing_Types","level":"1.4.2.1","depth":3,"next":{"title":"CHAPTER_2_auto","level":"1.4.2.2","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_2_auto.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_2_auto.md","articles":[]},"previous":{"title":"Effective-Modern-C++","level":"1.4.2","depth":2,"path":"docs/Cpp/Effective-Modern-C++/README.md","ref":"docs/Cpp/Effective-Modern-C++/README.md","articles":[{"title":"CHAPTER_1_Deducing_Types","level":"1.4.2.1","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.md","articles":[]},{"title":"CHAPTER_2_auto","level":"1.4.2.2","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_2_auto.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_2_auto.md","articles":[]},{"title":"CHAPTER_3_Moving_to_Modern_C++","level":"1.4.2.3","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.md","articles":[]},{"title":"CHAPTER_4_Smart_Pointers","level":"1.4.2.4","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.md","articles":[]},{"title":"CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding","level":"1.4.2.5","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","articles":[]},{"title":"CHAPTER_6_Lambda_Expressions","level":"1.4.2.6","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.md","mtime":"2025-09-07T09:41:17.120Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

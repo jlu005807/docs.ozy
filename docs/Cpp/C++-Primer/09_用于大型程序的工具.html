@@ -1,0 +1,1987 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>09_用于大型程序的工具 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10_特殊工具与技术.html" />
+    
+    
+    <link rel="prev" href="08_标准库特殊设施.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01_泛型算法.html">
+            
+                <a href="01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="02_关联容器.html">
+            
+                <a href="02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="03_动态内存.html">
+            
+                <a href="03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04_拷贝控制.html">
+            
+                <a href="04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="05_重载运算与类型转换.html">
+            
+                <a href="05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06_面向对象程序设计.html">
+            
+                <a href="06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="07_模板与泛型编程.html">
+            
+                <a href="07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="08_标准库特殊设施.html">
+            
+                <a href="08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.9" data-path="09_用于大型程序的工具.html">
+            
+                <a href="09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="10_特殊工具与技术.html">
+            
+                <a href="10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="11_lambda表达式的类型.html">
+            
+                <a href="11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="12_nullptr.html">
+            
+                <a href="12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Effective-Modern-C++/">
+            
+                <a href="../Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >09_用于大型程序的工具</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#用于大型程序的工具"><b></b>用于大型程序的工具</a></li><ul><li><span class="title-icon "></span><a href="#1-异常处理"><b></b>1. 异常处理</a></li><li><span class="title-icon "></span><a href="#2-命名空间"><b></b>2. 命名空间</a></li><li><span class="title-icon "></span><a href="#3-多重继承与虚继承"><b></b>3. 多重继承与虚继承</a></li></ul></ul></div><a href="#用于大型程序的工具" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#用于大型程序的工具">用于大型程序的工具</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1-异常处理">1. 异常处理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#11-抛出异常">1.1 抛出异常</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#栈展开">栈展开</a><i></i></div></li>
+<li><div><a href="#栈展开过程中对象被自动销毁">栈展开过程中对象被自动销毁</a><i></i></div></li>
+<li><div><a href="#异常对象">异常对象</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#12-捕获异常">1.2 捕获异常</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#查找匹配的处理代码">查找匹配的处理代码</a><i></i></div></li>
+<li><div><a href="#重新抛出">重新抛出</a><i></i></div></li>
+<li><div><a href="#捕获所有异常的处理代码">捕获所有异常的处理代码</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#13-函数try语句块与构造函数">1.3 函数try语句块与构造函数</a><i></i></div></li>
+<li><div><a href="#14-noexcept异常说明">1.4 noexcept异常说明</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#异常说明的实参">异常说明的实参</a><i></i></div></li>
+<li><div><a href="#noexcept运算符">noexcept运算符</a><i></i></div></li>
+<li><div><a href="#异常说明与指针、虚函数和拷贝控制">异常说明与指针、虚函数和拷贝控制</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#15-异常类层次">1.5 异常类层次</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#2-命名空间">2. 命名空间</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#21-命名空间定义">2.1 命名空间定义</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#每个命名空间都是一个作用域">每个命名空间都是一个作用域</a><i></i></div></li>
+<li><div><a href="#命名空间可以是不连续的">命名空间可以是不连续的</a><i></i></div></li>
+<li><div><a href="#模板特例化">模板特例化</a><i></i></div></li>
+<li><div><a href="#全局命名空间">全局命名空间</a><i></i></div></li>
+<li><div><a href="#嵌套的命名空间">嵌套的命名空间</a><i></i></div></li>
+<li><div><a href="#未命名的命名空间">未命名的命名空间</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#22-使用命名空间成员">2.2 使用命名空间成员</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#命名空间的别名">命名空间的别名</a><i></i></div></li>
+<li><div><a href="#using声明（declaration）">using声明（declaration）</a><i></i></div></li>
+<li><div><a href="#using指示（directive）">using指示（directive）</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#23-类、命名空间与作用域">2.3 类、命名空间与作用域</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#实参相关的查找与类类型形参">实参相关的查找与类类型形参</a><i></i></div></li>
+<li><div><a href="#友元声明与实参相关的查找">友元声明与实参相关的查找</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#24-重载与命名空间">2.4 重载与命名空间</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#与实参相关的查找与重载">与实参相关的查找与重载</a><i></i></div></li>
+<li><div><a href="#重载与-using-声明指示">重载与 using 声明/指示</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#3-多重继承与虚继承">3. 多重继承与虚继承</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#31-多重继承">3.1 多重继承</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#多重继承的派生类从每个基类中继承状态">多重继承的派生类从每个基类中继承状态</a><i></i></div></li>
+<li><div><a href="#派生类构造函数初始化所有基类">派生类构造函数初始化所有基类</a><i></i></div></li>
+<li><div><a href="#继承的构造函数与多重继承">继承的构造函数与多重继承</a><i></i></div></li>
+<li><div><a href="#析构函数与多重继承">析构函数与多重继承</a><i></i></div></li>
+<li><div><a href="#多重继承的派生类的拷贝与移动操作">多重继承的派生类的拷贝与移动操作</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#32-类型转换与多个基类">3.2 类型转换与多个基类</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#基于指针类型或引用类型的查找">基于指针类型或引用类型的查找</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#33-多重继承下的类作用域">3.3 多重继承下的类作用域</a><i></i></div></li>
+<li><div><a href="#34-虚继承">3.4 虚继承</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#使用虚基类">使用虚基类</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#35-构造函数与虚继承">3.5 构造函数与虚继承</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#虚继承的对象的构造方式">虚继承的对象的构造方式</a><i></i></div></li>
+<li><div><a href="#构造函数与析构函数的次序">构造函数与析构函数的次序</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="用于大型程序的工具"><a name="用于大型程序的工具" class="anchor-navigation-ex-anchor" href="#用于大型程序的工具"><i class="fa fa-link" aria-hidden="true"></i></a>用于大型程序的工具</h1>
+<h2 id="1-异常处理"><a name="1-异常处理" class="anchor-navigation-ex-anchor" href="#1-异常处理"><i class="fa fa-link" aria-hidden="true"></i></a>1. 异常处理</h2>
+<blockquote>
+<p><strong>异常处理(exception handling)</strong>机制允许程序中独立开发的部分能够在运行时就出现的问题进行通信并做出相应的处理。异常使得我们能够将问题的检测与解决过程分离开来。<strong>程序的一部分负责检测问题的出现，然后解决该问题的任务传递给程序的另一部分</strong>。检测环节无须知道问题处理模块的所有细节，反之亦然。</p>
+</blockquote>
+<h4 id="11-抛出异常"><a name="11-抛出异常" class="anchor-navigation-ex-anchor" href="#11-抛出异常"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 抛出异常</h4>
+<p>当执行一个<code>throw</code>时：</p>
+<ul>
+<li>沿着调用链的函数可能会提早退出。</li>
+<li>一旦程序开始执行异常处理代码，则沿着调用链创建的对象将被销毁。</li>
+</ul>
+<h6 id="栈展开"><a name="栈展开" class="anchor-navigation-ex-anchor" href="#栈展开"><i class="fa fa-link" aria-hidden="true"></i></a>栈展开</h6>
+<p>简而言之就是在包含<code>throw</code>语句的<code>try语句块</code>中找与之关联的<code>catch</code>子句，如果没找到就继续沿栈返回（调用逆序）寻找，这个过程被称为<strong>栈展开（stack unwinding）</strong>。</p>
+<p>假设找到了一个匹配的catch子句，则程序进入该子句并执行其中的代码。当执行完这个catch子句后，找到<strong>与try块关联的最后一个catch子句</strong>之后的点，并从这里继续执行。</p>
+<blockquote>
+<p>try块可以关联多个catch子句</p>
+</blockquote>
+<p>如果一直没找到匹配的<code>catch</code>，退出<code>main</code>函数后查找过程终止，程序将调用标准库函数<code>terminate</code>，终止程序。</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240722191431104.png" alt="image-20240722191431104"></img></p>
+</blockquote>
+<h6 id="栈展开过程中对象被自动销毁"><a name="栈展开过程中对象被自动销毁" class="anchor-navigation-ex-anchor" href="#栈展开过程中对象被自动销毁"><i class="fa fa-link" aria-hidden="true"></i></a>栈展开过程中对象被自动销毁</h6>
+<p>这意味着类类型的析构函数会自动调用，这里有一个隐含前提。</p>
+<p> <strong>析构函数不应该抛出不能被它自身处理的异常</strong></p>
+<ol>
+<li><p>如果析构函数抛出异常，则<strong>异常点之后的程序不会执行</strong>，如果析构函数在异常点之后执行了某些必要的动作比如释放某些资源，则这些动作不会执行，会造成诸如<strong>资源泄漏</strong>的问题。</p>
+</li>
+<li><p>通常异常发生时，c++的机制会调用已经构造对象的析构函数来释放资源，此时若析构函数本身也抛出异常，则前一个异常尚未处理，又有新的异常，会造成<strong>程序崩溃</strong>的问题。</p>
+</li>
+</ol>
+<p>示例实践：保证析构函数不抛出异常</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">FileGuard</span> {
+  FILE* f;
+  <span class="hljs-built_in">FileGuard</span>(<span class="hljs-type">const</span> <span class="hljs-type">char</span>* path): <span class="hljs-built_in">f</span>(std::<span class="hljs-built_in">fopen</span>(path, <span class="hljs-string">"r"</span>)) {}
+  ~<span class="hljs-built_in">FileGuard</span>() <span class="hljs-keyword">noexcept</span> { <span class="hljs-comment">// 保证不会向上抛出异常</span>
+    <span class="hljs-keyword">if</span> (f) {
+      <span class="hljs-comment">// 使用 noexcept-safe 的清理代码</span>
+      std::<span class="hljs-built_in">fclose</span>(f);
+      f = <span class="hljs-literal">nullptr</span>;
+    }
+  }
+};
+</code></pre>
+<blockquote>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240722192244300.png" alt="image-20240722192244300"></img></p>
+</blockquote>
+<h6 id="异常对象"><a name="异常对象" class="anchor-navigation-ex-anchor" href="#异常对象"><i class="fa fa-link" aria-hidden="true"></i></a>异常对象</h6>
+<ol>
+<li>编译器对异常对象进行拷贝初始化，所以<code>throw</code>语句中的表达式必须拥有<strong>完全类型</strong>。</li>
+<li>如果是类类型，则相应的类必须含有一个<strong>可访问的析构函数</strong>和一个<strong>可访问的拷贝或移动构造函数</strong>。</li>
+<li>数组类型或函数类型将被转换为对应的指针类型。</li>
+<li>不应抛出指向<strong>局部对象的指针</strong>。</li>
+<li>异常对象的类型取决于表达式的<strong>静态编译时类型</strong></li>
+</ol>
+<blockquote>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240722192936626.png" alt="image-20240722192936626"></img></p>
+</blockquote>
+<hr></hr>
+<h4 id="12-捕获异常"><a name="12-捕获异常" class="anchor-navigation-ex-anchor" href="#12-捕获异常"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 捕获异常</h4>
+<ol>
+<li>异常声明可以是左值引用，但不能是右值引用</li>
+<li>通常情况下，如果<code>catch</code>接受的异常与某个继承体系有关，则最好将<code>catch</code>的参数定义成引用类型</li>
+<li>静态类型决定<code>catch</code>语句所能执行的操作</li>
+</ol>
+<h6 id="查找匹配的处理代码"><a name="查找匹配的处理代码" class="anchor-navigation-ex-anchor" href="#查找匹配的处理代码"><i class="fa fa-link" aria-hidden="true"></i></a>查找匹配的处理代码</h6>
+<p>在搜寻catch语句的过程中，挑选出来的应该是第一个与异常匹配的catch语句。因此，<strong>越是专门的<code>catch</code>越应该置于整个<code>catch</code>列表的前端</strong>。</p>
+<p>绝大多数类型转换都不被允许：</p>
+<ul>
+<li>允许从非常量向常量的类型转换，也就是说，一条非常量对象的throw语句可以匹配一个接受常量引用的catch语句。</li>
+<li>允许从派生类向基类的类型转换。</li>
+<li>数组被转换成指向数组（元素）类型的指针，函数被转换成指向该函数类型的指针。</li>
+</ul>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240722194344235.png" alt="image-20240722194344235"></img></p>
+</blockquote>
+<h6 id="重新抛出"><a name="重新抛出" class="anchor-navigation-ex-anchor" href="#重新抛出"><i class="fa fa-link" aria-hidden="true"></i></a>重新抛出</h6>
+<p>在<code>catch</code>语句中使用<code>throw;</code></p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">catch</span> (my error &amp;eobj) {  <span class="hljs-comment">//引用类型</span>
+  eobj.status = errCodes::severeErr;  <span class="hljs-comment">//修改了异常对象</span>
+  <span class="hljs-keyword">throw</span>;  <span class="hljs-comment">//异常对象的status成员是severeErr</span>
+} <span class="hljs-built_in">catch</span> (other error eobj) {  <span class="hljs-comment">//非引用类型</span>
+  eobj.status = errCodes::badErr;  <span class="hljs-comment">//只修改了异常对象的局部副本</span>
+  <span class="hljs-keyword">throw</span>;  <span class="hljs-comment">//异常对象的status成员没有改变</span>
+}
+</code></pre>
+<h6 id="捕获所有异常的处理代码"><a name="捕获所有异常的处理代码" class="anchor-navigation-ex-anchor" href="#捕获所有异常的处理代码"><i class="fa fa-link" aria-hidden="true"></i></a>捕获所有异常的处理代码</h6>
+<p><code>catch(...)</code>称为<strong>捕获所有异常（catch all）</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">throw</span> <span class="hljs-number">1</span>;
+  } <span class="hljs-built_in">catch</span> (std::exception) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"caught an exception"</span>);
+  } <span class="hljs-built_in">catch</span> (...) {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"caught 1"</span>);
+  }
+<span class="hljs-comment">//output: caught 1</span>
+</code></pre>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240722194941834.png" alt="image-20240722194941834"></img></p>
+</blockquote>
+<hr></hr>
+<h4 id="13-函数try语句块与构造函数"><a name="13-函数try语句块与构造函数" class="anchor-navigation-ex-anchor" href="#13-函数try语句块与构造函数"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 函数<code>try</code>语句块与构造函数</h4>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240722195906900.png" alt="image-20240722195906900"></img></p>
+</blockquote>
+<p>为处理构造函数初始值列表中抛出的异常，我们必须将构造函数写成<strong>函数<code>try</code>语句块</strong>（也称为函数测试块，function try block）。</p>
+<pre><code class="lang-cpp">foo::<span class="hljs-built_in">foo</span>(<span class="hljs-type">int</span> i) <span class="hljs-keyword">try</span>:<span class="hljs-built_in">data</span>(i) {
+
+} <span class="hljs-built_in">catch</span>(<span class="hljs-type">const</span> std::exception &amp;e){
+  <span class="hljs-built_in">handle</span>(e);
+}
+</code></pre>
+<blockquote>
+<p>还有一种情况值得读者注意，在<strong>初始化构造函数的参数时</strong>也可能发生异常，这样的异常不属于函数<code>try</code>语句块的一部分。函数<code>try</code>语句块只能处理构造函数开始执行后发生的异常。和其他函数调用一样，如果在参数初始化的过程中发生了异常，则该异常属于<strong>调用表达式的一部分</strong>，并将在调用者所在的上下文中处理。</p>
+</blockquote>
+<hr></hr>
+<h4 id="14-noexcept异常说明"><a name="14-noexcept异常说明" class="anchor-navigation-ex-anchor" href="#14-noexcept异常说明"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 <code>noexcept</code>异常说明</h4>
+<ol>
+<li><p>对于一个函数来说，<code>noexcept</code>说明要么出现在该函数的<strong>所有声明语句和定义语句中</strong>，要么一次也不出现。</p>
+</li>
+<li><p>该说明应该在函数的尾置返回类型之前。</p>
+</li>
+<li><p>我们也可以在函数指针的声明和定义中指定<code>noexcept</code>.。在typedef或类型别名中则不能出现<code>noexcept</code>。</p>
+</li>
+<li><p>在成员函数中，<code>noexcept</code>说明符需要跟在const及引用限定符之后，而在final、override或虚函数的=0之前。</p>
+<blockquote>
+<p>复习：<strong>引用限定符</strong>（&amp;）用来限定调用这个函数的对象是左值还是右值。</p>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> &amp;&amp; <span class="hljs-keyword">noexcept</span> <span class="hljs-keyword">final</span></span>{}
+<span class="hljs-comment">//修饰符参考顺序</span>
+</code></pre>
+</li>
+</ol>
+<p><code>noexcept</code>可以用在两种情况下：</p>
+<ul>
+<li>确认函数不会抛出异常</li>
+<li>不知道该如何处理异常</li>
+</ul>
+<blockquote>
+<p>[!WARNING]</p>
+<p>通常情况下，编译器不能也不必在编译时验证异常说明。如果声明为<code>noexcept</code>的函数抛出了异常，程序会调用<code>terminate</code>终止，以确保不在<strong>运行时</strong>抛出异常的承诺。对是否执行栈展开未做约定。</p>
+</blockquote>
+<p><img src="assets/image-20240722201816613.png" alt="image-20240722201816613"></img></p>
+<h6 id="异常说明的实参"><a name="异常说明的实参" class="anchor-navigation-ex-anchor" href="#异常说明的实参"><i class="fa fa-link" aria-hidden="true"></i></a>异常说明的实参</h6>
+<p><code>noexcept</code>说明符接受一个可选的实参，该实参必须能转换为<code>bool</code>类型：如果实参是<code>true</code>,则函数不会抛出异常：如果实参是<code>false</code>,则函数可能抛出异常：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">recoup</span><span class="hljs-params">(<span class="hljs-type">int</span>)</span> <span class="hljs-title">noexcept</span><span class="hljs-params">(<span class="hljs-literal">true</span>)</span></span>;<span class="hljs-comment">//recoup不会抛出异常</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">alloc</span><span class="hljs-params">(<span class="hljs-type">int</span>)</span> <span class="hljs-title">noexcept</span><span class="hljs-params">(<span class="hljs-literal">false</span>)</span></span>;<span class="hljs-comment">//a11oc可能抛出异常</span>
+</code></pre>
+<h6 id="noexcept运算符"><a name="noexcept运算符" class="anchor-navigation-ex-anchor" href="#noexcept运算符"><i class="fa fa-link" aria-hidden="true"></i></a><code>noexcept</code>运算符</h6>
+<p><code>noexcept</code>运算符是一个一元运算符，它的返回值是一个<code>bool</code>类型的右值常量表达式，用于表示给定的表达式是否会抛出异常。和<code>sizeof</code>类似，<code>noexcept</code>也不会求其运算对象的值。</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240722202257846.png" alt="image-20240722202257846"></img></p>
+</blockquote>
+<h6 id="异常说明与指针、虚函数和拷贝控制"><a name="异常说明与指针、虚函数和拷贝控制" class="anchor-navigation-ex-anchor" href="#异常说明与指针、虚函数和拷贝控制"><i class="fa fa-link" aria-hidden="true"></i></a>异常说明与指针、虚函数和拷贝控制</h6>
+<p><strong>指针：</strong></p>
+<p>函数指针及该指针所指的函数必须具有一致的异常说明。也就是说，如果我们为某个指针做了不抛出异常的声明，则该指针将只能指向不抛出异常的函数。相反，如果我们显式或隐式地说明了指针可能抛出异常，则该指针可以指向任何函数，即使是承诺了不抛出异常的函数也可以：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//recoup和pf1都承诺不会抛出异常</span>
+<span class="hljs-built_in">void</span> (*pfl)(<span class="hljs-type">int</span>) <span class="hljs-keyword">noexcept</span> = recoup;
+<span class="hljs-comment">//正确：recoup不会抛出异常，pf2可能抛出异常，二者之间互不干扰</span>
+<span class="hljs-built_in">void</span> (*pf2)(<span class="hljs-type">int</span>) = recoup;
+pf1 = alloc;
+<span class="hljs-comment">//错误：alloc可能抛出异常，但是pf1已经说明了它不会抛出异常</span>
+pf2 = alloc;
+<span class="hljs-comment">//正确：pf2和alloc都可能抛出异常</span>
+</code></pre>
+<p><strong>虚函数：</strong></p>
+<p>如果一个虚函数承诺了它不会抛出异常，则后续派生出来的虚函数也必须做出同样的承诺：与之相反，如果基类的虚函数允许抛出异常，则派生类的对应函数既可以允许抛出异常，也可以不允许抛出异常。</p>
+<p><strong>拷贝控制</strong>：</p>
+<p>当编译器合成拷贝控制成员时，同时也生成一个异常说明。如果对所有成员和基类的所有操作都承诺了不会抛出异常，则合成的成员是<code>noexcept</code>的。如果合成成员调用的任意一个函数可能抛出异常，则合成的成员是<code>noexcept(false)</code>。而且，如果我们定义了一个析构函数但是没有为它提供异常说明，则编译器将合成一个。合成的异常说明将与假设由编译器为类合成析构函数时所得的异常说明一致。</p>
+<hr></hr>
+<h4 id="15-异常类层次"><a name="15-异常类层次" class="anchor-navigation-ex-anchor" href="#15-异常类层次"><i class="fa fa-link" aria-hidden="true"></i></a>1.5 异常类层次</h4>
+<p><img src="assets/image-20240722203021779.png" alt="image-20240722203021779"></img></p>
+<h2 id="2-命名空间"><a name="2-命名空间" class="anchor-navigation-ex-anchor" href="#2-命名空间"><i class="fa fa-link" aria-hidden="true"></i></a>2. 命名空间</h2>
+<h4 id="21-命名空间定义"><a name="21-命名空间定义" class="anchor-navigation-ex-anchor" href="#21-命名空间定义"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 命名空间定义</h4>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723174454164.png" alt="image-20240723174454164"></img></p>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">namespace</span> {
+  ...
+}
+</code></pre>
+<p>// C++17 支持嵌套命名空间的简写</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">namespace</span> A::B::C {
+  <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<h6 id="每个命名空间都是一个作用域"><a name="每个命名空间都是一个作用域" class="anchor-navigation-ex-anchor" href="#每个命名空间都是一个作用域"><i class="fa fa-link" aria-hidden="true"></i></a>每个命名空间都是一个作用域</h6>
+<p>和其他作用域类似，命名空间中的每个名字都必须表示该空间内的唯一实体。因为不同命名空间的作用域不同，所以在不同命名空间内可以有相同名字的成员。</p>
+<h6 id="命名空间可以是不连续的"><a name="命名空间可以是不连续的" class="anchor-navigation-ex-anchor" href="#命名空间可以是不连续的"><i class="fa fa-link" aria-hidden="true"></i></a>命名空间可以是不连续的</h6>
+<p>参考std命名空间</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723175350685.png" alt="image-20240723175350685"></img></p>
+</blockquote>
+<h6 id="模板特例化"><a name="模板特例化" class="anchor-navigation-ex-anchor" href="#模板特例化"><i class="fa fa-link" aria-hidden="true"></i></a>模板特例化</h6>
+<p><img src="assets/image-20240723182012237.png" alt="image-20240723182012237"></img></p>
+<h6 id="全局命名空间"><a name="全局命名空间" class="anchor-navigation-ex-anchor" href="#全局命名空间"><i class="fa fa-link" aria-hidden="true"></i></a>全局命名空间</h6>
+<pre><code class="lang-cpp">::member_name;
+</code></pre>
+<h6 id="嵌套的命名空间"><a name="嵌套的命名空间" class="anchor-navigation-ex-anchor" href="#嵌套的命名空间"><i class="fa fa-link" aria-hidden="true"></i></a>嵌套的命名空间</h6>
+<pre><code class="lang-cpp">
+<span class="hljs-keyword">namespace</span> cpp {
+  <span class="hljs-keyword">namespace</span> cpp98 {<span class="hljs-comment">//普通嵌套</span>
+    <span class="hljs-comment">//使用cpp98的内容需要使用cpp::cpp98::name;</span>
+  }
+  <span class="hljs-keyword">inline</span> <span class="hljs-keyword">namespace</span> cpp23{<span class="hljs-comment">//内联嵌套</span>
+    <span class="hljs-comment">//cpp命名空间内可以直接访问cpp23内容 cpp::name;</span>
+  }
+}
+</code></pre>
+<h6 id="未命名的命名空间"><a name="未命名的命名空间" class="anchor-navigation-ex-anchor" href="#未命名的命名空间"><i class="fa fa-link" aria-hidden="true"></i></a>未命名的命名空间</h6>
+<ul>
+<li>变量具有静态生命周期</li>
+<li>不能跨文件</li>
+<li>名字可以直接使用</li>
+<li>作用域与该命名空间所在的作用域相同</li>
+</ul>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723182949201.png" alt="image-20240723182949201"></img></p>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240723183033581.png" alt="image-20240723183033581"></img></p>
+</blockquote>
+<hr></hr>
+<h4 id="22-使用命名空间成员"><a name="22-使用命名空间成员" class="anchor-navigation-ex-anchor" href="#22-使用命名空间成员"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 使用命名空间成员</h4>
+<h6 id="命名空间的别名"><a name="命名空间的别名" class="anchor-navigation-ex-anchor" href="#命名空间的别名"><i class="fa fa-link" aria-hidden="true"></i></a>命名空间的别名</h6>
+<pre><code class="lang-cpp"><span class="hljs-keyword">namespace</span> primer = cplusplus_priemr;
+</code></pre>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723184434857.png" alt="image-20240723184434857"></img></p>
+</blockquote>
+<h6 id="using声明（declaration）"><a name="using声明（declaration）" class="anchor-navigation-ex-anchor" href="#using声明（declaration）"><i class="fa fa-link" aria-hidden="true"></i></a>using声明（declaration）</h6>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> std::string;
+</code></pre>
+<h6 id="using指示（directive）"><a name="using指示（directive）" class="anchor-navigation-ex-anchor" href="#using指示（directive）"><i class="fa fa-link" aria-hidden="true"></i></a>using指示（directive）</h6>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+</code></pre>
+<blockquote>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240723184557829.png" alt="image-20240723184557829"></img></p>
+</blockquote>
+<p><img src="assets/image-20240723185335779.png" alt="image-20240723185335779"></img></p>
+<hr></hr>
+<h4 id="23-类、命名空间与作用域"><a name="23-类、命名空间与作用域" class="anchor-navigation-ex-anchor" href="#23-类、命名空间与作用域"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 类、命名空间与作用域</h4>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723185720139.png" alt="image-20240723185720139"></img></p>
+</blockquote>
+<h6 id="实参相关的查找与类类型形参"><a name="实参相关的查找与类类型形参" class="anchor-navigation-ex-anchor" href="#实参相关的查找与类类型形参"><i class="fa fa-link" aria-hidden="true"></i></a>实参相关的查找与类类型形参</h6>
+<pre><code class="lang-cpp">std::string s;
+std::cin &gt;&gt; s;
+</code></pre>
+<p>思考上面的代码，我们可能已经对&gt;&gt;（输入运算符）习以为常，string 在std中重载了该运算符用于输入一个字符串，这个调用等价于<code>operator&gt;&gt;(std::cin,s);</code>，那么问题是，<strong>为什么我们不显式使用<code>std::</code>限定符就可以调用<code>operator&gt;&gt;</code>？</strong></p>
+<p>对于命名空间中名字的隐藏规则来说有一个<strong>重要的例外</strong>，它使得我们可以直接访问输出运算符。这个例外是，当我们给<strong>函数</strong>传递一个<strong>类类型的对象</strong>时，除了在常规的作用域查找外还会查找实参<strong>类所属的命名空间</strong>。这一例外对于传递类的引用或指针的调用同样有效。</p>
+<h6 id="友元声明与实参相关的查找"><a name="友元声明与实参相关的查找" class="anchor-navigation-ex-anchor" href="#友元声明与实参相关的查找"><i class="fa fa-link" aria-hidden="true"></i></a>友元声明与实参相关的查找</h6>
+<p><img src="assets/image-20240723190902017.png" alt="image-20240723190902017"></img></p>
+<hr></hr>
+<h4 id="24-重载与命名空间"><a name="24-重载与命名空间" class="anchor-navigation-ex-anchor" href="#24-重载与命名空间"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 重载与命名空间</h4>
+<h6 id="与实参相关的查找与重载"><a name="与实参相关的查找与重载" class="anchor-navigation-ex-anchor" href="#与实参相关的查找与重载"><i class="fa fa-link" aria-hidden="true"></i></a>与实参相关的查找与重载</h6>
+<p>编译器在每个实参类(以及实参类的基类)所属的命名空间中搜寻候选函数。在这些命名空间中所有与被调用函数同名的函数都将被添加到候选集当中，即使其中某些函数在调用语句处不可见也是如此：</p>
+<p>例如：</p>
+<p>假设你定义了一个与标准库名字冲突的函数<code>print</code>，你为了不报错而没有使用<code>using namespace std;</code>，奇怪的是，给它传递一个非std内定义的参数时没有问题，但是一旦传递类似<code>std::string</code>这样的参数就会发生调用冲突，原因就是实参所在的命名空间查找，把<code>std::print</code>也纳入了候选函数，如果没有更好的匹配就会产生二义性。</p>
+<h6 id="重载与-using-声明指示"><a name="重载与-using-声明指示" class="anchor-navigation-ex-anchor" href="#重载与-using-声明指示"><i class="fa fa-link" aria-hidden="true"></i></a>重载与 using 声明/指示</h6>
+<p>一个<code>using</code>声明引入的函数将重载该声明语句所属作用域中已有的其他同名函数。如果<code>using</code>声明出现在局部作用域中，则引入的名字将隐藏外层作用域的相关声明。如果<code>using</code>声明所在的作用域中已经有一个函数与新引入的函数同名且形参列表相同，则该<code>using</code>声明将引发错误。除此之外，<code>using</code>声明将为引入的名字添加额外的重载实例，并最终扩充候选函数集的规模。</p>
+<p>与<code>using</code>声明不同的是，对于<code>using</code>指示来说，引入一个与已有函数形参列表完全相同的函数并不会产生错误。此时，只要我们指明调用的是命名空间中的函数版本还是当前作用域的版本即可。</p>
+<h2 id="3-多重继承与虚继承"><a name="3-多重继承与虚继承" class="anchor-navigation-ex-anchor" href="#3-多重继承与虚继承"><i class="fa fa-link" aria-hidden="true"></i></a>3. 多重继承与虚继承</h2>
+<h4 id="31-多重继承"><a name="31-多重继承" class="anchor-navigation-ex-anchor" href="#31-多重继承"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 多重继承</h4>
+<h6 id="多重继承的派生类从每个基类中继承状态"><a name="多重继承的派生类从每个基类中继承状态" class="anchor-navigation-ex-anchor" href="#多重继承的派生类从每个基类中继承状态"><i class="fa fa-link" aria-hidden="true"></i></a>多重继承的派生类从每个基类中继承状态</h6>
+<p><img src="assets/image-20240723194054629.png" alt="image-20240723194054629"></img></p>
+<h6 id="派生类构造函数初始化所有基类"><a name="派生类构造函数初始化所有基类" class="anchor-navigation-ex-anchor" href="#派生类构造函数初始化所有基类"><i class="fa fa-link" aria-hidden="true"></i></a>派生类构造函数初始化所有基类</h6>
+<ul>
+<li><strong>基类的构造顺序与派生列表中基类的出现顺序保持一致</strong>，而与派生类构造函数初始值列表中基类的顺序无关。</li>
+<li>以上图为例，初始化顺序为<strong><code>ZooAnimal</code> -&gt; <code>Bear</code> -&gt; <code>Endangered</code> -&gt; <code>Panda</code></strong>。 </li>
+</ul>
+<h6 id="继承的构造函数与多重继承"><a name="继承的构造函数与多重继承" class="anchor-navigation-ex-anchor" href="#继承的构造函数与多重继承"><i class="fa fa-link" aria-hidden="true"></i></a>继承的构造函数与多重继承</h6>
+<p>在C+11新标准中，允许派生类从它的一个或几个基类中继承构造函数。但是如果从多个基类中继承了相同的构造函数（即形参列表完全相同），则程序将产生错误，则这个类必须为该构造函数定义它自己的版本。</p>
+<h6 id="析构函数与多重继承"><a name="析构函数与多重继承" class="anchor-navigation-ex-anchor" href="#析构函数与多重继承"><i class="fa fa-link" aria-hidden="true"></i></a>析构函数与多重继承</h6>
+<ul>
+<li>派生类的析构函数只负责清除派生类本身分配的资源。</li>
+<li>析构函数调用顺序与构造函数相反。</li>
+</ul>
+<h6 id="多重继承的派生类的拷贝与移动操作"><a name="多重继承的派生类的拷贝与移动操作" class="anchor-navigation-ex-anchor" href="#多重继承的派生类的拷贝与移动操作"><i class="fa fa-link" aria-hidden="true"></i></a>多重继承的派生类的拷贝与移动操作</h6>
+<p>与只有一个基类的继承一样，多重继承的派生类如果定义了自己的拷贝/赋值构造函数和赋值运算符，则必须在完整的对象上执行拷贝、移动或赋值操作。</p>
+<hr></hr>
+<h4 id="32-类型转换与多个基类"><a name="32-类型转换与多个基类" class="anchor-navigation-ex-anchor" href="#32-类型转换与多个基类"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 类型转换与多个基类</h4>
+<blockquote>
+<p>[!NOTE]</p>
+<p>编译器不会在派生类向基类的几种转换中进行比较和选择，因为在它看来转换到任意种基类都一样好。</p>
+</blockquote>
+<h6 id="基于指针类型或引用类型的查找"><a name="基于指针类型或引用类型的查找" class="anchor-navigation-ex-anchor" href="#基于指针类型或引用类型的查找"><i class="fa fa-link" aria-hidden="true"></i></a>基于指针类型或引用类型的查找</h6>
+<p>与只有一个基类的继承一样，对象、指针和引用的<strong>静态类型</strong>决定了我们能够使用哪些成员。</p>
+<hr></hr>
+<h4 id="33-多重继承下的类作用域"><a name="33-多重继承下的类作用域" class="anchor-navigation-ex-anchor" href="#33-多重继承下的类作用域"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 多重继承下的类作用域</h4>
+<blockquote>
+<p>派生类的作用域嵌套在直接基类和间接基类的作用域中。</p>
+</blockquote>
+<p>在多重继承的情况下，相同的查找过程在所有直接基类中同时进行。如果名字在多个基类中都被找到，则对该名字的使用将具有二义性。</p>
+<blockquote>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240723200443491.png" alt="image-20240723200443491"></img></p>
+<p>名字查找先于类型检查</p>
+</blockquote>
+<p>即使形参列表不同、访问控制不同也有可能发生错误，因为名字查找先于类型检查，当编译器在两个作用域同时发现这个名字时，将直接报告一个调用二义性的错误。</p>
+<p>要想避免潜在的二义性，最好的办法是<strong>在派生类中为该函数定义一个新版本</strong>。</p>
+<hr></hr>
+<h4 id="34-虚继承"><a name="34-虚继承" class="anchor-navigation-ex-anchor" href="#34-虚继承"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 虚继承</h4>
+<p>在C++语言中我们通过<strong>虚继承(virtual inheritance)</strong>的机制解决多次继承的问题。虚继承的目的是令某个类做出声明，承诺愿意共享它的基类。其中，共享的基类子对象称为<strong>虚基类 virtual base class)</strong>。在这种机制下，不论虚基类在继承体系中出现了多少次，在派生类中都只包含唯一一个共享的虚基类子对象。</p>
+<p><img src="assets/image-20240723201102672.png" alt="image-20240723201102672"></img></p>
+<p>如图，Panda同时继承自Bear和Raccoon，而Bear和Raccoon都是<code>ZooAnimal</code>的子类，我们通过虚继承解决了对<code>ZooAnimal</code>的多次继承。</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723201333007.png" alt="image-20240723201333007"></img></p>
+</blockquote>
+<h6 id="使用虚基类"><a name="使用虚基类" class="anchor-navigation-ex-anchor" href="#使用虚基类"><i class="fa fa-link" aria-hidden="true"></i></a>使用虚基类</h6>
+<p>使用方法：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Raccoon</span> : <span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> ZooAnimal { <span class="hljs-comment">/* ... */</span> };
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Bear</span> : <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">public</span> ZooAnimal { <span class="hljs-comment">/* ... */</span> };
+<span class="hljs-comment">//virtual 和 访问控制符 顺序任意</span>
+</code></pre>
+<ul>
+<li><p><strong>支持向基类的常规类型转换</strong></p>
+</li>
+<li><p><strong>虚基类成员的可见性</strong></p>
+<ul>
+<li><p>如果在D1和D2中都没有x的定义，则x将被解析为B的成员，此时不存在二义性，一个D的对象只含有x的一个实例。</p>
+</li>
+<li><p>如果×是B的成员，同时是D1和D2中某一个的成员，则同样没有二义性，派生类的x比共享虚基类B的x优先级更高。</p>
+</li>
+<li><p>如果在D1和D2中都有×的定义，则直接访问×将产生二义性问题。</p>
+</li>
+</ul>
+<p>与非虚的多重继承体系一样，最好的解决办法是在派生类中为成员自定义新的实例。</p>
+</li>
+</ul>
+<hr></hr>
+<h4 id="35-构造函数与虚继承"><a name="35-构造函数与虚继承" class="anchor-navigation-ex-anchor" href="#35-构造函数与虚继承"><i class="fa fa-link" aria-hidden="true"></i></a>3.5 构造函数与虚继承</h4>
+<blockquote>
+<p>在虚派生中，虚基类是由最底层的派生类初始化的。</p>
+</blockquote>
+<h6 id="虚继承的对象的构造方式"><a name="虚继承的对象的构造方式" class="anchor-navigation-ex-anchor" href="#虚继承的对象的构造方式"><i class="fa fa-link" aria-hidden="true"></i></a>虚继承的对象的构造方式</h6>
+<p>含有虚基类的对象的构造顺序与一般的顺序稍有区别：首先使用提供给最低层派生类构造函数的初始值初始化该对象的虚基类子部分，接下来按照直接基类在派生列表中出现的次序依次对其进行初始化。</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240723202401294.png" alt="image-20240723202401294"></img></p>
+</blockquote>
+<h6 id="构造函数与析构函数的次序"><a name="构造函数与析构函数的次序" class="anchor-navigation-ex-anchor" href="#构造函数与析构函数的次序"><i class="fa fa-link" aria-hidden="true"></i></a>构造函数与析构函数的次序</h6>
+<p><img src="assets/image-20240723202604711.png" alt="image-20240723202604711"></img></p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:16
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 09_用于大型程序的工具</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08_标准库特殊设施.html" class="navigation navigation-prev " aria-label="Previous page: 08_标准库特殊设施">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10_特殊工具与技术.html" class="navigation navigation-next " aria-label="Next page: 10_特殊工具与技术">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"09_用于大型程序的工具","level":"1.4.1.9","depth":3,"next":{"title":"10_特殊工具与技术","level":"1.4.1.10","depth":3,"path":"docs/Cpp/C++-Primer/10_特殊工具与技术.md","ref":"docs/Cpp/C++-Primer/10_特殊工具与技术.md","articles":[]},"previous":{"title":"08_标准库特殊设施","level":"1.4.1.8","depth":3,"path":"docs/Cpp/C++-Primer/08_标准库特殊设施.md","ref":"docs/Cpp/C++-Primer/08_标准库特殊设施.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/C++-Primer/09_用于大型程序的工具.md","mtime":"2025-09-07T09:41:16.878Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2336 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>CHAPTER_6_Lambda_Expressions · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Modern-Cpp-templates-tutorial/" />
+    
+    
+    <link rel="prev" href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../C++-Primer/">
+            
+                <a href="../C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../C++-Primer/01_泛型算法.html">
+            
+                <a href="../C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../C++-Primer/02_关联容器.html">
+            
+                <a href="../C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../C++-Primer/03_动态内存.html">
+            
+                <a href="../C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../C++-Primer/04_拷贝控制.html">
+            
+                <a href="../C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../C++-Primer/12_nullptr.html">
+            
+                <a href="../C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="CHAPTER_1_Deducing_Types.html">
+            
+                <a href="CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="CHAPTER_2_auto.html">
+            
+                <a href="CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.6" data-path="CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >CHAPTER_6_Lambda_Expressions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chapter-6-lambda-expressions"><b></b>CHAPTER 6 Lambda Expressions</a></li><ul><li><span class="title-icon "></span><a href="#lambda"><b></b>Lambda</a></li><li><span class="title-icon "></span><a href="#item-31-avoid-default-capture-modes"><b></b>Item 31: Avoid default capture modes</a></li><ul><li><span class="title-icon "></span><a href="#引用捕获"><b></b>引用捕获</a></li><li><span class="title-icon "></span><a href="#按值捕获"><b></b>按值捕获</a></li><li><span class="title-icon "></span><a href="#总结"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-32-use-init-capture-to-move-objects-into-closures"><b></b>Item 32: Use init capture to move objects into closures</a></li><ul><li><span class="title-icon "></span><a href="#初始化捕获"><b></b>初始化捕获</a></li><li><span class="title-icon "></span><a href="#c11手动实现移动捕获"><b></b>C++11手动实现移动捕获</a></li><li><span class="title-icon "></span><a href="#总结_1"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-33-use-decltype-on-auto-parameters-to-stdforward-them"><b></b>Item 33: Use decltype on auto&amp;&amp; parameters to std::forward them</a></li><ul><li><span class="title-icon "></span><a href="#lambada完美转发"><b></b>lambada完美转发</a></li><li><span class="title-icon "></span><a href="#总结_2"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-34-prefer-lambdas-to-stdbind"><b></b>Item 34: Prefer lambdas to std::bind</a></li><ul><li><span class="title-icon "></span><a href="#stdbind"><b></b>std::bind</a></li><li><span class="title-icon "></span><a href="#优先-lambda"><b></b>优先 lambda</a></li><li><span class="title-icon "></span><a href="#复杂的lambda"><b></b>复杂的lambda</a></li><li><span class="title-icon "></span><a href="#占位符的行为"><b></b>占位符的行为</a></li><li><span class="title-icon "></span><a href="#lambda-and-stdbind"><b></b>lambda and std::bind</a></li><li><span class="title-icon "></span><a href="#总结_3"><b></b>总结</a></li></ul></ul></ul></div><a href="#chapter-6-lambda-expressions" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#chapter-6-lambda-expressions">CHAPTER 6 Lambda Expressions</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#lambda">Lambda</a><i></i></div></li>
+<li><div><a href="#item-31-avoid-default-capture-modes">Item 31: Avoid default capture modes</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#引用捕获">引用捕获</a><i></i></div></li>
+<li><div><a href="#按值捕获">按值捕获</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-32-use-init-capture-to-move-objects-into-closures">Item 32: Use init capture to move objects into closures</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#初始化捕获">初始化捕获</a><i></i></div></li>
+<li><div><a href="#c11手动实现移动捕获">C++11手动实现移动捕获</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-33-use-decltype-on-autoampamp-parameters-to-stdforward-them">Item 33: Use decltype on auto&amp;&amp; parameters to std::forward them</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#lambada完美转发">lambada完美转发</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-34-prefer-lambdas-to-stdbind">Item 34: Prefer lambdas to std::bind</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#stdbind">std::bind</a><i></i></div></li>
+<li><div><a href="#优先-lambda">优先 lambda</a><i></i></div></li>
+<li><div><a href="#复杂的lambda">复杂的lambda</a><i></i></div></li>
+<li><div><a href="#占位符的行为">占位符的行为</a><i></i></div></li>
+<li><div><a href="#lambda-and-stdbind">lambda and std::bind</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="chapter-6-lambda-expressions"><a name="chapter-6-lambda-expressions" class="anchor-navigation-ex-anchor" href="#chapter-6-lambda-expressions"><i class="fa fa-link" aria-hidden="true"></i></a><strong>CHAPTER 6 Lambda Expressions</strong></h1>
+<h2 id="lambda"><a name="lambda" class="anchor-navigation-ex-anchor" href="#lambda"><i class="fa fa-link" aria-hidden="true"></i></a><strong><code>Lambda</code></strong></h2>
+<blockquote>
+<p>[!important]</p>
+<ul>
+<li><em>lambda</em>表达式是C++编程中的游戏规则改变者。</li>
+<li><p><em>lambda</em>是<strong>创建函数对象</strong>相当便捷的一种方法</p>
+</li>
+<li><p>STL中的“<code>_if</code>”算法（比如，<code>std::find_if</code>，<code>std::remove_if</code>，<code>std::count_if</code>等）通常需要繁琐的<strong>谓词</strong>可以通过lambda实现</p>
+</li>
+<li>用<strong>比较函数</strong>（比如，<code>std::sort</code>，<code>std::nth_element</code>，<code>std::lower_bound</code>等）来自定义算法也是同样方便的。</li>
+<li>在STL外，<em>lambda</em>可以快速创建<code>std::unique_ptr</code>和<code>std::shared_ptr</code>的<strong>自定义删除器</strong>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item18.html" target="_blank">Item18</a>和<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item19.html" target="_blank">19</a>）</li>
+<li>线程API中<strong>条件变量的谓词</strong>指定变得同样简单</li>
+<li>除了标准库，<em>lambda</em>有利于即时的<strong>回调函数</strong>，接口适配函数和特定上下文中的<strong>一次性函数</strong>。</li>
+</ul>
+</blockquote>
+<ul>
+<li><p><strong><em>lambda\</em>表达式</strong>（<em>lambda expression</em>）就是一个表达式。</p>
+<pre><code class="lang-cpp">std::<span class="hljs-built_in">find_if</span>(container.<span class="hljs-built_in">begin</span>(), container.<span class="hljs-built_in">end</span>(),
+             [](<span class="hljs-type">int</span> val){ <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> &lt; val &amp;&amp; val &lt; <span class="hljs-number">10</span>; });   <span class="hljs-comment">//译者注：本行高亮就是*lambda*</span>
+</code></pre>
+</li>
+<li><p><strong>闭包</strong>（<em>enclosure</em>）是<em>lambda</em>创建的<strong>运行时对象</strong>。依赖捕获模式，闭包持有被捕获数据的副本或者引用。在上面的<code>std::find_if</code>调用中，闭包是作为第三个实参在运行时传递给<code>std::find_if</code>的对象。</p>
+</li>
+<li><p><strong>闭包类</strong>（<em>closure class</em>）是从中<strong>实例化闭包的类</strong>。每个<em>lambda</em>都会使编译器生成唯一的闭包类。<em>lambda</em>中的语句成为其闭包类的<strong>成员函数中的可执行指令</strong>。</p>
+</li>
+<li><p><em>lambda</em>通常被用来<strong>创建闭包</strong>，该闭包仅用作函数的实参。</p>
+<blockquote>
+<pre><code class="lang-cpp">{
+    <span class="hljs-type">int</span> x;                                  <span class="hljs-comment">//x是局部对象</span>
+    <span class="hljs-keyword">auto</span> c1 =                               <span class="hljs-comment">//c1是lambda产生的闭包的副本</span>
+        [x](<span class="hljs-type">int</span> y) { <span class="hljs-keyword">return</span> x * y &gt; <span class="hljs-number">55</span>; };
+    <span class="hljs-keyword">auto</span> c2 = c1;                           <span class="hljs-comment">//c2是c1的拷贝</span>
+    <span class="hljs-keyword">auto</span> c3 = c2;                           <span class="hljs-comment">//c3是c2的拷贝</span>
+}
+</code></pre>
+<p><strong>闭包通常可以拷贝</strong>，所以可能有多个闭包对应于一个<em>lambda</em></p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>[!tip]</p>
+<p>非正式的讲，模糊<em>lambda</em>，闭包和闭包类之间的界限是可以接受的。但是，在随后的Item中，区分什么存在于<strong>编译期（<em>lambdas</em> 和闭包类）</strong>，什么存在于<strong>运行时（闭包）</strong>以及它们之间的相互关系是重要的。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h2 id="item-31-avoid-default-capture-modes"><a name="item-31-avoid-default-capture-modes" class="anchor-navigation-ex-anchor" href="#item-31-avoid-default-capture-modes"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 31: Avoid default capture modes</strong></h2>
+<blockquote>
+<p>[!important]</p>
+<p>C++11中有两种默认的捕获模式：<strong>按引用捕获和按值捕获</strong>。</p>
+<p>默认按引用捕获模式可能会带来<strong>悬空引用</strong>的问题</p>
+</blockquote>
+<h3 id="引用捕获"><a name="引用捕获" class="anchor-navigation-ex-anchor" href="#引用捕获"><i class="fa fa-link" aria-hidden="true"></i></a>引用捕获</h3>
+<p>按引用捕获会导致闭包中包含了对某个局部变量或者形参的引用，变量或形参只在定义<em>lambda</em>的<strong>作用域</strong>中可用。</p>
+<p>该<em>lambda</em>创建的闭包生命周期超过了局部变量或者形参的生命周期，那么闭包中的引用将会变成悬空引用。</p>
+<blockquote>
+<p>元素是<strong>过滤函数</strong>（filtering function）的一个容器，该函数接受一个<code>int</code>，并返回一个<code>bool</code>，该<code>bool</code>的结果表示传入的值是否满足过滤条件：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> FilterContainer =                     <span class="hljs-comment">//“using”参见条款9，</span>
+    std::vector&lt;std::function&lt;<span class="hljs-built_in">bool</span>(<span class="hljs-type">int</span>)&gt;&gt;;  <span class="hljs-comment">//std::function参见条款2</span>
+
+FilterContainer filters;                    <span class="hljs-comment">//过滤函数</span>
+
+<span class="hljs-comment">//添加一个过滤器，用来过滤掉5的倍数：</span>
+filters.<span class="hljs-built_in">emplace_back</span>(                       <span class="hljs-comment">//emplace_back的信息见条款42</span>
+    [](<span class="hljs-type">int</span> value) { <span class="hljs-keyword">return</span> value % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>; }
+);
+</code></pre>
+<p>需要的是能够在<strong>运行期</strong>计算除数（divisor），即不能将5硬编码到<em>lambda</em>中。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addDivisorFilter</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">auto</span> calc1 = <span class="hljs-built_in">computeSomeValue1</span>();
+    <span class="hljs-keyword">auto</span> calc2 = <span class="hljs-built_in">computeSomeValue2</span>();
+
+    <span class="hljs-keyword">auto</span> divisor = <span class="hljs-built_in">computeDivisor</span>(calc1, calc2);
+
+    filters.<span class="hljs-built_in">emplace_back</span>(                               <span class="hljs-comment">//危险！对divisor的引用</span>
+        [&amp;](<span class="hljs-type">int</span> value) { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; } <span class="hljs-comment">//将会悬空！</span>
+    );
+}
+
+<span class="hljs-comment">//同样显式按引用捕获也一样</span>
+filters.<span class="hljs-built_in">emplace_back</span>(
+    [&amp;divisor](<span class="hljs-type">int</span> value)                 <span class="hljs-comment">//危险！对divisor的引用将会悬空！</span>
+    { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }
+);
+</code></pre>
+<p><em>lambda</em>对局部变量<code>divisor</code>进行了引用，但该变量的生命周期会在<code>addDivisorFilter</code>返回时结束，因此添加到<code>filters</code>的函数添加完，该函数就会导致未定义行为。</p>
+<p>通过显式的捕获，能更容易看到<em>lambda</em>的可行性<strong>依赖</strong>于变量<code>divisor</code>的生命周期。比起“<code>[&amp;]</code>”传达的意思，显式捕获能让人更容易想起“确保没有悬空变量”。</p>
+</blockquote>
+<ul>
+<li><p>一个闭包将会被马上使用（例如被传入到一个STL算法中）并且不会被拷贝</p>
+<blockquote>
+<p>例如，我们的过滤<em>lambda</em>只会用做C++11中<code>std::all_of</code>的一个实参，返回满足条件的所有元素：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> C&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">workWithContainer</span><span class="hljs-params">(<span class="hljs-type">const</span> C&amp; container)</span>
+</span>{
+    <span class="hljs-keyword">auto</span> calc1 = <span class="hljs-built_in">computeSomeValue1</span>();               <span class="hljs-comment">//同上</span>
+    <span class="hljs-keyword">auto</span> calc2 = <span class="hljs-built_in">computeSomeValue2</span>();               <span class="hljs-comment">//同上</span>
+    <span class="hljs-keyword">auto</span> divisor = <span class="hljs-built_in">computeDivisor</span>(calc1, calc2);    <span class="hljs-comment">//同上</span>
+
+    <span class="hljs-keyword">using</span> ContElemT = <span class="hljs-keyword">typename</span> C::value_type;       <span class="hljs-comment">//容器内元素的类型</span>
+    <span class="hljs-keyword">using</span> std::begin;                               <span class="hljs-comment">//为了泛型，见条款13</span>
+    <span class="hljs-keyword">using</span> std::end;
+
+    <span class="hljs-keyword">if</span> (std::<span class="hljs-built_in">all_of</span>(                                <span class="hljs-comment">//如果容器内所有值都为</span>
+            <span class="hljs-built_in">begin</span>(container), <span class="hljs-built_in">end</span>(container),       <span class="hljs-comment">//除数的倍数</span>
+            [&amp;](<span class="hljs-type">const</span> ContElemT&amp; value)
+            { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; })
+        ) {
+        …                                           <span class="hljs-comment">//它们...</span>
+    } <span class="hljs-keyword">else</span> {
+        …                                           <span class="hljs-comment">//至少有一个不是的话...</span>
+    }
+}
+</code></pre>
+<p>是安全的做法，但这种安全是<strong>不确定</strong>的</p>
+<p>发现<em>lambda</em>在其它上下文中很有用（例如作为一个函数被添加在<code>filters</code>容器中），然后拷贝粘贴到一个<code>divisor</code>变量已经死亡，但闭包生命周期还没结束的上下文中，又会<strong>悬空使用</strong></p>
+</blockquote>
+</li>
+<li><p>从长期来看，<strong>显式列出<em>lambda</em>依赖的局部变量和形参</strong>，是更加符合软件工程规范的做法。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>C++14支持了在<em>lambda</em>中使用<code>auto</code>来声明变量</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">if</span> (std::<span class="hljs-built_in">all_of</span>(<span class="hljs-built_in">begin</span>(container), <span class="hljs-built_in">end</span>(container),
+               [&amp;](<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; value)               <span class="hljs-comment">// C++14</span>
+               { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }))
+</code></pre>
+</blockquote>
+<hr></hr>
+<h3 id="按值捕获"><a name="按值捕获" class="anchor-navigation-ex-anchor" href="#按值捕获"><i class="fa fa-link" aria-hidden="true"></i></a>按值捕获</h3>
+<p>一个解决问题的方法是，<code>divisor</code>默认按值捕获进去，也就是说可以按照以下方式来添加<em>lambda</em>到<code>filters</code>：</p>
+<pre><code class="lang-cpp">filters.<span class="hljs-built_in">emplace_back</span>(                                 <span class="hljs-comment">//现在divisor不会悬空了</span>
+    [=](<span class="hljs-type">int</span> value) { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }
+);
+</code></pre>
+<ul>
+<li><p>在通常情况下，按值捕获并不能完全解决悬空引用的问题。</p>
+<blockquote>
+<p>如果你按值捕获的是一个<strong>指针</strong>，你将该指针拷贝到<em>lambda</em>对应的闭包里，但这样并不能避免<em>lambda</em>外<code>delete</code>这个指针的行为，从而导致你的副本指针变成悬空指针。</p>
+</blockquote>
+</li>
+<li><p>在一个<code>Widget</code>类，可以实现向过滤器的容器添加条目：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    …                       <span class="hljs-comment">//构造函数等</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>; <span class="hljs-comment">//向filters添加条目</span>
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-type">int</span> divisor;            <span class="hljs-comment">//在Widget的过滤器使用</span>
+};
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+</span>{
+    filters.<span class="hljs-built_in">emplace_back</span>(
+        [=](<span class="hljs-type">int</span> value) { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }
+    );
+}
+</code></pre>
+<blockquote>
+<p>[!warning]</p>
+<p>捕获只能应用于<em>lambda**</em>被创建时所在作用域<strong>里的</strong>non-<code>static</code>局部变量**（包括形参）。</p>
+<p><code>Widget::addFilter</code>的视线里，<code>divisor</code>并不是一个局部变量，而是<code>Widget</code>类的一个成员变量，<strong>不能被捕获</strong>。</p>
+</blockquote>
+<p>显式地捕获<code>divisor</code>变量（或者按引用或者按值），也一样会编译失败</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+</span>{
+    filters.<span class="hljs-built_in">emplace_back</span>(
+        [divisor](<span class="hljs-type">int</span> value)                <span class="hljs-comment">//错误！没有名为divisor局部变量可捕获</span>
+        { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }
+    );
+}
+</code></pre>
+</blockquote>
+<ul>
+<li>解释就是这里隐式使用了一个<strong>原始指针</strong>：<code>this</code>。</li>
+</ul>
+<blockquote>
+<p>每一个<strong>non-<code>static</code>成员函数都有一个<code>this</code>指针</strong>，每次你使用一个类内的数据成员时都会使用到这个指针。</p>
+<p>在任何<code>Widget</code>成员函数中，编译器会在内部将<code>divisor</code>替换成<strong><code>this-&gt;divisor</code></strong></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+</span>{
+    <span class="hljs-keyword">auto</span> currentObjectPtr = <span class="hljs-keyword">this</span>;
+
+    filters.<span class="hljs-built_in">emplace_back</span>(
+        [currentObjectPtr](<span class="hljs-type">int</span> value)
+        { <span class="hljs-keyword">return</span> value % currentObjectPtr-&gt;divisor == <span class="hljs-number">0</span>; }
+    );
+}
+</code></pre>
+<p>真正被捕获的是<code>Widget</code>的<code>this</code>指针，而不是<code>divisor</code></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p><em>lambda</em>闭包的生命周期与<code>Widget</code>对象的关系，闭包内含有<code>Widget</code>的<strong><code>this</code>指针的拷贝</strong>。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> FilterContainer =                     <span class="hljs-comment">//跟之前一样</span>
+    std::vector&lt;std::function&lt;<span class="hljs-built_in">bool</span>(<span class="hljs-type">int</span>)&gt;&gt;;
+
+FilterContainer filters;                    <span class="hljs-comment">//跟之前一样</span>
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">doSomeWork</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">auto</span> pw =                               <span class="hljs-comment">//创建Widget；std::make_unique</span>
+        std::<span class="hljs-built_in">make_unique</span>&lt;Widget&gt;();         <span class="hljs-comment">//见条款21</span>
+
+    pw-&gt;<span class="hljs-built_in">addFilter</span>();                        <span class="hljs-comment">//添加使用Widget::divisor的过滤器</span>
+}                                           <span class="hljs-comment">//销毁Widget；filters现在持有悬空指针！</span>
+</code></pre>
+</blockquote>
+<ul>
+<li><p>问题可以通过给你想捕获的数据成员做一个<strong>局部副本</strong>，然后捕获这个副本去解决：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+</span>{
+    <span class="hljs-keyword">auto</span> divisorCopy = divisor;                 <span class="hljs-comment">//拷贝数据成员</span>
+
+    filters.<span class="hljs-built_in">emplace_back</span>(
+        [divisorCopy](<span class="hljs-type">int</span> value)                <span class="hljs-comment">//捕获副本</span>
+        { <span class="hljs-keyword">return</span> value % divisorCopy == <span class="hljs-number">0</span>; }    <span class="hljs-comment">//使用副本</span>
+    );
+}
+<span class="hljs-comment">//采用这种方法，默认的按值捕获也是可行的。</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+</span>{
+    <span class="hljs-keyword">auto</span> divisorCopy = divisor;                 <span class="hljs-comment">//拷贝数据成员</span>
+
+    filters.<span class="hljs-built_in">emplace_back</span>(
+        [=](<span class="hljs-type">int</span> value)                          <span class="hljs-comment">//捕获副本</span>
+        { <span class="hljs-keyword">return</span> value % divisorCopy == <span class="hljs-number">0</span>; }    <span class="hljs-comment">//使用副本</span>
+    );
+}
+</code></pre>
+<p>当一开始你认为你捕获的是<code>divisor</code>的时候，<strong>默认捕获模式</strong>就是造成可能意外地捕获<code>this</code>的元凶。</p>
+<p>[!tip]</p>
+<p>在C++14中，一个更好的捕获成员变量的方式时使用<strong>通用的<em>lambda</em>捕获</strong>：</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::addFilter</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+</span>{
+    filters.<span class="hljs-built_in">emplace_back</span>(                   <span class="hljs-comment">//C++14：</span>
+        [divisor = divisor](<span class="hljs-type">int</span> value)      <span class="hljs-comment">//拷贝divisor到闭包</span>
+        { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }    <span class="hljs-comment">//使用这个副本</span>
+    );
+}
+</code></pre>
+<p>这种通用的<em>lambda</em>捕获并没有默认的捕获模式，因此在C++14中，本条款的建议——避免使用默认捕获模式——仍然是成立的。</p>
+</blockquote>
+</li>
+<li><p>使用默认的按值捕获还有另外的一个缺点，它们预示了<strong>相关的闭包是独立的并且不受外部数据变化的影响</strong>。</p>
+<blockquote>
+<p><em>lambda</em>可能会依赖局部变量和形参（它们可能被捕获），还有<strong>静态存储生命周期</strong>（static storage duration）的对象。</p>
+<p>例如，这些对象定义在<strong>全局空间或者命名空间</strong>，或者在类、函数、文件中声明为<strong><code>static</code></strong>。</p>
+<p>默认按值捕获可能会因此误导你，让你以为捕获了这些变量。</p>
+</blockquote>
+</li>
+<li><p>这些对象定义在全局空间或者命名空间，或者在类、函数、文件中声明为<code>static</code>。能在<em>lambda</em>里使用，但它们不能被捕获。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addDivisorFilter</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">static</span> <span class="hljs-keyword">auto</span> calc1 = <span class="hljs-built_in">computeSomeValue1</span>();    <span class="hljs-comment">//现在是static</span>
+    <span class="hljs-type">static</span> <span class="hljs-keyword">auto</span> calc2 = <span class="hljs-built_in">computeSomeValue2</span>();    <span class="hljs-comment">//现在是static</span>
+    <span class="hljs-type">static</span> <span class="hljs-keyword">auto</span> divisor =                       <span class="hljs-comment">//现在是static</span>
+    <span class="hljs-built_in">computeDivisor</span>(calc1, calc2);
+
+    filters.<span class="hljs-built_in">emplace_back</span>(
+        [=](<span class="hljs-type">int</span> value)                          <span class="hljs-comment">//什么也没捕获到！</span>
+        { <span class="hljs-keyword">return</span> value % divisor == <span class="hljs-number">0</span>; }        <span class="hljs-comment">//引用上面的static</span>
+    );
+
+    ++divisor;                                  <span class="hljs-comment">//调整divisor</span>
+}
+</code></pre>
+<p>这个<em>lambda</em>没有使用任何的non-<code>static</code>局部变量，所以它没有捕获任何东西</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结"><a name="总结" class="anchor-navigation-ex-anchor" href="#总结"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>默认的按引用捕获可能会导致悬空引用。</li>
+<li>默认的按值捕获对于悬空指针很敏感（尤其是<code>this</code>指针），并且它会<strong>误导</strong>人产生<em>lambda</em>是独立的想法。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-32-use-init-capture-to-move-objects-into-closures"><a name="item-32-use-init-capture-to-move-objects-into-closures" class="anchor-navigation-ex-anchor" href="#item-32-use-init-capture-to-move-objects-into-closures"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 32: Use init capture to move objects into closures</strong></h2>
+<h3 id="初始化捕获"><a name="初始化捕获" class="anchor-navigation-ex-anchor" href="#初始化捕获"><i class="fa fa-link" aria-hidden="true"></i></a>初始化捕获</h3>
+<ul>
+<li>在某些场景下，按值捕获和按引用捕获都不是你所想要的。如果你有一个只能被移动的对象（例如<code>std::unique_ptr</code>或<code>std::future</code>）要进入到闭包里，<strong>移动</strong>该对象到闭包而不是复制它</li>
+<li>缺少移动捕获被认为是C++11的一个缺点，标准化委员会选择了另一种方法。引入了一种新的捕获机制，移动捕获是它可以执行的技术之一。新功能被称作<strong>初始化捕获</strong>（<em>init capture</em>）</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>使用初始化捕获可以让你指定：</p>
+<ol>
+<li>从lambda生成的闭包类中的<strong>数据成员名称</strong>；</li>
+<li>初始化该成员的<strong>表达式</strong>；</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>初始化捕获将<code>std::unique_ptr</code>移动到闭包中的方法</p>
+<blockquote>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {                          <span class="hljs-comment">//一些有用的类型</span>
+<span class="hljs-keyword">public</span>:
+    …
+    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isValidated</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;
+    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isProcessed</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;
+    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">isArchived</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;
+<span class="hljs-keyword">private</span>:
+    …
+};
+<span class="hljs-keyword">auto</span> pw = std::<span class="hljs-built_in">make_unique</span>&lt;Widget&gt;();   <span class="hljs-comment">//创建Widget；使用std::make_unique</span>
+                                        <span class="hljs-comment">//的有关信息参见条款21</span>
+…                                       <span class="hljs-comment">//设置*pw</span>
+<span class="hljs-keyword">auto</span> func = [pw = std::<span class="hljs-built_in">move</span>(pw)]        <span class="hljs-comment">//使用std::move(pw)初始化闭包数据成员</span>
+            { <span class="hljs-keyword">return</span> pw-&gt;<span class="hljs-built_in">isValidated</span>()
+                     &amp;&amp; pw-&gt;<span class="hljs-built_in">isArchived</span>(); };
+</code></pre>
+<p>高亮的文本包含了初始化捕获的使用（译者注：高亮了“<code>pw = std::move(pw)</code>”），“<code>=</code>”的左侧是指定的闭包类中数据成员的名称，右侧则是初始化表达式。</p>
+<p><strong><code>=</code>”左侧的作用域不同于右侧的作用域</strong>。左侧的作用域是闭包类，右侧的作用域和<em>lambda</em>定义所在的作用域相同。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>如果<code>std::make_unique</code>创建的<code>Widget</code>处于适合被<em>lambda</em>捕获的状态，则<strong>不需要局部变量<code>pw</code></strong>，因为闭包类的数据成员可以通过<code>std::make_unique</code>直接初始化：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> func = [pw = std::<span class="hljs-built_in">make_unique</span>&lt;Widget&gt;()]   <span class="hljs-comment">//使用调用make_unique得到的结果</span>
+            { <span class="hljs-keyword">return</span> pw-&gt;<span class="hljs-built_in">isValidated</span>()          <span class="hljs-comment">//初始化闭包数据成员</span>
+                     &amp;&amp; pw-&gt;<span class="hljs-built_in">isArchived</span>(); };
+</code></pre>
+</blockquote>
+</blockquote>
+</li>
+<li><p>在C++11中，无法捕获表达式的结果。 因此，初始化捕获的另一个名称是<strong>通用*lambda*捕获</strong>（<em>generalized lambda capture</em>）。</p>
+</li>
+</ul>
+<hr></hr>
+<h3 id="c11手动实现移动捕获"><a name="c11手动实现移动捕获" class="anchor-navigation-ex-anchor" href="#c11手动实现移动捕获"><i class="fa fa-link" aria-hidden="true"></i></a>C++11手动实现移动捕获</h3>
+<blockquote>
+<p>[!important]</p>
+<p>请记住，<em>lambda</em>表达式只是生成一个类和创建该类型对象的一种简单方式而已。</p>
+</blockquote>
+<ul>
+<li><p>刚刚看到的C++14的示例代码可以用C++11重新编写，如下所示：</p>
+<blockquote>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">IsValAndArch</span> {                            <span class="hljs-comment">//“is validated and archived”</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">using</span> DataType = std::unique_ptr&lt;Widget&gt;;
+
+    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">IsValAndArch</span><span class="hljs-params">(DataType&amp;&amp; ptr)</span>       <span class="hljs-comment">//条款25解释了std::move的使用</span>
+    : pw(std::move(ptr)) {</span>}
+
+    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">()</span> <span class="hljs-type">const</span>
+    </span>{ <span class="hljs-keyword">return</span> pw-&gt;<span class="hljs-built_in">isValidated</span>() &amp;&amp; pw-&gt;<span class="hljs-built_in">isArchived</span>(); }
+
+<span class="hljs-keyword">private</span>:
+    DataType pw;
+};
+
+<span class="hljs-keyword">auto</span> func = <span class="hljs-built_in">IsValAndArch</span>(std::<span class="hljs-built_in">make_unique</span>&lt;Widget&gt;())();
+</code></pre>
+</blockquote>
+</li>
+<li><p>坚持要使用<em>lambda</em>，移动捕获可以在C++11中这样模拟：</p>
+<blockquote>
+<ol>
+<li><strong>将要捕获的对象移动到由<code>std::bind</code>产生的函数对象中；</strong></li>
+<li><strong>将“被捕获的”对象的引用赋予给<em>lambda</em>。</strong></li>
+</ol>
+<p>例如：假设你要创建一个本地的<code>std::vector</code>，在其中放入一组适当的值，然后将其移动到闭包中。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//在C++14中，这很容易实现：</span>
+std::vector&lt;<span class="hljs-type">double</span>&gt; data;               <span class="hljs-comment">//要移动进闭包的对象</span>
+…                                       <span class="hljs-comment">//填充data</span>
+<span class="hljs-keyword">auto</span> func = [data = std::<span class="hljs-built_in">move</span>(data)]    <span class="hljs-comment">//C++14初始化捕获</span>
+            { <span class="hljs-comment">/*使用data*/</span> };
+
+<span class="hljs-comment">//C++11的等效代码如下，其中我强调了相同的关键事项：</span>
+std::vector&lt;<span class="hljs-type">double</span>&gt; data;               <span class="hljs-comment">//同上</span>
+…                                       <span class="hljs-comment">//同上</span>
+<span class="hljs-keyword">auto</span> func =
+    std::<span class="hljs-built_in">bind</span>(                              <span class="hljs-comment">//C++11模拟初始化捕获</span>
+        [](<span class="hljs-type">const</span> std::vector&lt;<span class="hljs-type">double</span>&gt;&amp; data) <span class="hljs-comment">//译者注：本行高亮</span>
+        { <span class="hljs-comment">/*使用data*/</span> },
+        std::<span class="hljs-built_in">move</span>(data)                     <span class="hljs-comment">//译者注：本行高亮</span>
+    );
+</code></pre>
+<p><code>std::bind</code>返回的函数对象称为<strong>bind对象</strong>（<em>bind objects</em>）。</p>
+<p><code>std::bind</code>的第一个实参是<strong>可调用对象</strong>，后续实参表示要传递给该对象的值。</p>
+<p>一个bind对象包含了传递给<code>std::bind</code>的所有实参的副本。</p>
+<blockquote>
+<p>[!warning]</p>
+<p>添加了一个形参<code>data</code>来对应我们的伪移动捕获对象。此形参是对bind对象中<code>data</code>副本的<strong>左值引用</strong>。</p>
+<p>因此，<em>lambda</em>将对绑定在对象内部的移动构造的<code>data</code><strong>副本</strong>进行操作。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>默认情况下，从<em>lambda</em>生成的闭包类中的<code>operator()</code>成员函数为<code>const</code>的</p>
+<blockquote>
+<p>因此，为了防止在<em>lambda</em>内修改该<code>data</code>副本，<em>lambda</em>的形参应声明为reference-to-<code>const</code>。</p>
+<p>但是，将<em>lambda</em>声明为<code>mutable</code>，则闭包类中的<code>operator()</code>将不会声明为<code>const</code>，并且在<em>lambda</em>的形参声明中省略<code>const</code>也是合适的：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> func =
+    std::<span class="hljs-built_in">bind</span>(                                  <span class="hljs-comment">//C++11对mutable lambda</span>
+        [](std::vector&lt;<span class="hljs-type">double</span>&gt;&amp; data) <span class="hljs-keyword">mutable</span>    <span class="hljs-comment">//初始化捕获的模拟</span>
+        { <span class="hljs-comment">/*使用data*/</span> },
+        std::<span class="hljs-built_in">move</span>(data)
+    );
+</code></pre>
+</blockquote>
+</li>
+<li><p>bind对象存储着传递给<code>std::bind</code>的所有实参的副本</p>
+<blockquote>
+<p>bind对象包含由<em>lambda</em>生成的<strong>闭包副本</strong>， 因此闭包的生命周期与bind对象的生命周期相同</p>
+<p>只要存在闭包，包含伪移动捕获对象的bind对象也将存在。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>使用<code>std::bind</code>基本要点也应该清楚：</p>
+<ul>
+<li>无法移动构造一个对象到C++11闭包，但是可以将对象移动构造进C++11的bind对象。</li>
+<li>在C++11中模拟移动捕获包括将对象移动构造进bind对象，然后通过<strong>传引用</strong>将移动构造的对象传递给<em>lambda</em>。</li>
+<li>由于bind对象的生命周期与闭包对象的生命周期相同，因此<strong>可以将bind对象中的对象视为闭包中的对象</strong>。</li>
+</ul>
+</blockquote>
+<ul>
+<li><p><code>std::bind</code>模仿移动捕获的第二个示例，这是我们之前看到的在闭包中创建<code>std::unique_ptr</code>的C++14代码：</p>
+<blockquote>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> func = [pw = std::<span class="hljs-built_in">make_unique</span>&lt;Widget&gt;()]   <span class="hljs-comment">//同之前一样</span>
+            { <span class="hljs-keyword">return</span> pw-&gt;<span class="hljs-built_in">isValidated</span>()          <span class="hljs-comment">//在闭包中创建pw</span>
+                     &amp;&amp; pw-&gt;<span class="hljs-built_in">isArchived</span>(); };
+</code></pre>
+<p>这是C++11的模拟实现：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> func = std::<span class="hljs-built_in">bind</span>(
+                [](<span class="hljs-type">const</span> std::unique_ptr&lt;Widget&gt;&amp; pw)
+                { <span class="hljs-keyword">return</span> pw-&gt;<span class="hljs-built_in">isValidated</span>()
+                         &amp;&amp; pw-&gt;<span class="hljs-built_in">isArchived</span>(); },
+                std::<span class="hljs-built_in">make_unique</span>&lt;Widget&gt;()
+            );
+</code></pre>
+<p>在<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/6.LambdaExpressions/item34.html" target="_blank">Item34</a>中，主张使用<em>lambda</em>而不是<code>std::bind</code>。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_1"><a name="总结_1" class="anchor-navigation-ex-anchor" href="#总结_1"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>使用C++14的<strong>初始化捕获</strong>将对象移动到闭包中。</li>
+<li>在C++11中，通过<strong>手写类或<code>std::bind</code></strong>的方式来模拟初始化捕获。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-33-use-decltype-on-auto-parameters-to-stdforward-them"><a name="item-33-use-decltype-on-auto-parameters-to-stdforward-them" class="anchor-navigation-ex-anchor" href="#item-33-use-decltype-on-auto-parameters-to-stdforward-them"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 33: Use <code>decltype</code> on <code>auto&amp;&amp;</code> parameters to <code>std::forward</code> them</strong></h2>
+<h3 id="lambada完美转发"><a name="lambada完美转发" class="anchor-navigation-ex-anchor" href="#lambada完美转发"><i class="fa fa-link" aria-hidden="true"></i></a>lambada完美转发</h3>
+<blockquote>
+<p>[!important]</p>
+<p><strong>泛型*lambda*</strong>（<em>generic lambdas</em>）是C++14中最值得期待的特性之一——因为在<em>lambda</em>的形参中可以使用<strong><code>auto</code>关键字</strong>。</p>
+<p>即在闭包类中的<code>operator()</code>函数是一个函数模版</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> f = [](<span class="hljs-keyword">auto</span> x){ <span class="hljs-keyword">return</span> <span class="hljs-built_in">func</span>(<span class="hljs-built_in">normalize</span>(x)); };
+</code></pre>
+<p>对应的闭包类中的函数调用操作符看来就变成这样：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SomeCompilerGeneratedClassName</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                <span class="hljs-comment">//auto返回类型见条款3</span>
+    <span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(T x)</span> <span class="hljs-type">const</span>
+    </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">func</span>(<span class="hljs-built_in">normalize</span>(x)); }
+    …                                   <span class="hljs-comment">//其他闭包类功能</span>
+};
+</code></pre>
+<p>在这个样例中，<em>lambda</em>对变量<code>x</code>做的唯一一件事就是把它转发给函数<code>normalize</code>。</p>
+<p>如果函数<code>normalize</code>对左值右值的方式不一样，这个<em>lambda</em>的实现方式就不好</p>
+</blockquote>
+<ul>
+<li><p>正确方式是把<code>x</code>完美转发给函数<code>normalize</code></p>
+<blockquote>
+<p>首先，<code>x</code>需要改成通用引用（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item24.html" target="_blank">Item24</a>），</p>
+<p>其次，需要使用<code>std::forward</code>将<code>x</code>转发到函数<code>normalize</code>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item25.html" target="_blank">Item25</a>）。</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> f = [](<span class="hljs-keyword">auto</span>&amp;&amp; x)
+         { <span class="hljs-keyword">return</span> <span class="hljs-built_in">func</span>(<span class="hljs-built_in">normalize</span>(std::forward&lt;???&gt;(x))); };
+</code></pre>
+<p>在理论和实际之间应该传递给<code>std::forward</code>的什么类型?</p>
+<p>这意味着在这个<em>lambda</em>中，可以通过检查形参<code>x</code>的类型来确定传递进来的实参是一个左值还是右值，<code>decltype</code>就可以实现这样的效果（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item3.html" target="_blank">Item3</a>）。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>用<strong>右值引用</strong>类型和用<strong>非引用</strong>类型去初始化<code>std::forward</code>产生的相同的结果。</p>
+</blockquote>
+<p>因此<em>lambda</em>的完美转发可以写成：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> f =
+    [](<span class="hljs-keyword">auto</span>&amp;&amp; param)
+    {
+        <span class="hljs-keyword">return</span>
+            <span class="hljs-built_in">func</span>(<span class="hljs-built_in">normalize</span>(std::forward&lt;<span class="hljs-keyword">decltype</span>(param)&gt;(param)));
+    };
+</code></pre>
+<p>再加上6个点，lambda<em>完美转发可以接受多个形参，因为C++14中的</em>lambda也可以是可变形参的：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> f =
+    [](<span class="hljs-keyword">auto</span>&amp;&amp;... params)
+    {
+        <span class="hljs-keyword">return</span>
+            <span class="hljs-built_in">func</span>(<span class="hljs-built_in">normalize</span>(std::forward&lt;<span class="hljs-keyword">decltype</span>(params)&gt;(params)...));
+    };
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_2"><a name="总结_2" class="anchor-navigation-ex-anchor" href="#总结_2"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>对<code>auto&amp;&amp;</code>形参使用<code>decltype</code>以<code>std::forward</code>它们。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-34-prefer-lambdas-to-stdbind"><a name="item-34-prefer-lambdas-to-stdbind" class="anchor-navigation-ex-anchor" href="#item-34-prefer-lambdas-to-stdbind"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 34: Prefer lambdas to <code>std::bind</code></strong></h2>
+<h3 id="stdbind"><a name="stdbind" class="anchor-navigation-ex-anchor" href="#stdbind"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::bind</code></h3>
+<p>C++11中的<code>std::bind</code>是C++98的<code>std::bind1st</code>和<code>std::bind2nd</code>的后续</p>
+<table>
+<thead>
+<tr>
+<th>在头文件 <code>&lt;functional&gt;</code> 中定义</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>template&lt; class F, class... Args &gt; */\* 未指定 \*bind( F&amp;&amp; f, Args&amp;&amp;... args );</code></td>
+<td>(1)</td>
+<td>(自 C++11) (自 C++20 起为 constexpr)</td>
+</tr>
+<tr>
+<td><code>template&lt; class R, class F, class... Args &gt; \* 未指定 /* bind( F&amp;&amp; f, Args&amp;&amp;... args );</code></td>
+<td>(2)</td>
+<td>(自 C++11) (自 C++20 起为 constexpr)</td>
+</tr>
+</tbody>
+</table>
+<p>函数模板 <code>std::bind</code> 为 f 生成一个转发调用包装器。调用此包装器等效于调用 f，其中部分参数 <a href="https://cppreference.cn/w/cpp/utility/functional/bind#Bound_arguments" target="_blank">绑定</a> 到 args。</p>
+<p>对于绑定参数</p>
+<p>对于每个存储的参数 arg_i，<a href="https://cppreference.cn/w/cpp/utility/functional" target="_blank"><code>*INVOKE*</code></a> 或 <a href="https://cppreference.cn/w/cpp/utility/functional" target="_blank"><code>*INVOKE*</code></a> 操作中的相应绑定参数 v_i 按如下方式确定</p>
+<ol>
+<li>情况 1：引用包装器</li>
+</ol>
+<blockquote>
+<p>如果 arg_i 的类型为 <a href="https://cppreference.cn/w/cpp/utility/functional/reference_wrapper" target="_blank">std::reference_wrapper</a><t>（例如，<a href="https://cppreference.cn/w/cpp/utility/functional/ref" target="_blank">std::ref</a> 或 <a href="https://cppreference.cn/w/cpp/utility/functional/ref" target="_blank">std::cref</a> 在对 <code>std::bind</code> 的初始调用中使用），则 v_i 是 arg_i.get()，它的类型 <code>V_i</code> 是 <code>T&amp;</code>：存储的参数按引用传递给调用的函数对象。</t></p>
+</blockquote>
+<ol>
+<li><p>情况 2：绑定表达式</p>
+<blockquote>
+<p>如果 arg_i 的类型为 <code>T</code>，对于它来说，<a href="https://cppreference.cn/w/cpp/utility/functional/is_bind_expression" target="_blank">std::is_bind_expression</a><t>::value 为 true（例如，另一个 <code>std::bind</code> 表达式直接传递给对 <code>std::bind</code> 的初始调用），则 <code>std::bind</code> 执行函数组合：它不会传递绑定子表达式将返回的函数对象，而是急切地调用该子表达式，并将它的返回值传递给外部可调用对象。如果绑定子表达式有任何占位符参数，则它们将与外部绑定共享（从 u1<code>,</code>u2<code>, ...</code> 中选取）。具体来说，v_i 是 arg_i(<a href="https://cppreference.cn/w/cpp/utility/forward" target="_blank">std::forward</a><uj>(uj)...)，它的类型 <code>V_i</code> 是 <a href="https://cppreference.cn/w/cpp/types/result_of" target="_blank">std::result_of</a><t *cv* ﻿&(uj&&...)="">::type&amp;&amp;(直到 C++17)<a href="https://cppreference.cn/w/cpp/types/result_of" target="_blank">std::invoke_result_t</a><t *cv* ﻿&,="" uj&&...="">&amp;&amp;(自 C++17 起)（cv 限定符与 g 相同）。</t></t></uj></t></p>
+<ol>
+<li></li>
+</ol>
+</blockquote>
+</li>
+<li><p>情况 3：占位符</p>
+<blockquote>
+<p>如果 arg_i 的类型为 <code>T</code>，且 <a href="https://cppreference.cn/w/cpp/utility/functional/is_placeholder" target="_blank">std::is_placeholder</a><t>::value 不为 0（意味着，在对 <code>std::bind</code> 的初始调用中，使用了诸如 <code>std::placeholders::_1, _2, _3, ...</code> 之类的占位符作为参数），则占位符指示的参数（u1 用于 _1，u2 用于 _2，等等）将传递给可调用对象：v_i 为 <a href="https://cppreference.cn/w/cpp/utility/forward" target="_blank">std::forward</a><uj>(uj)，其类型 <code>V_i</code> 为 <code>Uj&amp;&amp;</code>。</uj></t></p>
+</blockquote>
+</li>
+<li><p>情况 4：普通参数</p>
+<blockquote>
+<p>否则，arg_i 将作为左值参数传递给可调用对象：v_i 仅仅是 arg_i，其类型 <code>V_i</code> 为 <code>T</code> <em>cv</em> ﻿<code>&amp;</code>，其中 <em>cv</em> 与 g 的 cv 限定符相同。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="优先-lambda"><a name="优先-lambda" class="anchor-navigation-ex-anchor" href="#优先-lambda"><i class="fa fa-link" aria-hidden="true"></i></a>优先 <code>lambda</code></h3>
+<ul>
+<li><p>优先<em>lambda</em>而不是<code>std::bind</code>的最重要原因是<strong><em>lambda</em>更易读</strong>。</p>
+<blockquote>
+<p>假设我们有一个设置警报器的函数：</p>
+<pre><code class="lang-c++"><span class="hljs-comment">//一个时间点的类型定义（语法见条款9）</span>
+<span class="hljs-keyword">using</span> Time = std::chrono::steady_clock::time_point;
+<span class="hljs-comment">//“enum class”见条款10</span>
+<span class="hljs-keyword">enum class</span> <span class="hljs-title class_">Sound</span> { Beep, Siren, Whistle };
+<span class="hljs-comment">//时间段的类型定义</span>
+<span class="hljs-keyword">using</span> Duration = std::chrono::steady_clock::duration;
+<span class="hljs-comment">//在时间t，使用s声音响铃时长d</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setAlarm</span><span class="hljs-params">(Time t, Sound s, Duration d)</span></span>;
+</code></pre>
+<p>编写一个<em>lambda</em>来修改<code>setAlarm</code>的界面，以便仅需要指定声音</p>
+<pre><code class="lang-c++"><span class="hljs-comment">//setSoundL（“L”指代“lambda”）是个函数对象，允许指定一小时后响30秒的警报器的声音</span>
+<span class="hljs-keyword">auto</span> setSoundL =
+    [](Sound s) 
+    {
+        <span class="hljs-comment">//使std::chrono部件在不指定限定的情况下可用</span>
+        <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::chrono;
+
+        <span class="hljs-built_in">setAlarm</span>(steady_clock::<span class="hljs-built_in">now</span>() + <span class="hljs-built_in">hours</span>(<span class="hljs-number">1</span>),    <span class="hljs-comment">//一小时后响30秒的闹钟</span>
+                 s,                                
+                 <span class="hljs-built_in">seconds</span>(<span class="hljs-number">30</span>)); <span class="hljs-comment">//译注：setAlarm三行高亮</span>
+    };
+</code></pre>
+<p>使用标准后缀如秒（<code>s</code>），毫秒（<code>ms</code>）和小时（<code>h</code>）等简化在C++14中的代码，其中标准后缀基于C++11对用户自定义常量的支持。这些后缀在<strong><code>std::literals</code></strong>命名空间中实现</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> setSoundL =
+    [](Sound s)
+    {
+        <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::chrono;
+        <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::literals;      <span class="hljs-comment">//对于C++14后缀</span>
+
+        <span class="hljs-built_in">setAlarm</span>(steady_clock::<span class="hljs-built_in">now</span>() + <span class="hljs-number">1</span>h,    <span class="hljs-comment">//C++14写法，但是含义同上</span>
+                 s,
+                 <span class="hljs-number">30</span>s);
+    };
+</code></pre>
+</blockquote>
+</li>
+<li><p>对应的<code>std::bind</code>调用</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::chrono;                <span class="hljs-comment">//同上</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::literals;
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::placeholders;          <span class="hljs-comment">//“_1”使用需要</span>
+
+<span class="hljs-keyword">auto</span> setSoundB =                            <span class="hljs-comment">//“B”代表“bind”</span>
+    std::<span class="hljs-built_in">bind</span>(setAlarm,
+              steady_clock::<span class="hljs-built_in">now</span>() + <span class="hljs-number">1</span>h,     <span class="hljs-comment">//不正确！见下</span>
+              _1,
+              <span class="hljs-number">30</span>s);
+</code></pre>
+<p>在<code>std::bind</code>调用中，将<code>steady_clock::now() + 1h</code>作为实参传递给了<code>std::bind</code></p>
+<p>警报器将被设置为在<strong>调用<code>std::bind</code>后一小时</strong>发出声音，而不是在调用<code>setAlarm</code>一小时后发出。</p>
+<p>需要告诉<code>std::bind</code>推迟对表达式的求值，直到调用<code>setAlarm</code>为止，而这样做的方法是将对<code>std::bind</code>的第二个调用<strong>嵌套</strong>在第一个调用中：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//C++14</span>
+<span class="hljs-keyword">auto</span> setSoundB =
+    std::<span class="hljs-built_in">bind</span>(setAlarm,
+              std::<span class="hljs-built_in">bind</span>(std::plus&lt;&gt;(), std::<span class="hljs-built_in">bind</span>(steady_clock::now), <span class="hljs-number">1</span>h),
+              _1,
+              <span class="hljs-number">30</span>s);
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<p>尖括号之间未指定任何类型，即该代码包含“<code>std::plus&lt;&gt;</code>”，而不是“<code>std::plus&lt;type&gt;</code>”。 在C++14中，通常可以<strong>省略标准运算符模板的模板类型实参</strong>，因此无需在此处提供。</p>
+</blockquote>
+<p>等效于<em>lambda</em>的C++11 <code>std::bind</code>为：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::chrono;                <span class="hljs-comment">//同上</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::placeholders;
+<span class="hljs-keyword">auto</span> setSoundB =
+    std::<span class="hljs-built_in">bind</span>(setAlarm,
+              std::<span class="hljs-built_in">bind</span>(std::<span class="hljs-built_in">plus</span>&lt;steady_clock::time_point&gt;(),
+                        std::<span class="hljs-built_in">bind</span>(steady_clock::now),
+                        <span class="hljs-built_in">hours</span>(<span class="hljs-number">1</span>)),
+              _1,
+              <span class="hljs-built_in">seconds</span>(<span class="hljs-number">30</span>));
+</code></pre>
+</blockquote>
+</li>
+<li><p>假设有一个重载函数，其中第四个形参指定了音量：</p>
+<blockquote>
+<pre><code class="lang-c++"><span class="hljs-keyword">enum class</span> <span class="hljs-title class_">Volume</span> { Normal, Loud, LoudPlusPlus };
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setAlarm</span><span class="hljs-params">(Time t, Sound s, Duration d, Volume v)</span></span>;
+</code></pre>
+<p><em>lambda</em>因为根据重载规则选择了<code>setAlarm</code>的三实参版本：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> setSoundL =                            <span class="hljs-comment">//和之前一样</span>
+    [](Sound s)
+    {
+        <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::chrono;
+        <span class="hljs-built_in">setAlarm</span>(steady_clock::<span class="hljs-built_in">now</span>() + <span class="hljs-number">1</span>h,  <span class="hljs-comment">//可以，调用三实参版本的setAlarm</span>
+                 s,
+                 <span class="hljs-number">30</span>s);
+    };
+</code></pre>
+<p>然而，<code>std::bind</code>的调用将会编译失败：无法确定应将两个<code>setAlarm</code>函数中的哪一个传递给<code>std::bind</code></p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> setSoundB =                            <span class="hljs-comment">//错误！哪个setAlarm？</span>
+    std::<span class="hljs-built_in">bind</span>(setAlarm,
+              std::<span class="hljs-built_in">bind</span>(std::plus&lt;&gt;(),
+                        steady_clock::<span class="hljs-built_in">now</span>(),
+                        <span class="hljs-number">1</span>h),
+              _1,
+</code></pre>
+<p>必须将<code>setAlarm</code>强制转换为适当的<strong>函数指针类型</strong>：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">using</span> SetAlarm3ParamType = <span class="hljs-built_in">void</span>(*)(Time t, Sound s, Duration d);
+
+<span class="hljs-keyword">auto</span> setSoundB =                                            <span class="hljs-comment">//现在可以了</span>
+    std::<span class="hljs-built_in">bind</span>(<span class="hljs-built_in">static_cast</span>&lt;SetAlarm3ParamType&gt;(setAlarm),
+              std::<span class="hljs-built_in">bind</span>(std::plus&lt;&gt;(),
+                        steady_clock::<span class="hljs-built_in">now</span>(),
+                        <span class="hljs-number">1</span>h), 
+              _1,
+              <span class="hljs-number">30</span>s);
+</code></pre>
+</blockquote>
+</li>
+<li><p>在<em>lambda</em>和<code>std::bind</code>的使用上带来了另一个区别。</p>
+<blockquote>
+<p> 在<code>setSoundL</code>的函数调用操作符（即<em>lambda</em>的闭包类对应的函数调用操作符）内部，对<code>setAlarm</code>的调用是<strong>正常的函数调用</strong>，编译器可以按常规方式进行内联：</p>
+<pre><code class="lang-c++"><span class="hljs-built_in">setSoundL</span>(Sound::Siren);    <span class="hljs-comment">//setAlarm函数体在这可以很好地内联</span>
+</code></pre>
+<p>对<code>std::bind</code>的调用是将<strong>函数指针</strong>传递给<code>setAlarm</code>，在<code>setSoundB</code>的函数调用操作符（即绑定对象的函数调用操作符）内部，对<code>setAlarm</code>的调用是通过一个函数指针。</p>
+<p> 编译器不太可能通过函数指针内联函数</p>
+<pre><code class="lang-c++"><span class="hljs-built_in">setSoundB</span>(Sound::Siren);     <span class="hljs-comment">//setAlarm函数体在这不太可能内联</span>
+</code></pre>
+<p>因此，使用<em>lambda</em>可能会比使用<code>std::bind</code>能生成更快的代码。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="复杂的lambda"><a name="复杂的lambda" class="anchor-navigation-ex-anchor" href="#复杂的lambda"><i class="fa fa-link" aria-hidden="true"></i></a>复杂的<code>lambda</code></h3>
+<p>考虑以下C++14的<em>lambda</em>使用，它返回其实参是否在最小值（<code>lowVal</code>）和最大值（<code>highVal</code>）之间的结果，其中<code>lowVal</code>和<code>highVal</code>是<strong>局部变量</strong>：</p>
+<pre><code class="lang-c++"><span class="hljs-comment">//在C++11中，lambda也不能采用auto形参</span>
+<span class="hljs-keyword">auto</span> betweenL =
+    [lowVal, highVal]
+    (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; val)                           <span class="hljs-comment">//C++14</span>
+    { <span class="hljs-keyword">return</span> lowVal &lt;= val &amp;&amp; val &lt;= highVal; };
+</code></pre>
+<p>同理使用<code>std::bind</code>可以表达相同的内容</p>
+<pre><code class="lang-c++"><span class="hljs-comment">//在C++11中，我们必须指定要比较的类型</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::placeholders;              <span class="hljs-comment">//同上</span>
+<span class="hljs-keyword">auto</span> betweenB =
+    std::<span class="hljs-built_in">bind</span>(std::logical_and&lt;&gt;(),             <span class="hljs-comment">//C++14</span>
+              std::<span class="hljs-built_in">bind</span>(std::less_equal&lt;&gt;(), lowVal, _1),
+              std::<span class="hljs-built_in">bind</span>(std::less_equal&lt;&gt;(), _1, highVal));
+</code></pre>
+<hr></hr>
+<h3 id="占位符的行为"><a name="占位符的行为" class="anchor-navigation-ex-anchor" href="#占位符的行为"><i class="fa fa-link" aria-hidden="true"></i></a>占位符的行为</h3>
+<p>占位符（例如<code>_1</code>，<code>_2</code>等）的行为是不透明</p>
+<ul>
+<li><p>有一个函数可以创建<code>Widget</code>的压缩副本：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">enum class</span> <span class="hljs-title class_">CompLevel</span> { Low, Normal, High }; <span class="hljs-comment">//压缩等级</span>
+
+<span class="hljs-function">Widget <span class="hljs-title">compress</span><span class="hljs-params">(<span class="hljs-type">const</span> Widget&amp; w,            <span class="hljs-comment">//制作w的压缩副本</span>
+                CompLevel lev)</span></span>;
+</code></pre>
+<p>创建一个函数对象允许我们指定<code>Widget w</code>的压缩级别</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//std::bind</span>
+Widget w;
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::placeholders;
+<span class="hljs-keyword">auto</span> compressRateB = std::<span class="hljs-built_in">bind</span>(compress, w, _1);
+</code></pre>
+<p>将<code>w</code>传递给<code>std::bind</code>时，必须将其存储起来，以便以后进行压缩</p>
+<p><code>std::bind</code>总是<strong>拷贝</strong>它的实参，但是调用者可以使用引用来存储实参</p>
+<p>即在<code>std::bind</code>中对于参数默认是按值传递，除非显示利用<code>std::ref</code>传引用</p>
+<p>然而在<em>lambda</em>方法中，其中<code>w</code>是通过值还是通过引用捕获是<strong>显式</strong>的</p>
+</blockquote>
+</li>
+<li><p>对由<code>std::bind</code>生成的对象调用中，实参如何传递？</p>
+<pre><code class="lang-c++"><span class="hljs-built_in">compressRateB</span>(CompLevel::High);     <span class="hljs-comment">//实参如何传递？</span>
+</code></pre>
+<p>传递给bind对象的所有实参都是通过<strong>引用传递</strong>的，因为此类对象的函数调用运算符使用完美转发。</p>
+</li>
+</ul>
+<hr></hr>
+<h3 id="lambda-and-stdbind"><a name="lambda-and-stdbind" class="anchor-navigation-ex-anchor" href="#lambda-and-stdbind"><i class="fa fa-link" aria-hidden="true"></i></a><code>lambda and std::bind</code></h3>
+<blockquote>
+<p>[!important]</p>
+<p>与<em>lambda</em>相比，使用<code>std::bind</code>进行编码的代码可读性较低，表达能力较低，并且效率可能较低。 </p>
+<p><strong>C++14</strong>中，没有<code>std::bind</code>的合理用例。</p>
+<p>在C++11中，可以在<strong>两个受约束</strong>的情况下证明使用<code>std::bind</code>是合理的：</p>
+<ul>
+<li><strong>移动捕获</strong>。C++11的<em>lambda</em>不提供移动捕获，但是可以通过结合<em>lambda</em>和<code>std::bind</code>来模拟。 有关详细信息，请参阅<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/6.LambdaExpressions/item32.html" target="_blank">Item32</a>，该条款还解释了在C++14中，<em>lambda</em>对初始化捕获的支持消除了这个模拟的需求。</li>
+<li><strong>多态函数对象</strong>。因为bind对象上的函数调用运算符使用完美转发，所以它可以接受任何类型的实参（以<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html" target="_blank">Item30</a>中描述的完美转发的限制为界限）。当你要绑定带有<strong>模板化函数</strong>调用运算符的对象时，此功能很有用。 </li>
+</ul>
+</blockquote>
+<ul>
+<li><p>对于上述多态函数对象，例如这个类</p>
+<blockquote>
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">PolyWidget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+    <span class="hljs-type">void</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; param)</span></span>;
+    …
+};
+</code></pre>
+<p><code>std::bind</code>可以如下绑定一个<code>PolyWidget</code>对象：</p>
+<pre><code class="lang-c++">PolyWidget pw;
+<span class="hljs-keyword">auto</span> boundPW = std::<span class="hljs-built_in">bind</span>(pw, _1);
+</code></pre>
+<p><code>boundPW</code>可以接受任意类型的对象了：</p>
+<pre><code class="lang-c++"><span class="hljs-built_in">boundPW</span>(<span class="hljs-number">1930</span>);              <span class="hljs-comment">//传int给PolyWidget::operator()</span>
+<span class="hljs-built_in">boundPW</span>(<span class="hljs-literal">nullptr</span>);           <span class="hljs-comment">//传nullptr给PolyWidget::operator()</span>
+<span class="hljs-built_in">boundPW</span>(<span class="hljs-string">"Rosebud"</span>);         <span class="hljs-comment">//传字面值给PolyWidget::operator()</span>
+</code></pre>
+<p>这一点无法使用C++11的<em>lambda</em>做到。 但是，在C++14中，可以通过带有<strong><code>auto</code>形参</strong>的<em>lambda</em>轻松实现：</p>
+<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> boundPW = [pw](<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; param)  <span class="hljs-comment">//C++14 </span>
+               { <span class="hljs-built_in">pw</span>(param); };
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p> 在C++11中增加了<em>lambda</em>支持，这使得<code>std::bind</code>几乎已经过时了，从C++14开始，更是没有很好的用例了。</p>
+</blockquote>
+<hr></hr>
+<h3 id="总结_3"><a name="总结_3" class="anchor-navigation-ex-anchor" href="#总结_3"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>与使用<code>std::bind</code>相比，<em>lambda</em>更<strong>易读</strong>，更具表达力并且可能更<strong>高效</strong>。</li>
+<li>只有在C++11中，<code>std::bind</code>可能对实现<strong>移动捕获</strong>或绑定带有<strong>模板化函数调用运算符的对象</strong>时会很有用。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - CHAPTER_6_Lambda_Expressions</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html" class="navigation navigation-prev " aria-label="Previous page: CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Modern-Cpp-templates-tutorial/" class="navigation navigation-next " aria-label="Next page: Modern-Cpp-templates-tutorial">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CHAPTER_6_Lambda_Expressions","level":"1.4.2.6","depth":3,"next":{"title":"Modern-Cpp-templates-tutorial","level":"1.4.3","depth":2,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/README.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/README.md","articles":[{"title":"01_函数模板","level":"1.4.3.1","depth":3,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/01_函数模板.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/01_函数模板.md","articles":[]},{"title":"02_类模板","level":"1.4.3.2","depth":3,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/02_类模板.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/02_类模板.md","articles":[]}]},"previous":{"title":"CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding","level":"1.4.2.5","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.md","mtime":"2025-09-07T09:41:17.121Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

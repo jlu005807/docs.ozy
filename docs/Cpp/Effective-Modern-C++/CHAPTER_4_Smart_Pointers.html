@@ -1,0 +1,2486 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>CHAPTER_4_Smart_Pointers · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html" />
+    
+    
+    <link rel="prev" href="CHAPTER_3_Moving_to_Modern_C++.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../C++-Primer/">
+            
+                <a href="../C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../C++-Primer/01_泛型算法.html">
+            
+                <a href="../C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../C++-Primer/02_关联容器.html">
+            
+                <a href="../C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../C++-Primer/03_动态内存.html">
+            
+                <a href="../C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../C++-Primer/04_拷贝控制.html">
+            
+                <a href="../C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../C++-Primer/12_nullptr.html">
+            
+                <a href="../C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="CHAPTER_1_Deducing_Types.html">
+            
+                <a href="CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="CHAPTER_2_auto.html">
+            
+                <a href="CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.4" data-path="CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >CHAPTER_4_Smart_Pointers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#第4章-智能指针"><b></b>第4章 智能指针</a></li><ul><li><span class="title-icon "></span><a href="#item-18-use-stduniqueptr-for-exclusive-ownership-resource-management"><b></b>Item 18: Use std::unique_ptr for exclusive-ownership resource management</a></li><ul><li><span class="title-icon "></span><a href="#stduniqueptr"><b></b>std::unique_ptr</a></li><li><span class="title-icon "></span><a href="#stduniqueptr的常见用法"><b></b>std::unique_ptr的常见用法</a></li><li><span class="title-icon "></span><a href="#stduniqueptr形式"><b></b>std::unique_ptr形式</a></li><li><span class="title-icon "></span><a href="#总结"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-19-use-stdsharedptr-for-shared-ownership-resource-management"><b></b>Item 19: Use std::shared_ptr for shared-ownership resource management</a></li><ul><li><span class="title-icon "></span><a href="#stdsharedptr"><b></b>std::shared_ptr</a></li><li><span class="title-icon "></span><a href="#stdsharedptr的引用计数"><b></b>std::shared_ptr的引用计数</a></li><li><span class="title-icon "></span><a href="#引用计数性能问题"><b></b>引用计数性能问题</a></li><li><span class="title-icon "></span><a href="#stdsharedptr销毁机制"><b></b>std::shared_ptr销毁机制</a></li><li><span class="title-icon "></span><a href="#stdenablesharedfromthis"><b></b>std::enable_shared_from_this</a></li><li><span class="title-icon "></span><a href="#stdsharedptr开销"><b></b>std::shared_ptr开销</a></li><li><span class="title-icon "></span><a href="#总结_1"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-20-use-stdweakptr-for-stdsharedptr-like-pointers-that-can-dangle"><b></b>Item 20: Use std::weak_ptr for std::shared_ptr-like pointers that can dangle</a></li><ul><li><span class="title-icon "></span><a href="#stdweakptr"><b></b>std::weak_ptr</a></li><li><span class="title-icon "></span><a href="#stdweakptr过期问题"><b></b>std::weak_ptr过期问题</a></li><li><span class="title-icon "></span><a href="#stdweakptr用例"><b></b>std::weak_ptr用例</a></li><li><span class="title-icon "></span><a href="#总结_2"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-21-prefer-stdmakeunique-and-stdmakeshared-to-direct-use-of-new"><b></b>Item 21: Prefer std::make_unique and std::make_shared to direct use of new</a></li><ul><li><span class="title-icon "></span><a href="#stdmakeunique-ans-stdmakeshared"><b></b>std::make_unique ans std::make_shared</a></li><li><span class="title-icon "></span><a href="#make函数缺点"><b></b>make函数缺点</a></li><li><span class="title-icon "></span><a href="#边缘情况"><b></b>边缘情况</a></li><li><span class="title-icon "></span><a href="#总结_3"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-22-when-using-the-pimpl-idiom-define-special-member-functions-in-the-implementation-file"><b></b>Item 22: When using the Pimpl Idiom, define special member functions in the implementation file</a></li><ul><li><span class="title-icon "></span><a href="#pimpl（pointer-to-implementation）惯用法"><b></b>Pimpl（pointer to implementation）惯用法</a></li><li><span class="title-icon "></span><a href="#换成stdsharedptr"><b></b>换成std::shared_ptr</a></li><li><span class="title-icon "></span><a href="#总结_4"><b></b>总结</a></li></ul></ul></ul></div><a href="#第4章-智能指针" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#第4章-智能指针">第4章 智能指针</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#item-18-use-stduniqueptr-for-exclusive-ownership-resource-management">Item 18: Use std::unique_ptr for exclusive-ownership resource management</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#stduniqueptr">std::unique_ptr</a><i></i></div></li>
+<li><div><a href="#stduniqueptr的常见用法">std::unique_ptr的常见用法</a><i></i></div></li>
+<li><div><a href="#stduniqueptr形式">std::unique_ptr形式</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-19-use-stdsharedptr-for-shared-ownership-resource-management">Item 19: Use std::shared_ptr for shared-ownership resource management</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#stdsharedptr">std::shared_ptr</a><i></i></div></li>
+<li><div><a href="#stdsharedptr的引用计数">std::shared_ptr的引用计数</a><i></i></div></li>
+<li><div><a href="#引用计数性能问题">引用计数性能问题</a><i></i></div></li>
+<li><div><a href="#stdsharedptr销毁机制">std::shared_ptr销毁机制</a><i></i></div></li>
+<li><div><a href="#stdenablesharedfromthis">std::enable_shared_from_this</a><i></i></div></li>
+<li><div><a href="#stdsharedptr开销">std::shared_ptr开销</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-20-use-stdweakptr-for-stdsharedptr-like-pointers-that-can-dangle">Item 20: Use std::weak_ptr for std::shared_ptr-like pointers that can dangle</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#stdweakptr">std::weak_ptr</a><i></i></div></li>
+<li><div><a href="#stdweakptr过期问题">std::weak_ptr过期问题</a><i></i></div></li>
+<li><div><a href="#stdweakptr用例">std::weak_ptr用例</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-21-prefer-stdmakeunique-and-stdmakeshared-to-direct-use-of-new">Item 21: Prefer std::make_unique and std::make_shared to direct use of new</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#stdmakeunique-ans-stdmakeshared">std::make_unique ans std::make_shared</a><i></i></div></li>
+<li><div><a href="#make函数缺点">make函数缺点</a><i></i></div></li>
+<li><div><a href="#边缘情况">边缘情况</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-22-when-using-the-pimpl-idiom-define-special-member-functions-in-the-implementation-file">Item 22: When using the Pimpl Idiom, define special member functions in the implementation file</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#pimpl（pointer-to-implementation）惯用法">Pimpl（pointer to implementation）惯用法</a><i></i></div></li>
+<li><div><a href="#换成stdsharedptr">换成std::shared_ptr</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="第4章-智能指针"><a name="第4章-智能指针" class="anchor-navigation-ex-anchor" href="#第4章-智能指针"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item18.html#第4章-智能指针" target="_blank">第4章 智能指针</a></h1>
+<ul>
+<li><p>原始指针的缺点</p>
+<blockquote>
+<ol>
+<li>它的声明不能指示所指到底是单个对象还是数组。</li>
+<li>它的声明没有告诉你用完后是否应该销毁它，即指针是否拥有所指之物。</li>
+<li>如果你决定你应该销毁指针所指对象，没人告诉你该用<code>delete</code>还是其他析构机制（比如将指针传给专门的销毁函数）。</li>
+<li>如果你发现该用<code>delete</code>。 原因1说了可能不知道该用单个对象形式（“<code>delete</code>”）还是数组形式（“<code>delete[]</code>”）。如果用错了结果是未定义的。</li>
+<li>假设你确定了指针所指，知道销毁机制，也很难确定你在所有执行路径上都执行了<strong>恰为一次</strong>销毁操作（包括异常产生后的路径）。少一条路径就会产生资源泄漏，销毁多次还会导致未定义行为。</li>
+<li>一般来说没有办法告诉你指针是否变成了悬空指针（dangling pointers），即内存中不再存在指针所指之物。在对象销毁后指针仍指向它们就会产生悬空指针。</li>
+</ol>
+</blockquote>
+</li>
+<li><p>智能指针</p>
+<blockquote>
+<p>智能指针包裹原始指针，它们的行为看起来像被包裹的原始指针，但避免了原始指针的很多陷阱</p>
+<p>在C++11中存在四种智能指针</p>
+<ol>
+<li><code>std::auto_ptr</code>是来自C++98的已废弃遗留物，它是一次标准化的尝试，后来变成了C++11的<code>std::unique_ptr</code>。拷贝一个<code>std::auto_ptr</code>会将它本身设置为null！）和令人沮丧的使用限制（比如不能将<code>std::auto_ptr</code>放入容器）。</li>
+<li><code>std::unique_ptr</code>在所有方面它都比<code>std::auto_ptr</code>好。</li>
+<li>在<code>std::auto_ptr</code>唯一合法的使用场景就是代码使用C++98编译器编译。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h2 id="item-18-use-stduniqueptr-for-exclusive-ownership-resource-management"><a name="item-18-use-stduniqueptr-for-exclusive-ownership-resource-management" class="anchor-navigation-ex-anchor" href="#item-18-use-stduniqueptr-for-exclusive-ownership-resource-management"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 18: Use <code>std::unique_ptr</code> for exclusive-ownership resource management</strong></h2>
+<h3 id="stduniqueptr"><a name="stduniqueptr" class="anchor-navigation-ex-anchor" href="#stduniqueptr"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::unique_ptr</code></h3>
+<ul>
+<li><p>默认情况下，<code>std::unique_ptr</code>大小等同于原始指针，而且对于大多数操作（包括取消引用）</p>
+<blockquote>
+<ul>
+<li><p>可以在<strong>内存和时间都比较紧张</strong>的情况下使用它。如果原始指针够小够快，那么<code>std::unique_ptr</code>一样可以。</p>
+</li>
+<li><p><code>std::unique_ptr</code>体现了专有所有权（<em>exclusive ownership</em>）语义。</p>
+<ul>
+<li>具体来说，一个<strong>non-null</strong> <code>std::unique_ptr</code>始终拥有其指向的内容。</li>
+<li>移动一个<code>std::unique_ptr</code>将所有权从源指针转移到目的指针。（源指针被设为null。）</li>
+<li>拷贝一个<code>std::unique_ptr</code>是不允许的，</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p><code>std::unique_ptr</code>是一种只可移动类型（<em>move-only type</em>）。当析构(<strong>原始指针调用<code>delete</code></strong>)时，一个non-null <code>std::unique_ptr</code>销毁它指向的资源。</p>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stduniqueptr的常见用法"><a name="stduniqueptr的常见用法" class="anchor-navigation-ex-anchor" href="#stduniqueptr的常见用法"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::unique_ptr</code>的常见用法</h3>
+<ol>
+<li><p><code>std::unique_ptr</code>的常见用法是作为继承层次结构中对象的工厂函数返回类型。</p>
+<blockquote>
+<p>假设我们有一个投资类型（比如股票、债券、房地产等）的<strong>继承结构</strong>，使用基类<code>Investment</code>。</p>
+<p><img src="D:\Internt_of_Thing\e_book\C++\note\Effective-Modern-C++\assets\item18_fig1.png" alt="item18_fig1"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Investment</span> { … };
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Stock</span>: <span class="hljs-keyword">public</span> Investment { … };
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Bond</span>: <span class="hljs-keyword">public</span> Investment { … };
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">RealEstate</span>: <span class="hljs-keyword">public</span> Investment { … };
+</code></pre>
+<p>这种继承关系的工厂函数在堆上分配一个对象然后返回指针，调用方在不需要的时候有责任销毁对象。</p>
+<ol>
+<li>使用场景完美匹配<code>std::unique_ptr</code>，因为<strong>调用者对工厂返回的资源负责</strong>（即对该资源的专有所有权），并且<code>std::unique_ptr</code>在自己被销毁时会自动销毁指向的内容。</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-comment">//Investment继承关系的工厂函数</span>
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;            <span class="hljs-comment">//返回指向对象的std::unique_ptr，</span>
+std::unique_ptr&lt;Investment&gt;         <span class="hljs-comment">//对象使用给定实参创建</span>
+<span class="hljs-built_in">makeInvestment</span>(Ts&amp;&amp;... params);
+</code></pre>
+<ol>
+<li><p>但是也可以在所有权转移的场景中使用它</p>
+<ol>
+<li>比如将工厂返回的<code>std::unique_ptr</code><strong>移入容器</strong>中，然后将容器元素移入一个对象的数据成员中，然后对象过后被销毁。</li>
+<li>发生这种情况时，这个对象的<code>std::unique_ptr</code>数据成员也被销毁，并且智能指针数据成员的析构将导致从工厂返回的资源被销毁。</li>
+<li><strong>默认情况下，销毁将通过<code>delete</code>进行</strong>，但是在构造过程中，<code>std::unique_ptr</code>对象可以被设置为使用（对资源的）<strong>自定义删除器</strong>：当资源需要销毁时可调用的任意函数（或者函数对象，包括<em>lambda</em>表达式）</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> delInvmt = [](Investment* pInvestment)         <span class="hljs-comment">//自定义删除器</span>
+                {                                   <span class="hljs-comment">//（lambda表达式）</span>
+                    <span class="hljs-built_in">makeLogEntry</span>(pInvestment);
+                    <span class="hljs-keyword">delete</span> pInvestment; 
+                };
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;
+std::unique_ptr&lt;Investment, <span class="hljs-keyword">decltype</span>(delInvmt)&gt;     <span class="hljs-comment">//更改后的返回类型</span>
+<span class="hljs-built_in">makeInvestment</span>(Ts&amp;&amp;... params)
+{
+    std::unique_ptr&lt;Investment, <span class="hljs-keyword">decltype</span>(delInvmt)&gt; <span class="hljs-comment">//应返回的指针</span>
+        <span class="hljs-comment">//makeInvestment的基本策略是创建一个空的std::unique_ptr，然后指向一个合适类型的对象，然后返回。</span>
+        <span class="hljs-built_in">pInv</span>(<span class="hljs-literal">nullptr</span>, delInvmt);
+
+    <span class="hljs-comment">//过reset来让pInv接管通过new创建的对象的所有权</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-comment">/*一个Stock对象应被创建*/</span>)
+    {
+        pInv.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Stock</span>(std::forward&lt;Ts&gt;(params)...));
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( <span class="hljs-comment">/*一个Bond对象应被创建*/</span> )   
+    {     
+        pInv.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Bond</span>(std::forward&lt;Ts&gt;(params)...));   
+    }   
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( <span class="hljs-comment">/*一个RealEstate对象应被创建*/</span> )   
+    {     
+        pInv.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RealEstate</span>(std::forward&lt;Ts&gt;(params)...));   
+    }   
+    <span class="hljs-keyword">return</span> pInv;
+}
+</code></pre>
+<ul>
+<li><p>们通过基类指针删除派生类实例，为此，基类<code>Investment</code>必须有虚析构函数：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Investment</span> {
+<span class="hljs-keyword">public</span>:
+    …
+    <span class="hljs-keyword">virtual</span> ~<span class="hljs-built_in">Investment</span>();          <span class="hljs-comment">//关键设计部分！</span>
+    …
+};
+</code></pre>
+</li>
+<li><p>在C++14中，函数返回类型推导的存在（参阅<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item3.html" target="_blank">Item3</a>），意味着<code>makeInvestment</code>可以以更简单，更封装的方式实现：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;
+<span class="hljs-keyword">auto</span> <span class="hljs-title">makeInvestment</span><span class="hljs-params">(Ts&amp;&amp;... params)</span>                 <span class="hljs-comment">//C++14</span>
+</span>{
+    <span class="hljs-keyword">auto</span> delInvmt = [](Investment* pInvestment)     <span class="hljs-comment">//现在在</span>
+                    {                               <span class="hljs-comment">//makeInvestment里</span>
+                        <span class="hljs-built_in">makeLogEntry</span>(pInvestment);
+                        <span class="hljs-keyword">delete</span> pInvestment; 
+                    };
+
+    std::unique_ptr&lt;Investment, <span class="hljs-keyword">decltype</span>(delInvmt)&gt; <span class="hljs-comment">//同之前一样</span>
+        <span class="hljs-built_in">pInv</span>(<span class="hljs-literal">nullptr</span>, delInvmt);
+    <span class="hljs-keyword">if</span> ( … )                                        <span class="hljs-comment">//同之前一样</span>
+    {
+        pInv.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Stock</span>(std::forward&lt;Ts&gt;(params)...));
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( … )                                   <span class="hljs-comment">//同之前一样</span>
+    {     
+        pInv.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Bond</span>(std::forward&lt;Ts&gt;(params)...));   
+    }   
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( … )                                   <span class="hljs-comment">//同之前一样</span>
+    {     
+        pInv.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RealEstate</span>(std::forward&lt;Ts&gt;(params)...));   
+    }   
+    <span class="hljs-keyword">return</span> pInv;                                    <span class="hljs-comment">//同之前一样</span>
+}
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p>对于函数对象形式的删除器来说，变化的大小取决于<strong>函数对象中存储的状态多少</strong>，无状态函数（stateless function）对象（比如不捕获变量的<em>lambda</em>表达式）对大小没有影响</p>
+<blockquote>
+<p>这意味当自定义删除器可以实现为函数或者<em>lambda</em>时，尽量使用<em>lambda</em>：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> delInvmt1 = [](Investment* pInvestment)        <span class="hljs-comment">//无状态lambda的</span>
+                 {                                  <span class="hljs-comment">//自定义删除器</span>
+                     <span class="hljs-built_in">makeLogEntry</span>(pInvestment);
+                     <span class="hljs-keyword">delete</span> pInvestment; 
+                 };
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;                            <span class="hljs-comment">//返回类型大小是</span>
+std::unique_ptr&lt;Investment, <span class="hljs-keyword">decltype</span>(delInvmt1)&gt;    <span class="hljs-comment">//Investment*的大小</span>
+<span class="hljs-built_in">makeInvestment</span>(Ts&amp;&amp;... args);
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">delInvmt2</span><span class="hljs-params">(Investment* pInvestment)</span>             <span class="hljs-comment">//函数形式的</span>
+</span>{                                                   <span class="hljs-comment">//自定义删除器</span>
+    <span class="hljs-built_in">makeLogEntry</span>(pInvestment);
+    <span class="hljs-keyword">delete</span> pInvestment;
+}
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;                            <span class="hljs-comment">//返回类型大小是</span>
+std::unique_ptr&lt;Investment, <span class="hljs-built_in">void</span> (*)(Investment*)&gt;  <span class="hljs-comment">//Investment*的指针</span>
+<span class="hljs-built_in">makeInvestment</span>(Ts&amp;&amp;... params);                     <span class="hljs-comment">//加至少一个函数指针的大小</span>
+</code></pre>
+</blockquote>
+</li>
+<li><p>工厂函数不是<code>std::unique_ptr</code>的唯一常见用法。作为实现<strong>Pimpl Idiom</strong>（译注：<em>pointer to implementation</em>，一种隐藏实际实现而减弱编译依赖性的设计思想</p>
+</li>
+</ol>
+<h3 id="stduniqueptr形式"><a name="stduniqueptr形式" class="anchor-navigation-ex-anchor" href="#stduniqueptr形式"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::unique_ptr</code>形式</h3>
+<ol>
+<li>用于单个对象（<code>std::unique_ptr&lt;T&gt;</code>），</li>
+<li>用于数组（<code>std::unique_ptr&lt;T[]&gt;</code>）</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li><code>std::unique_ptr</code>的API设计会自动匹配你的用法，</li>
+<li>比如<code>operator[]</code>就是数组对象，解引用操作符（<code>operator*</code>和<code>operator-&gt;</code>）就是单个对象专有。</li>
+</ul>
+</blockquote>
+<ul>
+<li><p><code>std::unique_ptr</code>是C++11中表示专有所有权的方法，但是其最吸引人的功能之一是它可以轻松高效的转换为<code>std::shared_ptr</code>：</p>
+<pre><code class="lang-cpp">std::shared_ptr&lt;Investment&gt; sp =            <span class="hljs-comment">//将std::unique_ptr</span>
+    <span class="hljs-built_in">makeInvestment</span>(arguments);              <span class="hljs-comment">//转为std::shared_ptr</span>
+</code></pre>
+<p> 通过返回<code>std::unique_ptr</code>，工厂为调用者提供了<strong>最有效的智能指针</strong>，但它们并不妨碍调用者用其更灵活的兄弟替换它。</p>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结"><a name="总结" class="anchor-navigation-ex-anchor" href="#总结"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><code>std::unique_ptr</code>是<strong>轻量级、快速的、只可移动</strong>（<em>move-only</em>）的管理<strong>专有所有权</strong>语义资源的智能指针</li>
+<li>默认情况，资源销毁通过<code>delete</code>实现，但是<strong>支持自定义删除器</strong>。有状态的删除器和函数指针会增加<code>std::unique_ptr</code>对象的大小</li>
+<li>将<code>std::unique_ptr</code><strong>转化</strong>为<code>std::shared_ptr</code>非常简单</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-19-use-stdsharedptr-for-shared-ownership-resource-management"><a name="item-19-use-stdsharedptr-for-shared-ownership-resource-management" class="anchor-navigation-ex-anchor" href="#item-19-use-stdsharedptr-for-shared-ownership-resource-management"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 19: Use <code>std::shared_ptr</code> for shared-ownership resource management</strong></h2>
+<h3 id="stdsharedptr"><a name="stdsharedptr" class="anchor-navigation-ex-anchor" href="#stdsharedptr"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::shared_ptr</code></h3>
+<ul>
+<li><p>一个自动工作的世界（像是垃圾回收），一个销毁可预测的世界（像是析构)</p>
+</li>
+<li><p>C++11中的<code>std::shared_ptr</code>将两者组合了起来。</p>
+<blockquote>
+<p>一个通过<code>std::shared_ptr</code>访问的对象其生命周期由指向它的有<strong>共享所有权（<em>shared ownership</em>）的指针们</strong>来管理</p>
+<p>没有特定的<code>std::shared_ptr</code>拥有该对象。</p>
+<p>当<strong>最后一个</strong>指向某对象的<code>std::shared_ptr</code>不再指向那（比如因为<code>std::shared_ptr</code>被销毁或者指向另一个不同的对象），<code>std::shared_ptr</code>会销毁它所指向的对象。</p>
+</blockquote>
+</li>
+<li><p>就垃圾回收来说，客户端不需要关心指向对象的生命周期，而对象的析构是确定性的（没有<code>std::unique_ptr</code>指向该对象）</p>
+</li>
+</ul>
+<h3 id="stdsharedptr的引用计数"><a name="stdsharedptr的引用计数" class="anchor-navigation-ex-anchor" href="#stdsharedptr的引用计数"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::shared_ptr</code>的引用计数</h3>
+<ul>
+<li><p><code>std::shared_ptr</code>通过引用计数（<em>reference count</em>）来确保它是否是最后一个指向某种资源的指针，<strong>引用计数关联资源并跟踪</strong>有多少<code>std::shared_ptr</code>指向该资源。</p>
+</li>
+<li><p><code>std::shared_ptr</code><strong>构造函数递增</strong>引用计数值（注意是<strong>通常</strong>——原因参见下面），<strong>析构函数递减</strong>值，拷贝赋值运算符做前面这两个工作。</p>
+<blockquote>
+<p>具体来说，<code>sp1</code>和<code>sp2</code>是<code>std::shared_ptr</code>并且指向不同对象</p>
+<ul>
+<li>赋值“<code>sp1 = sp2;</code>”会使<code>sp1</code>指向<code>sp2</code>指向的对象。直接效果就是<code>sp1</code>引用计数减一，<code>sp2</code>引用计数加一</li>
+<li>如果<code>std::shared_ptr</code>在计数值递减后发现引用计数值为零，没有其他<code>std::shared_ptr</code>指向该资源，它就会销毁资源。</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="引用计数性能问题"><a name="引用计数性能问题" class="anchor-navigation-ex-anchor" href="#引用计数性能问题"><i class="fa fa-link" aria-hidden="true"></i></a>引用计数性能问题</h3>
+<ol>
+<li><strong><code>std::shared_ptr</code>大小是原始指针的两倍</strong>，因为它内部包含一个<strong>指向资源</strong>的原始指针，还包含一个指向资源的<strong>引用计数值</strong>的原始指针。</li>
+<li><strong>引用计数的内存必须动态分配</strong>。被指向的对象不知道有一个关联到自己的计数值，所以任何对象——甚至是内置类型的——都可以由<code>std::shared_ptr</code>管理</li>
+<li><strong>递增递减引用计数必须是原子性的</strong>，多个reader、writer可能在不同的线程，即指向某种资源的<code>std::shared_ptr</code>可能在一个线程执行析构（于是递减指向的对象的引用计数），在另一个不同的线程执行的却是拷贝操作（因此递增了同一个引用计数）。而原子操作比非原子操作慢</li>
+</ol>
+<p>为什么<code>std::shared_ptr</code>构造函数只是“通常”递增指向对象的引用计数？</p>
+<blockquote>
+<p>原因是<strong>移动构造函数</strong>的存在。</p>
+<p>从另一个<code>std::shared_ptr</code>移动构造新<code>std::shared_ptr</code>会将原来的<code>std::shared_ptr</code>设置为null，那意味着老的<code>std::shared_ptr</code>不再指向资源，同时新的<code>std::shared_ptr</code>指向资源。结果就是不需要修改引用计数值</p>
+<p>因此移动<code>std::shared_ptr</code>会比拷贝它要快</p>
+</blockquote>
+<hr></hr>
+<h3 id="stdsharedptr销毁机制"><a name="stdsharedptr销毁机制" class="anchor-navigation-ex-anchor" href="#stdsharedptr销毁机制"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::shared_ptr</code>销毁机制</h3>
+<ul>
+<li><p><code>std::shared_ptr</code>使用<code>delete</code>作为资源的默认销毁机制，但是它也支持自定义的删除器。</p>
+</li>
+<li><p>对于<code>std::unique_ptr</code>来说，删除器类型是智能指针类型的一部分。对于<code>std::shared_ptr</code>则删除器类型不是智能指针类型的一部分</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> loggingDel = [](Widget *pw)        <span class="hljs-comment">//自定义删除器</span>
+                  {                     <span class="hljs-comment">//（和条款18一样）</span>
+                      <span class="hljs-built_in">makeLogEntry</span>(pw);
+                      <span class="hljs-keyword">delete</span> pw;
+                  };
+
+<span class="hljs-function">std::unique_ptr&lt;                        <span class="hljs-comment">//删除器类型是</span>
+    Widget, <span class="hljs-title">decltype</span><span class="hljs-params">(loggingDel)</span>        <span class="hljs-comment">//指针类型的一部分</span>
+    &gt; <span class="hljs-title">upw</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget, loggingDel)</span></span>;
+std::shared_ptr&lt;Widget&gt;                 <span class="hljs-comment">//删除器类型不是</span>
+    <span class="hljs-built_in">spw</span>(<span class="hljs-keyword">new</span> Widget, loggingDel);        <span class="hljs-comment">//指针类型的一部分</span>
+</code></pre>
+<p>考虑有两个<code>std::shared_ptr&lt;Widget&gt;</code>，每个自带不同的删除器（比如通过<em>lambda</em>表达式自定义删除器）</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> customDeleter1 = [](Widget *pw) { … };     <span class="hljs-comment">//自定义删除器，</span>
+<span class="hljs-keyword">auto</span> customDeleter2 = [](Widget *pw) { … };     <span class="hljs-comment">//每种类型不同</span>
+<span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">pw1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget, customDeleter1)</span></span>;
+<span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">pw2</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget, customDeleter2)</span></span>;
+
+<span class="hljs-comment">//pw1和pw2有相同的类型，所以它们都可以放到存放那个类型的对象的容器中</span>
+std::vector&lt;std::shared_ptr&lt;Widget&gt;&gt; vpw{ pw1, pw2 };
+</code></pre>
+<ul>
+<li>同样，它们也能相互赋值，也可以传入一个形参为<code>std::shared_ptr&lt;Widget&gt;</code>的函数。</li>
+<li>但是<strong>自定义删除器类型不同的<code>std::unique_ptr</code>就不行</strong>，因为<code>std::unique_ptr</code>把删除器视作类型的一部分。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>另一个不同于<code>std::unique_ptr</code>的地方是，指定自定义删除器不会改变<code>std::shared_ptr</code><strong>对象的大小</strong>。</p>
+<blockquote>
+<p>不管删除器是什么，一个<code>std::shared_ptr</code>对象都是<strong>两个指针大小</strong>。</p>
+<p>每个<code>std::shared_ptr</code>管理的对象都有个相应的控制块。</p>
+<p>控制块除了包含<strong>引用计数值</strong>外还有一个<strong>自定义删除器的拷贝</strong>，当然前提是存在自定义删除器。</p>
+<p><img src="D:\Internt_of_Thing\e_book\C++\note\Effective-Modern-C++\assets\item19_fig1.png" alt="item19_fig1"></img></p>
+<p>对于一个创建指向对象的<code>std::shared_ptr</code>的函数来说不可能知道是否有其他<code>std::shared_ptr</code>早已指向那个对象，所以控制块的创建会遵循下面几条规则：</p>
+<blockquote>
+<ol>
+<li><strong><code>std::make_shared</code>（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item21.html" target="_blank">Item21</a>）总是创建一个控制块</strong>。因为<code>std::make_shared</code>调用时创建一个要指向的新对象。</li>
+<li><strong>当从独占指针（即<code>std::unique_ptr</code>或者<code>std::auto_ptr</code>）上构造出<code>std::shared_ptr</code>时会创建控制块</strong>。因为独占指针没有使用控制块，所以指针指向的对象没有关联控制块。</li>
+<li><strong>当从原始指针上构造出<code>std::shared_ptr</code>时会创建控制块</strong>。相反，用<code>std::shared_ptr</code>或者<code>std::weak_ptr</code>作为构造函数实参创建<code>std::shared_ptr</code>不会创建新控制块，因为它可以依赖传递来的智能指针指向控制块。</li>
+</ol>
+</blockquote>
+</blockquote>
+</li>
+<li><p>这些规则造成的后果就是从原始指针上构造超过一个<code>std::shared_ptr</code>就会让你走上未定义行为的快车道</p>
+<blockquote>
+<p>因为指向的对象有多个控制块关联。多个控制块意味着多个引用计数值，多个引用计数值意味着对象将会被销毁多次（每个引用计数一次）</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> pw = <span class="hljs-keyword">new</span> Widget;                           <span class="hljs-comment">//pw是原始指针</span>
+…
+<span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">spw1</span><span class="hljs-params">(pw, loggingDel)</span></span>;   <span class="hljs-comment">//为*pw创建控制块</span>
+…
+<span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">spw2</span><span class="hljs-params">(pw, loggingDel)</span></span>;   <span class="hljs-comment">//为*pw创建第二个控制块</span>
+</code></pre>
+<p>因此<code>*pw</code>有两个引用计数值，每一个最后都会变成零，然后最终导致<code>*pw</code>销毁两次。第二个销毁会产生未定义行为。</p>
+<p>[!warning]</p>
+<p>第一，避免传给<code>std::shared_ptr</code>构造函数原始指针。通常替代方案是使用<code>std::make_shared</code>（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item21.html" target="_blank">Item21</a>）</p>
+<p>第二，如果你必须传给<code>std::shared_ptr</code>构造函数原始指针，直接传<code>new</code>出来的结果，不要传指针变量。</p>
+<pre><code class="lang-cpp"><span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">spw1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget,    <span class="hljs-comment">//直接使用new的结果</span>
+                             loggingDel)</span></span>;
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stdenablesharedfromthis"><a name="stdenablesharedfromthis" class="anchor-navigation-ex-anchor" href="#stdenablesharedfromthis"><i class="fa fa-link" aria-hidden="true"></i></a>std::enable_shared_from_this</h3>
+<ul>
+<li><p>错误的部分是传递<code>this</code>，而不是使用了<code>emplace_back</code>。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::process</span><span class="hljs-params">()</span>
+</span>{
+    …                                       <span class="hljs-comment">//处理Widget</span>
+    processedWidgets.<span class="hljs-built_in">emplace_back</span>(<span class="hljs-keyword">this</span>);    <span class="hljs-comment">//然后将它加到已处理过的Widget</span>
+}                                           <span class="hljs-comment">//的列表中，这是错的！</span>
+</code></pre>
+<p><code>std::shared_ptr</code>会由此为指向的<code>Widget</code>（<code>*this</code>）创建一个控制块</p>
+<p>如果成员函数外面早已存在指向那个<code>Widget</code>对象的指针，它是未定义行为</p>
+</blockquote>
+</li>
+<li><p>如果你想创建一个用<code>std::shared_ptr</code>管理的类，这个类能够用<code>this</code>指针安全地创建一个<code>std::shared_ptr</code>，<code>std::enable_shared_from_this</code>就可作为基类的模板类。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span>: <span class="hljs-keyword">public</span> std::enable_shared_from_this&lt;Widget&gt; {
+<span class="hljs-keyword">public</span>:
+    …
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">process</span><span class="hljs-params">()</span></span>;
+    …
+};
+</code></pre>
+<ul>
+<li><code>std::enable_shared_from_this</code>定义了一个成员函数，成员函数会创建指向当前对象的<code>std::shared_ptr</code>却<strong>不创建多余控制块</strong>。</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Widget::process</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">//和之前一样，处理Widget</span>
+    …
+    <span class="hljs-comment">//把指向当前对象的std::shared_ptr加入processedWidgets</span>
+    processedWidgets.<span class="hljs-built_in">emplace_back</span>(<span class="hljs-built_in">shared_from_this</span>());
+}
+</code></pre>
+<p>从内部来说，<code>shared_from_this</code><strong>查找</strong>当前对象控制块，然后创建一个新的<code>std::shared_ptr</code>关联这个控制块。</p>
+<p>但是没有<code>std::shared_ptr</code>指向当前对象（即当前对象没有关联控制块），行为是未定义的，<code>shared_from_this</code>通常抛出一个异常。</p>
+</blockquote>
+</li>
+<li><p>防止客户端在存在一个指向对象的<code>std::shared_ptr</code>前先<strong>调用含有<code>shared_from_this</code>的成员函数</strong>，<strong>继承自<code>std::enable_shared_from_this</code></strong>的类通常将它们的<strong>构造函数声明为<code>private</code></strong>，并且让客户端通过<strong>返回<code>std::shared_ptr</code>的工厂函数创建对象</strong>。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span>: <span class="hljs-keyword">public</span> std::enable_shared_from_this&lt;Widget&gt; {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">//完美转发参数给private构造函数的工厂函数</span>
+    <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;
+    <span class="hljs-type">static</span> std::shared_ptr&lt;Widget&gt; <span class="hljs-title">create</span><span class="hljs-params">(Ts&amp;&amp;... params)</span></span>;
+    …
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">process</span><span class="hljs-params">()</span></span>;     <span class="hljs-comment">//和前面一样</span>
+    …
+<span class="hljs-keyword">private</span>:
+    …                   <span class="hljs-comment">//构造函数</span>
+};
+</code></pre>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stdsharedptr开销"><a name="stdsharedptr开销" class="anchor-navigation-ex-anchor" href="#stdsharedptr开销"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::shared_ptr</code>开销</h3>
+<ul>
+<li>在通常情况下，使用默认删除器和默认分配器，使用<code>std::make_shared</code>创建<code>std::shared_ptr</code>，产生的控制块只需三个word大小。</li>
+<li>对<code>std::shared_ptr</code>解引用的开销不会比原始指针高。</li>
+<li>对于每个被<code>std::shared_ptr</code>指向的对象来说，控制块中的虚函数机制产生的开销通常只需要承受一次，即对象销毁的时候。</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>想想你是否需要共享所有权。如果独占资源可行或者<strong>可能</strong>可行，用<code>std::unique_ptr</code>是一个更好的选择。</p>
+<p><code>std::unique_ptr</code>的性能表现更接近于原始指针，并且从<code>std::unique_ptr</code>升级到<code>std::shared_ptr</code>也很容易，</p>
+<p>反之不行。当你的资源由<code>std::shared_ptr</code>管理，现在又想修改资源生命周期管理方式是没有办法的。</p>
+</blockquote>
+<ul>
+<li><p><code>std::shared_ptr</code>不能处理的另一个东西是数组。</p>
+<blockquote>
+<p>自 C++17 起 std::shared_ptr 可以用于管理动态分配的数组，使用 <code>std::shared_ptr&lt;T[]&gt;</code></p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_1"><a name="总结_1" class="anchor-navigation-ex-anchor" href="#总结_1"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><code>std::shared_ptr</code>为有<strong>共享所有权</strong>的任意资源提供一种自动垃圾回收的便捷方式。</li>
+<li>较之于<code>std::unique_ptr</code>，<code>std::shared_ptr</code>对象通常大两倍，控制块会产生开销，需要原子性的引用计数修改操作。</li>
+<li>默认资源销毁是通过<code>delete</code>，但是也支持自定义删除器。删除器的类型是什么对于<code>std::shared_ptr</code>的类型没有影响。</li>
+<li><strong>避免从原始指针变量上创建</strong><code>std::shared_ptr</code>。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-20-use-stdweakptr-for-stdsharedptr-like-pointers-that-can-dangle"><a name="item-20-use-stdweakptr-for-stdsharedptr-like-pointers-that-can-dangle" class="anchor-navigation-ex-anchor" href="#item-20-use-stdweakptr-for-stdsharedptr-like-pointers-that-can-dangle"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 20: Use <code>std::weak_ptr</code> for <code>std::shared_ptr</code>-like pointers that can dangle</strong></h2>
+<h3 id="stdweakptr"><a name="stdweakptr" class="anchor-navigation-ex-anchor" href="#stdweakptr"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::weak_ptr</code></h3>
+<ul>
+<li><p><code>std::weak_ptr</code>最精确的描述：<code>std::shared_ptr</code>的增强</p>
+<blockquote>
+<p>像<code>std::shared_ptr</code>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item19.html" target="_blank">Item19</a>）的但是不参与资源所有权共享的指针</p>
+<p>类似<code>std::shared_ptr</code>但不影响对象引用计数的指针</p>
+<p>在<strong>悬空时知晓</strong>，悬空（<em>dangle</em>）就是指针指向的对象不再存在。</p>
+</blockquote>
+</li>
+<li><p><code>std::weak_ptr</code>不能解引用，也不能测试是否为空值。</p>
+<blockquote>
+<p><code>std::weak_ptr</code>通常从<code>std::shared_ptr</code>上创建。</p>
+<p><code>std::weak_ptr</code>不会影响所指对象的引用计数</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> spw =                      <span class="hljs-comment">//spw创建之后，指向的Widget的</span>
+    std::<span class="hljs-built_in">make_shared</span>&lt;Widget&gt;(); <span class="hljs-comment">//引用计数（ref count，RC）为1。</span>
+                                <span class="hljs-comment">//std::make_shared的信息参见条款21</span>
+…
+<span class="hljs-function">std::weak_ptr&lt;Widget&gt; <span class="hljs-title">wpw</span><span class="hljs-params">(spw)</span></span>; <span class="hljs-comment">//wpw指向与spw所指相同的Widget。RC仍为1</span>
+…
+spw = <span class="hljs-literal">nullptr</span>;                  <span class="hljs-comment">//RC变为0，Widget被销毁。</span>
+                                <span class="hljs-comment">//wpw现在悬空</span>
+</code></pre>
+<p>其中，悬空的<code>std::weak_ptr</code>被称作已经<strong>expired</strong>（过期）</p>
+<p><code>if (wpw.expired()) …            //如果wpw没有指向对象…</code></p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stdweakptr过期问题"><a name="stdweakptr过期问题" class="anchor-navigation-ex-anchor" href="#stdweakptr过期问题"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::weak_ptr</code>过期问题</h3>
+<blockquote>
+<p>[!warning]</p>
+<p>通常你期望的是检查<code>std::weak_ptr</code>是否已经过期，如果没有过期则访问其指向的对象</p>
+<p>将<strong>检查和解引用分开会引入竞态条件</strong>：在调用<code>expired</code>和解引用操作之间，另一个线程可能对指向这对象的<code>std::shared_ptr</code>重新赋值或者析构，并由此造成对象已析构。</p>
+<p>解引用将会产生未定义行为</p>
+</blockquote>
+<ul>
+<li><p>一个原子操作检查<code>std::weak_ptr</code>是否已经过期，如果没有过期就访问所指对象</p>
+<blockquote>
+<p>[!tip]</p>
+<p>通过从<code>std::weak_ptr</code>创建<code>std::shared_ptr</code>来实现，</p>
+<p>具体用哪种取决于<code>std::weak_ptr</code>过期时你希望<strong><code>std::shared_ptr</code>表现</strong>出什么行为：</p>
+<ol>
+<li><p>一种形式是<strong><code>std::weak_ptr::lock</code></strong>，它返回一个<code>std::shared_ptr</code>，如果<code>std::weak_ptr</code>过期这个<strong><code>std::shared_ptr</code>为空</strong>：</p>
+<pre><code class="lang-cpp">std::shared_ptr&lt;Widget&gt; spw1 = wpw.<span class="hljs-built_in">lock</span>();  <span class="hljs-comment">//如果wpw过期，spw1就为空</span>
+
+<span class="hljs-keyword">auto</span> spw2 = wpw.<span class="hljs-built_in">lock</span>();                     <span class="hljs-comment">//同上，但是使用auto</span>
+</code></pre>
+</li>
+<li><p>另一种形式是以<code>std::weak_ptr</code>为实参构造<code>std::shared_ptr</code>。如果<code>std::weak_ptr</code>过期，会抛出一个异常：</p>
+<pre><code class="lang-cpp"><span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">spw3</span><span class="hljs-params">(wpw)</span></span>;          <span class="hljs-comment">//如果wpw过期，抛出std::bad_weak_ptr异常</span>
+</code></pre>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stdweakptr用例"><a name="stdweakptr用例" class="anchor-navigation-ex-anchor" href="#stdweakptr用例"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::weak_ptr</code>用例</h3>
+<ul>
+<li>考虑一个工厂函数，它基于一个唯一ID从只读对象上产出智能指针。根据<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item19.html" target="_blank">Item18</a>的描述，工厂函数会返回一个该对象类型的<code>std::unique_ptr</code>：</li>
+</ul>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function">std::unique_ptr&lt;<span class="hljs-type">const</span> Widget&gt; <span class="hljs-title">loadWidget</span><span class="hljs-params">(WidgetID id)</span></span>;
+</code></pre>
+<p>并且调用<code>loadWidget</code>是一个昂贵的操作（比如它操作文件或者数据库I/O）并且重复使用ID很常见</p>
+<ul>
+<li>合理的优化是再写一个函数除了完成<code>loadWidget</code>做的事情之外再缓存它的结果</li>
+<li>另一个合理的优化可以是当<code>Widget</code>不再使用的时候销毁它的缓存。</li>
+</ul>
+</blockquote>
+<ul>
+<li>对于可缓存的工厂函数，返回<code>std::unique_ptr</code>不是好的选择。</li>
+</ul>
+<blockquote>
+<p>缓存对象的指针需要知道它是否已经悬空，因为当工厂客户端使用完工厂产生的对象后，对象将被销毁，关联的缓存条目会悬空。</p>
+<p>所以缓存应该使用<code>std::weak_ptr</code>，这可以知道是否已经悬空。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//当对象的生命周期由std::shared_ptr管理时，std::weak_ptr才能检测到悬空。</span>
+<span class="hljs-function">std::shared_ptr&lt;<span class="hljs-type">const</span> Widget&gt; <span class="hljs-title">fastLoadWidget</span><span class="hljs-params">(WidgetID id)</span>
+</span>{
+    <span class="hljs-type">static</span> std::unordered_map&lt;WidgetID,
+                              std::weak_ptr&lt;<span class="hljs-type">const</span> Widget&gt;&gt; cache;
+                                        <span class="hljs-comment">//译者注：这里std::weak_ptr&lt;const Widget&gt;是高亮</span>
+    <span class="hljs-keyword">auto</span> objPtr = cache[id].<span class="hljs-built_in">lock</span>();     <span class="hljs-comment">//objPtr是去缓存对象的</span>
+                                        <span class="hljs-comment">//std::shared_ptr（或</span>
+                                        <span class="hljs-comment">//当对象不在缓存中时为null）</span>
+
+    <span class="hljs-keyword">if</span> (!objPtr) {                      <span class="hljs-comment">//如果不在缓存中</span>
+        objPtr = <span class="hljs-built_in">loadWidget</span>(id);        <span class="hljs-comment">//加载它</span>
+        cache[id] = objPtr;             <span class="hljs-comment">//缓存它</span>
+    }
+    <span class="hljs-keyword">return</span> objPtr;
+}
+</code></pre>
+<p><code>fastLoadWidget</code>的实现忽略了以下事实：<strong>缓存可能会累积过期的<code>std::weak_ptr</code></strong>，这些指针对应了不再使用的<code>Widget</code>（也已经被销毁了）</p>
+</blockquote>
+<ul>
+<li><p>让我们考虑第二个用例：观察者设计模式（Observer design pattern）</p>
+<blockquote>
+<p>此模式的主要组件是<strong>subjects（状态可能会更改的对象）</strong>和<strong>observers（状态发生更改时要通知的对象）</strong></p>
+<p>在大多数实现中，每个subject都包含一个数据成员，该成员持有<strong>指向其observers的指针</strong>。这使subjects很容易发布状态更改通知。</p>
+<p>一个合理的设计是每个subject持有一个<code>std::weak_ptr</code>s容器指向observers，因此可以在<strong>使用前检查</strong>是否已经悬空。</p>
+</blockquote>
+</li>
+<li><p>最后一个使用<code>std::weak_ptr</code>的例子</p>
+<blockquote>
+<p><code>A</code>和<code>C</code>共享<code>B</code>的所有权，因此持有<code>std::shared_ptr</code>：</p>
+<p>假定从B指向A的指针也很有用。应该使用哪种指针？</p>
+<p><img src="D:\Internt_of_Thing\e_book\C++\note\Effective-Modern-C++\assets\item20_fig2.png" alt="item20_fig2"></img></p>
+<p>有三种选择：</p>
+<ol>
+<li><strong>原始指针</strong>。如果<code>A</code>被销毁，但是<code>C</code>继续指向<code>B</code>，<code>B</code>就会有一个指向<code>A</code>的悬空指针。</li>
+<li><strong><code>std::shared_ptr</code></strong>。<code>A</code>和<code>B</code>都互相持有对方的<code>std::shared_ptr</code>，导致的<code>std::shared_ptr</code>环状结构（<code>A</code>指向<code>B</code>，<code>B</code>指向<code>A</code>）<strong>阻止<code>A</code>和<code>B</code>的销毁</strong>。当没有指针（C<code>不再指向</code>B）指向A和B的环形结构，每个的引用计数都还是1，无法降为0，<strong><code>A</code>和<code>B</code>都被泄漏</strong>：程序无法访问它们，但是资源并没有被回收。</li>
+<li><strong><code>std::weak_ptr</code></strong>。则避免了上述两个问题。并且破坏了A和B的环形结构。</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>需要注意使用<code>std::weak_ptr</code>打破<code>std::shared_ptr</code>循环并不常见</p>
+<p>在严格分层的数据结构比如树中，子节点只被父节点持有。当父节点被销毁时，子节点就被销毁。</p>
+<p>因此没有子节点解引用一个悬垂的父节点指针这样的风险。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>效率角度来看，<code>std::weak_ptr</code>与<code>std::shared_ptr</code>基本相同。</p>
+<blockquote>
+<p>大小是相同的，使用相同的控制块（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item19.html" target="_blank">Item19</a>），构造、析构、赋值操作涉及引用计数的原子操作。</p>
+<blockquote>
+<p>[!warning]</p>
+<p><code>std::weak_ptr</code>不参与对象的<strong>共享所有权</strong>，因此不影响<strong>指向对象的引用计数</strong>。实际上在控制块中还是有第二个引用计数，<code>std::weak_ptr</code>操作的是第二个引用计数。</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_2"><a name="总结_2" class="anchor-navigation-ex-anchor" href="#总结_2"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>用<code>std::weak_ptr</code><strong>替代可能会悬空的<code>std::shared_ptr</code></strong>。</li>
+<li><code>std::weak_ptr</code>的潜在使用场景包括：<strong>缓存、观察者列表、打破<code>std::shared_ptr</code>环状结构</strong>。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-21-prefer-stdmakeunique-and-stdmakeshared-to-direct-use-of-new"><a name="item-21-prefer-stdmakeunique-and-stdmakeshared-to-direct-use-of-new" class="anchor-navigation-ex-anchor" href="#item-21-prefer-stdmakeunique-and-stdmakeshared-to-direct-use-of-new"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 21: Prefer <code>std::make_unique</code> and <code>std::make_shared</code> to direct use of <code>new</code></strong></h2>
+<h3 id="stdmakeunique-ans-stdmakeshared"><a name="stdmakeunique-ans-stdmakeshared" class="anchor-navigation-ex-anchor" href="#stdmakeunique-ans-stdmakeshared"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::make_unique ans std::make_shared</code></h3>
+<ul>
+<li><p><code>std::make_unique</code>从C++14开始加入标准库。</p>
+<blockquote>
+<p>使用C++11，自己写一个基础版本的<code>std::make_unique</code>如下：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T, <span class="hljs-keyword">typename</span>... Ts&gt;
+std::unique_ptr&lt;T&gt; <span class="hljs-title">make_unique</span><span class="hljs-params">(Ts&amp;&amp;... params)</span>
+</span>{
+    <span class="hljs-keyword">return</span> std::<span class="hljs-built_in">unique_ptr</span>&lt;T&gt;(<span class="hljs-keyword">new</span> <span class="hljs-built_in">T</span>(std::forward&lt;Ts&gt;(params)...));
+}
+</code></pre>
+<p><code>make_unique</code>只是将它的参数完美转发到所要创建的对象的构造函数</p>
+<p>这种形式的函数不支持数组和自定义析构（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item18.html" target="_blank">Item18</a>）</p>
+</blockquote>
+</li>
+<li><p>三个<strong>make函数</strong></p>
+<blockquote>
+<ul>
+<li><code>std::make_unique</code>和<code>std::make_shared</code>：接收<strong>任意的多参数集合</strong>，<strong>完美转发</strong>到构造函数去动态分配一个对象，然后返回这个指向这个对象的指针。</li>
+<li><code>std::allocate_shared</code>。它行为和<code>std::make_shared</code>一样，只不过第一个参数是用来<strong>动态分配内存的<em>allocator</em>对象</strong>。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>用和不用<code>make</code>函数来创建智能指针的一个小小比较</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">upw1</span><span class="hljs-params">(std::make_unique&lt;Widget&gt;())</span></span>;      <span class="hljs-comment">//使用make函数</span>
+<span class="hljs-function">std::unique_ptr&lt;Widget&gt; <span class="hljs-title">upw2</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget)</span></span>;   <span class="hljs-comment">//不使用make函数</span>
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">spw1</span><span class="hljs-params">(std::make_shared&lt;Widget&gt;())</span></span>;      <span class="hljs-comment">//使用make函数</span>
+<span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">spw2</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget)</span></span>;   <span class="hljs-comment">//不使用make函数</span>
+</code></pre>
+<ol>
+<li>用<code>new</code>的声明语句需要写2遍<code>Widget</code>，<code>make</code>函数只需要写一次，<strong>源代码中的重复增加了编译的时间</strong>，会导致目标代码冗余，并且通常会让代码库使用更加困难。</li>
+</ol>
+</blockquote>
+</li>
+<li><p>第二个使用<code>make</code>函数的原因和异常安全有关</p>
+<blockquote>
+<p>有个函数按照某种优先级处理<code>Widget</code></p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">processWidget</span><span class="hljs-params">(std::shared_ptr&lt;Widget&gt; spw, <span class="hljs-type">int</span> priority)</span></span>;
+
+<span class="hljs-comment">//计算相关的优先级</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">computePriority</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-built_in">processWidget</span>(std::<span class="hljs-built_in">shared_ptr</span>&lt;Widget&gt;(<span class="hljs-keyword">new</span> Widget),  <span class="hljs-comment">//潜在的资源泄漏！</span>
+              <span class="hljs-built_in">computePriority</span>());
+</code></pre>
+<p>代码可能在<code>new</code>一个<code>Widget</code>时发生泄漏。为何？</p>
+<blockquote>
+<p>[!tip]</p>
+<p>答案和编译器将源码转换为目标代码有关。</p>
+<p>一个函数的实参必须先被计算，这个函数再被调用</p>
+<p>调用<code>processWidget</code>之前:</p>
+<ol>
+<li>表达式“<code>new Widget</code>”必须计算，例如，一个<code>Widget</code>对象必须在堆上被创建</li>
+<li>负责管理<code>new</code>出来指针的<code>std::shared_ptr&lt;Widget&gt;</code>构造函数必须被执行</li>
+<li><code>computePriority</code>必须运行</li>
+</ol>
+<p>编译器不需要按照执行顺序生成代码。</p>
+</blockquote>
+<p><code>std::make_shared</code>可以防止这种问题</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">processWidget</span>(std::<span class="hljs-built_in">make_shared</span>&lt;Widget&gt;(),   <span class="hljs-comment">//没有潜在的资源泄漏</span>
+              <span class="hljs-built_in">computePriority</span>());
+</code></pre>
+</blockquote>
+</li>
+<li><p><code>std::make_shared</code>的一个特性（与直接使用<code>new</code>相比）是<strong>效率提升</strong>。</p>
+<blockquote>
+<p>使用<code>std::make_shared</code>允许编译器生成更小，更快的代码，并使用更简洁的数据结构。</p>
+<p>对new的直接使用:<code>std::shared_ptr&lt;Widget&gt; spw(new Widget);</code>进行内存分配两次</p>
+<p><code>new</code>需要为<code>Widget</code>进行一次内存分配</p>
+<p>控制块的内存在<code>std::shared_ptr</code>构造函数中分配</p>
+<ul>
+<li><code>std::make_shared</code>分配一块内存，<strong>同时容纳</strong>了<code>Widget</code>对象和控制块。</li>
+<li>使用<code>std::make_shared</code>避免了对控制块中的某些簿记信息的需要，潜在地减少了程序的总内存占用。</li>
+</ul>
+<p>效率分析同样适用于<code>std::allocate_shared</code></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="make函数缺点"><a name="make函数缺点" class="anchor-navigation-ex-anchor" href="#make函数缺点"><i class="fa fa-link" aria-hidden="true"></i></a><code>make</code>函数缺点</h3>
+<ul>
+<li><p><code>make</code>函数都不允许指定自定义删除器，但是<code>std::unique_ptr</code>和<code>std::shared_ptr</code>的构造函数可以接收一个删除器参数</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> widgetDeleter = [](Widget* pw) { … };
+
+<span class="hljs-comment">//只能直接使用new</span>
+<span class="hljs-function">std::unique_ptr&lt;Widget, <span class="hljs-title">decltype</span><span class="hljs-params">(widgetDeleter)</span>&gt;
+    <span class="hljs-title">upw</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget, widgetDeleter)</span></span>;
+
+<span class="hljs-function">std::shared_ptr&lt;Widget&gt; <span class="hljs-title">spw</span><span class="hljs-params">(<span class="hljs-keyword">new</span> Widget, widgetDeleter)</span></span>;
+</code></pre>
+</blockquote>
+</li>
+<li><p><code>make</code>函数第二个限制来自于其实现中的语法细节。</p>
+<blockquote>
+<p><code>make</code>函数会将它们的参数完美转发给对象构造函数使用小括号</p>
+<p>花括号初始化无法完美转发。但是，<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html" target="_blank">Item30</a>介绍了一个变通的方法：使用<code>auto</code>类型推导从花括号初始化创建<code>std::initializer_list</code>对象</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//创建std::initializer_list</span>
+<span class="hljs-keyword">auto</span> initList = { <span class="hljs-number">10</span>, <span class="hljs-number">20</span> };
+<span class="hljs-comment">//使用std::initializer_list为形参的构造函数创建std::vector</span>
+<span class="hljs-keyword">auto</span> spv = std::make_shared&lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt;(initList);
+</code></pre>
+</blockquote>
+</li>
+<li><p>对于<code>std::unique_ptr</code>，只有这两种情景（<strong>自定义删除器和花括号初始化</strong>）使用<code>make</code>函数有点问题。</p>
+</li>
+</ul>
+<h3 id="边缘情况"><a name="边缘情况" class="anchor-navigation-ex-anchor" href="#边缘情况"><i class="fa fa-link" aria-hidden="true"></i></a>边缘情况</h3>
+<ol>
+<li><p>使用<code>make</code>函数去创建重载了<code>operator new</code>和<code>operator delete</code>类的对象</p>
+<blockquote>
+<p><code>std::allocate_shared</code>需要的内存总大小不等于动态分配的对象大小，还需要<strong>再加上</strong>控制块大小</p>
+<p>而一些类重载了<code>operator new</code>和<code>operator delete</code>。这些函数的存在意味着对这些类型的对象的全局内存分配和释放是不合常规的。设计这种定制操作往往只会<strong>精确的分配、释放对象大小的内存</strong>。</p>
+</blockquote>
+</li>
+<li><p>如果对象类型非常大，而且销毁最后一个<code>std::shared_ptr</code>和销毁最后一个<code>std::weak_ptr</code>之间的时间很长，那么在销毁对象和释放它所占用的内存之间可能会出现延迟。</p>
+<blockquote>
+<p>只要<code>std::weak_ptr</code>s引用一个控制块（即<em>weak count</em>大于零），该控制块必须继续存在。只要控制块存在，包含它的内存就必须保持分配。</p>
+</blockquote>
+</li>
+<li><p>确保在直接使用<code>new</code>时，在<strong>一个不做其他事情的语句中</strong>，立即将结果传递到智能指针构造函数。</p>
+</li>
+</ol>
+<hr></hr>
+<h3 id="总结_3"><a name="总结_3" class="anchor-navigation-ex-anchor" href="#总结_3"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>和直接使用<code>new</code>相比，<code>make</code>函数消除了代码重复，提高了异常安全性。对于<code>std::make_shared</code>和<code>std::allocate_shared</code>，生成的代码更小更快。</li>
+<li>不适合使用<code>make</code>函数的情况包括需要指定自定义删除器和希望用花括号初始化。</li>
+<li>对于<code>std::shared_ptr</code>s，其他不建议使用<code>make</code>函数的情况包括(1)有自定义内存管理的类；(2)特别关注内存的系统，非常大的对象，以及<code>std::weak_ptr</code>s比对应的<code>std::shared_ptr</code>s活得更久。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-22-when-using-the-pimpl-idiom-define-special-member-functions-in-the-implementation-file"><a name="item-22-when-using-the-pimpl-idiom-define-special-member-functions-in-the-implementation-file" class="anchor-navigation-ex-anchor" href="#item-22-when-using-the-pimpl-idiom-define-special-member-functions-in-the-implementation-file"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 22: When using the Pimpl Idiom, define special member functions in the implementation file</strong></h2>
+<h3 id="pimpl（pointer-to-implementation）惯用法"><a name="pimpl（pointer-to-implementation）惯用法" class="anchor-navigation-ex-anchor" href="#pimpl（pointer-to-implementation）惯用法"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Pimpl</strong>（<em>pointer to implementation</em>）<strong>惯用法</strong></h3>
+<ul>
+<li><p><strong>Pimpl</strong>（<em>pointer to implementation</em>）<strong>惯用法</strong>是一种技巧</p>
+<blockquote>
+<p>将类数据成员替换成一个<strong>指向包含具体实现的类</strong>（或结构体）的指针</p>
+<p>并将放在主类（primary class）的数据成员们移动到<strong>实现类</strong>（implementation class）去</p>
+<p>这些数据成员的访问将通过指针间接访问</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">class</span> <span class="hljs-title">Widget</span><span class="hljs-params">()</span> </span>{                    <span class="hljs-comment">//定义在头文件“widget.h”</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>();
+    …
+<span class="hljs-keyword">private</span>:
+    std::string name;
+    std::vector&lt;<span class="hljs-type">double</span>&gt; data;
+    Gadget g1, g2, g3;              <span class="hljs-comment">//Gadget是用户自定义的类型</span>
+};
+</code></pre>
+<p><code>gadget.h</code>可能会经常修订</p>
+</blockquote>
+</li>
+<li><p>在C++98中使用Pimpl惯用法，可以把<code>Widget</code>的数据成员<strong>替换成一个原始指针</strong>，指向一个已经被声明过却还未被定义的结构体</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span>                        <span class="hljs-comment">//仍然在“widget.h”中</span>
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>();
+    ~<span class="hljs-built_in">Widget</span>();                      <span class="hljs-comment">//析构函数在后面会分析</span>
+    …
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Impl</span>;                    <span class="hljs-comment">//声明一个 实现结构体</span>
+    Impl *pImpl;                    <span class="hljs-comment">//以及指向它的指针</span>
+};
+</code></pre>
+<p><code>Widget</code>的使用者不再需要为了这些类型而引入头文件</p>
+<p>可以加速编译，并且如果这些头文件中有所变动，<code>Widget</code>的使用者不会受到影响</p>
+<p>(感觉类似于接口类)</p>
+<p>一个已经被声明，却还未被实现的类型，被称为<strong>不完整类型</strong>（<em>incomplete type</em>）,<code>Widget::Impl</code>就是这种类型。 </p>
+</blockquote>
+</li>
+<li><p>Pimpl惯用法</p>
+<blockquote>
+<ol>
+<li>第一步，是<strong>声明一个数据成员，它是个指针</strong>，指向一个不完整类型。</li>
+<li>第二步是<strong>动态分配和回收一个对象</strong>，该对象包含那些以前在原来的类中的数据成员</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"widget.h"</span>             <span class="hljs-comment">//以下代码均在实现文件“widget.cpp”里</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"gadget.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Widget</span>::Impl {           <span class="hljs-comment">//含有之前在Widget中的数据成员的</span>
+    std::string name;           <span class="hljs-comment">//Widget::Impl类型的定义</span>
+    std::vector&lt;<span class="hljs-type">double</span>&gt; data;
+    Gadget g1,g2,g3;
+};
+
+Widget::<span class="hljs-built_in">Widget</span>()                <span class="hljs-comment">//为此Widget对象分配数据成员</span>
+: <span class="hljs-built_in">pImpl</span>(<span class="hljs-keyword">new</span> Impl)
+{}
+
+Widget::~<span class="hljs-built_in">Widget</span>()               <span class="hljs-comment">//销毁数据成员</span>
+{ <span class="hljs-keyword">delete</span> pImpl; }
+</code></pre>
+</blockquote>
+</li>
+<li><p><code>std::unique_ptr</code>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item18.html" target="_blank">Item18</a>）是最合适的工具。在头文件中用<code>std::unique_ptr</code>替代原始指针</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {                      <span class="hljs-comment">//在“widget.h”中</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>();
+    …
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Impl</span>;
+    std::unique_ptr&lt;Impl&gt; pImpl;    <span class="hljs-comment">//使用智能指针而不是原始指针</span>
+};
+
+<span class="hljs-comment">//实现文件</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"widget.h"</span>                 <span class="hljs-comment">//在“widget.cpp”中</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"gadget.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Widget</span>::Impl {               <span class="hljs-comment">//跟之前一样</span>
+    std::string name;
+    std::vector&lt;<span class="hljs-type">double</span>&gt; data;
+    Gadget g1,g2,g3;
+};
+
+Widget::<span class="hljs-built_in">Widget</span>()                    <span class="hljs-comment">//根据条款21，通过std::make_unique</span>
+: <span class="hljs-built_in">pImpl</span>(std::<span class="hljs-built_in">make_unique</span>&lt;Impl&gt;())   <span class="hljs-comment">//来创建std::unique_ptr</span>
+{}
+</code></pre>
+<p>但是，最普通的<code>Widget</code>用法却会导致编译出错：</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"widget.h"</span></span>
+
+Widget w;                           <span class="hljs-comment">//错误！</span>
+</code></pre>
+<p>在使用<code>delete</code>之前，通常会使默认删除器使用C++11的特性<strong><code>static_assert</code></strong>来确保原始指针指向的类型不是一个不完整类型。</p>
+<p>当编译器为<code>Widget w</code>的析构生成代码时，它会遇到<code>static_assert</code>检查并且失败，这通常是错误信息的来源(只在对象<code>w</code>销毁的地方出现)。</p>
+</blockquote>
+</li>
+<li><p>为了解决这个问题，你只需要确保在编译器生成销毁<code>std::unique_ptr&lt;Widget::Impl&gt;</code>的代码之前， <code>Widget::Impl</code>已经是一个<strong>完整类型</strong>（<em>complete type</em>）</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-comment">//widget.h</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {                  <span class="hljs-comment">//跟之前一样，在“widget.h”中</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>();
+    ~<span class="hljs-built_in">Widget</span>(); <span class="hljs-comment">//只声明类Widget的析构函数，但不要在这里定义它</span>
+    …
+
+<span class="hljs-keyword">private</span>:                        <span class="hljs-comment">//跟之前一样</span>
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Impl</span>;
+    std::unique_ptr&lt;Impl&gt; pImpl;
+};
+
+<span class="hljs-comment">//widget.cpp</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"widget.h"</span>                 <span class="hljs-comment">//跟之前一样，在“widget.cpp”中</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"gadget.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Widget</span>::Impl {               <span class="hljs-comment">//跟之前一样，定义Widget::Impl</span>
+    std::string name;
+    std::vector&lt;<span class="hljs-type">double</span>&gt; data;
+    Gadget g1,g2,g3;
+}
+
+Widget::<span class="hljs-built_in">Widget</span>()                    <span class="hljs-comment">//跟之前一样</span>
+: <span class="hljs-built_in">pImpl</span>(std::<span class="hljs-built_in">make_unique</span>&lt;Impl&gt;())
+{}
+<span class="hljs-comment">//在结构体Widget::Impl被定义之后，再定义析构函数</span>
+Widget::~<span class="hljs-built_in">Widget</span>()                   
+{}
+</code></pre>
+</blockquote>
+</li>
+<li><p>Pimpl惯用法的类自然适合支持移动操作，声明一个类<code>Widget</code>的析构函数会阻止编译器生成移动操作</p>
+<blockquote>
+<p>自己声明相关函数，把移动操作的定义移动到实现文件里</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {                          <span class="hljs-comment">//仍然在“widget.h”中</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>();
+    ~<span class="hljs-built_in">Widget</span>();
+
+    <span class="hljs-built_in">Widget</span>(Widget&amp;&amp; rhs);               <span class="hljs-comment">//只有声明</span>
+    Widget&amp; <span class="hljs-keyword">operator</span>=(Widget&amp;&amp; rhs);
+    …
+
+<span class="hljs-keyword">private</span>:                                <span class="hljs-comment">//跟之前一样</span>
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Impl</span>;
+    std::unique_ptr&lt;Impl&gt; pImpl;
+};
+
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span>                   <span class="hljs-comment">//跟之前一样，仍然在“widget.cpp”中</span></span>
+…
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Widget</span>::Impl { … };          <span class="hljs-comment">//跟之前一样</span>
+
+Widget::<span class="hljs-built_in">Widget</span>()                    <span class="hljs-comment">//跟之前一样</span>
+: <span class="hljs-built_in">pImpl</span>(std::<span class="hljs-built_in">make_unique</span>&lt;Impl&gt;())
+{}
+
+Widget::~<span class="hljs-built_in">Widget</span>() = <span class="hljs-keyword">default</span>;        <span class="hljs-comment">//跟之前一样</span>
+
+Widget::<span class="hljs-built_in">Widget</span>(Widget&amp;&amp; rhs) = <span class="hljs-keyword">default</span>;             <span class="hljs-comment">//这里定义</span>
+Widget&amp; Widget::<span class="hljs-keyword">operator</span>=(Widget&amp;&amp; rhs) = <span class="hljs-keyword">default</span>;
+</code></pre>
+</blockquote>
+</li>
+<li><p>Pimpl惯用法是用来减少<strong>类的实现和类使用者</strong>之间的编译依赖的一种方法</p>
+</li>
+<li><p>允许<strong>复制操作</strong>，所以类<code>Widget</code>支持复制操作也很合理。 我们必须要自己来写这些函数</p>
+<blockquote>
+<p>在头文件里声明函数，而在实现文件里去实现他们</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {                          <span class="hljs-comment">//仍然在“widget.h”中</span>
+<span class="hljs-keyword">public</span>:
+    …
+
+    <span class="hljs-built_in">Widget</span>(<span class="hljs-type">const</span> Widget&amp; rhs);          <span class="hljs-comment">//只有声明</span>
+    Widget&amp; <span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> Widget&amp; rhs);
+
+<span class="hljs-keyword">private</span>:                                <span class="hljs-comment">//跟之前一样</span>
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Impl</span>;
+    std::unique_ptr&lt;Impl&gt; pImpl;
+};
+
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span>                   <span class="hljs-comment">//跟之前一样，仍然在“widget.cpp”中</span></span>
+…
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Widget</span>::Impl { … };          <span class="hljs-comment">//跟之前一样</span>
+
+Widget::~<span class="hljs-built_in">Widget</span>() = <span class="hljs-keyword">default</span>;        <span class="hljs-comment">//其他函数，跟之前一样</span>
+
+Widget::<span class="hljs-built_in">Widget</span>(<span class="hljs-type">const</span> Widget&amp; rhs)   <span class="hljs-comment">//拷贝构造函数</span>
+: <span class="hljs-built_in">pImpl</span>(std::<span class="hljs-built_in">make_unique</span>&lt;Impl&gt;(*rhs.pImpl))
+{}
+
+Widget&amp; Widget::<span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> Widget&amp; rhs)    <span class="hljs-comment">//拷贝operator=</span>
+{
+    *pImpl = *rhs.pImpl;
+    <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;
+}
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="换成stdsharedptr"><a name="换成stdsharedptr" class="anchor-navigation-ex-anchor" href="#换成stdsharedptr"><i class="fa fa-link" aria-hidden="true"></i></a>换成<code>std::shared_ptr</code></h3>
+<blockquote>
+<p>如果我们使用<code>std::shared_ptr</code>而不是<code>std::unique_ptr</code>来做<code>pImpl</code>指针， 我们会发现本条款的建议不再适用。<strong>不需要在类<code>Widget</code>里声明析构函数</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {                      <span class="hljs-comment">//在“widget.h”中</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>();
+    …                               <span class="hljs-comment">//没有析构函数和移动操作的声明</span>
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Impl</span>;
+    std::shared_ptr&lt;Impl&gt; pImpl;    <span class="hljs-comment">//用std::shared_ptr</span>
+};                                  <span class="hljs-comment">//而不是std::unique_ptr</span>
+</code></pre>
+</blockquote>
+<ul>
+<li><p><code>std::unique_ptr</code>和<code>std::shared_ptr</code>在<code>pImpl</code>指针上的表现上的区别的深层原因在于，他们<strong>支持自定义删除器的方式不同</strong>。</p>
+<blockquote>
+<ul>
+<li>对<code>std::unique_ptr</code>而言，<strong>删除器的类型是这个智能指针的一部分</strong><ul>
+<li>让编译器有可能生成更小的运行时数据结构和更快的运行代码</li>
+<li><code>std::unique_ptr</code>指向的类型，在编译器的生成特殊成员函数（如析构函数，移动操作）被调用时，必须已经是一个完整类型</li>
+</ul>
+</li>
+<li>对<code>std::shared_ptr</code>而言，删除器的类型不是该智能指针的一部分<ul>
+<li>会生成更大的运行时数据结构和稍微慢点的代码</li>
+<li>当编译器生成的特殊成员函数被使用的时候，指向的对象不必是一个完整类型。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_4"><a name="总结_4" class="anchor-navigation-ex-anchor" href="#总结_4"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>Pimpl惯用法通过减少在类实现和类使用者之间的编译依赖来减少编译时间。</li>
+<li>对于<code>std::unique_ptr</code>类型的<code>pImpl</code>指针，需要在头文件的类里声明特殊的成员函数，但是在实现文件里面来实现他们。即使是编译器自动生成的代码可以工作，也要这么做。</li>
+<li>以上的建议只适用于<code>std::unique_ptr</code>，不适用于<code>std::shared_ptr</code>。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - CHAPTER_4_Smart_Pointers</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CHAPTER_3_Moving_to_Modern_C++.html" class="navigation navigation-prev " aria-label="Previous page: CHAPTER_3_Moving_to_Modern_C++">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html" class="navigation navigation-next " aria-label="Next page: CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CHAPTER_4_Smart_Pointers","level":"1.4.2.4","depth":3,"next":{"title":"CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding","level":"1.4.2.5","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","articles":[]},"previous":{"title":"CHAPTER_3_Moving_to_Modern_C++","level":"1.4.2.3","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.md","mtime":"2025-09-07T09:41:17.120Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

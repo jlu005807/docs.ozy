@@ -1,0 +1,1935 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>07_虚拟存储器管理 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08_文件与文件系统.html" />
+    
+    
+    <link rel="prev" href="06_主存管理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="01_概论.html">
+            
+                <a href="01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="02_进程管理.html">
+            
+                <a href="02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="03_中断和处理器调度.html">
+            
+                <a href="03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="04_互斥同步与通讯.html">
+            
+                <a href="04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="05_死锁与饥饿.html">
+            
+                <a href="05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="06_主存管理.html">
+            
+                <a href="06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.7" data-path="07_虚拟存储器管理.html">
+            
+                <a href="07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="08_文件与文件系统.html">
+            
+                <a href="08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="09_设备与IO管理.html">
+            
+                <a href="09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="review.html">
+            
+                <a href="review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >07_虚拟存储器管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#虚拟存储管理"><b></b>虚拟存储管理</a></li><ul><li><span class="title-icon "></span><a href="#外存空间管理"><b></b>外存空间管理</a></li><ul><li><span class="title-icon "></span><a href="#进程与外存对应关系"><b></b>进程与外存对应关系</a></li></ul><li><span class="title-icon "></span><a href="#虚拟存储系统"><b></b>虚拟存储系统</a></li><ul><li><span class="title-icon "></span><a href="#虚拟页式存储系统"><b></b>虚拟页式存储系统</a></li><li><span class="title-icon "></span><a href="#虚拟段式存储系统"><b></b>虚拟段式存储系统</a></li><li><span class="title-icon "></span><a href="#虚拟段页式存储系统"><b></b>虚拟段页式存储系统</a></li><li><span class="title-icon "></span><a href="#中断处理"><b></b>中断处理</a></li></ul></ul></ul></div><a href="#虚拟存储管理" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#虚拟存储管理">虚拟存储管理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#外存空间管理">外存空间管理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#进程与外存对应关系">进程与外存对应关系</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#虚拟存储系统">虚拟存储系统</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#虚拟页式存储系统">虚拟页式存储系统</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基本原理">基本原理</a><i></i></div></li>
+<li><div><a href="#内存页框分配策略静态策略">内存页框分配策略(静态策略)</a><i></i></div></li>
+<li><div><a href="#外存块的分配策略">外存块的分配策略</a><i></i></div></li>
+<li><div><a href="#页面调入时机">页面调入时机</a><i></i></div></li>
+<li><div><a href="#置换算法（淘汰算法">置换算法（淘汰算法</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#最佳淘汰算法">最佳淘汰算法</a><i></i></div></li>
+<li><div><a href="#先进先出fifo">先进先出(FIFO)</a><i></i></div></li>
+<li><div><a href="#最近最少使用算法lru">最近最少使用算法(LRU)</a><i></i></div></li>
+<li><div><a href="#最近不用的先淘汰not-used-recentlynur">最近不用的先淘汰(not used recently,NUR)</a><i></i></div></li>
+<li><div><a href="#最不经常使用的先淘汰lfu">最不经常使用的先淘汰(LFU)</a><i></i></div></li>
+<li><div><a href="#最频繁使用算法mfu">最频繁使用算法(MFU)</a><i></i></div></li>
+<li><div><a href="#二次机会">二次机会</a><i></i></div></li>
+<li><div><a href="#时钟算法">时钟算法</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#颠簸">颠簸</a><i></i></div></li>
+<li><div><a href="#工作集模型">工作集模型</a><i></i></div></li>
+<li><div><a href="#页故障率反馈模型">页故障率反馈模型</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#虚拟段式存储系统">虚拟段式存储系统</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#段的动态连接">段的动态连接</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#虚拟段页式存储系统">虚拟段页式存储系统</a><i></i></div></li>
+<li><div><a href="#中断处理">中断处理</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="虚拟存储管理"><a name="虚拟存储管理" class="anchor-navigation-ex-anchor" href="#虚拟存储管理"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟存储管理</h1>
+<h2 id="外存空间管理"><a name="外存空间管理" class="anchor-navigation-ex-anchor" href="#外存空间管理"><i class="fa fa-link" aria-hidden="true"></i></a>外存空间管理</h2>
+<ul>
+<li><strong>外存空间</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Swap空间</th>
+<th>输入井</th>
+<th>输出井</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>外存空间划分</strong></p>
+<blockquote>
+<ul>
+<li>静态等长，2^i, 为一块(block)，<strong>块是外存分配的基本单位，也是IO传输的基本单位</strong></li>
+<li>如果需求不足一个完整块，会形成块内<strong>“零头”</strong></li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>外存空间分配</strong>：三个方法</p>
+<blockquote>
+<p>空闲块链(慢)：所有空闲块连成一个链</p>
+<p>空闲块表：相连的空闲块记录在同一项中</p>
+<p>字位映像图：用1位表示一个块的状态</p>
+</blockquote>
+</li>
+<li><p>界地址</p>
+</li>
+</ul>
+<blockquote>
+<p>每进程占一组外存连续块</p>
+<p>每进程占二组外存连续块(双对界)</p>
+</blockquote>
+<h3 id="进程与外存对应关系"><a name="进程与外存对应关系" class="anchor-navigation-ex-anchor" href="#进程与外存对应关系"><i class="fa fa-link" aria-hidden="true"></i></a>进程与外存对应关系</h3>
+<ul>
+<li>页式：内存一页，外存一块。内存页与外存块长度相同</li>
+<li>段式：每段占外存若干连续块，进程的多个段之间在外存可以不连续</li>
+<li>段页式：内存一页，外存一块。内存页与外存块长度相同。段内多页所对应的外存块可以不连续，一个进程的多段可以分散在外存的不同区域中</li>
+</ul>
+<hr></hr>
+<h2 id="虚拟存储系统"><a name="虚拟存储系统" class="anchor-navigation-ex-anchor" href="#虚拟存储系统"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟存储系统</h2>
+<blockquote>
+<p>[!important]</p>
+<ul>
+<li>无虚拟的问题<ul>
+<li>不能运行比内存大的程序</li>
+<li>浪费空间，因为进程活动有局部性<ul>
+<li>进程在一个有限的时间段内访问的代码和数据往往集中在有限的地址范围内</li>
+<li>把程序一部分装入内存在较大概率上也足够让其运行一小段时间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>虚拟存储：只将当前<strong>必要的很小一部分代码和数据装入内存</strong>，其余装入外存，运行时访问在外存部分动态调入，内存不够淘汰</li>
+</ul>
+</blockquote>
+<p><strong>虚拟内存的最大容量是由计算机的地址结构（ CPU寻址范围）确定的</strong></p>
+<p>虚拟内存的实际容量= min(内存和外存容量之和，CPU寻址范围)</p>
+<ul>
+<li>虚拟存储目标：大程序小内存，多程序小内存，多程序并发地址不冲突，高效内存</li>
+<li>虚拟存储管理：虚拟页式，虚拟段式，虚拟段页式</li>
+</ul>
+<h3 id="虚拟页式存储系统"><a name="虚拟页式存储系统" class="anchor-navigation-ex-anchor" href="#虚拟页式存储系统"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟页式存储系统</h3>
+<h4 id="基本原理"><a name="基本原理" class="anchor-navigation-ex-anchor" href="#基本原理"><i class="fa fa-link" aria-hidden="true"></i></a>基本原理</h4>
+<ul>
+<li><p>进程运行前：部分页面装入内存，其他（全部）装入外存</p>
+</li>
+<li><p>运行时：</p>
+<blockquote>
+<p>类似于Cache</p>
+<ul>
+<li>命中则访问</li>
+<li>不命中则发生缺页中断，中断处理<ul>
+<li>找到页面外存地址</li>
+<li>找到内存空闲页面（内存已满则按淘汰算法处理并淘汰原有页面）</li>
+<li>读入并修改页表和快表（中断返回，进程切换）</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="assets/image-20250421112501867.png" alt="image-20250421112501867"></img></p>
+<ul>
+<li>缺页中断：在地址映射过程中，当需要访问的页不在内存时</li>
+<li>缺页中断处理程序：将所缺的页从外存调度内存的某个页框中，更新页表和快表</li>
+</ul>
+<p>为了保持各个数据块的数据一致性，需要对页表和快表增加修改标志表明该页面是否被修改</p>
+<hr></hr>
+<h4 id="内存页框分配策略静态策略"><a name="内存页框分配策略静态策略" class="anchor-navigation-ex-anchor" href="#内存页框分配策略静态策略"><i class="fa fa-link" aria-hidden="true"></i></a>内存页框分配策略(静态策略)</h4>
+<ol>
+<li><p>平均分配：将内存中的所有物理页框<strong>等分</strong>给进入系统中的进程。如内存128页，进程25个，每个进程5个页框</p>
+</li>
+<li><p>按进程长度比例分配：按程序长度的比例确定分配内存的物理页框数。</p>
+<blockquote>
+<p>pi共si个页面；<code>S=SUM(si)</code>；内存共m个页框</p>
+<p>分配给进程pi的物理页框数<code>ai=(si/S)*m</code></p>
+</blockquote>
+</li>
+<li><p>优先级分配：根据优先级别按比例分配内存物理页面</p>
+<blockquote>
+<p>ri表示进程pi的优先级。</p>
+<p><code>S=SUM(ri)</code>；内存共m个页框</p>
+<p>分配给进程pi的物理页框数<code>ai=(ri/S)*m</code></p>
+</blockquote>
+</li>
+<li><p>进程长度结合优先级</p>
+<blockquote>
+<p>进程pi逻辑页面数与优先级之和为<code>si+ri</code></p>
+<p><code>S=SUM(ri+si)</code>；内存共m个页框</p>
+<p>分配给进程pi的物理页框数<code>ai=((si+ri)/S)*m</code></p>
+</blockquote>
+</li>
+</ol>
+<p>静态策略无法反映程序的结构，以及程序不同时刻的行为特性</p>
+<hr></hr>
+<h4 id="外存块的分配策略"><a name="外存块的分配策略" class="anchor-navigation-ex-anchor" href="#外存块的分配策略"><i class="fa fa-link" aria-hidden="true"></i></a>外存块的分配策略</h4>
+<ol>
+<li>静态分配：<strong>外存保持进程的全部页面</strong></li>
+<li>动态分配：<strong>外存仅保持进程不在内存的页面</strong>，当某一外存页面被调入内存，将释放所占用的外存页面</li>
+</ol>
+<h4 id="页面调入时机"><a name="页面调入时机" class="anchor-navigation-ex-anchor" href="#页面调入时机"><i class="fa fa-link" aria-hidden="true"></i></a>页面调入时机</h4>
+<ol>
+<li>请调：发生<strong>缺页中断时调入</strong>，但是调入时进程堵塞</li>
+<li>预调：<strong>将要访问时调入</strong>(根据程序顺序行为，不一定准)。预调可以节省因页故障而等待的时间。预调必须辅以请调（当预先调入依旧缺页中断</li>
+</ol>
+<h4 id="置换算法（淘汰算法"><a name="置换算法（淘汰算法" class="anchor-navigation-ex-anchor" href="#置换算法（淘汰算法"><i class="fa fa-link" aria-hidden="true"></i></a>置换算法（淘汰算法</h4>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>用于确定页面的调出原则</li>
+<li>被移出页面称为淘汰页面</li>
+<li>用于选择被淘汰页面的算法称为置换算法</li>
+</ul>
+<p>页淘汰，段淘汰，快表淘汰</p>
+</blockquote>
+<ul>
+<li>置换方法：局部，全局</li>
+</ul>
+<h5 id="最佳淘汰算法"><a name="最佳淘汰算法" class="anchor-navigation-ex-anchor" href="#最佳淘汰算法"><i class="fa fa-link" aria-hidden="true"></i></a>最佳淘汰算法</h5>
+<ul>
+<li>淘汰以后不再需要的或者在最长时间以后才会用到的页面。</li>
+<li>页故障率最低，为最理性的淘汰算法。然而，不能实现，因为<strong>无法准确预期页面</strong>“将来”的被访问情况。</li>
+<li>可以作为衡量其它算法性能的一个标准。</li>
+</ul>
+<h5 id="先进先出fifo"><a name="先进先出fifo" class="anchor-navigation-ex-anchor" href="#先进先出fifo"><i class="fa fa-link" aria-hidden="true"></i></a>先进先出(FIFO)</h5>
+<ul>
+<li>淘汰最先调入内存的页面，先进入的可能已经使用完毕。</li>
+<li>实现：采用队列的形式。</li>
+<li>最坏的情况：有些代码和数据可能整个程序运行中用到</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<ul>
+<li>对于先进先出的算法，会有一个现象：<strong>Belady</strong>异常</li>
+<li>增加进程所分得的内存页框数不一定能够保证缺页故障次数下降</li>
+<li>这个现象和程序的结构有关</li>
+</ul>
+</blockquote>
+<h5 id="最近最少使用算法lru"><a name="最近最少使用算法lru" class="anchor-navigation-ex-anchor" href="#最近最少使用算法lru"><i class="fa fa-link" aria-hidden="true"></i></a>最近最少使用算法(LRU)</h5>
+<ul>
+<li>淘汰最近一次<strong>访问时间距离当前时间间隔最长</strong>的页面。</li>
+<li>实现：stack，当一页面被访问时, 从栈中取出压到栈顶,</li>
+<li>栈底是: LRU page.</li>
+</ul>
+<p>但是LRU算法的实现开销很大，必须有硬件的支持</p>
+<h5 id="最近不用的先淘汰not-used-recentlynur"><a name="最近不用的先淘汰not-used-recentlynur" class="anchor-navigation-ex-anchor" href="#最近不用的先淘汰not-used-recentlynur"><i class="fa fa-link" aria-hidden="true"></i></a>最近不用的先淘汰(not used recently,NUR)</h5>
+<ul>
+<li>淘汰最近一段时间未用过的页面。</li>
+<li>为每一个页面增加两个硬件位，引用位和修改位</li>
+<li><strong>每隔固定时间将所有引用位清零</strong>。</li>
+</ul>
+<blockquote>
+<p>当要淘汰某一页面时，按照下面的次序进行选择：</p>
+<ul>
+<li>引用位=0，修改位=0；直接淘汰</li>
+<li>引用位=0，修改位=1；淘汰之前写回外存</li>
+<li>引用位=1，修改位=0；直接淘汰</li>
+<li>引用位=1，修改位=1；淘汰之前写回外存</li>
+</ul>
+</blockquote>
+<h5 id="最不经常使用的先淘汰lfu"><a name="最不经常使用的先淘汰lfu" class="anchor-navigation-ex-anchor" href="#最不经常使用的先淘汰lfu"><i class="fa fa-link" aria-hidden="true"></i></a>最不经常使用的先淘汰(LFU)</h5>
+<ul>
+<li><p>淘汰使用次数最少的页面</p>
+</li>
+<li><p>依据: 活跃访问页面应有较大的访问次数 </p>
+</li>
+<li><p>实现：<strong>记数器</strong>，调入清0，访问增1，淘汰选取最小者</p>
+<p>  Suffer: (1) 前期使用多，但以后不用，难换出</p>
+<p>​          (2) 刚调入的页面，引用少，被换出可能大</p>
+</li>
+</ul>
+<h5 id="最频繁使用算法mfu"><a name="最频繁使用算法mfu" class="anchor-navigation-ex-anchor" href="#最频繁使用算法mfu"><i class="fa fa-link" aria-hidden="true"></i></a>最频繁使用算法(MFU)</h5>
+<ul>
+<li>与最不经常使用算法LFU相反，<strong>淘汰使用次数最多</strong>的页面。</li>
+<li>使用多的页面可能已经用完了，因而淘汰时取计数器值最大的页面</li>
+</ul>
+<p>Suffer: 程序有些成分是在整个程序运行中都使用的</p>
+<h5 id="二次机会"><a name="二次机会" class="anchor-navigation-ex-anchor" href="#二次机会"><i class="fa fa-link" aria-hidden="true"></i></a>二次机会</h5>
+<ul>
+<li>淘汰<strong>装入最久且最近未被访问</strong>的页面</li>
+<li>实现时：采用<strong>拉链</strong>数据结构。</li>
+</ul>
+<h5 id="时钟算法"><a name="时钟算法" class="anchor-navigation-ex-anchor" href="#时钟算法"><i class="fa fa-link" aria-hidden="true"></i></a>时钟算法</h5>
+<ul>
+<li><p>将页面组织成环形，有一个指针指向当前位置</p>
+<blockquote>
+<ul>
+<li>每次需要淘汰页面时，从<strong>指针所指的页面开始检查</strong></li>
+<li>如果当前页面的访问位为0，该页没有访问过，则将该页替换</li>
+<li>如果当前页面的访问位为1，<strong>则将其清0</strong>，并顺时针移动指针到下一个位置</li>
+<li>重复上述步骤直至找到一个访问位为0的页面</li>
+</ul>
+</blockquote>
+</li>
+<li><p>改进：考虑修改标志m，此时的淘汰优先级类似于NUR算法</p>
+</li>
+<li>由指针当前位置开始扫描，选择最佳淘汰页面，<strong>不改变引用位</strong>，将第一个遇到的<strong>r=0且m=0</strong>的页面作为淘汰页面</li>
+<li>如步骤1失败，再次从原位置开始，<strong>找r=0且m=1的页面</strong>，将第一个满足上述要求的页面作为淘汰页面，<strong>同时将扫描过页面的r位清0</strong></li>
+<li>若步骤2失败，指针再次回到原位置，<strong>重新执行步骤1</strong>。若还失败再次执行步骤2，此时定能找到</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>时钟算法：尽量淘汰<strong>没被访问过</strong>的</p>
+<p>改进的时钟算法：尽量淘汰<strong>没被访问过的且没被修改过</strong>的</p>
+</blockquote>
+<ul>
+<li>五种算法对比</li>
+</ul>
+<p><img src="assets/74349526dd5cbe5f271d6f78a50b4a23.png" alt="img"></img></p>
+<hr></hr>
+<h4 id="颠簸"><a name="颠簸" class="anchor-navigation-ex-anchor" href="#颠簸"><i class="fa fa-link" aria-hidden="true"></i></a>颠簸</h4>
+<ul>
+<li>页面在内存与外存之间频繁换入换出<ul>
+<li>分配给进程的物理页框过少：增加物理页框（根本原因：内存少）</li>
+<li>淘汰算法不合理：改进</li>
+<li>程序结构不好：改善</li>
+</ul>
+</li>
+</ul>
+<h4 id="工作集模型"><a name="工作集模型" class="anchor-navigation-ex-anchor" href="#工作集模型"><i class="fa fa-link" aria-hidden="true"></i></a>工作集模型</h4>
+<ul>
+<li>工作集(working set): 进程在<strong>一段时间</strong>内所访问页面的集合</li>
+</ul>
+<p><img src="assets/image-20250423090103255.png" alt="image-20250423090103255"></img></p>
+<p>Δ：称为窗口尺寸(window size)。</p>
+<p>为使程序有效运行，工作集应能放入内存。</p>
+<p><strong>Madnick</strong>, Donovan建议： Δ＝<strong>1万次访内</strong>。</p>
+<p>实现：页表中增加访问位</p>
+<blockquote>
+<ul>
+<li>Δ开始时，全部清0,</li>
+<li>访问：置1</li>
+<li>Δ结束时(新D开始时)访问标志为1的，为该D期间工作集，</li>
+</ul>
+<p>[!note]</p>
+<p>工作集估计：<img src="assets/image-20250423090454516.png" alt="image-20250423090454516"></img></p>
+</blockquote>
+<h4 id="页故障率反馈模型"><a name="页故障率反馈模型" class="anchor-navigation-ex-anchor" href="#页故障率反馈模型"><i class="fa fa-link" aria-hidden="true"></i></a>页故障率反馈模型</h4>
+<ul>
+<li>PFFB(Page Fault Feed Back)：<strong>动态调整页面的分配</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>页故障率高(达到某上界阈值)：内存页框少，增加</li>
+<li>页故障率低(达到某下界阈值)：内存页框多，减少</li>
+</ul>
+</blockquote>
+<h3 id="虚拟段式存储系统"><a name="虚拟段式存储系统" class="anchor-navigation-ex-anchor" href="#虚拟段式存储系统"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟段式存储系统</h3>
+<ul>
+<li>进程运行前，全部装入外存，<strong>部分装入内存</strong>，访问段不在内存时，发生缺段中断</li>
+<li>若内存空间不够<ul>
+<li>紧凑：将内存中的所有空闲区合并</li>
+<li>淘汰：将内存中的某段移至外存.</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20250423092854372.png" alt="image-20250423092854372"></img></p>
+<h4 id="段的动态连接"><a name="段的动态连接" class="anchor-navigation-ex-anchor" href="#段的动态连接"><i class="fa fa-link" aria-hidden="true"></i></a>段的动态连接</h4>
+<ul>
+<li>当遇到访问<strong>外段的指令</strong>时，需要进行连接</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>静态连接：<strong>运行前连接</strong>，由link完成；一个程序共有多少个段是确定的，因而link可以为每一个段分配一个段号；</li>
+<li>动态连接：<strong>运行时连接</strong>，由<strong>OS</strong>完成.(在程序运行过程中需要某一个段时才将该段连接上)；一个程序共有多少个段是不确定的，因而段名到段号的转换需要由操作系统来完成的。</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>所需表目</p>
+<blockquote>
+<ul>
+<li>段名-段号对照表：每进程一个，记录当前<strong>已连接段的表目</strong></li>
+<li>符号表：每段一个</li>
+<li>段形式：符号表和目标代码或者数据</li>
+</ul>
+<p>静态连接时不需符号表，由link将段名段号和目标对应起来</p>
+</blockquote>
+</li>
+<li><p>编译或者汇编时： 遇到访问外段指令，采用间接寻址，指向一个间接字：</p>
+<p><img src="assets/image-20250423093712909.png" alt="image-20250423093712909"></img></p>
+</li>
+<li><p>执行时：遇到间接指令，且L=1, 发生连接中断，处理程序：</p>
+<ol>
+<li>由D取出符号地址；</li>
+<li>由段名查段名-段号对照表，是否分配段号。</li>
+</ol>
+</li>
+</ul>
+<p>　动态连接后，重新执行指令，发现连接字Ｌ＝０，为一般的间接地址。</p>
+<blockquote>
+<p>[!caution]</p>
+<p>动态连接要求修改连接字，但是段的共享要求纯代码</p>
+<p>所以将共享代码分为“纯段共享”，“杂段私用”</p>
+</blockquote>
+<hr></hr>
+<h3 id="虚拟段页式存储系统"><a name="虚拟段页式存储系统" class="anchor-navigation-ex-anchor" href="#虚拟段页式存储系统"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟段页式存储系统</h3>
+<p>考虑段的动态连接，共享，段长度的动态变化</p>
+<ul>
+<li><p>所需表目</p>
+<blockquote>
+<ul>
+<li>段表：每一个进程一个，动态变化，<strong>每连接一个新段时，增加一个新的表项</strong><ul>
+<li>| 段号 | 页表长度 | 页表首址 | 访问权限 | 扩展标志 | 共享段入口 </li>
+</ul>
+</li>
+<li>页表：每段一个，进程<strong>开始时只为主程序段建立页表</strong>，其他段的页表段连接时建立<ul>
+<li>逻辑页号 | 页框号 | 外存块号 | 内外标志 | 修改标志 |</li>
+</ul>
+</li>
+<li>总页表：即位示图，内外存各一个</li>
+<li>共享页表：系统一个，记录共享段<ul>
+<li>段名 | 页表长度 | 页表首址 | 扩充标志 | 共享计数 | </li>
+</ul>
+</li>
+<li>段名-段号对照表：进程一个</li>
+</ul>
+</blockquote>
+</li>
+<li><p>所需寄存器</p>
+<blockquote>
+<ul>
+<li>段表长度寄存器：保存正运行进程段表长度</li>
+<li>段表首址寄存器：保存正运行进程段表首址</li>
+<li>快表：段名 | 逻辑页号 | 页框号 | 访问权限 | 修改标志</li>
+</ul>
+</blockquote>
+</li>
+<li><p>地址映射：逻辑地址<code>(s,p,d)</code>=》物理地址<code>(f,d)</code></p>
+</li>
+</ul>
+<p><img src="assets/image-20250427084608567.png" alt="image-20250427084608567"></img></p>
+<h3 id="中断处理"><a name="中断处理" class="anchor-navigation-ex-anchor" href="#中断处理"><i class="fa fa-link" aria-hidden="true"></i></a>中断处理</h3>
+<ul>
+<li>连接中断<ul>
+<li>所有进程均未连接(共享段表、段名-段号对照表均无)</li>
+<li>其它进程连接过，本进程未连接过(共享段表有，段名-段号对照表无)</li>
+<li>本进程连接过(段名-段号对照表有，共享段表有或无)</li>
+</ul>
+</li>
+<li>缺页中断<ul>
+<li>分配页框，调入所需页面，更新页表和总页表</li>
+</ul>
+</li>
+<li>越界中断<ul>
+<li>段号越界：访问不存在的段，地址错误，程序被中止</li>
+<li>页号越界：访问段内不存在的页，根据段扩充标志判断该段是否可以扩充</li>
+</ul>
+</li>
+<li>越权中断：违反段的访问权限，程序将被中止</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p><img src="assets/image-20250427090712043.png" alt="image-20250427090712043"></img></p>
+<ul>
+<li>分页对用户是透明的，分段对用户是可见的</li>
+</ul>
+</blockquote>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 07_虚拟存储器管理</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06_主存管理.html" class="navigation navigation-prev " aria-label="Previous page: 06_主存管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08_文件与文件系统.html" class="navigation navigation-next " aria-label="Next page: 08_文件与文件系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07_虚拟存储器管理","level":"1.6.7","depth":2,"next":{"title":"08_文件与文件系统","level":"1.6.8","depth":2,"path":"docs/Operating_System/08_文件与文件系统.md","ref":"docs/Operating_System/08_文件与文件系统.md","articles":[]},"previous":{"title":"06_主存管理","level":"1.6.6","depth":2,"path":"docs/Operating_System/06_主存管理.md","ref":"docs/Operating_System/06_主存管理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Operating_System/07_虚拟存储器管理.md","mtime":"2025-09-07T09:41:17.161Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

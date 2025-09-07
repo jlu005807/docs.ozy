@@ -1,0 +1,1935 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>01_函数模板 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02_类模板.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../C++-Primer/">
+            
+                <a href="../C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../C++-Primer/01_泛型算法.html">
+            
+                <a href="../C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../C++-Primer/02_关联容器.html">
+            
+                <a href="../C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../C++-Primer/03_动态内存.html">
+            
+                <a href="../C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../C++-Primer/04_拷贝控制.html">
+            
+                <a href="../C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../C++-Primer/12_nullptr.html">
+            
+                <a href="../C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Effective-Modern-C++/">
+            
+                <a href="../Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.3.1" data-path="01_函数模板.html">
+            
+                <a href="01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="02_类模板.html">
+            
+                <a href="02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >01_函数模板</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#函数模板"><b></b>函数模板</a></li><ul><li><span class="title-icon "></span><a href="#定义模板"><b></b>定义模板</a></li><li><span class="title-icon "></span><a href="#使用模板"><b></b>使用模板</a></li><li><span class="title-icon "></span><a href="#模板参数推导"><b></b>模板参数推导</a></li><li><span class="title-icon "></span><a href="#万能引用与引用折叠"><b></b>万能引用与引用折叠</a></li><li><span class="title-icon "></span><a href="#有默认实参的模板类型形参"><b></b>有默认实参的模板类型形参</a></li><li><span class="title-icon "></span><a href="#非类型模板形参"><b></b>非类型模板形参</a></li><li><span class="title-icon "></span><a href="#重载函数模板"><b></b>重载函数模板</a></li><li><span class="title-icon "></span><a href="#可变参数模板"><b></b>可变参数模板</a></li><li><span class="title-icon "></span><a href="#模板分文件"><b></b>模板分文件</a></li><ul><li><span class="title-icon "></span><a href="#include-指令"><b></b>include 指令</a></li><li><span class="title-icon "></span><a href="#分文件的原理是什么？"><b></b>分文件的原理是什么？</a></li></ul></ul></ul></div><a href="#函数模板" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#函数模板">函数模板</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#定义模板">定义模板</a><i></i></div></li>
+<li><div><a href="#使用模板">使用模板</a><i></i></div></li>
+<li><div><a href="#模板参数推导">模板参数推导</a><i></i></div></li>
+<li><div><a href="#万能引用与引用折叠">万能引用与引用折叠</a><i></i></div></li>
+<li><div><a href="#有默认实参的模板类型形参">有默认实参的模板类型形参</a><i></i></div></li>
+<li><div><a href="#非类型模板形参">非类型模板形参</a><i></i></div></li>
+<li><div><a href="#重载函数模板">重载函数模板</a><i></i></div></li>
+<li><div><a href="#可变参数模板">可变参数模板</a><i></i></div></li>
+<li><div><a href="#模板分文件">模板分文件</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#include-指令">include 指令</a><i></i></div></li>
+<li><div><a href="#分文件的原理是什么？">分文件的原理是什么？</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="函数模板"><a name="函数模板" class="anchor-navigation-ex-anchor" href="#函数模板"><i class="fa fa-link" aria-hidden="true"></i></a>函数模板</h1>
+<h2 id="定义模板"><a name="定义模板" class="anchor-navigation-ex-anchor" href="#定义模板"><i class="fa fa-link" aria-hidden="true"></i></a>定义模板</h2>
+<p>函数模板不是函数，只有实例化函数模板，编译器才能生成实际的函数定义。</p>
+<p>声明一个函数模板，我们通常要使用：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt; 形参列表 &gt; 函数声明
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<p>C++17 之前，类型 T 必须是可复制或移动才能传递参数。C++17 以后，即使复制构造函数和移动构造函数都无效，因为 C++17 强制的<a href="https://zh.cppreference.com/w/cpp/language/copy_elision" target="_blank">复制消除</a>，也可以传递临时纯右值。</p>
+</blockquote>
+<p>也可以使用 <strong><code>class</code></strong> 关键字来声明模板类型形参</p>
+<h2 id="使用模板"><a name="使用模板" class="anchor-navigation-ex-anchor" href="#使用模板"><i class="fa fa-link" aria-hidden="true"></i></a>使用模板</h2>
+<pre><code class="lang-cpp">
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+T <span class="hljs-title">max</span><span class="hljs-params">(T a, T b)</span> </span>{
+    <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Test</span>{
+    <span class="hljs-type">int</span> v_{};
+    <span class="hljs-built_in">Test</span>() = <span class="hljs-keyword">default</span>;
+    <span class="hljs-built_in">Test</span>(<span class="hljs-type">int</span> v) :<span class="hljs-built_in">v_</span>(v) {}
+    <span class="hljs-type">bool</span> <span class="hljs-keyword">operator</span>&gt;(<span class="hljs-type">const</span> Test&amp; t) <span class="hljs-type">const</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>-&gt;v_ &gt; t.v_;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-type">int</span> a{ <span class="hljs-number">1</span> };
+    <span class="hljs-type">int</span> b{ <span class="hljs-number">2</span> };
+    std::cout &lt;&lt; <span class="hljs-string">"max(a, b) : "</span> &lt;&lt; ::<span class="hljs-built_in">max</span>(a, b) &lt;&lt; <span class="hljs-string">'\n'</span>;
+
+    Test t1{ <span class="hljs-number">10</span> };
+    Test t2{ <span class="hljs-number">20</span> };
+    std::cout &lt;&lt; <span class="hljs-string">"max(t1, t2) : "</span> &lt;&lt; ::<span class="hljs-built_in">max</span>(t1, t2).v_ &lt;&lt; <span class="hljs-string">'\n'</span>;
+
+}
+</code></pre>
+<p>编译器会<strong>实例化两个函数</strong>，也就是生成了一个参数为 int 的 max 函数，一个参数为 Test 的函数。</p>
+<p>例如</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>
+</span>{
+  <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+
+<span class="hljs-function">Test <span class="hljs-title">max</span><span class="hljs-params">(Test a, Test b)</span>
+</span>{
+  <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+</code></pre>
+<ul>
+<li><strong>模板，只有你“用”了它，才会生成实际的代码</strong>。</li>
+</ul>
+<blockquote>
+<p>这里的“<strong>用</strong>”，其实就是指代会<strong><em>隐式实例化</em></strong>，生成代码。</p>
+</blockquote>
+<p>并且需要注意，同一个函数模板生成的不同类型的函数，彼此之间没有任何关系。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>显式的指明函数模板的形参类型</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+T <span class="hljs-title">max</span><span class="hljs-params">(T a, T b)</span> </span>{
+    <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-type">int</span> a{ <span class="hljs-number">1</span> };
+    <span class="hljs-type">int</span> b{ <span class="hljs-number">2</span> };
+    <span class="hljs-built_in">max</span>(a, b);          <span class="hljs-comment">// 函数模板 max 被推导为 max&lt;int&gt;</span>
+
+    <span class="hljs-built_in">max</span>&lt;<span class="hljs-type">double</span>&gt;(a, b);  <span class="hljs-comment">// 传递模板类型实参，函数模板 max 为 max&lt;double&gt;</span>
+}
+</code></pre>
+</blockquote>
+<h2 id="模板参数推导"><a name="模板参数推导" class="anchor-navigation-ex-anchor" href="#模板参数推导"><i class="fa fa-link" aria-hidden="true"></i></a>模板参数推导</h2>
+<p>当使用函数模板（如 max()）时，模板参数可以由传入的参数推导。</p>
+<p>T 可能只是类型的“一部分”。若声明 max() 使用 <code>const&amp;</code> ：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+T <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; a, <span class="hljs-type">const</span> T&amp; b)</span> </span>{
+    <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+</code></pre>
+<p>如果我们 <code>max(1, 2)</code> 或者说 <code>max&lt;int&gt;(x,x)</code>，T 当然会是 int，但是函数形参类型会是 <code>const int&amp;</code>。详见<a href="D:\Internt_of_Thing\e_book\C++\note\Effective-Modern-C++\CHAPTER 1 Deducing Types.md" target="_blank">Deducing Types</a></p>
+<blockquote>
+<p>[!warning]</p>
+<p>有不少情况是没有办法进行推导的：即参数有多个类型并且没有显示指定类型</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 省略 max</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::string_literals;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">max</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>);            <span class="hljs-comment">// Error 无法确定你的 T 到底是要 int 还是 double</span>
+    <span class="hljs-built_in">max</span>(<span class="hljs-string">"luse"</span>s, <span class="hljs-string">"乐"</span>);     <span class="hljs-comment">// Error 无法确定你的 T 到底是要 std::string 还是 const char[N]</span>
+}
+</code></pre>
+<p>需要<strong>显式指定函数模板的（T）类型</strong>。</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">max</span>&lt;<span class="hljs-type">double</span>&gt;(<span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>);           
+<span class="hljs-built_in">max</span>&lt;std::string&gt;(<span class="hljs-string">"luse"</span>s, <span class="hljs-string">"乐"</span>);
+</code></pre>
+<p>又或者说<strong>显式类型转换</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">max</span>(<span class="hljs-built_in">static_cast</span>&lt;<span class="hljs-type">double</span>&gt;(<span class="hljs-number">1</span>), <span class="hljs-number">1.2</span>);
+</code></pre>
+</blockquote>
+<hr></hr>
+<h2 id="万能引用与引用折叠"><a name="万能引用与引用折叠" class="anchor-navigation-ex-anchor" href="#万能引用与引用折叠"><i class="fa fa-link" aria-hidden="true"></i></a>万能引用与引用折叠</h2>
+<p>所谓的万能引用（又称转发引用，或者通用引用），即<strong>接受左值表达式那形参类型就推导为左值引用，接受右值表达式，那就推导为右值引用</strong>。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>通用引用不是一种新的引用，它实际上是满足以下两个条件下的<strong>右值引用</strong>：</p>
+<ul>
+<li><strong>类型推导区分左值和右值</strong>。<code>T</code>类型的左值被推导为<code>T&amp;</code>类型，<code>T</code>类型的右值被推导为<code>T</code>。</li>
+<li><strong>发生引用折叠</strong>。</li>
+</ul>
+</blockquote>
+<p>比如：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; t)</span></span>{}
+
+<span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;
+<span class="hljs-built_in">f</span>(a);       <span class="hljs-comment">// a 是左值表达式，f 是 f&lt;int&amp;&gt; 但是它的形参类型是 int&amp;</span>
+<span class="hljs-built_in">f</span>(<span class="hljs-number">10</span>);      <span class="hljs-comment">// 10 是右值表达式，f 是 f&lt;int&gt; 但它的形参类型是 int&amp;&amp;</span>
+</code></pre>
+<blockquote>
+<p>被推导为 <code>f&lt;int&amp;&gt;</code> 涉及到了特殊的<a href="https://zh.cppreference.com/w/cpp/language/template_argument_deduction#:~:text=如果 P 是到无 cv 限定模板形参的右值引用（也就是转发引用）且对应函数的调用实参是左值，那么将到 A 的左值引用类型用于 A 的位置进行推导" target="_blank">推导规则</a>：如果 P 是到无 cv 限定模板形参的右值引用（也就是转发引用）且对应函数的调用实参是左值，那么将到 A 的左值引用类型用于 A 的位置进行推导。</p>
+</blockquote>
+<p>通过模板或 typedef 中的类型操作可以构成<strong>引用的引用</strong>，此时适用引用折叠（reference collapsing）规则：</p>
+<ul>
+<li><strong>右值引用的右值引用折叠成右值引用，所有其他组合均折叠成左值引用</strong>。</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span>&amp;  lref;
+<span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span>&amp;&amp; rref;
+<span class="hljs-type">int</span> n;
+
+lref&amp;  r1 = n; <span class="hljs-comment">// r1 的类型是 int&amp;</span>
+lref&amp;&amp; r2 = n; <span class="hljs-comment">// r2 的类型是 int&amp;</span>
+rref&amp;  r3 = n; <span class="hljs-comment">// r3 的类型是 int&amp;</span>
+rref&amp;&amp; r4 = <span class="hljs-number">1</span>; <span class="hljs-comment">// r4 的类型是 int&amp;&amp;</span>
+</code></pre>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">Ty</span>&gt;
+<span class="hljs-function"><span class="hljs-keyword">constexpr</span> Ty&amp;&amp; <span class="hljs-title">forward</span><span class="hljs-params">(Ty&amp; Arg)</span> <span class="hljs-keyword">noexcept</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">static_cast</span>&lt;Ty&amp;&amp;&gt;(Arg);
+}
+
+<span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;            <span class="hljs-comment">// 不重要</span>
+::forward&lt;<span class="hljs-type">int</span>&gt;(a);     <span class="hljs-comment">// 返回 int&amp;&amp; 因为 Ty 是 int，Ty&amp;&amp; 就是 int&amp;&amp;</span>
+::forward&lt;<span class="hljs-type">int</span>&amp;&gt;(a);    <span class="hljs-comment">// 返回 int&amp; 因为 Ty 是 int&amp;，Ty&amp;&amp; 就是 int&amp;</span>
+::forward&lt;<span class="hljs-type">int</span>&amp;&amp;&gt;(a);   <span class="hljs-comment">// 返回 int&amp;&amp; 因为 Ty 是 int&amp;&amp;，Ty&amp;&amp; 就是 int&amp;&amp;</span>
+</code></pre>
+<hr></hr>
+<h2 id="有默认实参的模板类型形参"><a name="有默认实参的模板类型形参" class="anchor-navigation-ex-anchor" href="#有默认实参的模板类型形参"><i class="fa fa-link" aria-hidden="true"></i></a>有默认实参的模板类型形参</h2>
+<p>模板形参也可以有默认值</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T </span>= <span class="hljs-type">int</span>&gt;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-built_in">f</span>();            <span class="hljs-comment">// 默认为 f&lt;int&gt;</span>
+<span class="hljs-built_in">f</span>&lt;<span class="hljs-type">double</span>&gt;();    <span class="hljs-comment">// 显式指明为 f&lt;double&gt;</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::string_literals;
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T1,<span class="hljs-keyword">typename</span> T2,<span class="hljs-keyword">typename</span> RT </span>= 
+    <span class="hljs-keyword">decltype</span>(<span class="hljs-literal">true</span> ? T1{} : T2{}) &gt;
+
+<span class="hljs-function">RT <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-type">const</span> T1&amp; a, <span class="hljs-type">const</span> T2&amp; b)</span> </span>{ <span class="hljs-comment">// RT 是 std::string</span>
+    <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">auto</span> ret = ::<span class="hljs-built_in">max</span>(<span class="hljs-string">"1"</span>, <span class="hljs-string">"2"</span>s);
+    std::cout &lt;&lt; ret &lt;&lt; <span class="hljs-string">'\n'</span>;
+}
+</code></pre>
+<blockquote>
+<p>[!important]</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">typename</span> RT = <span class="hljs-keyword">decltype</span>(<span class="hljs-literal">true</span> ? T1{} : T2{})
+</code></pre>
+<p>RT声明为三目运算符表达式的类型</p>
+<blockquote>
+<p>[!tip]</p>
+<p>三目表达式要求第二项和第三项之间能够隐式转换，然后整个表达式的类型会是 <strong>“公共”类型</strong>。</p>
+<p>比如第二项是 int 第三项是 double，三目表达式当然会是 double。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> T = <span class="hljs-keyword">decltype</span>(<span class="hljs-literal">true</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">1.2</span>);
+<span class="hljs-keyword">using</span> T2 = <span class="hljs-keyword">decltype</span>(<span class="hljs-literal">false</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">1.2</span>);
+</code></pre>
+<p><strong>T 和 T2 都是 double 类型</strong>。</p>
+</blockquote>
+<p>利用auto 简化这一切。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T,<span class="hljs-keyword">typename</span> T2&gt;
+<span class="hljs-keyword">auto</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp; a, <span class="hljs-type">const</span> T2&amp; b)</span> -&gt; <span class="hljs-title">decltype</span><span class="hljs-params">(<span class="hljs-literal">true</span> ? a : b)</span></span>{
+    <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+</code></pre>
+<p>C++11 <a href="https://zh.cppreference.com/w/cpp/language/auto#.E5.87.BD.E6.95.B0.E5.A3.B0.E6.98.8E" target="_blank">后置返回类型</a></p>
+<blockquote>
+<p>[!warning]</p>
+<p>后置返回类型虽然也是写的 <code>auto</code> ，但是它根本没推导，只是<strong>占位</strong>。</p>
+</blockquote>
+<p>这和我们之前用默认模板实参 <code>RT</code> 的区别的<strong>返回类型是不一样的</strong></p>
+<p>如果函数模板的形参是<strong>类型相同</strong> <code>true ? a : b</code> 表达式的类型是 <strong><code>const T&amp;</code></strong></p>
+</blockquote>
+<p>使用 C++20 简写函数模板，我们可以直接再简化为：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">decltype</span>(<span class="hljs-keyword">auto</span>) <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; a, <span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; b)</span>  </span>{
+    <span class="hljs-keyword">return</span> a &gt; b ? a : b;
+}
+</code></pre>
+<p>C++14 引入了两个特性：</p>
+<ol>
+<li><a href="https://zh.cppreference.com/w/cpp/language/function#.E8.BF.94.E5.9B.9E.E7.B1.BB.E5.9E.8B.E6.8E.A8.E5.AF.BC" target="_blank">返回类型推导</a>（也就是函数可以直接写 auto 或 decltype(auto) 做返回类型，而不是像 C++11 那样，只是后置返回类型。</li>
+<li><a href="https://zh.cppreference.com/w/cpp/language/auto" target="_blank"><code>decltype(auto)</code></a> “<em>如果返回类型没有使用 decltype(auto)，那么推导遵循<a href="https://zh.cppreference.com/w/cpp/language/template_argument_deduction#.E5.85.B6.E4.BB.96.E8.AF.AD.E5.A2.83" target="_blank">模板实参推导</a>的规则进行</em>”。我们上面的 <code>max</code> 示例如果不使用 decltype(auto)，按照模板实参的推导规则，会忽略引用和 cv 限定符，就只能推导出返回 <code>T</code> 基本类型。</li>
+</ol>
+<hr></hr>
+<h2 id="非类型模板形参"><a name="非类型模板形参" class="anchor-navigation-ex-anchor" href="#非类型模板形参"><i class="fa fa-link" aria-hidden="true"></i></a>非类型模板形参</h2>
+<p>模板不接受类型，而是接受值或对象</p>
+<p>非类型模板形参当然也可以有默认值：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;std::<span class="hljs-type">size_t</span> N </span>= <span class="hljs-number">100</span>&gt;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span> </span>{ std::cout &lt;&lt; N &lt;&lt; <span class="hljs-string">'\n'</span>; }
+
+<span class="hljs-built_in">f</span>();     <span class="hljs-comment">// 默认      f&lt;100&gt;</span>
+<span class="hljs-built_in">f</span>&lt;<span class="hljs-number">66</span>&gt;(); <span class="hljs-comment">// 显式指明  f&lt;66&gt;</span>
+</code></pre>
+<p>目前，你简单认为需要参数是<strong>“常量”</strong>即可。</p>
+<hr></hr>
+<h2 id="重载函数模板"><a name="重载函数模板" class="anchor-navigation-ex-anchor" href="#重载函数模板"><i class="fa fa-link" aria-hidden="true"></i></a>重载函数模板</h2>
+<p>函数模板与非模板函数可以重载。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">test</span><span class="hljs-params">(T)</span> </span>{ std::<span class="hljs-built_in">puts</span>(<span class="hljs-string">"template"</span>); }
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">test</span><span class="hljs-params">(<span class="hljs-type">int</span>)</span> </span>{ std::<span class="hljs-built_in">puts</span>(<span class="hljs-string">"int"</span>); }
+
+<span class="hljs-built_in">test</span>(<span class="hljs-number">1</span>);        <span class="hljs-comment">// 匹配到test(int)</span>
+<span class="hljs-built_in">test</span>(<span class="hljs-number">1.2</span>);      <span class="hljs-comment">// 匹配到模板</span>
+<span class="hljs-built_in">test</span>(<span class="hljs-string">"1"</span>);      <span class="hljs-comment">// 匹配到模板</span>
+</code></pre>
+<ul>
+<li>通常优先选择<strong>非模板</strong>的函数。</li>
+</ul>
+<hr></hr>
+<h2 id="可变参数模板"><a name="可变参数模板" class="anchor-navigation-ex-anchor" href="#可变参数模板"><i class="fa fa-link" aria-hidden="true"></i></a>可变参数模板</h2>
+<blockquote>
+<p>[!important]</p>
+<p><a href="https://zh.cppreference.com/w/cpp/language/parameter_pack" target="_blank"><strong>形参包</strong></a></p>
+<blockquote>
+<p>本节以 <strong>C++14</strong> 标准进行讲述。</p>
+</blockquote>
+<p>模板形参包是接受零个或更多个模板实参（非类型、类型或模板）的模板形参。函数形参包是接受零个或更多个函数实参的函数形参。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>...Args&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">sum</span><span class="hljs-params">(Args...args)</span></span>{}
+</code></pre>
+<p>这样一个函数，就可以接受任意类型的任意个数的参数调用</p>
+<p>模板中需要 typename 后跟三个点 Args，函数形参中需要用模板类型形参包后跟着三个点 再 args。</p>
+<p>args 是<strong>函数</strong>形参包，Args 是类型形参包，它们的名字我们可以自定义。</p>
+<p>args 里，就存储了我们传入的全部的<strong>参数</strong>，Args 中存储了我们传入的全部参数的类型。</p>
+</blockquote>
+<p><a href="https://zh.cppreference.com/w/cpp/language/parameter_pack#.E5.8C.85.E5.B1.95.E5.BC.80" target="_blank"><strong>形参包展开</strong></a></p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span>*, <span class="hljs-type">int</span>, <span class="hljs-type">double</span>)</span> </span>{ <span class="hljs-built_in">puts</span>(<span class="hljs-string">"值"</span>); }
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span>**, <span class="hljs-type">int</span>*, <span class="hljs-type">double</span>*)</span> </span>{ <span class="hljs-built_in">puts</span>(<span class="hljs-string">"&amp;"</span>); }
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>...Args&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">sum</span><span class="hljs-params">(Args...args)</span></span>{  <span class="hljs-comment">// const char * args0, int args1, double args2</span>
+    <span class="hljs-built_in">f</span>(args...);   <span class="hljs-comment">// 相当于 f(args0, args1, args2)</span>
+    <span class="hljs-built_in">f</span>(&amp;args...);  <span class="hljs-comment">// 相当于 f(&amp;args0, &amp;args1, &amp;args2)</span>
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">sum</span>(<span class="hljs-string">"luse"</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>);
+}
+</code></pre>
+<p>sum 的 <code>Args...args</code> 被展开为 <code>const char * args0, int args1, double args2</code>。</p>
+<p>[!tip]</p>
+<p>定义一个术语：<strong>模式</strong>。</p>
+<p><strong>后随省略号</strong>且其中至少有一个形参包的名字的<strong>模式</strong>会被展开 成零个或更多个<strong>逗号分隔</strong>的模式实例。</p>
+</blockquote>
+<ul>
+<li><p><code>&amp;args...</code> 中 <code>&amp;args</code> 就是模式</p>
+<blockquote>
+<p>展开的时候，模式，也就是省略号前面的一整个表达式，会被不停的填入对象并添加 <code>&amp;</code>，然后<strong>逗号分隔</strong>。直至形参包的元素被消耗完。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>...Args&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-type">const</span> Args&amp;...args)</span></span>{    <span class="hljs-comment">// const char (&amp;args0)[5], const int &amp; args1, const double &amp; args2</span>
+    <span class="hljs-type">int</span> _[]{ (std::cout &lt;&lt; args &lt;&lt; <span class="hljs-string">' '</span> ,<span class="hljs-number">0</span>)... };
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"luse"</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1.2</span>);
+}
+</code></pre>
+<p>模式是：<code>(std::cout &lt;&lt; args &lt;&lt; ' ' ,0)</code></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<ul>
+<li><strong><em>只有在合适的形参包展开场所才能进行形参包展开</em></strong>。</li>
+</ul>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> ...Args&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-type">const</span> Args &amp;...args)</span> </span>{
+   (std::cout &lt;&lt; args &lt;&lt; <span class="hljs-string">" "</span>)...; <span class="hljs-comment">// 不是合适的形参包展开场所 Error！</span>
+}
+</code></pre>
+</blockquote>
+</blockquote>
+<p>一个数组的示例：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>...Args&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-type">const</span> Args&amp;...args)</span> </span>{
+    <span class="hljs-type">int</span> _[]{ (std::cout &lt;&lt; args &lt;&lt; <span class="hljs-string">' '</span> ,<span class="hljs-number">0</span>)... };
+}
+
+<span class="hljs-comment">//onst T(&amp;array)[N] 注意，这是一个数组引用</span>
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T,std::<span class="hljs-type">size_t</span> N, <span class="hljs-keyword">typename</span>...Args&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> T(&amp;array)[N], Args...index)</span> </span>{
+    <span class="hljs-built_in">print</span>(array[index]...); <span class="hljs-comment">//array[index]... 是包展开</span>
+                            <span class="hljs-comment">//array[index] 是模式</span>
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> array[<span class="hljs-number">10</span>]{ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span> };
+    <span class="hljs-built_in">f</span>(array, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>);
+}
+</code></pre>
+<ul>
+<li><p>实现一个 <code>sum</code>：</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;type_traits&gt;</span></span>
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>...Args,<span class="hljs-keyword">typename</span> RT = std::<span class="hljs-type">common_type_t</span>&lt;Args...&gt;&gt;
+RT <span class="hljs-built_in">sum</span>(<span class="hljs-type">const</span> Args&amp;...args) {
+    RT _[]{ <span class="hljs-built_in">static_cast</span>&lt;RT&gt;(args)... };
+    RT n{};
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">sizeof</span>...(args); ++i) { <span class="hljs-comment">// sizeof... 获取形参包的元素个数</span>
+        n += _[i];
+    }
+    <span class="hljs-keyword">return</span> n;
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">double</span> ret = <span class="hljs-built_in">sum</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6.7</span>);
+    std::cout &lt;&lt; ret &lt;&lt; <span class="hljs-string">'\n'</span>;       <span class="hljs-comment">// 21.7</span>
+}
+</code></pre>
+</li>
+<li><p><a href="https://zh.cppreference.com/w/cpp/types/common_type" target="_blank"><code>std::common_type_t</code></a> 的作用很简单，就是确定我们传入的<strong>共用类型</strong>，说白了就是这些东西都能隐式转换到哪个，那就会返回那个类型。</p>
+</li>
+<li><blockquote>
+<p>[!tip]</p>
+<p><code>RT _[]{ static_cast&lt;RT&gt;(args)... };</code> 创建一个数组，形参包在它的初始化器中展开，初始化这个数组，数组存储了我们传入的全部的参数。</p>
+<blockquote>
+<p>因为<a href="https://zh.cppreference.com/w/cpp/language/list_initialization#.E7.AA.84.E5.8C.96.E8.BD.AC.E6.8D.A2" target="_blank">窄化转换</a>禁止了列表初始化中 int 到 double 的隐式转换，所以我们需要显式的转换为“公共类型” <code>RT</code>。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>非类型模板形参也可以使用形参包</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;std::<span class="hljs-type">size_t</span>... N&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span></span>{
+    std::<span class="hljs-type">size_t</span> _[]{ N... }; <span class="hljs-comment">// 展开相当于 1UL, 2UL, 3UL, 4UL, 5UL</span>
+    std::for_each(std::<span class="hljs-built_in">begin</span>(_), std::<span class="hljs-built_in">end</span>(_), 
+        [](std::<span class="hljs-type">size_t</span> n){
+            std::cout &lt;&lt; n &lt;&lt; <span class="hljs-string">' '</span>;
+        }
+    );
+}
+<span class="hljs-built_in">f</span>&lt;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&gt;();
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h2 id="模板分文件"><a name="模板分文件" class="anchor-navigation-ex-anchor" href="#模板分文件"><i class="fa fa-link" aria-hidden="true"></i></a>模板分文件</h2>
+<p>对模板进行分文件，写成 <code>.h</code> <code>.cpp</code> 这种形式。</p>
+<p><strong>这显然是不可以的</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"test.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"test_template.h"</span></span>
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">f</span>();    <span class="hljs-comment">// 非模板，OK</span>
+    <span class="hljs-built_in">f_t</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">// 模板 链接错误</span>
+}
+</code></pre>
+<p>从头讲解编译链接，以及 <code>#include</code> 的知识</p>
+<h3 id="include-指令"><a name="include-指令" class="anchor-navigation-ex-anchor" href="#include-指令"><i class="fa fa-link" aria-hidden="true"></i></a>include 指令</h3>
+<p>预处理指令 <code>#include</code> 开始，就是<strong>简单的替换</strong>，但是不够明确</p>
+<h3 id="分文件的原理是什么？"><a name="分文件的原理是什么？" class="anchor-navigation-ex-anchor" href="#分文件的原理是什么？"><i class="fa fa-link" aria-hidden="true"></i></a>分文件的原理是什么？</h3>
+<p>通常将函数声明放在 <code>.h</code> 文件中，将函数定义放在 <code>.cpp</code> 文件中，我们只需要在需要使用的文件中 <code>include</code> 一个 <code>.h</code> 文件</p>
+<p>事实上是把函数声明复制到了我们当前的文件中。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//main.cpp</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">"test.h"</span></span>
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">f</span>();    <span class="hljs-comment">// 非模板，OK</span>
+}
+</code></pre>
+<p>编译器在编译一个翻译单元（如 main.cpp）的时候，如果发现找不到函数的定义，那么就会空着一个符号地址，将它编译为目标文件。期待<strong>链接器</strong>在链接的时候去其他的翻译单元找到定义来填充符号。</p>
+<p><strong>不单单是函数，全局变量等都是这样，这是编译链接的基本原理和步骤</strong>。</p>
+<blockquote>
+<p>类会有所不同，总而言之后续视频会单独讲解的。</p>
+</blockquote>
+<p>不能模板不能分文件<a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#user-content-fn-4-3aff5140d04d84f7becd8fe2d1479c36" target="_blank">4</a>的原因就显而易见了，我们在讲<a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#使用模板" target="_blank">使用模板</a>的时候就说了：</p>
+<ul>
+<li><strong>模板，只有你“用”了它，才会生成实际的代码</strong>。</li>
+</ul>
+<p>单纯的放在一个 <code>.cpp</code> 文件中，它不会生成任何实际的代码，自然也没有函数定义，也谈不上链接器找符号了。</p>
+<blockquote>
+<p>所以模板通常是直接放在 <code>.h</code> 文件中，而不会分文件。或者说用 <strong><code>.hpp</code></strong> 这种后缀，这种约定俗成的，代表这个文件里放的是模板。</p>
+</blockquote>
+<hr></hr>
+<ol>
+<li>注：函数模板自身并不是类型、函数或任何其他实体。不会从只包含模板定义的源文件生成任何代码。模板只有实例化才会有代码出现。 <a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#user-content-fnref-1-3aff5140d04d84f7becd8fe2d1479c36" target="_blank">↩</a></li>
+<li>注：术语“实例化”，指代的是编译器确定各模板实参（可以是根据传入的参数推导，又或者是自己显式指明模板的实参）后从模板生成实际的代码（如从函数模板生成函数，类模板生成类等），这是在编译期就完成的，没有运行时开销。实例化还分为隐式实例化和显式实例化，后面会详细聊。 <a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#user-content-fnref-2-3aff5140d04d84f7becd8fe2d1479c36" target="_blank">↩</a></li>
+<li>注：“<a href="https://zh.cppreference.com/w/cpp/language/overload_resolution" target="_blank">重载决议</a>”，简单来说，一个函数被重载，编译器必须决定要调用哪个重载，我们决定调用的是各形参与各实参之间的匹配最紧密的重载。 <a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#user-content-fnref-3-3aff5140d04d84f7becd8fe2d1479c36" target="_blank">↩</a></li>
+<li>注：这个问题可以通过显式实例化解决，在<a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/06模板显式实例化解决模板分文件问题.md" target="_blank">后面</a>会讲。 [↩](<a href="https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#user-content-fnref-4-3aff5140d04d84f7bex" target="_blank">https://github.com/Mq-b/Modern-Cpp-templates-tutorial/blob/main/md/第一部分-基础知识/01函数模板.md#user-content-fnref-4-3aff5140d04d84f7bex</a></li>
+</ol>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 01_函数模板</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Modern-Cpp-templates-tutorial">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02_类模板.html" class="navigation navigation-next " aria-label="Next page: 02_类模板">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"01_函数模板","level":"1.4.3.1","depth":3,"next":{"title":"02_类模板","level":"1.4.3.2","depth":3,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/02_类模板.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/02_类模板.md","articles":[]},"previous":{"title":"Modern-Cpp-templates-tutorial","level":"1.4.3","depth":2,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/README.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/README.md","articles":[{"title":"01_函数模板","level":"1.4.3.1","depth":3,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/01_函数模板.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/01_函数模板.md","articles":[]},{"title":"02_类模板","level":"1.4.3.2","depth":3,"path":"docs/Cpp/Modern-Cpp-templates-tutorial/02_类模板.md","ref":"docs/Cpp/Modern-Cpp-templates-tutorial/02_类模板.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/Modern-Cpp-templates-tutorial/01_函数模板.md","mtime":"2025-09-07T09:41:17.121Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

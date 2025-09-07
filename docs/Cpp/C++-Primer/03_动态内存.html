@@ -1,0 +1,2025 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>03_动态内存 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_拷贝控制.html" />
+    
+    
+    <link rel="prev" href="02_关联容器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01_泛型算法.html">
+            
+                <a href="01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="02_关联容器.html">
+            
+                <a href="02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.3" data-path="03_动态内存.html">
+            
+                <a href="03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04_拷贝控制.html">
+            
+                <a href="04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="05_重载运算与类型转换.html">
+            
+                <a href="05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06_面向对象程序设计.html">
+            
+                <a href="06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="07_模板与泛型编程.html">
+            
+                <a href="07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="08_标准库特殊设施.html">
+            
+                <a href="08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="09_用于大型程序的工具.html">
+            
+                <a href="09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="10_特殊工具与技术.html">
+            
+                <a href="10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="11_lambda表达式的类型.html">
+            
+                <a href="11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="12_nullptr.html">
+            
+                <a href="12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Effective-Modern-C++/">
+            
+                <a href="../Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >03_动态内存</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#c-动态内存管理"><b></b>C++ 动态内存管理</a></li><ul><li><span class="title-icon "></span><a href="#本节要点"><b></b>本节要点</a></li><li><span class="title-icon "></span><a href="#一、智能指针"><b></b>一、智能指针</a></li><ul><li><span class="title-icon "></span><a href="#1-sharedptr"><b></b>1. shared_ptr</a></li><li><span class="title-icon "></span><a href="#2-异常安全和内存管理"><b></b>2. 异常安全和内存管理</a></li><li><span class="title-icon "></span><a href="#3-uniqueptr"><b></b>3. unique_ptr</a></li><li><span class="title-icon "></span><a href="#4-weakptr"><b></b>4. weak_ptr</a></li></ul><li><span class="title-icon "></span><a href="#二、动态数组"><b></b>二、动态数组</a></li><ul><li><span class="title-icon "></span><a href="#1--new-和数组"><b></b>1.  new 和数组</a></li></ul></ul></ul></div><a href="#c-动态内存管理" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#c-动态内存管理">C++ 动态内存管理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#本节要点">本节要点</a><i></i></div></li>
+<li><div><a href="#一、智能指针">一、智能指针</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1-sharedptr">1. shared_ptr</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基本用法">基本用法</a><i></i></div></li>
+<li><div><a href="#sharedptr操作">shared_ptr操作</a><i></i></div></li>
+<li><div><a href="#引用计数">引用计数</a><i></i></div></li>
+<li><div><a href="#11-直接管理内存">1.1 直接管理内存</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#111-new-和-delete-运算符">1.1.1 new 和 delete 运算符</a><i></i></div></li>
+<li><div><a href="#112-定位new表达式（placement-new）">1.1.2 定位new表达式（placement new）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#12-智能指针和原始指针的结合使用">1.2 智能指针和原始指针的结合使用</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#从原始指针创建智能指针">从原始指针创建智能指针</a><i></i></div></li>
+<li><div><a href="#自定义删除器">自定义删除器</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#13-reset和智能指针的安全修改">1.3 reset和智能指针的安全修改</a><i></i></div></li>
+<li><div><a href="#使用场景示例">使用场景示例</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#2-异常安全和内存管理">2. 异常安全和内存管理</a><i></i></div></li>
+<li><div><a href="#3-uniqueptr">3. unique_ptr</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#31-基本用法">3.1 基本用法</a><i></i></div></li>
+<li><div><a href="#32-使用自定义删除器">3.2 使用自定义删除器</a><i></i></div></li>
+<li><div><a href="#33-所有权转移">3.3 所有权转移</a><i></i></div></li>
+<li><div><a href="#34-传递和返回uniqueptr">3.4 传递和返回unique_ptr</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#4-weakptr">4. weak_ptr</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#41-基本用法">4.1 基本用法</a><i></i></div></li>
+<li><div><a href="#42-使用lock方法安全访问对象">4.2 使用lock方法安全访问对象</a><i></i></div></li>
+<li><div><a href="#43-lock方法的工作原理">4.3 lock方法的工作原理</a><i></i></div></li>
+<li><div><a href="#44-解决循环引用问题">4.4 解决循环引用问题</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#二、动态数组">二、动态数组</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1--new-和数组">1.  new 和数组</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#11-声明方式：">1.1 声明方式：</a><i></i></div></li>
+<li><div><a href="#12-初始化：">1.2 初始化：</a><i></i></div></li>
+<li><div><a href="#13-释放动态数组">1.3 释放动态数组</a><i></i></div></li>
+<li><div><a href="#14-智能指针和动态数组">1.4 智能指针和动态数组</a><i></i></div></li>
+<li><div><a href="#23-拷贝和填充">2.3 拷贝和填充</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="c-动态内存管理"><a name="c-动态内存管理" class="anchor-navigation-ex-anchor" href="#c-动态内存管理"><i class="fa fa-link" aria-hidden="true"></i></a>C++ 动态内存管理</h1>
+<p>C++的动态内存管理是一个强大但复杂的特性。良好的内存管理对于编写高效、稳定的C++程序至关重要。本章探讨C++中动态内存的分配、使用和释放方法，特别关注现代C++中智能指针的应用。</p>
+<h2 id="本节要点"><a name="本节要点" class="anchor-navigation-ex-anchor" href="#本节要点"><i class="fa fa-link" aria-hidden="true"></i></a>本节要点</h2>
+<ul>
+<li>首选使用标准库智能指针（<code>make_shared</code> / <code>make_unique</code>）管理动态资源，避免直接使用裸 <code>new</code>/<code>delete</code>。</li>
+<li><code>shared_ptr</code> 实现共享所有权；<code>unique_ptr</code> 实现独占所有权；<code>weak_ptr</code> 用于观察 <code>shared_ptr</code> 管理的对象且不增加引用计数，常用于打破循环引用。</li>
+<li>管理动态数组时，优先使用 <code>unique_ptr&lt;T[]&gt;</code> 或标准容器（如 <code>std::vector&lt;T&gt;</code>）；若使用 <code>shared_ptr</code> 管理数组，必须提供自定义删除器。</li>
+<li><code>std::allocator</code> 可将内存分配与对象构造分离，适用于需要精细控制内存和对象构造的场景。</li>
+</ul>
+<h2 id="一、智能指针"><a name="一、智能指针" class="anchor-navigation-ex-anchor" href="#一、智能指针"><i class="fa fa-link" aria-hidden="true"></i></a>一、智能指针</h2>
+<p>智能指针是C++标准库提供的模板类，用于自动管理动态分配的内存，有效防止内存泄漏和指针悬挂等常见问题。</p>
+<ul>
+<li>定义在<code>&lt;memory&gt;</code>头文件中</li>
+<li>基于RAII（资源获取即初始化）原理设计</li>
+<li>C++11引入了三种智能指针：<code>shared_ptr</code>、<code>unique_ptr</code>和<code>weak_ptr</code></li>
+</ul>
+<h3 id="1-sharedptr"><a name="1-sharedptr" class="anchor-navigation-ex-anchor" href="#1-sharedptr"><i class="fa fa-link" aria-hidden="true"></i></a>1. shared_ptr</h3>
+<p><code>shared_ptr</code>是一种共享所有权的智能指针，多个<code>shared_ptr</code>可以指向同一个对象，当最后一个指向该对象的<code>shared_ptr</code>被销毁时，对象才会被释放。</p>
+<h4 id="基本用法"><a name="基本用法" class="anchor-navigation-ex-anchor" href="#基本用法"><i class="fa fa-link" aria-hidden="true"></i></a>基本用法</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 创建shared_ptr</span>
+shared_ptr&lt;string&gt; p1;         <span class="hljs-comment">// 默认初始化为空指针</span>
+shared_ptr&lt;list&lt;<span class="hljs-type">int</span>&gt;&gt; p2;      <span class="hljs-comment">// 指向list&lt;int&gt;的空指针</span>
+shared_ptr&lt;<span class="hljs-type">int</span>&gt; p3 = <span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>);  <span class="hljs-comment">// 指向值为42的int</span>
+shared_ptr&lt;string&gt; p4 = <span class="hljs-built_in">make_shared</span>&lt;string&gt;(<span class="hljs-string">"Hello"</span>);  <span class="hljs-comment">// 指向字符串</span>
+
+<span class="hljs-comment">// 使用shared_ptr</span>
+<span class="hljs-keyword">if</span> (p4) {                      <span class="hljs-comment">// 检查p4是否为空</span>
+    cout &lt;&lt; *p4 &lt;&lt; endl;       <span class="hljs-comment">// 解引用智能指针</span>
+    cout &lt;&lt; p4-&gt;<span class="hljs-built_in">size</span>() &lt;&lt; endl; <span class="hljs-comment">// 访问指向对象的成员</span>
+}
+</code></pre>
+<ol>
+<li>默认初始化的智能指针保存着一个空指针</li>
+<li>解引用一个智能指针返回它指向的对象</li>
+<li><code>make_shared</code>函数是创建<code>shared_ptr</code>的首选方式，它在单次内存分配中同时创建对象和控制块</li>
+</ol>
+<h4 id="sharedptr操作"><a name="sharedptr操作" class="anchor-navigation-ex-anchor" href="#sharedptr操作"><i class="fa fa-link" aria-hidden="true"></i></a>shared_ptr操作</h4>
+<p><code>shared_ptr</code>提供了多种操作方法来管理共享对象：</p>
+<p><img src="assets/table 12.2.png" alt="shared_ptr操作表1"></img></p>
+<p><img src="assets/table 12.2(2" alt="shared_ptr操作表2"></img>.png)</p>
+<h4 id="引用计数"><a name="引用计数" class="anchor-navigation-ex-anchor" href="#引用计数"><i class="fa fa-link" aria-hidden="true"></i></a>引用计数</h4>
+<p><code>shared_ptr</code>通过引用计数机制跟踪有多少个智能指针共享同一个对象：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> p1 = <span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>);  <span class="hljs-comment">// 引用计数为1</span>
+<span class="hljs-keyword">auto</span> p2 = p1;                    <span class="hljs-comment">// 引用计数增加到2</span>
+{
+    <span class="hljs-keyword">auto</span> p3 = p1;                <span class="hljs-comment">// 引用计数增加到3</span>
+}                               <span class="hljs-comment">// p3离开作用域，引用计数减为2</span>
+p<span class="hljs-number">1.</span><span class="hljs-built_in">reset</span>();                     <span class="hljs-comment">// p1不再指向该对象，引用计数减为1</span>
+<span class="hljs-comment">// 当p2离开作用域，引用计数变为0，对象被自动删除</span>
+</code></pre>
+<h4 id="11-直接管理内存"><a name="11-直接管理内存" class="anchor-navigation-ex-anchor" href="#11-直接管理内存"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 直接管理内存</h4>
+<p>除了使用智能指针外，C++也允许程序员直接管理动态内存，但这要求程序员自行确保内存的正确释放，防止内存泄漏和悬挂指针问题。</p>
+<h5 id="111-new-和-delete-运算符"><a name="111-new-和-delete-运算符" class="anchor-navigation-ex-anchor" href="#111-new-和-delete-运算符"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1 new 和 delete 运算符</h5>
+<p><code>new</code>运算符用于动态分配内存，<code>delete</code>运算符用于释放动态分配的内存：</p>
+<p><img src="assets/image-20240708182317353.png" alt="new运算符"></img></p>
+<p><strong>初始化方式</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 内置类型的初始化</span>
+<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>;       <span class="hljs-comment">// 默认初始化，值未定义</span>
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>();     <span class="hljs-comment">// 值初始化为0</span>
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">42</span>);   <span class="hljs-comment">// 初始化为42</span>
+
+<span class="hljs-comment">// 类类型的初始化</span>
+<span class="hljs-keyword">new</span> string;    <span class="hljs-comment">// 默认初始化为空字符串</span>
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>();  <span class="hljs-comment">// 同上，值初始化</span>
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>(<span class="hljs-string">"Hello"</span>);  <span class="hljs-comment">// 初始化为"Hello"</span>
+
+<span class="hljs-comment">// C++11的列表初始化</span>
+<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>{<span class="hljs-number">42</span>};   <span class="hljs-comment">// 初始化为42</span>
+<span class="hljs-keyword">new</span> vector&lt;<span class="hljs-type">int</span>&gt;{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>};  <span class="hljs-comment">// 初始化为包含1,2,3,4的vector</span>
+</code></pre>
+<p><img src="assets/image-20240708182522214.png" alt="内存释放"></img></p>
+<p><strong>内存释放</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-type">int</span>* p1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">42</span>);    <span class="hljs-comment">// 分配一个int</span>
+<span class="hljs-keyword">delete</span> p1;                <span class="hljs-comment">// 释放int</span>
+
+<span class="hljs-type">int</span>* p2 = <span class="hljs-keyword">new</span> <span class="hljs-type">int</span>[<span class="hljs-number">10</span>];    <span class="hljs-comment">// 分配10个int的数组</span>
+<span class="hljs-keyword">delete</span>[] p2;              <span class="hljs-comment">// 释放数组</span>
+</code></pre>
+<p><img src="assets/image-20240708182836153.png" alt="delete细节"></img></p>
+<h5 id="112-定位new表达式（placement-new）"><a name="112-定位new表达式（placement-new）" class="anchor-navigation-ex-anchor" href="#112-定位new表达式（placement-new）"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2 定位new表达式（placement new）</h5>
+<p>定位new表达式允许在预先分配的内存上构造对象，或者传递额外参数给分配函数：</p>
+<p><img src="assets/image-20240708183352629.png" alt="定位new1"></img></p>
+<p><img src="assets/image-20240708183344596.png" alt="定位new2"></img></p>
+<p><strong>示例</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 使用nothrow选项</span>
+<span class="hljs-type">int</span>* p = <span class="hljs-built_in">new</span>(nothrow) <span class="hljs-built_in">int</span>(<span class="hljs-number">42</span>);  <span class="hljs-comment">// 如果分配失败，返回nullptr而非抛出异常</span>
+
+<span class="hljs-comment">// 在预先分配的缓冲区上构造对象</span>
+<span class="hljs-type">char</span> buffer[<span class="hljs-built_in">sizeof</span>(<span class="hljs-type">int</span>)];
+<span class="hljs-type">int</span>* p = <span class="hljs-built_in">new</span>(buffer) <span class="hljs-built_in">int</span>(<span class="hljs-number">42</span>);   <span class="hljs-comment">// 在buffer上构造int对象</span>
+</code></pre>
+<h4 id="12-智能指针和原始指针的结合使用"><a name="12-智能指针和原始指针的结合使用" class="anchor-navigation-ex-anchor" href="#12-智能指针和原始指针的结合使用"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 智能指针和原始指针的结合使用</h4>
+<p>智能指针需要与传统的原始指针交互，尤其是与那些使用C风格内存管理的代码协作时。</p>
+<h5 id="从原始指针创建智能指针"><a name="从原始指针创建智能指针" class="anchor-navigation-ex-anchor" href="#从原始指针创建智能指针"><i class="fa fa-link" aria-hidden="true"></i></a>从原始指针创建智能指针</h5>
+<p><img src="assets/image-20240708190934798.png" alt="创建智能指针"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 使用原始指针初始化智能指针</span>
+<span class="hljs-type">int</span>* raw_ptr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">42</span>);
+<span class="hljs-function">shared_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">sp</span><span class="hljs-params">(raw_ptr)</span></span>;  <span class="hljs-comment">// shared_ptr接管内存管理</span>
+
+<span class="hljs-comment">// 推荐使用make_shared而不是上述方式</span>
+<span class="hljs-keyword">auto</span> sp2 = <span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>);  <span class="hljs-comment">// 更安全、更高效</span>
+</code></pre>
+<h5 id="自定义删除器"><a name="自定义删除器" class="anchor-navigation-ex-anchor" href="#自定义删除器"><i class="fa fa-link" aria-hidden="true"></i></a>自定义删除器</h5>
+<p><img src="assets/image-20240708191048056.png" alt="自定义删除器"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 为需要特殊清理的资源定义删除器</span>
+<span class="hljs-keyword">auto</span> deleter = [](FILE* fp) { <span class="hljs-built_in">fclose</span>(fp); };
+<span class="hljs-function">shared_ptr&lt;FILE&gt; <span class="hljs-title">fp</span><span class="hljs-params">(fopen(<span class="hljs-string">"data.txt"</span>, <span class="hljs-string">"r"</span>), deleter)</span></span>;
+<span class="hljs-comment">// 当fp离开作用域，会调用deleter来关闭文件</span>
+</code></pre>
+<p><img src="assets/image-20240708191056988.png" alt="智能指针细节"></img></p>
+<blockquote>
+<p>[!WARNING]</p>
+<p><strong>所有权转移注意事项</strong></p>
+<p><img src="assets/image-20240708191532530.png" alt="所有权转移"></img></p>
+<p>一个动态分配的对象应该只由一种智能指针类型管理。混合使用不同类型的智能指针，或者混用智能指针和原始指针管理同一对象，会导致多重释放或悬挂指针问题。</p>
+<p>[!WARNING]</p>
+<p><strong>谨慎使用get方法</strong></p>
+<p><img src="assets/image-20240708194031848.png" alt="get方法"></img></p>
+<p>若使用<code>get()</code>方法获取的原始指针初始化另一个智能指针，会出现两个独立的智能指针（<strong>计数器不共享</strong>）指向相同的内存，导致<strong>未定义行为</strong>，通常是对象被释放两次。</p>
+<pre><code class="lang-cpp"><span class="hljs-function">shared_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">p1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">42</span>))</span></span>;
+<span class="hljs-comment">// 错误用法：会导致double free</span>
+<span class="hljs-function">shared_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">p2</span><span class="hljs-params">(p<span class="hljs-number">1.</span>get())</span></span>;  <span class="hljs-comment">// p1和p2各自维护引用计数</span>
+</code></pre>
+</blockquote>
+<h4 id="13-reset和智能指针的安全修改"><a name="13-reset和智能指针的安全修改" class="anchor-navigation-ex-anchor" href="#13-reset和智能指针的安全修改"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 reset和智能指针的安全修改</h4>
+<p><code>reset</code>方法允许智能指针指向新对象，同时正确处理原对象的引用计数：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 安全地修改shared_ptr指向的对象</span>
+<span class="hljs-keyword">if</span> (!p.<span class="hljs-built_in">unique</span>()) {
+    p.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>(*p));  <span class="hljs-comment">// 如果有其他shared_ptr指向同一对象，先创建副本</span>
+}
+*p += newVal;  <span class="hljs-comment">// 现在确保p是唯一指向该对象的指针，可以安全修改</span>
+
+<span class="hljs-comment">// 重置为空或其他对象</span>
+<span class="hljs-function">shared_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">p1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">42</span>))</span></span>;
+p<span class="hljs-number">1.</span><span class="hljs-built_in">reset</span>();                <span class="hljs-comment">// p1现在为空</span>
+p<span class="hljs-number">1.</span><span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">1024</span>));   <span class="hljs-comment">// p1指向新值1024</span>
+</code></pre>
+<h4 id="使用场景示例"><a name="使用场景示例" class="anchor-navigation-ex-anchor" href="#使用场景示例"><i class="fa fa-link" aria-hidden="true"></i></a>使用场景示例</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 实现写时复制的字符串类</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">CopyOnWriteString</span> {
+<span class="hljs-keyword">private</span>:
+    shared_ptr&lt;string&gt; text;
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">CopyOnWriteString</span>(<span class="hljs-type">const</span> string&amp; s) : <span class="hljs-built_in">text</span>(<span class="hljs-built_in">make_shared</span>&lt;string&gt;(s)) {}
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">modify</span><span class="hljs-params">(<span class="hljs-type">const</span> string&amp; newText)</span> </span>{
+        <span class="hljs-keyword">if</span> (!text.<span class="hljs-built_in">unique</span>())  <span class="hljs-comment">// 如果有其他对象共享此文本</span>
+            text.<span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>(*text));  <span class="hljs-comment">// 创建副本</span>
+        *text = newText;  <span class="hljs-comment">// 修改文本</span>
+    }
+
+    <span class="hljs-function">string <span class="hljs-title">get</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>{ <span class="hljs-keyword">return</span> *text; }
+};
+</code></pre>
+<h3 id="2-异常安全和内存管理"><a name="2-异常安全和内存管理" class="anchor-navigation-ex-anchor" href="#2-异常安全和内存管理"><i class="fa fa-link" aria-hidden="true"></i></a>2. 异常安全和内存管理</h3>
+<p>智能指针在异常处理中特别有用，因为它们能够自动释放不再需要的内存，防止内存泄漏。</p>
+<p><img src="assets/image-20240708195648307.png" alt="异常安全"></img></p>
+<p><strong>对比原始指针和智能指针在异常情况下的行为</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 使用原始指针 - 可能导致内存泄漏</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> *ip = <span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">53</span>);
+    <span class="hljs-comment">// 如果这里发生异常且未在f中被捕获</span>
+    <span class="hljs-comment">// ip指向的内存永远不会被释放</span>
+    <span class="hljs-keyword">delete</span> ip;  <span class="hljs-comment">// 如果前面有异常，这行代码不会执行</span>
+}
+
+<span class="hljs-comment">// 使用智能指针 - 异常安全</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">g</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function">shared_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">sp</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">53</span>))</span></span>;
+    <span class="hljs-comment">// 即使发生异常，sp也会被正确销毁</span>
+    <span class="hljs-comment">// sp指向的内存会被自动释放</span>
+}
+</code></pre>
+<blockquote>
+<p>智能指针也是处理那些具有复杂清理要求（如文件句柄、网络连接等）的资源的理想选择。</p>
+<p>[!IMPORTANT]</p>
+<p><img src="assets/image-20240708200256498.png" alt="内存管理原则"></img></p>
+<p>使用RAII（资源获取即初始化）模式和智能指针是现代C++中管理资源的最佳实践。</p>
+</blockquote>
+<hr></hr>
+<h3 id="3-uniqueptr"><a name="3-uniqueptr" class="anchor-navigation-ex-anchor" href="#3-uniqueptr"><i class="fa fa-link" aria-hidden="true"></i></a>3. unique_ptr</h3>
+<p><code>unique_ptr</code>是一种独占所有权的智能指针，不允许多个指针指向同一对象。它提供了对动态分配资源的专属访问。</p>
+<p><img src="assets/image-20240708200858636.png" alt="unique_ptr操作"></img></p>
+<h4 id="31-基本用法"><a name="31-基本用法" class="anchor-navigation-ex-anchor" href="#31-基本用法"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 基本用法</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 创建unique_ptr</span>
+<span class="hljs-function">unique_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">p1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">42</span>))</span></span>;
+unique_ptr&lt;string&gt; p2 = <span class="hljs-built_in">make_unique</span>&lt;string&gt;(<span class="hljs-string">"Hello"</span>);  <span class="hljs-comment">// C++14引入的函数</span>
+
+<span class="hljs-comment">// 使用unique_ptr</span>
+<span class="hljs-keyword">if</span> (p1) {
+    cout &lt;&lt; *p1 &lt;&lt; endl;  <span class="hljs-comment">// 访问指向的对象</span>
+}
+
+<span class="hljs-comment">// 释放所有权</span>
+p<span class="hljs-number">1.</span><span class="hljs-built_in">reset</span>();  <span class="hljs-comment">// 释放对象，p1变为空</span>
+p<span class="hljs-number">2.</span><span class="hljs-built_in">reset</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">string</span>(<span class="hljs-string">"World"</span>));  <span class="hljs-comment">// 释放旧对象，指向新对象</span>
+</code></pre>
+<h4 id="32-使用自定义删除器"><a name="32-使用自定义删除器" class="anchor-navigation-ex-anchor" href="#32-使用自定义删除器"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 使用自定义删除器</h4>
+<p><code>unique_ptr</code>支持自定义删除器，但删除器类型是智能指针类型的一部分。</p>
+<p><strong>1. 使用函数对象作为删除器</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;memory&gt;</span></span>
+
+<span class="hljs-comment">// 自定义删除器</span>
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">CustomDeleter</span> {
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(<span class="hljs-type">int</span>* ptr)</span> <span class="hljs-type">const</span> </span>{
+        std::cout &lt;&lt; <span class="hljs-string">"CustomDeleter called\n"</span>;
+        <span class="hljs-keyword">delete</span> ptr;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function">std::unique_ptr&lt;<span class="hljs-type">int</span>, CustomDeleter&gt; <span class="hljs-title">u1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">42</span>))</span></span>;  <span class="hljs-comment">// 使用自定义删除器</span>
+    <span class="hljs-comment">// 当u1离开作用域时，会调用CustomDeleter</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><strong>2. 使用lambda表达式作为删除器</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;memory&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">auto</span> deleter = [](<span class="hljs-type">int</span>* ptr) {
+        std::cout &lt;&lt; <span class="hljs-string">"Lambda deleter called\n"</span>;
+        <span class="hljs-keyword">delete</span> ptr;
+    };
+
+    <span class="hljs-function">std::unique_ptr&lt;<span class="hljs-type">int</span>, <span class="hljs-title">decltype</span><span class="hljs-params">(deleter)</span>&gt; <span class="hljs-title">u2</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">42</span>), deleter)</span></span>;  <span class="hljs-comment">// 使用lambda删除器</span>
+    <span class="hljs-comment">// 当u2离开作用域时，会调用lambda删除器</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h4 id="33-所有权转移"><a name="33-所有权转移" class="anchor-navigation-ex-anchor" href="#33-所有权转移"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 所有权转移</h4>
+<p>由于<code>unique_ptr</code>不共享所有权，复制是不允许的，但可以通过移动语义转移所有权：</p>
+<p><img src="assets/image-20240708202527928.png" alt="所有权转移"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-function">unique_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">p1</span><span class="hljs-params">(<span class="hljs-keyword">new</span> <span class="hljs-type">int</span>(<span class="hljs-number">42</span>))</span></span>;
+<span class="hljs-comment">// unique_ptr&lt;int&gt; p2 = p1;  // 错误：不允许复制</span>
+
+<span class="hljs-comment">// 转移所有权</span>
+unique_ptr&lt;<span class="hljs-type">int</span>&gt; p3 = std::<span class="hljs-built_in">move</span>(p1);  <span class="hljs-comment">// p1现在为空，p3接管了资源</span>
+p1 = std::<span class="hljs-built_in">move</span>(p3);  <span class="hljs-comment">// 所有权再次转移回p1，p3现在为空</span>
+</code></pre>
+<h4 id="34-传递和返回uniqueptr"><a name="34-传递和返回uniqueptr" class="anchor-navigation-ex-anchor" href="#34-传递和返回uniqueptr"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 传递和返回unique_ptr</h4>
+<p><img src="assets/image-20240708203229242.png" alt="传递unique_ptr"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 返回unique_ptr</span>
+<span class="hljs-function">unique_ptr&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">createInt</span><span class="hljs-params">(<span class="hljs-type">int</span> value)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">unique_ptr</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-keyword">new</span> <span class="hljs-built_in">int</span>(value));  <span class="hljs-comment">// 可以返回临时unique_ptr</span>
+    <span class="hljs-comment">// 或者更简洁地</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">make_unique</span>&lt;<span class="hljs-type">int</span>&gt;(value);  <span class="hljs-comment">// C++14</span>
+}
+
+<span class="hljs-comment">// 使用返回的unique_ptr</span>
+<span class="hljs-keyword">auto</span> p = <span class="hljs-built_in">createInt</span>(<span class="hljs-number">42</span>);
+</code></pre>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240708203355673.png" alt="unique_ptr技巧"></img></p>
+<p>从C++14开始，推荐使用<code>std::make_unique</code>创建<code>unique_ptr</code>，这样更安全且更简洁。</p>
+</blockquote>
+<hr></hr>
+<h3 id="4-weakptr"><a name="4-weakptr" class="anchor-navigation-ex-anchor" href="#4-weakptr"><i class="fa fa-link" aria-hidden="true"></i></a>4. weak_ptr</h3>
+<p><code>weak_ptr</code>是一种不控制所指向对象生存期的智能指针，它指向由<code>shared_ptr</code>管理的对象，但不会影响对象的引用计数。</p>
+<p><img src="assets/image-20240708210228107.png" alt="weak_ptr操作"></img></p>
+<h4 id="41-基本用法"><a name="41-基本用法" class="anchor-navigation-ex-anchor" href="#41-基本用法"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 基本用法</h4>
+<p><code>weak_ptr</code>主要用于<strong>解决循环引用</strong>问题，以及在不确定对象是否还存在时安全地访问该对象。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 创建weak_ptr</span>
+shared_ptr&lt;<span class="hljs-type">int</span>&gt; sp = <span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>);
+weak_ptr&lt;<span class="hljs-type">int</span>&gt; wp = sp;  <span class="hljs-comment">// wp观察sp指向的对象但不增加引用计数</span>
+
+<span class="hljs-comment">// 检查对象是否存在并使用</span>
+<span class="hljs-keyword">if</span> (shared_ptr&lt;<span class="hljs-type">int</span>&gt; locked = wp.<span class="hljs-built_in">lock</span>()) {
+    <span class="hljs-comment">// 对象仍然存在</span>
+    cout &lt;&lt; <span class="hljs-string">"Value: "</span> &lt;&lt; *locked &lt;&lt; endl;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// 对象已被销毁</span>
+    cout &lt;&lt; <span class="hljs-string">"Object no longer exists"</span> &lt;&lt; endl;
+}
+</code></pre>
+<h4 id="42-使用lock方法安全访问对象"><a name="42-使用lock方法安全访问对象" class="anchor-navigation-ex-anchor" href="#42-使用lock方法安全访问对象"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 使用lock方法安全访问对象</h4>
+<p><code>lock</code>方法是<code>weak_ptr</code>的核心功能，它尝试提升<code>weak_ptr</code>为<code>shared_ptr</code>：</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;memory&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    std::shared_ptr&lt;<span class="hljs-type">int</span>&gt; sp = std::<span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>);
+    std::weak_ptr&lt;<span class="hljs-type">int</span>&gt; wp = sp;
+
+    <span class="hljs-comment">// 对象仍存在时的lock</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span> locked_sp = wp.<span class="hljs-built_in">lock</span>()) {
+        std::cout &lt;&lt; <span class="hljs-string">"Locked shared_ptr value: "</span> &lt;&lt; *locked_sp &lt;&lt; std::endl;
+        std::cout &lt;&lt; <span class="hljs-string">"Original shared_ptr use count: "</span> &lt;&lt; sp.<span class="hljs-built_in">use_count</span>() &lt;&lt; std::endl;
+        std::cout &lt;&lt; <span class="hljs-string">"Locked shared_ptr use count: "</span> &lt;&lt; locked_sp.<span class="hljs-built_in">use_count</span>() &lt;&lt; std::endl;
+    } <span class="hljs-keyword">else</span> {
+        std::cout &lt;&lt; <span class="hljs-string">"The managed object has been deleted."</span> &lt;&lt; std::endl;
+    }
+
+    <span class="hljs-comment">// 销毁原始shared_ptr</span>
+    sp.<span class="hljs-built_in">reset</span>();
+
+    <span class="hljs-comment">// 对象已销毁时的lock</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span> locked_sp = wp.<span class="hljs-built_in">lock</span>()) {
+        std::cout &lt;&lt; <span class="hljs-string">"Object still exists."</span> &lt;&lt; std::endl;
+    } <span class="hljs-keyword">else</span> {
+        std::cout &lt;&lt; <span class="hljs-string">"The managed object has been deleted."</span> &lt;&lt; std::endl;
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h4 id="43-lock方法的工作原理"><a name="43-lock方法的工作原理" class="anchor-navigation-ex-anchor" href="#43-lock方法的工作原理"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 lock方法的工作原理</h4>
+<p><code>std::weak_ptr::lock</code>方法返回一个<code>std::shared_ptr</code>，具有以下特性：</p>
+<ol>
+<li><p><strong>如果原对象存在</strong>：返回一个新的<code>shared_ptr</code>，该指针与其他指向同一对象的<code>shared_ptr</code>共享所有权。引用计数会增加，反映新的<code>shared_ptr</code>的存在。</p>
+</li>
+<li><p><strong>如果原对象已销毁</strong>：返回一个空的<code>shared_ptr</code>（等价于默认构造的<code>shared_ptr</code>）。</p>
+</li>
+<li><p><strong>临时对象处理</strong>：如果调用<code>wp.lock()</code>但不保存返回值，创建的<code>shared_ptr</code>会在语句结束时立即销毁，引用计数会相应减少。</p>
+</li>
+</ol>
+<h4 id="44-解决循环引用问题"><a name="44-解决循环引用问题" class="anchor-navigation-ex-anchor" href="#44-解决循环引用问题"><i class="fa fa-link" aria-hidden="true"></i></a>4.4 解决循环引用问题</h4>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span> {
+<span class="hljs-keyword">public</span>:
+    shared_ptr&lt;Node&gt; next;  <span class="hljs-comment">// 强引用可能导致循环引用</span>
+    weak_ptr&lt;Node&gt; parent;  <span class="hljs-comment">// 使用weak_ptr避免循环引用</span>
+
+    ~<span class="hljs-built_in">Node</span>() {
+        cout &lt;&lt; <span class="hljs-string">"Node destroyed"</span> &lt;&lt; endl;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">auto</span> parent = <span class="hljs-built_in">make_shared</span>&lt;Node&gt;();
+    <span class="hljs-keyword">auto</span> child = <span class="hljs-built_in">make_shared</span>&lt;Node&gt;();
+
+    <span class="hljs-comment">// 建立双向引用</span>
+    parent-&gt;next = child;
+    child-&gt;parent = parent;  <span class="hljs-comment">// 使用weak_ptr避免循环引用</span>
+
+    <span class="hljs-comment">// 当我们释放这些指针时，对象能正确释放</span>
+    <span class="hljs-comment">// 如果都使用shared_ptr，将导致内存泄漏</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="二、动态数组"><a name="二、动态数组" class="anchor-navigation-ex-anchor" href="#二、动态数组"><i class="fa fa-link" aria-hidden="true"></i></a>二、动态数组</h2>
+<p>动态数组是在运行时动态分配的一组连续的对象，其大小在编译时不需要知道。C++提供多种管理动态数组的方式。</p>
+<p><img src="assets/image-20240709131455127.png" alt="动态数组"></img></p>
+<h3 id="1--new-和数组"><a name="1--new-和数组" class="anchor-navigation-ex-anchor" href="#1--new-和数组"><i class="fa fa-link" aria-hidden="true"></i></a>1.  new 和数组</h3>
+<h4 id="11-声明方式："><a name="11-声明方式：" class="anchor-navigation-ex-anchor" href="#11-声明方式："><i class="fa fa-link" aria-hidden="true"></i></a>1.1 声明方式：</h4>
+<ol>
+<li><p><code>int * pia = new int [ size_t ] ;</code></p>
+</li>
+<li><pre><code class="lang-cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> arrT [<span class="hljs-number">42</span>];
+<span class="hljs-type">int</span> *p = <span class="hljs-keyword">new</span> arrT;  <span class="hljs-comment">//实际和方式一等效</span>
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>[!NOTE]</p>
+<p>实际上所谓的“动态数组”并不是数组，使用new T []获得的T类型指针ptr，虽然我们可以通过ptr访问申请到的空间，但是不能对它调用  </p>
+<p><code>begin</code>或<code>end</code>，也不能用范围 for 语句来处理动态数组中的元素。</p>
+</blockquote>
+<h4 id="12-初始化："><a name="12-初始化：" class="anchor-navigation-ex-anchor" href="#12-初始化："><i class="fa fa-link" aria-hidden="true"></i></a>1.2 初始化：</h4>
+<p><img src="assets/image-20240709133012740.png" alt="image-20240709133012740"></img></p>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p><img src="assets/image-20240709133048675.png" alt="image-20240709133048675"></img></p>
+<p>[!IMPORTANT]</p>
+<p>不能用 auto 分配数组</p>
+<p><code>auto p = new auto[10](1)  //错误</code> </p>
+<p>[!NOTE]</p>
+<p><code>new T[0]</code>是合法的</p>
+<p><img src="assets/image-20240709133502017.png" alt="image-20240709133502017"></img></p>
+</blockquote>
+<h4 id="13-释放动态数组"><a name="13-释放动态数组" class="anchor-navigation-ex-anchor" href="#13-释放动态数组"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 释放动态数组</h4>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 错误用法示例（不要这样做，会导致 double free）</span>
+<span class="hljs-comment">// shared_ptr&lt;int&gt; p1(new int(42));</span>
+<span class="hljs-comment">// 错误示例（不要这样做）：</span>
+<span class="hljs-comment">// shared_ptr&lt;int&gt; p2(p1.get());  // p1 和 p2 各自认为自己拥有该裸指针 -&gt; double free</span>
+<span class="hljs-comment">// 正确示例：</span>
+<span class="hljs-comment">// auto p2 = p1; // 共享所有权</span>
+<span class="hljs-comment">// weak_ptr&lt;int&gt; wp = p1; // 仅观察，不增加引用计数</span>
+
+<span class="hljs-comment">// 正确做法：直接复制 shared_ptr 或使用 weak_ptr 来观察</span>
+{
+    <span class="hljs-keyword">auto</span> p1 = std::<span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>);
+    <span class="hljs-keyword">auto</span> p2 = p1; <span class="hljs-comment">// 正确，共享同一个控制块，引用计数安全增加</span>
+}
+
+<span class="hljs-comment">// 如果只想观察而不影响生命周期，可使用 weak_ptr</span>
+{
+    <span class="hljs-keyword">auto</span> p1 = std::<span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">100</span>);
+    std::weak_ptr&lt;<span class="hljs-type">int</span>&gt; wp = p1; <span class="hljs-comment">// 不增加引用计数</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">auto</span> sp = wp.<span class="hljs-built_in">lock</span>()) {
+        <span class="hljs-comment">// 可以安全地使用 sp</span>
+    }
+}
+</code></pre>
+<p>&gt;</p>
+<blockquote>
+<p><img src="assets/image-20240709133657012.png" alt="image-20240709133657012"></img></p>
+</blockquote>
+<h4 id="14-智能指针和动态数组"><a name="14-智能指针和动态数组" class="anchor-navigation-ex-anchor" href="#14-智能指针和动态数组"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 智能指针和动态数组</h4>
+<blockquote>
+<p>使用 unique_ptr 管理 new 分配的数组。</p>
+</blockquote>
+<pre><code class="lang-cpp">shared_ptr&lt;<span class="hljs-type">int</span>&gt; p1 = <span class="hljs-built_in">make_shared</span>&lt;<span class="hljs-type">int</span>&gt;(<span class="hljs-number">42</span>); <span class="hljs-comment">// 推荐：使用 make_shared</span>
+<span class="hljs-comment">// 错误示例（不要这样做）：</span>
+<span class="hljs-comment">// shared_ptr&lt;int&gt; p2(p1.get());  // 错误用法：p1和p2各自维护引用计数 -&gt; double free</span>
+
+<span class="hljs-comment">// 正确做法：共享所有权</span>
+<span class="hljs-keyword">auto</span> p2 = p1; <span class="hljs-comment">// p1 和 p2 共享引用计数</span>
+
+<span class="hljs-comment">// 或者，仅想观察但不拥有：使用 weak_ptr</span>
+weak_ptr&lt;<span class="hljs-type">int</span>&gt; wp = p1; <span class="hljs-comment">// 不增加引用计数，仅观察</span>
+</code></pre>
+<p>up.reset(); // 释放并删除数组（调用 delete[]）</p>
+<pre><code>
+![image-20240709134037770](./assets/image-20240709134037770.png)
+
+&gt; shared_ptr 本质上仍是一个**单一对象的指针**，因此要使用它管理动态数组，需要**自行定义删除器**。
+
+![image-20240709134437442](./assets/image-20240709134437442.png)
+
+
+
+### 2. allocator 类
+
+&gt; std::allocator 类定义在头文件 memory 中，它帮助我们将**内存分配和对象构造分离**开来。它提供一种类型感知的内存分配方法，它分配的内存是原始的、未构造的。
+
+
+
+#### 2.1 new 的局限性：
+
+**内存分配和对象构造绑定**
+
+1. 提前分配**并初始化**了可能不需要使用的对象。
+
+2. 对于确实要使用的对象，在初始化时进行了默认初始化，但默认初始化往往不是我们所需要的，重复赋值造成了资源浪费。
+
+3. &gt; [!IMPORTANT]
+   &gt;
+   &gt; 使得没有默认构造函数的类无法动态分配数组
+
+
+
+#### 2.2 allocator类的使用
+
+&gt; std::allocator 是一个模板
+
+````cpp
+allocator&lt;string&gt; alloc; // 可以分配string的allocator对象
+auto const p = alloc.allocate(n); // 分配 n 个未构造的 string 存储空间（未初始化）
+// 需要手动构造 / 销毁 / 释放：
+for (size_t i = 0; i &lt; n; ++i)
+    alloc.construct(p + i, ""); // 在分配的原始内存上构造对象
+
+// 使用完毕后，先销毁对象再释放内存
+for (size_t i = 0; i &lt; n; ++i)
+    alloc.destroy(p + i);
+alloc.deallocate(p, n);
+</code></pre><p><img src="assets/image-20240709141130378.png" alt="image-20240709141130378"></img></p>
+<h4 id="23-拷贝和填充"><a name="23-拷贝和填充" class="anchor-navigation-ex-anchor" href="#23-拷贝和填充"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 拷贝和填充</h4>
+<p><img src="assets/image-20240709171002289.png" alt="image-20240709171002289"></img></p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:16
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 03_动态内存</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_关联容器.html" class="navigation navigation-prev " aria-label="Previous page: 02_关联容器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_拷贝控制.html" class="navigation navigation-next " aria-label="Next page: 04_拷贝控制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03_动态内存","level":"1.4.1.3","depth":3,"next":{"title":"04_拷贝控制","level":"1.4.1.4","depth":3,"path":"docs/Cpp/C++-Primer/04_拷贝控制.md","ref":"docs/Cpp/C++-Primer/04_拷贝控制.md","articles":[]},"previous":{"title":"02_关联容器","level":"1.4.1.2","depth":3,"path":"docs/Cpp/C++-Primer/02_关联容器.md","ref":"docs/Cpp/C++-Primer/02_关联容器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/C++-Primer/03_动态内存.md","mtime":"2025-09-07T09:41:16.878Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

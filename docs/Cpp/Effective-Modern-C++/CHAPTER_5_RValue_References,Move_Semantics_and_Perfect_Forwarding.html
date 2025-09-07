@@ -1,0 +1,3244 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="CHAPTER_6_Lambda_Expressions.html" />
+    
+    
+    <link rel="prev" href="CHAPTER_4_Smart_Pointers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../C++-Primer/">
+            
+                <a href="../C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../C++-Primer/01_泛型算法.html">
+            
+                <a href="../C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../C++-Primer/02_关联容器.html">
+            
+                <a href="../C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../C++-Primer/03_动态内存.html">
+            
+                <a href="../C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../C++-Primer/04_拷贝控制.html">
+            
+                <a href="../C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../C++-Primer/12_nullptr.html">
+            
+                <a href="../C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="CHAPTER_1_Deducing_Types.html">
+            
+                <a href="CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="CHAPTER_2_auto.html">
+            
+                <a href="CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.5" data-path="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#第5章-右值引用，移动语义，完美转发"><b></b>第5章 右值引用，移动语义，完美转发</a></li><ul><ul><li><span class="title-icon "></span><a href="#移动语义（move-semantics）和完美转发（perfect-forwarding）"><b></b>移动语义（move semantics）和完美转发（perfect forwarding）</a></li></ul><li><span class="title-icon "></span><a href="#item-23-understand-stdmove-and-stdforward"><b></b>Item 23: Understand std::move and std::forward</a></li><ul><li><span class="title-icon "></span><a href="#stdmove"><b></b>std::move</a></li><li><span class="title-icon "></span><a href="#stdforward"><b></b>std::forward</a></li><li><span class="title-icon "></span><a href="#stdmove-vs-stdforward"><b></b>std::move vs std::forward</a></li><li><span class="title-icon "></span><a href="#总结"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-24-distinguish-universal-references-from-rvalue-references"><b></b>Item 24: Distinguish universal references from rvalue references</a></li><ul><li><span class="title-icon "></span><a href="#t"><b></b>T&amp;&amp;</a></li><li><span class="title-icon "></span><a href="#通用引用"><b></b>通用引用</a></li><li><span class="title-icon "></span><a href="#总结_1"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-25-use-stdmove-on-rvalue-references-stdforward-on-universal-references"><b></b>Item 25: Use std::move on rvalue references, std::forward on universal references</a></li><ul><li><span class="title-icon "></span><a href="#右值引用和通用引用"><b></b>右值引用和通用引用</a></li><li><span class="title-icon "></span><a href="#何时使用"><b></b>何时使用</a></li><li><span class="title-icon "></span><a href="#返回值绑定"><b></b>返回值绑定</a></li><li><span class="title-icon "></span><a href="#返回值优化"><b></b>返回值优化</a></li><li><span class="title-icon "></span><a href="#总结_2"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-26-avoid-overloading-on-universal-references"><b></b>Item 26: Avoid overloading on universal references</a></li><ul><li><span class="title-icon "></span><a href="#示例"><b></b>示例</a></li><li><span class="title-icon "></span><a href="#完美转发构造函数"><b></b>完美转发构造函数</a></li><li><span class="title-icon "></span><a href="#总结_3"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-27-familiarize-yourself-with-alternatives-to-overloading-on-universal-references"><b></b>Item 27: Familiarize yourself with alternatives to overloading on universal references</a></li><ul><li><span class="title-icon "></span><a href="#放弃重载"><b></b>放弃重载</a></li><li><span class="title-icon "></span><a href="#传递const-t"><b></b>传递const T&amp;</a></li><li><span class="title-icon "></span><a href="#传值"><b></b>传值</a></li><li><span class="title-icon "></span><a href="#使用tag-dispatch"><b></b>使用tag dispatch</a></li><li><span class="title-icon "></span><a href="#约束使用通用引用的模板"><b></b>约束使用通用引用的模板</a></li><li><span class="title-icon "></span><a href="#折中"><b></b>折中</a></li><li><span class="title-icon "></span><a href="#总结_4"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-28-understand-reference-collapsing"><b></b>Item 28: Understand reference collapsing</a></li><ul><li><span class="title-icon "></span><a href="#通用引用和对左值右值的编码"><b></b>通用引用和对左值右值的编码</a></li><li><span class="title-icon "></span><a href="#引用折叠（reference-collapsing）"><b></b>引用折叠（reference collapsing）</a></li><li><span class="title-icon "></span><a href="#总结_5"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-29-assume-that-move-operations-are-not-present-not-cheap-and-not-used"><b></b>Item 29: Assume that move operations are not present, not cheap, and not used</a></li><ul><li><span class="title-icon "></span><a href="#移动语义"><b></b>移动语义</a></li><li><span class="title-icon "></span><a href="#冷水"><b></b>"冷水"</a></li><li><span class="title-icon "></span><a href="#移动语义并无优势"><b></b>移动语义并无优势?</a></li><li><span class="title-icon "></span><a href="#总结_6"><b></b>总结</a></li></ul><li><span class="title-icon "></span><a href="#item-30-familiarize-yourself-with-perfect-forwarding-failure-cases"><b></b>Item 30: Familiarize yourself with perfect forwarding failure cases</a></li><ul><li><span class="title-icon "></span><a href="#完美转发"><b></b>完美转发</a></li><li><span class="title-icon "></span><a href="#无法做到完美转发的实参类型"><b></b>无法做到完美转发的实参类型</a></li><li><span class="title-icon "></span><a href="#总结_7"><b></b>总结</a></li></ul></ul></ul></div><a href="#第5章-右值引用，移动语义，完美转发" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#第5章-右值引用，移动语义，完美转发">第5章 右值引用，移动语义，完美转发</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#移动语义（move-semantics）和完美转发（perfect-forwarding）">移动语义（move semantics）和完美转发（perfect forwarding）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-23-understand-stdmove-and-stdforward">Item 23: Understand std::move and std::forward</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#stdmove">std::move</a><i></i></div></li>
+<li><div><a href="#stdforward">std::forward</a><i></i></div></li>
+<li><div><a href="#stdmove-vs-stdforward">std::move vs std::forward</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-24-distinguish-universal-references-from-rvalue-references">Item 24: Distinguish universal references from rvalue references</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#tampamp">T&amp;&amp;</a><i></i></div></li>
+<li><div><a href="#通用引用">通用引用</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-25-use-stdmove-on-rvalue-references-stdforward-on-universal-references">Item 25: Use std::move on rvalue references, std::forward on universal references</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#右值引用和通用引用">右值引用和通用引用</a><i></i></div></li>
+<li><div><a href="#何时使用">何时使用</a><i></i></div></li>
+<li><div><a href="#返回值绑定">返回值绑定</a><i></i></div></li>
+<li><div><a href="#返回值优化">返回值优化</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-26-avoid-overloading-on-universal-references">Item 26: Avoid overloading on universal references</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#示例">示例</a><i></i></div></li>
+<li><div><a href="#完美转发构造函数">完美转发构造函数</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-27-familiarize-yourself-with-alternatives-to-overloading-on-universal-references">Item 27: Familiarize yourself with alternatives to overloading on universal references</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#放弃重载">放弃重载</a><i></i></div></li>
+<li><div><a href="#传递const-tamp">传递const T&amp;</a><i></i></div></li>
+<li><div><a href="#传值">传值</a><i></i></div></li>
+<li><div><a href="#使用tag-dispatch">使用tag dispatch</a><i></i></div></li>
+<li><div><a href="#约束使用通用引用的模板">约束使用通用引用的模板</a><i></i></div></li>
+<li><div><a href="#折中">折中</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-28-understand-reference-collapsing">Item 28: Understand reference collapsing</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#通用引用和对左值右值的编码">通用引用和对左值右值的编码</a><i></i></div></li>
+<li><div><a href="#引用折叠（reference-collapsing）">引用折叠（reference collapsing）</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-29-assume-that-move-operations-are-not-present-not-cheap-and-not-used">Item 29: Assume that move operations are not present, not cheap, and not used</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#移动语义">移动语义</a><i></i></div></li>
+<li><div><a href="#quot冷水quot">"冷水"</a><i></i></div></li>
+<li><div><a href="#移动语义并无优势">移动语义并无优势?</a><i></i></div></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#item-30-familiarize-yourself-with-perfect-forwarding-failure-cases">Item 30: Familiarize yourself with perfect forwarding failure cases</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#完美转发">完美转发</a><i></i></div></li>
+<li><div><a href="#无法做到完美转发的实参类型">无法做到完美转发的实参类型</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#花括号初始化器">花括号初始化器</a><i></i></div></li>
+<li><div><a href="#0或者null作为空指针">0或者NULL作为空指针</a><i></i></div></li>
+<li><div><a href="#仅有声明的整型static-const数据成员">仅有声明的整型static const数据成员</a><i></i></div></li>
+<li><div><a href="#重载函数的名称和模板名称">重载函数的名称和模板名称</a><i></i></div></li>
+<li><div><a href="#位域">位域</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#总结">总结</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="第5章-右值引用，移动语义，完美转发"><a name="第5章-右值引用，移动语义，完美转发" class="anchor-navigation-ex-anchor" href="#第5章-右值引用，移动语义，完美转发"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item23.html#第5章-右值引用移动语义完美转发" target="_blank">第5章 右值引用，移动语义，完美转发</a></h1>
+<h3 id="移动语义（move-semantics）和完美转发（perfect-forwarding）"><a name="移动语义（move-semantics）和完美转发（perfect-forwarding）" class="anchor-navigation-ex-anchor" href="#移动语义（move-semantics）和完美转发（perfect-forwarding）"><i class="fa fa-link" aria-hidden="true"></i></a>移动语义（<em>move semantics</em>）和完美转发（<em>perfect forwarding</em>）</h3>
+<ol>
+<li><p><strong>移动语义</strong></p>
+<blockquote>
+<p>使编译器有可能用廉价的<strong>移动</strong>操作来代替昂贵的<strong>拷贝</strong>操作</p>
+<p>移动构造函数和移动赋值操作符也给了你控制移动语义的权力</p>
+<p>移动语义也允许创建<strong>只可移动（<em>move-only</em>）的类型</strong>，例如<code>std::unique_ptr</code>，<code>std::future</code>和<code>std::thread</code>。</p>
+</blockquote>
+</li>
+<li><p><strong>完美转发</strong></p>
+<blockquote>
+<ul>
+<li><strong>完美转发</strong>使接收<strong>任意数量实参</strong>的函数模板成为可能，它可以将实参转发到其他的函数，使目标函数接收到的实参与被传递给转发函数的<strong>实参保持一致</strong>。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>右值引用</strong>是<strong>连接</strong>这两个截然不同的概念的胶合剂。它是使移动语义和完美转发变得可能的基础语言机制。</p>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li><p><strong>左值 (lvalue)</strong></p>
+<blockquote>
+<ul>
+<li><strong>定义</strong>：可以取地址、有持久状态的对象（通常有名字）。</li>
+<li><strong>特点</strong>：<ul>
+<li>代表一个 <strong>具体的内存位置</strong>。</li>
+<li>生命周期通常超过当前表达式。</li>
+<li>可以出现在赋值运算符的 <strong>左侧或右侧</strong>。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;      <span class="hljs-comment">// a 是左值</span>
+<span class="hljs-type">int</span>* p = &amp;a;     <span class="hljs-comment">// 可以取地址</span>
+a = <span class="hljs-number">20</span>;          <span class="hljs-comment">// 左值在赋值左侧</span>
+<span class="hljs-type">int</span> b = a;       <span class="hljs-comment">// 左值在赋值右侧</span>
+</code></pre>
+</blockquote>
+</li>
+<li><p><strong>右值 (rvalue)</strong></p>
+<blockquote>
+<ul>
+<li><strong>定义</strong>：临时的、无法取地址的值（通常是表达式计算的中间结果）。</li>
+<li><strong>特点</strong>：<ul>
+<li>代表一个 <strong>临时的值</strong>，没有持久的内存地址。</li>
+<li>生命周期仅限当前表达式。</li>
+<li>只能出现在赋值运算符的 <strong>右侧</strong>。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-type">int</span> x = <span class="hljs-number">5</span>;             <span class="hljs-comment">// 5 是右值（字面量）</span>
+x = <span class="hljs-number">2</span> + <span class="hljs-number">3</span>;             <span class="hljs-comment">// 2+3 的结果是右值</span>
+std::string s = <span class="hljs-string">"Hi"</span>;  <span class="hljs-comment">// "Hi" 是右值</span>
+</code></pre>
+</blockquote>
+<ol>
+<li><p><strong>扩展概念（C++11 后）</strong></p>
+</li>
+<li><p><strong>将亡值 (xvalue)</strong>：介于左值和右值之间（如 <code>std::move</code> 的结果）。</p>
+</li>
+<li><strong>纯右值 (prvalue)</strong>：字面量、表达式结果等传统右值。</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>非常重要的一点是要牢记形参永远是<strong>左值</strong>，即使它的类型是一个右值引用。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Widget&amp;&amp; w)</span></span>;
+</code></pre>
+</li>
+</ul>
+<hr></hr>
+<h2 id="item-23-understand-stdmove-and-stdforward"><a name="item-23-understand-stdmove-and-stdforward" class="anchor-navigation-ex-anchor" href="#item-23-understand-stdmove-and-stdforward"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 23: Understand <code>std::move</code> and <code>std::forward</code></strong></h2>
+<p><code>std::move</code><strong>不移动</strong>（move）任何东西，<code>std::forward</code>也<strong>不转发</strong>（forward）任何东西。</p>
+<p>在运行时，它们不做任何事情。它们不产生任何可执行代码，一字节也没有。</p>
+<ul>
+<li><code>std::move</code>和<code>std::forward</code>仅仅是<strong>执行转换（cast）的函数</strong>（事实上是函数模板）。</li>
+<li><code>std::move</code>无条件的将它的<strong>实参转换为右值</strong></li>
+<li><code>std::forward</code>只在<strong>特定情况满足</strong>时下进行转换</li>
+</ul>
+<hr></hr>
+<h3 id="stdmove"><a name="stdmove" class="anchor-navigation-ex-anchor" href="#stdmove"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::move</code></h3>
+<ul>
+<li><p>C++11的<code>std::move</code>的示例实现。它并不完全满足标准细则</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                            <span class="hljs-comment">//在std命名空间</span>
+<span class="hljs-keyword">typename</span> remove_reference&lt;T&gt;::<span class="hljs-function">type&amp;&amp;
+<span class="hljs-title">move</span><span class="hljs-params">(T&amp;&amp; param)</span>
+</span>{
+    <span class="hljs-keyword">using</span> ReturnType =                          <span class="hljs-comment">//别名声明，见条款9</span>
+        <span class="hljs-keyword">typename</span> remove_reference&lt;T&gt;::type&amp;&amp;;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">static_cast</span>&lt;ReturnType&gt;(param);
+}
+</code></pre>
+<ul>
+<li><code>std::move</code>接受一个对象的引用（准确的说，一个<strong>通用引用</strong>（universal reference），见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item24.html" target="_blank">Item24</a>)，返回一个指向同对象的引用。</li>
+<li>函数返回类型的<code>&amp;&amp;</code>部分表明<code>std::move</code>函数返回的是一个右值引用</li>
+<li>但是，正如<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item28.html" target="_blank">Item28</a>所解释的那样，如果类型<code>T</code>恰好是一个左值引用，那么<code>T&amp;&amp;</code>将会成为一个左值引用。为了避免如此，<em>type trait</em>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/3.MovingToModernCpp/item9.html" target="_blank">Item9</a>）<strong><code>std::remove_reference</code></strong>应用到了类型<code>T</code>上，这保证了<code>std::move</code>返回的真的是右值引用。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>在C++14中，<strong>函数返回值类型推导</strong>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item3.html" target="_blank">Item3</a>）和<strong>标准库的模板别名</strong><code>std::remove_reference_t</code>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/3.MovingToModernCpp/item9.html" target="_blank">Item9</a>），<code>std::move</code>可以这样写：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-keyword">decltype</span>(<span class="hljs-keyword">auto</span>) <span class="hljs-title">move</span><span class="hljs-params">(T&amp;&amp; param)</span>          <span class="hljs-comment">//C++14，仍然在std命名空间</span>
+</span>{
+    <span class="hljs-keyword">using</span> ReturnType = <span class="hljs-type">remove_referece_t</span>&lt;T&gt;&amp;&amp;;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">static_cast</span>&lt;ReturnType&gt;(param);
+}
+</code></pre>
+<p><code>std::move</code>除了<strong>转换它的实参到右值</strong>以外什么也不做</p>
+<p>它只进行转换，不移动任何东西。</p>
+</blockquote>
+</li>
+<li><p>事实上，右值只不过<strong>经常</strong>是移动操作的候选者。</p>
+<blockquote>
+<p>这个类的构造函数接受一个包含有注解的<code>std::string</code>作为形参，然后它复制该形参到数据成员。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Annotation</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">//能使用const就使用const保持一致</span>
+    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Annotation</span><span class="hljs-params">(<span class="hljs-type">const</span> std::string text)</span>
+    ：<span class="hljs-title">value</span><span class="hljs-params">(std::move(text))</span>    <span class="hljs-comment">//“移动”text到value里；这段代码执行起来,当复制text到一个数据成员的时候，为了避免一次复制操作的代价</span>
+    </span>{ … }                       <span class="hljs-comment">//并不是看起来那样</span>
+
+    …
+
+<span class="hljs-keyword">private</span>:
+    std::string value;
+};
+</code></pre>
+<p>这段代码与你期望中的完美实现的唯一区别，是<code>text</code>并不是被移动到<code>value</code>，而是被<strong>拷贝</strong>。</p>
+<p>在转换之前，<code>text</code>是一个左值的<code>const std::string</code>，而转换的结果是一个右值的<code>const std::string</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">string</span> {                  <span class="hljs-comment">//std::string事实上是</span>
+<span class="hljs-keyword">public</span>:                         <span class="hljs-comment">//std::basic_string&lt;char&gt;的类型别名</span>
+    …
+    <span class="hljs-built_in">string</span>(<span class="hljs-type">const</span> string&amp; rhs);  <span class="hljs-comment">//拷贝构造函数</span>
+    <span class="hljs-built_in">string</span>(string&amp;&amp; rhs);       <span class="hljs-comment">//移动构造函数</span>
+    …
+};
+</code></pre>
+<p><code>std::move(text)</code>的结果是一个<code>const std::string</code>的右值。</p>
+<p><strong>该右值却可以被传递给<code>std::string</code>的拷贝构造函数，因为lvalue-reference-to-<code>const</code>允许被绑定到一个<code>const</code>右值上。</strong></p>
+<p>[!warning]</p>
+<p>总结</p>
+<ol>
+<li>第一，不要在你希望能移动对象的时候，声明他们为<code>const</code>。对<code>const</code>对象的移动请求会悄无声息的被转化为拷贝操作。</li>
+<li>第二点，<code>std::move</code>不仅不移动任何东西，而且它也不保证它执行转换的对象可以被移动。</li>
+<li>关于<code>std::move</code>，你能确保的唯一一件事就是将它应用到一个对象上，你能够得到一个右值。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stdforward"><a name="stdforward" class="anchor-navigation-ex-anchor" href="#stdforward"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::forward</code></h3>
+<ul>
+<li><p><code>std::forward</code>只有在满足一定条件的情况下才执行转换。<code>std::forward</code>是<strong>有条件</strong>的转换。</p>
+<blockquote>
+<p>最常见的情景是一个模板函数，接收一个通用引用形参，并将它传递给另外的函数：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">process</span><span class="hljs-params">(<span class="hljs-type">const</span> Widget&amp; lvalArg)</span></span>;        <span class="hljs-comment">//处理左值</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">process</span><span class="hljs-params">(Widget&amp;&amp; rvalArg)</span></span>;             <span class="hljs-comment">//处理右值</span>
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                        <span class="hljs-comment">//用以转发param到process的模板</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndProcess</span><span class="hljs-params">(T&amp;&amp; param)</span>
+</span>{
+    <span class="hljs-keyword">auto</span> now =                              <span class="hljs-comment">//获取现在时间</span>
+        std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+
+    <span class="hljs-built_in">makeLogEntry</span>(<span class="hljs-string">"Calling 'process'"</span>, now);
+    <span class="hljs-built_in">process</span>(std::forward&lt;T&gt;(param));
+}
+
+Widget w;
+
+<span class="hljs-built_in">logAndProcess</span>(w);               <span class="hljs-comment">//用左值调用</span>
+<span class="hljs-built_in">logAndProcess</span>(std::<span class="hljs-built_in">move</span>(w));    <span class="hljs-comment">//用右值调用</span>
+</code></pre>
+<p>当且仅当传递给函数<code>logAndProcess</code>的用以初始化<code>param</code>的实参是一个右值时，<code>param</code>会被转换为一个右值。</p>
+<p><code>std::forward</code>是一个<strong>有条件</strong>的转换：它的<strong>实参用右值初始化</strong>时，转换为一个右值。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="stdmove-vs-stdforward"><a name="stdmove-vs-stdforward" class="anchor-navigation-ex-anchor" href="#stdmove-vs-stdforward"><i class="fa fa-link" aria-hidden="true"></i></a><code>std::move vs std::forward</code></h3>
+<blockquote>
+<p>[!note]</p>
+<p>它们唯一的区别就是<code>std::move</code>总是执行转换，而<code>std::forward</code>偶尔为之。</p>
+<p><code>std::forward</code>是可以完全胜任，<code>std::move</code>并非必须。</p>
+</blockquote>
+<ul>
+<li><p><code>std::move</code>的吸引力在于它的便利性</p>
+<blockquote>
+<p>减少了出错的可能性，增加了代码的清晰程度。</p>
+<p>假设<code>static</code>的计数器，它会在移动构造的时候自增</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>(Widget&amp;&amp; rhs)
+    : <span class="hljs-built_in">s</span>(std::<span class="hljs-built_in">move</span>(rhs.s))
+    { ++moveCtorCalls; }
+
+    …
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-type">static</span> std::<span class="hljs-type">size_t</span> moveCtorCalls;
+    std::string s;
+};
+</code></pre>
+<p>如果要用<code>std::forward</code>来达成同样的效果</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span>{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>(Widget&amp;&amp; rhs)                    <span class="hljs-comment">//不自然，不合理的实现</span>
+    : <span class="hljs-built_in">s</span>(std::forward&lt;std::string&gt;(rhs.s))
+    { ++moveCtorCalls; }
+    …
+}
+</code></pre>
+<p><code>std::forward</code>不但需要一个函数实参（<code>rhs.s</code>），还需要一个模板类型实参<code>std::string</code>。</p>
+<p>传递给<code>std::forward</code>的类型应当是一个non-reference</p>
+<p>这意味着<code>std::move</code>比起<code>std::forward</code>来说需要打更少的字，并且免去了传递一个表示我们正在传递一个右值的类型实参。</p>
+<p>它根绝了我们<strong>传递错误类型</strong>的可能性（例如，<code>std::string&amp;</code>可能导致数据成员<code>s</code>被复制而不是被移动构造）</p>
+</blockquote>
+</li>
+<li><p>更重要的是，<code>std::move</code>的使用代表着<strong>无条件向右值</strong>的转换，而使用<code>std::forward</code>只对<strong>绑定了右值的引用</strong>进行到右值转换。</p>
+</li>
+<li><p>前者是典型地为了<strong>移动操作</strong>，</p>
+</li>
+<li><p>而后者只是<strong>传递（亦为转发）</strong>一个对象到另外一个函数，保留它原有的左值属性或右值属性。</p>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结"><a name="总结" class="anchor-navigation-ex-anchor" href="#总结"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><code>std::move</code>执行到右值的无条件的转换，但就自身而言，它不移动任何东西。</li>
+<li><code>std::forward</code>只有当它的参数被绑定到一个右值时，才将参数转换为右值。</li>
+<li><code>std::move</code>和<code>std::forward</code>在运行期什么也不做。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-24-distinguish-universal-references-from-rvalue-references"><a name="item-24-distinguish-universal-references-from-rvalue-references" class="anchor-navigation-ex-anchor" href="#item-24-distinguish-universal-references-from-rvalue-references"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 24: Distinguish universal references from rvalue references</strong></h2>
+<h3 id="t"><a name="t" class="anchor-navigation-ex-anchor" href="#t"><i class="fa fa-link" aria-hidden="true"></i></a><code>T&amp;&amp;</code></h3>
+<ul>
+<li><p>为了声明一个指向某个类型<code>T</code>的右值引用，你写下了<code>T&amp;&amp;</code>。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Widget&amp;&amp; param)</span></span>;             <span class="hljs-comment">//右值引用</span>
+Widget&amp;&amp; var1 = <span class="hljs-built_in">Widget</span>();           <span class="hljs-comment">//右值引用</span>
+<span class="hljs-keyword">auto</span>&amp;&amp; var2 = var1;                 <span class="hljs-comment">//不是右值引用</span>
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(std::vector&lt;T&gt;&amp;&amp; param)</span></span>;     <span class="hljs-comment">//右值引用</span>
+
+<span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; param)</span></span>;                  <span class="hljs-comment">//不是右值引用</span>
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<p>“<code>T&amp;&amp;</code>”有两种不同的意思。</p>
+<ol>
+<li>第一种，当然是<strong>右值引用</strong>。它们只绑定到右值上，并且它们主要的存在原因就是为了<strong>识别可以移动操作的对象</strong>。</li>
+<li>“<code>T&amp;&amp;</code>”的另一种意思是，它既可以是右值引用，也可以是左值引用。它们既可以绑定到右值上（就像右值引用），也可以绑定到左值上（就像左值引用）。 此外，它们还可以绑定到<code>const</code>或者non-<code>const</code>的对象上，也可以绑定到<code>volatile</code>或者non-<code>volatile</code>的对象上，甚至可以绑定到既<code>const</code>又<code>volatile</code>的对象上。叫做<strong>通用引用</strong>（<em>universal references</em>）</li>
+</ol>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="通用引用"><a name="通用引用" class="anchor-navigation-ex-anchor" href="#通用引用"><i class="fa fa-link" aria-hidden="true"></i></a>通用引用</h3>
+<p>在两种情况下会出现通用引用。</p>
+<ol>
+<li><p>最常见的一种是函数模板形参</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; param)</span></span>;                  <span class="hljs-comment">//param是一个通用引用</span>
+</code></pre>
+</blockquote>
+</li>
+<li><p>第二种情况是<code>auto</code>声明符</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span>&amp;&amp; var2 = var1;                 <span class="hljs-comment">//var2是一个通用引用</span>
+</code></pre>
+</blockquote>
+</li>
+<li><p>这两种情况的共同之处就是都存在<strong>类型推导</strong>（<em>type deduction</em>）</p>
+</li>
+<li><p>如果你看见“<code>T&amp;&amp;</code>”不带有类型推导，那么你看到的就是一个右值引用：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(Widget&amp;&amp; param)</span></span>;         <span class="hljs-comment">//没有类型推导，</span>
+                                <span class="hljs-comment">//param是一个右值引用</span>
+Widget&amp;&amp; var1 = <span class="hljs-built_in">Widget</span>();       <span class="hljs-comment">//没有类型推导，</span>
+                                <span class="hljs-comment">//var1是一个右值引用</span>
+</code></pre>
+</blockquote>
+</li>
+<li><p>因为通用引用是引用，所以它们<strong>必须被初始化</strong>。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; param)</span></span>;              <span class="hljs-comment">//param是一个通用引用</span>
+
+Widget w;
+<span class="hljs-built_in">f</span>(w);                           <span class="hljs-comment">//传递给函数f一个左值；param的类型</span>
+                                <span class="hljs-comment">//将会是Widget&amp;，也即左值引用</span>
+
+<span class="hljs-built_in">f</span>(std::<span class="hljs-built_in">move</span>(w));                <span class="hljs-comment">//传递给f一个右值；param的类型会是</span>
+                                <span class="hljs-comment">//Widget&amp;&amp;，即右值引用</span>
+</code></pre>
+<p>一个通用引用的初始值决定了它是代表了右值引用还是左值引用。</p>
+</blockquote>
+</li>
+<li><p>对一个通用引用而言，<strong>类型推导</strong>是必要的，但是它还不够。<strong>引用声明</strong>的<strong>形式</strong>必须正确，并且该形式是被限制的。它必须<strong>恰好为“<code>T&amp;&amp;</code>”</strong>。</p>
+<blockquote>
+<ol>
+<li><p>没有类型推导的情况</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(std::vector&lt;T&gt;&amp;&amp; param)</span></span>;     <span class="hljs-comment">//param是一个右值引用</span>
+
+std::vector&lt;<span class="hljs-type">int</span>&gt; v;
+<span class="hljs-built_in">f</span>(v);                           <span class="hljs-comment">//错误！不能将左值绑定到右值引用</span>
+</code></pre>
+</li>
+<li><p>一个简单的<strong><code>const</code>修饰符</strong>的出现</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> T&amp;&amp; param)</span></span>;        <span class="hljs-comment">//param是一个右值引用</span>
+</code></pre>
+</li>
+<li><p>在模板内部并不保证一定会发生类型推导。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>, <span class="hljs-keyword">class</span> <span class="hljs-title class_">Allocator</span> = allocator&lt;T&gt;&gt;   <span class="hljs-comment">//来自C++标准</span>
+<span class="hljs-keyword">class</span> vector
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">void</span> <span class="hljs-built_in">push_back</span>(T&amp;&amp; x);
+    …
+}
+</code></pre>
+<p><code>push_back</code>在有一个特定的<code>vector</code>实例之前不可能存在，而实例化<code>vector</code>时的类型已经决定了<code>push_back</code>的声明。</p>
+<p>函数<code>push_back</code>不包含任何类型推导。</p>
+<blockquote>
+<p>[!warning]</p>
+<p><code>emplace_back</code>，却确实包含类型推导</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>, <span class="hljs-keyword">class</span> <span class="hljs-title class_">Allocator</span> = allocator&lt;T&gt;&gt;   <span class="hljs-comment">//依旧来自C++标准</span>
+<span class="hljs-keyword">class</span> vector {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">class</span>... Args&gt;
+    <span class="hljs-type">void</span> <span class="hljs-built_in">emplace_back</span>(Args&amp;&amp;... args);
+    …
+};
+</code></pre>
+<p>类型参数（<em>type parameter</em>）<code>Args</code>是独立于<code>vector</code>的类型参数<code>T</code>的，所以<code>Args</code>会在每次<code>emplace_back</code>被调用的时候被推导。</p>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p>类型声明为<code>auto&amp;&amp;</code>的变量是通用引用</p>
+<blockquote>
+<p>一个C++14标准的<em>lambda</em>表达式，来记录任意函数调用的时间开销，你可以这样写：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> timeFuncInvocation =
+    [](<span class="hljs-keyword">auto</span>&amp;&amp; func, <span class="hljs-keyword">auto</span>&amp;&amp;... params)           <span class="hljs-comment">//C++14</span>
+    {
+        start timer;
+        std::forward&lt;<span class="hljs-keyword">decltype</span>(func)&gt;(func)(     <span class="hljs-comment">//对params调用func</span>
+            std::forward&lt;<span class="hljs-built_in">delctype</span>(params)&gt;(params)...
+        );
+        stop timer <span class="hljs-keyword">and</span> record elapsed time;
+    };
+</code></pre>
+<p><code>func</code>是一个<strong>通用引用</strong>，可以被绑定到任何可调用对象，无论左值还是右值。</p>
+<p><code>args</code>是0个或者多个通用引用（即它是个<strong>通用引用<em>parameter pack</em></strong>），它可以绑定到任意数目、任意类型的对象上。</p>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<h3 id="总结_1"><a name="总结_1" class="anchor-navigation-ex-anchor" href="#总结_1"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>如果一个函数模板形参的类型为<strong><code>T&amp;&amp;</code>，并且<code>T</code>需要被推导得知</strong>，或者如果一个对象被声明为<strong><code>auto&amp;&amp;</code></strong>，这个形参或者对象就是一个通用引用。</li>
+<li>如果类型声明的形式不是标准的<code>type&amp;&amp;</code>，或者如果类型推导没有发生，那么<code>type&amp;&amp;</code>代表一个右值引用。</li>
+<li>通用引用，如果它被右值初始化，就会对应地成为右值引用；如果它被左值初始化，就会成为左值引用。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-25-use-stdmove-on-rvalue-references-stdforward-on-universal-references"><a name="item-25-use-stdmove-on-rvalue-references-stdforward-on-universal-references" class="anchor-navigation-ex-anchor" href="#item-25-use-stdmove-on-rvalue-references-stdforward-on-universal-references"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 25: Use <code>std::move</code> on rvalue references, <code>std::forward</code> on universal references</strong></h2>
+<h3 id="右值引用和通用引用"><a name="右值引用和通用引用" class="anchor-navigation-ex-anchor" href="#右值引用和通用引用"><i class="fa fa-link" aria-hidden="true"></i></a>右值引用和通用引用</h3>
+<ol>
+<li><p>右值引用仅绑定<strong>可以移动</strong>的对象。</p>
+<blockquote>
+<p>如果你有一个右值引用形参就知道这个对象可能会被移动：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+ <span class="hljs-built_in">Widget</span>(Widget&amp;&amp; rhs);       <span class="hljs-comment">//rhs定义上引用一个有资格移动的对象</span>
+ …
+};
+</code></pre>
+<p>这样做的方法是将绑定到此类对象的形参转换为右值</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">Widget</span>(Widget&amp;&amp; rhs)        <span class="hljs-comment">//rhs是右值引用</span>
+    : <span class="hljs-built_in">name</span>(std::<span class="hljs-built_in">move</span>(rhs.name)),
+      <span class="hljs-built_in">p</span>(std::<span class="hljs-built_in">move</span>(rhs.p))
+      { … }
+    …
+<span class="hljs-keyword">private</span>:
+    std::string name;
+    std::shared_ptr&lt;SomeDataStructure&gt; p;
+};
+</code></pre>
+</blockquote>
+</li>
+<li><p>通用引用<strong>可能</strong>绑定到有资格移动的对象上。</p>
+</li>
+</ol>
+<blockquote>
+<p>通用引用使用右值初始化时，才将其强制转换为右值</p>
+<p>这正是<code>std::forward</code>所做的：</p>
+<pre><code class="lang-cpp"> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+   <span class="hljs-type">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(T&amp;&amp; newName)</span>           <span class="hljs-comment">//newName是通用引用</span>
+    </span>{ name = std::forward&lt;T&gt;(newName); }
+
+    …
+};
+</code></pre>
+<p>[!warning]</p>
+<p>当把<strong>右值引用</strong>转发给其他函数时，右值引用应该被<strong>无条件转换</strong>为右值（通过<code>std::move</code>），因为它们<strong>总是</strong>绑定到右值；</p>
+<p>当<strong>转发通用引用</strong>时，通用引用应该<strong>有条件地转换</strong>为右值（通过<code>std::forward</code>），因为它们只是<strong>有时</strong>绑定到右值。</p>
+</blockquote>
+<hr></hr>
+<h3 id="何时使用"><a name="何时使用" class="anchor-navigation-ex-anchor" href="#何时使用"><i class="fa fa-link" aria-hidden="true"></i></a>何时使用</h3>
+<ol>
+<li><p>在右值引用上使用<code>std::forward</code>表现出适当的行为，但是代码较长，容易出错，所以应该避免在右值引用上使用<code>std::forward</code>。同样在通用引用上使用<code>std::move</code>，这可能会意外改变左值（比如局部变量）：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+    <span class="hljs-type">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(T&amp;&amp; newName)</span>       <span class="hljs-comment">//通用引用可以编译，</span>
+    </span>{ name = std::<span class="hljs-built_in">move</span>(newName); }  <span class="hljs-comment">//但是代码太太太差了！</span>
+    …
+
+<span class="hljs-keyword">private</span>:
+    std::string name;
+    std::shared_ptr&lt;SomeDataStructure&gt; p;
+};
+
+<span class="hljs-function">std::string <span class="hljs-title">getWidgetName</span><span class="hljs-params">()</span></span>;        <span class="hljs-comment">//工厂函数</span>
+
+Widget w;
+
+<span class="hljs-keyword">auto</span> n = <span class="hljs-built_in">getWidgetName</span>();           <span class="hljs-comment">//n是局部变量</span>
+
+w.<span class="hljs-built_in">setName</span>(n);                       <span class="hljs-comment">//把n移动进w！</span>
+
+…                                   <span class="hljs-comment">//现在n的值未知</span>
+</code></pre>
+<p><code>setName</code>内部使用<code>std::move</code>无条件将传递的引用形参转换为右值，<strong><code>n</code>的值被移动进<code>w.name</code></strong>，调用<code>setName</code>返回时<code>n</code>最终变为未定义的值。</p>
+</blockquote>
+</li>
+<li><p>如果为<code>const</code>左值和为右值分别重载<code>setName</code>可以避免整个问题，比如这样：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(<span class="hljs-type">const</span> std::string&amp; newName)</span>    <span class="hljs-comment">//用const左值设置</span>
+    </span>{ name = newName; }
+
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(std::string&amp;&amp; newName)</span>         <span class="hljs-comment">//用右值设置</span>
+    </span>{ name = std::<span class="hljs-built_in">move</span>(newName); }
+
+    …
+};
+</code></pre>
+<p>有缺点。首先编写和维护的代码更多（两个函数而不是单个模板）；其次，效率下降。</p>
+<p>其次，比如，考虑如下场景：</p>
+<pre><code class="lang-cpp">w.<span class="hljs-built_in">setName</span>(<span class="hljs-string">"Adela Novak"</span>);
+</code></pre>
+<p><code>setName</code>重载版本，会有一个临时<code>std::string</code>对象被创建，<code>setName</code>形参绑定到这个对象，然后这个临时<code>std::string</code>移动到<code>w</code>的数据成员中。</p>
+<p>一次<code>setName</code>的调用会包括<strong><code>std::string</code>构造函数</strong>调用（创建中间对象），<strong><code>std::string</code>赋值运算符</strong>调用（移动<code>newName</code>到<code>w.name</code>），<strong><code>std::string</code>析构函数</strong>调用（析构中间对象）</p>
+<p>比调用接受<code>const char*</code>指针的<code>std::string</code>赋值运算符开销昂贵许多。</p>
+</blockquote>
+</li>
+<li><p>关于对左值和右值的重载函数最重要的问题不是源代码的数量，也不是代码的运行时性能。而是设计的可扩展性差。</p>
+<blockquote>
+<p><code>Widget::setName</code>有一个形参，因此需要两种重载实现，但是对于有更多形参的函数，每个都可能是左值或右值，重载函数的数量几何式增长：n个参数的话，就要实现2n种重载。</p>
+<p>此类函数的典型代表是<code>std::make_shared</code>，还有对于C++14的<code>std::make_unique</code>（见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/4.SmartPointers/item21.html" target="_blank">Item21</a>）。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>, <span class="hljs-keyword">class</span>... Args&gt;                <span class="hljs-comment">//来自C++11标准</span>
+<span class="hljs-function">shared_ptr&lt;T&gt; <span class="hljs-title">make_shared</span><span class="hljs-params">(Args&amp;&amp;... args)</span></span>;
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>, <span class="hljs-keyword">class</span>... Args&gt;                <span class="hljs-comment">//来自C++14标准</span>
+<span class="hljs-function">unique_ptr&lt;T&gt; <span class="hljs-title">make_unique</span><span class="hljs-params">(Args&amp;&amp;... args)</span></span>;
+</code></pre>
+<p>肯定使用<code>std::forward</code>传递通用引用形参给其他函数</p>
+</blockquote>
+</li>
+<li><p>在某些情况，你可能需要在一个函数中<strong>多次使用绑定到右值引用或者通用引用的对象</strong>，并且确保在完成其他操作前，这个对象不会被移动。</p>
+<blockquote>
+<p>只想在最后一次使用时，使用<code>std::move</code>（对右值引用）或者<code>std::forward</code>（对通用引用）</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">setSignText</span><span class="hljs-params">(T&amp;&amp; text)</span>                  <span class="hljs-comment">//text是通用引用</span>
+</span>{
+  sign.<span class="hljs-built_in">setText</span>(text);                       <span class="hljs-comment">//使用text但是不改变它</span>
+
+  <span class="hljs-keyword">auto</span> now = 
+      std::chrono::system_clock::<span class="hljs-built_in">now</span>();     <span class="hljs-comment">//获取现在的时间</span>
+
+  signHistory.<span class="hljs-built_in">add</span>(now, 
+                  std::forward&lt;T&gt;(text));   <span class="hljs-comment">//有条件的转换为右值</span>
+}
+</code></pre>
+<p>确保<code>text</code>的值不会被<code>sign.setText</code>改变</p>
+<p>对于<code>std::move</code>，同样的思路（即最后一次用右值引用的时候再调用<code>std::move</code>）</p>
+<blockquote>
+<p>[!warning]</p>
+<p>在有些稀少的情况下，你需要调用<code>std::move_if_noexcept</code>代替<code>std::move</code></p>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<hr></hr>
+<h3 id="返回值绑定"><a name="返回值绑定" class="anchor-navigation-ex-anchor" href="#返回值绑定"><i class="fa fa-link" aria-hidden="true"></i></a>返回值绑定</h3>
+<ul>
+<li><p>在<strong>按值</strong>返回的函数中，返回值绑定到右值引用或者通用引用上，需要对返回的引用使用<code>std::move</code>或者<code>std::forward</code>。</p>
+<blockquote>
+<p>考虑两个矩阵相加的<code>operator+</code>函数，左侧的矩阵为右值（可以被用来保存求值之后的和）：</p>
+<pre><code class="lang-cpp">Matrix                              <span class="hljs-comment">//按值返回</span>
+<span class="hljs-keyword">operator</span>+(Matrix&amp;&amp; lhs, <span class="hljs-type">const</span> Matrix&amp; rhs)
+{
+    lhs += rhs;
+    <span class="hljs-keyword">return</span> std::<span class="hljs-built_in">move</span>(lhs);            <span class="hljs-comment">//移动lhs到返回值中</span>
+}
+</code></pre>
+<p>在<code>return</code>语句中将<code>lhs</code>转换为右值（通过<code>std::move</code>），<code>lhs</code>可以移动到返回值的内存位置。</p>
+<p>如果<code>Matrix</code>不支持移动操作，将其转换为右值不会变差，因为右值可以直接被<code>Matrix</code>的拷贝构造函数拷贝</p>
+</blockquote>
+</li>
+<li><p>使用通用引用和<code>std::forward</code>的情况类似。</p>
+<blockquote>
+<p>考虑函数模板<code>reduceAndCopy</code>收到一个未规约（unreduced）对象<code>Fraction</code>，将其规约，并返回一个规约后的副本。</p>
+<p>如果原始对象是右值，可以将其移动到返回值中（避免拷贝开销），</p>
+<p>但是如果原始对象是左值，必须创建副本，</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+Fraction                            <span class="hljs-comment">//按值返回</span>
+<span class="hljs-built_in">reduceAndCopy</span>(T&amp;&amp; frac)             <span class="hljs-comment">//通用引用的形参</span>
+{
+    frac.<span class="hljs-built_in">reduce</span>();
+    <span class="hljs-keyword">return</span> std::forward&lt;T&gt;(frac);        <span class="hljs-comment">//移动右值，或拷贝左值到返回值中</span>
+}
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="返回值优化"><a name="返回值优化" class="anchor-navigation-ex-anchor" href="#返回值优化"><i class="fa fa-link" aria-hidden="true"></i></a>返回值优化</h3>
+<ul>
+<li><p>对我要返回的局部对象应用同样的优化。对要被拷贝到返回值的右值引用形参使用<code>std::move</code>，会把拷贝构造变为移动构造</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function">Widget <span class="hljs-title">makeWidget</span><span class="hljs-params">()</span>                 <span class="hljs-comment">//makeWidget的移动版本</span>
+</span>{
+    Widget w;
+    …
+    <span class="hljs-keyword">return</span> std::<span class="hljs-built_in">move</span>(w);            <span class="hljs-comment">//移动w到返回值中（不要这样做！）</span>
+}
+</code></pre>
+<p><code>makeWidget</code>的“拷贝”版本可以避免复制局部变量<code>w</code>的需要，通过在分配给函数返回值的内存中构造<code>w</code>来实现。这就是所谓的<strong>返回值优化</strong>（<em>return value optimization</em>，RVO）</p>
+</blockquote>
+</li>
+<li><p>编译器可能会在按值返回的函数中消除对局部对象的拷贝（或者移动）</p>
+<blockquote>
+<p>如果满足</p>
+<ol>
+<li>局部对象与函数返回值的<strong>类型相同</strong>；</li>
+<li>局部对象就是要返回的东西。（适合的局部对象包括大多数<strong>局部变量</strong>（比如<code>makeWidget</code>里的<code>w</code>），还有作为<code>return</code>语句的一部分而创建的<strong>临时对象</strong>。而函数形参不满足要求。</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>一些人将RVO的应用区分为<strong>命名的和未命名的（即临时的）局部对象</strong>，限制了RVO术语应用到未命名对象上，并把对命名对象的应用称为<strong>命名返回值优化</strong>（<em>named return value optimization</em>，NRVO）。）</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>再看看<code>makeWidget</code>的“拷贝”版本：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function">Widget <span class="hljs-title">makeWidget</span><span class="hljs-params">()</span>                 <span class="hljs-comment">//makeWidget的“拷贝”版本</span>
+</span>{
+    Widget w;
+    …
+    <span class="hljs-keyword">return</span> w;                       <span class="hljs-comment">//“拷贝”w到返回值中</span>
+}
+</code></pre>
+<p>意味着<code>makeWidget</code>的“拷贝”版本实际上不拷贝任何东西。</p>
+<p>而<code>makeWidget</code>的移动版本不满足这条件</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">return</span> std::<span class="hljs-built_in">move</span>(w);
+</code></pre>
+<p>返回的已经不是局部对象<code>w</code>，而是<strong><code>w</code>的引用</strong>——<code>std::move(w)</code>的结果。</p>
+<p>开发者试图对要返回的局部变量用<code>std::move</code>帮助编译器优化，反而限制了编译器的优化选项。</p>
+</blockquote>
+</li>
+<li><p>应用<code>std::move</code>到一个局部对象上<strong>仍然</strong>是一个坏主意。</p>
+<blockquote>
+<p>C++标准关于RVO的部分表明，如果满足RVO的条件，但是编译器选择不执行拷贝消除，则返回的对象<strong>必须被视为右值</strong>。</p>
+<p>在某些情况下，将<code>std::move</code>应用于局部变量可能是一件合理的事（即，你把一个变量传给函数，并且知道不会再用这个变量），但是<strong>满足RVO的<code>return</code>语句或者返回一个传值形参</strong>并不在此列。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_2"><a name="总结_2" class="anchor-navigation-ex-anchor" href="#总结_2"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><strong>最后一次使用</strong>时，在右值引用上使用<code>std::move</code>，在通用引用上使用<code>std::forward</code>。</li>
+<li>对按值返回的函数要返回的右值引用和通用引用，执行相同的操作。</li>
+<li>如果局部对象可以被<strong>返回值优化</strong>消除，就绝不使用<code>std::move</code>或者<code>std::forward</code>。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-26-avoid-overloading-on-universal-references"><a name="item-26-avoid-overloading-on-universal-references" class="anchor-navigation-ex-anchor" href="#item-26-avoid-overloading-on-universal-references"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 26: Avoid overloading on universal references</strong></h2>
+<h3 id="示例"><a name="示例" class="anchor-navigation-ex-anchor" href="#示例"><i class="fa fa-link" aria-hidden="true"></i></a>示例</h3>
+<ul>
+<li>假定你需要写一个函数，它使用名字作为形参，打印当前日期和时间到日志中，然后将名字加入到一个全局数据结构中。</li>
+</ul>
+<blockquote>
+<pre><code class="lang-cpp">std::multiset&lt;std::string&gt; names;           <span class="hljs-comment">//全局数据结构</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(<span class="hljs-type">const</span> std::string&amp; name)</span>
+</span>{
+    <span class="hljs-keyword">auto</span> now =                              <span class="hljs-comment">//获取当前时间</span>
+        std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+    <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);                  <span class="hljs-comment">//志记信息</span>
+    names.<span class="hljs-built_in">emplace</span>(name);                    <span class="hljs-comment">//把name加到全局数据结构中；</span>
+}                                           <span class="hljs-comment">//emplace的信息见条款42</span>
+</code></pre>
+<p>代码没有问题，但是同样的也<strong>没有效率</strong>。考虑这三个调用：</p>
+<pre><code class="lang-cpp"><span class="hljs-function">std::string <span class="hljs-title">petName</span><span class="hljs-params">(<span class="hljs-string">"Darla"</span>)</span></span>;
+<span class="hljs-built_in">logAndAdd</span>(petName);                     <span class="hljs-comment">//传递左值std::string</span>
+
+<span class="hljs-comment">//有个拷贝代价，但是我们应该能用移动勉强应付。</span>
+<span class="hljs-built_in">logAndAdd</span>(std::<span class="hljs-built_in">string</span>(<span class="hljs-string">"Persephone"</span>));    <span class="hljs-comment">//传递右值std::string</span>
+
+<span class="hljs-comment">//有个std::string拷贝开销，但是我们连移动开销都不想要，更别说拷贝的。</span>
+<span class="hljs-built_in">logAndAdd</span>(<span class="hljs-string">"Patty Dog"</span>);                 <span class="hljs-comment">//传递字符串字面值</span>
+</code></pre>
+<p>通过使用通用引用（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item24.html" target="_blank">Item24</a>）重写<code>logAndAdd</code>来使第二个和第三个调用效率提升</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(T&amp;&amp; name)</span>
+</span>{
+    <span class="hljs-keyword">auto</span> now = std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+    <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);
+    names.<span class="hljs-built_in">emplace</span>(std::forward&lt;T&gt;(name));
+}
+
+<span class="hljs-function">std::string <span class="hljs-title">petName</span><span class="hljs-params">(<span class="hljs-string">"Darla"</span>)</span></span>;           <span class="hljs-comment">//跟之前一样</span>
+<span class="hljs-built_in">logAndAdd</span>(petName);                     <span class="hljs-comment">//跟之前一样，拷贝左值到multiset</span>
+<span class="hljs-built_in">logAndAdd</span>(std::<span class="hljs-built_in">string</span>(<span class="hljs-string">"Persephone"</span>));    <span class="hljs-comment">//移动右值而不是拷贝它</span>
+<span class="hljs-built_in">logAndAdd</span>(<span class="hljs-string">"Patty Dog"</span>);                 <span class="hljs-comment">//在multiset直接创建std::string</span>
+                                        <span class="hljs-comment">//而不是拷贝一个临时std::string</span>
+</code></pre>
+</blockquote>
+<ul>
+<li><p>但是如果客户不总是有直接访问<code>logAndAdd</code>要求的名字的权限。有些客户只有索引，<code>logAndAdd</code>拿着索引在表中查找相应的名字。</p>
+<blockquote>
+<p><code>logAndAdd</code>需要重载为：</p>
+<pre><code class="lang-cpp"><span class="hljs-function">std::string <span class="hljs-title">nameFromIdx</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span></span>;   <span class="hljs-comment">//返回idx对应的名字</span>
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span>             <span class="hljs-comment">//新的重载</span>
+</span>{
+    <span class="hljs-keyword">auto</span> now = std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+    <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);
+    names.<span class="hljs-built_in">emplace</span>(<span class="hljs-built_in">nameFromIdx</span>(idx));
+}
+
+<span class="hljs-function">std::string <span class="hljs-title">petName</span><span class="hljs-params">(<span class="hljs-string">"Darla"</span>)</span></span>;           <span class="hljs-comment">//跟之前一样</span>
+
+<span class="hljs-built_in">logAndAdd</span>(petName);                     <span class="hljs-comment">//跟之前一样，</span>
+<span class="hljs-built_in">logAndAdd</span>(std::<span class="hljs-built_in">string</span>(<span class="hljs-string">"Persephone"</span>));     <span class="hljs-comment">//这些调用都去调用</span>
+<span class="hljs-built_in">logAndAdd</span>(<span class="hljs-string">"Patty Dog"</span>);                 <span class="hljs-comment">//T&amp;&amp;重载版本</span>
+
+<span class="hljs-built_in">logAndAdd</span>(<span class="hljs-number">22</span>);                          <span class="hljs-comment">//调用int重载版本</span>
+</code></pre>
+<p>假定一个客户将<code>short</code>类型索引传递给<code>logAndAdd</code>：</p>
+<pre><code class="lang-cpp"><span class="hljs-type">short</span> nameIdx;
+…                                       <span class="hljs-comment">//给nameIdx一个值</span>
+<span class="hljs-built_in">logAndAdd</span>(nameIdx);                     <span class="hljs-comment">//错误！</span>
+</code></pre>
+<p>使用通用引用的那个推导出<code>T</code>的类型是<code>short</code>，因此可以精确匹配。</p>
+<p>对于<code>int</code>类型参数的重载也可以在<code>short</code>类型提升后匹配成功。</p>
+<p>根据正常的重载解决规则，<strong>精确匹配优先于类型提升的匹配</strong>，所以被调用的是通用引用的重载。</p>
+<p>但是<code>logAndAdd</code>调用里的<code>multiset::emplace</code>调用里的<code>std::string</code>构造函数调用失败。</p>
+</blockquote>
+</li>
+<li><p>使用通用引用的函数在C++中是最贪婪的函数。</p>
+<blockquote>
+<p>几乎可以精确匹配任何类型的实参（极少不适用的实参在<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html" target="_blank">Item30</a>中介绍）。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="完美转发构造函数"><a name="完美转发构造函数" class="anchor-navigation-ex-anchor" href="#完美转发构造函数"><i class="fa fa-link" aria-hidden="true"></i></a>完美转发构造函数</h3>
+<ul>
+<li><p>一个更容易掉入这种陷阱的例子是写一个完美转发构造函数。</p>
+<blockquote>
+<p>不用写接受<code>std::string</code>或者用索引查找<code>std::string</code>的自由函数，只是想一个构造函数有着相同操作的<code>Person</code>类：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+ <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;            <span class="hljs-comment">//完美转发的构造函数</span>
+ <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(T&amp;&amp; n)</span>
+ : name(std::forward&lt;T&gt;(n)) {</span>}
+
+ <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span></span>;       <span class="hljs-comment">//int的构造函数</span>
+
+ <span class="hljs-built_in">Person</span>(<span class="hljs-type">const</span> Person&amp; rhs);      <span class="hljs-comment">//拷贝构造函数（编译器生成）</span>
+ <span class="hljs-built_in">Person</span>(Person&amp;&amp; rhs);           <span class="hljs-comment">//移动构造函数（编译器生成）</span>
+ …
+};
+
+<span class="hljs-function">Person <span class="hljs-title">p</span><span class="hljs-params">(<span class="hljs-string">"Nancy"</span>)</span></span>; 
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">cloneOfP</span><span class="hljs-params">(p)</span></span>;                   <span class="hljs-comment">//从p创建新Person；这通不过编译！</span>
+<span class="hljs-comment">//尝试使用Person对象p初始化Person的std::string数据成员</span>
+</code></pre>
+<p>这份代码不是调用拷贝构造函数，而是调用完美转发构造函数。</p>
+<p>编译器的理由如下：<code>cloneOfP</code>被non-<code>const</code>左值<code>p</code>初始化，这意味着模板化构造函数可被实例化为采用<code>Person</code>类型的non-<code>const</code>左值。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+ <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(Person&amp; n)</span>          <span class="hljs-comment">//由完美转发模板初始化</span>
+ : name(std::forward&lt;Person&amp;&gt;(n)) {</span>}
+
+ <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span></span>;           <span class="hljs-comment">//同之前一样</span>
+
+ <span class="hljs-built_in">Person</span>(<span class="hljs-type">const</span> Person&amp; rhs);          <span class="hljs-comment">//拷贝构造函数（编译器生成的）</span>
+ …
+};
+
+<span class="hljs-comment">//在这个语句中，</span>
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">cloneOfP</span><span class="hljs-params">(p)</span></span>;
+</code></pre>
+<p>“拷贝”non-<code>const</code>左值类型的<code>Person</code>交由完美转发构造函数处理，而不是拷贝构造函数。</p>
+<p>果我们将本例中的传递的对象改为<code>const</code>的，会得到完全不同的结果：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">const</span> Person <span class="hljs-title">cp</span><span class="hljs-params">(<span class="hljs-string">"Nancy"</span>)</span></span>;   <span class="hljs-comment">//现在对象是const的</span>
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">cloneOfP</span><span class="hljs-params">(cp)</span></span>;          <span class="hljs-comment">//调用拷贝构造函数！</span>
+</code></pre>
+<p>被拷贝的对象是<code>const</code>，是拷贝构造函数的精确匹配。</p>
+</blockquote>
+</li>
+<li><p>当<strong>继承</strong>纳入考虑范围时，完美转发的构造函数与编译器生成的拷贝、移动操作之间的交互会更加复杂。</p>
+<blockquote>
+<p>派生类的拷贝和移动操作的传统实现会表现得非常奇怪</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SpecialPerson</span>: <span class="hljs-keyword">public</span> Person {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">SpecialPerson</span>(<span class="hljs-type">const</span> SpecialPerson&amp; rhs) <span class="hljs-comment">//拷贝构造函数，调用基类的</span>
+    : <span class="hljs-built_in">Person</span>(rhs)                           <span class="hljs-comment">//完美转发构造函数！</span>
+    { … }
+
+    <span class="hljs-built_in">SpecialPerson</span>(SpecialPerson&amp;&amp; rhs)      <span class="hljs-comment">//移动构造函数，调用基类的</span>
+    : <span class="hljs-built_in">Person</span>(std::<span class="hljs-built_in">move</span>(rhs))                <span class="hljs-comment">//完美转发构造函数！</span>
+    { … }
+};
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_3"><a name="总结_3" class="anchor-navigation-ex-anchor" href="#总结_3"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>对通用引用形参的函数进行重载，通用引用函数的调用机会几乎总会比你期望的多得多。</li>
+<li><strong>完美转发构造函数是糟糕的实现</strong>，因为对于non-<code>const</code>左值，它们比拷贝构造函数而更匹配，而且会劫持派生类对于基类的拷贝和移动构造函数的调用。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-27-familiarize-yourself-with-alternatives-to-overloading-on-universal-references"><a name="item-27-familiarize-yourself-with-alternatives-to-overloading-on-universal-references" class="anchor-navigation-ex-anchor" href="#item-27-familiarize-yourself-with-alternatives-to-overloading-on-universal-references"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 27: Familiarize yourself with alternatives to overloading on universal references</strong></h2>
+<p><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item26.html" target="_blank">Item26</a>中说明了对使用<strong>通用引用形参</strong>的函数，无论是独立函数还是成员函数（尤其是构造函数），进行重载都会导致一系列问题。</p>
+<p>这个条款探讨了几种，通过<strong>避免在通用引用上重载</strong>的设计，或者通过<strong>限制通用引用</strong>可以匹配的参数类型，来实现所期望行为的方法。</p>
+<h3 id="放弃重载"><a name="放弃重载" class="anchor-navigation-ex-anchor" href="#放弃重载"><i class="fa fa-link" aria-hidden="true"></i></a>放弃重载</h3>
+<p>在<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item26.html" target="_blank">Item26</a>中的第一个例子中，<code>logAndAdd</code>是许多函数的代表，这些函数可以使用不同的名字来避免在通用引用上的重载的弊端。</p>
+<blockquote>
+<p>两个重载的<code>logAndAdd</code>函数，可以分别改名为<code>logAndAddName</code>和<code>logAndAddNameIdx</code>。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">logAndAddName</span><span class="hljs-params">(T&amp;&amp; name)</span>
+</span>{
+ <span class="hljs-keyword">auto</span> now = std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+ <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);
+ names.<span class="hljs-built_in">emplace</span>(std::forward&lt;T&gt;(name));
+}
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAddNameIdx</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span>             <span class="hljs-comment">//新的重载</span>
+</span>{
+ <span class="hljs-keyword">auto</span> now = std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+ <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);
+ names.<span class="hljs-built_in">emplace</span>(<span class="hljs-built_in">nameFromIdx</span>(idx));
+}
+</code></pre>
+<p>[!important]</p>
+<p>这种方式不能用在第二个例子，<code>Person</code>构造函数中，因为<strong>构造函数名与类名</strong>相同</p>
+</blockquote>
+<hr></hr>
+<h3 id="传递const-t"><a name="传递const-t" class="anchor-navigation-ex-anchor" href="#传递const-t"><i class="fa fa-link" aria-hidden="true"></i></a>传递const T&amp;</h3>
+<p>退回到C++98，然后将传递通用引用替换为传递<code>lvalue-refrence-to-const</code>。</p>
+<blockquote>
+<p>缺点是效率不高。</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(<span class="hljs-type">const</span> std::string&amp; name)</span>
+</span>{
+ <span class="hljs-keyword">auto</span> now =                              <span class="hljs-comment">//获取当前时间</span>
+     std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+ <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);                  <span class="hljs-comment">//志记信息</span>
+ names.<span class="hljs-built_in">emplace</span>(name);                    <span class="hljs-comment">//把name加到全局数据结构中；</span>
+}
+</code></pre>
+</blockquote>
+<hr></hr>
+<h3 id="传值"><a name="传值" class="anchor-navigation-ex-anchor" href="#传值"><i class="fa fa-link" aria-hidden="true"></i></a>传值</h3>
+<p>通常在不增加复杂性的情况下提高性能的一种方法是，将按传引用形参替换为<strong>按值传递</strong>，这是违反直觉的。</p>
+<p>该设计遵循<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/8.Tweaks/item41.html" target="_blank">Item41</a>中给出的建议，即在你<strong>知道要拷贝时就按值传递</strong></p>
+<blockquote>
+<p>在<code>Person</code>的例子中展示：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(std::string n)</span>  <span class="hljs-comment">//代替T&amp;&amp;构造函数，</span>
+    : name(std::move(n)) {</span>}         <span class="hljs-comment">//std::move的使用见条款41</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span>        <span class="hljs-comment">//同之前一样</span>
+    : name(nameFromIdx(idx)) {</span>}
+    …
+
+<span class="hljs-keyword">private</span>:
+    std::string name;
+};
+</code></pre>
+<p>因为没有<code>std::string</code>构造函数可以接受整型参数，所有<code>int</code>或者其他整型变量（比如<code>std::size_t</code>、<code>short</code>、<code>long</code>等）都会使用<code>int</code>类型重载的构造函数。</p>
+<blockquote>
+<p>[!warning]</p>
+<p>使用<code>0</code>或者<code>NULL</code>指代空指针会调用<code>int</code>重载的构造函数，而非指针类型的构造函数。</p>
+</blockquote>
+</blockquote>
+<hr></hr>
+<h3 id="使用tag-dispatch"><a name="使用tag-dispatch" class="anchor-navigation-ex-anchor" href="#使用tag-dispatch"><i class="fa fa-link" aria-hidden="true"></i></a>使用<code>tag dispatch</code></h3>
+<blockquote>
+<p>[!important]</p>
+<p>传递<code>lvalue-reference-to-const</code>以及按值传递都不支持完美转发。如果使用通用引用的动机是<strong>完美转发</strong>，我们就只能使用通用引用</p>
+<p>[!note]</p>
+<p><em>tag dispatch</em>方法:</p>
+<p>通过查看所有重载的所有形参以及调用点的所有传入实参，然后选择最优匹配的函数——<strong>考虑所有形参/实参的组合</strong>。</p>
+<p>通用引用通常提供了最优匹配，但是如果通用引用是包含其他<strong>非</strong>通用引用的形参列表的一部分，则非通用引用形参的较差匹配会使有一个通用引用的重载版本不被运行。</p>
+</blockquote>
+<pre><code class="lang-cpp">std::multiset&lt;std::string&gt; names;       <span class="hljs-comment">//全局数据结构</span>
+
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                    <span class="hljs-comment">//志记信息，将name添加到数据结构</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(T&amp;&amp; name)</span>
+</span>{
+    <span class="hljs-keyword">auto</span> now = std::chrono::system_clokc::<span class="hljs-built_in">now</span>();
+    <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);
+    names.<span class="hljs-built_in">emplace</span>(std::forward&lt;T&gt;(name));
+}
+</code></pre>
+<p>如果引入一个<code>int</code>类型的重载来用索引查找对象，就会重新陷入<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item26.html" target="_blank">Item26</a>中描述的麻烦。</p>
+<blockquote>
+<p>重新实现<code>logAndAdd</code>函数<strong>分拆</strong>为两个函数，一个针对整型值，一个针对其他。<code>logAndAdd</code>本身接受所有实参类型，包括整型和非整型。</p>
+<p><strong>真正执行逻辑</strong>的函数命名为<code>logAndAddImpl</code>，即我们使用重载。</p>
+<ol>
+<li>其中一个函数<strong>接受通用引用</strong>。所以我们同时使用了重载和通用引用。</li>
+<li>每个函数接受第二个形参，表征传入的实参是否为整型。</li>
+</ol>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(T&amp;&amp; name)</span>
+</span>{
+    <span class="hljs-comment">//多传递了一个表示形参T是否为整型的实参</span>
+    <span class="hljs-built_in">logAndAddImpl</span>(
+        std::forward&lt;T&gt;(name),
+        std::is_integral&lt;<span class="hljs-keyword">typename</span> std::remove_reference&lt;T&gt;::type&gt;()
+    );
+}
+</code></pre>
+<p>如果左值<code>int</code>被传入<code>logAndAdd</code>，<code>T</code>将被推断为<code>int&amp;</code>。这不是一个整型类型，因为引用不是整型类型。所以利用<code>std::remove_reference</code>移除类型的引用说明符</p>
+<blockquote>
+<p>[!tip]</p>
+<p>在C++14中，你可以通过<code>std::remove_reference_t&lt;T&gt;</code>来简化写法</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">logAndAdd</span><span class="hljs-params">(T&amp;&amp; name)</span>
+</span>{
+    <span class="hljs-comment">//多传递了一个表示形参T是否为整型的实参</span>
+    <span class="hljs-built_in">logAndAddImpl</span>(
+        std::forward&lt;T&gt;(name),
+        std::is_integral&lt;<span class="hljs-keyword">typename</span> std::<span class="hljs-type">remove_reference_t</span>&lt;T&gt;&gt;()
+    );
+}
+</code></pre>
+</blockquote>
+<ul>
+<li><strong><code>logAndAddImpl</code>的函数</strong></li>
+</ul>
+<blockquote>
+<p>两个重载函数</p>
+<ol>
+<li><p>第一个仅用于非整型类型（即<code>std::is_integral&lt;typename std::remove_reference&lt;T&gt;::type&gt;</code>是false）：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                            <span class="hljs-comment">//非整型实参：添加到全局数据结构中</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAddImpl</span><span class="hljs-params">(T&amp;&amp; name, std::false_type)</span>    <span class="hljs-comment">//译者注：高亮std::false_type</span>
+</span>{
+    <span class="hljs-keyword">auto</span> now = std::chrono::system_clock::<span class="hljs-built_in">now</span>();
+    <span class="hljs-built_in">log</span>(now, <span class="hljs-string">"logAndAdd"</span>);
+    names.<span class="hljs-built_in">emplace</span>(std::forward&lt;T&gt;(name));
+}
+</code></pre>
+<p>如果<code>T</code>是整型，对象的类型就继承自<code>std::true_type</code>，反之继承自<code>std::false_type</code>。</p>
+<blockquote>
+<p>[!important]</p>
+<p>概念上，<code>logAndAdd</code>传递一个<strong>布尔值</strong>给<code>logAndAddImpl</code>表明是否传入了一个整型类型，但是<code>true</code>和<code>false</code>是<strong>运行时</strong>值，我们需要使用重载决议——<strong>编译时</strong>决策——来选择正确的<code>logAndAddImpl</code>重载。</p>
+<p>标准库提供了这样两个命名<code>std::true_type</code>和<code>std::false_type</code>分别对应<code>true和false</code></p>
+</blockquote>
+</li>
+<li><p>第二个重载覆盖了相反的场景：当<code>T</code>是整型类型。</p>
+<pre><code class="lang-cpp"><span class="hljs-function">std::string <span class="hljs-title">nameFromIdx</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span></span>;           <span class="hljs-comment">//与条款26一样，整型实参：查找名字并用它调用logAndAdd</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">logAndAddImpl</span><span class="hljs-params">(<span class="hljs-type">int</span> idx, std::true_type)</span> <span class="hljs-comment">//译者注：高亮std::true_type</span>
+</span>{
+  <span class="hljs-built_in">logAndAdd</span>(<span class="hljs-built_in">nameFromIdx</span>(idx)); 
+}
+</code></pre>
+</li>
+</ol>
+</blockquote>
+<p>在这个设计中，类型<code>std::true_type</code>和<code>std::false_type</code>是“标签”（tag），其唯一目的就是强制重载解析按照我们的想法来执行。</p>
+<p>所以没有对这些参数进行命名，以此希望编译器可以意识到这些标签形参没被使用，然后在程序执行时优化掉它们</p>
+<blockquote>
+<p>[!note]</p>
+<p>通过创建标签对象，在<code>logAndAdd</code>内部将重载实现函数的调用“分发”（<em>dispatch</em>）给正确的重载。因此这个设计名称为：<em>tag dispatch</em>。</p>
+<p><strong>分发函数</strong>——<code>logAndAdd</code>——接受一个没有约束的通用引用参数，但是这个函数没有重载。<strong>实现函数</strong>——<code>logAndAddImpl</code>——是重载的，一个接受通用引用参数，但是重载规则不仅依赖通用引用形参，还依赖新引入的标签形参，标签值设计来保证有不超过一个的重载是合适的匹配。</p>
+</blockquote>
+<hr></hr>
+<h3 id="约束使用通用引用的模板"><a name="约束使用通用引用的模板" class="anchor-navigation-ex-anchor" href="#约束使用通用引用的模板"><i class="fa fa-link" aria-hidden="true"></i></a>约束使用通用引用的模板</h3>
+<blockquote>
+<p>[!tip]</p>
+<p><em>tag dispatch</em>的关键是存在<strong>单独一个函数（没有重载）给客户端API</strong>。这个单独的函数分发给具体的实现函数。</p>
+<p>[!important]</p>
+<ul>
+<li>第二个问题案例是<code>Person</code>类的完美转发构造函数，是个例外。</li>
+<li>编译器可能会自行生成拷贝和移动构造函数，</li>
+<li>有一些对构造函数的调用也被编译器生成的函数处理，绕过了分发机制。</li>
+<li>真正的问题不是编译器生成的函数会绕过<em>tag dispatch</em>设计，而是不<strong>总</strong>会绕过去。</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+ <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;            <span class="hljs-comment">//完美转发的构造函数</span>
+ <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(T&amp;&amp; n)</span>
+ : name(std::forward&lt;T&gt;(n)) {</span>}
+
+ <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Person</span><span class="hljs-params">(<span class="hljs-type">int</span> idx)</span></span>;       <span class="hljs-comment">//int的构造函数</span>
+
+ <span class="hljs-built_in">Person</span>(<span class="hljs-type">const</span> Person&amp; rhs);      <span class="hljs-comment">//拷贝构造函数（编译器生成）</span>
+ <span class="hljs-built_in">Person</span>(Person&amp;&amp; rhs);           <span class="hljs-comment">//移动构造函数（编译器生成）</span>
+ …
+};
+
+<span class="hljs-function">Person <span class="hljs-title">p</span><span class="hljs-params">(<span class="hljs-string">"Nancy"</span>)</span></span>; 
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">cloneOfP</span><span class="hljs-params">(p)</span></span>;                   <span class="hljs-comment">//从p创建新Person；这通不过编译！</span>
+</code></pre>
+<p>提供具有通用引用的构造函数，会使通用引用构造函数在拷贝non-<code>const</code>左值时被调用（而不是拷贝构造函数）</p>
+</blockquote>
+<ul>
+<li><p><strong><code>std::enable_if</code></strong></p>
+<blockquote>
+<p><code>std::enable_if</code>可以给你提供一种强制编译器执行行为的方法，像是特定模板不存在一样。这种模板被称为被<strong>禁止</strong>（disabled）</p>
+<p>默认情况下，所有模板是<strong>启用</strong>的（enabled）</p>
+<p>使用<code>std::enable_if</code>可以使得仅在<code>std::enable_if</code>指定的条件满足时模板才启用。</p>
+<p>如果传递的类型是<code>Person</code>，我们要禁止完美转发构造函数（即让编译器忽略它）</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+ <span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T,
+          <span class="hljs-keyword">typename</span> = <span class="hljs-keyword">typename</span> std::enable_if&lt;condition&gt;::type&gt;   <span class="hljs-comment">//译者注：本行高亮，condition为某其他特定条件</span>
+ <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(T&amp;&amp; n);
+ …
+};
+</code></pre>
+<p>条件是确认<code>T</code>不是<code>Person</code>类型</p>
+<pre><code class="lang-cpp"><span class="hljs-function">Person <span class="hljs-title">p</span><span class="hljs-params">(<span class="hljs-string">"Nancy"</span>)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">auto</span> <span class="hljs-title">cloneOfP</span><span class="hljs-params">(p)</span></span>;       <span class="hljs-comment">//用左值初始化</span>
+</code></pre>
+<p><code>T</code>的类型在通用引用的构造函数中被推导为<code>Person&amp;</code>。<code>Person</code>和<code>Person&amp;</code>类型是不同的</p>
+<blockquote>
+<p>[!warning]</p>
+<p>精细考虑仅当<code>T</code>不是<code>Person</code>类型才启用模板构造函数，查看<code>T</code>时，应该忽略：</p>
+<ol>
+<li><strong>是否是个引用</strong>。</li>
+<li><strong>是不是<code>const</code>或者<code>volatile</code></strong>。</li>
+</ol>
+<p>一种方法消除对于<code>T</code>的引用，<code>const</code>，<code>volatile</code>修饰：</p>
+<ul>
+<li><code>std::decay&lt;T&gt;::type</code>与<code>T</code>是相同的，只不过会移除引用和cv限定符（<em>cv-qualifiers</em>，即<code>const</code>或<code>volatile</code>标识符）的修饰。</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p><code>std::decay</code>如同其名一样，可以将数组或者函数退化成指针，参考<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item1.html" target="_blank">Item1</a></p>
+</blockquote>
+</blockquote>
+<p>所以<code>condition</code>可以为</p>
+<pre><code class="lang-cpp">!std::is_same&lt;Person, <span class="hljs-keyword">typename</span> std::decay&lt;T&gt;::type&gt;::value
+
+ <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span>&lt;
+        <span class="hljs-keyword">typename</span> T,
+        <span class="hljs-keyword">typename</span> = <span class="hljs-keyword">typename</span> std::enable_if&lt;
+                       !std::is_same&lt;Person, 
+                                     <span class="hljs-keyword">typename</span> std::decay&lt;T&gt;::type
+                                    &gt;::value
+                   &gt;::type
+    &gt;
+    <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(T&amp;&amp; n);
+    …
+};
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<p><code>std::enable_if</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt; <span class="hljs-type">bool</span> B, <span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span> = <span class="hljs-type">void</span> &gt;
+<span class="hljs-keyword">struct</span> enable_if;
+</code></pre>
+<p>若 <code>B</code> 为 true，则 <code>std::enable_if</code> 拥有等同于 <code>T</code> 的公开成员 typedef <code>type</code>；否则，无成员 typedef。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>假定从<code>Person</code>派生的类以常规方式实现拷贝和移动操作：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SpecialPerson</span>: <span class="hljs-keyword">public</span> Person {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">SpecialPerson</span>(<span class="hljs-type">const</span> SpecialPerson&amp; rhs) <span class="hljs-comment">//拷贝构造函数，调用基类的</span>
+    : <span class="hljs-built_in">Person</span>(rhs)                           <span class="hljs-comment">//完美转发构造函数！</span>
+    { … }
+
+    <span class="hljs-built_in">SpecialPerson</span>(SpecialPerson&amp;&amp; rhs)      <span class="hljs-comment">//移动构造函数，调用基类的</span>
+    : <span class="hljs-built_in">Person</span>(std::<span class="hljs-built_in">move</span>(rhs))                <span class="hljs-comment">//完美转发构造函数！</span>
+    { … }
+
+    …
+};
+</code></pre>
+<p>而当我们拷贝或者移动一个<code>SpecialPerson</code>对象时，我们<strong>希望调用</strong>基类对应的拷贝和移动构造函数，来拷贝或者移动基类部分</p>
+<p>现在我们意识到不只是禁止<code>Person</code>类型启用模板构造函数，而是禁止<code>Person</code><strong>以及任何派生自<code>Person</code></strong>的类型启用模板构造函数。</p>
+<p>标准库中也有<em>type trait</em>判断一个类型是否继承自另一个类: <code>std::is_base_of&lt;T1, T2&gt;</code></p>
+<blockquote>
+<p>[!tip]</p>
+<p><code>std::is_base_of&lt;T1, T2&gt;</code>是true就表示<code>T2</code>派生自<code>T1</code>。</p>
+</blockquote>
+<p>修正控制<code>Person</code>完美转发构造函数的启用条件:</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//C++11</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span>&lt;
+        <span class="hljs-keyword">typename</span> T,
+        <span class="hljs-keyword">typename</span> = <span class="hljs-keyword">typename</span> std::enable_if&lt;
+                       !std::is_base_of&lt;Person, 
+                                        <span class="hljs-keyword">typename</span> std::decay&lt;T&gt;::type
+                                       &gt;::value
+                   &gt;::type
+    &gt;
+    <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(T&amp;&amp; n);
+    …
+};
+
+<span class="hljs-comment">//C++14</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>  {                                         <span class="hljs-comment">//C++14</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span>&lt;
+        <span class="hljs-keyword">typename</span> T,
+        <span class="hljs-keyword">typename</span> = std::<span class="hljs-type">enable_if_t</span>&lt;                    <span class="hljs-comment">//这儿更少的代码</span>
+                       !std::is_base_of&lt;Person,
+                                        std::<span class="hljs-type">decay_t</span>&lt;T&gt; <span class="hljs-comment">//还有这儿</span>
+                                       &gt;::value
+                   &gt;                                    <span class="hljs-comment">//还有这儿</span>
+    &gt;
+    <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(T&amp;&amp; n);
+    …
+};
+</code></pre>
+</blockquote>
+</li>
+<li><p>应用于<strong>区分整型参数和非整型参数</strong>。我们的原始目标是解决构造函数模糊性问题。</p>
+<blockquote>
+<p>（1）加入一个<code>Person</code>构造函数重载来处理整型参数；</p>
+<p>（2）约束模板构造函数使其对于某些实参禁用。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span>&lt;
+        <span class="hljs-keyword">typename</span> T,
+        <span class="hljs-keyword">typename</span> = std::<span class="hljs-type">enable_if_t</span>&lt;
+            !std::is_base_of&lt;Person, std::<span class="hljs-type">decay_t</span>&lt;T&gt;&gt;::value
+            &amp;&amp;
+            !std::is_integral&lt;std::<span class="hljs-type">remove_reference_t</span>&lt;T&gt;&gt;::value
+        &gt;
+    &gt;
+    <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(T&amp;&amp; n)          <span class="hljs-comment">//对于std::strings和可转化为</span>
+    : <span class="hljs-built_in">name</span>(std::forward&lt;T&gt;(n))      <span class="hljs-comment">//std::strings的实参的构造函数</span>
+    { … }
+
+    <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(<span class="hljs-type">int</span> idx)        <span class="hljs-comment">//对于整型实参的构造函数</span>
+    : <span class="hljs-built_in">name</span>(<span class="hljs-built_in">nameFromIdx</span>(idx))
+    { … }
+
+    …                               <span class="hljs-comment">//拷贝、移动构造函数等</span>
+
+<span class="hljs-keyword">private</span>:
+    std::string name;
+};
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="折中"><a name="折中" class="anchor-navigation-ex-anchor" href="#折中"><i class="fa fa-link" aria-hidden="true"></i></a><strong>折中</strong></h3>
+<blockquote>
+<p>[!important]</p>
+<p>通常，<strong>完美转发更有效率</strong>，因为它避免了仅仅去为了符合形参声明的类型而创建临时对象。</p>
+<p>完美转发也有缺点。即使某些类型的实参可以传递给接受特定类型的函数，也无法完美转发。。<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html" target="_blank">Item30</a>中探索了完美转发失败的例子。</p>
+<p>第二个问题是当客户传递<strong>无效参数</strong>时错误消息的可理解性。</p>
+</blockquote>
+<ul>
+<li><p>假如客户传递了一个由<code>char16_t</code>（一种C++11引入的类型表示16位字符）来创建一个<code>Person</code>对象：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function">Person <span class="hljs-title">p</span><span class="hljs-params">(<span class="hljs-string">u"Konrad Zuse"</span>)</span></span>;   <span class="hljs-comment">//“Konrad Zuse”由const char16_t类型字符组成</span>
+</code></pre>
+<p>本条款前三种方法，编译器将看到可用的采用<code>int</code>或者<code>std::string</code>的构造函数，会产生错误消息，表示没有可以从<code>const char16_t[12]</code>转换为<code>int</code>或者<code>std::string</code>的方法。</p>
+<p>基于完美转发的方法，<code>const char16_t</code>不受约束地绑定到构造函数的形参。</p>
+</blockquote>
+</li>
+<li><p>在<code>Person</code>这个例子中，我们知道完美转发函数的通用引用形参要作为<code>std::string</code>的初始化器，所以我们可以用<code>static_assert</code>来确认它可以起这个作用。</p>
+<blockquote>
+<p><code>std::is_constructible</code>这个<em>type trait</em>执行编译时测试，确定一个类型的对象是否可以用另一个不同类型（或多个类型）的对象（或多个对象）来构造</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">template</span>&lt;                       <span class="hljs-comment">//同之前一样</span>
+        <span class="hljs-keyword">typename</span> T,
+        <span class="hljs-keyword">typename</span> = std::<span class="hljs-type">enable_if_t</span>&lt;
+            !std::is_base_of&lt;Person, std::<span class="hljs-type">decay_t</span>&lt;T&gt;&gt;::value
+            &amp;&amp;
+            !std::is_integral&lt;std::<span class="hljs-type">remove_reference_t</span>&lt;T&gt;&gt;::value
+        &gt;
+    &gt;
+    <span class="hljs-keyword">explicit</span> <span class="hljs-built_in">Person</span>(T&amp;&amp; n)
+    : <span class="hljs-built_in">name</span>(std::forward&lt;T&gt;(n))
+    {
+        <span class="hljs-comment">//断言可以用T对象创建std::string</span>
+        <span class="hljs-built_in">static_assert</span>(
+        std::is_constructible&lt;std::string, T&gt;::value,
+        <span class="hljs-string">"Parameter n can't be used to construct a std::string"</span>
+        );
+
+        …               <span class="hljs-comment">//通常的构造函数的工作写在这</span>
+
+    }
+
+    …                   <span class="hljs-comment">//Person类的其他东西（同之前一样）</span>
+};
+</code></pre>
+<p>客户代码尝试使用无法构造<code>std::string</code>的类型创建<code>Person</code>，会导致指定的错误消息。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="总结_4"><a name="总结_4" class="anchor-navigation-ex-anchor" href="#总结_4"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>通用引用和重载的组合替代方案包括使用不同的函数名，通过lvalue-reference-to-<code>const</code>传递形参，按值传递形参，使用<em>tag dispatch</em>。</li>
+<li>通过<code>std::enable_if</code>约束模板，允许组合通用引用和重载使用，但它也控制了编译器在哪种条件下才使用通用引用重载。</li>
+<li>通用引用参数通常具有高效率的优势，但是可用性就值得斟酌。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-28-understand-reference-collapsing"><a name="item-28-understand-reference-collapsing" class="anchor-navigation-ex-anchor" href="#item-28-understand-reference-collapsing"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 28: Understand reference collapsing</strong></h2>
+<h3 id="通用引用和对左值右值的编码"><a name="通用引用和对左值右值的编码" class="anchor-navigation-ex-anchor" href="#通用引用和对左值右值的编码"><i class="fa fa-link" aria-hidden="true"></i></a>通用引用和对左值右值的编码</h3>
+<ul>
+<li><p>不管传给param的实参是<strong>左值还是右值</strong>，模板形参<code>T</code>都会编码。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">func</span><span class="hljs-params">(T&amp;&amp; param)</span></span>;
+</code></pre>
+<ol>
+<li>当左值实参被传入时，<code>T</code>被推导为左值引用。</li>
+<li>当右值被传入时，<code>T</code>被推导为<strong>非引用</strong>。</li>
+</ol>
+<blockquote>
+<p>[!warning]</p>
+<p>注意不对称性：左值被编码为左值引用，右值被编码为<strong>非引用</strong>。</p>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function">Widget <span class="hljs-title">widgetFactory</span><span class="hljs-params">()</span></span>;     <span class="hljs-comment">//返回右值的函数</span>
+Widget w;                   <span class="hljs-comment">//一个变量（左值）</span>
+<span class="hljs-built_in">func</span>(w);                    <span class="hljs-comment">//用左值调用func；T被推导为Widget&amp;</span>
+<span class="hljs-built_in">func</span>(<span class="hljs-built_in">widgetFactory</span>());      <span class="hljs-comment">//用右值调用func；T被推导为Widget</span>
+</code></pre>
+<p>一个是左值，一个是右值，模板形参<code>T</code>被推导为不同的类型</p>
+<p>这决定了通用引用成为左值还是右值，也是<code>std::forward</code>的工作基础。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<p>在C++中<strong>引用的引用</strong>是非法的</p>
+<pre><code class="lang-cpp"><span class="hljs-type">int</span> x;
+<span class="hljs-keyword">auto</span>&amp; &amp; rx = x;             <span class="hljs-comment">//错误！不能声明引用的引用</span>
+</code></pre>
+</blockquote>
+<ul>
+<li><p>一个左值传给接受通用引用的模板函数会发生什么：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">func</span><span class="hljs-params">(T&amp;&amp; param)</span></span>;       <span class="hljs-comment">//同之前一样</span>
+
+<span class="hljs-built_in">func</span>(w);                    <span class="hljs-comment">//用左值调用func；T被推导为Widget&amp;</span>
+</code></pre>
+<p>如果我们用<code>T</code>推导出来的类型（即<code>Widget&amp;</code>）初始化模板</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">func</span><span class="hljs-params">(Widget&amp; &amp;&amp; param)</span></span>;<span class="hljs-comment">//引用的引用，但是编译器没有报错</span>
+</code></pre>
+<p><code>param</code>的类型应该为左值引用，而最终的函数签名也变成了</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">func</span><span class="hljs-params">(Widget&amp; param)</span></span>;
+</code></pre>
+<p>编译器通过<strong>引用折叠</strong>（<em>reference collapsing</em>）实现禁止声明引用的引用。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="引用折叠（reference-collapsing）"><a name="引用折叠（reference-collapsing）" class="anchor-navigation-ex-anchor" href="#引用折叠（reference-collapsing）"><i class="fa fa-link" aria-hidden="true"></i></a><strong>引用折叠</strong>（<em>reference collapsing</em>）</h3>
+<blockquote>
+<p>[!important]</p>
+<p><strong>引用折叠</strong>（<em>reference collapsing</em>）禁止<strong>你</strong>声明引用的引用，但是<strong>编译器</strong>会在特定的上下文中产生这些，模板实例化就是其中一种情况。</p>
+</blockquote>
+<ul>
+<li><p>当编译器生成引用的引用时，引用折叠指导下一步发生什么。</p>
+<blockquote>
+<blockquote>
+<p>[!tip]</p>
+<p>存在两种类型的引用（左值和右值）</p>
+<p>所以有<strong>四种可能的引用组合</strong>（左值的左值，左值的右值，右值的右值，右值的左值）</p>
+</blockquote>
+<p>如果一个上下文中允许引用的引用存在（比如，模板的实例化），引用根据规则<strong>折叠</strong>为单个引用：</p>
+<blockquote>
+<p>[!note]</p>
+<p>如果任一引用为左值引用，则结果为左值引用。否则（即，如果引用都是右值引用），结果为右值引用。</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>引用折叠是<code>std::forward</code>工作的一种关键机制。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; fParam)</span>
+</span>{
+    …                                   <span class="hljs-comment">//做些工作</span>
+    <span class="hljs-built_in">someFunc</span>(std::forward&lt;T&gt;(fParam));  <span class="hljs-comment">//转发fParam到someFunc</span>
+}
+</code></pre>
+<p><code>std::forward</code>的作用是当且仅当传给<code>f</code>的实参为右值时，即<code>T</code>为非引用类型，才将<code>fParam</code>（左值）转化为一个右值。</p>
+<p>所以<code>std::forward</code>可以这样实现：</p>
+<pre><code class="lang-cpp">
+
+<span class="hljs-comment">////不是标准库版本的实现（忽略了一些接口描述）</span>
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                                <span class="hljs-comment">//在std命名空间</span>
+<span class="hljs-function">T&amp;&amp; <span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-keyword">typename</span>
+                remove_reference&lt;T&gt;::type&amp; param)</span>
+</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">static_cast</span>&lt;T&amp;&amp;&gt;(param);
+}
+
+<span class="hljs-comment">//在C++14中，std::remove_reference_t的存在使得实现变得更简洁：</span>
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;                        <span class="hljs-comment">//C++14；仍然在std命名空间</span>
+<span class="hljs-function">T&amp;&amp; <span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-type">remove_reference_t</span>&lt;T&gt;&amp; param)</span>
+</span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">static_cast</span>&lt;T&amp;&amp;&gt;(param);
+}
+</code></pre>
+</blockquote>
+</li>
+<li><p>引用折叠发生在四种情况下。</p>
+<blockquote>
+<ol>
+<li><p>第一，也是最常见的就是<strong>模板实例化</strong>。</p>
+</li>
+<li><p>第二，是<strong><code>auto</code>变量的类型生成</strong>，具体细节类似于模板，因为<code>auto</code>变量的类型推导基本与模板类型推导雷同（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item2.html" target="_blank">Item2</a>）。</p>
+<pre><code class="lang-cpp"><span class="hljs-function">Widget <span class="hljs-title">widgetFactory</span><span class="hljs-params">()</span></span>;     <span class="hljs-comment">//返回右值的函数</span>
+Widget w;                   <span class="hljs-comment">//一个变量（左值）</span>
+<span class="hljs-keyword">auto</span>&amp;&amp; w1 = w;
+<span class="hljs-comment">//左值初始化w1，因此为auto推导出类型Widget&amp;</span>
+<span class="hljs-comment">//产生了引用的引用 Widget&amp; &amp;&amp; w1 = w;发生引用折叠</span>
+<span class="hljs-comment">//结果就是w1是一个左值引用。Widget&amp; w1 = w</span>
+
+<span class="hljs-keyword">auto</span>&amp;&amp; w2 = <span class="hljs-built_in">widgetFactory</span>();
+<span class="hljs-comment">//右值初始化w2，auto推导出非引用类型Widget。代入auto得到：</span>
+<span class="hljs-comment">//Widget&amp;&amp; w2 = widgetFactory()最终结果，w2是个右值引用。</span>
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>[!important]</p>
+<p>通用引用不是一种新的引用，它实际上是满足以下两个条件下的<strong>右值引用</strong>：</p>
+<ul>
+<li><strong>类型推导区分左值和右值</strong>。<code>T</code>类型的左值被推导为<code>T&amp;</code>类型，<code>T</code>类型的右值被推导为<code>T</code>。</li>
+<li><strong>发生引用折叠</strong>。</li>
+</ul>
+</blockquote>
+<ol>
+<li><p>第三种情况是<code>typedef</code>和别名声明的产生和使用中（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/3.MovingToModernCpp/item9.html" target="_blank">Item9</a>）。</p>
+<p>在创建或者评估<code>typedef</code>过程中出现了引用的引用，则引用折叠就会起作用。</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">typedef</span> T&amp;&amp; RvalueRefToT;
+    …
+};
+
+<span class="hljs-comment">//使用左值引用实例化Widget</span>
+Widget&lt;<span class="hljs-type">int</span>&amp;&gt; w;
+<span class="hljs-comment">//typedef int&amp; &amp;&amp; RvalueRefToT;引用折叠后</span>
+<span class="hljs-comment">//typedef int&amp; RvalueRefToT;</span>
+</code></pre>
+</li>
+<li><p>最后一种引用折叠发生的情况是，<code>decltype</code>使用的情况。</p>
+<p>分析<code>decltype</code>期间，出现了<strong>引用的引用</strong>，引用折叠规则就会起作用（关于<code>decltype</code>，参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/1.DeducingTypes/item3.html" target="_blank">Item3</a>）</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="总结_5"><a name="总结_5" class="anchor-navigation-ex-anchor" href="#总结_5"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>引用折叠发生在四种情况下：<strong>模板实例化，<code>auto</code>类型推导，<code>typedef</code>与别名声明的创建和使用，<code>decltype</code></strong>。</li>
+<li>当编译器在引用折叠环境中生成了引用的引用时，结果就是单个引用。有左值引用折叠结果就是左值引用，否则就是右值引用。</li>
+<li>通用引用就是在<strong>特定上下文的右值引用</strong>，上下文是通过类型推导区分左值还是右值，并且发生引用折叠的那些地方。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-29-assume-that-move-operations-are-not-present-not-cheap-and-not-used"><a name="item-29-assume-that-move-operations-are-not-present-not-cheap-and-not-used" class="anchor-navigation-ex-anchor" href="#item-29-assume-that-move-operations-are-not-present-not-cheap-and-not-used"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 29: Assume that move operations are not present, not cheap, and not used</strong></h2>
+<h3 id="移动语义"><a name="移动语义" class="anchor-navigation-ex-anchor" href="#移动语义"><i class="fa fa-link" aria-hidden="true"></i></a><strong>移动语义</strong></h3>
+<ul>
+<li>移动语义可以说是C++11最主要的特性。</li>
+<li>它不仅允许编译器使用开销小的移动操作<strong>代替</strong>大开销的复制操作，而且默认这么做（当特定条件满足的时候）。</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<p>移动语义确实可以做这些事，这把这个特性封为一代传说。</p>
+<p>这个条款的目的就是给你泼一瓢冷水，<strong>保持理智</strong>看待移动语义。</p>
+</blockquote>
+<hr></hr>
+<h3 id="冷水"><a name="冷水" class="anchor-navigation-ex-anchor" href="#冷水"><i class="fa fa-link" aria-hidden="true"></i></a>"冷水"</h3>
+<ul>
+<li><p>已知很多类型不支持移动操作</p>
+<blockquote>
+<p>对于你的应用中（或者代码库中）的类型，<strong>没有适配C++11</strong>的部分，编译器即使支持移动语义也是无能为力的。</p>
+<p>C++11倾向于为缺少移动操作的类生成它们，但是只有在<strong>没有声明复制操作，移动操作，或析构函数的类</strong>中才会生成移动操作（参考<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/3.MovingToModernCpp/item17.html" target="_blank">Item17</a>）。</p>
+<p>对于没有明确支持移动操作的类型，并且不符合编译器默认生成的条件的类，没有理由期望C++11会比C++98进行任何性能上的提升。</p>
+</blockquote>
+</li>
+<li><p>显式支持了移动操作，结果可能也没有你希望的那么好。</p>
+<blockquote>
+<p>认为移动所有容器的<strong>开销都非常小</strong>是个错误</p>
+<p>对于某些容器来说，压根就<strong>不存在开销小</strong>的方式来移动它所包含的内容。</p>
+<p>对另一些容器来说，容器的开销真正小的移动操作会有有些容器元素不能满足的注意条件。</p>
+</blockquote>
+</li>
+<li><p><code>std::array</code>，这是C++11中的新容器。</p>
+<blockquote>
+<p><code>std::array</code>本质上是具有STL接口的<strong>内置数组</strong>。</p>
+<p>存储具体数据在堆内存的容器，本身只保存了指向堆内存中容器内容的<strong>指针</strong>（真正实现更复杂一些，但基本逻辑就是这样）。</p>
+<p>指针的存在使得在常数时间移动整个容器成为可能，只需要从<strong>源容器</strong>拷贝保存指向容器内容的指针到<strong>目标容器</strong>，然后将源指针置为空指针就可以了：</p>
+<pre><code class="lang-cpp">std::vector&lt;Widget&gt; vw1;
+<span class="hljs-comment">//把数据存进vw1</span>
+…
+<span class="hljs-comment">//把vw1移动到vw2。以常数时间运行。只有vw1和vw2中的指针被改变</span>
+<span class="hljs-keyword">auto</span> vw2 = std::<span class="hljs-built_in">move</span>(vw1);
+</code></pre>
+<p><img src="D:\Internt_of_Thing\e_book\C++\note\Effective-Modern-C++\assets\item29_fig1.png" alt="item29_fig1"></img></p>
+<p>但是<code>std::array</code>没有这种指针实现，数据就保存在<code>std::array</code>对象中：</p>
+<pre><code class="lang-cpp">std::array&lt;Widget, 10000&gt; aw1;
+<span class="hljs-comment">//把数据存进aw1</span>
+…
+<span class="hljs-comment">//把aw1移动到aw2。以线性时间运行。aw1中所有元素被移动到aw2</span>
+<span class="hljs-keyword">auto</span> aw2 = std::<span class="hljs-built_in">move</span>(aw1);
+</code></pre>
+<p><img src="D:\Internt_of_Thing\e_book\C++\note\Effective-Modern-C++\assets\item29_fig2.png" alt="item29_fig2"></img></p>
+<p>使用<code>std::array</code>的移动操作还是复制操作都将花费线性时间的开销，因为每个容器中的元素终归需要拷贝或移动一次</p>
+</blockquote>
+</li>
+<li><p>另一方面，<code>std::string</code>提供了常数时间的移动操作和线性时间的复制操作。</p>
+<blockquote>
+<p>[!warning]</p>
+<p>但是<strong>可能不一定</strong>。</p>
+<p>许多字符串的实现采用了小字符串优化（<em>small string optimization</em>，SSO）。</p>
+<p>“小”字符串（比如长度小于15个字符的）存储在了<code>std::string</code>的<strong>缓冲区</strong>中，并没有存储在堆内存</p>
+<p>移动这种存储的字符串并不比复制操作更快。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="移动语义并无优势"><a name="移动语义并无优势" class="anchor-navigation-ex-anchor" href="#移动语义并无优势"><i class="fa fa-link" aria-hidden="true"></i></a>移动语义并无优势?</h3>
+<p>即使对于支持快速移动操作的类型，某些看似可靠的移动操作最终也会导致复制。</p>
+<blockquote>
+<p><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/3.MovingToModernCpp/item14.html" target="_blank">Item14</a>解释了原因，标准库中的某些容器操作提供了强大的<strong>异常安全保证</strong>，确保依赖那些保证的C++98的代码在升级到C++11且仅当移动操作不会抛出异常，从而可能替换操作时，不会不可运行。</p>
+<p>结果就是，即使类提供了更具效率的移动操作，而且即使移动操作更合适（比如源对象是右值），编译器仍可能被迫使用复制操作，因为<strong>移动操作没有声明<code>noexcept</code></strong>。</p>
+</blockquote>
+<p>存在几种情况，C++11的移动语义并无优势：</p>
+<blockquote>
+<ul>
+<li><strong>没有移动操作</strong>：要移动的对象没有提供移动操作，所以移动的写法也会变成复制操作。</li>
+<li><strong>移动不会更快</strong>：要移动的对象提供的移动操作并不比复制速度更快。</li>
+<li><strong>移动不可用</strong>：进行移动的上下文要求移动操作不会抛出异常，但是该操作没有被声明为<code>noexcept</code>。</li>
+</ul>
+<p>值得一提的是，还有另一个场景，会使得移动并没有那么有效率：</p>
+<ul>
+<li><strong>源对象是左值</strong>：除了极少数的情况外（例如<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item25.html" target="_blank">Item25</a>），只有右值可以作为移动操作的来源。</li>
+</ul>
+<p>[!important]</p>
+<p>但是，通常，你<strong>了解你代码里使用的类型，依赖他们的特性不变性</strong>（比如是否支持快速移动操作）。</p>
+<p>这种情况，你无需这个条款的假设，只需要查找所用类型的移动操作详细信息。</p>
+<p>如果类型提供了快速移动操作，并且在调用移动操作的上下文中使用对象，可以安全的使用快速移动操作替换复制操作。</p>
+</blockquote>
+<hr></hr>
+<h3 id="总结_6"><a name="总结_6" class="anchor-navigation-ex-anchor" href="#总结_6"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>假定移动操作不存在，成本高，未被使用。</li>
+<li>在已知的类型或者支持移动语义的代码中，就不需要上面的假设。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="item-30-familiarize-yourself-with-perfect-forwarding-failure-cases"><a name="item-30-familiarize-yourself-with-perfect-forwarding-failure-cases" class="anchor-navigation-ex-anchor" href="#item-30-familiarize-yourself-with-perfect-forwarding-failure-cases"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Item 30: Familiarize yourself with perfect forwarding failure cases</strong></h2>
+<h3 id="完美转发"><a name="完美转发" class="anchor-navigation-ex-anchor" href="#完美转发"><i class="fa fa-link" aria-hidden="true"></i></a><strong>完美转发</strong></h3>
+<p>C++11最显眼的功能之一就是完美转发功能。</p>
+<ul>
+<li><p>“完美转发”的含义:</p>
+<blockquote>
+<p>[!note]</p>
+<p>“转发”仅表示将一个函数的形参传递——就是<strong>转发</strong>——给另一个函数。</p>
+<p>对于第二个函数（被传递的那个）目标是收到与第一个函数（执行传递的那个）完全相同的对象。</p>
+</blockquote>
+</li>
+<li><p>这规则排除了<strong>按值传递的形参</strong>，因为它们是原始调用者传入内容的<strong>拷贝</strong>。</p>
+</li>
+<li><p><strong>指针形参</strong>也被排除在外，因为我们不想强迫调用者传入指针。</p>
+<blockquote>
+<p>[!important]</p>
+<p>关于通常目的的转发，我们将处理<strong>引用</strong>形参。</p>
+<p><strong>完美转发</strong>（<em>perfect forwarding</em>）意味不仅转发对象，还转发显著的特征：类型，是<strong>左值还是右值</strong>，是<strong><code>const</code>还是<code>volatile</code></strong>。</p>
+<p>将使用<strong>通用引用</strong>（参见<a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item24.html" target="_blank">Item24</a>），因为通用引用形参被传入实参时才确定是左值还是右值。</p>
+</blockquote>
+</li>
+<li><p>有一些函数<code>f</code>，然后想编写一个转发给它的函数</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">fwd</span><span class="hljs-params">(T&amp;&amp; param)</span>             <span class="hljs-comment">//接受任何实参</span>
+</span>{
+    <span class="hljs-built_in">f</span>(std::forward&lt;T&gt;(param));  <span class="hljs-comment">//转发给f</span>
+}
+</code></pre>
+<p>从本质上说，转发函数是通用的。例如<code>fwd</code>模板，接受<strong>任何类型</strong>的实参，并转发得到的任何东西。</p>
+<p><code>fwd</code>的可变形式如下：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span>... Ts&gt;
+<span class="hljs-type">void</span> <span class="hljs-title">fwd</span><span class="hljs-params">(Ts&amp;&amp;... params)</span>            <span class="hljs-comment">//接受任何实参</span>
+</span>{
+    <span class="hljs-built_in">f</span>(std::forward&lt;Ts&gt;(params)...); <span class="hljs-comment">//转发给f</span>
+}
+</code></pre>
+<p>转发函数不仅是模板，而且是可变模板，因此可以接受<strong>任何数量</strong>的实参</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h3 id="无法做到完美转发的实参类型"><a name="无法做到完美转发的实参类型" class="anchor-navigation-ex-anchor" href="#无法做到完美转发的实参类型"><i class="fa fa-link" aria-hidden="true"></i></a>无法做到完美转发的实参类型</h3>
+<blockquote>
+<p>[!warning]</p>
+<p>如果<code>f</code>使用某<strong>特定实参</strong>会执行某个操作，但是<code>fwd</code>使用相同的实参会执行不同的操作，完美转发就会失败</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">f</span>( expression );        <span class="hljs-comment">//调用f执行某个操作</span>
+<span class="hljs-built_in">fwd</span>( expression );        <span class="hljs-comment">//但调用fwd执行另一个操作，则fwd不能完美转发expression给f</span>
+</code></pre>
+<p>或者模板类型推导失败，完美转发会失败。</p>
+</blockquote>
+<h4 id="花括号初始化器"><a name="花括号初始化器" class="anchor-navigation-ex-anchor" href="#花括号初始化器"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html#花括号初始化器" target="_blank">花括号初始化器</a></h4>
+<p>假定<code>f</code>这样声明：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">const</span> std::vector&lt;<span class="hljs-type">int</span>&gt;&amp; v)</span></span>;
+
+<span class="hljs-comment">//用花括号初始化调用</span>
+<span class="hljs-built_in">f</span>({ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> });         <span class="hljs-comment">//可以，“{1, 2, 3}”隐式转换为std::vector&lt;int&gt;</span>
+
+<span class="hljs-comment">//传递相同的列表初始化给fwd不能编译</span>
+<span class="hljs-built_in">fwd</span>({ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> });       <span class="hljs-comment">//错误！不能编译</span>
+</code></pre>
+<p>这是因为这是完美转发失效的一种情况。所有这种错误有相同的原因。</p>
+<p>当通过调用函数模板<code>fwd</code>间接调用<code>f</code>时，编译器<strong>推导</strong>传入给<code>fwd</code>的实参类型，然后比较推导后的实参类型和<code>f</code>的形参声明类型。当下面情况任何一个发生时，完美转发就会失败：</p>
+<blockquote>
+<p>[!important]</p>
+<ul>
+<li><strong>编译器不能推导出<code>fwd</code>的一个或者多个形参类型。</strong> 这种情况下代码无法编译。</li>
+<li><strong>编译器推导“错”了<code>fwd</code>的一个或者多个形参类型。</strong> 在这里，“错误”可能意味着<code>fwd</code>的实例将无法使用推导出的类型进行编译，但是也可能意味着使用<code>fwd</code>的推导类型调用<code>f</code>，与用传给<code>fwd</code>的实参直接调用<code>f</code>表现出不一致的行为。这种不同行为的原因可能是因为<code>f</code>是个重载函数的名字，并且由于是“不正确的”类型推导，在<code>fwd</code>内部调用的<code>f</code>重载和直接调用的<code>f</code>重载不一样。</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>在上面的<code>fwd({ 1, 2, 3 })</code>例子中</p>
+<blockquote>
+<p>问题在于，将花括号初始化传递给未声明为<code>std::initializer_list</code>的函数模板形参，被判定为“非推导上下文”。意味着编译器不准在对<code>fwd</code>的调用中推导表达式<code>{ 1, 2, 3 }</code>的类型</p>
+<p>一种简单的解决方法——使用<strong><code>auto</code>声明一个局部变量</strong>，然后将局部变量传进转发函数：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">auto</span> il = { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> };  <span class="hljs-comment">//il的类型被推导为std::initializer_list&lt;int&gt;</span>
+<span class="hljs-built_in">fwd</span>(il);                <span class="hljs-comment">//可以，完美转发il给f</span>
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<h4 id="0或者null作为空指针"><a name="0或者null作为空指针" class="anchor-navigation-ex-anchor" href="#0或者null作为空指针"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html#0或者null作为空指针" target="_blank"><code>0</code>或者<code>NULL</code>作为空指针</a></h4>
+<blockquote>
+<p>[!important]</p>
+<p><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/3.MovingToModernCpp/item8.html" target="_blank">Item8</a>说明当你试图传递<strong><code>0</code>或者<code>NULL</code>作为空指针</strong>给模板时，类型推导会出错，会把传来的实参推导为一个<strong>整型</strong>类型（典型情况为<code>int</code>）而不是指针类型。</p>
+<p>解决方法非常简单，传一个<code>nullptr</code>而不是<code>0</code>或者<code>NULL</code>。</p>
+</blockquote>
+<h4 id="仅有声明的整型static-const数据成员"><a name="仅有声明的整型static-const数据成员" class="anchor-navigation-ex-anchor" href="#仅有声明的整型static-const数据成员"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html#仅有声明的整型static-const数据成员" target="_blank">仅有声明的整型<code>static const</code>数据成员</a></h4>
+<blockquote>
+<p>[!important]</p>
+<p>通常，无需在类中定义整型<code>static const</code>数据成员</p>
+<p>声明就可以了。这是因为编译器会对此类成员实行<strong>常量传播</strong>（<em>const propagation</em>），因此消除了保留内存的需要。</p>
+<blockquote>
+<p>[!tip]</p>
+<p><strong>常量传播</strong>（<em>const propagation</em>）</p>
+<p>代码中存在被声明为常量（const）的值时，编译器会尝试将这些常量值直接<strong>替换</strong>到它们被使用的地方，而不是在运行时去访问存储这些常量值的内存位置。</p>
+</blockquote>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">static</span> <span class="hljs-type">const</span> std::<span class="hljs-type">size_t</span> MinVals = <span class="hljs-number">28</span>;  <span class="hljs-comment">//MinVal的声明</span>
+    …
+};
+…                                           <span class="hljs-comment">//没有MinVals定义</span>
+
+std::vector&lt;<span class="hljs-type">int</span>&gt; widgetData;
+widgetData.<span class="hljs-built_in">reserve</span>(Widget::MinVals);        <span class="hljs-comment">//使用MinVals</span>
+</code></pre>
+<p>译器通过将值28放入所有提到<code>MinVals</code>的位置来补充缺少的定义（就像它们被要求的那样）</p>
+<p>上面的代码仍然可以编译，但是链接时就会报错，直到为<code>MinVals</code>提供定义</p>
+</blockquote>
+<ul>
+<li><p>想象下<code>f</code>（<code>fwd</code>要转发实参给它的那个函数）这样声明：</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(std::<span class="hljs-type">size_t</span> val)</span></span>;
+<span class="hljs-comment">//使用MinVals调用f是可以的，因为编译器直接将值28代替MinVals：</span>
+<span class="hljs-built_in">f</span>(Widget::MinVals);         <span class="hljs-comment">//可以，视为“f(28)”</span>
+<span class="hljs-comment">//尝试通过fwd调用f</span>
+<span class="hljs-built_in">fwd</span>(Widget::MinVals);       <span class="hljs-comment">//错误！不应该链接</span>
+</code></pre>
+<p>底层的问题是一样的。</p>
+<p>代码中没有使用<code>MinVals</code>的地址，但是<code>fwd</code>的形参是通用引用，而引用，在编译器生成的代码中，<strong>通常被视作指针</strong>。</p>
+<blockquote>
+<p>[!tip]</p>
+<p>在程序的二进制底层代码中（以及硬件中）指针和引用是一样的。在这个水平上，引用只是可以<strong>自动解引用</strong>的指针。</p>
+</blockquote>
+<p>通过引用传递<code>MinVals</code>实际上与通过指针传递<code>MinVals</code>是一样的，因此，必须有内存使得指针可以指向。</p>
+</blockquote>
+</li>
+<li><p>通过引用传递的整型<code>static const</code>数据成员，通常需要<strong>定义</strong>它们，这个要求可能会造成在不使用完美转发的代码成功的地方，使用等效的完美转发失败。（译者注：这里意思应该是没有定义，完美转发就会失败）</p>
+</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<p>根据标准，通过引用传递<code>MinVals</code>要求有定义。</p>
+<p>但不是所有的实现都强制要求这一点。</p>
+</blockquote>
+<h4 id="重载函数的名称和模板名称"><a name="重载函数的名称和模板名称" class="anchor-navigation-ex-anchor" href="#重载函数的名称和模板名称"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html#重载函数的名称和模板名称" target="_blank">重载函数的名称和模板名称</a></h4>
+<p>函数<code>f</code>（我们想通过<code>fwd</code>完美转发实参给的那个函数）可以通过向其传递<strong>执行某些功能的函数</strong>来自定义其行为。</p>
+<blockquote>
+<pre><code class="lang-cpp"><span class="hljs-comment">//函数接受和返回值都是int</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">int</span> (*pf)(<span class="hljs-type">int</span>))</span></span>;             <span class="hljs-comment">//pf = “process function”</span>
+
+<span class="hljs-comment">//也可以使用更简单的非指针语法声明</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-type">int</span> pf(<span class="hljs-type">int</span>))</span></span>;                <span class="hljs-comment">//与上面定义相同的f</span>
+</code></pre>
+<p>假设我们有了一个重载函数</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">processVal</span><span class="hljs-params">(<span class="hljs-type">int</span> value)</span></span>;
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">processVal</span><span class="hljs-params">(<span class="hljs-type">int</span> value, <span class="hljs-type">int</span> priority)</span></span>;
+
+<span class="hljs-comment">//传递processVal给f</span>
+<span class="hljs-built_in">f</span>(processVal);                      <span class="hljs-comment">//可以</span>
+</code></pre>
+<p><code>f</code>要求一个函数指针作为实参，但是<code>processVal</code>不是一个函数指针或者一个函数，它是同名的两个不同函数。但是，编译器可以知道它需要哪个：<strong>匹配上<code>f</code>的形参类型的那个</strong>。</p>
+<p><code>fwd</code>是一个函数模板，<strong>没有它可接受的类型的信息</strong>，使得编译器不可能决定出哪个函数应被传递：</p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">fwd</span>(processVal);                    <span class="hljs-comment">//错误！那个processVal？</span>
+</code></pre>
+<p>单用<code>processVal</code>是没有类型信息的，所以就不能类型推导，完美转发失败。</p>
+</blockquote>
+<ul>
+<li><p>试图使用<strong>函数模板</strong>而不是（或者也加上）重载函数的名字，同样的问题也会发生。</p>
+<blockquote>
+<p>一个函数模板不代表单独一个函数，它表示一个<strong>函数族</strong>：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;
+T <span class="hljs-title">workOnVal</span><span class="hljs-params">(T param)</span>                <span class="hljs-comment">//处理值的模板</span>
+</span>{ … }
+
+<span class="hljs-built_in">fwd</span>(workOnVal);                     <span class="hljs-comment">//错误！哪个workOnVal实例？</span>
+</code></pre>
+</blockquote>
+</li>
+<li><p>要让像<code>fwd</code>的完美转发函数接受一个重载函数名或者模板名，方法是<strong>指定</strong>要转发的那个重载或者实例。</p>
+<blockquote>
+<p>创造与<code>f</code>相同形参类型的函数指针，通过<code>processVal</code>或者<code>workOnVal</code>实例化这个函数指针</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">using</span> ProcessFuncType =                         <span class="hljs-comment">//写个类型定义；见条款9</span>
+    <span class="hljs-built_in">int</span> (*)(<span class="hljs-type">int</span>);
+
+ProcessFuncType processValPtr = processVal;     <span class="hljs-comment">//指定所需的processVal签名</span>
+
+<span class="hljs-built_in">fwd</span>(processValPtr);                             <span class="hljs-comment">//可以</span>
+<span class="hljs-built_in">fwd</span>(<span class="hljs-built_in">static_cast</span>&lt;ProcessFuncType&gt;(workOnVal));   <span class="hljs-comment">//也可以</span>
+</code></pre>
+<p>这要求你知道<code>fwd</code>转发的函数指针的类型。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="位域"><a name="位域" class="anchor-navigation-ex-anchor" href="#位域"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://cntransgroup.github.io/EffectiveModernCppChinese/5.RRefMovSemPerfForw/item30.html#位域" target="_blank">位域</a></h4>
+<p>完美转发最后一种失败的情况是函数实参使用<strong>位域</strong>这种类型。</p>
+<p>IPv4的头部有如下模型：</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">IPv4Header</span> {
+    std::<span class="hljs-type">uint32_t</span> version:<span class="hljs-number">4</span>,
+                  IHL:<span class="hljs-number">4</span>,
+                  DSCP:<span class="hljs-number">6</span>,
+                  ECN:<span class="hljs-number">2</span>,
+                  totalLength:<span class="hljs-number">16</span>;
+    …
+};
+</code></pre>
+<p><code>f</code>（转发函数<code>fwd</code>的目标）为接收一个<code>std::size_t</code>的形参，则使用<code>IPv4Header</code>对象的<code>totalLength</code>字段进行调用没有问题：</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(std::<span class="hljs-type">size_t</span> sz)</span></span>;         <span class="hljs-comment">//要调用的函数</span>
+
+IPv4Header h;
+…
+<span class="hljs-built_in">f</span>(h.totalLength);               <span class="hljs-comment">//可以</span>
+
+<span class="hljs-comment">//通过fwd转发</span>
+<span class="hljs-built_in">fwd</span>(h.totalLength);             <span class="hljs-comment">//错误！</span>
+</code></pre>
+<p>问题在于<code>fwd</code>的形参是引用，而<code>h.totalLength</code>是non-<code>const</code>位域。</p>
+<blockquote>
+<p>[!warning]</p>
+<p>C++标准非常清楚地谴责了这种组合：<strong>non-<code>const</code>引用不应该绑定到位域。</strong></p>
+<p>禁止的理由很充分。位域可能包含了机器字的任意部分（比如32位<code>int</code>的3-5位），但是这些东西<strong>无法直接寻址</strong>。</p>
+</blockquote>
+<ul>
+<li><p>一旦意识到接收位域实参的函数都将接收位域的<strong>副本</strong>，就可以轻松解决位域不能完美转发的问题。</p>
+<blockquote>
+<p>没有函数可以绑定引用到位域，也没有函数可以接受指向位域的指针</p>
+<p>位域可以传给的形参种类只有按值传递的形参</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>传reference-to-<code>const</code>形参的情况中，标准要求这个引用实际上绑定到存放位域值的副本对象</p>
+<p>但是eference-to-<code>const</code>不直接绑定到位域，而是绑定位域值拷贝到的一个<strong>普通对象</strong>。</p>
+</blockquote>
+<p>可以自己创建副本然后利用副本调用完美转发。在<code>IPv4Header</code>的例子中，可以如下写法：</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//拷贝位域值；参看条款6了解关于初始化形式的信息</span>
+<span class="hljs-keyword">auto</span> length = <span class="hljs-built_in">static_cast</span>&lt;std::<span class="hljs-type">uint16_t</span>&gt;(h.totalLength);
+
+<span class="hljs-built_in">fwd</span>(length);                    <span class="hljs-comment">//转发这个副本</span>
+</code></pre>
+<hr></hr>
+<h3 id="总结_7"><a name="总结_7" class="anchor-navigation-ex-anchor" href="#总结_7"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h3>
+<p>大多数情况下，完美转发工作的很好。你基本不用考虑其他问题。</p>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>当模板类型推导失败或者推导出错误类型，完美转发会失败。</li>
+<li>导致完美转发失败的实参种类有<strong>花括号初始化</strong>，<strong>作为空指针的<code>0</code>或者<code>NULL</code></strong>，仅有<strong>声明的整型<code>static const</code></strong>数据成员，<strong>模板和重载函数</strong>的名字，<strong>位域</strong>。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CHAPTER_4_Smart_Pointers.html" class="navigation navigation-prev " aria-label="Previous page: CHAPTER_4_Smart_Pointers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="CHAPTER_6_Lambda_Expressions.html" class="navigation navigation-next " aria-label="Next page: CHAPTER_6_Lambda_Expressions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding","level":"1.4.2.5","depth":3,"next":{"title":"CHAPTER_6_Lambda_Expressions","level":"1.4.2.6","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.md","articles":[]},"previous":{"title":"CHAPTER_4_Smart_Pointers","level":"1.4.2.4","depth":3,"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.md","ref":"docs/Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.md","mtime":"2025-09-07T09:41:17.121Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

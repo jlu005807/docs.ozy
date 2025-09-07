@@ -1,0 +1,2084 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>计算机组成原理基础知识（简答版） · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Operating_System/" />
+    
+    
+    <link rel="prev" href="计算机组成原理基础知识.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="计算机组成原理基础知识.html">
+            
+                <a href="计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="计算机组成原理基础知识（简答版）.html">
+            
+                <a href="计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >计算机组成原理基础知识（简答版）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#计算机组成原理基础知识（简答版）"><b></b>计算机组成原理基础知识（简答版）</a></li><li><span class="title-icon "></span><a href="#1-说明计算机系统的层次结构。"><b></b>1. 说明计算机系统的层次结构。</a></li><li><span class="title-icon "></span><a href="#2-说明冯诺依曼体系结构的特点。"><b></b>2. 说明冯诺依曼体系结构的特点。</a></li><li><span class="title-icon "></span><a href="#3-什么是机器字长、指令字长、存储字长"><b></b>3. 什么是机器字长、指令字长、存储字长?</a></li><li><span class="title-icon "></span><a href="#4系统总线包括哪三类？起到什么作用？"><b></b>4.系统总线包括哪三类？起到什么作用？</a></li><li><span class="title-icon "></span><a href="#5-总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？"><b></b>5. 总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？</a></li><li><span class="title-icon "></span><a href="#6-集中式总线控制优先权仲裁方式有哪三种？各有什么特点？"><b></b>6. 集中式总线控制优先权仲裁方式有哪三种？各有什么特点？</a></li><li><span class="title-icon "></span><a href="#7-简述总线周期的4个阶段。"><b></b>7. 简述总线周期的4个阶段。</a></li><li><span class="title-icon "></span><a href="#8-总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？"><b></b>8. 总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？</a></li><li><span class="title-icon "></span><a href="#9-串行传输和并行传输有何区别？各适用于什么场合？"><b></b>9. 串行传输和并行传输有何区别？各适用于什么场合？</a></li><li><span class="title-icon "></span><a href="#10试比较ram和rom。"><b></b>10.试比较RAM和ROM。</a></li><li><span class="title-icon "></span><a href="#11-从实现技术的角度，试比较sram和dram。"><b></b>11. 从实现技术的角度，试比较SRAM和DRAM。</a></li><li><span class="title-icon "></span><a href="#12-存储芯片内的地址译码方式有几种？各自特点及应用场合？"><b></b>12. 存储芯片内的地址译码方式有几种？各自特点及应用场合？</a></li><li><span class="title-icon "></span><a href="#13-什么是动态ram的刷新？刷新有几种方式？简要说明之。"><b></b>13. 什么是动态RAM的刷新？刷新有几种方式？简要说明之。</a></li><li><span class="title-icon "></span><a href="#14-存储容量扩展有哪几种方法？"><b></b>14. 存储容量扩展有哪几种方法？</a></li><li><span class="title-icon "></span><a href="#15-使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？"><b></b>15. 使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？</a></li><li><span class="title-icon "></span><a href="#16-已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？"><b></b>16. 已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？</a></li><li><span class="title-icon "></span><a href="#17-什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？"><b></b>17. 什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？</a></li><li><span class="title-icon "></span><a href="#18-cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？"><b></b>18. Cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？</a></li><li><span class="title-icon "></span><a href="#19-请简述cache的基本工作原理。"><b></b>19. 请简述Cache的基本工作原理。</a></li><li><span class="title-icon "></span><a href="#20-试比较主存-cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。"><b></b>20. 试比较主存-Cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。</a></li><li><span class="title-icon "></span><a href="#21-cache-主存间的替换策略有哪些，请简述。"><b></b>21. Cache-主存间的替换策略有哪些，请简述。</a></li><li><span class="title-icon "></span><a href="#22-发生主存写请求时，如何保证cache和主存的一致性？"><b></b>22. 发生主存写请求时，如何保证Cache和主存的一致性？</a></li><li><span class="title-icon "></span><a href="#23-影响cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？"><b></b>23. 影响Cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？</a></li><li><span class="title-icon "></span><a href="#24-io地址码的编制方式有哪两种？"><b></b>24. I/O地址码的编制方式有哪两种？</a></li><li><span class="title-icon "></span><a href="#25-io与主机交换信息有哪几种控制方式？各有何特点？"><b></b>25. I/O与主机交换信息有哪几种控制方式？各有何特点？</a></li><li><span class="title-icon "></span><a href="#26-io接口有什么作用。"><b></b>26. I/O接口有什么作用。</a></li><li><span class="title-icon "></span><a href="#27-程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？"><b></b>27. 程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？</a></li><li><span class="title-icon "></span><a href="#28-以io设备的中断处理过程为例，说明一次程序中断的全过程。"><b></b>28. 以I/O设备的中断处理过程为例，说明一次程序中断的全过程。</a></li><li><span class="title-icon "></span><a href="#29在dma方式中有没有中断请求，为什么？dma接口电路中应设置哪些硬件。"><b></b>29.在DMA方式中有没有中断请求，为什么？DMA接口电路中应设置哪些硬件。</a></li><li><span class="title-icon "></span><a href="#30-dma方式中的中断请求和程序中断中的中断请求有何区别？"><b></b>30. DMA方式中的中断请求和程序中断中的中断请求有何区别？</a></li><li><span class="title-icon "></span><a href="#31-dma和主存交换数据时有哪三种方法？分别简述。"><b></b>31. DMA和主存交换数据时有哪三种方法？分别简述。</a></li><li><span class="title-icon "></span><a href="#32简述dma的工作过程。"><b></b>32.简述DMA的工作过程。</a></li><li><span class="title-icon "></span><a href="#33-dma接口的类型有哪几种？"><b></b>33. DMA接口的类型有哪几种？</a></li><li><span class="title-icon "></span><a href="#34-说明浮点加减法运算步骤。"><b></b>34. 说明浮点加/减法运算步骤。</a></li><li><span class="title-icon "></span><a href="#35说明浮点乘除法运算的基本步骤。"><b></b>35.说明浮点乘/除法运算的基本步骤。</a></li><li><span class="title-icon "></span><a href="#36-试比较基址寻址和变址寻址，并举例说明其适用的场合。"><b></b>36. 试比较基址寻址和变址寻址，并举例说明其适用的场合。</a></li><li><span class="title-icon "></span><a href="#37-任意写出五种寻址方式，令ea为有效地址，a为形式地址，写出这五种寻址方式计算有效地址的表达式。"><b></b>37. 任意写出五种寻址方式，令EA为有效地址，A为形式地址，写出这五种寻址方式计算有效地址的表达式。</a></li><li><span class="title-icon "></span><a href="#38-指令中有哪些字段？各有何作用？如何确定各字段的位数？"><b></b>38. 指令中有哪些字段？各有何作用？如何确定各字段的位数？</a></li><li><span class="title-icon "></span><a href="#39-risc和cisc指令系统各自的特点。"><b></b>39. RISC和CISC指令系统各自的特点。</a></li><li><span class="title-icon "></span><a href="#40-请简述mips指令系统的r型、i型和j型指令格式，并举出指令实例。"><b></b>40. 请简述MIPS指令系统的R型、I型和J型指令格式，并举出指令实例。</a></li><li><span class="title-icon "></span><a href="#41-在mips指令子集实现的时候，如何从单周期数据通路构造流水线？"><b></b>41. 在MIPS指令子集实现的时候，如何从单周期数据通路构造流水线？</a></li><li><span class="title-icon "></span><a href="#42-流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。"><b></b>42. 流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。</a></li><li><span class="title-icon "></span><a href="#43-请简述flynn分类法将计算机系统结构分成哪四类。"><b></b>43. 请简述Flynn分类法将计算机系统结构分成哪四类。</a></li><li><span class="title-icon "></span><a href="#44-请简述程序局部性原理。"><b></b>44. 请简述程序局部性原理。</a></li><li><span class="title-icon "></span><a href="#45请简述amdahl定律。"><b></b>45.请简述Amdahl定律。</a></li><li><span class="title-icon "></span><a href="#46-影响cpu时间的因素包括什么？（提示：从cpu公式入手，考虑3个参数的影响因素）"><b></b>46. 影响CPU时间的因素包括什么？（提示：从CPU公式入手，考虑3个参数的影响因素）</a></li><li><span class="title-icon "></span><a href="#47-请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。"><b></b>47. 请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。</a></li><li><span class="title-icon "></span><a href="#48-请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？"><b></b>48. 请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？</a></li><li><span class="title-icon "></span><a href="#49-请简述tomasulo算法的基本思想，并分析其局限性。"><b></b>49. 请简述Tomasulo算法的基本思想，并分析其局限性。</a></li><li><span class="title-icon "></span><a href="#50-请说明什么是动态分支预测？有何优点？"><b></b>50. 请说明什么是动态分支预测？有何优点？</a></li><li><span class="title-icon "></span><a href="#51-请简述分支历史表bht的基本思想。"><b></b>51. 请简述分支历史表BHT的基本思想。</a></li><li><span class="title-icon "></span><a href="#52请简述分支目标缓冲器btb的基本思想。"><b></b>52.请简述分支目标缓冲器BTB的基本思想。</a></li><li><span class="title-icon "></span><a href="#53-请简述基于硬件的前瞻算法基本思想。"><b></b>53. 请简述基于硬件的前瞻算法基本思想。</a></li><li><span class="title-icon "></span><a href="#54-请在pvp、smp、mpp、dsm和cow中任选一种，简要描述其特点。"><b></b>54. 请在PVP、SMP、MPP、DSM和COW中任选一种，简要描述其特点。</a></li><li><span class="title-icon "></span><a href="#55-什么是多处理机cache一致性问题？"><b></b>55. 什么是多处理机Cache一致性问题？</a></li><li><span class="title-icon "></span><a href="#56请简述监听式协议的原理。"><b></b>56.请简述监听式协议的原理。</a></li><li><span class="title-icon "></span><a href="#57-请简述目录式协议的原理。（自学）"><b></b>57. 请简述目录式协议的原理。（自学）</a></li><li><span class="title-icon "></span><a href="#58-请比较说明写作废协议和写更新协议性能上的差别。（自学）"><b></b>58. 请比较说明写作废协议和写更新协议性能上的差别。（自学）</a></li><li><span class="title-icon "></span><a href="#59-请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）"><b></b>59. 请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）</a></li><li><span class="title-icon "></span><a href="#60-请简述目录式协议中，目录的三种结构。（自学）"><b></b>60. 请简述目录式协议中，目录的三种结构。（自学）</a></li></ul></div><a href="#计算机组成原理基础知识（简答版）" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#计算机组成原理基础知识（简答版）">计算机组成原理基础知识（简答版）</a><i></i></div></li>
+<li><div><a href="#1-说明计算机系统的层次结构。">1. 说明计算机系统的层次结构。</a><i></i></div></li>
+<li><div><a href="#2-说明冯诺依曼体系结构的特点。">2. 说明冯诺依曼体系结构的特点。</a><i></i></div></li>
+<li><div><a href="#3-什么是机器字长、指令字长、存储字长">3. 什么是机器字长、指令字长、存储字长?</a><i></i></div></li>
+<li><div><a href="#4系统总线包括哪三类？起到什么作用？">4.系统总线包括哪三类？起到什么作用？</a><i></i></div></li>
+<li><div><a href="#5-总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？">5. 总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？</a><i></i></div></li>
+<li><div><a href="#6-集中式总线控制优先权仲裁方式有哪三种？各有什么特点？">6. 集中式总线控制优先权仲裁方式有哪三种？各有什么特点？</a><i></i></div></li>
+<li><div><a href="#7-简述总线周期的4个阶段。">7. 简述总线周期的4个阶段。</a><i></i></div></li>
+<li><div><a href="#8-总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？">8. 总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？</a><i></i></div></li>
+<li><div><a href="#9-串行传输和并行传输有何区别？各适用于什么场合？">9. 串行传输和并行传输有何区别？各适用于什么场合？</a><i></i></div></li>
+<li><div><a href="#10试比较ram和rom。">10.试比较RAM和ROM。</a><i></i></div></li>
+<li><div><a href="#11-从实现技术的角度，试比较sram和dram。">11. 从实现技术的角度，试比较SRAM和DRAM。</a><i></i></div></li>
+<li><div><a href="#12-存储芯片内的地址译码方式有几种？各自特点及应用场合？">12. 存储芯片内的地址译码方式有几种？各自特点及应用场合？</a><i></i></div></li>
+<li><div><a href="#13-什么是动态ram的刷新？刷新有几种方式？简要说明之。">13. 什么是动态RAM的刷新？刷新有几种方式？简要说明之。</a><i></i></div></li>
+<li><div><a href="#14-存储容量扩展有哪几种方法？">14. 存储容量扩展有哪几种方法？</a><i></i></div></li>
+<li><div><a href="#15-使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？">15. 使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？</a><i></i></div></li>
+<li><div><a href="#16-已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？">16. 已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？</a><i></i></div></li>
+<li><div><a href="#17-什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？">17. 什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？</a><i></i></div></li>
+<li><div><a href="#18-cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？">18. Cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？</a><i></i></div></li>
+<li><div><a href="#19-请简述cache的基本工作原理。">19. 请简述Cache的基本工作原理。</a><i></i></div></li>
+<li><div><a href="#20-试比较主存-cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。">20. 试比较主存-Cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。</a><i></i></div></li>
+<li><div><a href="#21-cache-主存间的替换策略有哪些，请简述。">21. Cache-主存间的替换策略有哪些，请简述。</a><i></i></div></li>
+<li><div><a href="#22-发生主存写请求时，如何保证cache和主存的一致性？">22. 发生主存写请求时，如何保证Cache和主存的一致性？</a><i></i></div></li>
+<li><div><a href="#23-影响cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？">23. 影响Cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？</a><i></i></div></li>
+<li><div><a href="#24-io地址码的编制方式有哪两种？">24. I/O地址码的编制方式有哪两种？</a><i></i></div></li>
+<li><div><a href="#25-io与主机交换信息有哪几种控制方式？各有何特点？">25. I/O与主机交换信息有哪几种控制方式？各有何特点？</a><i></i></div></li>
+<li><div><a href="#26-io接口有什么作用。">26. I/O接口有什么作用。</a><i></i></div></li>
+<li><div><a href="#27-程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？">27. 程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？</a><i></i></div></li>
+<li><div><a href="#28-以io设备的中断处理过程为例，说明一次程序中断的全过程。">28. 以I/O设备的中断处理过程为例，说明一次程序中断的全过程。</a><i></i></div></li>
+<li><div><a href="#29在dma方式中有没有中断请求，为什么？dma接口电路中应设置哪些硬件。">29.在DMA方式中有没有中断请求，为什么？DMA接口电路中应设置哪些硬件。</a><i></i></div></li>
+<li><div><a href="#30-dma方式中的中断请求和程序中断中的中断请求有何区别？">30. DMA方式中的中断请求和程序中断中的中断请求有何区别？</a><i></i></div></li>
+<li><div><a href="#31-dma和主存交换数据时有哪三种方法？分别简述。">31. DMA和主存交换数据时有哪三种方法？分别简述。</a><i></i></div></li>
+<li><div><a href="#32简述dma的工作过程。">32.简述DMA的工作过程。</a><i></i></div></li>
+<li><div><a href="#33-dma接口的类型有哪几种？">33. DMA接口的类型有哪几种？</a><i></i></div></li>
+<li><div><a href="#34-说明浮点加减法运算步骤。">34. 说明浮点加/减法运算步骤。</a><i></i></div></li>
+<li><div><a href="#35说明浮点乘除法运算的基本步骤。">35.说明浮点乘/除法运算的基本步骤。</a><i></i></div></li>
+<li><div><a href="#36-试比较基址寻址和变址寻址，并举例说明其适用的场合。">36. 试比较基址寻址和变址寻址，并举例说明其适用的场合。</a><i></i></div></li>
+<li><div><a href="#37-任意写出五种寻址方式，令ea为有效地址，a为形式地址，写出这五种寻址方式计算有效地址的表达式。">37. 任意写出五种寻址方式，令EA为有效地址，A为形式地址，写出这五种寻址方式计算有效地址的表达式。</a><i></i></div></li>
+<li><div><a href="#38-指令中有哪些字段？各有何作用？如何确定各字段的位数？">38. 指令中有哪些字段？各有何作用？如何确定各字段的位数？</a><i></i></div></li>
+<li><div><a href="#39-risc和cisc指令系统各自的特点。">39. RISC和CISC指令系统各自的特点。</a><i></i></div></li>
+<li><div><a href="#40-请简述mips指令系统的r型、i型和j型指令格式，并举出指令实例。">40. 请简述MIPS指令系统的R型、I型和J型指令格式，并举出指令实例。</a><i></i></div></li>
+<li><div><a href="#41-在mips指令子集实现的时候，如何从单周期数据通路构造流水线？">41. 在MIPS指令子集实现的时候，如何从单周期数据通路构造流水线？</a><i></i></div></li>
+<li><div><a href="#42-流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。">42. 流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。</a><i></i></div></li>
+<li><div><a href="#43-请简述flynn分类法将计算机系统结构分成哪四类。">43. 请简述Flynn分类法将计算机系统结构分成哪四类。</a><i></i></div></li>
+<li><div><a href="#44-请简述程序局部性原理。">44. 请简述程序局部性原理。</a><i></i></div></li>
+<li><div><a href="#45请简述amdahl定律。">45.请简述Amdahl定律。</a><i></i></div></li>
+<li><div><a href="#46-影响cpu时间的因素包括什么？（提示：从cpu公式入手，考虑3个参数的影响因素）">46. 影响CPU时间的因素包括什么？（提示：从CPU公式入手，考虑3个参数的影响因素）</a><i></i></div></li>
+<li><div><a href="#47-请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。">47. 请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。</a><i></i></div></li>
+<li><div><a href="#48-请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？">48. 请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？</a><i></i></div></li>
+<li><div><a href="#49-请简述tomasulo算法的基本思想，并分析其局限性。">49. 请简述Tomasulo算法的基本思想，并分析其局限性。</a><i></i></div></li>
+<li><div><a href="#50-请说明什么是动态分支预测？有何优点？">50. 请说明什么是动态分支预测？有何优点？</a><i></i></div></li>
+<li><div><a href="#51-请简述分支历史表bht的基本思想。">51. 请简述分支历史表BHT的基本思想。</a><i></i></div></li>
+<li><div><a href="#52请简述分支目标缓冲器btb的基本思想。">52.请简述分支目标缓冲器BTB的基本思想。</a><i></i></div></li>
+<li><div><a href="#53-请简述基于硬件的前瞻算法基本思想。">53. 请简述基于硬件的前瞻算法基本思想。</a><i></i></div></li>
+<li><div><a href="#54-请在pvp、smp、mpp、dsm和cow中任选一种，简要描述其特点。">54. 请在PVP、SMP、MPP、DSM和COW中任选一种，简要描述其特点。</a><i></i></div></li>
+<li><div><a href="#55-什么是多处理机cache一致性问题？">55. 什么是多处理机Cache一致性问题？</a><i></i></div></li>
+<li><div><a href="#56请简述监听式协议的原理。">56.请简述监听式协议的原理。</a><i></i></div></li>
+<li><div><a href="#57-请简述目录式协议的原理。（自学）">57. 请简述目录式协议的原理。（自学）</a><i></i></div></li>
+<li><div><a href="#58-请比较说明写作废协议和写更新协议性能上的差别。（自学）">58. 请比较说明写作废协议和写更新协议性能上的差别。（自学）</a><i></i></div></li>
+<li><div><a href="#59-请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）">59. 请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）</a><i></i></div></li>
+<li><div><a href="#60-请简述目录式协议中，目录的三种结构。（自学）">60. 请简述目录式协议中，目录的三种结构。（自学）</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="计算机组成原理基础知识（简答版）"><a name="计算机组成原理基础知识（简答版）" class="anchor-navigation-ex-anchor" href="#计算机组成原理基础知识（简答版）"><i class="fa fa-link" aria-hidden="true"></i></a>计算机组成原理基础知识（简答版）</h1>
+<h1 id="1-说明计算机系统的层次结构。"><a name="1-说明计算机系统的层次结构。" class="anchor-navigation-ex-anchor" href="#1-说明计算机系统的层次结构。"><i class="fa fa-link" aria-hidden="true"></i></a>1. 说明计算机系统的层次结构。</h1>
+<ul>
+<li><p>常见的五级计算机系统层次结构</p>
+<p>分别是</p>
+<ul>
+<li>高级语言机器，高级语言由编译程序翻译成汇编语言</li>
+<li>汇编语言机器，汇编语言由汇编程序翻译成机器语言</li>
+<li>操作系统机器，机器语言解释操作系统</li>
+<li>软硬件分界</li>
+<li>机器语言机器，微程序解释机器指令</li>
+<li>微指令系统，硬件执行微指令</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-说明冯诺依曼体系结构的特点。"><a name="2-说明冯诺依曼体系结构的特点。" class="anchor-navigation-ex-anchor" href="#2-说明冯诺依曼体系结构的特点。"><i class="fa fa-link" aria-hidden="true"></i></a>2. 说明冯诺依曼体系结构的特点。</h1>
+<ul>
+<li>五大部件：运算器，存储器，控制器，I/O设备</li>
+<li>运算器为中心</li>
+<li>指令和数据用二进制表示，同等地位存于存储器</li>
+<li>指令由操作码和地址码组成，顺序执行</li>
+</ul>
+<h1 id="3-什么是机器字长、指令字长、存储字长"><a name="3-什么是机器字长、指令字长、存储字长" class="anchor-navigation-ex-anchor" href="#3-什么是机器字长、指令字长、存储字长"><i class="fa fa-link" aria-hidden="true"></i></a>3. 什么是机器字长、指令字长、存储字长?</h1>
+<ul>
+<li>机器字长：CPU一次能处理的数据位数，与寄存器位数有关</li>
+<li>指令字长：计算机指令所占用的位数，取决于操作码长度，操作码地址长度和个数</li>
+<li>存储字长：MDR一个存储单元存储的二进制代码的位数</li>
+</ul>
+<h1 id="4系统总线包括哪三类？起到什么作用？"><a name="4系统总线包括哪三类？起到什么作用？" class="anchor-navigation-ex-anchor" href="#4系统总线包括哪三类？起到什么作用？"><i class="fa fa-link" aria-hidden="true"></i></a>4.系统总线包括哪三类？起到什么作用？</h1>
+<p>分为数据总线，地址总线，控制总线</p>
+<ul>
+<li>数据总线：传输数据信息</li>
+<li>地址总线：数据地址或设备地址</li>
+<li>控制总线：发出控制信号</li>
+</ul>
+<h1 id="5-总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？"><a name="5-总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？" class="anchor-navigation-ex-anchor" href="#5-总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？"><i class="fa fa-link" aria-hidden="true"></i></a>5. 总线判优控制是解决什么问题的？总的来说可以分为哪两种方式？</h1>
+<p>总线判优控制解决<strong>多个部件同时申请总线时的总线使用权分配问题</strong></p>
+<p>分为<strong>集中式和分布式</strong></p>
+<h1 id="6-集中式总线控制优先权仲裁方式有哪三种？各有什么特点？"><a name="6-集中式总线控制优先权仲裁方式有哪三种？各有什么特点？" class="anchor-navigation-ex-anchor" href="#6-集中式总线控制优先权仲裁方式有哪三种？各有什么特点？"><i class="fa fa-link" aria-hidden="true"></i></a>6. 集中式总线控制优先权仲裁方式有哪三种？各有什么特点？</h1>
+<p>集中式总线控制优先权仲裁方式有链式查询，计时器定时查询，独立请求三种</p>
+<ul>
+<li>链式查询：结构简单，易于扩充设备；电路故障敏感，优先级固定</li>
+<li>计时器定时查询：<strong>优先级设置灵活</strong>，对电路故障不那么敏感；控制较复杂</li>
+<li>独立请求方式：响应时间快，优先次序灵活；控制逻辑复杂</li>
+</ul>
+<h1 id="7-简述总线周期的4个阶段。"><a name="7-简述总线周期的4个阶段。" class="anchor-navigation-ex-anchor" href="#7-简述总线周期的4个阶段。"><i class="fa fa-link" aria-hidden="true"></i></a>7. 简述总线周期的4个阶段。</h1>
+<p>总线周期分为申请分配，寻址，传数，结束四个阶段</p>
+<ul>
+<li><p><strong>申请分配</strong>：主模板申请总线使用，总线仲裁机构将<strong>总线使用权</strong>给某一申请者。</p>
+</li>
+<li><p><strong>寻址</strong>：主模块通过总线发出本次要访问的从模块（或从设备）的地址及有关命令，启动从模块。</p>
+</li>
+<li><p><strong>传数</strong>：主模块和从模块进行<strong>数据交换</strong></p>
+</li>
+<li><p><strong>结束</strong>：从总线撤除主模板信息，让出总线使用权</p>
+</li>
+</ul>
+<h1 id="8-总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？"><a name="8-总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？" class="anchor-navigation-ex-anchor" href="#8-总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？"><i class="fa fa-link" aria-hidden="true"></i></a>8. 总线通信控制是解决什么问题的？总的来说有哪几种控制方式？各自的特点是什么？</h1>
+<p>总线通信控制主要解决<strong>通信双方</strong>如何获知传输开始和结束，协调配合的问题</p>
+<p>总的有同步通信，异步通信，半同步通信，分离式通信四种控制方式</p>
+<ul>
+<li>同步通信：统一时标，强制性同步</li>
+<li>异步通信：允许各模块速度的不一致性，采用应答方式（握手方式）</li>
+<li>半同步通信：同步异步结合</li>
+<li>分离式通信：各模板需要申请，限定时间同步传送信息，准备数据不占用总线，控制复杂</li>
+</ul>
+<h1 id="9-串行传输和并行传输有何区别？各适用于什么场合？"><a name="9-串行传输和并行传输有何区别？各适用于什么场合？" class="anchor-navigation-ex-anchor" href="#9-串行传输和并行传输有何区别？各适用于什么场合？"><i class="fa fa-link" aria-hidden="true"></i></a>9. 串行传输和并行传输有何区别？各适用于什么场合？</h1>
+<ul>
+<li><p>串行传输：</p>
+<ul>
+<li>数据在<strong>单条 1 位宽</strong>的传输线上，<strong>一位一位</strong>地按顺序分时传送。</li>
+<li>成本低，速度慢，适合<strong>远距离</strong>数据传输。</li>
+</ul>
+</li>
+<li><p>并行传输：</p>
+<ul>
+<li>数组在<strong>多条并行 1 位宽</strong>的传输线上，同时由源传送到目的地。</li>
+<li>成本高，速度快，适合<strong>近距离</strong>数据传输</li>
+</ul>
+</li>
+</ul>
+<h1 id="10试比较ram和rom。"><a name="10试比较ram和rom。" class="anchor-navigation-ex-anchor" href="#10试比较ram和rom。"><i class="fa fa-link" aria-hidden="true"></i></a>10.试比较RAM和ROM。</h1>
+<ul>
+<li>RAM：随机存取存储器，可读可写，常用于主存。</li>
+<li>ROM：只读存储器，在程序执行过程中只能将内部信息读出，不能随意写入。</li>
+</ul>
+<h1 id="11-从实现技术的角度，试比较sram和dram。"><a name="11-从实现技术的角度，试比较sram和dram。" class="anchor-navigation-ex-anchor" href="#11-从实现技术的角度，试比较sram和dram。"><i class="fa fa-link" aria-hidden="true"></i></a>11. 从实现技术的角度，试比较SRAM和DRAM。</h1>
+<ul>
+<li>SRAM：用触发器工作原理存储信息，断电易失信息，不需要刷新，速度快成本高</li>
+<li>DRAM：用电容存储电荷原理寄存信息，需要刷新，集成度高，功耗高，速度较慢</li>
+</ul>
+<h1 id="12-存储芯片内的地址译码方式有几种？各自特点及应用场合？"><a name="12-存储芯片内的地址译码方式有几种？各自特点及应用场合？" class="anchor-navigation-ex-anchor" href="#12-存储芯片内的地址译码方式有几种？各自特点及应用场合？"><i class="fa fa-link" aria-hidden="true"></i></a>12. 存储芯片内的地址译码方式有几种？各自特点及应用场合？</h1>
+<p>有线选法和重合法两种</p>
+<ul>
+<li>线选法：一根字选择线选中一个存储单元，结构简单，用于容量不大的存储芯片</li>
+<li>重合法：二维地址译码，由行列地址译码器共同选中一个存储单元，结构复杂，用于大容量存储芯片</li>
+</ul>
+<h1 id="13-什么是动态ram的刷新？刷新有几种方式？简要说明之。"><a name="13-什么是动态ram的刷新？刷新有几种方式？简要说明之。" class="anchor-navigation-ex-anchor" href="#13-什么是动态ram的刷新？刷新有几种方式？简要说明之。"><i class="fa fa-link" aria-hidden="true"></i></a>13. 什么是动态RAM的刷新？刷新有几种方式？简要说明之。</h1>
+<p>刷新的过程实质上是<strong>先将原存信息读出，再由刷新放大器形成原信息并重新写入的再生过程</strong>，或者说是<strong>对 DRAM 定期进行的全部重写过程，一次刷新一行</strong></p>
+<ul>
+<li>集中刷新：规定刷新周期，集中刷新，存在“死区”</li>
+<li>分散刷新：每行刷新分散到每个存取周期，存取周期长，系统速度降低</li>
+<li>异步刷新：结合集中刷新和分散刷新，缩短“死区”，充分利用最大刷新间隔为2ms</li>
+<li>将刷新安排在CPU对指令的译码阶段</li>
+</ul>
+<h1 id="14-存储容量扩展有哪几种方法？"><a name="14-存储容量扩展有哪几种方法？" class="anchor-navigation-ex-anchor" href="#14-存储容量扩展有哪几种方法？"><i class="fa fa-link" aria-hidden="true"></i></a>14. 存储容量扩展有哪几种方法？</h1>
+<p>有位扩展，字扩展和字位扩展三种</p>
+<ul>
+<li>位扩展：增加存储字长，两片1K<em>4位组成一片1K\</em>8位</li>
+<li>字扩展：增加存储器字的数量，两片1K<em>8位组成2K\</em>8位</li>
+<li>字位扩展：既增加存储字的数量，又增加存储字长</li>
+</ul>
+<h1 id="15-使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？"><a name="15-使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？" class="anchor-navigation-ex-anchor" href="#15-使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？"><i class="fa fa-link" aria-hidden="true"></i></a>15. 使用汉明码进行校验时，需要增加k位检测位，且k位的检测位和n位的待检测二进制代码位之间要满足什么关系？为什么？</h1>
+<ul>
+<li><strong>2^k ≥ n+k+1</strong></li>
+<li>为了能准确对<strong>错误定位</strong>以及<strong>指出代码没错</strong></li>
+</ul>
+<h1 id="16-已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？"><a name="16-已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？" class="anchor-navigation-ex-anchor" href="#16-已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？"><i class="fa fa-link" aria-hidden="true"></i></a>16. 已知收到的海明码为0100111（按配偶原则配置），试问欲传送的信息是什么？</h1>
+<ul>
+<li>P1 = 1⊕3⊕5⊕7 = 0 </li>
+<li>P2 = 2⊕3⊕6⊕7 = 1 </li>
+<li>P4 = 4⊕5⊕6⊕7 = 1 </li>
+<li>P4P2P1 = 110</li>
+<li>(110)2=6-&gt;第六位出错，纠正为 0100101，故要求传送的信息为 0101</li>
+</ul>
+<h1 id="17-什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？"><a name="17-什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？" class="anchor-navigation-ex-anchor" href="#17-什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？"><i class="fa fa-link" aria-hidden="true"></i></a>17. 什么是多体并行存储器？有哪两种存储体编址方式，各自有什么特点？</h1>
+<ul>
+<li>多体并行系统就是采用<strong>多体模块组成的存储器</strong>。每个模块有相同的容量和存取速度，各模块各自都有独立的地址寄存器(MAR)、数据寄存器(MDR)、地址译码、驱动电路和读/写电路，他们能并行工作，又能交叉工作。</li>
+<li>两种存储体编址方式：<strong>高位交叉编址</strong>和<strong>地位交叉编址</strong></li>
+<li>高位交叉：高位表示体位，低位表示体内地址，顺序存储</li>
+<li>低位交叉：低位地址表示<strong>体位</strong>，高位地址为<strong>体内地址</strong>，<strong>模M编址</strong>，交叉存储</li>
+</ul>
+<h1 id="18-cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？"><a name="18-cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？" class="anchor-navigation-ex-anchor" href="#18-cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？"><i class="fa fa-link" aria-hidden="true"></i></a>18. Cache、主存和辅存构成的三级存储系统分别的目的是什么？设计依据是？</h1>
+<p><strong>Cache-主存层次</strong>：</p>
+<ul>
+<li>解决 CPU 和主存<strong>速度不匹配</strong>的问题</li>
+<li>依据：<ul>
+<li>程序访问的<strong>局部性原理</strong></li>
+<li>缓存的速度比主存的速度高</li>
+</ul>
+</li>
+</ul>
+<p><strong>主存-辅存层次：</strong></p>
+<ul>
+<li>解决存储系统的容量问题</li>
+<li>依据<ul>
+<li>辅存的速度比主存的速度低，而且不能和 CPU 直接交换信息，但它的<strong>容量比主存大得多</strong>，可以存放大量暂时未使用得信息。</li>
+</ul>
+</li>
+</ul>
+<h1 id="19-请简述cache的基本工作原理。"><a name="19-请简述cache的基本工作原理。" class="anchor-navigation-ex-anchor" href="#19-请简述cache的基本工作原理。"><i class="fa fa-link" aria-hidden="true"></i></a>19. 请简述Cache的基本工作原理。</h1>
+<ul>
+<li>主存和缓存按块存储，且块的大小相同，任何时刻都有一些<strong>主存块处在缓存块</strong>中</li>
+<li>CPU欲读取主存某字时，若所需字已在缓存中，直接访问Cache；</li>
+<li>若不在Cache内，将该字所在的主存整个字块一次调入Cache中进行访问。</li>
+</ul>
+<h1 id="20-试比较主存-cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。"><a name="20-试比较主存-cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。" class="anchor-navigation-ex-anchor" href="#20-试比较主存-cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。"><i class="fa fa-link" aria-hidden="true"></i></a>20. 试比较主存-Cache管理中三种地址映射的方法，并分别给出在三种地址映射下，主存地址划分。</h1>
+<ul>
+<li><p><strong>直接映射</strong>：每个主存块只能和一个缓存块对应，每个缓存块可以和若干个主存块对应。</p>
+<ul>
+<li>| 主存字块标记 | Cache字块地址 | 字块内地址 |
+| ------------ | ------------- | ---------- |
+| t位          | c位           | b位        |</li>
+</ul>
+</li>
+<li><p><strong>全相联映射</strong>：主存中的任一块可以映射到缓存中的任一块</p>
+<ul>
+<li>| 主存字块标记 | 字块内地址 |
+| ------------ | ---------- |
+| m=t+c位      | b位        |</li>
+</ul>
+</li>
+<li><p><strong>组相联映射</strong>：某一主存块按模Q映射到缓存的某组中的任一块</p>
+<ul>
+<li>| 主存字块标记 | 组地址  | 字块内地址 |
+| ------------ | ------- | ---------- |
+| s=t+r位      | q=c-r位 | b位        |</li>
+</ul>
+</li>
+</ul>
+<h1 id="21-cache-主存间的替换策略有哪些，请简述。"><a name="21-cache-主存间的替换策略有哪些，请简述。" class="anchor-navigation-ex-anchor" href="#21-cache-主存间的替换策略有哪些，请简述。"><i class="fa fa-link" aria-hidden="true"></i></a>21. Cache-主存间的替换策略有哪些，请简述。</h1>
+<ul>
+<li><strong>先进先出（FIFO）算法</strong>：选择<strong>最早调入</strong>Cache的字块进行替换。</li>
+<li><strong>近期最少使用（LRU）算法</strong>：利用访存局部性原理，替换出<strong>近期用的最少</strong>的字块。</li>
+<li>随机法：<strong>随机地选择</strong>被替换的块。</li>
+</ul>
+<h1 id="22-发生主存写请求时，如何保证cache和主存的一致性？"><a name="22-发生主存写请求时，如何保证cache和主存的一致性？" class="anchor-navigation-ex-anchor" href="#22-发生主存写请求时，如何保证cache和主存的一致性？"><i class="fa fa-link" aria-hidden="true"></i></a>22. 发生主存写请求时，如何保证Cache和主存的一致性？</h1>
+<ul>
+<li><strong>写直达法</strong>：写操作时数据既<strong>写入Cache又写入主存</strong>，随时保证主存和Cache的数据始终一致。</li>
+<li><strong>写回法</strong>：写操作时只把数据写入Cache而不写入主存，当Cache数据<strong>被替换出去时才写回主存</strong>。</li>
+</ul>
+<h1 id="23-影响cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？"><a name="23-影响cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？" class="anchor-navigation-ex-anchor" href="#23-影响cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？"><i class="fa fa-link" aria-hidden="true"></i></a>23. 影响Cache-主存层平均访问时间的因素有哪些？如果降低平均访存时间，可以怎么办？</h1>
+<ul>
+<li>因素：<strong>访问Cache的时间、失效率、失效开销</strong></li>
+<li>强制性失效：<strong>增加块大小、预取</strong></li>
+<li>容量失效：<strong>增加容量</strong></li>
+<li>冲突失效：<strong>提高相关联</strong></li>
+</ul>
+<h1 id="24-io地址码的编制方式有哪两种？"><a name="24-io地址码的编制方式有哪两种？" class="anchor-navigation-ex-anchor" href="#24-io地址码的编制方式有哪两种？"><i class="fa fa-link" aria-hidden="true"></i></a>24. I/O地址码的编制方式有哪两种？</h1>
+<ul>
+<li><strong>统一编码</strong>：将I/O地址看作存储器地址的一部分</li>
+<li><strong>不统一编码</strong>： I/O 地址和存储器地址是分开的</li>
+</ul>
+<h1 id="25-io与主机交换信息有哪几种控制方式？各有何特点？"><a name="25-io与主机交换信息有哪几种控制方式？各有何特点？" class="anchor-navigation-ex-anchor" href="#25-io与主机交换信息有哪几种控制方式？各有何特点？"><i class="fa fa-link" aria-hidden="true"></i></a>25. I/O与主机交换信息有哪几种控制方式？各有何特点？</h1>
+<p><strong>程序查询方式</strong>：<a href="https://so.csdn.net/so/search?q=CPU&amp;spm=1001.2101.3001.7020" target="_blank">CPU</a>和I/O<strong>串行</strong>工作，<strong>踏步等待</strong>。</p>
+<p><strong>程序中断方式</strong>：CPU和I/O<strong>并行</strong>工作，没有踏步等待现象，进行<strong>中断现行程序</strong>。</p>
+<p><strong>DMA方式</strong>：CPU和I/O<strong>并行</strong>工作，主存和I/O之间有一条<strong>直接数据通道</strong>，不中断现行程序，<strong>周期挪用</strong>（周期窃取）方式。</p>
+<h1 id="26-io接口有什么作用。"><a name="26-io接口有什么作用。" class="anchor-navigation-ex-anchor" href="#26-io接口有什么作用。"><i class="fa fa-link" aria-hidden="true"></i></a>26. I/O接口有什么作用。</h1>
+<ol>
+<li>选择设备</li>
+<li>数据缓冲达到速度匹配</li>
+<li>数据串-并格式转换</li>
+<li>电平转换</li>
+<li>传送控制命令</li>
+<li>反应设备的状态</li>
+</ol>
+<h1 id="27-程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？"><a name="27-程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？" class="anchor-navigation-ex-anchor" href="#27-程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？"><i class="fa fa-link" aria-hidden="true"></i></a>27. 程序查询方式和程序中断方式都由程序实现外围设备的输入输出，它们有何不同？</h1>
+<ul>
+<li>程序查询方式通过“程序”传送数据时，程序对I/O的控制包括了I/O准备和I/O传送两段时间。由于I/O的工作速度比CPU低得多，因此<strong>程序中要反复查询I/O的状态，造成“踏步等待”，严重浪费了CPU的工作时间</strong>。</li>
+<li>程序中断方式虽然也是通过“程序”传送数据，但<strong>程序仅对I/O传送阶段进行控制</strong>，故CPU此时照样可以运行现行程序，与I/O并行工作，大大提高CPU的工作效率。</li>
+</ul>
+<h1 id="28-以io设备的中断处理过程为例，说明一次程序中断的全过程。"><a name="28-以io设备的中断处理过程为例，说明一次程序中断的全过程。" class="anchor-navigation-ex-anchor" href="#28-以io设备的中断处理过程为例，说明一次程序中断的全过程。"><i class="fa fa-link" aria-hidden="true"></i></a>28. 以I/O设备的中断处理过程为例，说明一次程序中断的全过程。</h1>
+<p><strong>中断请求、中断判优、中断响应、中断服务、中断返回</strong></p>
+<ul>
+<li>由CPU发出启动 I/O 设备指令</li>
+<li><strong>接口启动输入设备</strong>开始工作</li>
+<li>输入设备将数据<strong>送入数据缓冲寄存器</strong></li>
+<li>输入设备向接口<strong>发出“设备工作结束”信号</strong>，标志设备准备就绪</li>
+<li>当设备准备就绪(D=1)，且本设备<strong>未被屏蔽(MASK=O)</strong>时，在指令执行阶段的结束时刻，由 CPU <strong>发出中断查询信号</strong></li>
+<li>设备中断请求触发器 INTR 被置为“1”'，标志设备向 CPU 提出中断请求。与此同时，INTR 送至排队器，进行<strong>中断判优</strong></li>
+<li>若 CPU 允许中断(EINT=1)，设备又被排队选中，即进入中断相应阶段，由<strong>中断响应</strong>信号 INTA 将排队器输出送至编码器形成向量地址</li>
+<li><strong>向量地址送至 PC</strong>，作为下一条指令的地址</li>
+<li>由于向量地址中存放的是一条无条件转移指令，故这条指令执行结束后即无条件转至该设备的服务程序入口地址，开始执行<strong>中断服务</strong>程序，进入中断服务阶段，进行数据交换</li>
+<li>中断服务程序的最后一条指令是中断返回指令，当其执行结束后，即<strong>中断返回</strong>至原程序的断点处。</li>
+<li>至此，一个完整的程序中断处理过程即告结束</li>
+</ul>
+<h1 id="29在dma方式中有没有中断请求，为什么？dma接口电路中应设置哪些硬件。"><a name="29在dma方式中有没有中断请求，为什么？dma接口电路中应设置哪些硬件。" class="anchor-navigation-ex-anchor" href="#29在dma方式中有没有中断请求，为什么？dma接口电路中应设置哪些硬件。"><i class="fa fa-link" aria-hidden="true"></i></a>29.在DMA方式中有没有中断请求，为什么？DMA接口电路中应设置哪些硬件。</h1>
+<p>有。当字计数器溢出（全为0）时，由“溢出信号”通过中断机构向CPU提出中断请求，<strong>表示数据交换完毕</strong>，请求CPU作DMA操作的<strong>后处理</strong>，。</p>
+<p><strong>主存地址寄存器（AR），字计数器（WC），数据缓冲寄存器（BR），</strong></p>
+<p><strong>DMA控制逻辑，中断机构，设备地址寄存器（DAR）。</strong></p>
+<h1 id="30-dma方式中的中断请求和程序中断中的中断请求有何区别？"><a name="30-dma方式中的中断请求和程序中断中的中断请求有何区别？" class="anchor-navigation-ex-anchor" href="#30-dma方式中的中断请求和程序中断中的中断请求有何区别？"><i class="fa fa-link" aria-hidden="true"></i></a>30. DMA方式中的中断请求和程序中断中的中断请求有何区别？</h1>
+<ul>
+<li><strong>DMA方式</strong>中的中断请求是为了<strong>报告一批数据传送结束</strong>；</li>
+<li><strong>程序中断</strong>中的中断请求是为了<strong>数据的交换</strong>。</li>
+</ul>
+<h1 id="31-dma和主存交换数据时有哪三种方法？分别简述。"><a name="31-dma和主存交换数据时有哪三种方法？分别简述。" class="anchor-navigation-ex-anchor" href="#31-dma和主存交换数据时有哪三种方法？分别简述。"><i class="fa fa-link" aria-hidden="true"></i></a>31. DMA和主存交换数据时有哪三种方法？分别简述。</h1>
+<ul>
+<li><strong>停止CPU访问主存</strong>：当外设要求传送一批数据时，由DMA接口向CPU发一个停止信号，要求CPU放弃地址线、数据线和有关控制线的使用权。</li>
+<li><strong>周期挪用（周期窃取）</strong>：每当I/O设备发出DMA请求时，I/O设备便挪用或窃取总线占用权一个或几个主存周期，而DMA不请求时，CPU仍继续访问主存。</li>
+<li><strong>DMA和CPU交替访问</strong>：将一个CPU周期分为C1和C2两个分周期，其中C1专供DMA访问，C2专供CPU访问。</li>
+</ul>
+<h1 id="32简述dma的工作过程。"><a name="32简述dma的工作过程。" class="anchor-navigation-ex-anchor" href="#32简述dma的工作过程。"><i class="fa fa-link" aria-hidden="true"></i></a>32.简述DMA的工作过程。</h1>
+<ol>
+<li><strong>预处理</strong>：通过几条输入输出指令通知DMA控制逻辑传送方向，设备地址，主存地址，传送字数</li>
+<li><strong>数据传送</strong>：若允许传送，则主存地址送总线，数据送I/O设备（或主存），修改主存地址，修改字计数器。若数据传送接送，则向CPU<strong>申请程序中断</strong>。</li>
+<li><strong>后处理</strong>：中断服务程序做DMA结束后处理。</li>
+</ol>
+<h1 id="33-dma接口的类型有哪几种？"><a name="33-dma接口的类型有哪几种？" class="anchor-navigation-ex-anchor" href="#33-dma接口的类型有哪几种？"><i class="fa fa-link" aria-hidden="true"></i></a>33. DMA接口的类型有哪几种？</h1>
+<ul>
+<li><strong>选择型</strong>DMA接口、<strong>多路型</strong>DMA接口。</li>
+</ul>
+<h1 id="34-说明浮点加减法运算步骤。"><a name="34-说明浮点加减法运算步骤。" class="anchor-navigation-ex-anchor" href="#34-说明浮点加减法运算步骤。"><i class="fa fa-link" aria-hidden="true"></i></a>34. 说明浮点加/减法运算步骤。</h1>
+<ol>
+<li><strong>对阶</strong>：小阶向大阶看齐</li>
+<li>尾数<strong>相加减</strong></li>
+<li>尾数<strong>规格化</strong></li>
+<li>尾数<strong>舍入</strong></li>
+<li>阶码<strong>判溢出</strong></li>
+</ol>
+<h1 id="35说明浮点乘除法运算的基本步骤。"><a name="35说明浮点乘除法运算的基本步骤。" class="anchor-navigation-ex-anchor" href="#35说明浮点乘除法运算的基本步骤。"><i class="fa fa-link" aria-hidden="true"></i></a>35.说明浮点乘/除法运算的基本步骤。</h1>
+<ol>
+<li>阶码采用定点<strong>加减运算</strong></li>
+<li>尾数乘数同<strong>定点运算</strong></li>
+<li>尾数规格化</li>
+<li>尾数舍入</li>
+<li>阶码判溢出</li>
+</ol>
+<h1 id="36-试比较基址寻址和变址寻址，并举例说明其适用的场合。"><a name="36-试比较基址寻址和变址寻址，并举例说明其适用的场合。" class="anchor-navigation-ex-anchor" href="#36-试比较基址寻址和变址寻址，并举例说明其适用的场合。"><i class="fa fa-link" aria-hidden="true"></i></a>36. 试比较基址寻址和变址寻址，并举例说明其适用的场合。</h1>
+<ul>
+<li>基址寻址：操作数的有效地址EA等于指令字中的<strong>形式地址与基址寄存器中的内容（称为基地址）相加</strong>。基址寄存器的内容由操作系统确定，在程序执行过程中内容不变。在<strong>多道程序</strong>中极为有用。</li>
+<li>变址寻址：有效地址EA等于指令字中的<strong>形式地址A与变址寄存器IX的内容相加</strong>。变址寄存器的内容由用户给定，在程序的执行过程中IX内容可变，形式地址A不变。便于<strong>处理数组问题</strong>。</li>
+</ul>
+<h1 id="37-任意写出五种寻址方式，令ea为有效地址，a为形式地址，写出这五种寻址方式计算有效地址的表达式。"><a name="37-任意写出五种寻址方式，令ea为有效地址，a为形式地址，写出这五种寻址方式计算有效地址的表达式。" class="anchor-navigation-ex-anchor" href="#37-任意写出五种寻址方式，令ea为有效地址，a为形式地址，写出这五种寻址方式计算有效地址的表达式。"><i class="fa fa-link" aria-hidden="true"></i></a>37. 任意写出五种寻址方式，令EA为有效地址，A为形式地址，写出这五种寻址方式计算有效地址的表达式。</h1>
+<ul>
+<li>立即寻址：A是操作数本身</li>
+<li>直接寻址：<code>EA = A</code></li>
+<li>隐含寻址：隐含在操作码或某个寄存器中</li>
+<li>间接寻址：<code>EA = (A)</code></li>
+<li>寄存器寻址：<code>EA = R</code></li>
+<li>寄存器间接寻址：<code>EA = (Ri)</code></li>
+<li>基址寻址：<code>EA = A + (BR)</code></li>
+<li>变址寻址：<code>EA = A + (IX)</code></li>
+<li>相对寻址：<code>EA = (PC) + A</code></li>
+<li>堆栈寻址：<code>EA=(SP)</code></li>
+</ul>
+<h1 id="38-指令中有哪些字段？各有何作用？如何确定各字段的位数？"><a name="38-指令中有哪些字段？各有何作用？如何确定各字段的位数？" class="anchor-navigation-ex-anchor" href="#38-指令中有哪些字段？各有何作用？如何确定各字段的位数？"><i class="fa fa-link" aria-hidden="true"></i></a>38. 指令中有哪些字段？各有何作用？如何确定各字段的位数？</h1>
+<ul>
+<li><p>指令通常由<strong>操作码和地址码</strong>组成，同时因为数据寻址方式种类较多，中必须设一字段来指明属千哪一种寻址方式，所以指令也可以分为<strong>操作码字段、寻址特征字段和地址码字段</strong></p>
+</li>
+<li><p><strong>操作码</strong>：<strong>指明该指令所要完成的操作</strong></p>
+</li>
+<li><strong>地址码</strong>：<strong>指出该指令的源操作数的地址（一个或两个）、结果的地址以及下一条指令的地址</strong>。</li>
+<li><strong>寻址特征字段</strong>：<strong>指明属于哪一种寻址方式</strong></li>
+</ul>
+<h1 id="39-risc和cisc指令系统各自的特点。"><a name="39-risc和cisc指令系统各自的特点。" class="anchor-navigation-ex-anchor" href="#39-risc和cisc指令系统各自的特点。"><i class="fa fa-link" aria-hidden="true"></i></a>39. RISC和CISC指令系统各自的特点。</h1>
+<ul>
+<li><p>RISC的主要特点：</p>
+<ul>
+<li>选用<strong>使用频度较高的一些简单指令</strong>，复杂指令的功能由简单指令来组合。</li>
+<li>指令长度固定、指令格式种类少、寻址方式少</li>
+<li>只有LOAD/STORE指令访存</li>
+<li>CPU中有多个<strong>通用寄存器</strong></li>
+<li>采用流水技术一个周期内完成一条指令</li>
+<li>采用<strong>组合逻辑</strong>实现控制器</li>
+<li>采用优化的编译程序</li>
+</ul>
+</li>
+<li><p>CISC的主要特点：</p>
+<ul>
+<li>系统<strong>指令复杂庞大</strong>，各种指令使用频度相差大</li>
+<li>指令长度不固定、指令种类多、寻址方式多</li>
+<li>访存指令不受限制</li>
+<li>CPU中设有专用寄存器</li>
+<li>大多数指令需要多个时钟周期执行完毕</li>
+<li>采用<strong>微程序控制器</strong></li>
+<li>难以用优化编译生成高效的目的代码</li>
+</ul>
+</li>
+</ul>
+<h1 id="40-请简述mips指令系统的r型、i型和j型指令格式，并举出指令实例。"><a name="40-请简述mips指令系统的r型、i型和j型指令格式，并举出指令实例。" class="anchor-navigation-ex-anchor" href="#40-请简述mips指令系统的r型、i型和j型指令格式，并举出指令实例。"><i class="fa fa-link" aria-hidden="true"></i></a>40. 请简述MIPS指令系统的R型、I型和J型指令格式，并举出指令实例。</h1>
+<ul>
+<li><strong>寄存器指令（R型指令）</strong>：<ul>
+<li><strong>操作数（6bits），两个源操作数寄存器（5bits共10bits)，目的寄存器（5bits)，位移量(shamt)（5bits)，功能（6bits)</strong>。一般R型指令op为000000，由funct决定操作种类</li>
+<li>add,sub</li>
+</ul>
+</li>
+<li><strong>立即数指令（I型指令）</strong>：<ul>
+<li><strong>操作数（6bits），源操作数寄存器（5bits)，目的寄存器（5bits),constant or address（16bits)</strong></li>
+<li>lw,sw,bne</li>
+</ul>
+</li>
+<li><strong>跳转指令 （J型指令）</strong><ul>
+<li>J 型除了6位操作码之外，其余位都是地址字段</li>
+<li>j</li>
+</ul>
+</li>
+</ul>
+<h1 id="41-在mips指令子集实现的时候，如何从单周期数据通路构造流水线？"><a name="41-在mips指令子集实现的时候，如何从单周期数据通路构造流水线？" class="anchor-navigation-ex-anchor" href="#41-在mips指令子集实现的时候，如何从单周期数据通路构造流水线？"><i class="fa fa-link" aria-hidden="true"></i></a>41. 在MIPS指令子集实现的时候，如何从单周期数据通路构造流水线？</h1>
+<p>将单周期数据通路分为<strong>IF,ID,EX,MEM,WB</strong>五段，并在每两段之间加入流水寄存器</p>
+<h1 id="42-流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。"><a name="42-流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。" class="anchor-navigation-ex-anchor" href="#42-流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。"><i class="fa fa-link" aria-hidden="true"></i></a>42. 流水线中有哪三种冒险？请简述，并至少举出一种解决冒险的方法。</h1>
+<ul>
+<li><strong>结构冒险</strong>：需要的<strong>资源被占用</strong>（硬件资源冲突）。将指令和数据分别存储；设计指令/数据高速缓存。</li>
+<li><strong>数据冒险</strong>：需要<strong>等待前面指令完成其读写操作</strong>。转发（旁路）；代码重排；阻塞和冒泡。</li>
+<li><strong>控制冒险</strong>：根据前面正在执行的指令决策<strong>控制操作</strong>。静态分支预测；动态分支预测；分支延迟槽。</li>
+</ul>
+<h1 id="43-请简述flynn分类法将计算机系统结构分成哪四类。"><a name="43-请简述flynn分类法将计算机系统结构分成哪四类。" class="anchor-navigation-ex-anchor" href="#43-请简述flynn分类法将计算机系统结构分成哪四类。"><i class="fa fa-link" aria-hidden="true"></i></a>43. 请简述Flynn分类法将计算机系统结构分成哪四类。</h1>
+<p>根据指令流和数据流分类</p>
+<ul>
+<li>单指令流、单数据流 SISD</li>
+<li>单指令流、多数据流 SIMD</li>
+<li>多指令流、单数据流 MISD</li>
+<li>多指令流、多数据流 MIMD</li>
+</ul>
+<h1 id="44-请简述程序局部性原理。"><a name="44-请简述程序局部性原理。" class="anchor-navigation-ex-anchor" href="#44-请简述程序局部性原理。"><i class="fa fa-link" aria-hidden="true"></i></a>44. 请简述程序局部性原理。</h1>
+<p><strong>程序执行时所访问的存储器地址相对地簇拥。</strong></p>
+<ul>
+<li><strong>程序的时间局部性</strong>：程序即将用到的信息很可能就是目前正在使用的信息。</li>
+<li><strong>程序的空间局部性</strong>：程序即将用到的信息很可能与目前正在使用的信息在空间上相邻或者临近。</li>
+</ul>
+<h1 id="45请简述amdahl定律。"><a name="45请简述amdahl定律。" class="anchor-navigation-ex-anchor" href="#45请简述amdahl定律。"><i class="fa fa-link" aria-hidden="true"></i></a>45.请简述Amdahl定律。</h1>
+<p><strong>加快某部件执行速度所能获得的系统性能加速比，受限于该部件的执行时间占系统中总执行时间的百分比。</strong></p>
+<h1 id="46-影响cpu时间的因素包括什么？（提示：从cpu公式入手，考虑3个参数的影响因素）"><a name="46-影响cpu时间的因素包括什么？（提示：从cpu公式入手，考虑3个参数的影响因素）" class="anchor-navigation-ex-anchor" href="#46-影响cpu时间的因素包括什么？（提示：从cpu公式入手，考虑3个参数的影响因素）"><i class="fa fa-link" aria-hidden="true"></i></a>46. 影响CPU时间的因素包括什么？（提示：从CPU公式入手，考虑3个参数的影响因素）</h1>
+<p><strong>CPU时间=IC*CPI*时钟周期</strong></p>
+<ul>
+<li><strong>时钟周期时间</strong>：取决于硬件实现技术和计算机组成。</li>
+<li><strong>CPI（平均每条指令耗费的时钟周期数）</strong>：取决于计算机组成和指令集结构。</li>
+<li><strong>IC（程序总指令数）</strong>：取决于指令集结构和编译技术。</li>
+</ul>
+<h1 id="47-请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。"><a name="47-请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。" class="anchor-navigation-ex-anchor" href="#47-请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。"><i class="fa fa-link" aria-hidden="true"></i></a>47. 请简要说明提高计算机系统并行性的3种技术途径，并分别从单机和多机系统的角度举例。</h1>
+<ul>
+<li><p><strong>时间重叠，资源重复，资源共享</strong></p>
+<p><strong>单机</strong>：部件功能专用化、重复设置<strong>功能部件</strong>、使用<strong>分时</strong>系统</p>
+<p><strong>多机</strong>：处理机专用化、重复设置<strong>处理机</strong>、使用<strong>分布式</strong>系统</p>
+</li>
+</ul>
+<h1 id="48-请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？"><a name="48-请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？" class="anchor-navigation-ex-anchor" href="#48-请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？"><i class="fa fa-link" aria-hidden="true"></i></a>48. 请说明什么是静态调度？什么是动态调度？动态调度的优点是什么？</h1>
+<ul>
+<li><p>静态调度：依靠<strong>编译器</strong>对代码进行调度，也就是在代码被执行之前进行调度；</p>
+</li>
+<li><p>动态调度：在程序的执行过程中，依靠<strong>专门硬件</strong>对代码进行调度。</p>
+</li>
+</ul>
+<p>动态调度优点：</p>
+<ul>
+<li>减少阻塞。</li>
+<li>能够处理一些在编译时情况不明的相关。</li>
+<li>能够使本来使面向某一流水线优化编译的代码在其他的流水线（动态调度）上也能高效地执行。</li>
+</ul>
+<h1 id="49-请简述tomasulo算法的基本思想，并分析其局限性。"><a name="49-请简述tomasulo算法的基本思想，并分析其局限性。" class="anchor-navigation-ex-anchor" href="#49-请简述tomasulo算法的基本思想，并分析其局限性。"><i class="fa fa-link" aria-hidden="true"></i></a>49. 请简述Tomasulo算法的基本思想，并分析其局限性。</h1>
+<ul>
+<li><strong>记录和检测指令相关</strong>，操作数一旦就绪就立刻执行，把发生<strong>RAW冲突</strong>的可能性减少到最小；</li>
+<li><p>通过<strong>寄存器换名</strong>来消除<strong>WAR冲突和WAW冲突</strong>。</p>
+</li>
+<li><p>局限性：</p>
+</li>
+<li>不能处理<strong>异常和控制冲突</strong>。</li>
+<li>指令队列里有分支指令，分支指令之后的指令不能流出，直到确定分支是否成功。</li>
+<li>硬件逻辑复杂</li>
+</ul>
+<h1 id="50-请说明什么是动态分支预测？有何优点？"><a name="50-请说明什么是动态分支预测？有何优点？" class="anchor-navigation-ex-anchor" href="#50-请说明什么是动态分支预测？有何优点？"><i class="fa fa-link" aria-hidden="true"></i></a>50. 请说明什么是动态分支预测？有何优点？</h1>
+<ul>
+<li><p>通过<strong>硬件技术</strong>，在<strong>程序执行时</strong>根据每一条转移指令过去的转移历史记录<strong>提前预测分支方向</strong>。</p>
+</li>
+<li><p>优点：</p>
+<ul>
+<li>减少或消除控制相关导致的流水线停顿</li>
+<li>根据程序的执行过程动态地改变转移的预测方向，因此有更好的<strong>准确度和适应性</strong>；</li>
+<li>程序每次执行时，可能预测的分支方向与前次相同或不同。</li>
+</ul>
+</li>
+</ul>
+<h1 id="51-请简述分支历史表bht的基本思想。"><a name="51-请简述分支历史表bht的基本思想。" class="anchor-navigation-ex-anchor" href="#51-请简述分支历史表bht的基本思想。"><i class="fa fa-link" aria-hidden="true"></i></a>51. 请简述分支历史表BHT的基本思想。</h1>
+<p>用BHT来记录分支指令最近一次或几次的<strong>执行情况</strong>（成功或不成功），并据此进行预测。</p>
+<h1 id="52请简述分支目标缓冲器btb的基本思想。"><a name="52请简述分支目标缓冲器btb的基本思想。" class="anchor-navigation-ex-anchor" href="#52请简述分支目标缓冲器btb的基本思想。"><i class="fa fa-link" aria-hidden="true"></i></a>52.请简述分支目标缓冲器BTB的基本思想。</h1>
+<p>将<strong>分支成功的分支指令地址和它的分支目标地址都放到一个缓冲区中保存起来</strong>，缓冲区以分支指令的地址作为标识。</p>
+<h1 id="53-请简述基于硬件的前瞻算法基本思想。"><a name="53-请简述基于硬件的前瞻算法基本思想。" class="anchor-navigation-ex-anchor" href="#53-请简述基于硬件的前瞻算法基本思想。"><i class="fa fa-link" aria-hidden="true"></i></a>53. 请简述基于硬件的前瞻算法基本思想。</h1>
+<p>按照<strong>分支预测结果</strong>继续取出、流出和执行后续的指令。指令的结果放到一个称为<strong>ROB（ReOrder Buffer）的缓冲器</strong>中。等到响应的指令得到“确认：（commit）（即确实是应该执行的）之后，才将结果写入寄存器或存储器。</p>
+<h1 id="54-请在pvp、smp、mpp、dsm和cow中任选一种，简要描述其特点。"><a name="54-请在pvp、smp、mpp、dsm和cow中任选一种，简要描述其特点。" class="anchor-navigation-ex-anchor" href="#54-请在pvp、smp、mpp、dsm和cow中任选一种，简要描述其特点。"><i class="fa fa-link" aria-hidden="true"></i></a>54. 请在PVP、SMP、MPP、DSM和COW中任选一种，简要描述其特点。</h1>
+<ul>
+<li><p><strong>PVP，Parallel Vector Processor, 并行向量处理机</strong></p>
+<ul>
+<li>有<strong>向量处理器 ＶＰ</strong></li>
+<li>存储器<strong>以兆字节每秒</strong>的速度向处理器提供数据</li>
+<li><strong>交叉开关</strong>网络互连</li>
+<li>通常<strong>不使用高速缓存</strong></li>
+</ul>
+</li>
+<li><p><strong>SMP, Symmetric Multiprocessor, 对称多处理机</strong></p>
+<ul>
+<li>使用商品微处理器（具有片上或外置<strong>高速缓存</strong>）</li>
+<li><strong>高速总线（或交叉开关）</strong></li>
+<li><strong>系统是对称的</strong></li>
+</ul>
+</li>
+<li><p><strong>MPP, Massively Parallel Processor, 大规模并行处理机</strong></p>
+<ul>
+<li><strong>超大型计算机系统</strong></li>
+<li>处理节点采用<strong>商品微处理器</strong>；每个节点上有自己的<strong>局部存储器</strong>；采用高通信带宽和低延迟的<strong>互连网络</strong>（专门设计和定制的）进行节点互连；</li>
+<li>异步的ＭＩＭＤ机器，程序系由多个进程组成，每个都有<strong>其私有地址空间</strong>，进程间采用<strong>传递消息</strong>相互作用</li>
+</ul>
+</li>
+<li><p><strong>DSM，Distributed Shared Memory, 分布式共享存储多处理机</strong></p>
+<ul>
+<li><strong>物理上有分布在各节点中的局部存储器</strong>，但是对用户而言，系统硬件和软件提供了逻辑上单地址的编程空间</li>
+<li>高速缓存<strong>目录DIR</strong>用以<strong>支持分布高速缓存的一致性</strong></li>
+<li>ＤＳＭ 相对于 ＭＰＰ的优越性是<strong>编程较容易</strong></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>COW，Cluster of Workstations, 工作站集群</strong></p>
+<ul>
+<li><p>集群往往是低成本的变形的ＭＰＰ</p>
+</li>
+<li><p>ＣＯＷ 的<strong>每个节点都是一个完整的工作站</strong></p>
+</li>
+<li><p>各节点通过一种低成本的商品（标准）网络（如以太网、ＦＤＤＩ和 ＡＴＭ 开关等）互连</p>
+</li>
+<li><p><strong>各节点内总是有本地磁盘</strong>，而 ＭＰＰ节点内却没有</p>
+</li>
+<li><p>节点内的网络接口是<strong>松散耦合到Ｉ／Ｏ 总线</strong>上的，而 ＭＰＰ内的网络接口是连到处理节点的存储总线上的，因而可谓是<strong>紧耦合式</strong>的</p>
+</li>
+<li><p>一个完整的操作系统驻留在每个节点中，而 ＭＰＰ中通常只是个微核</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>从存储角度来看MIMD</p>
+</li>
+<li><p>单地址空间共享存储</p>
+<ul>
+<li>存储器可以是物理上集中的或者分布的，但是所有存储单元<strong>有统一的地址空间，并被所有的处理器所访问</strong></li>
+<li>均匀存储访问:SMP</li>
+<li>非均匀存储访问:DSM</li>
+</ul>
+</li>
+<li>多地址空间非共享存储:MPP</li>
+</ul>
+<h1 id="55-什么是多处理机cache一致性问题？"><a name="55-什么是多处理机cache一致性问题？" class="anchor-navigation-ex-anchor" href="#55-什么是多处理机cache一致性问题？"><i class="fa fa-link" aria-hidden="true"></i></a>55. 什么是多处理机Cache一致性问题？</h1>
+<p>允许共享数据进入Cache，极可能出现多个处理器的Cache中都有同一存储块的副本，其中某个处理器对其Cache中的数据进行修改后，就会使得其<strong>修改后Cache中的数据与其他Cache中的数据不一致</strong>。</p>
+<h1 id="56请简述监听式协议的原理。"><a name="56请简述监听式协议的原理。" class="anchor-navigation-ex-anchor" href="#56请简述监听式协议的原理。"><i class="fa fa-link" aria-hidden="true"></i></a>56.请简述监听式协议的原理。</h1>
+<p>每个Cache包含物理存储器中块的<strong>数据拷贝</strong>和各个块的<strong>共享状态信息</strong>。</p>
+<p>Cache通常<strong>连在共享存储器的总线</strong>上，当某个Cache需要访问存储器时，它会把请求放到总线上广播出去，其他各个Cache控制器通过监听总线来判断它们是否有总线上请求的数据块。如果有，就进行相应的操作。</p>
+<h1 id="57-请简述目录式协议的原理。（自学）"><a name="57-请简述目录式协议的原理。（自学）" class="anchor-navigation-ex-anchor" href="#57-请简述目录式协议的原理。（自学）"><i class="fa fa-link" aria-hidden="true"></i></a>57. 请简述目录式协议的原理。（自学）</h1>
+<p>对于存储器中每一个可以调入Cache的数据块，在<strong>目录中设置一条目录项，用于记录该块的状态以及哪些Cache中有副本等相关信息</strong>。</p>
+<p>对于任何一个数据块，都可以快速地在目录里唯一的一个位置中找到相关的信息。这使一致性协议避免了广播操作。</p>
+<h1 id="58-请比较说明写作废协议和写更新协议性能上的差别。（自学）"><a name="58-请比较说明写作废协议和写更新协议性能上的差别。（自学）" class="anchor-navigation-ex-anchor" href="#58-请比较说明写作废协议和写更新协议性能上的差别。（自学）"><i class="fa fa-link" aria-hidden="true"></i></a>58. 请比较说明写作废协议和写更新协议性能上的差别。（自学）</h1>
+<ol>
+<li>在对同一个数据进行多次写操作而中间无读操作的情况下，写更新协议需进行多次写广播操作，而写作废协议只需一次作废操作。</li>
+<li>在对<strong>同一Cache块的多个字</strong>进行写操作的情况下，写更新协议对于每一个写操作都要进行一次广播，而写作废协议仅在对该块的第一次写时进行作废操作即可。</li>
+<li>写作废是针对Cache块进行操作，而写更新则是针对字（或字节）进行。</li>
+<li>写更新协议的延迟时间较小。</li>
+</ol>
+<h1 id="59-请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）"><a name="59-请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）" class="anchor-navigation-ex-anchor" href="#59-请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）"><i class="fa fa-link" aria-hidden="true"></i></a>59. 请解释，在目录式协议中，什么是本地节点、宿主节点、远程节点和共享集合？（自学）</h1>
+<p><strong>本地结点</strong>：发出访问请求的结点</p>
+<p><strong>宿主结点</strong>：包含所访问的存储单元及其目录项的结点</p>
+<p><strong>远程结点</strong>：Cache中拥有该块的副本</p>
+<p><strong>共享集合</strong>：位向量记录拥有其副本的处理器的集合</p>
+<h1 id="60-请简述目录式协议中，目录的三种结构。（自学）"><a name="60-请简述目录式协议中，目录的三种结构。（自学）" class="anchor-navigation-ex-anchor" href="#60-请简述目录式协议中，目录的三种结构。（自学）"><i class="fa fa-link" aria-hidden="true"></i></a>60. 请简述目录式协议中，目录的三种结构。（自学）</h1>
+<p><strong>全映像目录</strong>：每一个目录项都包含一个N位（N为处理机的个数）的位向量，其每一位对应一个处理机</p>
+<p><strong>有限映像目录</strong>：采用位数固定的目录项目</p>
+<p><strong>链式目录</strong>：用一个目录指针链来表示共享集合。当一个数据块的副本数增加（或减少）时，其指针链表就跟着变长（或变短）。</p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 计算机组成原理基础知识（简答版）</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="计算机组成原理基础知识.html" class="navigation navigation-prev " aria-label="Previous page: 计算机组成原理基础知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Operating_System/" class="navigation navigation-next " aria-label="Next page: Operating System">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"计算机组成原理基础知识（简答版）","level":"1.5.2","depth":2,"next":{"title":"Operating System","level":"1.6","depth":1,"path":"docs/Operating_System/README.md","ref":"docs/Operating_System/README.md","articles":[{"title":"01_概论","level":"1.6.1","depth":2,"path":"docs/Operating_System/01_概论.md","ref":"docs/Operating_System/01_概论.md","articles":[]},{"title":"02_进程管理","level":"1.6.2","depth":2,"path":"docs/Operating_System/02_进程管理.md","ref":"docs/Operating_System/02_进程管理.md","articles":[]},{"title":"03_中断和处理器调度","level":"1.6.3","depth":2,"path":"docs/Operating_System/03_中断和处理器调度.md","ref":"docs/Operating_System/03_中断和处理器调度.md","articles":[]},{"title":"04_互斥同步与通讯","level":"1.6.4","depth":2,"path":"docs/Operating_System/04_互斥同步与通讯.md","ref":"docs/Operating_System/04_互斥同步与通讯.md","articles":[]},{"title":"05_死锁与饥饿","level":"1.6.5","depth":2,"path":"docs/Operating_System/05_死锁与饥饿.md","ref":"docs/Operating_System/05_死锁与饥饿.md","articles":[]},{"title":"06_主存管理","level":"1.6.6","depth":2,"path":"docs/Operating_System/06_主存管理.md","ref":"docs/Operating_System/06_主存管理.md","articles":[]},{"title":"07_虚拟存储器管理","level":"1.6.7","depth":2,"path":"docs/Operating_System/07_虚拟存储器管理.md","ref":"docs/Operating_System/07_虚拟存储器管理.md","articles":[]},{"title":"08_文件与文件系统","level":"1.6.8","depth":2,"path":"docs/Operating_System/08_文件与文件系统.md","ref":"docs/Operating_System/08_文件与文件系统.md","articles":[]},{"title":"09_设备与IO管理","level":"1.6.9","depth":2,"path":"docs/Operating_System/09_设备与IO管理.md","ref":"docs/Operating_System/09_设备与IO管理.md","articles":[]},{"title":"review","level":"1.6.10","depth":2,"path":"docs/Operating_System/review.md","ref":"docs/Operating_System/review.md","articles":[]}]},"previous":{"title":"计算机组成原理基础知识","level":"1.5.1","depth":2,"path":"docs/计算机组成原理/计算机组成原理基础知识.md","ref":"docs/计算机组成原理/计算机组成原理基础知识.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/计算机组成原理/计算机组成原理基础知识（简答版）.md","mtime":"2025-09-07T09:41:17.421Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

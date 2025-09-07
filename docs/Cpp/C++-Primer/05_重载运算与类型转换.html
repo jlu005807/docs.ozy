@@ -1,0 +1,1771 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>05_重载运算与类型转换 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06_面向对象程序设计.html" />
+    
+    
+    <link rel="prev" href="04_拷贝控制.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../DataStructure_and_Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="01_泛型算法.html">
+            
+                <a href="01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="02_关联容器.html">
+            
+                <a href="02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="03_动态内存.html">
+            
+                <a href="03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="04_拷贝控制.html">
+            
+                <a href="04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.5" data-path="05_重载运算与类型转换.html">
+            
+                <a href="05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="06_面向对象程序设计.html">
+            
+                <a href="06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="07_模板与泛型编程.html">
+            
+                <a href="07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="08_标准库特殊设施.html">
+            
+                <a href="08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="09_用于大型程序的工具.html">
+            
+                <a href="09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="10_特殊工具与技术.html">
+            
+                <a href="10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="11_lambda表达式的类型.html">
+            
+                <a href="11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="12_nullptr.html">
+            
+                <a href="12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Effective-Modern-C++/">
+            
+                <a href="../Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Pre-knowledge/">
+            
+                <a href="../Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Pre-knowledge/13_static.html">
+            
+                <a href="../Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Pre-knowledge/14_virtual.html">
+            
+                <a href="../Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >05_重载运算与类型转换</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#1-重载运算"><b></b>1. 重载运算</a></li><ul><li><span class="title-icon "></span><a href="#本节要点"><b></b>本节要点</a></li><ul><li><span class="title-icon "></span><a href="#11-可重载的运算符"><b></b>1.1 可重载的运算符</a></li><li><span class="title-icon "></span><a href="#12-成员函数或非成员函数"><b></b>1.2 成员函数或非成员函数</a></li><li><span class="title-icon "></span><a href="#13-运算符介绍"><b></b>1.3 运算符介绍</a></li><li><span class="title-icon "></span><a href="#14-函数对象"><b></b>1.4 函数对象</a></li><li><span class="title-icon "></span><a href="#15-stdfunction"><b></b>1.5 std::function</a></li></ul></ul><li><span class="title-icon "></span><a href="#2-类型转换"><b></b>2. 类型转换</a></li><ul><ul><li><span class="title-icon "></span><a href="#21-类型转换运算符"><b></b>2.1 类型转换运算符</a></li><li><span class="title-icon "></span><a href="#22-显式类型转换（explicit）"><b></b>2.2 显式类型转换（explicit）</a></li><li><span class="title-icon "></span><a href="#23-避免类型转换二义性"><b></b>2.3 避免类型转换二义性</a></li><li><span class="title-icon "></span><a href="#24-函数匹配与重载运算符"><b></b>2.4 函数匹配与重载运算符</a></li></ul></ul></ul></div><a href="#1-重载运算" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#1-重载运算">1. 重载运算</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#本节要点">本节要点</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#11-可重载的运算符">1.1 可重载的运算符</a><i></i></div></li>
+<li><div><a href="#12-成员函数或非成员函数">1.2 成员函数或非成员函数</a><i></i></div></li>
+<li><div><a href="#13-运算符介绍">1.3 运算符介绍</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#131-算术和关系运算符---------gt-lt-">1.3.1 算术和关系运算符( +  -  *  / &gt; &lt; )</a><i></i></div></li>
+<li><div><a href="#132-相等运算符--">1.3.2 相等运算符( == )</a><i></i></div></li>
+<li><div><a href="#133-赋值运算符--">1.3.3 赋值运算符( = )</a><i></i></div></li>
+<li><div><a href="#134-下标运算符---">1.3.4 下标运算符( [ ] )</a><i></i></div></li>
+<li><div><a href="#135-递增和递减运算符----">1.3.5 递增和递减运算符(++  --)</a><i></i></div></li>
+<li><div><a href="#136-成员访问运算符---gt">1.3.6 成员访问运算符(*  -&gt;)</a><i></i></div></li>
+<li><div><a href="#137-函数调用运算符">1.3.7 函数调用运算符()</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#14-函数对象">1.4 函数对象</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#141-lambda是函数对象">1.4.1 lambda是函数对象</a><i></i></div></li>
+<li><div><a href="#142-标准库函数对象">1.4.2 标准库函数对象</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#15-stdfunction">1.5 std::function</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#2-类型转换">2. 类型转换</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#21-类型转换运算符">2.1 类型转换运算符</a><i></i></div></li>
+<li><div><a href="#22-显式类型转换（explicit）">2.2 显式类型转换（explicit）</a><i></i></div></li>
+<li><div><a href="#23-避免类型转换二义性">2.3 避免类型转换二义性</a><i></i></div></li>
+<li><div><a href="#24-函数匹配与重载运算符">2.4 函数匹配与重载运算符</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<p>[TOC]</p>
+<h1 id="1-重载运算"><a name="1-重载运算" class="anchor-navigation-ex-anchor" href="#1-重载运算"><i class="fa fa-link" aria-hidden="true"></i></a>1. 重载运算</h1>
+<h2 id="本节要点"><a name="本节要点" class="anchor-navigation-ex-anchor" href="#本节要点"><i class="fa fa-link" aria-hidden="true"></i></a>本节要点</h2>
+<ul>
+<li>什么时候定义成员运算符，什么时候定义非成员运算符（对称性与访问权限）;</li>
+<li>常见运算符的推荐签名（例如前置/后置++、operator[]、operator-&gt;等）;</li>
+<li>对于等价性，优先实现 <code>operator==</code> 并用它实现 <code>operator!=</code>；对于二元算术运算，优先提供非成员 <code>operator+</code> 以支持隐式类型转换。</li>
+<li>谨慎定义类型转换运算符以避免二义性，必要时使用 <code>explicit</code>。</li>
+</ul>
+<h3 id="11-可重载的运算符"><a name="11-可重载的运算符" class="anchor-navigation-ex-anchor" href="#11-可重载的运算符"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 可重载的运算符</h3>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240712194255574.png" alt="image-20240712194255574"></img></p>
+</blockquote>
+<p><img src="assets/image-20240712194446560.png" alt="image-20240712194446560"></img></p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240712195105502.png" alt="image-20240712195105502"></img></p>
+<p><strong>逻辑与、逻辑或</strong>：短路求值属性</p>
+<p><strong>逗号</strong>：求值顺序</p>
+<p><strong>取地址</strong>：用于类类型对象时的特殊含义</p>
+</blockquote>
+<hr></hr>
+<h3 id="12-成员函数或非成员函数"><a name="12-成员函数或非成员函数" class="anchor-navigation-ex-anchor" href="#12-成员函数或非成员函数"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 成员函数或非成员函数</h3>
+<p><img src="assets/image-20240712195909812.png" alt="image-20240712195909812"></img></p>
+<p>注：一般规则是——如果运算符需要访问类的私有成员，或者其左操作数必须是该类的可修改对象，优先实现为成员函数；否则优先实现为非成员（通常是非成员非友元或友元）以保持对称性和支持隐式类型转换。例如二元算术运算通常实现为非成员。</p>
+<hr></hr>
+<h3 id="13-运算符介绍"><a name="13-运算符介绍" class="anchor-navigation-ex-anchor" href="#13-运算符介绍"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 运算符介绍</h3>
+<h4 id="131-算术和关系运算符-----------"><a name="131-算术和关系运算符-----------" class="anchor-navigation-ex-anchor" href="#131-算术和关系运算符-----------"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1 算术和关系运算符( +  -  *  / &gt; &lt; )</h4>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240712201808388.png" alt="image-20240712201808388"></img></p>
+</blockquote>
+<h4 id="132-相等运算符--"><a name="132-相等运算符--" class="anchor-navigation-ex-anchor" href="#132-相等运算符--"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2 相等运算符( == )</h4>
+<p><img src="assets/image-20240712201951012.png" alt="image-20240712201951012"></img></p>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240712202236348.png" alt="image-20240712202236348"></img></p>
+</blockquote>
+<h4 id="133-赋值运算符--"><a name="133-赋值运算符--" class="anchor-navigation-ex-anchor" href="#133-赋值运算符--"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3 赋值运算符( = )</h4>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p><img src="assets/image-20240712202419200.png" alt="image-20240712202419200"></img></p>
+<p><img src="assets/image-20240712202520660.png" alt="image-20240712202520660"></img></p>
+</blockquote>
+<h4 id="134-下标运算符---"><a name="134-下标运算符---" class="anchor-navigation-ex-anchor" href="#134-下标运算符---"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4 下标运算符( [ ] )</h4>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p><img src="assets/image-20240712202844654.png" alt="image-20240712202844654"></img></p>
+<p><img src="assets/image-20240712202852863.png" alt="image-20240712202852863"></img></p>
+</blockquote>
+<h4 id="135-递增和递减运算符----"><a name="135-递增和递减运算符----" class="anchor-navigation-ex-anchor" href="#135-递增和递减运算符----"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.5 递增和递减运算符(++  --)</h4>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p><img src="assets/image-20240712203102227.png" alt="image-20240712203102227"></img></p>
+</blockquote>
+<p>区分前置和后置运算符：</p>
+<p><img src="assets/image-20240712203756294.png" alt="image-20240712203756294"></img></p>
+<pre><code class="lang-cpp">StrBlobPtr <span class="hljs-keyword">operator</span>++;      <span class="hljs-comment">//前置</span>
+StrBlobPtr <span class="hljs-keyword">operator</span>--;
+StrBlobPtr <span class="hljs-keyword">operator</span>++(<span class="hljs-type">int</span>); <span class="hljs-comment">//后置</span>
+StrBlobPtr <span class="hljs-keyword">operator</span>--(<span class="hljs-type">int</span>);
+</code></pre>
+<p><strong>显式调用</strong>后置运算符</p>
+<pre><code class="lang-cpp">p.<span class="hljs-keyword">operator</span>++(<span class="hljs-number">0</span>); <span class="hljs-comment">//后置</span>
+p.<span class="hljs-keyword">operator</span>++();  <span class="hljs-comment">//前置</span>
+</code></pre>
+<h4 id="136-成员访问运算符---"><a name="136-成员访问运算符---" class="anchor-navigation-ex-anchor" href="#136-成员访问运算符---"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.6 成员访问运算符(*  -&gt;)</h4>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">StrBlobPtr</span> {
+<span class="hljs-keyword">public</span>:
+      <span class="hljs-comment">//解引用运算符</span>
+    std::string&amp; <span class="hljs-keyword">operator</span>*() <span class="hljs-type">const</span> {
+        <span class="hljs-keyword">auto</span> p = <span class="hljs-built_in">check</span>(curr, <span class="hljs-string">"dereference past end"</span>);
+        <span class="hljs-keyword">return</span> (*p)[curr]; <span class="hljs-comment">// (*p)是对象所指的vector</span>
+    }
+        <span class="hljs-comment">//箭头运算符</span>
+    std::string* <span class="hljs-keyword">operator</span>-&gt;() <span class="hljs-type">const</span> {
+        <span class="hljs-comment">// 将实际工作委托给解引用运算符</span>
+        <span class="hljs-keyword">return</span> &amp;<span class="hljs-keyword">this</span>-&gt;<span class="hljs-keyword">operator</span>*();
+    }
+};
+
+注：重载的箭头运算符应返回指针或提供箭头运算符的类型；返回临时对象会导致未定义行为或临时对象被解引用时悬挂。
+</code></pre>
+<p><strong>特殊的箭头运算符</strong></p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>重载的箭头运算符必须返回类的指针或者自定义了箭头运算符的某个类的对象</p>
+</blockquote>
+<p><img src="assets/image-20240712205749469.png" alt="image-20240712205749469"></img></p>
+<h4 id="137-函数调用运算符"><a name="137-函数调用运算符" class="anchor-navigation-ex-anchor" href="#137-函数调用运算符"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.7 函数调用运算符()</h4>
+<p><img src="assets/image-20240712205924069.png" alt="image-20240712205924069"></img></p>
+<blockquote>
+<p>如果类定义了调用运算符，则该类的对象称作<strong>函数对象（function object）</strong>。因为可以调用这种对象，所以我们说这些对象的“行为像函数一样”。</p>
+<p>函数对象常常作为泛型算法的实参。</p>
+</blockquote>
+<hr></hr>
+<h3 id="14-函数对象"><a name="14-函数对象" class="anchor-navigation-ex-anchor" href="#14-函数对象"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 函数对象</h3>
+<blockquote>
+<p>定义了重载调用运算符的对象</p>
+</blockquote>
+<h4 id="141-lambda是函数对象"><a name="141-lambda是函数对象" class="anchor-navigation-ex-anchor" href="#141-lambda是函数对象"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1 lambda是函数对象</h4>
+<ol>
+<li>lambda表达式被翻译为一个匿名类的匿名对象、该类含有一个重载的函数调用运算符。</li>
+<li>默认情况下lambda不能改变它捕获的变量，因此默认情况下函数调用运算符是一个<strong>const成员函数</strong>，除非它被声明为可变的。</li>
+<li>引用捕获的变量被lambda直接使用</li>
+<li>值捕获的变量被lambda<strong>拷贝</strong>到类内对应的数据成员中</li>
+</ol>
+<h4 id="142-标准库函数对象"><a name="142-标准库函数对象" class="anchor-navigation-ex-anchor" href="#142-标准库函数对象"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2 标准库函数对象</h4>
+<blockquote>
+<p>定义在 functional 头文件中</p>
+</blockquote>
+<p><img src="assets/image-20240712211028608.png" alt="image-20240712211028608"></img></p>
+<p>一般在算法中使用标准库函数对象，以改变算法的默认行为，或者避免<strong>UB</strong>：</p>
+<ol>
+<li><p><code>sort( svec.begin(), svec.end(), greater&lt;string&gt;() );  //使降序排列</code> </p>
+</li>
+<li><p><code>sort( PStr.begin(), PStr.end(), less&lt;string*&gt;() );</code></p>
+<p>标准库规定，指针的less是定义良好的，而直接使用&lt;是<strong>UB</strong></p>
+</li>
+</ol>
+<h3 id="15-stdfunction"><a name="15-stdfunction" class="anchor-navigation-ex-anchor" href="#15-stdfunction"><i class="fa fa-link" aria-hidden="true"></i></a>1.5 std::function</h3>
+<blockquote>
+<p>定义在<code>functional</code>头文件中，解决了相同调用形式的可调用对象的类型冲突问题。</p>
+</blockquote>
+<p><img src="assets/image-20240713114332998.png" alt="image-20240713114332998"></img></p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 定义一个 map，其中 key 是操作符，value 是对应的函数对象</span>
+    std::map&lt;std::string, std::function&lt;<span class="hljs-type">int</span>(<span class="hljs-type">int</span>, <span class="hljs-type">int</span>)&gt;&gt; binops = {
+        {<span class="hljs-string">"+"</span>, add},                                <span class="hljs-comment">// 函数指针</span>
+        {<span class="hljs-string">"-"</span>, std::<span class="hljs-built_in">minus</span>&lt;<span class="hljs-type">int</span>&gt;()},                  <span class="hljs-comment">// 标准库函数对象</span>
+        {<span class="hljs-string">"/"</span>, divide},                             <span class="hljs-comment">// 用户定义的函数对象</span>
+        {<span class="hljs-string">"*"</span>, [](<span class="hljs-type">int</span> i, <span class="hljs-type">int</span> j) { <span class="hljs-keyword">return</span> i * j; }}, <span class="hljs-comment">// 未命名的 lambda</span>
+        {<span class="hljs-string">"%"</span>, mod}                                 <span class="hljs-comment">// 命名了的 lambda 对象</span>
+    };
+</code></pre>
+<pre><code class="lang-cpp"><span class="hljs-comment">//使用map中的操作符 </span>
+<span class="hljs-type">int</span> a = <span class="hljs-number">10</span>, b = <span class="hljs-number">2</span>;
+    std::cout &lt;&lt; <span class="hljs-string">"10 + 2 = "</span> &lt;&lt; binops[<span class="hljs-string">"+"</span>](a, b) &lt;&lt; std::endl;
+    std::cout &lt;&lt; <span class="hljs-string">"10 - 2 = "</span> &lt;&lt; binops[<span class="hljs-string">"-"</span>](a, b) &lt;&lt; std::endl;
+    std::cout &lt;&lt; <span class="hljs-string">"10 / 2 = "</span> &lt;&lt; binops[<span class="hljs-string">"/"</span>](a, b) &lt;&lt; std::endl;
+    std::cout &lt;&lt; <span class="hljs-string">"10 * 2 = "</span> &lt;&lt; binops[<span class="hljs-string">"*"</span>](a, b) &lt;&lt; std::endl;
+    std::cout &lt;&lt; <span class="hljs-string">"10 % 2 = "</span> &lt;&lt; binops[<span class="hljs-string">"%"</span>](a, b) &lt;&lt; std::endl;
+</code></pre>
+<blockquote>
+<p>[!NOTE]</p>
+<p><strong>重载函数二义性</strong></p>
+<p>虽然重载函数的调用形式不同，但是function无法确定使用者想使用形式匹配的函数还是错误地想使用形式不匹配的重载函数，所以function不能<strong>直接</strong>存入重载函数的名字，解决方法：</p>
+<ol>
+<li>传入函数指针<code>int (*fp)(int, int) = add;</code></li>
+<li>使用lambda表达式<code>[] (int a, int b) {return add(a, b) };</code></li>
+</ol>
+</blockquote>
+<h1 id="2-类型转换"><a name="2-类型转换" class="anchor-navigation-ex-anchor" href="#2-类型转换"><i class="fa fa-link" aria-hidden="true"></i></a>2. 类型转换</h1>
+<h3 id="21-类型转换运算符"><a name="21-类型转换运算符" class="anchor-navigation-ex-anchor" href="#21-类型转换运算符"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 类型转换运算符</h3>
+<blockquote>
+<p>operator <strong>type</strong>() const;</p>
+</blockquote>
+<ol>
+<li><strong>type</strong>表示某种<strong>可以作为函数返回类型</strong>的类型（除了void）</li>
+<li>必须是类的<strong>成员函数</strong></li>
+<li>不能声明<strong>返回类型</strong>，但是有<strong>返回值</strong></li>
+<li><strong>形参列表</strong>为空</li>
+<li>通常应该是<strong>const函数</strong></li>
+</ol>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240713121656414.png" alt="image-20240713121656414"></img></p>
+</blockquote>
+<p>实践建议：若一个类型转换可能会在隐式场景下造成二义性或意外转换，请将转换运算符声明为 <code>explicit</code>（C++11 起支持）。对于表示“语义上明确的转换”的函数对象和容器操作，应优先使用显式转换以增加代码可读性和安全性。</p>
+<hr></hr>
+<h3 id="22-显式类型转换（explicit）"><a name="22-显式类型转换（explicit）" class="anchor-navigation-ex-anchor" href="#22-显式类型转换（explicit）"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 显式类型转换（explicit）</h3>
+<blockquote>
+<p>[!CAUTION]</p>
+<p><strong>显式的类型转换运算符也有可能被隐式执行</strong></p>
+<ol>
+<li>被隐式转换为<strong>bool类型</strong>，用于条件判断</li>
+</ol>
+<p><img src="assets/image-20240713122231827.png" alt="image-20240713122231827"></img></p>
+<ol>
+<li>在列表初始化时发生隐式转换</li>
+</ol>
+<p>[!NOTE]</p>
+<p>这是一个设计决定，而不是错误，在<strong>上下文明确</strong>时，设计者允许为了<strong>代码的简洁性</strong>而隐式调用显式的类型转换运算符。</p>
+</blockquote>
+<p>比如，标准库的io类型可以使用<code>while (std::cin &gt;&gt; value)</code>来读入数据直到发生异常或EOF，原因是std定义了istream向bool的<strong>显式</strong>类型转换，只有在这种特定情况下会隐式调用。</p>
+<hr></hr>
+<h3 id="23-避免类型转换二义性"><a name="23-避免类型转换二义性" class="anchor-navigation-ex-anchor" href="#23-避免类型转换二义性"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 避免类型转换二义性</h3>
+<ol>
+<li><p><strong>不要在两个类之间建立相同的类型转换</strong></p>
+<p>比如A类中A-&gt;B的类型转换运算符，B类中A-&gt;B的构造函数。</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//in class A</span>
+<span class="hljs-function"><span class="hljs-keyword">operator</span> <span class="hljs-title">B</span><span class="hljs-params">()</span> <span class="hljs-type">const</span> </span>{}
+<span class="hljs-comment">//in class B</span>
+<span class="hljs-built_in">B</span>(<span class="hljs-type">const</span> A&amp;);
+</code></pre>
+</li>
+</ol>
+<ol>
+<li><p>不要在类中定义两个及两个以上转换源或转换目标是<strong>算术类型的转换</strong></p>
+<pre><code class="lang-cpp"><span class="hljs-built_in">A</span>(<span class="hljs-type">int</span> = <span class="hljs-number">0</span>);<span class="hljs-comment">//转换源都是算术类型</span>
+<span class="hljs-built_in">A</span>(<span class="hljs-type">double</span>);
+<span class="hljs-function"><span class="hljs-keyword">operator</span> <span class="hljs-title">int</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;<span class="hljs-comment">//转换目标都是算术类型</span>
+<span class="hljs-function"><span class="hljs-keyword">operator</span> <span class="hljs-title">double</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f2</span><span class="hljs-params">(<span class="hljs-type">long</span> <span class="hljs-type">double</span>)</span></span>;
+A a;
+<span class="hljs-built_in">f2</span>(a); <span class="hljs-comment">//因为无精准匹配，而且int和double转换到long double的转换级别一致，所以产生了"类型转换二义性"</span>
+
+<span class="hljs-type">long</span> lg;
+<span class="hljs-function">A <span class="hljs-title">a2</span><span class="hljs-params">(lg)</span></span>; <span class="hljs-comment">//相同的原因产生了"构造二义性"</span>
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p><img src="assets/image-20240713130046058.png" alt="image-20240713130046058"></img></p>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240713130335876.png" alt="image-20240713130335876"></img></p>
+</blockquote>
+<hr></hr>
+<h3 id="24-函数匹配与重载运算符"><a name="24-函数匹配与重载运算符" class="anchor-navigation-ex-anchor" href="#24-函数匹配与重载运算符"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 函数匹配与重载运算符</h3>
+<blockquote>
+<p>[!NOTE]</p>
+<p><img src="assets/image-20240713135101330.png" alt="image-20240713135101330"></img></p>
+<p>[!WARNING]</p>
+<p><img src="assets/image-20240713135132777.png" alt="image-20240713135132777"></img></p>
+</blockquote>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:16
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.278Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 05_重载运算与类型转换</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04_拷贝控制.html" class="navigation navigation-prev " aria-label="Previous page: 04_拷贝控制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06_面向对象程序设计.html" class="navigation navigation-next " aria-label="Next page: 06_面向对象程序设计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05_重载运算与类型转换","level":"1.4.1.5","depth":3,"next":{"title":"06_面向对象程序设计","level":"1.4.1.6","depth":3,"path":"docs/Cpp/C++-Primer/06_面向对象程序设计.md","ref":"docs/Cpp/C++-Primer/06_面向对象程序设计.md","articles":[]},"previous":{"title":"04_拷贝控制","level":"1.4.1.4","depth":3,"path":"docs/Cpp/C++-Primer/04_拷贝控制.md","ref":"docs/Cpp/C++-Primer/04_拷贝控制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Cpp/C++-Primer/05_重载运算与类型转换.md","mtime":"2025-09-07T09:41:16.878Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

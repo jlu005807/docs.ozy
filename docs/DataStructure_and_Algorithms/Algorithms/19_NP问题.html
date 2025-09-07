@@ -1,0 +1,1780 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>19_NP问题 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Data_structure/" />
+    
+    
+    <link rel="prev" href="18_分支限界.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01_算法在计算中的作用.html">
+            
+                <a href="01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02_算法基础.html">
+            
+                <a href="02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03_函数的增长.html">
+            
+                <a href="03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="04_分治策略.html">
+            
+                <a href="04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="15_动态规划.html">
+            
+                <a href="15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="16_贪心算法.html">
+            
+                <a href="16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="17_回溯.html">
+            
+                <a href="17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="18_分支限界.html">
+            
+                <a href="18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.9" data-path="19_NP问题.html">
+            
+                <a href="19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Data_structure/">
+            
+                <a href="../Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Data_structure/01_Introduction.html">
+            
+                <a href="../Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Data_structure/02_Linear_List.html">
+            
+                <a href="../Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Data_structure/05_Character_String.html">
+            
+                <a href="../Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Data_structure/06_Tree.html">
+            
+                <a href="../Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Data_structure/07_Graph.html">
+            
+                <a href="../Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Data_structure/08_Sort.html">
+            
+                <a href="../Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Data_structure/09_Search.html">
+            
+                <a href="../Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Data_structure/data_structure.html">
+            
+                <a href="../Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Cpp/">
+            
+                <a href="../../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Cpp/C++-Primer/">
+            
+                <a href="../../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Cpp/Effective-Modern-C++/">
+            
+                <a href="../../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Cpp/Pre-knowledge/">
+            
+                <a href="../../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >19_NP问题</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#np-完全问题"><b></b>NP-完全问题</a></li><ul><li><span class="title-icon "></span><a href="#判定问题"><b></b>判定问题</a></li><ul><li><span class="title-icon "></span><a href="#优化问题可以转化为判定问题（存在性问题）"><b></b>优化问题可以转化为判定问题（存在性问题）</a></li><li><span class="title-icon "></span><a href="#优化问题转化为判定问题的好处"><b></b>优化问题转化为判定问题的好处</a></li></ul><li><span class="title-icon "></span><a href="#不确定的判定问题"><b></b>不确定的判定问题</a></li><ul><li><span class="title-icon "></span><a href="#不确定算法"><b></b>不确定算法</a></li><li><span class="title-icon "></span><a href="#不确定机"><b></b>不确定机</a></li><li><span class="title-icon "></span><a href="#检索问题不确定性"><b></b>检索问题不确定性</a></li><li><span class="title-icon "></span><a href="#不确定算法设计"><b></b>不确定算法设计</a></li><li><span class="title-icon "></span><a href="#排序问题的不确定算法"><b></b>排序问题的不确定算法</a></li><li><span class="title-icon "></span><a href="#不确定的判定算法"><b></b>不确定的判定算法</a></li><li><span class="title-icon "></span><a href="#问题规模的二进制表示"><b></b>问题规模的二进制表示</a></li></ul><li><span class="title-icon "></span><a href="#np问题与np完全性"><b></b>NP问题与NP完全性</a></li><ul><li><span class="title-icon "></span><a href="#p和np"><b></b>P和NP</a></li><li><span class="title-icon "></span><a href="#归约定义"><b></b>归约定义</a></li><li><span class="title-icon "></span><a href="#np完全问题（npc问题）"><b></b>NP完全问题（NPC问题）</a></li></ul><li><span class="title-icon "></span><a href="#p问题、np问题、np完全问题"><b></b>P问题、NP问题、NP完全问题</a></li><ul><li><span class="title-icon "></span><a href="#npc的意义"><b></b>NPC的意义</a></li></ul><li><span class="title-icon "></span><a href="#可满足性（sat问题"><b></b>可满足性（SAT)问题</a></li><ul><li><span class="title-icon "></span><a href="#可满足性问题的不确定算法"><b></b>可满足性问题的不确定算法</a></li><li><span class="title-icon "></span><a href="#cook定理"><b></b>Cook定理</a></li></ul><li><span class="title-icon "></span><a href="#小结"><b></b>小结</a></li></ul></ul></div><a href="#np-完全问题" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#np-完全问题">NP-完全问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#判定问题">判定问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#优化问题可以转化为判定问题（存在性问题）">优化问题可以转化为判定问题（存在性问题）</a><i></i></div></li>
+<li><div><a href="#优化问题转化为判定问题的好处">优化问题转化为判定问题的好处</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#不确定的判定问题">不确定的判定问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#不确定算法">不确定算法</a><i></i></div></li>
+<li><div><a href="#不确定机">不确定机</a><i></i></div></li>
+<li><div><a href="#检索问题不确定性">检索问题不确定性</a><i></i></div></li>
+<li><div><a href="#不确定算法设计">不确定算法设计</a><i></i></div></li>
+<li><div><a href="#排序问题的不确定算法">排序问题的不确定算法</a><i></i></div></li>
+<li><div><a href="#不确定的判定算法">不确定的判定算法</a><i></i></div></li>
+<li><div><a href="#问题规模的二进制表示">问题规模的二进制表示</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#np问题与np完全性">NP问题与NP完全性</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#p和np">P和NP</a><i></i></div></li>
+<li><div><a href="#归约定义">归约定义</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#多项式时间归约">多项式时间归约</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#np完全问题（npc问题）">NP完全问题（NPC问题）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#p问题、np问题、np完全问题">P问题、NP问题、NP完全问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#npc的意义">NPC的意义</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#可满足性（sat问题">可满足性（SAT)问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#可满足性问题的不确定算法">可满足性问题的不确定算法</a><i></i></div></li>
+<li><div><a href="#cook定理">Cook定理</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#小结">小结</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="np-完全问题"><a name="np-完全问题" class="anchor-navigation-ex-anchor" href="#np-完全问题"><i class="fa fa-link" aria-hidden="true"></i></a>NP-完全问题</h1>
+<h2 id="判定问题"><a name="判定问题" class="anchor-navigation-ex-anchor" href="#判定问题"><i class="fa fa-link" aria-hidden="true"></i></a>判定问题</h2>
+<h3 id="优化问题可以转化为判定问题（存在性问题）"><a name="优化问题可以转化为判定问题（存在性问题）" class="anchor-navigation-ex-anchor" href="#优化问题可以转化为判定问题（存在性问题）"><i class="fa fa-link" aria-hidden="true"></i></a>优化问题可以转化为判定问题（存在性问题）</h3>
+<ul>
+<li><p>判定问题是指只需要回答<strong>“是”和“否”</strong>的问题，即是否存在某种情况</p>
+</li>
+<li><p>例如图着色问题</p>
+<blockquote>
+<p>原问题：已知图G=<v,e>，求对G的n个顶点 进行着色的一种方法（相邻顶点颜色不同），问最少需要多少种颜色</v,e></p>
+<p>转为判定问题：已知图G=<v,e> ，问图G是否可用k 种颜色进行着色？</v,e></p>
+</blockquote>
+</li>
+<li><p>最大团问题</p>
+<blockquote>
+<p>原：图G=(V,E)的一个完全子图叫做G的一个团(clique)。团的大小用所含的 结点数表示。 求G内最大团和它的大小。</p>
+<p>已知图G=G=(V,E)，问图G是否存在一个大小为k的团？</p>
+</blockquote>
+</li>
+<li><p>01背包问题</p>
+<blockquote>
+<p>已知n个物品的效益值pi和重量wi， 每个物品只能整取。在背包容量M 的限定下如何选择，使选中物品的 效益值之和最大</p>
+<p>在M限定下，对于给定效益值X，是否存在一组选择策略，使选中物品 的效益值之和大于等于X？</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="优化问题转化为判定问题的好处"><a name="优化问题转化为判定问题的好处" class="anchor-navigation-ex-anchor" href="#优化问题转化为判定问题的好处"><i class="fa fa-link" aria-hidden="true"></i></a>优化问题转化为判定问题的好处</h3>
+<ul>
+<li>最大团问题可以在多项式时间内求解，当且仅当其判定问题可以在多项式 时间内求解</li>
+<li>将优化问题转化为判定问题的好处是消除了不同优化问题的输出差异性， 通过转化为判定问题，输出统一成“是”和“否”</li>
+</ul>
+<h2 id="不确定的判定问题"><a name="不确定的判定问题" class="anchor-navigation-ex-anchor" href="#不确定的判定问题"><i class="fa fa-link" aria-hidden="true"></i></a>不确定的判定问题</h2>
+<h3 id="不确定算法"><a name="不确定算法" class="anchor-navigation-ex-anchor" href="#不确定算法"><i class="fa fa-link" aria-hidden="true"></i></a>不确定算法</h3>
+<ul>
+<li>从理论角度看，取消对运算“确定性”这一限制。</li>
+<li>即允许运算结果受限于某个特定的集合。</li>
+<li>包含这种不确定运算的算法称为不确定的算法</li>
+</ul>
+<p>为描述不确定算法，SPARKS中引进了一个新函数和两个新语句，时间复杂 度恒为O(1)</p>
+<ul>
+<li>choice(S)：按题意选取集合S中的一个元素</li>
+<li>failure：发出不成功完成的信号</li>
+<li>success：发出成功完成的信号</li>
+</ul>
+<h3 id="不确定机"><a name="不确定机" class="anchor-navigation-ex-anchor" href="#不确定机"><i class="fa fa-link" aria-hidden="true"></i></a>不确定机</h3>
+<ul>
+<li>能按上述方式执行不确定算法的机器称为不确定机（实际上不存在）</li>
+</ul>
+<h3 id="检索问题不确定性"><a name="检索问题不确定性" class="anchor-navigation-ex-anchor" href="#检索问题不确定性"><i class="fa fa-link" aria-hidden="true"></i></a>检索问题不确定性</h3>
+<ul>
+<li><p>考察给定元素集A(1:n),n&gt;=1中，元素X的检索问题。需确定下标j，使得A(j)=x，或者当x不在A中时有j=0。</p>
+<pre><code class="lang-cpp">j←<span class="hljs-built_in">choice</span>(<span class="hljs-number">1</span>:n)
+<span class="hljs-function"><span class="hljs-keyword">if</span> <span class="hljs-title">A</span><span class="hljs-params">(j)</span></span>=x then success endif
+j←<span class="hljs-number">0</span>；<span class="hljs-built_in">print</span>(‘<span class="hljs-number">0</span>’); failure
+</code></pre>
+</li>
+</ul>
+<h3 id="不确定算法设计"><a name="不确定算法设计" class="anchor-navigation-ex-anchor" href="#不确定算法设计"><i class="fa fa-link" aria-hidden="true"></i></a>不确定算法设计</h3>
+<ul>
+<li>猜想阶段：也称为不确定阶段，基于不确定函数choice<strong>猜出</strong>一个解</li>
+<li>验证阶段：也称为确定阶段，用确定语句<strong>验证</strong>构造出的解是否是答案</li>
+<li>不确定算法在多项式时间可验证</li>
+<li>时间复杂度：failure时为O(1)；success不确定阶段和确定阶段的时间复杂度之和</li>
+</ul>
+<h3 id="排序问题的不确定算法"><a name="排序问题的不确定算法" class="anchor-navigation-ex-anchor" href="#排序问题的不确定算法"><i class="fa fa-link" aria-hidden="true"></i></a>排序问题的不确定算法</h3>
+<ul>
+<li>设A(1:n),1≤i≤n，是一个待排序的正整数集，要求将其按非降次序排序</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function">procedure <span class="hljs-title">NSORT</span><span class="hljs-params">(A,n)</span><span class="hljs-comment">//对n个正整数排序</span>
+    integer <span class="hljs-title">A</span><span class="hljs-params">(<span class="hljs-number">1</span>:n)</span>,<span class="hljs-title">B</span><span class="hljs-params">(<span class="hljs-number">1</span>:n)</span>,n,i,j
+     <span class="hljs-title">B</span><span class="hljs-params">(<span class="hljs-number">1</span>:n)</span>←0 <span class="hljs-comment">//辅助数组</span>
+    <span class="hljs-keyword">for</span> i←1 to n <span class="hljs-keyword">do</span><span class="hljs-comment">//构造</span>
+        j←<span class="hljs-title">choice</span><span class="hljs-params">(<span class="hljs-number">1</span>:n)</span>, <span class="hljs-keyword">if</span> <span class="hljs-title">B</span><span class="hljs-params">(j)</span> ≠0 then failure endif；
+        <span class="hljs-title">B</span><span class="hljs-params">(j)</span>←<span class="hljs-title">A</span><span class="hljs-params">(i)</span>
+     repeat
+     <span class="hljs-keyword">for</span> i←1 to n-1 <span class="hljs-keyword">do</span><span class="hljs-comment">//验证B的次序</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-title">B</span><span class="hljs-params">(i)</span>&gt;<span class="hljs-title">B</span><span class="hljs-params">(i<span class="hljs-number">+1</span>)</span> then failure endif
+     repeat
+     <span class="hljs-title">print</span><span class="hljs-params">(B)</span>
+     success
+ end NSORT
+</span></code></pre>
+<h3 id="不确定的判定算法"><a name="不确定的判定算法" class="anchor-navigation-ex-anchor" href="#不确定的判定算法"><i class="fa fa-link" aria-hidden="true"></i></a>不确定的判定算法</h3>
+<ul>
+<li><p>不确定的判定算法只需要回答yes或者no的问题，只产生0/1 输出</p>
+</li>
+<li><p>例如：<strong>最大团判定问题的不确定算法</strong></p>
+</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-function">procedure  <span class="hljs-title">DCK</span><span class="hljs-params">(G,n,k)</span><span class="hljs-comment">//n表示图G中点的个数</span>
+    S&lt;-空集<span class="hljs-comment">//求得的点集,S是“猜测”的k个顶点的集合，初值为空集</span>
+    <span class="hljs-keyword">for</span> i&lt;-1  to  k  <span class="hljs-keyword">do</span>
+     t &lt;- <span class="hljs-title">choice</span><span class="hljs-params">(<span class="hljs-number">1</span>:n)</span>
+    <span class="hljs-comment">//若t是一个已生成过的顶点，失败</span>
+     <span class="hljs-keyword">if</span> t属于S  then  failure endif
+     S &lt;-S U t
+     repeat
+     <span class="hljs-keyword">for</span> 使得i属于S, j属于S的每一对<span class="hljs-params">(i,j)</span>,<span class="hljs-keyword">and</span> i!</span>=<span class="hljs-function">j <span class="hljs-keyword">do</span>
+         <span class="hljs-title">if</span> <span class="hljs-params">(i,j)</span>不是此图的边 then  failure endif
+     repeat
+     success
+ end DCK
+</span></code></pre>
+<h3 id="问题规模的二进制表示"><a name="问题规模的二进制表示" class="anchor-navigation-ex-anchor" href="#问题规模的二进制表示"><i class="fa fa-link" aria-hidden="true"></i></a>问题规模的二进制表示</h3>
+<ul>
+<li><p>统一度量不同判定问题的算法时间复杂度，不同算法的输入参数均转 换为二进制形式，算法时间复杂度基于二进制输入长度来考虑</p>
+</li>
+<li><p>例如：</p>
+<blockquote>
+<p>最大团判定问题DCK(G,n,k)的输入</p>
+<ul>
+<li>设图G由其邻接矩阵表示，n是点个数，k是判定值</li>
+<li>二进制转换输出参数集，其长度和为m</li>
+</ul>
+<p><img src="assets/image-20250522211810095.png" alt="image-20250522211810095"></img></p>
+<ul>
+<li>算法DCK的时间复杂度：O(n^2)=O(m)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="np问题与np完全性"><a name="np问题与np完全性" class="anchor-navigation-ex-anchor" href="#np问题与np完全性"><i class="fa fa-link" aria-hidden="true"></i></a>NP问题与NP完全性</h2>
+<h3 id="p和np"><a name="p和np" class="anchor-navigation-ex-anchor" href="#p和np"><i class="fa fa-link" aria-hidden="true"></i></a>P和NP</h3>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><strong>P问题</strong>：所有可在多项式时间内用<strong>确定算法</strong>求解的判定问题的集合</li>
+<li><strong>NP问题</strong>：所有可在多项式时间内用<strong>不确定算法</strong>求解的判定问题的集合，即能够用不确定算法在多项式时间里猜出一个解和验证一个解</li>
+</ul>
+</blockquote>
+<ul>
+<li>P问题、NP问题与非P问题</li>
+</ul>
+<blockquote>
+<ul>
+<li>P问题是NP问题的一种特例，但尚不确定是否有P=NP或者P≠NP</li>
+<li>NP≠非P问题，它是非P问题中用<strong>不确定算法</strong>能在多项式时间内求解的那部分判定问题的集合，因此NP⊂非P问题</li>
+</ul>
+</blockquote>
+<h3 id="归约定义"><a name="归约定义" class="anchor-navigation-ex-anchor" href="#归约定义"><i class="fa fa-link" aria-hidden="true"></i></a>归约定义</h3>
+<blockquote>
+<p>[!tip]</p>
+<p>定义（归约）：令L1和L2是两个问题，如果有一确定的多项式时间算法求解L1，而这个算法使用了一个在多项式时间内求解L2的确定算法，则称L1归约为L2（<code>L1&lt;=L2或L1∝L2</code>）</p>
+<p>可以用问题L2的解法解决问题L1，或者说，问题L1可以“变 成”问题L2</p>
+</blockquote>
+<ul>
+<li><p>特殊的判定问题L1到判定问题L2的归约</p>
+</li>
+<li><p>存在一个<strong>转换函数T</strong>，可以把问题L1的输入x转换为问题L2 的输入T(x)，满足：问题L1对于输入x得到正确结果当且仅当问题L2对于输入T(x)得到正确结果。</p>
+<p><img src="assets/image-20250522231835001.png" alt="image-20250522231835001"></img></p>
+</li>
+<li><p>归约具有<strong>传递性</strong></p>
+</li>
+</ul>
+<p>直观意义：L1可归约为L2，则<strong>L2的时间复杂度不低于L1的时间复杂度</strong>，即L1不比L2难</p>
+<h4 id="多项式时间归约"><a name="多项式时间归约" class="anchor-navigation-ex-anchor" href="#多项式时间归约"><i class="fa fa-link" aria-hidden="true"></i></a>多项式时间归约</h4>
+<ul>
+<li>T是问题L1归约到L2的转换函数，如果计算T的算法是<strong>多项式级</strong>的，则称 问题L1可以多项式时间归约到L2，记为<code>L1&lt;=p L2(L1 ∝p L2)</code></li>
+<li><strong>多项式时间归约具有传递性</strong></li>
+</ul>
+<h3 id="np完全问题（npc问题）"><a name="np完全问题（npc问题）" class="anchor-navigation-ex-anchor" href="#np完全问题（npc问题）"><i class="fa fa-link" aria-hidden="true"></i></a>NP完全问题（NPC问题）</h3>
+<ul>
+<li><p>问题<strong>L是NP-完全</strong>的，或<strong>NPC</strong>的，当满足：</p>
+<blockquote>
+<p>L∈NP</p>
+<p>对于每个L’∈NP，有<code>L’&lt;=p L</code></p>
+</blockquote>
+</li>
+<li><p>问题L是NP-难的，或NP-hard的，当满足：对于每个L’∈NP，有<code>L’&lt;=p L</code></p>
+<p>因为没限定L∈NP，NP-难问题尚未找到多项式级的不确定算法</p>
+</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>比较NP-完全问题与NP-难问题 </p>
+<ul>
+<li>NP-hard比NPC范围广， NP-Hard同样难以找到多项式算法，有可能比所有NPC的时间复杂度更高从而更难以解决 </li>
+<li><strong>NPC不是NP-hard</strong>，但它是NP中最难的问题</li>
+</ul>
+</blockquote>
+<h2 id="p问题、np问题、np完全问题"><a name="p问题、np问题、np完全问题" class="anchor-navigation-ex-anchor" href="#p问题、np问题、np完全问题"><i class="fa fa-link" aria-hidden="true"></i></a>P问题、NP问题、NP完全问题</h2>
+<blockquote>
+<p>[!important]</p>
+<p>NP问题的定义引出未解问题：P是否等于NP基于NP完全问题发现， 如果<strong>任意一个NP完全问题可以在多项式时间解决</strong>，即所有NP问题均可在多项式时间解决，即P=NP，如果证明任意一个NP完全问题不存在多项式时间的解，则所有NP问题均不可能在多项式时间内 解决。</p>
+</blockquote>
+<p><img src="assets/image-20250522232428714.png" alt="image-20250522232428714"></img></p>
+<h3 id="npc的意义"><a name="npc的意义" class="anchor-navigation-ex-anchor" href="#npc的意义"><i class="fa fa-link" aria-hidden="true"></i></a>NPC的意义</h3>
+<ul>
+<li>所有的NP问题都可以多项式时间归约到一个NPC问题，这意味着一旦一个NPC问题多项式可解，则所有NP问题都多项式可解</li>
+<li>P=NP充要条件是存在NPC问题L∈P</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>证明问题L是NPC：</p>
+<ol>
+<li>证明L属于NP，即问题L是NP问题</li>
+<li>已知一个NPC-问题L’, 证明<code>L’&lt;=p L</code>，一个NPC问题可以归约为L</li>
+</ol>
+</blockquote>
+<h2 id="可满足性（sat问题"><a name="可满足性（sat问题" class="anchor-navigation-ex-anchor" href="#可满足性（sat问题"><i class="fa fa-link" aria-hidden="true"></i></a>可满足性（SAT)问题</h2>
+<ul>
+<li>SAT问题是第一个被发现的NPC问题，它约化出 了其他NPC问题，如果证明出SAT问题是P问题， 就能证明出P=NP。</li>
+<li>问题：对于任意给定的一个合取范式F, F是否可满足?</li>
+</ul>
+<h3 id="可满足性问题的不确定算法"><a name="可满足性问题的不确定算法" class="anchor-navigation-ex-anchor" href="#可满足性问题的不确定算法"><i class="fa fa-link" aria-hidden="true"></i></a>可满足性问题的不确定算法</h3>
+<pre><code class="lang-cpp"><span class="hljs-function">Procedure <span class="hljs-title">EVAL</span><span class="hljs-params">(F,n)</span>
+ <span class="hljs-comment">//判定命题F是否为可满足的。变量为Xi，1≤i≤n</span>
+     Boolean <span class="hljs-title">x</span><span class="hljs-params">(<span class="hljs-number">1</span>:n)</span>
+     <span class="hljs-keyword">for</span> i←1 to n <span class="hljs-keyword">do</span><span class="hljs-comment">//选取一组真值指派</span>
+        xi←<span class="hljs-title">choice</span><span class="hljs-params">(<span class="hljs-literal">true</span>,<span class="hljs-literal">false</span>)</span>
+     repeat
+     <span class="hljs-keyword">if</span> <span class="hljs-title">F</span><span class="hljs-params">(x1,…,xn)</span></span>=<span class="hljs-literal">true</span>
+         then success
+     <span class="hljs-keyword">else</span> failure
+     endif
+ end EVAL
+</code></pre>
+<h3 id="cook定理"><a name="cook定理" class="anchor-navigation-ex-anchor" href="#cook定理"><i class="fa fa-link" aria-hidden="true"></i></a>Cook定理</h3>
+<ul>
+<li>Cook定理：<strong>SAT是NP完全的</strong></li>
+<li>即任何NP问题都可以在多项式时间归约为SAT问题</li>
+</ul>
+<h2 id="小结"><a name="小结" class="anchor-navigation-ex-anchor" href="#小结"><i class="fa fa-link" aria-hidden="true"></i></a>小结</h2>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>P-问题：已经找到多项式算法的问题</li>
+<li>NP-问题：可能找到多项式算法的问题</li>
+<li>证明出NPC中的某个问题是P问题，那么所有的NP问题都是P问题，即 P=NP</li>
+<li>SAT问题是第一个被发现的NPC问题，它归约出了其他NPC问题</li>
+<li>NPC-问题：SAT问题可以多项式时间归约到的<strong>NP问题</strong></li>
+<li>NP-难问题：SAT问题可以多项式时间归约到的问题</li>
+</ul>
+</blockquote>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.277Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 19_NP问题</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="18_分支限界.html" class="navigation navigation-prev " aria-label="Previous page: 18_分支限界">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Data_structure/" class="navigation navigation-next " aria-label="Next page: Data_structure">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"19_NP问题","level":"1.3.1.9","depth":3,"next":{"title":"Data_structure","level":"1.3.2","depth":2,"path":"docs/DataStructure_and_Algorithms/Data_structure/README.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/README.md","articles":[{"title":"01_Introduction","level":"1.3.2.1","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/01_Introduction.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/01_Introduction.md","articles":[]},{"title":"02_Linear_List","level":"1.3.2.2","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/02_Linear_List.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/02_Linear_List.md","articles":[]},{"title":"03_Stack_and_Queue","level":"1.3.2.3","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.md","articles":[]},{"title":"04_Array_and_Matrix","level":"1.3.2.4","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.md","articles":[]},{"title":"05_Character_String","level":"1.3.2.5","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/05_Character_String.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/05_Character_String.md","articles":[]},{"title":"06_Tree","level":"1.3.2.6","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/06_Tree.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/06_Tree.md","articles":[]},{"title":"07_Graph","level":"1.3.2.7","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/07_Graph.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/07_Graph.md","articles":[]},{"title":"08_Sort","level":"1.3.2.8","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/08_Sort.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/08_Sort.md","articles":[]},{"title":"09_Search","level":"1.3.2.9","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/09_Search.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/09_Search.md","articles":[]},{"title":"data_structure","level":"1.3.2.10","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/data_structure.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/data_structure.md","articles":[]}]},"previous":{"title":"18_分支限界","level":"1.3.1.8","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/18_分支限界.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/18_分支限界.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/DataStructure_and_Algorithms/Algorithms/19_NP问题.md","mtime":"2025-09-07T09:41:17.124Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1968 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>04_分治策略 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.3">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="15_动态规划.html" />
+    
+    
+    <link rel="prev" href="03_函数的增长.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_(Vim">
+            
+                <span>
+            
+                    
+                    03_Editors (Vim)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_(Git">
+            
+                <span>
+            
+                    
+                    06_Version Control (Git)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01_算法在计算中的作用.html">
+            
+                <a href="01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02_算法基础.html">
+            
+                <a href="02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03_函数的增长.html">
+            
+                <a href="03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.4" data-path="04_分治策略.html">
+            
+                <a href="04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="15_动态规划.html">
+            
+                <a href="15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="16_贪心算法.html">
+            
+                <a href="16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="17_回溯.html">
+            
+                <a href="17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="18_分支限界.html">
+            
+                <a href="18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="19_NP问题.html">
+            
+                <a href="19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Data_structure/">
+            
+                <a href="../Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Data_structure/01_Introduction.html">
+            
+                <a href="../Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Data_structure/02_Linear_List.html">
+            
+                <a href="../Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Data_structure/05_Character_String.html">
+            
+                <a href="../Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Data_structure/06_Tree.html">
+            
+                <a href="../Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Data_structure/07_Graph.html">
+            
+                <a href="../Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Data_structure/08_Sort.html">
+            
+                <a href="../Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Data_structure/09_Search.html">
+            
+                <a href="../Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Data_structure/data_structure.html">
+            
+                <a href="../Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Cpp/">
+            
+                <a href="../../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Cpp/C++-Primer/">
+            
+                <a href="../../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Cpp/Effective-Modern-C++/">
+            
+                <a href="../../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Cpp/Pre-knowledge/">
+            
+                <a href="../../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >04_分治策略</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#分支策略"><b></b>分支策略</a></li><ul><li><span class="title-icon "></span><a href="#递归式"><b></b>递归式</a></li><li><span class="title-icon "></span><a href="#递归式技术细节"><b></b>递归式技术细节</a></li><li><span class="title-icon "></span><a href="#最大子数组问题"><b></b>最大子数组问题</a></li><ul><li><span class="title-icon "></span><a href="#暴力解法，求出所有连续子数组的和进行比较"><b></b>暴力解法，求出所有连续子数组的和进行比较</a></li><li><span class="title-icon "></span><a href="#分治策略"><b></b>分治策略</a></li><li><span class="title-icon "></span><a href="#动态规划"><b></b>动态规划</a></li></ul><li><span class="title-icon "></span><a href="#矩阵乘法的strassen算法"><b></b>矩阵乘法的Strassen算法</a></li><ul><li><span class="title-icon "></span><a href="#一般的矩阵乘法"><b></b>一般的矩阵乘法</a></li><li><span class="title-icon "></span><a href="#简单的分治算法"><b></b>简单的分治算法</a></li><li><span class="title-icon "></span><a href="#strassen算法"><b></b>Strassen算法</a></li></ul><li><span class="title-icon "></span><a href="#三次乘法完成复数相乘"><b></b>三次乘法完成复数相乘</a></li><li><span class="title-icon "></span><a href="#二维极大点问题"><b></b>二维极大点问题</a></li><li><span class="title-icon "></span><a href="#用代入法求解递归式"><b></b>用代入法求解递归式</a></li><li><span class="title-icon "></span><a href="#用递归树方法求解递归式"><b></b>用递归树方法求解递归式</a></li><li><span class="title-icon "></span><a href="#用主方法求解递归式主定理"><b></b>用主方法求解递归式(主定理)</a></li></ul></ul></div><a href="#分支策略" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#分支策略">分支策略</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#递归式">递归式</a><i></i></div></li>
+<li><div><a href="#递归式技术细节">递归式技术细节</a><i></i></div></li>
+<li><div><a href="#最大子数组问题">最大子数组问题</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#暴力解法，求出所有连续子数组的和进行比较">暴力解法，求出所有连续子数组的和进行比较</a><i></i></div></li>
+<li><div><a href="#分治策略">分治策略</a><i></i></div></li>
+<li><div><a href="#动态规划">动态规划</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#矩阵乘法的strassen算法">矩阵乘法的Strassen算法</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#一般的矩阵乘法">一般的矩阵乘法</a><i></i></div></li>
+<li><div><a href="#简单的分治算法">简单的分治算法</a><i></i></div></li>
+<li><div><a href="#strassen算法">Strassen算法</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#三次乘法完成复数相乘">三次乘法完成复数相乘</a><i></i></div></li>
+<li><div><a href="#二维极大点问题">二维极大点问题</a><i></i></div></li>
+<li><div><a href="#用代入法求解递归式">用代入法求解递归式</a><i></i></div></li>
+<li><div><a href="#用递归树方法求解递归式">用递归树方法求解递归式</a><i></i></div></li>
+<li><div><a href="#用主方法求解递归式主定理">用主方法求解递归式(主定理)</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="分支策略"><a name="分支策略" class="anchor-navigation-ex-anchor" href="#分支策略"><i class="fa fa-link" aria-hidden="true"></i></a>分支策略</h1>
+<ul>
+<li><p>分治法适用于问题规模大直接求解困难，可以分解为不同的可独立的子问题，求解子问题后可以合并</p>
+<p><img src="assets/image-20250313101825333.png" alt="image-20250313101825333"></img></p>
+</li>
+<li><p>在分治策略中递归地求解一个问题，在每层递归中应用如下三个步骤</p>
+</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<ul>
+<li>分解(Divide)步骤将问题<strong>划分为一些子问题</strong>，子问题的形式与原问题一样，只是规模更小。 </li>
+<li>解决(Conquer)步骤递归地求解出子问题。如果子问题的规模足够小，则停止递归，直接求解。 </li>
+<li>合井(Combine)步骤将子问题的解<strong>组合</strong>成原问题的解。</li>
+</ul>
+</blockquote>
+<ol>
+<li>递归情况(recursive case)：子问题足够大，需要递归求解</li>
+<li>基本情况(base case)：子问题变得足够小可以解决，不再需要递归</li>
+</ol>
+<h2 id="递归式"><a name="递归式" class="anchor-navigation-ex-anchor" href="#递归式"><i class="fa fa-link" aria-hidden="true"></i></a>递归式</h2>
+<p>一个递归式(recurrence)就是一个等式或不等式，它通过更小的输入上的函数值来描述一个函数。</p>
+<p><img src="assets/image-20250304093353763-1741052036959-1.png" alt="image-20250304093353763"></img></p>
+<p>子问题的规模不必是原问题规模的一个固定比例。</p>
+<p>并且分的子问题数量越大，可能分开和合并的代价大</p>
+<ul>
+<li><p>三种求解递归式</p>
+<blockquote>
+<ol>
+<li><strong>代入法</strong> 我们猜测一个界，然后用数学归纳法证明这个界是正确的。</li>
+<li><strong>递归树法</strong> 将递归式转换为一棵树，其结点表示不同层次的递归调用产生的代价。然后 采用边界和技术来求解递归式。</li>
+<li><strong>主方法</strong> 可求解形如下面公式的递归式的界： T(n) = aT(n/b) + f(n) <ol>
+<li>其中a&gt;=1,b&gt;=1, f(n)是一个给定的函数。</li>
+<li>生成a个子问题，每个子间题的规模是原问题规模的 1/b, 分解和合并步 骤总共花费时间为f(n)</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h2 id="递归式技术细节"><a name="递归式技术细节" class="anchor-navigation-ex-anchor" href="#递归式技术细节"><i class="fa fa-link" aria-hidden="true"></i></a>递归式技术细节</h2>
+<ol>
+<li><p>递归式声明和求解的一些技术细节</p>
+<blockquote>
+<p>子问题规模是不是n/2？进一还是去尾</p>
+</blockquote>
+</li>
+<li><p>边界条件是另一类我们通常忽略的细节</p>
+<blockquote>
+<p>对于足够小的n, 表示算法运行时间的递归式一般为 T(n)=@(1)</p>
+</blockquote>
+</li>
+<li><p>当声明、求解递归式时，我们常常<strong>忽略向下取整、向上取整及边界条件</strong>。先忽略这些细 节，稍后再确定这些细节对结果是否有较大影响。</p>
+</li>
+</ol>
+<h2 id="最大子数组问题"><a name="最大子数组问题" class="anchor-navigation-ex-anchor" href="#最大子数组问题"><i class="fa fa-link" aria-hidden="true"></i></a>最大子数组问题</h2>
+<blockquote>
+<p>[!note]</p>
+<p>寻找数组A的和最大的非空连续子数组。我们称这样的连续子数组为最大子数组(maximum subarray)。</p>
+</blockquote>
+<h3 id="暴力解法，求出所有连续子数组的和进行比较"><a name="暴力解法，求出所有连续子数组的和进行比较" class="anchor-navigation-ex-anchor" href="#暴力解法，求出所有连续子数组的和进行比较"><i class="fa fa-link" aria-hidden="true"></i></a>暴力解法，求出所有连续子数组的和进行比较</h3>
+<pre><code class="lang-cpp"><span class="hljs-type">int</span> FIND-MAXIMUM-<span class="hljs-built_in">SUBARRAY</span>(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)
+{ 
+    <span class="hljs-type">int</span> sum = INT_MIN;
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.<span class="hljs-built_in">size</span>();i++)
+    {
+        <span class="hljs-type">int</span> tmp=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=i;j&lt;nums.<span class="hljs-built_in">size</span>();j++)
+           { 
+             tmp+=nums[j];
+            <span class="hljs-keyword">if</span>(sum&lt;tmp)sum=tmp;
+           }
+    }
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+<h3 id="分治策略"><a name="分治策略" class="anchor-navigation-ex-anchor" href="#分治策略"><i class="fa fa-link" aria-hidden="true"></i></a>分治策略</h3>
+<blockquote>
+<p>[!important]</p>
+<ol>
+<li>要寻找子数组A[low.. high]  的最大子数组。使用分治技术意味着我们要将子数组<strong>划分</strong>为两个规模尽量相等的子数组</li>
+<li>例如取中间位置划分，则所求子数组的位置必然是以下三种情况给<ol>
+<li>完全位于左区间</li>
+<li>完全位于右区间</li>
+<li>跨越了中点</li>
+</ol>
+</li>
+<li>所以最大子数组必然是完全位千 <code>A[low.. mid]</code>中、完全位于 <code>A[mid+l.. high]</code> 中或者 跨越中点的所有子数组 中和最大者。</li>
+<li><strong>递归</strong>地求解<code>A[low.. mid]和 A[mid+ 1.. high]的最大子数组</code>，因为这两个子问题仍是最大子数组问题，只是规模更小。</li>
+<li>因此，剩下的工作就是寻找<strong>跨越中点的最大子数组</strong>，然后在三种情况中选取和最大者。</li>
+</ol>
+<p><img src="assets/image-20250306101342652-1741227226154-1.png" alt="image-20250306101342652"></img></p>
+<ol>
+<li><p>对于穿过中间线的子数组，我们可以求出「中间线左侧的最大子数组和」以及「中间线右侧的最大子数组和」，相加就得到「穿过中间线的最大子数组和」。</p>
+<pre><code class="lang-text">//返回一个下标元组划定跨越中点的最大子数组的边界，并返回最大子数组中值的和。
+FIND-MAX-CROSSING-SUBARRAY(A,low,mid,high)
+ left-sum = -inf
+ sum = 0
+ //求出左半部A[low.. mid]的最大子数组
+ for i = mid downto low
+     sum += A[i]
+     if sum &gt; left-sum
+         left-sum = sum
+         max-left = i//更新左边界
+ right-sum = -inf
+ sum = 0
+ //求右半部A[mid+1. . high]的最大子数组
+ for j = mid + 1 to high
+     sum += A[j]
+     if sum &gt; right-sum
+         right-sum = sum
+         max-right = j//更新右边界
+ return (max-left,max-right,left-sum + right-sum)
+</code></pre>
+</li>
+<li><p>求解最大子数组问题的分治算法的伪代码:</p>
+<pre><code class="lang-text">FIND-MAXIMUM-SUBARRAY(A,low,high)
+ // base case, only one element （基本情况）
+ if high == low
+     return (low,high,A[low])
+ else 
+     //递归求解左右区间最大子数组
+     mid = [(low + high) / 2]
+     (left_low,left_high,left_sum) = FIND-MAXIMUM-SUBARRAY(A,low,mid)
+     (right_low,right_high,right_sum) = FIND-MAXIMUM-SUBARRAY(A,mid + 1,high)
+
+     //穿过中间线的最大子数组
+     (cross_low,cross_high,cross_sum) = FIND-MAXIMUM-CROSSING-SUBARRAY(A,low,mid,high)
+
+     //比较返回最大子数组
+     if left_sum == Max(left_sum,right_sum,cross_sum)
+         return (left_low,left_high,left_sum)
+     else if right_sum == Max(left_sum,right_sum,cross_sum)
+        return (right_low,right_high,right_sum)
+    else return (cross_low,cross_high,cross_sum)
+</code></pre>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>分治算法的分析</p>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li><p>建立递归式</p>
+<p><img src="assets/image-20250306110650433-1741230411431-4.png" alt="image-20250306110650433"></img></p>
+</li>
+<li><p>用主方法求解此递归式，其解为 T(n) = Θ(nlgn) 。</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<h3 id="动态规划"><a name="动态规划" class="anchor-navigation-ex-anchor" href="#动态规划"><i class="fa fa-link" aria-hidden="true"></i></a>动态规划</h3>
+<blockquote>
+<p>[!important]</p>
+<ol>
+<li><p>状态转移方程：</p>
+<p><code>dp[0]=nums[0],dp[i]=((dp[i-1]+dp[i])&gt;dp[i])?(dp[i-1]+dp[i]):dp[i]</code></p>
+</li>
+<li><p>遍历求出最大dp[i]</p>
+</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-type">int</span> FIND-MAXIMUM-<span class="hljs-built_in">SUBARRAY</span>(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)
+{ 
+    <span class="hljs-keyword">if</span>(nums.<span class="hljs-built_in">empty</span>())<span class="hljs-keyword">return</span> INT_MIN;
+
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">dp</span><span class="hljs-params">(nums.size())</span></span>;
+    dp[<span class="hljs-number">0</span>]=nums[<span class="hljs-number">0</span>];
+    <span class="hljs-type">int</span> sum = dp[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.<span class="hljs-built_in">size</span>();i++)
+    {
+       dp[i]=((dp[i<span class="hljs-number">-1</span>]+dp[i])&gt;dp[i])?(dp[i<span class="hljs-number">-1</span>]+dp[i]):dp[i]
+       <span class="hljs-keyword">if</span>(sum&lt;dp[i])sum=dp[i];
+    }
+    <span class="hljs-keyword">return</span> sum;
+}
+</code></pre>
+</blockquote>
+<hr></hr>
+<h2 id="矩阵乘法的strassen算法"><a name="矩阵乘法的strassen算法" class="anchor-navigation-ex-anchor" href="#矩阵乘法的strassen算法"><i class="fa fa-link" aria-hidden="true"></i></a>矩阵乘法的Strassen算法</h2>
+<h3 id="一般的矩阵乘法"><a name="一般的矩阵乘法" class="anchor-navigation-ex-anchor" href="#一般的矩阵乘法"><i class="fa fa-link" aria-hidden="true"></i></a>一般的矩阵乘法</h3>
+<p>nXn矩阵A和B, 返回它们的乘积一nXn矩阵C。</p>
+<p>假设每个矩阵都有一个属性rows, 给出矩阵的行数。</p>
+<pre><code class="lang-text">//O(n^3)
+SQUARE-MATRIX-MULTIPLY(A, B) 
+    n= A.rows
+    let C be a new nXn matrix 
+    for i=l to n 
+        for j = 1 to n 
+            c[ij]=0
+            for k=1 to n
+                c[ij]+=a[ik]*b[kj]
+    RETURN C
+</code></pre>
+<hr></hr>
+<h3 id="简单的分治算法"><a name="简单的分治算法" class="anchor-navigation-ex-anchor" href="#简单的分治算法"><i class="fa fa-link" aria-hidden="true"></i></a>简单的分治算法</h3>
+<p>当使用分治算法计算矩阵积C=A•B时，假定三个矩阵均为nXn矩阵，其中 n 为 2 的幂。</p>
+<blockquote>
+<p> nXn矩阵都被划分为4个<code>n/2Xn/2</code>的子矩阵</p>
+<p>因此可以将公式<code>C=A•B</code>改写成</p>
+<p><img src="assets/image-20250311091836699.png" alt="image-20250311091836699"></img></p>
+<p>递归分治算法：</p>
+<pre><code class="lang-cpp">SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A, B) 
+    n = A.rows
+    let C be a <span class="hljs-keyword">new</span> nXn matrix 
+    <span class="hljs-keyword">if</span> n==l 
+        c[<span class="hljs-number">11</span>] =a[<span class="hljs-number">11</span>]• b[<span class="hljs-number">11</span>] 
+    <span class="hljs-keyword">else</span> partition A, B, <span class="hljs-keyword">and</span> C as in <span class="hljs-built_in">equations</span> (<span class="hljs-number">4.</span> <span class="hljs-number">9</span>) 
+        C11 = SQUARE-MA TRIX-MUL TIPLY-<span class="hljs-built_in">RECURSIVE</span>(A11 , B11) 
+            + SQUARE-MATRIX-MDL TIPL Y-<span class="hljs-built_in">RECURSIVE</span>(A12, B21) 
+        C12=SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A11, B12)
+            + SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A12, B22) 
+        C21=SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A21, B11)
+            + SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A22, B21) 
+        C22=SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A21, B12) 
+            + SQUARE-MATRIX-MULTIPLY-<span class="hljs-built_in">RECURSIVE</span>(A22, B22)
+    <span class="hljs-keyword">return</span> C
+</code></pre>
+<p>对于分解矩阵：而非创建12个新的<code>n/2*n/2</code>矩阵，而是使用下标计算,通过矩阵的一组行下标和一组列下标指明一个子矩阵，所以分解矩阵只需要常数的时间</p>
+<p>递归式：共八次递归调用完成完成两个n/2Xn/2 矩阵的乘法<code>(T(n/2)</code>，以及四次矩阵加法</p>
+<p><img src="assets/image-20250311093340335.png" alt="image-20250311093340335"></img></p>
+</blockquote>
+<hr></hr>
+<h3 id="strassen算法"><a name="strassen算法" class="anchor-navigation-ex-anchor" href="#strassen算法"><i class="fa fa-link" aria-hidden="true"></i></a>Strassen算法</h3>
+<ol>
+<li><p>将输入矩阵A、 B 和输出矩阵C分解为<code>n/2 * n/2</code>的子矩阵。采用下标计算方法，此步骤花常数时间，与 SQUARE-MATRIX-MULTIPLY-RECURSIVE相同。</p>
+</li>
+<li><p>创建 10 个 <code>n/2 * n/2</code> 的矩阵 S1, S2, …, S10, 每个矩阵保存步骤 1 中创建的两个子矩阵的和或差。</p>
+<blockquote>
+<p>如下创建10个 n/2 * n/2 的矩阵 S1,S2,...,S10 (花费时间 Θ(n^2) ）。</p>
+<p>S1=B12−B22</p>
+<p>S2=A11+A12</p>
+<p>S3=A21+A22</p>
+<p>S4=B21−B11</p>
+<p>S5=A11+A22</p>
+<p>S6=B11+B22</p>
+<p>S7=A12−A22</p>
+<p>S8=B21+B22</p>
+<p>S9=A11−A21</p>
+<p>S10=B11+B12</p>
+</blockquote>
+</li>
+<li><p>递归地计算 7个矩阵积P1, P2, …,  p7 。每个矩阵 P都是<code>n/2 * n/2</code> 的(花费时间 <code>Θ(n^2)</code>）。</p>
+<blockquote>
+<p>P1 =  A11⋅S1 = A11⋅B12−A11⋅B22</p>
+<p>P2 = S2⋅B22  = A11⋅B22+A12⋅B22</p>
+<p>P3 = S3⋅B11  = A21⋅B11+A22⋅B11</p>
+<p>P4 = A22⋅S4  = A22⋅B21−A22⋅B11</p>
+<p>P5 = S5⋅S6    = A11⋅B11+A11⋅B22+A22⋅B11+A22⋅B22</p>
+<p>P6 = S7⋅S8    = A12⋅B21+A12⋅B22−A22⋅B21−A22⋅B22</p>
+<p>P7 = S9⋅S10  = A11⋅B11+A11⋅B12−A21⋅B11−A21⋅B12</p>
+<p>注意，上述公式中只有中间一列需要计算。右边这列只是说明这些乘积与原始子矩阵的关系</p>
+</blockquote>
+</li>
+<li><p>. 通过Pi矩阵的不同组合进行加减运算 计算 <strong>C11,C12,C21,C22</strong> ，花费时间 Θ(n^2) 。</p>
+<blockquote>
+<p>C11 = P5+P4−P2+P6</p>
+<p>C12 = P1+P2</p>
+<p>C21 = P3+P4</p>
+<p>C22 = P5+P1−P3−P7</p>
+</blockquote>
+</li>
+<li><p>得到如下描述Strassen算法运行时间 T(n)的递归式</p>
+<blockquote>
+<p><img src="assets/image-20250311100353887-1741658638119-1.png" alt="image-20250311100353887"></img></p>
+<p>用常数次矩阵乘法的代价减少了一次矩阵乘法的递归使得子问题规模减少一个</p>
+</blockquote>
+</li>
+<li><p>伪代码</p>
+<pre><code>If n = 1 Output A × B
+ Else
+ Compute A11,B11, . . . ,A22,B22 % by computing m = n/2
+ P1   Strassen(A11,B12 − B22)
+ P2   Strassen(A11 + A12,B22)
+ P3   Strassen(A21 + A22,B11)
+ P4   Strassen(A22,B21 − B11)
+ P5   Strassen(A11 + A22,B11 + B22)
+ P6   Strassen(A12 − A22,B21 + B22)
+ P7   Strassen(A11 − A21,B11 + B12)
+ C11   P5 + P4 − P2 + P6
+ C12   P1 + P2
+ C21   P3 + P4
+ C22   P1 + P5 − P3 − P7
+ Output C
+ End If
+</code></pre></li>
+</ol>
+<h2 id="三次乘法完成复数相乘"><a name="三次乘法完成复数相乘" class="anchor-navigation-ex-anchor" href="#三次乘法完成复数相乘"><i class="fa fa-link" aria-hidden="true"></i></a>三次乘法完成复数相乘</h2>
+<ul>
+<li><p>有两个复数<code>m=a+b*i,n=c+d*i</code>,现在计算它们的乘法，设计一个只使用<strong>三次实数乘法</strong>的算法来完成m和n的计算。</p>
+<blockquote>
+<p>[!note]</p>
+<p>复数乘法的计算公式：<code>m*n=（a*c-b*d）+(a*d+b*c)i</code></p>
+<p>C1=a<em>d,</em></p>
+<p><em>C2=b</em>c,</p>
+<p>C3=(a+b)(c-d)，</p>
+<p>虚部为C1+C2，实部为C3+C1-C2，计算完毕。</p>
+</blockquote>
+</li>
+</ul>
+<hr></hr>
+<h2 id="二维极大点问题"><a name="二维极大点问题" class="anchor-navigation-ex-anchor" href="#二维极大点问题"><i class="fa fa-link" aria-hidden="true"></i></a>二维极大点问题</h2>
+<ul>
+<li><p>问题描述</p>
+<blockquote>
+<p>支配规则：在二维空间中，如果x1&gt;x2，且y1&gt;y2，那么称点(x1,y1)支配点(x2,y2)</p>
+<p>极大点：如果一个点没有被其他点支配，则称其为极大点。</p>
+<p>求极大点问题：已知有n个点的集合，找出其中的所有极大点。</p>
+</blockquote>
+</li>
+<li><p>分治策略</p>
+<blockquote>
+<p>分：设计中位线L，将整个点集分为两个子集SL和SR</p>
+<p>​    中位线：垂直于X轴的中位线L，l对集合S中的所有点按x值<strong>排序(预处理)</strong>后，寻找第n/2点位置</p>
+<p>治：分别找出SL和SR的极大点</p>
+<p>合：基于支配规则合并SL和SR的极大点(l对于SL中的极大点p，如果yp小于SR中极大点的y值，则p被支配，舍弃掉)</p>
+<p>递归出口：如果集合S中只有一个点，那么该点为极大点</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-keyword">struct</span> <span class="hljs-title class_">Point</span> {
+    <span class="hljs-type">int</span> x;
+    <span class="hljs-type">int</span> y;
+};
+<span class="hljs-comment">//S预处理排序</span>
+<span class="hljs-function">vector&lt;Point&gt; <span class="hljs-title">find_maxima</span><span class="hljs-params">(vector&lt;Point&gt; S)</span> </span>{
+    <span class="hljs-keyword">if</span> (S.<span class="hljs-built_in">size</span>() == <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> S;
+    }
+
+    <span class="hljs-type">int</span> n = S.<span class="hljs-built_in">size</span>();
+    <span class="hljs-keyword">auto</span> mid = S.<span class="hljs-built_in">begin</span>() + n / <span class="hljs-number">2</span>;
+
+    <span class="hljs-comment">// 使用nth_element将数组分为两部分，左半部分x较小，右半部分x较大</span>
+    <span class="hljs-built_in">nth_element</span>(S.<span class="hljs-built_in">begin</span>(), mid, S.<span class="hljs-built_in">end</span>(), [](<span class="hljs-type">const</span> Point&amp; a, <span class="hljs-type">const</span> Point&amp; b) {
+        <span class="hljs-keyword">return</span> a.x &lt; b.x;
+    });
+
+    <span class="hljs-function">vector&lt;Point&gt; <span class="hljs-title">SL</span><span class="hljs-params">(S.begin(), mid)</span></span>;
+    <span class="hljs-function">vector&lt;Point&gt; <span class="hljs-title">SR</span><span class="hljs-params">(mid, S.end())</span></span>;
+
+    vector&lt;Point&gt; sl_maxima = <span class="hljs-built_in">find_maxima</span>(SL);
+    vector&lt;Point&gt; sr_maxima = <span class="hljs-built_in">find_maxima</span>(SR);
+
+    <span class="hljs-comment">// 计算SR的极大点中的最大y值</span>
+    <span class="hljs-type">int</span> max_y_sr = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; p : sr_maxima) {
+        <span class="hljs-keyword">if</span> (p.y &gt; max_y_sr) {
+            max_y_sr = p.y;
+        }
+    }
+
+    <span class="hljs-comment">// 过滤SL的极大点，保留y大于max_y_sr的点</span>
+    vector&lt;Point&gt; merged;
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; p : sl_maxima) {
+        <span class="hljs-keyword">if</span> (p.y &gt; max_y_sr) {
+            merged.<span class="hljs-built_in">push_back</span>(p);
+        }
+    }
+
+    <span class="hljs-comment">// 添加SR的所有极大点</span>
+    merged.<span class="hljs-built_in">insert</span>(merged.<span class="hljs-built_in">end</span>(), sr_maxima.<span class="hljs-built_in">begin</span>(), sr_maxima.<span class="hljs-built_in">end</span>());
+
+    <span class="hljs-keyword">return</span> merged;
+}
+</code></pre>
+<hr></hr>
+<h2 id="用代入法求解递归式"><a name="用代入法求解递归式" class="anchor-navigation-ex-anchor" href="#用代入法求解递归式"><i class="fa fa-link" aria-hidden="true"></i></a>用代入法求解递归式</h2>
+<blockquote>
+<p>[!note]</p>
+<p>代入法求解递归式分为两步：</p>
+<ol>
+<li>L猜测解的形式。 </li>
+<li>用数学归纳法求出解中的常数，并证明解是正确的。</li>
+</ol>
+</blockquote>
+<ul>
+<li><p>当将归纳假设应用于较小的值时，我们将猜测的解代入函数，因此得名“代入法”。</p>
+</li>
+<li><p>数学归纳法要求我们证明解在边界条件下也成立。</p>
+<blockquote>
+<ol>
+<li>通常证明对于归纳证明，边界条件适合作为基本情况</li>
+<li>对于我们所要讨论的大多数递归式来说，扩展边界条件使归纳假设对较小的n成立，例如个可以设一个常数n0 ，叧要求对n&gt;=n0时能够得证即可。</li>
+<li>先证明较松的上下界，然后逐步降低上界，提高下界。 </li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>[!warning]</p>
+<p>只能用于解的形式很容易猜的情况，不存在通用的方法来猜测递归式的正式解。</p>
+</blockquote>
+<ul>
+<li>在归纳假设不够强，无法证出准确的界。当遇到这种障碍时，如果修改猜测，将它<strong>减去一个低阶的项</strong>，数学证明常常能顺利进行。</li>
+<li>使用渐近符号很容易出错。</li>
+<li>一个小的代数运算可以将一个未知的递归式变成你所熟悉的形式。</li>
+</ul>
+<hr></hr>
+<h2 id="用递归树方法求解递归式"><a name="用递归树方法求解递归式" class="anchor-navigation-ex-anchor" href="#用递归树方法求解递归式"><i class="fa fa-link" aria-hidden="true"></i></a>用递归树方法求解递归式</h2>
+<blockquote>
+<p>[!note]</p>
+<p>在递归树中，每个结点表示一个<strong>单一子问题</strong>的代价，子问题对应<strong>某次递归函数调用</strong>。</p>
+<p>我们将树中每层中的代价求和，得到每层代价，然后将所有层的代价求和，得到 所有层次的递归调用的总代价。</p>
+</blockquote>
+<ul>
+<li>递归树最适合用来生成好的猜测，然后即可用代入法来验证猜测是否正确。</li>
+</ul>
+<h2 id="用主方法求解递归式主定理"><a name="用主方法求解递归式主定理" class="anchor-navigation-ex-anchor" href="#用主方法求解递归式主定理"><i class="fa fa-link" aria-hidden="true"></i></a>用主方法求解递归式(主定理)</h2>
+<p>主方法为如下形式的递归式提供了一种”菜谱”式的求解方法 </p>
+<blockquote>
+<p>[!important]</p>
+<p><code>T(n) = aT(n/b) + f(n)  (4. 20)</code></p>
+<p>  其中<code>a&gt;=l 和b&gt;=l</code>是常数， <code>f(n)</code>是渐近正函数。</p>
+<p>递归式(4.20)描述的是这样一种算法的运行时间：它将规模为n的问题分解为a 个子问题， 每个<strong>子问题规模为 n/b</strong>, 其中 a 和b 都是正常数。 <strong>a个子问题递归</strong>地进行求解，每个花费时间 T(n/b) 。</p>
+<p>函数 f(n)包含子问题<strong>分解</strong>和子间题<strong>解合并</strong>的代价</p>
+<p>[!note]</p>
+<p>定理4.1(主定理）:</p>
+<p> 令<code>a&gt;=l 和b&gt;=l</code>是常数， <code>f(n)</code>是一个函数， <code>T(n</code>)是定义在<strong>非负整数</strong>上的递归式：<code>T(n) = aT(n/b) + f(n)</code></p>
+<p><img src="assets/image-20250314145846639.png" alt="image-20250314145846639"></img></p>
+</blockquote>
+<p>通俗的解释：</p>
+<p><img src="assets/2288178-20220320000251201-2145540454.png" alt="img"></img></p>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li><code>a</code>：归约后的子问题个数</li>
+<li><code>n/b</code>：规约后子问题的规模</li>
+<li><code>O(n^d)</code>：归约过程及组合子问题的解的工作量（多项式）</li>
+</ul>
+</blockquote>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-07 09:41:17
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-07T09:41:33.277Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 04_分治策略</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03_函数的增长.html" class="navigation navigation-prev " aria-label="Previous page: 03_函数的增长">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="15_动态规划.html" class="navigation navigation-next " aria-label="Next page: 15_动态规划">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04_分治策略","level":"1.3.1.4","depth":3,"next":{"title":"15_动态规划","level":"1.3.1.5","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/15_动态规划.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/15_动态规划.md","articles":[]},"previous":{"title":"03_函数的增长","level":"1.3.1.3","depth":3,"path":"docs/DataStructure_and_Algorithms/Algorithms/03_函数的增长.md","ref":"docs/DataStructure_and_Algorithms/Algorithms/03_函数的增长.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","github","sharing-plus","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","tbfed-pagefooter","versions-select","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"github":{"url":"https://github.com/jlu005807"},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/test-honkit/","text":"docs.ozy"},{"value":"https://jlu005807.github.io/","text":"github.io.ozy","selected":true},{"value":"https://github.com/jlu005807","text":"github.ozy","selected":true}]},"sharing":{"qq":true,"all":["qq","qzone"],"weixin":true,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/DataStructure_and_Algorithms/Algorithms/04_分治策略.md","mtime":"2025-09-07T09:41:17.123Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-09-07T09:41:31.409Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

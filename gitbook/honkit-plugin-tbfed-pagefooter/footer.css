@@ -1,0 +1,84 @@
+:root {
+ --font-color: #808080;
+}
+
+.page-footer {
+  margin-top: 50px;
+  border-top: 1px solid #ccc;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  /* 使用相对单位便于缩放 */
+  color: var(--font-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  /* 小屏幕时换行 */
+  box-sizing: border-box;
+}
+
+.page-footer a {
+  color: var(--font-color);
+  /* 去掉 !important */
+  text-decoration: underline;
+  transition: color 0.2s ease, transform 0.15s ease;
+  display: inline-block;
+  /* 使 transform 更稳定 */
+  padding: 2px 4px;
+  /* 触控友好 */
+  cursor: pointer;
+}
+
+.page-footer a:focus {
+  outline: 2px solid #18bfef;
+  outline-offset: 2px;
+}
+
+/* 版权与修改信息顺序（可通过 order 调整） */
+.copyright {
+  order: 1;
+  transition: color 0.2s ease, transform 0.15s ease;
+  display: inline-block;
+  cursor: default;
+}
+
+
+.footer-modification {
+  /* 使用 flex 布局后不再需要 float */
+  order: 2;
+  transition: color 0.2s ease, transform 0.15s ease;
+  display: inline-block;
+  cursor: default;
+}
+
+.page-footer .copyright:hover{
+  color: #18bfef;
+  transform: scale(1.02);
+}
+
+.page-footer .footer-modification:hover {
+  color: #18bfef;
+  transform: scale(1.02);
+}
+
+/* 支持通过 .no-hover 类禁用悬停效果（配合插件插入） */
+.page-footer.no-hover .copyright:hover,
+.page-footer.no-hover .footer-modification:hover {
+  color: inherit;
+  transform: none;
+}
+
+/* 小屏幕调整 */
+@media (max-width: 600px) {
+  .page-footer {
+    font-size: 0.8rem;
+  }
+
+  .footer-modification {
+    width: 100%;
+    order: 3;
+    text-align: right;
+    margin-top: 6px;
+  }
+}
