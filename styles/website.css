@@ -1,0 +1,724 @@
+/* GitBook 网站自定义样式 - 与main.css风格一致 */
+
+/* 基本样式设置 */
+:root {
+  --main-color: #18bfef;
+  --secondary-color: #212931;
+  --text-color: #212931;
+  --bg-color: #f5f7fa;
+  --sidebar-bg: #f5f7fa;
+  --link-color: #212931;
+  --link-hover-color: #18bfef;
+  --heading-color: #212931;
+  --code-bg: rgba(220, 220, 220, 0.25);
+  --border-color: #eeeeee;
+  --success-color: #4caf50;
+  --info-color: #18bfef;
+  --warning-color: #ff9800;
+  --danger-color: #f44336;
+}
+
+/* 整体布局和排版 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 标题样式 */
+.book-summary {
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+  padding: 8px 15px;
+  color: var(--text-color);
+  font-weight: normal;
+  transition: all 0.2s ease;
+}
+
+.book-summary ul.summary li a:hover {
+  color: var(--link-hover-color);
+  background-color: rgba(0, 0, 0, 0.03);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.book-summary ul.summary li.active>a {
+  color: var(--main-color);
+  font-weight: 600;
+  border-left: 3px solid var(--main-color);
+}
+
+/* 侧边栏章节效果 */
+.book-summary ul.summary li a {
+  position: relative;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.book-summary ul.summary li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.book-summary ul.summary li a:hover:after {
+  width: 100%;
+}
+
+/* 链接样式 */
+a {
+  -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  color: var(--link-color);
+  border-bottom: dotted 1px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  border-bottom-color: transparent;
+}
+
+/* 标题样式 */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--heading-color);
+  margin: 0 0 1rem 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.markdown-section h1:hover,
+.markdown-section h2:hover,
+.markdown-section h3:hover,
+.markdown-section h4:hover,
+.markdown-section h5:hover,
+.markdown-section h6:hover {
+  color: var(--main-color);
+  transform: translateX(5px);
+}
+
+.markdown-section h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0 0 2rem 0;
+  border-bottom: none;
+}
+
+.markdown-section h2 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin: 0 0 1.5rem 0;
+  border-bottom: none;
+}
+
+.markdown-section h3 {
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.markdown-section h4 {
+  font-size: 1rem;
+}
+
+.markdown-section h5 {
+  font-size: 0.9rem;
+}
+
+.markdown-section h6 {
+  font-size: 0.8rem;
+  color: var(--heading-color);
+}
+
+/* 段落和文本 */
+.markdown-section p {
+  text-align: justify;
+  margin: 0 0 2rem 0;
+  line-height: 2.375;
+}
+
+
+
+/* 表格样式 */
+.markdown-section table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
+
+.markdown-section table th,
+.markdown-section table td {
+  border: 1px solid var(--border-color);
+  padding: 0.75em 0.75em;
+}
+
+.markdown-section table th {
+  color: var(--heading-color);
+  font-size: 0.9em;
+  font-weight: 600;
+  text-align: left;
+}
+
+.markdown-section tr:nth-child(2n + 1) {
+  background-color: rgba(220, 220, 220, 0.25);
+}
+
+/* 引用块 */
+.markdown-section blockquote {
+  border-left: solid 4px var(--border-color);
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+
+/* 列表样式 */
+.markdown-section ul {
+  list-style: disc;
+  margin: 0 0 2rem 0;
+  padding-left: 1rem;
+}
+
+.markdown-section ol {
+  list-style: decimal;
+  margin: 0 0 2rem 0;
+  padding-left: 1.25rem;
+}
+
+.markdown-section li {
+  margin-bottom: 0.5em;
+}
+
+/* 分隔线 */
+.markdown-section hr {
+  border: 0;
+  border-bottom: solid 2px var(--border-color);
+  margin: 3rem 0;
+}
+
+/* 图片 */
+.markdown-section img {
+  max-width: 100%;
+  display: block;
+  margin: 0 0 2rem 0;
+}
+
+.markdown-section .image {
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.markdown-section .image.fit {
+  width: 100%;
+}
+
+.markdown-section .image.left,
+.markdown-section .image.right {
+  max-width: 40%;
+}
+
+.markdown-section .image.left {
+  float: left;
+  padding: 0 1.5em 1em 0;
+  top: 0.25em;
+}
+
+.markdown-section .image.right {
+  float: right;
+  padding: 0 0 1em 1.5em;
+  top: 0.25em;
+}
+
+/* 搜索框样式 */
+.book-search-input {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1em;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.book-search-input:hover {
+  border-color: var(--main-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.book-search-input .bottom-border {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 2;
+}
+
+.book-search-input:hover .bottom-border,
+.book-search-input:focus-within .bottom-border {
+  width: 100%;
+}
+
+
+/* 保持搜索相关按钮样式美观 */
+.search-results-header button,
+.search-results-footer button {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9em;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-results-header button:hover,
+.search-results-footer button:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+/* 搜索结果样式优化 */
+#book-search-results .search-results ul.search-results-list li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+#book-search-results .search-results ul.search-results-list li:hover {
+  background-color: rgba(24, 191, 239, 0.05);
+  border-left-color: var(--main-color);
+  transform: translateX(3px);
+}
+
+/* 搜索结果高亮样式 */
+#book-search-results .search-results ul.search-results-list li p em {
+  background-color: rgba(24, 191, 239, 0.2);
+  font-style: normal;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(24, 191, 239, 0.15);
+  transition: all 0.2s ease;
+}
+
+#book-search-results .search-results ul.search-results-list li:hover p em {
+  background-color: rgba(24, 191, 239, 0.3);
+  box-shadow: 0 1px 4px rgba(24, 191, 239, 0.25);
+}
+
+#book-search-results span.search-highlight-keyword {
+  background-color: rgba(24, 191, 239, 0.3);
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(24, 191, 239, 0.15);
+  color: var(--text-color);
+}
+
+/* 搜索结果标题样式 */
+#book-search-results .search-results ul.search-results-list li h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+#book-search-results .search-results ul.search-results-list li h3 a {
+  color: var(--heading-color);
+  text-decoration: none;
+  border-bottom: none;
+  transition: all 0.2s ease;
+}
+
+#book-search-results .search-results ul.search-results-list li h3 a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+/* 搜索无结果样式 */
+#book-search-results .search-results .no-results {
+  padding: 1rem;
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 搜索动画效果 */
+#book-search-results.open .search-results {
+  animation: fadeInSearch 0.3s ease-out;
+}
+
+@keyframes fadeInSearch {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 搜索结果条目动画 */
+#book-search-results .search-results ul.search-results-list li {
+  opacity: 0;
+  animation: fadeInItem 0.4s ease-out forwards;
+}
+
+#book-search-results .search-results ul.search-results-list li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+#book-search-results .search-results ul.search-results-list li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+#book-search-results .search-results ul.search-results-list li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+#book-search-results .search-results ul.search-results-list li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+#book-search-results .search-results ul.search-results-list li:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+#book-search-results .search-results ul.search-results-list li:nth-child(n+6) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInItem {
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 插件样式调整 */
+/* expandable-chapters 插件 */
+.book .book-summary .chapter>.articles {
+  transition: max-height 0.3s ease;
+}
+
+/* 图标样式和悬停效果 */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: color 0.2s ease-in-out;
+}
+
+.book-summary .fa {
+  margin-right: 6px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.book-summary .fa:hover,
+.book-summary li:hover .fa {
+  color: var(--main-color);
+}
+
+
+
+/* 页面加载过渡动画 */
+.book-body {
+  -moz-transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.book.is-loading .book-body {
+  opacity: 0;
+}
+
+/* 社交图标样式 */
+.book-header .fa,
+.navigation .fa,
+.share-link .fa {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.book-header .fa:hover,
+.navigation .fa:hover,
+.share-link .fa:hover {
+  color: var(--main-color);
+  transform: scale(1.2);
+}
+
+/* 页脚样式 */
+.gitbook-link {
+  color: var(--text-color) !important;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.gitbook-link:hover {
+  opacity: 1;
+  color: var(--main-color) !important;
+}
+
+
+
+/* anchor-navigation-ex 插件 */
+.page-wrapper .page-inner {
+  max-width: 900px;
+  padding: 20px 40px;
+}
+
+.nav-chapters {
+  width: 50px;
+  font-size: 26px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.nav-chapters:hover {
+  opacity: 1;
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+
+
+.button:hover {
+  box-shadow: inset 0 0 0 2px var(--main-color);
+  color: var(--main-color) !important;
+}
+
+
+/* 响应式调整 */
+@media screen and (max-width: 1680px) {
+  html {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 11pt;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .page-wrapper .page-inner {
+    padding: 15px 20px;
+  }
+
+  .markdown-section h1 {
+    font-size: 3.5em;
+  }
+
+  .markdown-section h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  html {
+    font-size: 10pt;
+  }
+
+  .markdown-section h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 9pt;
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
+/* 文本选择样式 */
+::selection {
+  background: var(--main-color);
+  color: #ffffff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--main-color);
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* 焦点和交互样式 */
+*:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 悬停卡片效果 */
+.markdown-section .card {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.markdown-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--main-color);
+}
+
+
+/* 高级动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markdown-section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* 页面内部导航元素 */
+.markdown-section a.anchor {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.markdown-section h1:hover a.anchor,
+.markdown-section h2:hover a.anchor,
+.markdown-section h3:hover a.anchor,
+.markdown-section h4:hover a.anchor,
+.markdown-section h5:hover a.anchor,
+.markdown-section h6:hover a.anchor {
+  opacity: 1;
+}
+
+/* 内容区域图片悬停效果 */
+.markdown-section img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.markdown-section img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 提示框样式 */
+.markdown-section .hint {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid;
+  position: relative;
+  border-radius: 0 4px 4px 0;
+}
+
+.markdown-section .hint-info {
+  background-color: rgba(24, 191, 239, 0.1);
+  border-left-color: var(--main-color);
+}
+
+.markdown-section .hint-warning {
+  background-color: rgba(255, 152, 0, 0.1);
+  border-left-color: var(--warning-color);
+}
+
+.markdown-section .hint-danger {
+  background-color: rgba(244, 67, 54, 0.1);
+  border-left-color: var(--danger-color);
+}
+
+.markdown-section .hint-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border-left-color: var(--success-color);
+}
+
+/* 暗色模式下的提示框 */
+@media (prefers-color-scheme: dark) {
+  .markdown-section .hint {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* 版本选择框样式 */
+.versions-select select {
+  background-color: var(--bg-color);
+  height: 2em;
+  line-height: 2em;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.versions-select select:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(24, 191, 239, 0.15);
+}
+

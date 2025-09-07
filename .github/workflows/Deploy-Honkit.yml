@@ -1,0 +1,52 @@
+name: Deploy Honkit to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      run: npm ci --prefer-offline --no-audit --progress=false
+
+    - name: Install fetch-blob polyfill
+      run: npm i fetch-blob@3 --no-save
+
+    - name: Create File polyfill
+      run: |
+        mkdir -p scripts
+        cat > scripts/polyfill-file.js <<'EOF'
+        try {
+          const { File } = require('fetch-blob/file.js') || require('fetch-blob');
+          if (File && !globalThis.File) globalThis.File = File;
+        } catch (e) {
+          // polyfill failed or not needed
+        }
+        EOF
+
+    - name: Check Node version
+      run: node -v
+
+    - name: Build Honkit (with File polyfill)
+      env:
+        NODE_OPTIONS: "--require ${{ github.workspace }}/scripts/polyfill-file.js"
+      run: npx honkit build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_book
