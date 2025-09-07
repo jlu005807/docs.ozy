@@ -3,10 +3,10 @@
 * [计算机教育中缺失的一课](docs/计算机教育中缺失的一课/README.md)
   * [01_the_shell](docs/计算机教育中缺失的一课/01_the_shell.md)
   * [02_Shell_Tools_and_Scripting](docs/计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.md)
-  * [03_Editors (Vim)](docs/计算机教育中缺失的一课/03_Editors_(Vim).md)
+  * [03_Editors_(Vim)](docs/计算机教育中缺失的一课/03_Editors_(Vim).md)
   * [04_Data_Wrangling](docs/计算机教育中缺失的一课/04_Data_Wrangling.md)
   * [05_Command-line Environment](docs/计算机教育中缺失的一课/05_Command-line_Environment.md)
-  * [06_Version Control (Git)](docs/计算机教育中缺失的一课/06_Version_Control_(Git).md)
+  * [06_Version_Control_Git)](docs/计算机教育中缺失的一课/06_Version_Control_(Git).md)
   * [07_Debugging and Profiling](docs/计算机教育中缺失的一课/07_Debugging_and_Profiling.md)
   * [08_Metaprogramming](docs/计算机教育中缺失的一课/08_Metaprogramming.md)
 
