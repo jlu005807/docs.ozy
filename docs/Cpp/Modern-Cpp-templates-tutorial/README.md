@@ -1,7 +1,7 @@
 # Modern C++ 模板教程 
 
-本文件夹包含两个关于 Modern C++ 模板的简短的教程，讲模板的基础用法，适合想了解如何写可复用代码的读者。
-此教程并未学习完成，具体内容详见[Modern-Cpp-templates-tutorial](https://github.com/Mq-b/Modern-Cpp-templates-tutorial)，介绍了大量现代的C++模板的相关内容，敬请期待后续的学习
+- 本文件夹包含关于 Modern C++ 模板的简短的教程，讲模板的基础用法，适合想了解如何写可复用代码的读者。
+- 此教程并未学习完成，具体内容详见[Modern-Cpp-templates-tutorial](https://github.com/Mq-b/Modern-Cpp-templates-tutorial)，介绍了大量现代的C++模板的相关内容，敬请期待后续的学习
 
 目录：
 

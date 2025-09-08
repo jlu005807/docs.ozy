@@ -1,7 +1,7 @@
 # C++-Primer 
 
-本目录收集了基于《C++ Primer》/C++ 基础与进阶主题的笔记与章节译注，面向想系统学习 C++ 语言及 STL 的读者。
-在[yuzujr](https://github.com/yuzujr)的笔记上完成,所以有问题也可以寻找[yuzujr](https://github.com/yuzujr)进行咨询。
+- 本目录收集了基于《C++ Primer》/C++ 基础与进阶主题的笔记与章节译注，面向想系统学习 C++ 语言及 STL 的读者。
+- 在[yuzujr](https://github.com/yuzujr)的笔记上完成,所以有问题也可以寻找[yuzujr](https://github.com/yuzujr)进行咨询。
 
 目录结构：
 
