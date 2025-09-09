@@ -5,7 +5,7 @@
 - 不要只是纸上谈兵，Show me the code
 
 > [!tip]
-> 建议学习路线：Pre-knowledge -> C++-Primer -> Effective-Modern-C++ -> Modern-Cpp-templates-tutorial
+> 建议学习路线：`Pre-knowledge` -> `C++-Primer` -> `Effective-Modern-C++` -> `Modern-Cpp-templates-tutorial`
 
 子目录：
 
