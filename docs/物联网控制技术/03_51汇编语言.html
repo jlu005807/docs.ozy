@@ -1,0 +1,2257 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>03_51汇编语言 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_C51语言.html" />
+    
+    
+    <link rel="prev" href="02_单片机.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    DataStructure_and_Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    Operating System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="01_概述物联网控制.html">
+            
+                <a href="01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="02_单片机.html">
+            
+                <a href="02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.3" data-path="03_51汇编语言.html">
+            
+                <a href="03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="04_C51语言.html">
+            
+                <a href="04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="05_软硬件结合.html">
+            
+                <a href="05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="06_物联网控制算法.html">
+            
+                <a href="06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="07_物联网控制系统.html">
+            
+                <a href="07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="08_review.html">
+            
+                <a href="08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >03_51汇编语言</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#51汇编语言"><b></b>51汇编语言</a></li><ul><li><span class="title-icon "></span><a href="#汇编语言"><b></b>汇编语言</a></li><li><span class="title-icon "></span><a href="#mcs51汇编语言"><b></b>MCS51汇编语言</a></li><ul><li><span class="title-icon "></span><a href="#mcs-51单片机指令系统"><b></b>MCS-51单片机指令系统</a></li><li><span class="title-icon "></span><a href="#指令格式"><b></b>指令格式</a></li><li><span class="title-icon "></span><a href="#寻址方式"><b></b>寻址方式</a></li></ul><li><span class="title-icon "></span><a href="#指令分类"><b></b>指令分类</a></li><ul><li><span class="title-icon "></span><a href="#数据传送指令"><b></b>数据传送指令</a></li><li><span class="title-icon "></span><a href="#算术运算指令"><b></b>算术运算指令</a></li><li><span class="title-icon "></span><a href="#逻辑运算和移位指令"><b></b>逻辑运算和移位指令</a></li><li><span class="title-icon "></span><a href="#控制转移指令"><b></b>控制转移指令</a></li><li><span class="title-icon "></span><a href="#伪指令"><b></b>伪指令</a></li><li><span class="title-icon "></span><a href="#位操作指令"><b></b>位操作指令</a></li></ul></ul></ul></div><a href="#51汇编语言" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#51汇编语言">51汇编语言</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#汇编语言">汇编语言</a><i></i></div></li>
+<li><div><a href="#mcs51汇编语言">MCS51汇编语言</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#mcs-51单片机指令系统">MCS-51单片机指令系统</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#指令">指令</a><i></i></div></li>
+<li><div><a href="#常用符号">常用符号</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#指令格式">指令格式</a><i></i></div></li>
+<li><div><a href="#寻址方式">寻址方式</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#指令分类">指令分类</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#数据传送指令">数据传送指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#内部数据传送">内部数据传送</a><i></i></div></li>
+<li><div><a href="#外部数据存储器读写指令">外部数据存储器读写指令</a><i></i></div></li>
+<li><div><a href="#程序存储器读指令">程序存储器读指令</a><i></i></div></li>
+<li><div><a href="#堆栈操作">堆栈操作</a><i></i></div></li>
+<li><div><a href="#数据交换指令">数据交换指令</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#算术运算指令">算术运算指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#加法指令">加法指令</a><i></i></div></li>
+<li><div><a href="#减法指令">减法指令</a><i></i></div></li>
+<li><div><a href="#十进制调整指令">十进制调整指令</a><i></i></div></li>
+<li><div><a href="#加一减一指令">加一减一指令</a><i></i></div></li>
+<li><div><a href="#乘除法指令">乘除法指令</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#逻辑运算和移位指令">逻辑运算和移位指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#累加器移位指令（循环移位指令）">累加器移位指令（循环移位指令）</a><i></i></div></li>
+<li><div><a href="#清零与取反指令">清零与取反指令</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#控制转移指令">控制转移指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#无条件转移指令">无条件转移指令</a><i></i></div></li>
+<li><div><a href="#条件转移指令">条件转移指令</a><i></i></div></li>
+<li><div><a href="#调用与返回指令">调用与返回指令</a><i></i></div></li>
+<li><div><a href="#空操作指令">空操作指令</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#伪指令">伪指令</a><i></i></div></li>
+<li><div><a href="#位操作指令">位操作指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#位地址表达方式">位地址表达方式</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="51汇编语言"><a name="51汇编语言" class="anchor-navigation-ex-anchor" href="#51汇编语言"><i class="fa fa-link" aria-hidden="true"></i></a>51汇编语言</h1>
+<h2 id="汇编语言"><a name="汇编语言" class="anchor-navigation-ex-anchor" href="#汇编语言"><i class="fa fa-link" aria-hidden="true"></i></a>汇编语言</h2>
+<blockquote>
+<p>[!tip]</p>
+<p>有时需采用汇编语言：</p>
+<ol>
+<li>对某些特殊I/O接口地址的处理；</li>
+<li>中断向量地址的安排；</li>
+<li>提高程序代码的执行速度等</li>
+</ol>
+<p>C51语言程序与汇编语言程序的相互调用也可视为函数的调用，只不过此时是采用不同语言编写的而已。
+可利用8051单片机的工作寄存器（固定的存储区域）来传递参数。
+利用公共符号“PUBLIC”来确定参数传递段的首地址</p>
+</blockquote>
+<ul>
+<li><p>宏指令与子程序：</p>
+</li>
+<li><p>宏指令：在汇编语言的源程序中，若有一段程序要多次使用，为了使在源程序中不重复书写这样的一段程序，可用一条宏指令来代替，由汇编程序在汇编时产生所需要的代码。可简化源程序。  </p>
+<p>与子程序不同：宏指令<strong>并没有简化目标程序</strong>，而子程序可以。</p>
+</li>
+</ul>
+<p>对于8051单片机，现有4种语言支持，即汇编、PL/M、C、BASIC。</p>
+<ul>
+<li><p>源文件命名常规：</p>
+<blockquote>
+<p><strong>典型源文件：.ASM、.A51、.P51、 .C、.C51</strong></p>
+<p>汇编语言源文件： .ASM、.A51</p>
+<p>PL/M语言源文件： .P51</p>
+<p>C语言源文件： .C、.C51</p>
+<p>包含汇编/编译的程序和错误的列表文件：.LST</p>
+<p>可重定位的目标文件：.HEX</p>
+<p>库文件：.LIB</p>
+<p>链接/定位后的映像文件：.M51、MAP</p>
+<p>链接器/定位器使用的文件：.LNK</p>
+<p>编译时加入到源文件中的头文件：.H</p>
+</blockquote>
+</li>
+<li><p>程序的组成：在汇编语言源程序中，可重复使用的部分由子程序完成。</p>
+</li>
+</ul>
+<h2 id="mcs51汇编语言"><a name="mcs51汇编语言" class="anchor-navigation-ex-anchor" href="#mcs51汇编语言"><i class="fa fa-link" aria-hidden="true"></i></a>MCS51汇编语言</h2>
+<h3 id="mcs-51单片机指令系统"><a name="mcs-51单片机指令系统" class="anchor-navigation-ex-anchor" href="#mcs-51单片机指令系统"><i class="fa fa-link" aria-hidden="true"></i></a>MCS-51单片机指令系统</h3>
+<h4 id="指令"><a name="指令" class="anchor-navigation-ex-anchor" href="#指令"><i class="fa fa-link" aria-hidden="true"></i></a>指令</h4>
+<p>7种寻址方式，111条指令</p>
+<p><img src="assets/image-20250411181958328.png" alt="image-20250411181958328"></img></p>
+<h4 id="常用符号"><a name="常用符号" class="anchor-navigation-ex-anchor" href="#常用符号"><i class="fa fa-link" aria-hidden="true"></i></a>常用符号</h4>
+<ul>
+<li>Rn：工作寄存器中的寄存器R0、R1…R7之一，</li>
+<li>Ri：工作寄存器中的寄存器R0或R1</li>
+<li>#data：8位立即数</li>
+<li>#data16：16位立即数</li>
+<li>direct：片内RAM或SFR的地址（8位）</li>
+<li>@：间接寻址寄存器</li>
+<li>Bit：片内RAM或SFR的位地址</li>
+<li>addr11：11位目的地址</li>
+<li>addr16：16位目的地址</li>
+<li>rel：补码形式的8位地址偏移量。偏移范围为-128～127</li>
+<li>/：位操作指令中，该位求反后参与操作，不影响该位</li>
+<li>X：片内RAM的直接地址或寄存器</li>
+<li>(X)：相应地址单元中的内容</li>
+<li>→：箭头左边的内容送入箭头右边的单元内</li>
+</ul>
+<h3 id="指令格式"><a name="指令格式" class="anchor-navigation-ex-anchor" href="#指令格式"><i class="fa fa-link" aria-hidden="true"></i></a>指令格式</h3>
+<p><img src="assets/image-20250411182457446.png" alt="image-20250411182457446"></img></p>
+<p>例如：MOV A  #40H; //A=40H</p>
+<ul>
+<li><p>操作数类型：</p>
+</li>
+<li><p>工作寄存器（R0-R7）</p>
+<p>SFR（包括ACC，PSW）</p>
+<p>标号名字</p>
+<p>常数（#）</p>
+<p>$符号</p>
+<p>表达式</p>
+</li>
+</ul>
+<h3 id="寻址方式"><a name="寻址方式" class="anchor-navigation-ex-anchor" href="#寻址方式"><i class="fa fa-link" aria-hidden="true"></i></a>寻址方式</h3>
+<ol>
+<li><p>立即寻址</p>
+<blockquote>
+<p>  操作数就包含在<strong>指令代码</strong>中，在操作码之后，称为立即数，用“＃”表示。</p>
+<pre><code class="lang-assembly">MOV A, #30H  #汇编成机器码74H 30H
+MOV R7,#0F5H
+MOV DPTR,#1245H
+</code></pre>
+<p>立即寻址：其中取指周期需要一个机器周期，执行周期需要一个机器周期</p>
+</blockquote>
+</li>
+<li><p>寄存器寻址</p>
+<blockquote>
+<p>对选定的<strong>工作寄存器</strong>R0～R7、累加器A、通用寄存器B、地址寄存器DPTR中的数进行操作。 </p>
+<pre><code class="lang-assembly">MOV A，R0；#将R0工作寄存器中的数据送到累加器A中去
+</code></pre>
+<p>寄存器寻址：执行周期一般只需一个机器周期。 </p>
+</blockquote>
+</li>
+<li><p>直接寻址</p>
+<blockquote>
+<p>直接使用数所在单元的<strong>地址</strong>找到了操作数，所以称这种方法为直接寻址。</p>
+<p>操作数在SFR、内部RAM、位地址空间。</p>
+<pre><code class="lang-assembly">MOV A，00H
+MOV C，60H
+MOV A，0F0H
+</code></pre>
+</blockquote>
+</li>
+<li><p>寄存器间接寻址</p>
+<blockquote>
+<p>把<strong>地址放在另外一个寄存器</strong>中，根据这个寄存器中的数值决定该到哪个单元中取数据。</p>
+<pre><code class="lang-assembly">MOV  A，@R0  #操作数在片内RAM中
+MOVX  A，@R0  #操作数在片外RAM中,高8位由P2给出
+MOVX  A，@DPTR  #操作数在片外RAM中，DPTR给出16位地址
+</code></pre>
+</blockquote>
+</li>
+<li><p>变址寻址(基址变址寻址)</p>
+<blockquote>
+<p>以DPTR或PC为基址寄存器，累加器A为变址寄存器。把两者内容相加，结果作为操作数的地址。</p>
+<p>常用于查表操作</p>
+<pre><code class="lang-assembly">MOVC  A， @A+DPTR；#(A+DPTR) →A 
+MOVC  A， @A+PC； #PC+1 →PC，(A+PC)→A
+</code></pre>
+</blockquote>
+</li>
+<li><p>相对寻址（跳转指令）</p>
+<blockquote>
+<p>将PC中的当前内容与指令第二字节给出的数相加，结果作为跳转指令的转移地址（转移目的地址）。 </p>
+<p>PC中的当前内容称为基地址（本指令后的字节地址），指令第二字节给出的数据称为偏移量，<strong>1字节带符号数</strong></p>
+<p>常用于跳转指令。</p>
+<pre><code class="lang-assembly">JC   23H; #C=1，跳转
+</code></pre>
+</blockquote>
+</li>
+<li><p>位寻址</p>
+<blockquote>
+<p>对片内RAM的位寻址区和某些可位寻址的特殊功能寄存器进行位操作时的寻址方式</p>
+<pre><code class="lang-assembly">MOV C, 30H
+</code></pre>
+</blockquote>
+</li>
+</ol>
+<p><img src="assets/image-20250411183641400.png" alt="image-20250411183641400"></img></p>
+<h2 id="指令分类"><a name="指令分类" class="anchor-navigation-ex-anchor" href="#指令分类"><i class="fa fa-link" aria-hidden="true"></i></a>指令分类</h2>
+<h3 id="数据传送指令"><a name="数据传送指令" class="anchor-navigation-ex-anchor" href="#数据传送指令"><i class="fa fa-link" aria-hidden="true"></i></a>数据传送指令</h3>
+<ol>
+<li>内部数据传送指令 MOV</li>
+<li>外部数据存储器读写指令 MOVX</li>
+<li>程序存储器读指令 MOVC</li>
+<li>堆栈操作 PUSH，POP</li>
+<li>数据交换指令</li>
+<li><p>十六位数的传递指令</p>
+</li>
+<li><p>MCS-51 助记符：</p>
+<p> MOV、MOVX、MOVC         </p>
+<p> XCH、XCHD、SWAP         </p>
+<p> PUSH、POP            </p>
+</li>
+<li><p>源操作数寻址方式（5种）：</p>
+<p>立即寻址、直接寻址、寄存器寻址、</p>
+<p>寄存器间接寻址、变址寻址。</p>
+</li>
+<li><p>目的操作数寻址方式（3种）：</p>
+<p>直接寻址、寄存器寻址、寄存器间接寻址</p>
+<p>除了<strong>目的操作数为ACC的指令影响奇偶标志P</strong>外，一般不影响标志位。</p>
+</li>
+</ol>
+<h4 id="内部数据传送"><a name="内部数据传送" class="anchor-navigation-ex-anchor" href="#内部数据传送"><i class="fa fa-link" aria-hidden="true"></i></a>内部数据传送</h4>
+<p><img src="assets/image-20250412180435941.png" alt="image-20250412180435941"></img></p>
+<h4 id="外部数据存储器读写指令"><a name="外部数据存储器读写指令" class="anchor-navigation-ex-anchor" href="#外部数据存储器读写指令"><i class="fa fa-link" aria-hidden="true"></i></a>外部数据存储器读写指令</h4>
+<pre><code class="lang-assembly">MOVX   A，@DPTR
+MOVX   @DPTR，A
+MOVX   A, @Ri
+MOVX   @Ri， A
+</code></pre>
+<ul>
+<li>在51中，与外部存储器RAM打交道的只可以是A累加器。外部和内部的数据通道是A累加器</li>
+</ul>
+<pre><code class="lang-assembly">#将外部RAM中100H单元中的内容送入外部RAM中200H单元中。
+MOV   DPTR，#0100H
+MOVX  A，@DPTR
+MOV   DPTR，#0200H
+MOVX  @DPTR，A
+</code></pre>
+<h4 id="程序存储器读指令"><a name="程序存储器读指令" class="anchor-navigation-ex-anchor" href="#程序存储器读指令"><i class="fa fa-link" aria-hidden="true"></i></a>程序存储器读指令</h4>
+<pre><code class="lang-assembly">MOVC A，@A+DPTR
+MOVC A，@A+PC
+</code></pre>
+<ul>
+<li>将ROM中的数送入A中。本组指令也被称为查表指令，常用此指令来查一个已做好在ROM中的表格</li>
+</ul>
+<h4 id="堆栈操作"><a name="堆栈操作" class="anchor-navigation-ex-anchor" href="#堆栈操作"><i class="fa fa-link" aria-hidden="true"></i></a>堆栈操作</h4>
+<pre><code class="lang-assembly">PUSH direct 
+SP:=SP+1，(SP):=(direct)
+POP direct
+(direct):=(SP), SP:=SP-1
+</code></pre>
+<ul>
+<li>第一条为压入指令，就是将<strong>direct中的内容送入堆栈</strong>中，</li>
+<li><p>第二条为弹出指令，就是将<strong>堆栈中的内容送回到direct</strong>中</p>
+</li>
+<li><p>例子</p>
+</li>
+</ul>
+<pre><code class="lang-assembly">MOV  SP，#5FH
+MOV  A，#100
+MOV  B，#20
+PUSH  A
+PUSH  B
+</code></pre>
+<h4 id="数据交换指令"><a name="数据交换指令" class="anchor-navigation-ex-anchor" href="#数据交换指令"><i class="fa fa-link" aria-hidden="true"></i></a>数据交换指令</h4>
+<pre><code class="lang-assembly">MOV  DPTR，#data16
+#等同于
+MOV DPH，#35H
+MOV DPL，#12H
+</code></pre>
+<ul>
+<li>将一个16位的立即数送入DPTR中去。其中高8位送入DPH，低8位送入DPL。</li>
+</ul>
+<h3 id="算术运算指令"><a name="算术运算指令" class="anchor-navigation-ex-anchor" href="#算术运算指令"><i class="fa fa-link" aria-hidden="true"></i></a>算术运算指令</h3>
+<h4 id="加法指令"><a name="加法指令" class="anchor-navigation-ex-anchor" href="#加法指令"><i class="fa fa-link" aria-hidden="true"></i></a>加法指令</h4>
+<pre><code class="lang-assembly">#不带进位的加法指令
+ADD A，#data；     #A := A+data
+ADD A，direct；     #A := A+(direct )
+ADD A，Rn；     #A := A+Rn
+ADD A，@Ri；     #A := A+(Ri)
+</code></pre>
+<ul>
+<li>将A中的值与源操作数所指内容相加，最终结果存在A中</li>
+</ul>
+<pre><code class="lang-assembly">#带进位的加法指令
+ADDC A，#data；     #A := A+data + C
+ADDC A，direct；     #A := A+(direct ) + C
+ADDC A，Rn；     #A := A+Rn + C
+ADDC A，@Ri；     #A := A+(Ri) + C
+</code></pre>
+<ul>
+<li>将A中的值和其后面的值以及进位位C中的值相加，最终结果存在A，常用于<strong>多字节数运算</strong>中。</li>
+</ul>
+<h4 id="减法指令"><a name="减法指令" class="anchor-navigation-ex-anchor" href="#减法指令"><i class="fa fa-link" aria-hidden="true"></i></a>减法指令</h4>
+<pre><code class="lang-assembly">#带借位减法指令
+SUBB A，Rn； #A=A - Rn-CY
+SUBB A，direct； #A=A - (direct ) - CY
+SUBB A，@Ri； #A=A - (Ri) - CY
+SUBB A，#data； #A=A – data – CY
+</code></pre>
+<ul>
+<li>将A中的值减去源操作数所指内容以及进位位C中的值，最终结果存在A中。</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>有不带借位的减法指令，如果需要做不带借位的减法指令（在做第一次相减时），只要<strong>将CY清零</strong>即可。</li>
+<li>对带符号数，要注意OV标志。OV=1，出错。</li>
+</ul>
+</blockquote>
+<h4 id="十进制调整指令"><a name="十进制调整指令" class="anchor-navigation-ex-anchor" href="#十进制调整指令"><i class="fa fa-link" aria-hidden="true"></i></a>十进制调整指令</h4>
+<pre><code class="lang-assembly">DA  A
+</code></pre>
+<p>进行BCD码加法运算，<code>A=0001 0101BCD</code>（代表十进制数15）</p>
+<h4 id="加一减一指令"><a name="加一减一指令" class="anchor-navigation-ex-anchor" href="#加一减一指令"><i class="fa fa-link" aria-hidden="true"></i></a>加一减一指令</h4>
+<ul>
+<li>不影响任何标志位</li>
+</ul>
+<pre><code class="lang-assembly">#加一指令
+INC   A                        
+INC   Rn                      
+INC   direct
+INC   @Ri
+INC   DPTR
+
+#减一指令
+DEC   A                        
+DEC   Rn                      
+DEC   direct
+DEC   @Ri
+</code></pre>
+<h4 id="乘除法指令"><a name="乘除法指令" class="anchor-navigation-ex-anchor" href="#乘除法指令"><i class="fa fa-link" aria-hidden="true"></i></a>乘除法指令</h4>
+<pre><code class="lang-assembly">MUL AB
+</code></pre>
+<ul>
+<li>A*B的低8位存入A，高8位存入B</li>
+<li>CY清零</li>
+<li>如结果大于0FFH，OV置1</li>
+</ul>
+<pre><code class="lang-assembly">DIV AB
+</code></pre>
+<ul>
+<li>A/B的商放入A，余数放入B</li>
+<li>CY和OV清零</li>
+<li>如B原值为0，指令执行完成之后AB内容不定，OV=1</li>
+</ul>
+<h3 id="逻辑运算和移位指令"><a name="逻辑运算和移位指令" class="anchor-navigation-ex-anchor" href="#逻辑运算和移位指令"><i class="fa fa-link" aria-hidden="true"></i></a>逻辑运算和移位指令</h3>
+<pre><code class="lang-assembly">与操作 ANL
+或操作 ORL
+异或操作 XRL
+移位指令 R(L/R)(C)
+累加器清零取反指令
+清零：CLR  A     ；0→A
+取反：CPL  A ；/A→A
+</code></pre>
+<ul>
+<li>主要用于对2个操作数按位进行逻辑操作，结果送到A或直接寻址单元。</li>
+<li>操作：与、或、异或、移位、取反、清零等</li>
+<li>除了目的操作数为ACC的指令影响奇偶标志P外，一般不影响标志位</li>
+</ul>
+<h4 id="累加器移位指令（循环移位指令）"><a name="累加器移位指令（循环移位指令）" class="anchor-navigation-ex-anchor" href="#累加器移位指令（循环移位指令）"><i class="fa fa-link" aria-hidden="true"></i></a>累加器移位指令（循环移位指令）</h4>
+<p><img src="assets/image-20250413120723084.png" alt="image-20250413120723084"></img></p>
+<ul>
+<li>后两条指令，影响P标志和CY。</li>
+</ul>
+<h4 id="清零与取反指令"><a name="清零与取反指令" class="anchor-navigation-ex-anchor" href="#清零与取反指令"><i class="fa fa-link" aria-hidden="true"></i></a>清零与取反指令</h4>
+<pre><code class="lang-assembly">取反：
+CPL  A ；/A→A
+清0：
+CLR  A     ；0→A
+</code></pre>
+<h3 id="控制转移指令"><a name="控制转移指令" class="anchor-navigation-ex-anchor" href="#控制转移指令"><i class="fa fa-link" aria-hidden="true"></i></a>控制转移指令</h3>
+<ul>
+<li>共有控制程序转移类指令(不包括位操作类的转移指令)。此类指令一般不影响PSW。</li>
+<li>包括以下类型：<ul>
+<li>无条件转移和条件转移</li>
+<li>相对转移和绝对转移</li>
+<li>长转移和短转移</li>
+<li>调用与返回指令</li>
+</ul>
+</li>
+</ul>
+<h4 id="无条件转移指令"><a name="无条件转移指令" class="anchor-navigation-ex-anchor" href="#无条件转移指令"><i class="fa fa-link" aria-hidden="true"></i></a>无条件转移指令</h4>
+<pre><code class="lang-assembly">短转移类指令：
+AJMP  addr11 #2kb
+长转移类指令：
+LJMP  addr16 #64kb
+相对转移指令：
+SJMP  rel #-128~+127
+</code></pre>
+<ul>
+<li>AJMP、LJMP后跟的是绝对地址，而SJMP后跟的是相对地址。</li>
+<li>PC值改变，即跳转到一个标号处。</li>
+</ul>
+<pre><code class="lang-assembly">间接转移指令：
+JMP @A+DPTR
+</code></pre>
+<ul>
+<li>转移地址由A+DPTR形成，并直接送入PC。</li>
+<li>本指令可代替众多的判别跳转指令，又称为散转指令，多用于多分支程序结构中</li>
+</ul>
+<h4 id="条件转移指令"><a name="条件转移指令" class="anchor-navigation-ex-anchor" href="#条件转移指令"><i class="fa fa-link" aria-hidden="true"></i></a>条件转移指令</h4>
+<ol>
+<li><p>判A内容是否为0转移指令（2条）</p>
+<pre><code class="lang-assembly"> JZ   rel    ；如果A=0，则转移，否则顺序执行。
+ JNZ  rel    ；如果A≠0，就转移。
+ #新的PC值=当前PC+偏移量rel
+
+ JZ   标号     ；即转移到标号处。
+</code></pre>
+</li>
+<li><p>比较不等转移指令（4条）</p>
+<pre><code class="lang-assembly">CJNE A，#data，rel 
+CJNE A，direct，rel
+CJNE Rn，#data，rel
+CJNE @Ri，#data，rel
+</code></pre>
+<ul>
+<li>如果两者相等，就顺序执行，如果不相等，就转移。</li>
+<li>同样可以将rel理解为标号</li>
+<li>这些指令，可以判断两数是否相等。前面的数大，则CY=0，否则CY=1</li>
+</ul>
+</li>
+<li><p>减1不为0转移指令（2条）</p>
+<pre><code class="lang-assembly">DJNZ Rn，rel
+DJNZ direct，rel
+</code></pre>
+<p>如果不等于0，就转移到第二个参数所指定的地方去</p>
+</li>
+</ol>
+<h4 id="调用与返回指令"><a name="调用与返回指令" class="anchor-navigation-ex-anchor" href="#调用与返回指令"><i class="fa fa-link" aria-hidden="true"></i></a>调用与返回指令</h4>
+<ol>
+<li><p>调用指令</p>
+<pre><code class="lang-assembly">LCALL  addr16    ；长调用指令(3字节)
+ACALL  addr11    ；短调用指令(2字节)
+</code></pre>
+<p>当前PC压栈，子程序首地址送 PC，实现转移。</p>
+</li>
+<li><p>返回指令</p>
+<pre><code class="lang-assembly">RET        ；子程序返回指令
+</code></pre>
+<p>堆栈栈顶内容（2字节，调用时保存的当前PC值）弹出给PC，实现返回。</p>
+</li>
+<li><p><strong>中断返回指令</strong></p>
+<pre><code class="lang-assembly">RETI        ；中断子程序返回指令
+</code></pre>
+<ul>
+<li>中断处理子程序不能用RET返回</li>
+<li><strong>对中断优先级状态触发器清零</strong></li>
+</ul>
+</li>
+</ol>
+<h4 id="空操作指令"><a name="空操作指令" class="anchor-navigation-ex-anchor" href="#空操作指令"><i class="fa fa-link" aria-hidden="true"></i></a>空操作指令</h4>
+<pre><code class="lang-assembly">NOP
+</code></pre>
+<p><strong>一般用作短时间的延时，以及精确的时间控制。</strong></p>
+<h3 id="伪指令"><a name="伪指令" class="anchor-navigation-ex-anchor" href="#伪指令"><i class="fa fa-link" aria-hidden="true"></i></a>伪指令</h3>
+<pre><code class="lang-assembly">ORG  #指定存储单元地址
+END   #程序结束
+DB      #定义字节
+DW     #定义16位字（通常是地址）
+EQU    #常量定义
+DATA   #给片内RAM单元一个名字
+XDATA   #给片外RAM单元一个名字
+BIT     #给位寻址单元一个名字
+</code></pre>
+<h3 id="位操作指令"><a name="位操作指令" class="anchor-navigation-ex-anchor" href="#位操作指令"><i class="fa fa-link" aria-hidden="true"></i></a>位操作指令</h3>
+<ul>
+<li>有一个位处理器（又称布尔处理器），它有一套位变量处理的指令集，包括位变量传送、逻辑运算、控制程序转移</li>
+<li>共有256个可位寻址地址<ul>
+<li><strong>位操作区</strong>：内部RAM的20H-2FH这16个字节单元，即128个位单元(位地址空间位00～7FH)</li>
+<li>可以位寻址的<strong>特殊功能寄存器</strong>(字节地址均可被8整除</li>
+</ul>
+</li>
+<li>位处理时， CY用作“位累加器</li>
+</ul>
+<h4 id="位地址表达方式"><a name="位地址表达方式" class="anchor-navigation-ex-anchor" href="#位地址表达方式"><i class="fa fa-link" aria-hidden="true"></i></a>位地址表达方式</h4>
+<p><img src="assets/image-20250413122440889.png" alt="image-20250413122440889"></img></p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2025-09-11 13:45:57
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2025-09-11T13:46:10.607Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 03_51汇编语言</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_单片机.html" class="navigation navigation-prev " aria-label="Previous page: 02_单片机">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_C51语言.html" class="navigation navigation-next " aria-label="Next page: 04_C51语言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03_51汇编语言","level":"1.7.3","depth":2,"next":{"title":"04_C51语言","level":"1.7.4","depth":2,"path":"docs/物联网控制技术/04_C51语言.md","ref":"docs/物联网控制技术/04_C51语言.md","articles":[]},"previous":{"title":"02_单片机","level":"1.7.2","depth":2,"path":"docs/物联网控制技术/02_单片机.md","ref":"docs/物联网控制技术/02_单片机.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://github.com/jlu005807","text":"github.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/物联网控制技术/03_51汇编语言.md","mtime":"2025-09-11T13:45:57.940Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2025-09-11T13:46:08.274Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
