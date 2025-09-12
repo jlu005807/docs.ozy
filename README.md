@@ -18,9 +18,10 @@
 > 可以通过左上角的**搜索栏**搜索你感兴趣的相关内容
 
 如果我的内容对你有所帮助，或者你真的从中学习到了知识，不妨请我喝一杯奶茶.
-<p align="center">
-  <img src="assets/ozy.jpg" alt="ozy" style="display:block;margin:0 auto;max-width:40%;max-height:40vh;width:auto;height:auto;" />
-</p>
+<div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;align-items:center;">
+  <img src="assets/alipay.jpg" alt="ozy" style="max-width:40%;max-height:40vh;width:auto;height:auto;display:block;" />
+  <img src="assets/wechat.jpg" alt="ozy2" style="max-width:40%;max-height:40vh;width:auto;height:auto;display:block;" />
+</div>
 
 
 ## 许可证 / License
