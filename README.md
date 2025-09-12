@@ -6,7 +6,7 @@
 - 内容包括 C++、数据结构与算法、操作系统、命令行工具，计算机组成原理等，希望你可以学习和参考。
 - 其中html页面内容对应的原Markdown文件位于[docs](https://github.com/jlu005807/docs.ozy/tree/master/docs)
 - 最后，这是我的主页[ozy.website](https://jlu005807.github.io/)，里面有我的介绍和一些想法，欢迎大家访问和浏览，谢谢
-- 还有就是麻烦大家为我的仓库[docs.ozy](https://github.com/jlu005807/docs.ozy)以及其他你感兴趣的仓库点个**star**
+- 如果你已经看到这里，就麻烦大家为我的仓库[docs.ozy](https://github.com/jlu005807/docs.ozy)以及其他你感兴趣的仓库点个**star**
 
 想交流或反馈问题？
 1. 可以直接在页面下的评论区发表你的建议。
