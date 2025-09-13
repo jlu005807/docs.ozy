@@ -3,7 +3,9 @@
 - 本目录包含与计算机组成原理相关的笔记与图示，我将用通俗的语言介绍计算机硬件与系统的基本工作原理，适合入门学习与课堂复习。
 - 对于计组的繁多内容，仅仅靠我的笔记并不能完全理解和融会贯通，建议结合教材和其他资料进行学习。
 - 同时可以尝试自己利用logisim构建一个属于自己的单周期甚至流水线的CPU进行实战
-- 当然也可以利用Verilog尝试搭建一个CPU，在另一个仓库[CPU](https://github.com/jlu005807/CPU),我已经尝试编写了两个五级流水线加上分支预测以及数据前推的CPU分别是MIPS32和LA32R。设计简陋仅供参考，存在大量问题还请见谅。
+- 当然也可以利用Verilog尝试搭建一个CPU，在另一个仓库[CPU](https://github.com/jlu005807/CPU),我已经尝试编写了两个五级流水线加上分支预测以及数据前推的CPU分别是MIPS32和LA32R，但是仅仅测试了其中一些指令。设计简陋仅供参考，存在大量问题还请见谅。
+- 同时还有一些内容详见[Principles-of-Computer-Organizatio](https://github.com/jlu005807/Principles-of-Computer-Organization)。
+- 并且还有关于Logisim的实验以及Logisim的jar包位于[Logisim](https://github.com/jlu005807/Logisim)仓库，其中的实验仅供参考，希望不要不经思考直接使用。
 
 
 主要内容：

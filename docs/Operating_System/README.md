@@ -1,8 +1,8 @@
 # 操作系统（Operating System）
 
 - 本目录收集了操作系统相关的入门与进阶笔记，内容以通俗语言介绍操作系统的核心概念、常见机制与实用例子，适合课程复习、自学或面试准备。
-- 但是我个人觉得本目录的内容并不是特别好，大多数都为PPT的复制粘贴，但是当然也有我自己的理解和想法，所以还是建议阅读后给我提出建议和意见
-- 其中相关的实验在github仓库[Operating_System](https://github.com/jlu005807/Operating_System)
+- 但是我个人觉得本目录的内容并不是特别好，大多数都为PPT的复制粘贴，但是当然也有我自己的理解和想法，所以还是建议阅读后给我提出建议和意见。
+- 其中相关的实验代码在github仓库[Operating_System](https://github.com/jlu005807/Operating_System)
 
 子文件（主要内容）：
 
