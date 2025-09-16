@@ -1,16 +1,8 @@
 # Effective-Modern-C++
 
 - 本文件夹收集了《Effective Modern C++》相关的简明笔记，每个文件讲一个实用技巧或常见用法，语言尽量通俗，方便快速查阅。
-- 当然，笔记只是本人的理解，希望你能学习当前笔记的同时去阅读原书和相关知识,同时重要的是学会怎么去用这些新特性以及如何避免新特性会导致的一些问题
+- 当然，笔记只是本人的理解，希望你能学习当前笔记的同时去阅读原书和相关知识,同时重要的是学会怎么去用这些新特性以及如何避免新特性会导致的一些问题,这很重要。
 
-目录（主要文件）：
-
-- `CHAPTER_1_Deducing_Types`
-- `CHAPTER_2_auto`
-- `CHAPTER_3_Moving_to_Modern_C++`
-- `CHAPTER_4_Smart_Pointers`
-- `CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding`
-- `CHAPTER_6_Lambda_Expressions`
 
 章节简介：
 
