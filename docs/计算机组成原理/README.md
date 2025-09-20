@@ -5,7 +5,7 @@
 - 同时可以尝试自己利用logisim构建一个属于自己的单周期甚至流水线的CPU进行实战
 - 当然也可以利用Verilog尝试搭建一个CPU，在另一个仓库[CPU](https://github.com/jlu005807/CPU),我已经尝试编写了两个五级流水线加上分支预测以及数据前推的CPU分别是MIPS32和LA32R，但是仅仅测试了其中一些指令。设计简陋仅供参考，存在大量问题还请见谅。
 - 同时还有一些内容详见[Principles-of-Computer-Organizatio](https://github.com/jlu005807/Principles-of-Computer-Organization)。
-- 并且还有关于Logisim的实验以及Logisim的jar包位于[Logisim](https://github.com/jlu005807/Logisim)仓库，其中的实验仅供参考，希望不要不经思考直接使用。
+- 并且还有关于Logisim的实验以及Logisim的jar包位于[Logisim](https://github.com/jlu005807/Logisim)仓库，其中的实验内容仅供参考，希望不要不经思考直接使用，因为我的实验并不完全正确甚至错误。
 
 
 主要内容：
