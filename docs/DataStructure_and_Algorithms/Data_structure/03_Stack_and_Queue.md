@@ -76,3 +76,10 @@
 - 双端队列
 
 - 利用队列模拟栈
+
+
+
+> [!tip]
+>
+> - 相关代码实现位于仓库
+> - [Stack-and-Queue](https://github.com/jlu005807/Stack-and-Queue)

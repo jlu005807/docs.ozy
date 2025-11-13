@@ -35,7 +35,7 @@
 >    	{
 >    		//记录要插入的元素
 >    		T key = a[i];
->          
+>             
 >    		//从i-1位置往前找位置,同时后移元素
 >    		int j = i - 1;
 >    		while (j >= 0 && key < a[j])
@@ -44,7 +44,7 @@
 >    			a[j + 1] = a[j];
 >    			j--;
 >    		}
->          
+>             
 >    		//插入
 >    		a[j + 1] = key;
 >    	}
@@ -66,7 +66,7 @@
 >    	{
 >    		//记录要插入的元素
 >    		T key = a[i];
->          
+>             
 >    		//二分查找位置,在[0,i-1]找
 >    		int low = 0;
 >    		int high = i - 1;
@@ -78,12 +78,12 @@
 >    			if (key < a[mid])high = mid - 1;
 >    			else low = mid + 1;
 >    		}
->          
+>             
 >    		//找到插入位置，为high+1(/low)
->          
+>             
 >    		//后移元素,high+1(/low)
 >    		for (int j = i - 1; j >= high + 1; j--)a[j + 1] = a[j];
->          
+>             
 >    		//插入
 >    		a[high + 1] = key;
 >    	}
@@ -361,7 +361,7 @@ void Double_Bubble_Sort(T* a, int n) {
 >   	{
 >   		//获取中间值下标
 >   		int mid = left + (right - left) / 2;
->       
+>         
 >   		//当left<mid
 >   		if (array[left] < array[mid])
 >   		{
@@ -1207,3 +1207,9 @@ void Bucket_Sort(T* elem, int n)
 
 排序过程既需要内存储器又需要外存储器
 
+
+
+> [!tip]
+>
+> - 相关代码实现位于仓库
+> - [Sorting-algorithm](https://github.com/jlu005807/Sorting-algorithm)

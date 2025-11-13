@@ -61,3 +61,10 @@ struct List{
 | 顺序表 | **O(1)**按下标直接查找      | **O(n)** 需要移动若干元素   |
 | 链 表  | **O(n) **从表头开始遍历链表 | **O(1) **只需修改几个指针值 |
 
+
+
+> [!tip]
+>
+> - 相关代码实现位于仓库
+> - [Singly_Link_List]([jlu005807/Singly_Link_List](https://github.com/jlu005807/Singly_Link_List))
+> - [Link-List]([jlu005807/Link-List: This is a data structure of Link for learning](https://github.com/jlu005807/Link-List))

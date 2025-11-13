@@ -1003,3 +1003,9 @@ void remove(Tree<T>*& root,T key)
 
 ---
 
+
+
+> [!tip]
+>
+> - 相关代码实现位于仓库
+> - [Search_algorithm](https://github.com/jlu005807/Search_algorithm)

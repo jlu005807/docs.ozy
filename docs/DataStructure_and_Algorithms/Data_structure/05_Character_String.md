@@ -144,3 +144,7 @@ void get_next(std::string T, std::shared_ptr<int[]>& next)
     > - fail[j]为string[0,j]子字串的最大相等前后缀的长度。
     > - 对于next数组的优化：如果跳转位置的字符`string[ next[j] ]`和`string[j]`相同，即跳转后依旧匹配失败继续跳转，所以可以将`next[j]=next[ next[j] ]`。
 
+> [!tip]
+>
+> - 相关代码实现位于仓库
+> - [string-matching-algorithms](https://github.com/jlu005807/string-matching-algorithms)
