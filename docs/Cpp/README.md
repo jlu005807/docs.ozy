@@ -10,10 +10,11 @@
 
 子目录：
 
+- `Pre-knowledge/`：学习 C++ 前应掌握或回顾的基础知识。
 - `C++-Primer/`：面向系统学习 C++ 基础与进阶的章节笔记。
 - `Effective-Modern-C++/`：现代 C++ 的实用建议与注意事项。
 - `Modern-Cpp-templates-tutorial/`：关于模板的简明教程。
-- `Pre-knowledge/`：学习 C++ 前应掌握或回顾的基础知识。
+
 
 
 我的github仓库[Cpp](https://github.com/jlu005807/Cpp)
