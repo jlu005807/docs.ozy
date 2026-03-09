@@ -1,0 +1,4069 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>04_数据链路层 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05_网络层.html" />
+    
+    
+    <link rel="prev" href="03_物理层.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="01_概述.html">
+            
+                <a href="01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="02_数据通信基础.html">
+            
+                <a href="02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="03_物理层.html">
+            
+                <a href="03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="04_数据链路层.html">
+            
+                <a href="04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="05_网络层.html">
+            
+                <a href="05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="06_传输层.html">
+            
+                <a href="06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="07_应用层.html">
+            
+                <a href="07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >04_数据链路层</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#数据链路层"><b></b>数据链路层</a></li><ul><li><span class="title-icon "></span><a href="#数据链路层基本原理"><b></b>数据链路层基本原理</a></li><ul><li><span class="title-icon "></span><a href="#数据链路层的任务和主要功能、地位"><b></b>数据链路层的任务和主要功能、地位</a></li><li><span class="title-icon "></span><a href="#数据链路层提供的服务"><b></b>数据链路层提供的服务</a></li><li><span class="title-icon "></span><a href="#数据链路层数据单元：帧（frame）"><b></b>数据链路层数据单元：帧（Frame）</a></li><li><span class="title-icon "></span><a href="#信道分配与介质访问控制（x）"><b></b>信道分配与介质访问控制（X）</a></li><li><span class="title-icon "></span><a href="#数据链路管理"><b></b>数据链路管理</a></li><li><span class="title-icon "></span><a href="#差错控制和流量控制"><b></b>差错控制和流量控制</a></li></ul><li><span class="title-icon "></span><a href="#数据链路控制协议"><b></b>数据链路控制协议</a></li><ul><li><span class="title-icon "></span><a href="#ieee-局域网参考模型"><b></b>IEEE 局域网参考模型</a></li><li><span class="title-icon "></span><a href="#逻辑链路控制子层llc"><b></b>逻辑链路控制子层LLC</a></li><li><span class="title-icon "></span><a href="#与-hdlc-帧的核心区别"><b></b>与 HDLC 帧的核心区别</a></li></ul><li><span class="title-icon "></span><a href="#介质访问控制协议"><b></b>介质访问控制协议</a></li><ul><li><span class="title-icon "></span><a href="#以太网"><b></b>以太网</a></li><li><span class="title-icon "></span><a href="#无线局域网"><b></b>无线局域网</a></li></ul><li><span class="title-icon "></span><a href="#数据链路层网络互连"><b></b>数据链路层网络互连</a></li><ul><li><span class="title-icon "></span><a href="#网桥"><b></b>网桥</a></li><li><span class="title-icon "></span><a href="#二层交换机"><b></b>二层交换机</a></li><li><span class="title-icon "></span><a href="#虚拟局域网vlan"><b></b>虚拟局域网(VLAN)</a></li></ul></ul></ul></div><a href="#数据链路层" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#数据链路层">数据链路层</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#数据链路层基本原理">数据链路层基本原理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#数据链路层的任务和主要功能、地位">数据链路层的任务和主要功能、地位</a><i></i></div></li>
+<li><div><a href="#数据链路层提供的服务">数据链路层提供的服务</a><i></i></div></li>
+<li><div><a href="#数据链路层数据单元：帧（frame）">数据链路层数据单元：帧（Frame）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#成帧framing">成帧(framing)</a><i></i></div></li>
+<li><div><a href="#成帧方法">成帧方法</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#信道分配与介质访问控制（x）">信道分配与介质访问控制（X）</a><i></i></div></li>
+<li><div><a href="#数据链路管理">数据链路管理</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#线路配置">线路配置</a><i></i></div></li>
+<li><div><a href="#传输方式">传输方式</a><i></i></div></li>
+<li><div><a href="#线路规程">线路规程</a><i></i></div></li>
+<li><div><a href="#链路状态管理">链路状态管理</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#差错控制和流量控制">差错控制和流量控制</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#差错控制与流量控制的关联与区别">差错控制与流量控制的关联与区别</a><i></i></div></li>
+<li><div><a href="#停止等待协议">停止等待协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基于停止等待协议实现流量控制">基于停止等待协议实现流量控制</a><i></i></div></li>
+<li><div><a href="#基于停止等待协议实现差错控制">基于停止等待协议实现差错控制</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#滑动窗口协议">滑动窗口协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#回退-n-（gbn）协议">回退 N （GBN）协议</a><i></i></div></li>
+<li><div><a href="#选择拒绝自动重复请求（sr）">选择拒绝自动重复请求（SR）</a><i></i></div></li>
+<li><div><a href="#回退-n-帧（gbn）协议的传输效率">回退 N 帧（GBN）协议的传输效率</a><i></i></div></li>
+<li><div><a href="#窗口大小的选择">窗口大小的选择</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#数据链路控制协议">数据链路控制协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#ieee-局域网参考模型">IEEE 局域网参考模型</a><i></i></div></li>
+<li><div><a href="#逻辑链路控制子层llc">逻辑链路控制子层LLC</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#llc-pdu（llc-帧）的核心结构">LLC-PDU（LLC 帧）的核心结构</a><i></i></div></li>
+<li><div><a href="#llc-的三种帧类型">LLC 的三种帧类型</a><i></i></div></li>
+<li><div><a href="#llc-提供的三类服务">LLC 提供的三类服务</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#介质访问控制协议">介质访问控制协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#以太网">以太网</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#以太网拓扑结构">以太网拓扑结构</a><i></i></div></li>
+<li><div><a href="#以太网csmacd">以太网CSMA/CD</a><i></i></div></li>
+<li><div><a href="#以太网帧结构">以太网帧结构</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#无线局域网">无线局域网</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#无线局域网标准">无线局域网标准</a><i></i></div></li>
+<li><div><a href="#拓扑结构">拓扑结构</a><i></i></div></li>
+<li><div><a href="#wlan-协议栈">WLAN 协议栈</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#wlan-mac层">WLAN MAC层</a><i></i></div></li>
+<li><div><a href="#帧间间隔（ifs）">帧间间隔（IFS）</a><i></i></div></li>
+<li><div><a href="#80211-mac-帧结构">802.11 MAC 帧结构</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#csmaca协议">CSMA/CA协议</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#数据链路层网络互连">数据链路层网络互连</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#网桥">网桥</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#网桥的功能">网桥的功能</a><i></i></div></li>
+<li><div><a href="#网桥路由">网桥路由</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#二层交换机">二层交换机</a><i></i></div></li>
+<li><div><a href="#虚拟局域网vlan">虚拟局域网(VLAN)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#虚拟局域网（vlan）划分">虚拟局域网（VLAN）划分</a><i></i></div></li>
+<li><div><a href="#8021q-帧标签（vlan-tag）">802.1Q 帧标签（VLAN Tag）</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="数据链路层"><a name="数据链路层" class="anchor-navigation-ex-anchor" href="#数据链路层"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层</h1>
+<p>数据链路层是 TCP/IP 分层模型中连接物理层与网络层的关键层，核心作用是将不可靠的物理链路转化为可靠的逻辑链路，实现<strong>相邻结点间的帧传输</strong></p>
+<p>有基本原理、控制协议、介质访问控制和网络互连四大核心内容</p>
+<hr></hr>
+<h2 id="数据链路层基本原理"><a name="数据链路层基本原理" class="anchor-navigation-ex-anchor" href="#数据链路层基本原理"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层基本原理</h2>
+<p>在 TCP/IP 分层模型中，数据链路层介于<strong>物理层和网络层之间</strong></p>
+<ul>
+<li>向下对接物理层：利用物理层提供的比特流服务（服务可能有差错）</li>
+<li>向上对接网络层：向网络层提供数据包的收发服务（<strong>无差错</strong>的数据包传送服务）</li>
+</ul>
+<p><img src="assets/image-20251216171430555.png" alt="image-20251216171430555" style="zoom:33%;"></img></p>
+<p>网络通信的底层逻辑</p>
+<p>不管是电脑连手机、服务器连路由器，还是跨多个设备通信，本质都遵循一个规律：</p>
+<ul>
+<li>网络层（比如 IP 层）的视角：只管 “谁要发给谁”—— 直连的设备直接发，不直连的就找中间设备（路由器、交换机）转发，最终总能传到目标。</li>
+<li>物理层的视角：不管上层数据是什么，都只以 “0/1 比特流” 的形式在物理线路（网线、光纤、Wi-Fi）上传输</li>
+<li>关键矛盾：网络层需要 “完整无错的数据包”，物理层只给 “可能出错的比特流”，而且相邻设备（比如电脑和交换机、交换机和路由器）之间，必须准确交接数据 —— 这就需要数据链路层来 “搭桥”即保证没有错误的帧数据。</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>相邻结点间，实现正确的数据传输：</p>
+<ol>
+<li><strong>分帧与组帧</strong> ：数据链路层把网络层的 “数据包” 封装成 “帧”—— 帧就是给比特流加了 “开始标签” 和 “结束标签” 的最小传输单元</li>
+<li><strong>差错控制</strong>：数据链路层给帧加 “校验码”（比如 CRC 校验），接收方收到后核对校验码，错误则要求重发或者丢弃</li>
+<li><strong>流量控制</strong>：让接收方 “反馈进度”，从而控制发送方的发送速率</li>
+<li><strong>传输协议</strong>：制定标准化协议（比如 HDLC、PPP），明确帧格式、校验方式、确认机制等</li>
+</ol>
+</blockquote>
+<h3 id="数据链路层的任务和主要功能、地位"><a name="数据链路层的任务和主要功能、地位" class="anchor-navigation-ex-anchor" href="#数据链路层的任务和主要功能、地位"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层的任务和主要功能、地位</h3>
+<p>数据链路层的任务：</p>
+<p>核心任务是提供<strong>相邻</strong>结点之间的<strong>可靠通信</strong>，即<strong>无差错的传输数据</strong></p>
+<ul>
+<li>结点：结点可以是路由器等网络设备，也可以是用户主机或其它业务终端，但是需要“相邻”—— 就是直接连接的两个设备</li>
+<li>场合：处理相邻节点间的数据传输，只处理相连节点的数据传输</li>
+<li>对象：传输的数据单元是帧（Frame）</li>
+<li>目的：将不可靠的物理链路变为<strong>可靠的逻辑链路</strong></li>
+</ul>
+<p><img src="assets/image-20251216172330939.png" alt="image-20251216172330939" style="zoom:33%;"></img></p>
+<hr></hr>
+<p>数据链路层的主要功能</p>
+<ol>
+<li><strong>为网络层提供服务</strong>，并且分为无确认无连接､有确认无连接､有确认面向连接</li>
+<li><strong>链路管理</strong>：介质访问控制（如多设备共享信道）； 链路建立、链路维持、链路释放</li>
+<li><strong>成帧</strong>：根据传输协议记忆传输介质，确认帧格式，将数据封装成适合在链路上传送的基本单元（加上帧头帧尾）</li>
+<li><strong>差错控制</strong>：通过校验码或者纠错码处理数据帧的损坏､丢失､重复和乱序，为网络层提供可靠的数据传送服务</li>
+<li><strong>流量控制</strong>：接收方实时反馈 “处理进度”，发送端根据进度<strong>控制发送速率</strong>，避免信道拥挤、数据丢失</li>
+</ol>
+<hr></hr>
+<p>数据链路层在网络中的地位</p>
+<p>从 TCP/IP 协议栈来看，数据链路层夹在最底层的物理层和负责跨网络路由的网络层之间，是上层数据 “落地传输” 和底层比特流 “抽象为数据” 的关键衔接</p>
+<ul>
+<li>网络中的主机､交换机､路由器等都必须实现数据链路层接入网络</li>
+<li>主机 A 到主机 B 的通信，不管经过多少中间设备，最终都要拆解成 数据链路层中“<strong>相邻结点间的帧传输</strong>”</li>
+</ul>
+<p><img src="assets/image-20251216173736649.png" alt="image-20251216173736649"></img></p>
+<h3 id="数据链路层提供的服务"><a name="数据链路层提供的服务" class="anchor-navigation-ex-anchor" href="#数据链路层提供的服务"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层提供的服务</h3>
+<p>围绕 “是否要先<strong>建立连接</strong>”以及“是否要<strong>确认收到</strong>” 两个关键问题，适配不同信道可靠性需求：</p>
+<ol>
+<li><p><strong>无确认无连接</strong>服务 ：不建立连接，收到帧也不确认</p>
+<ul>
+<li>发送方直接发帧，不用和接收方提前协商参数；</li>
+<li>接收方收到后，既不反馈 “已收到”，也不反馈 “没收到”，发完、收完就结束。</li>
+<li>适用场景：信道靠谱（误码率低，很少传错、丢帧），且要速度的场景</li>
+</ul>
+</li>
+<li><p><strong>有确认无连接</strong>服务：不建立连接，但每帧都要确认</p>
+<ul>
+<li>不用提前和接收方协商规则，直接发帧，但每发一个帧，接收方必须回一个 “确认消息（ACK）”；</li>
+<li>如果发送方没收到确认，就认为帧丢了或传错了，会重新发送。</li>
+<li>适用场景：信道不靠谱（容易丢帧、传错）的场景</li>
+</ul>
+</li>
+<li><p><strong>面向连接</strong>的服务 ：先建立连接，再传数据，每帧都确认</p>
+<ul>
+<li>通信分三步：① 建立连接：双方协商帧格式、校验方式、传输速率等参数，做好收发准备（类似开通专属快递通道）；② 传输数据：每发一个帧都要确认，确保无错；③ 释放连接：数据传完后，断开连接，释放资源。</li>
+<li>适用场景：长延迟、高差错的信道</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>服务类型</th>
+<th>是否建立连接</th>
+<th>是否需要确认</th>
+<th>核心优势</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无确认无连接服务</td>
+<td>否</td>
+<td>否</td>
+<td>传输效率高、延迟低</td>
+<td>可靠信道（以太网）、实时通信</td>
+</tr>
+<tr>
+<td>有确认无连接服务</td>
+<td>否</td>
+<td>是</td>
+<td>流程简单、可靠性高</td>
+<td>不可靠信道（Wi-Fi）</td>
+</tr>
+<tr>
+<td>面向连接的服务</td>
+<td>是</td>
+<td>是</td>
+<td>全程可靠、适配复杂链路</td>
+<td>长延迟不可靠信道（卫星通信）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="数据链路层数据单元：帧（frame）"><a name="数据链路层数据单元：帧（frame）" class="anchor-navigation-ex-anchor" href="#数据链路层数据单元：帧（frame）"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层数据单元：帧（Frame）</h3>
+<p>帧是数据链路层的 “协议数据单元”</p>
+<ul>
+<li>发送端： “组帧”（打包），给数据加 “帧头”（开始标志、地址）和 “帧尾”（校验码、结束标志），变成标准化的帧</li>
+<li>接收端：通过 “拆帧”（拆包），识别帧的边界，去掉帧头帧尾，还原成数据包交给网络层；</li>
+</ul>
+<p><img src="assets/image-20251220221502176.png" alt="image-20251220221502176" style="zoom:33%;"></img></p>
+<h4 id="成帧framing"><a name="成帧framing" class="anchor-navigation-ex-anchor" href="#成帧framing"><i class="fa fa-link" aria-hidden="true"></i></a>成帧(framing)</h4>
+<p>成帧的关键是 “帧定界”—— 让接收方从一堆比特流中，精准找到一帧的开始和结束</p>
+<p>从而实现分段传输，错误隔离，误差校验，以及数据恢复</p>
+<p>不同协议有不同的帧：PPP帧、MAC帧</p>
+<p>帧定界（帧同步）的两个核心难题：</p>
+<ul>
+<li>① 选什么 “定界符”（比如特定字节、比特组合）；</li>
+<li>② 万一数据本身就包含定界符（比如快递盒里的物品和包装图案一样），怎么避免误判？</li>
+</ul>
+<h4 id="成帧方法"><a name="成帧方法" class="anchor-navigation-ex-anchor" href="#成帧方法"><i class="fa fa-link" aria-hidden="true"></i></a>成帧方法</h4>
+<table>
+<thead>
+<tr>
+<th>成帧方法</th>
+<th>核心逻辑</th>
+<th>解决冲突方式</th>
+<th>适用场景</th>
+<th>优缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字节计数法</td>
+<td>用计数字段标明帧长度</td>
+<td>无</td>
+<td>早期技术</td>
+<td>简单；极不可靠，已淘汰</td>
+</tr>
+<tr>
+<td>字节填充的标志字节法</td>
+<td>特定字节（FLAG）当定界符</td>
+<td>加转义字符（ESC）</td>
+<td>PPP 协议、软件实现场景</td>
+<td>逻辑清晰；硬件实现复杂</td>
+</tr>
+<tr>
+<td>比特填充的标志比特法</td>
+<td>特定比特组合（如 01111110）当定界符</td>
+<td>连续 5 个 1 后插 0</td>
+<td>HDLC、USB、硬件实现场景</td>
+<td>硬件友好；比特级操作稍复杂</td>
+</tr>
+<tr>
+<td>编码违禁法</td>
+<td>物理层违禁编码当定界符</td>
+<td>数据中无违禁编码，无需处理</td>
+<td>以太网（10M/100M/1000M）</td>
+<td>效率高、无冲突；依赖物理层编码</td>
+</tr>
+</tbody>
+</table>
+<p>目前成帧的主要方法：比特填充的<strong>标志比特</strong>法和<strong>编码违禁</strong>法</p>
+<ol>
+<li><p>字节计数法：用一个 “<strong>计数字段</strong>” 标明本帧的字节数（包括计数字节），接收方按计数截取比特流；但是计数字段可能本身传错</p>
+<p><img src="assets/image-20251220222032843.png" alt="image-20251220222032843" style="zoom:50%;"></img></p>
+</li>
+<li><p>字节填充的标志字节法：用<strong>特定字节（比如 FLAG）当 “定界符”</strong>，作为帧的开始和结束</p>
+<ul>
+<li><p>开始字节和结束字节可相同也可不同</p>
+</li>
+<li><p>帧和帧之间可以连续发定界符(FLAG)，用来作同步填充</p>
+</li>
+<li><p>解决定界符冲突：</p>
+<ul>
+<li>如果数据本身包含 FLAG，就在 FLAG 前面加 “<strong>转义字符（ESC）</strong>”即（ASCII字符1BH），表示 “这个 FLAG 是数据，不是边界”；如果数据里有 ESC</li>
+<li>就给 ESC 也加一个 ESC（避免 ESC 被误判为转义标志）；</li>
+</ul>
+</li>
+<li><p>简单来说就是，在特殊字符（SOH，EOT，ESC）的前面加上转义符ESC</p>
+<p><img src="assets/image-20251220222226640.png" alt="image-20251220222226640" style="zoom: 33%;"></img></p>
+</li>
+</ul>
+</li>
+<li><p><strong>比特填充的标志比特法</strong>：用<strong>特定比特组合</strong>当定界符（比如 HDLC 协议的 <strong>01111110</strong>），在比特级划分帧边界</p>
+<ul>
+<li><p>对于发送端：比特填充</p>
+<ul>
+<li><p>利用<strong>比特位操作</strong>，检查数据中的比特流，只要出现 “连续 5 个 1”，就插入 1 个 0；防止和定界符的比特模式 01111110 相同</p>
+<p><img src="assets/image-20251220222443216.png" alt="image-20251220222443216" style="zoom:25%;"></img></p>
+</li>
+</ul>
+</li>
+<li><p>对于接收端则需要恢复数据</p>
+<ul>
+<li>遇到 “连续 5 个 1”，就看后面的比特 —— 是 0 就丢弃（这是填充的）；是 1 再看接下来的比特：是 0 就是定界符（帧结束），是 1 就是出错；</li>
+</ul>
+<p><img src="assets/image-20251220222514717.png" alt="image-20251220222514717" style="zoom: 25%;"></img></p>
+</li>
+</ul>
+</li>
+<li><p><strong>编码违禁法</strong>：利用物理层的 “<strong>冗余编码</strong>规则”—— 有些编码组合在数据传输中是 “违禁的”（不允许出现），就用这些违禁编码当帧的开始 / 结束标志；</p>
+<ul>
+<li><p>仅仅用于采用冗余编码的物理层中实现</p>
+<blockquote>
+<ul>
+<li>曼彻斯特编码（10Mbps 以太网）：高 - 高、低 - 低电平是违禁的，用作帧定界；</li>
+<li>4B/5B 编码（快速以太网）：16 种编码未使用，用作定界符；</li>
+<li>8B/10B 编码（千兆以太网）：未使用的编码用作定界符和控制码；</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="信道分配与介质访问控制（x）"><a name="信道分配与介质访问控制（x）" class="anchor-navigation-ex-anchor" href="#信道分配与介质访问控制（x）"><i class="fa fa-link" aria-hidden="true"></i></a>信道分配与介质访问控制（X）</h3>
+<p>多点连接环境（比如 Wi-Fi、集线器组网）中，多个设备共享一条信道，<strong>MAC 子层</strong>的核心任务就是制定 “使用规则”，避免大家同时用导致冲突，确保信道高效利用。</p>
+<p>两种信道分配方式：静态 vs 动态</p>
+<ol>
+<li>静态信道分配——“分固定工位，各自用各自的”<ul>
+<li>用<strong>多路复用技术</strong>（比如时分复用、频分复用），把单个信道划分成多个固定的 “子信道”，每个设备分配一个专属子信道，只能在自己的子信道里传输数据。</li>
+<li>效率极低 —— 网络数据流量大多是 “突发性” 的，各个信道的负载或者工作量不均衡</li>
+</ul>
+</li>
+<li>动态信道分配 ——“先到先得 / 按规则排队，灵活用资源”<ul>
+<li>不划分固定子信道，所有设备共享整个信道，根据实时流量动态分配使用权</li>
+<li>5 个关键假设（协议设计的前提）：<ol>
+<li>流量独立：每个设备的数据流互不影响；</li>
+<li>单信道：所有设备共用一条物理信道；</li>
+<li>冲突可检测：能发现两个设备同时用信道的冲突；</li>
+<li>时间连续或分槽：要么时间连续可用，要么分成固定 “时间槽”（比如分槽 Aloha）；</li>
+<li>载波侦听：设备能检测信道是否被占用（比如听有没有其他设备传数据）。</li>
+</ol>
+</li>
+<li>核心是 “<strong>多路访问协议</strong>”：即设备如何竞争 / 获取信道使用权，分 3 类协议。</li>
+</ul>
+</li>
+</ol>
+<p>对于动态分配的三类协议的具体内容</p>
+<ol>
+<li><p>竞争协议 ——“先到先得，冲突了再重试”（轻负载高效）</p>
+<ul>
+<li>纯 Aloha 协议：只要有数据帧要发，直接发送，不做任何检测；靠接收方的 <strong>“确认消息</strong>” 判断是否成功，没收到确认就重传。</li>
+<li>分槽 Aloha 协议：把时间分成固定长度的 “槽”（比如每个槽 10ms），设备只能在每个<strong>时间槽的开头发送数据</strong>。</li>
+<li>CSMA/CD 协议（以太网专用）：对于有线共享信道，<strong>先听再发，撞了就停</strong>；即发前检测信道是否空闲，空闲则发，检测到冲突则停止发送</li>
+<li>CSMA/CA 协议（无线局域网专用）：对于无线共享信道没法快速检测冲突，所以重点在“避免冲突”；<ul>
+<li>发前侦听：先检测信道是否空闲；</li>
+<li>空闲等待：信道空闲后，还要等一段 “<strong>帧间间隔（IFS）</strong>”，再发 “<strong>请求发送（RTS）</strong>” 帧，通知其他设备 “我要占用信道了”；</li>
+<li>确认接收：接收方收到 RTS 后，发 “<strong>允许发送（CTS）</strong>” 帧回应，发送方再发数据；数据发完后，接收方必须发 “<strong>确认（ACK）</strong>” 帧，确保没丢包。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>无冲突协议 ——“按规则排队，绝不撞车”（重负载高效）</p>
+<p>适合设备多、数据发送频繁的场景，就像给打印机排好号，按顺序用，完全不冲突。</p>
+<ul>
+<li><p>基本位图协议（按槽投票）：把时间分成 “竞争槽”（比如 8 个槽，对应 8 个设备），每个设备对应一个槽</p>
+<ul>
+<li>想发数据的设备，在自己对应的槽里发 “1”（表示要占用信道）；</li>
+<li>所有设备看完所有竞争槽后，按 “槽的顺序” 依次使用信道</li>
+</ul>
+<p><img src="assets/image-20251220225810019.png" alt="image-20251220225810019" style="zoom:33%;"></img></p>
+</li>
+<li><p>令牌传递协议（令牌即权限）：有一个特殊的 “令牌帧”（就像 “打印机使用权限卡”）在设备间循环传递：</p>
+<ul>
+<li>只有拿到令牌的设备，才能发送数据；数据发完后，把令牌传给下一个设备；</li>
+<li>没拿到令牌的设备，只能等待，不能发送。</li>
+</ul>
+<p><img src="assets/image-20251220225847268.png" alt="image-20251220225847268" style="zoom:33%;"></img></p>
+</li>
+<li><p>二进制倒计数协议（编号大的先得）：每个设备有唯一的二进制编号</p>
+<ul>
+<li>想发数据的设备，同时广播自己的编号，从最高位开始比较</li>
+<li>编号大的直接获得信道使用权</li>
+<li>其他设备看到比自己编号大的设备抢到时，就放弃竞争</li>
+</ul>
+<p><img src="assets/image-20251220225941736.png" alt="image-20251220225941736" style="zoom:33%;"></img></p>
+</li>
+</ul>
+</li>
+<li><p>有限竞争协议 ——“轻负载抢，重负载排队”（兼顾两种场景）</p>
+<ul>
+<li><p>低负载时用 “竞争协议”（比如 CSMA），冲突少、延迟短；</p>
+</li>
+<li><p>高负载时自动切换到 “无冲突协议”（比如令牌传递、位图协议），避免频繁冲突，提升信道效率。</p>
+</li>
+<li><p>自适应树遍历协议：</p>
+<ul>
+<li>把设备按 “树状结构” 分组（比如 A/B/C/D/E/F/G/H 分成两层）：</li>
+<li>低负载时：所有设备都能竞争信道，抢到就用；</li>
+<li>高负载时：按树的分支依次让每组设备竞争（比如先让上层 A/B/C/D 竞争，抢到的组再让组内设备竞争），避免全员同时抢导致冲突。</li>
+</ul>
+<p><img src="assets/image-20251220230103054.png" alt="image-20251220230103054" style="zoom:25%;"></img></p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li>静态分配：固定子信道，无冲突但效率低，适配恒定流量场景；</li>
+<li>动态分配：共享信道，按协议分配使用权，是主流方式；<ul>
+<li>竞争协议：轻负载快（冲突少、延迟短），重负载差（冲突多）；</li>
+<li>无冲突协议：重负载稳（无冲突、效率高），轻负载差（延迟高）；</li>
+<li>有限竞争协议：兼顾轻负载低延迟和重负载高效率，适配复杂场景。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h3 id="数据链路管理"><a name="数据链路管理" class="anchor-navigation-ex-anchor" href="#数据链路管理"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路管理</h3>
+<p>用 “搭建专属通信通道” 的逻辑，把数据链路管理拆成 4 个核心模块，每个模块都对应 “怎么接线（线路配置）、怎么传数据（传输方式）、怎么定规则（线路规程）、怎么管链路生命周期（链路状态管理）”</p>
+<h4 id="线路配置"><a name="线路配置" class="anchor-navigation-ex-anchor" href="#线路配置"><i class="fa fa-link" aria-hidden="true"></i></a>线路配置</h4>
+<p>线路配置指的是网络中<strong>两个或多个结点通过物理线路连接的具体方式</strong>，核心分两种，本质是 “专属线路” 和 “共享线路” 的区别</p>
+<ol>
+<li>点到点连接：“专属专线，一对一通信”<ul>
+<li>两个结点之间用<strong>专用物理线路</strong>直接连接</li>
+<li>信道容量都用于这两个结点间的数据传输</li>
+<li>严格的 “一对一”点对点通信方式</li>
+</ul>
+</li>
+<li>多点连接（广播信道）：“共享线路，一对多通信”<ul>
+<li>两个以上的结点共用同一条物理线路，这条线路是所有结点的 “公共信道”</li>
+<li>信道容量由所有结点共同使用，需要通过 “复用技术”（比如时分复用、频分复用）划分资源，避免拥挤</li>
+<li>用专门的共享信道协议（比如以太网的 CSMA/CD、Wi-Fi 的 CSMA/CA）协调结点发送数据，避免冲突</li>
+<li>“一对多” 的广播模式</li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20251220230639838.png" alt="image-20251220230639838" style="zoom: 33%;"></img></p>
+<h4 id="传输方式"><a name="传输方式" class="anchor-navigation-ex-anchor" href="#传输方式"><i class="fa fa-link" aria-hidden="true"></i></a>传输方式</h4>
+<p>传输方式本质是 “比特流从一个设备到另一个设备的传送规则”</p>
+<p>按传输方向分：单工、半双工、全双工</p>
+<ol>
+<li><p>单工：“单行线，只能单向传”</p>
+<ul>
+<li>数据只能从一个设备发、另一个设备收，通信单向不能反向传输</li>
+</ul>
+<p><img src="assets/image-20251220231011714.png" alt="image-20251220231011714" style="zoom:33%;"></img></p>
+</li>
+<li><p>半双工：“双向车道，不能同时走”</p>
+<ul>
+<li>两个设备都能收发数据，但<strong>同一时间</strong>只能一个发、一个收</li>
+</ul>
+<p><img src="assets/image-20251220231035684.png" alt="image-20251220231035684" style="zoom:33%;"></img></p>
+</li>
+<li><p>全双工：“双向双车道，可同时走”</p>
+<ul>
+<li>两个设备能同时收发数据</li>
+<li>要么链路有两条独立物理路径（一条发、一条收），要么将信道带宽一分为二（复用技术），同时传两个方向的信号</li>
+</ul>
+<p><img src="assets/image-20251220231103333.png" alt="image-20251220231103333" style="zoom:33%;"></img></p>
+</li>
+</ol>
+<p>按比特传输方式分：串行传输 vs 并行传输</p>
+<ol>
+<li>串行传输：“单车道，比特挨个传”<ul>
+<li>每个时钟脉冲只传 1 个比特，只用 1 条线路（或少数辅助线路），比特按顺序依次发送</li>
+<li>适用场景：短距离（如 USB 线）和长距离通信（如网线、光纤、串口线），是网络通信的主流方式。</li>
+</ul>
+</li>
+<li>并行传输：“多车道，比特同时传”<ul>
+<li>每个时钟脉冲同时传多个比特，每个比特用 1 条独立线路</li>
+<li>缺点：长距离传输时，线路成本高（需多条线路）、捆扎困难、接收端同步复杂（要对齐所有线路的比特）。</li>
+<li>适用场景：近距离传输（如电脑主机与打印机、主板上的部件互连），不适合长距离通信。</li>
+</ul>
+</li>
+</ol>
+<p>按同步方式分：<strong>异步传输 vs 同步传输</strong></p>
+<ol>
+<li><p>异步传输：“自由节奏，字符级同步”</p>
+<ul>
+<li>以 “字符” 为单位传输，每个字符的传输时间固定，但字符之间的时间间隔不固定</li>
+<li>每个字符前加 “开始位”，后加 “停止位”，靠这两个位实现同步</li>
+<li>传输开销大（每个字符都要加同步位）、效率低，适合低速设备。</li>
+</ul>
+<p><img src="assets/image-20251220231535105.png" alt="image-20251220231535105" style="zoom:33%;"></img></p>
+</li>
+<li><p>同步传输：“统一节奏，帧级同步”</p>
+<ul>
+<li>字符或比特流组合成 “数据帧” 成块传输，收发双方按同一时钟节奏同步</li>
+<li>数据帧结构：包含同步字符（SYN，标识帧开始）、控制域（源地址、目的地址、长度等）、数据域（要传的信息）、错误检查域（检测传输错误）、帧结束标记（END，标识帧结束）</li>
+<li>实现 “位同步”（对齐每个比特的传输节奏）和 “帧同步”（识别帧的开始和结束）</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>分类维度</th>
+<th>具体类型</th>
+<th>核心优势</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>传输方向</td>
+<td>单工</td>
+<td>结构简单、成本低</td>
+<td>单向通信（广播、打印）</td>
+</tr>
+<tr>
+<td></td>
+<td>半双工</td>
+<td>双向通信、成本低</td>
+<td>低频双向通信（对讲机、早期组网）</td>
+</tr>
+<tr>
+<td></td>
+<td>全双工</td>
+<td>效率高、无等待</td>
+<td>高频双向通信（手机、交换机）</td>
+</tr>
+<tr>
+<td>比特传输方式</td>
+<td>串行传输</td>
+<td>线路少、适配长距离</td>
+<td>短 / 长距离通信（网线、光纤）</td>
+</tr>
+<tr>
+<td></td>
+<td>并行传输</td>
+<td>速度快</td>
+<td>近距离高速传输（设备内部互连）</td>
+</tr>
+<tr>
+<td>同步方式</td>
+<td>异步传输</td>
+<td>无需统一时钟</td>
+<td>低速设备（键盘、老式打印机）</td>
+</tr>
+<tr>
+<td></td>
+<td>同步传输</td>
+<td>效率高</td>
+<td>高速大量数据传输（以太网、光纤）</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h4 id="线路规程"><a name="线路规程" class="anchor-navigation-ex-anchor" href="#线路规程"><i class="fa fa-link" aria-hidden="true"></i></a>线路规程</h4>
+<p>线路规程本质是 “数据链路的通信规则手册”，核心负责两件事：一是监视链路建立 / 终止，二是在同一时刻给某个设备分配 “数据传送权”，避免冲突</p>
+<p>线路规程可以两种方式实现： 询问/应答方式（ENQ/ACK） ；轮询/选择方式（Poll/Select）</p>
+<ol>
+<li><p>询问 / 应答方式（ENQ/ACK）：“点对点的双向预约”</p>
+<ul>
+<li>仅用于<strong>点对点连接</strong>（比如电脑和路由器、两台路由器之间），链路两头的设备级别相同，没有主次之分，任意一方都能主动发起通信。</li>
+<li>建立会话：启动方（比如站点 A）发 “询问帧（ENQ）”，问接收方（站点 B）“是否准备好接收数据？”；</li>
+<li>数据传输：接收方如果就绪，回复 “肯定应答帧（ACK）”，启动方就开始发数据帧；如果没就绪，回复 “否定应答帧（NAK）”，启动方稍后再问；</li>
+<li>终止会话：数据传完后，启动方发 “传输结束帧（EOT）”，链路释放。</li>
+</ul>
+<p><img src="assets/image-20251220231851735.png" alt="image-20251220231851735" style="zoom:33%;"></img></p>
+</li>
+<li><p>轮询 / 选择方式（Poll/Select）：“多点连接的主次调度”</p>
+<ul>
+<li>用于<strong>多点连接</strong>，必须有一个 “主设备”（比如路由器），其他是 “从设备”（比如电脑），主设备统一控制链路。</li>
+<li>要确定设备是否就绪，还要确定哪一个站点有权使用信道</li>
+<li>主设备控制链路，主设备发命令，从设备响应<ul>
+<li>轮询：如果主设备希望接收数据</li>
+<li>选择：如果主设备希望发送数据</li>
+</ul>
+</li>
+<li>同时在链路上的每个设备都有一个<strong>地址来标识自己</strong></li>
+</ul>
+<p><img src="assets/image-20251220232100077.png" alt="image-20251220232100077" style="zoom:33%;"></img></p>
+<blockquote>
+<ol>
+<li><p>选择模式：</p>
+<ul>
+<li>主设备想给某个从设备（比如从设备 A）发数据，先发送 “选择帧（SEL）”，明确告诉 “从设备 A 准备接收”；</li>
+<li>从设备 A 如果就绪，回复 “ACK”，主设备开始传数据帧；</li>
+<li>如果没就绪，回复 “NAK”，主设备换个时间再试；</li>
+<li>数据传完后，主设备发 “EOT” 终止</li>
+</ul>
+<p><img src="assets/image-20251220232135956.png" alt="image-20251220232135956" style="zoom:33%;"></img></p>
+</li>
+<li><p>轮询模式：</p>
+<ul>
+<li>主设备逐个给从设备发 “轮询帧（Poll）”，问 “你有数据要发吗？”；</li>
+<li>从设备如果有数据，直接发数据帧应答；</li>
+<li>如果没有，必须回复 “NAK”；</li>
+<li>从设备数据传完后，发 “EOT” 告知，主设备继续轮询下一个从设备；也可以用主设备发 “时间到” 消息终止轮询。</li>
+</ul>
+<p><img src="assets/image-20251220232210498.png" alt="image-20251220232210498" style="zoom:33%;"></img></p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<table>
+<thead>
+<tr>
+<th>实现方式</th>
+<th>适用连接</th>
+<th>设备关系</th>
+<th>核心逻辑</th>
+<th>关键帧 / 信号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>询问 / 应答（ENQ/ACK）</td>
+<td>点对点连接</td>
+<td>平等（无主次）</td>
+<td>主动询问对方是否就绪，再传数据</td>
+<td>ENQ（询问）、ACK/NAK（应答）、EOT（结束）</td>
+</tr>
+<tr>
+<td>轮询 / 选择（Poll/Select）</td>
+<td>多点连接</td>
+<td>主从关系</td>
+<td>主设备调度，从设备响应</td>
+<td>Poll（轮询）、SEL（选择）、ACK/NAK（应答）、EOT（结束）</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="链路状态管理"><a name="链路状态管理" class="anchor-navigation-ex-anchor" href="#链路状态管理"><i class="fa fa-link" aria-hidden="true"></i></a>链路状态管理</h4>
+<p>链路状态管理的核心目标就是：<strong>让发送方明确知道接收方是否 “准备好接收”“正在接收” 或 “已完成接收”</strong></p>
+<ol>
+<li>收发数据前，建立数据链路，确定通信协议</li>
+<li>数据传输中，维持数据链路，进行差错控制和流量控制</li>
+<li>完成数据收发后，释放数据链路，回收通信资源</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>核心目标</th>
+<th>关键动作</th>
+<th>类比场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>链路建立</td>
+<td>协商规则 + 确认接收就绪</td>
+<td>交换协商帧 + 状态确认帧</td>
+<td>拨号接通电话</td>
+</tr>
+<tr>
+<td>链路维持</td>
+<td>监测状态 + 避免传输故障</td>
+<td>确认反馈 + 过载控制 + 链路恢复</td>
+<td>通话中保持连接</td>
+</tr>
+<tr>
+<td>链路释放</td>
+<td>确认传输完成 + 回收资源</td>
+<td>发送结束帧 + 释放确认帧</td>
+<td>挂电话释放线路</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h3 id="差错控制和流量控制"><a name="差错控制和流量控制" class="anchor-navigation-ex-anchor" href="#差错控制和流量控制"><i class="fa fa-link" aria-hidden="true"></i></a>差错控制和流量控制</h3>
+<p>差错控制和流量控制是数据链路层保障 “可靠传输” 的两大核心技术 —— 差错控制解决 “数据传错、传丢” 的问题，流量控制解决 “发送方太快、接收方接不住” 的问题</p>
+<ol>
+<li>差错控制：检测并修正数据传输中的错误，靠 “检测 + 确认 + 重传” 三大手段<ul>
+<li>差错控制主要指错误检测和重传方法<ul>
+<li><strong>错误检测</strong>：接收方通过数据帧中的 “校验码”，判断帧是否损坏，出错则不交给网络层。</li>
+<li><strong>确认（ACK）</strong>：接收方收到正确的帧后，给发送方发 “肯定应答”，告知 “已安全收到”。</li>
+<li><strong>自动重复请求（ARQ）</strong>：如果帧损坏，接收方发 “否定应答（NAK）”，催促发送方重传该帧</li>
+<li><strong>超时重传</strong>：发送方发完帧后启动定时器，若超时没收到确认，自动重传该帧</li>
+</ul>
+</li>
+<li>对于上述方法的实现要点：携带校验码，发送方进行接收确认和超时重传，接收方则按序接收</li>
+<li>重传的三种情况：帧破坏；帧丢失；应答帧丢失</li>
+</ul>
+</li>
+<li>流量控制：协调收发双方的速率，不让发送方发得太快，导致接收方缓冲区溢出（数据丢失），主要靠 “<strong>接收方反馈调速</strong>” 实现<ul>
+<li>基于反馈调整：接收方实时反馈自己的 “接收能力”（比如缓冲区剩余空间），发送方根据反馈调整发送速率</li>
+<li>依赖确认机制：接收方的 “确认帧（ACK）” 不仅是 “收到信号”，也隐含接收能力的流量信息</li>
+</ul>
+</li>
+</ol>
+<hr></hr>
+<h4 id="差错控制与流量控制的关联与区别"><a name="差错控制与流量控制的关联与区别" class="anchor-navigation-ex-anchor" href="#差错控制与流量控制的关联与区别"><i class="fa fa-link" aria-hidden="true"></i></a>差错控制与流量控制的关联与区别</h4>
+<ol>
+<li><p>共同点：共享基础技术</p>
+</li>
+<li><p>都依赖 “接收确认” 和 “超时重传”：确认帧既用于告知 “数据正确”（差错控制），也用于告知 “接收能力”（流量控制）；</p>
+</li>
+<li><p>超时重传既解决 “帧丢失”（差错控制），也应对 “确认帧丢失导致的速率误判”（流量控制）。</p>
+</li>
+<li><p>核心区别：解决的问题不同</p>
+</li>
+<li><p>差错控制多了 “<strong>差错检测与纠错</strong>” 环节：这是它的核心，重点处理 “数据对错”；</p>
+</li>
+<li>流量控制重点是 “<strong>速率匹配</strong>”：不关心数据本身对错，只确保接收方不被数据 “淹了”。</li>
+</ol>
+<p>两种控制都通过以下两种协议落地，兼顾可靠性和效率：</p>
+<ul>
+<li>停止等待协议：简单直接（发一帧等确认，再发下一帧），同时实现流量控制（等待确认就是限速）和差错控制（错了重传）；</li>
+<li>滑动窗口协议（又称为<strong>连续ARQ协议</strong>）：高效灵活（发送方可连续发多帧，不用逐帧等确认），通过窗口大小限制发送速率（流量控制），通过重传机制修正错误（差错控制）。</li>
+</ul>
+<h4 id="停止等待协议"><a name="停止等待协议" class="anchor-navigation-ex-anchor" href="#停止等待协议"><i class="fa fa-link" aria-hidden="true"></i></a>停止等待协议</h4>
+<p>停止等待协议是数据链路层最基础的可靠传输协议，核心分 “无错信道” 和 “有错信道” 两种场景，本质是 “发一帧等确认，再发下一帧”</p>
+<ol>
+<li><p><strong>无错</strong>信道的停止等待协议：只解决 “接收方接不住”</p>
+<ul>
+<li>假设为信道的绝对理想状态，物理层比特流完全正确；同时<code>v_send &gt; v_receive</code>，导致接收方来不及接收</li>
+<li>协议逻辑：<ul>
+<li>发送方：发完一帧就暂停，不继续发，<strong>等待接收方的 “确认帧”</strong>（叫 “哑帧”，内容不重要，只当 “收到信号”），收到确认后再发下一帧。数据发完，发送方发送<strong>传输结束帧（EOT）</strong>，通信终止。</li>
+<li>接收方：收到一帧并处理完成后，立即<strong>回复一个确认帧</strong>，</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20251221223829111.png" alt="image-20251221223829111"></img></p>
+</li>
+<li><p><strong>有错</strong>信道的停止等待协议：解决 “出错 + 接不住”</p>
+<ul>
+<li><p>前提：信道不靠谱：数据帧可能损坏（比特翻转）、丢失（链路中断）；接收方仍有处理上限：不能接收太快。</p>
+</li>
+<li><p>基础解决方案：加 <strong>“计时器”+“超时重传”</strong>：</p>
+<ul>
+<li>发送方：发完一帧后，立即启动一个计时器（比如设 10ms 超时）。</li>
+<li>超时重传：如果计时器到期，还没收到接收方的确认，就默认帧丢了或出错了，自动重传这一帧。</li>
+<li>接收方：收到正确的帧就发确认，收到错误的帧直接忽略（或发否定应答 NAK）</li>
+</ul>
+<blockquote>
+<p>接收方重复收到同一数据帧的两种场景:</p>
+<ul>
+<li><strong>确认帧（ACK）丢失。</strong>比如发送方 A 发帧 A1→接收方 B 收到并处理→B 发 ACK→ACK 在传输中丢了→A 没收到确认，超时重传 A1→B 收到重复的 A1。</li>
+<li>超时时间设太短。比如 A 发 A1 后，计时器很快超时→A 重传 A1→之后 B 才收到第一次的 A1→又收到重传的 A1→重复。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>对于“重复帧”的解决方案：</p>
+<ol>
+<li><p>给帧加 “<strong>1 位序号（SEQ=0/1）</strong>”</p>
+<ul>
+<li>发送方：每发一帧，都带一个序号（0→1→0→1 循环）</li>
+<li>接收方：初始化时 “期待接收 0 号帧”，收到帧后先查序号：<ul>
+<li>序号是 “期待的序号”：说明是新帧，处理后发确认，同时把 “期待序号” 换成下一个（0→1 或 1→0）。</li>
+<li>序号和 “期待的序号” 不一致：说明是重复帧，直接丢弃，同时重发上一个正确帧的确认</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20251221224307063.png" alt="image-20251221224307063"></img></p>
+</li>
+<li><p>停等 ARQ：自动重复请求，或带有重传的肯定确认</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h5 id="基于停止等待协议实现流量控制"><a name="基于停止等待协议实现流量控制" class="anchor-navigation-ex-anchor" href="#基于停止等待协议实现流量控制"><i class="fa fa-link" aria-hidden="true"></i></a>基于停止等待协议实现流量控制</h5>
+<p>基于停止等待协议实现的<strong>流量控制</strong>，核心逻辑是 <strong>“用确认帧控制发送节奏”</strong>，强制发送方和接收方速率匹配，避免接收方因处理能力不足导致数据溢出</p>
+<p><strong>应答帧就是 “速率开关”</strong>—— 只有收到开关信号（ACK），发送方才会继续发送；即<strong>“接收方的处理速度决定了发送方的发送速度”</strong></p>
+<ul>
+<li>协议简单，但是传输效率低，线路带宽利用率低</li>
+</ul>
+<p>完成一帧发送所需的最短时间</p>
+<p><code>t_W = t_I + 2t_P + 2t_Proc + t_S</code></p>
+<p>其中，<code>t_I</code> 是发送数据帧的有效时间，而 <code>2t_P + 2t_{Proc} + t_S</code> 都是<strong>等待和应答的开销时间</strong>。</p>
+<p><img src="assets/image-20251221225105219.png" alt="image-20251221225105219"></img></p>
+<blockquote>
+<p>[!note]</p>
+<p>信道利用率：信道被占用的时间和总时间之比，即信道被 “有效传输数据” 占用的时间，占总时间的比例，值越大说明信道没被浪费。</p>
+<p>有效数据传输率：单位时间内传输的有效数据位数，即单位时间内，实际传输的<strong>有用数据比特数</strong>（去掉帧头帧尾的有效数据 <em>N</em>），不是链路的标称速率。</p>
+<ol>
+<li>无差错情况下：<strong>帧不会丢失、不会损坏，不用重传</strong>，是协议性能的上限<ul>
+<li>信道利用率：<code>P = t_I / t_W</code>，即发送端发送<strong>数据帧</strong>时间/发送一帧总时间</li>
+<li>有效数据传输率：<code>S = N / t_W</code>，即一帧有效比特位/一帧总时间</li>
+</ul>
+</li>
+<li>有差错情况下：实际信道会出错（帧损坏 / 丢失，概率为 <em>p</em>），需要重传，性能会下降<ul>
+<li>正确传一帧的平均时间 <em>tV</em>：<code>t_V = t_W / (1 - p)</code>,其中<code>p</code>为出错率</li>
+<li>系统最大吞吐量<em>λmax</em>(每秒成功发送帧数）：<code>λmax = 1 / t_V = (1-p)/t_W</code></li>
+<li>极限吞吐量M：<code>M = 1 / t_I</code></li>
+<li>系统传输效率<code>η</code>:实际吞吐量和 “理论极限吞吐量” 的比值：<img src="assets/image-20251221225950183.png" alt="image-20251221225950183"></img></li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20251221230115925.png" alt="image-20251221230115925"></img></p>
+<p>[!tip]</p>
+<ol>
+<li><strong>无错场景</strong>：协议性能由 <em>tW</em> 决定，<strong>传播延时 *tP* 越长，*tW* 越大，利用率越低</strong></li>
+<li><strong>有错场景</strong>：出错率 <em>p</em> 越高，重传次数越多，性能下降越明显；同时传播延时的影响会被放大。</li>
+<li><strong>本质问题</strong>：<strong>停止等待协议的低利用率，根源是 “发一帧等一帧”，信道大部分时间在空闲等待</strong> —— 这也是滑动窗口协议（GBN/SR）要解决的核心痛点。</li>
+</ol>
+</blockquote>
+<h5 id="基于停止等待协议实现差错控制"><a name="基于停止等待协议实现差错控制" class="anchor-navigation-ex-anchor" href="#基于停止等待协议实现差错控制"><i class="fa fa-link" aria-hidden="true"></i></a>基于停止等待协议实现差错控制</h5>
+<p>为实现差错控制，在停止等待协议中采用自动重复请求（停等ARQ ）</p>
+<ol>
+<li>数据帧丢失（对应图中 <code>帧丢失 超时重传</code> 部分）<ul>
+<li>站点 A 发送完数据帧 1 后，立即启动定时器；定时器到期时，仍未收到站点 B 的应答帧 → A 判定 “帧丢失或出错”，<strong>重传数据帧 1</strong>。</li>
+</ul>
+</li>
+<li>应答帧丢失（对应图中 <code>应答帧丢失 超时重传</code> 部分）<ul>
+<li><strong>重复帧处理</strong>：站点 B 收到重传的<strong>数据帧 1</strong> → 检查序号，发现当前期望接收的是<strong>帧 0</strong>（因为已经收过帧 1 了），判定这是<strong>重复帧</strong> → 直接丢弃该帧，同时<strong>重发应答帧 0</strong>（确保 A 能收到确认）。</li>
+</ul>
+</li>
+<li>数据帧破坏<ul>
+<li>接收方处理帧时发现错误，发送否定应答帧给发送方请求重发</li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20251221230703385.png" alt="image-20251221230703385" style="zoom: 67%;"></img></p>
+<p>解决 “帧丢失、重复帧、差错重传” 的核心保障：</p>
+<ol>
+<li><strong>发送端保留帧备份</strong>，直到接收确认帧</li>
+<li><strong>帧序号 0/1 交替</strong>：让接收方区分<strong>新帧</strong>和<strong>重复帧</strong>，防止重复帧接收</li>
+<li><strong>否定应答帧（NAK）</strong>：接收方收到损坏的帧（校验失败），直接发 NAK请求重发</li>
+<li><strong>定时器是核心保障</strong>：定时器的超时时间要略大于 “帧往返的总时间”，是检测帧丢失、触发重传的关键机制</li>
+</ol>
+<p>对于停止等待协议：信道利用率低，延迟高，主要就是 “发一帧等一帧”，信道空闲</p>
+<h4 id="滑动窗口协议"><a name="滑动窗口协议" class="anchor-navigation-ex-anchor" href="#滑动窗口协议"><i class="fa fa-link" aria-hidden="true"></i></a>滑动窗口协议</h4>
+<p>滑动窗口协议的核心是<strong>打破停止等待协议 “发一帧等一帧” 的限制</strong></p>
+<p>允许发送方在未收到确认前连续发送多帧，用 “窗口” 机制控制并发帧数，既提升信道利用率，又实现流量控制和差错控制</p>
+<p>窗口本质是<strong>发送方 / 接收方存放数据帧的缓冲区范围</strong>，对可以连续发送的最多帧数(已发出但未确认的帧)作限制</p>
+<ul>
+<li>为了应对突发性流量，发送窗口和接收窗口均可以设置大一点</li>
+<li>窗口大一点，利于区分帧序号循环产生的新帧和重传的帧，避免重复接收</li>
+</ul>
+<p>对于发送方和接收方的窗口具体含义：</p>
+<ul>
+<li><p>发送方在收到应答前可以连续发送若干帧</p>
+</li>
+<li><p>对于发送方窗口：分为两个部分<strong>已发送未确认的帧</strong> + <strong>未发送但可发送的帧</strong></p>
+<ul>
+<li>发送限制：窗口大小 = 最大并发帧数；窗口满了就暂停，等收到确认再 “滑动窗口”，释放新的发送名额。</li>
+<li>窗口滑动：收到确认后，窗口整体右移，移出已确认的帧，纳入新的待发送帧。</li>
+</ul>
+<p><img src="assets/image-20251221231721864.png" alt="image-20251221231721864"></img></p>
+</li>
+<li><p><strong>接收方窗口</strong>：分为两部分 ——<strong>已接收未确认的帧</strong> + <strong>未接收但可接收的帧</strong>。</p>
+<ul>
+<li>接收限制：只有落在窗口内的帧才接收，窗口外的帧直接丢弃。</li>
+<li>窗口滑动：发送确认后，窗口整体右移，移出已确认的帧，纳入新的可接收帧。</li>
+</ul>
+<p><img src="assets/image-20251221231745369.png" alt="image-20251221231745369"></img></p>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li><strong>帧序号循环复用</strong>：帧编号采用 <strong>模 n</strong> 方式（比如 n=8，编号 0~7 循环），窗口大小 ≤ n-1（避免新帧和重传帧序号混淆）。</li>
+<li><strong>累积确认</strong>：接收方不用逐帧确认，而是用 1 个 ACK 帧确认 “所有≤x 的帧都已正确接收”，ACK 序号 x 表示 “下一个期望接收的帧序号”（比如 ACK=3，代表 0、1、2 号帧都收好了，要收 3 号帧）。</li>
+<li><strong>接收窗口驱动发送窗口</strong>：发送窗口的滑动完全依赖接收方的确认 —— 接收方确认越多，发送方窗口滑动越多，能发的新帧就越多。</li>
+<li>对于接收窗口和发送窗口的大小限制：<strong>W_T + W_R &lt;= 2^n</strong>，其中<code>n</code>即帧序号的比特数；根据此可以推出GBN以及SR的窗口大小关系</li>
+</ul>
+</blockquote>
+<p>对于滑动窗口协议中的差错控制：</p>
+<ol>
+<li><strong>回退 N 帧（GBN）</strong><ul>
+<li>核心逻辑：接收方只按序接收帧，一旦某帧出错 / 丢失，后续帧全部丢弃；发送方收到否定确认（NAK）或超时后，<strong>从出错帧开始，重传窗口内所有未确认的帧</strong>。</li>
+<li>特点：实现简单，接收方无需缓存乱序帧；但重传效率低（一帧错，多帧重传）。</li>
+</ul>
+</li>
+<li><strong>选择重传（SR）</strong><ul>
+<li>核心逻辑：接收方会缓存<strong>窗口内的乱序正确帧</strong>；发送方收到 NAK 后，<strong>只重传出错的那一帧</strong>，不用重传后续帧。</li>
+<li>特点：重传效率高，信道利用率更高；但接收方需要更大的缓冲区，实现更复杂。</li>
+</ul>
+</li>
+</ol>
+<h5 id="回退-n-（gbn）协议"><a name="回退-n-（gbn）协议" class="anchor-navigation-ex-anchor" href="#回退-n-（gbn）协议"><i class="fa fa-link" aria-hidden="true"></i></a>回退 N （GBN）协议</h5>
+<p>回退 N 帧协议（Go-Back-N，简称 GBN）是<strong>滑动窗口协议的一种实现</strong>，核心目标是<strong>在提升信道利用率的同时，简化接收方逻辑</strong>，代价是 “一帧出错，后续帧全部重传”。</p>
+<p>GBN 的设计围绕 <strong>“连续发送 + 按序接收 + 出错全重传”</strong> 三个关键词展开，本质是<strong>用发送方的 “批量重传” 换取接收方的 “极简缓存”</strong>。</p>
+<ol>
+<li><strong>出错全部重传</strong>：只要某一帧出错或丢失，发送方就从<strong>出错帧开始</strong>，重传窗口内所有未被确认的帧（包括出错帧之后的正确帧）。</li>
+<li><strong>接收方按序接收</strong>：接收窗口大小固定为<code>1</code>，只能接收<strong>当前期望序号的帧</strong>。<ul>
+<li>收到期望帧：正常接收，发送<strong>累积确认</strong>（ACK，<strong>确认当前帧及之前所有帧</strong>），并更新期望序号。</li>
+<li>收到出错 / 乱序帧：直接丢弃该帧及后续所有帧，<strong>不发送任何确认</strong>（或发送否定确认 NAK）。</li>
+</ul>
+</li>
+<li><strong>发送方超时重传</strong>：发送方为<strong>最早未确认的帧</strong>设置定时器，超时后重传窗口内所有未确认帧。</li>
+</ol>
+<p>基本流程：</p>
+<ul>
+<li><p>发送方维护一个<strong>发送窗口</strong>（大小 &gt; 1），窗口内的帧可以连续发送，无需等待逐帧确认。</p>
+</li>
+<li><p>接收方维护一个<strong>接收窗口</strong>（大小 = 1），仅接收与 “期望序号” 匹配的帧。</p>
+<blockquote>
+<p>[!important]</p>
+<ul>
+<li>发送方收到<strong>累积确认</strong>（ACK）后，滑动发送窗口，纳入新的待发送帧；若定时器超时，<strong>回退到出错帧的位置，重传窗口内所有未确认帧</strong>，即从上一个确认帧后面开始重发</li>
+<li>而接收方则在接收到正确的帧N时，为帧N发送ACKn确认信号，如果接收的是重复帧或者错误帧，则发上一个正确帧的确认ACK信号，告诉发送方接收到哪一个帧</li>
+<li><strong>累积确认</strong>（ACK）：若有<strong>ACKn</strong>发送, 则n号帧和前面所有帧均已按序接收。(或：接收窗口停在n处<strong>, </strong>则n-1号帧和前面所有帧均已按序接收)</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="assets/image-20251221232337438.png" alt="image-20251221232337438" style="zoom:33%;"></img></p>
+<p>三种差错情况的处理：</p>
+<ol>
+<li><p>差错情况 1：帧破坏（数据帧损坏）</p>
+</li>
+<li><p><strong>场景</strong>：发送方发帧 0~4（窗口大小 = 5），其中帧 3 损坏。</p>
+</li>
+<li><strong>接收方动作</strong>：收到帧 3 时校验出错，直接丢弃帧 3，同时丢弃后续的帧 4；<strong>不发送 ACK</strong>（或发送 NAK3）。</li>
+<li><strong>发送方动作</strong>：帧 3 的定时器超时，<strong>重传帧 3 及后续的帧 4</strong>（尽管帧 4 是正确的）；接收方收到重传的帧 3、4 后，按序接收并发送 ACK5（确认帧 0~4）。</li>
+</ol>
+<p><img src="assets/image-20251222220202849.png" alt="image-20251222220202849" style="zoom: 25%;"></img></p>
+<ol>
+<li><p>差错情况 2：数据帧丢失</p>
+</li>
+<li><p><strong>场景</strong>：发送方发帧 0~4，其中帧 2 丢失。</p>
+</li>
+<li><strong>接收方动作</strong>：没收到帧 2，后续收到帧 3、4 时，因是乱序帧，直接丢弃；发送 NAK2或者ACK1，表示2之前的帧已经收到。</li>
+<li><strong>发送方动作</strong>：收到 NAK2 或定时器超时，<strong>重传帧 2、3、4</strong>；接收方按序接收后发送 ACK5。</li>
+</ol>
+<p><img src="assets/image-20251222220212062.png" alt="image-20251222220212062" style="zoom:25%;"></img></p>
+<ol>
+<li><p>差错情况 3：应答帧（ACK）丢失</p>
+</li>
+<li><p><strong>场景</strong>：发送方发帧 0~2，接收方正确接收并发送 ACK3，但 ACK3 丢失。</p>
+</li>
+<li><strong>发送方动作</strong>：帧 0 的定时器超时，<strong>重传帧 0、1、2</strong>。</li>
+<li><strong>接收方动作</strong>：此时期望序号是 3，收到的帧 0、1、2 都是乱序帧，直接丢弃，并<strong>重发 ACK3</strong>；发送方收到 ACK3 后，停止重传并滑动窗口。</li>
+</ol>
+<p><img src="assets/image-20251222220229918.png" alt="image-20251222220229918"></img></p>
+<p>对于回退N协议的窗口大小与编号范围的关系：</p>
+<p>BN 的帧编号采用<strong>模 n</strong>（比如 n=8，编号 0~7 循环），<strong>发送窗口大小必须 ≤ n-1</strong>：窗口大小≤n-1 时，发送窗口内的帧序号范围，与 “下一轮发送” 的帧序号范围不会重叠；</p>
+<p>窗口大小=接收窗口大小+发送窗口大小</p>
+<table>
+<thead>
+<tr>
+<th>窗口大小情况</th>
+<th>协议是否可行</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>窗口大小 &gt; n</td>
+<td>不可行</td>
+<td>序号循环后，新帧和重传帧序号完全重叠，无法区分</td>
+</tr>
+<tr>
+<td>窗口大小 = n</td>
+<td>不可行</td>
+<td>应答帧丢失时，接收方会把重传帧误判为新帧（如图 72 示例）</td>
+</tr>
+<tr>
+<td>窗口大小 = n-1</td>
+<td>可行</td>
+<td>序号不会完全重叠，接收方能区分新帧和重传帧（如图 73 示例）</td>
+</tr>
+<tr>
+<td>窗口大小 &lt; n-1</td>
+<td>可行</td>
+<td>效率略低，但兼容性更好</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li><p>窗口尺寸等于n时,应答帧丢失时协议失败</p>
+<p>即接收方无法分别接收的帧是<strong>重发的旧的帧</strong>还是<strong>下一个滑动窗新的帧</strong></p>
+<p><img src="assets/image-20251222215746926.png" alt="image-20251222215746926" style="zoom:33%;"></img></p>
+</li>
+<li><p>窗口尺寸等于 n-1 时,协议成功</p>
+<p><img src="assets/image-20251222215838071.png" alt="image-20251222215838071" style="zoom:33%;"></img></p>
+</li>
+</ol>
+<h5 id="选择拒绝自动重复请求（sr）"><a name="选择拒绝自动重复请求（sr）" class="anchor-navigation-ex-anchor" href="#选择拒绝自动重复请求（sr）"><i class="fa fa-link" aria-hidden="true"></i></a>选择拒绝自动重复请求（SR）</h5>
+<p>核心逻辑是 “只重传出错 / 丢失的帧，不浪费带宽重传正确帧”</p>
+<p>发送方连续发送多帧（窗口内），若某帧出错 / 丢失，仅重传该帧，后续已正确发送的帧无需重传；</p>
+<p>接收方会缓存窗口内的乱序正确帧，待缺失帧补全后按序交给上层。</p>
+<ul>
+<li>对比回退 N 帧（GBN）：GBN 是 “一帧错，全重传”，SR 是 “错哪帧，传哪帧”</li>
+</ul>
+<p>适用前提：</p>
+<ul>
+<li>接收窗口大小＞1：能缓存乱序到达的正确帧，不能像 GBN 那样仅按序接收。</li>
+<li>接收方需排序功能：缓存乱序帧后，按序号重组。</li>
+<li>发送方需查找机制：能精准定位出错帧，单独重传（而非重传整个窗口）。</li>
+</ul>
+<p>优点：避免重传正确帧，信道利用率高，尤其适合出错率较高的场景。</p>
+<p>缺点：接收方需更大缓冲区存储乱序帧，实现复杂度高</p>
+<p>三类差错的处理流程：数据帧损坏，数据帧丢失，应答帧（ACK）丢失</p>
+<ol>
+<li><p>差错 1：帧破坏（数据帧损坏）</p>
+</li>
+<li><p>流程：</p>
+<ol>
+<li>发送方 A 连续发帧 0、1、2、3、4、5；</li>
+<li>接收方 B 收到帧 2 时校验出错（Step1：错误检测），其他帧（0、1、3、4、5）正确，缓存这些帧；</li>
+<li>B 发送否定应答（NAK2），告知 A “帧 2 损坏”（Step2：发送否定应答）；</li>
+<li>A 收到 NAK2 后，仅重传帧 2（Step3：重传出错帧）；</li>
+<li>B 收到重传的帧 2，补全序列，按序交给上层，发送 ACK5（确认 0~5 帧均收到）。</li>
+</ol>
+<p><img src="assets/image-20251222223138057.png" alt="image-20251222223138057" style="zoom:25%;"></img></p>
+</li>
+<li><p>差错 2：数据帧丢失</p>
+</li>
+<li><p>流程：</p>
+<ol>
+<li>发送方 A 发帧 0、1、2、3、4、5，其中帧 2 在传输中丢失；</li>
+<li>接收方 B 收到帧 0、1、3、4、5，发现帧 2 缺失，缓存已收帧，发送 NAK2；</li>
+<li>A 收到 NAK2（或帧 2 超时），仅重传帧 2；</li>
+<li>B 收到帧 2 后补全序列，发送 ACK5 确认。</li>
+</ol>
+</li>
+<li>特殊情况：若丢失的是最后一帧（如帧 5），接收方不会主动反应，发送方因未收到对应确认，超时后重传该帧。</li>
+</ol>
+<p><img src="assets/image-20251222223226375.png" alt="image-20251222223226375" style="zoom:25%;"></img></p>
+<ol>
+<li><p>差错 3：应答帧（ACK）丢失</p>
+</li>
+<li><p>流程：</p>
+<ol>
+<li>发送方 A 发完窗口内所有帧（如 0~5），启动超时定时器；</li>
+<li>接收方 B 正确接收所有帧，发送 ACK5，但 ACK5 在传输中丢失；</li>
+<li>A 超时未收到确认，将窗口内所有 “未确认帧”（此处为 0~5）重传一遍；</li>
+<li>B 收到重传帧后，通过序号识别为重复帧，直接丢弃，并重发 ACK5；</li>
+<li>A 收到 ACK5 后，停止重传，滑动窗口。</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>窗口大小与帧编号范围的关系:</p>
+<ul>
+<li>如果帧的编号范围是0到n-1(即模n编号)，则发送窗口尺寸和接收窗口尺寸之和应小于或等于<code>n</code><ul>
+<li>发送窗口大小（Wt） + 接收窗口大小（Wr） ≤ n（帧编号范围 0~n-1）；</li>
+</ul>
+</li>
+<li><p>如果要求发送窗口和接收窗口大小相等，则窗口尺寸应该小于或等于<code>n/2</code></p>
+<ul>
+<li>若要求 Wt=Wr（常用场景），则 Wt=Wr ≤ n/2。</li>
+</ul>
+</li>
+<li><p>发送窗口尺寸太大,协议会失败</p>
+<p><img src="assets/image-20251222215537733.png" alt="image-20251222215537733" style="zoom: 33%;"></img></p>
+</li>
+<li><p>接收窗口尺寸太大,协议失败</p>
+<p><img src="assets/image-20251222215553199.png" alt="image-20251222215553199" style="zoom:33%;"></img></p>
+</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h5 id="回退-n-帧（gbn）协议的传输效率"><a name="回退-n-帧（gbn）协议的传输效率" class="anchor-navigation-ex-anchor" href="#回退-n-帧（gbn）协议的传输效率"><i class="fa fa-link" aria-hidden="true"></i></a>回退 N 帧（GBN）协议的传输效率</h5>
+<ul>
+<li>传输效率与差错率有关，无差错时，p=0，滑窗协议的传输效率 η=100%；</li>
+<li>有差错时，传输效率与传送一帧的总时间和发送端发送一帧的时间之比有关，如果线路传输延时、应答帧时间越长，则传输效率下降越多</li>
+</ul>
+<p>延时比<code>t_W / t_I</code>：传播 / 应答延时越长，效率越敏感</p>
+<ul>
+<li>长延时场景下，GBN 的连续发送能抵消重传开销，效率远超停止等待。</li>
+<li>短延时场景下，等待时间占比低，GBN 的优势不明显。</li>
+</ul>
+<h5 id="窗口大小的选择"><a name="窗口大小的选择" class="anchor-navigation-ex-anchor" href="#窗口大小的选择"><i class="fa fa-link" aria-hidden="true"></i></a>窗口大小的选择</h5>
+<p>窗口大小<em>n</em>的核心作用是 “填满链路延时”，避免发送方过早等待，需满足：<code>n*tI &gt;= tI+tS+2*tP</code></p>
+<ul>
+<li>窗口太小：发送方发完窗口内帧后，还没收到确认，只能等待，链路空闲，效率下降。</li>
+<li>窗口太大：需要更大缓冲区存储未确认帧，增加设备成本，且超过链路承载能力后，效率不再提升（边际效益递减）。</li>
+</ul>
+<hr></hr>
+<h2 id="数据链路控制协议"><a name="数据链路控制协议" class="anchor-navigation-ex-anchor" href="#数据链路控制协议"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路控制协议</h2>
+<p>数据链路控制协议是数据链路层的核心执行标准，负责规范帧格式、链路管理、差错控制等关键操作</p>
+<h3 id="ieee-局域网参考模型"><a name="ieee-局域网参考模型" class="anchor-navigation-ex-anchor" href="#ieee-局域网参考模型"><i class="fa fa-link" aria-hidden="true"></i></a>IEEE 局域网参考模型</h3>
+<p>IEEE 局域网模型仅涉及 OSI 的<strong>物理层</strong>和<strong>数据链路层</strong>，并对这两层进一步拆分，上层（网络层及以上）与 OSI 模型保持一致：</p>
+<table>
+<thead>
+<tr>
+<th>OSI 模型</th>
+<th>IEEE 局域网模型</th>
+<th>核心功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网络层及以上</td>
+<td>网络层及以上</td>
+<td>保持原有功能（如路由、数据传输控制），与底层局域网类型无关</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>逻辑链路控制子层（LLC，802.2）</td>
+<td>提供统一接口，屏蔽 MAC 子层差异，处理流量控制、差错控制</td>
+</tr>
+<tr>
+<td></td>
+<td>媒体访问控制子层（MAC）</td>
+<td>适配具体传输介质，定义信道访问规则、帧格式、物理地址（MAC 地址）</td>
+</tr>
+<tr>
+<td>物理层</td>
+<td>介质访问单元（MAU，上子层）</td>
+<td>实现物理信号的收发、编码解码（如曼彻斯特编码）、链路激活</td>
+</tr>
+<tr>
+<td></td>
+<td>介质说明（下子层）</td>
+<td>定义物理介质特性（如电缆类型、接口标准、传输速率）</td>
+</tr>
+</tbody>
+</table>
+<p>对于MAC子层，IEEE 802.3（以太网）、802.4（令牌总线）、802.5（令牌环）、802.11（无线 Wi-Fi），每个标准对应专属的 MAC 子层实现。</p>
+<p>而LLC子层，为网络层提供统一的服务接口，屏蔽不同 MAC 子层的差异，让上层协议（如 IP）无需关心底层的局域网是以太网还是令牌环。</p>
+<h3 id="逻辑链路控制子层llc"><a name="逻辑链路控制子层llc" class="anchor-navigation-ex-anchor" href="#逻辑链路控制子层llc"><i class="fa fa-link" aria-hidden="true"></i></a>逻辑链路控制子层LLC</h3>
+<p><strong>局域网 LLC 子层（逻辑链路控制）</strong> ，本质是 LLC 作为 “上层统一接口、下层适配 MAC” 的中间层，解决不同局域网（以太网、令牌环等）的互连兼容问题</p>
+<ul>
+<li>LLC 子层位于<strong>网络层</strong>和<strong>MAC 子层</strong>之间</li>
+<li>向上：给网络层提供统一的服务接口，让上层协议（如 IP）不用关心底层是以太网还是令牌环；</li>
+<li>向下：屏蔽不同 MAC 子层的差异（比如以太网的 CSMA/CD、令牌环的令牌传递），适配各种局域网类型；</li>
+<li>复用：让一个站点的多个进程（如浏览器、聊天软件）通过不同 “服务访问点（SAP）”，共享同一个 MAC 帧资源通信。</li>
+</ul>
+<p><img src="assets/image-20251222225533183.png" alt="image-20251222225533183" style="zoom: 33%;"></img></p>
+<h4 id="llc-pdu（llc-帧）的核心结构"><a name="llc-pdu（llc-帧）的核心结构" class="anchor-navigation-ex-anchor" href="#llc-pdu（llc-帧）的核心结构"><i class="fa fa-link" aria-hidden="true"></i></a>LLC-PDU（LLC 帧）的核心结构</h4>
+<p>LLC 帧是 LLC 子层的协议数据单元，结构简单且标准化，核心由 4 个字段组成：</p>
+<pre><code class="lang-plaintext">DSAP目的SAP（7位） + SSAP源SAP（7位） + 控制字段（8/16位） + LLC数据（网络层PDU）
+</code></pre>
+<ul>
+<li><strong>LLC 数据</strong>：本质是网络层传递下来的数据包（如 IP 数据报），是 LLC 帧的 “有效载荷”；</li>
+<li>整个 LLC-PDU 会被嵌入到 MAC 帧的 “MAC 数据” 字段中，再加上 MAC 帧首（目的 MAC、源 MAC 等）和帧尾（CRC 校验），形成完整的传输单元，最终通过物理层发送。</li>
+</ul>
+<p><img src="assets/image-20251222225655755.png" alt="image-20251222225655755"></img></p>
+<h4 id="llc-的三种帧类型"><a name="llc-的三种帧类型" class="anchor-navigation-ex-anchor" href="#llc-的三种帧类型"><i class="fa fa-link" aria-hidden="true"></i></a>LLC 的三种帧类型</h4>
+<ol>
+<li><p>信息帧（I - 帧）</p>
+</li>
+<li><p>控制字段结构：1 位（0，I 帧标识） + 7 位 N (S)（发送序号） + 1 位 P/F（是否结束发送） + 7 位 N (R)（期望接收的下一个序号）；</p>
+</li>
+<li><p>功能：传输用户数据（LLC 数据字段），同时通过序号实现流量控制和差错控制（和滑动窗口协议逻辑一致）。</p>
+</li>
+<li><p>监管帧（S - 帧）</p>
+</li>
+<li><p>控制字段结构：2 位（10，S 帧标识） + 2 位 SS（类型码） + 4 位保留位 + 1 位 P/F + 7 位 N (R)（确认序号）；</p>
+</li>
+<li>类型码含义：00 = 接收就绪（RR，确认数据已收），10 = 接收未就绪（RNR，让发送方暂停），01 = 拒绝（REJ，要求重传）；</li>
+<li><p>功能：仅负责流量控制和差错控制，<strong>无信息字段</strong>（不传输用户数据）。</p>
+</li>
+<li><p>无编号帧（U - 帧）</p>
+</li>
+<li><p>控制字段结构：2 位（11，U 帧标识） + 2 位 MM（功能码） + 1 位 P/F + 3 位 MM（扩展功能码）；其中功能码一共<code>5</code>位</p>
+</li>
+<li>功能：链路管理（如建立连接、释放连接），不涉及序号控制，适用于简单的链路控制场景。</li>
+</ol>
+<p><img src="assets/image-20251222225831521.png" alt="image-20251222225831521" style="zoom:50%;"></img></p>
+<blockquote>
+<p>[!tip]</p>
+<h3 id="与-hdlc-帧的核心区别"><a name="与-hdlc-帧的核心区别" class="anchor-navigation-ex-anchor" href="#与-hdlc-帧的核心区别"><i class="fa fa-link" aria-hidden="true"></i></a>与 HDLC 帧的核心区别</h3>
+<ul>
+<li>无 “选择拒绝帧（SREJ）”：LLC 只支持 “拒绝帧（REJ）”，即一帧出错需重传后续所有帧（类似 GBN 协议）；</li>
+<li>无 CRC 校验：LLC 帧本身不做差错检测，CRC 校验由下层的 MAC 子层完成，LLC 仅负责接收 MAC 子层校验通过的帧。</li>
+</ul>
+</blockquote>
+<h4 id="llc-提供的三类服务"><a name="llc-提供的三类服务" class="anchor-navigation-ex-anchor" href="#llc-提供的三类服务"><i class="fa fa-link" aria-hidden="true"></i></a>LLC 提供的三类服务</h4>
+<ol>
+<li><p>无确认无连接服务</p>
+</li>
+<li><p>核心逻辑：发送方发完帧就结束，不需要接收方回复确认；</p>
+</li>
+<li>差错 / 流量控制：由高层协议（如 TCP）负责，LLC 不处理；</li>
+<li><p>适用场景：信道误码率低、实时性要求高的场景（如有线以太网）。</p>
+</li>
+<li><p>有确认无连接服务</p>
+</li>
+<li><p>核心逻辑：每发送一帧，都需要接收方单独回复确认（ACK），确保帧被正确接收；</p>
+</li>
+<li>特点：无需建立连接，但单帧可靠；</li>
+<li><p>适用场景：信道不可靠的场景（如无线 Wi-Fi，802.11 协议依赖此服务）。</p>
+</li>
+<li><p>有确认面向连接服务</p>
+</li>
+<li><p>核心逻辑：通信前先建立连接（通过 U - 帧协商），数据传输时每帧都需确认，结束后释放连接；</p>
+</li>
+<li>特点：连接导向，全程可靠；</li>
+<li>适用场景：无复杂上层协议的简单终端（如蓝牙设备、工业控制终端），直接基于链路层通信。</li>
+</ol>
+<hr></hr>
+<h2 id="介质访问控制协议"><a name="介质访问控制协议" class="anchor-navigation-ex-anchor" href="#介质访问控制协议"><i class="fa fa-link" aria-hidden="true"></i></a>介质访问控制协议</h2>
+<p>介质访问控制（MAC）协议的核心是解决 “多设备共享信道时的使用权分配” 问题，避免信号冲突，确保通信有序</p>
+<h3 id="以太网"><a name="以太网" class="anchor-navigation-ex-anchor" href="#以太网"><i class="fa fa-link" aria-hidden="true"></i></a>以太网</h3>
+<p>以太网拓扑结构的核心是 “共享介质的广播信道”，随技术发展从<strong>总线形</strong>演进为<strong>星形</strong>，同时通过 CSMA 机制减少共享信道的冲突</p>
+<p>IEEE 802.3 把以太网分为两类，核心差异在传输方式：</p>
+<ul>
+<li><strong>基带</strong>：直接用数字信号传输数据（比如 0 和 1 的电信号），是目前最常用的类型；</li>
+<li><strong>宽带</strong>：用模拟信号传输（类似有线电视的信号），现在很少使用，重点关注基带即可。</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>基带类的 5 个标准，核心是 “速率 + 传输介质” 的组合，命名有规律（以 “10Base-T” 为例）：</p>
+<ul>
+<li>“10”：代表传输速率是 10Mbps（100Base-T 就是 100Mbps）；</li>
+<li>“Base”：代表基带传输；</li>
+<li>最后一位（5/2/T）：代表传输介质（5 = 粗同轴电缆、2 = 细同轴电缆、T = 双绞线）。</li>
+</ul>
+<p>基带传输用 <strong>曼彻斯特编码</strong> 把数字信号（0 和 1）转换成物理信号</p>
+</blockquote>
+<p>每个接入以太网的设备（电脑、服务器等）都必须装 <strong>NIC（网络接口卡）</strong>，也就是常说的 “网卡”：</p>
+<ul>
+<li>安装位置：通常内置在设备内部（比如电脑主板上的集成网卡）；</li>
+<li>唯一标识：NIC 上固化了一个 <strong>6 字节（48 位）的物理地址</strong>（即 MAC 地址），全世界任意两个 NIC 的 MAC 地址都不重复，就像设备的 “身份证”，用来在以太网中精准识别目标设备。</li>
+</ul>
+<h4 id="以太网拓扑结构"><a name="以太网拓扑结构" class="anchor-navigation-ex-anchor" href="#以太网拓扑结构"><i class="fa fa-link" aria-hidden="true"></i></a>以太网拓扑结构</h4>
+<p>以太网拓扑结构随技术发展从<strong>总线形</strong>演进为<strong>星形</strong>，核心围绕 “共享介质的广播信道” 本质，优化传输可靠性与可维护性</p>
+<ol>
+<li>1990年前的以太网,使用<strong>同轴电缆</strong>,采用<strong>总线形</strong>拓扑结构<ul>
+<li>比如对应 10Base5（粗同轴电缆）和 10Base2（细同轴电缆）标准，同时为典型的<strong>共享介质广播信道</strong></li>
+</ul>
+</li>
+<li>1990 年,IEEE 制定出802.3i标准,使用<strong>双绞线</strong>的<strong>星形</strong>拓扑（物理上是星形，但是逻辑上还是总线形，因为集线器是共享介质广播信道）<ul>
+<li>通过<strong>双绞线</strong>（常用两对线）连接到中心设备 “集线器（Hub）”，站点侧采用 RJ-45 接头连接网卡（NIC），形成 “中心辐射” 结构</li>
+<li>仍为<strong>共享介质广播信道</strong>—— 集线器不做数据筛选，会将一个站点的信号转发到所有端口，所有站点共享集线器总带宽</li>
+</ul>
+</li>
+</ol>
+<hr></hr>
+<h4 id="以太网csmacd"><a name="以太网csmacd" class="anchor-navigation-ex-anchor" href="#以太网csmacd"><i class="fa fa-link" aria-hidden="true"></i></a>以太网CSMA/CD</h4>
+<p>当多个用户不加控制同时访问共享信道时，会由于不同信号叠加而相互破坏，导致信号会产生严重的失真，所以需要处理共享广播信道以太网的冲突问题，比如载波侦听多路访问CSMA</p>
+<p>CSMA（载波侦听多路访问）是共享信道的基础介质访问机制，核心是 “发送前先侦听”；</p>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>多路访问（MA）：多个站点共享同一信道，一个站点发送的数据会广播到所有站点，无集中管制，依赖接收方响应判断数据是否完好。</li>
+<li>载波侦听（CS）：站点发送数据前，通过检测信道电压判断是否 “忙碌”（有无其他站点传输信号）。</li>
+<li><strong>信道空闲则直接传输；信道忙碌则避让一段时间后重试</strong>，减少冲突概率。</li>
+</ul>
+</blockquote>
+<p>依据避让时间的选择方法,CSMA可分为三种:</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>核心逻辑</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非坚持 CSMA</td>
+<td>检测到信道忙，随机等待一段时间后再侦听</td>
+<td>冲突概率低，但信道利用率可能偏低</td>
+</tr>
+<tr>
+<td>坚持 CSMA</td>
+<td>检测到信道忙，持续侦听，一旦空闲立即发送</td>
+<td>信道利用率高，但多站同时抢占易冲突</td>
+</tr>
+<tr>
+<td>P - 坚持 CSMA</td>
+<td>检测到信道空闲，以概率 P 直接发送，以概率（1-P）等待一个时隙后再尝试</td>
+<td>平衡利用率与冲突概率，适配时隙化信道</td>
+</tr>
+</tbody>
+</table>
+<p>即使先侦听，仍会因 “信号传播延迟” 产生冲突</p>
+<p>所以必须采用<strong>CSMA/CD</strong></p>
+<p>CSMA/CD 是 IEEE 802.3 标准的核心，在 CSMA 基础上增加 <strong>“冲突检测” 和 “冲突处理”</strong>，形成 “侦听 - 发送 - 检测 - 重传” 的闭环，适用于半双工共享信道以太网。</p>
+<ul>
+<li>冲突检测：站点发送数据的同时，持续侦听信道 —— 若检测到信号叠加失真（电压异常），立即判定为 “冲突”。</li>
+<li>冲突处理：<ol>
+<li>立即停止发送数据，避免无效占用信道；</li>
+<li>发送 “阻塞信号”，通知其他站点信道冲突，防止后续误发送；</li>
+<li>等待随机时间后，重新执行 CSMA 流程重试发送。</li>
+</ol>
+</li>
+</ul>
+<p><img src="assets/image-20251222231638088.png" alt="image-20251222231638088" style="zoom:33%;"></img></p>
+<p>关键在于<strong>冲突检测窗口与最短帧长</strong></p>
+<p>（1）冲突检测窗口（争用期）</p>
+<ul>
+<li>以太网的端到端往返时延（2T），即信号从一个站点传到最远站点再返回的时间。</li>
+<li>核心逻辑：若发送方在 “2T” 内未检测到冲突，说明该帧发送不会与其他站点冲突（所有站点已感知信道忙碌）。</li>
+</ul>
+<p><img src="assets/image-20251222231742571.png" alt="image-20251222231742571"></img></p>
+<p>（2）<strong>最短帧长</strong></p>
+<ul>
+<li>定义：争用期（2T）内可传输的比特数，确保发送方在检测到冲突前，已发送足够长的帧，避免冲突后无法通知其他站点。</li>
+<li>计算公式：<strong><em>Lmin</em>=2<em>t</em>×<em>R</em></strong>（t=D/V即传播时延，D 为最大距离，V 为信号传播速度，R 为传输速率）。也可以是两倍的时延带宽积</li>
+<li>实例：10Mbps 以太网的争用期可传输 512bit（64 字节），因此规定最短有效帧长为 64 字节；长度＜64 字节的帧均为冲突中止的无效帧。</li>
+</ul>
+<p>而对于冲突重试则需要采用<strong>二进制指数退避算法</strong></p>
+<p>发生冲突的站点停止发送数据,并发送完阻塞信号；为降低再次冲突概率，站点冲突后按以下规则等待重试：</p>
+<ul>
+<li>基本退避时间 = 争用期（2T）。</li>
+<li>第 k 次冲突时，从 [1, 2^k] 中随机取 r，退避时间 = t = r×2T。</li>
+<li>k=Min (重传次数，10)：重传≤10 次时，k = 重传次数；重传达 <strong>16 次</strong>仍失败，丢弃帧并向上层报错。</li>
+</ul>
+<p><img src="assets/image-20251222231939651.png" alt="image-20251222231939651" style="zoom:33%;"></img></p>
+<blockquote>
+<p>[!note]</p>
+<ul>
+<li>CSMA 是 “预防冲突” 的基础机制，靠 “侦听 + 避让” 减少冲突，但无法完全避免。</li>
+<li>CSMA/CD 是以太网的完整解决方案，通过 “侦听（CS）+ 共享访问（MA）+ 冲突检测（CD）+ 退避重传”，实现共享信道的有序通信。</li>
+<li>适配早期两个以上站点共享信道、各站点之间以半双工方式进行通信的以太网即一个冲突域</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h4 id="以太网帧结构"><a name="以太网帧结构" class="anchor-navigation-ex-anchor" href="#以太网帧结构"><i class="fa fa-link" aria-hidden="true"></i></a>以太网帧结构</h4>
+<p>以太网 MAC 帧的核心是<strong>两种标准格式</strong>，通过 “长度 / 类型” 字段区分，其中 Ethernet II（DIX V2）是目前最常用的格式</p>
+<p><img src="assets/image-20251222232308263.png" alt="image-20251222232308263"></img></p>
+<p>区分依据：2 字节 “长度 / 类型” 字段</p>
+<ul>
+<li><strong>Ethernet II 标准（DIX V2）</strong>：字段值 &gt; 0X0600（十进制 1536），此时该字段是 “类型字段”，标识上层协议类型。</li>
+<li><p><strong>IEEE 802.3 标准</strong>：字段值 ≤ 0X0600，此时该字段是 “长度字段”，标识后续数据字段的字节数。</p>
+</li>
+<li><p>Ethernet II 帧</p>
+<pre><code class="lang-plaintext">前导码（7B） + 帧起始定界符（1B） + 目的地址（6B） + 源地址（6B） + 类型字段（2B） + 数据字段（46B~1500B） + 帧校验（4B）
+</code></pre>
+<p><img src="assets/image-20251222232343479.png" alt="image-20251222232343479" style="zoom:33%;"></img></p>
+</li>
+<li><p>目的地址 + 源地址（MAC 地址6B）：硬件地址（物理地址），全球唯一，固化在网卡（NIC）中</p>
+<p>前 3 字节为 “组织唯一标识符（OUI）”（IEEE 分配给厂商），后 3 字节为 “扩展唯一标识符”（厂商自行分配，确保无重复）</p>
+<p><img src="assets/image-20251222232537701.png" alt="image-20251222232537701"></img></p>
+</li>
+<li><p>MAC地址分三种:单播地址､组播地址和广播地址：规定<strong>地址字段的第一字节的最低位</strong>用于标识单播还是组播地址</p>
+<p><img src="assets/image-20251222232558333.png" alt="image-20251222232558333" style="zoom: 33%;"></img></p>
+</li>
+<li><p>类型字段（2 字节）：指明上层协议，让接收方将数据交给正确的网络层协议。</p>
+</li>
+<li><p>数据字段（46B~1500B）：上层协议的 PDU（如 IP 数据报、ARP 报文）。</p>
+</li>
+<li><p>帧校验字段（FCS，4 字节）：差错检测，采用 CRC-32 校验算法。</p>
+</li>
+</ul>
+<ol>
+<li><p>过时格式：IEEE 802.3 帧</p>
+<pre><code class="lang-plaintext">目的地址（6B） + 源地址（6B） + LLC-PDU长度（2B） + LLC-PDU（46B~1500B） + 帧校验（4B）
+</code></pre>
+<ul>
+<li>核心区别：将 “类型字段” 改为 “LLC-PDU 长度字段”，数据字段必须封装 LLC 帧（含 DSAP、SSAP、控制字段），再承载网络层数据。</li>
+</ul>
+</li>
+<li><p>无效 MAC 帧判定（64B~1518B 为有效帧长度）</p>
+<p>满足以下任一条件即为无效帧，接收方直接丢弃，不重传：</p>
+<ol>
+<li>数据字段长度与 “长度字段”（IEEE 802.3）的值不一致；</li>
+<li>帧总长度不是整数个字节；</li>
+<li>CRC 校验结果与帧校验字段不匹配（帧损坏）；</li>
+<li>数据字段长度不在 46B~1500B 之间（未满足最小填充或超过 MTU）。</li>
+</ol>
+</li>
+</ol>
+<p><img src="assets/image-20251222232907565.png" alt="image-20251222232907565"></img></p>
+<hr></hr>
+<h3 id="无线局域网"><a name="无线局域网" class="anchor-navigation-ex-anchor" href="#无线局域网"><i class="fa fa-link" aria-hidden="true"></i></a>无线局域网</h3>
+<p>无线局域网（WLAN）是采用无线通信技术覆盖局部地理范围的网络，核心基于 IEEE 802.11 协议簇，<strong>Wi-Fi 是其通俗统称</strong>（二者意义等同），核心特点是无物理线缆、支持移动接入，半双工通信，同一时刻仅一台设备可发送需排队等待</p>
+<p>WLAN 可分为两大类： 有固定基站的 WLAN；无固定基站的 WLAN</p>
+<h4 id="无线局域网标准"><a name="无线局域网标准" class="anchor-navigation-ex-anchor" href="#无线局域网标准"><i class="fa fa-link" aria-hidden="true"></i></a>无线局域网标准</h4>
+<p>IEEE 802.11 标准定义了 3 种物理层介质，适配不同传输场景：</p>
+<ol>
+<li><strong>跳频扩展频谱（FHSS）</strong>：通过快速切换频率避免干扰，适用于早期低速传输。</li>
+<li><strong>直接序列扩展频谱（DSSS）</strong>：将数据信号与伪随机序列叠加传输，抗干扰能力强，802.11b 采用此技术。</li>
+<li><strong>红外线（IR）</strong>：利用红外光传输，受遮挡影响大，适用短距离无遮挡场景。</li>
+</ol>
+<p><strong>正交频分复用（OFDM）</strong>，从 802.11a/g 开始普及，通过将信道划分为多个子信道并行传输，提升抗干扰能力与传输速率</p>
+<p>很多无线局域网适配器做成双模（802.11a/g)或三模(802.11a/b/g或802.11b/g/n)</p>
+<p>对于802.11b；802.11g；802.11a三类主流标准</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>802.11b</th>
+<th>802.11g</th>
+<th>802.11a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAC 协议</td>
+<td>均采用 CSMA/CA（载波侦听多路访问 / 冲突避免），因无线信道冲突检测困难，通过 “预约信道 + ACK 确认” 避免冲突</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>工作频率</td>
+<td>2.4GHz（开放频段，易受蓝牙、微波炉等干扰）</td>
+<td>2.4GHz（与 802.11b 兼容）</td>
+<td>5GHz（频段干净，干扰少，但覆盖范围略小）</td>
+</tr>
+<tr>
+<td>物理编码</td>
+<td>DSSS</td>
+<td>DSSS（兼容 802.11b）或 OFDM（高速传输）</td>
+<td>OFDM</td>
+</tr>
+<tr>
+<td>最高速率</td>
+<td>11Mbps</td>
+<td>54Mbps</td>
+<td>54Mbps</td>
+</tr>
+<tr>
+<td>兼容性</td>
+<td>向下兼容 802.11 标准</td>
+<td>向下兼容 802.11b/g</td>
+<td>不兼容 802.11b，需双模 / 三模适配器互通</td>
+</tr>
+</tbody>
+</table>
+<h4 id="拓扑结构"><a name="拓扑结构" class="anchor-navigation-ex-anchor" href="#拓扑结构"><i class="fa fa-link" aria-hidden="true"></i></a>拓扑结构</h4>
+<p>基本服务集（BSS）是无线局域网（WLAN）的最小功能单元</p>
+<p>本质是 “一组共享同一无线链路、遵循相同 MAC 协议的站点集合”，所有站点通过竞争方式使用信道，核心分为 “独立 BSS” 和 “有 AP 的 BSS” 两类</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>有 AP 的 BSS（基础设施 BSS）</th>
+<th>独立 BSS（IBSS/Ad-Hoc）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心设备</td>
+<td>必须有 AP（中心节点）</td>
+<td>无 AP，仅站点对等连接</td>
+</tr>
+<tr>
+<td>拓扑结构</td>
+<td>星形（站点→AP→站点）</td>
+<td>网状（站点直接互连）</td>
+</tr>
+<tr>
+<td>控制方式</td>
+<td>AP 集中控制信道、接入</td>
+<td>站点自主竞争，无中心控制</td>
+</tr>
+<tr>
+<td>覆盖范围</td>
+<td>较大（由 AP 功率决定）</td>
+<td>较小（由站点信号决定）</td>
+</tr>
+<tr>
+<td>扩展能力</td>
+<td>强（多 BSS 可互连）</td>
+<td>弱（仅局限于少量站点）</td>
+</tr>
+<tr>
+<td>典型场景</td>
+<td>家庭、办公、公共场所 Wi-Fi</td>
+<td>临时文件共享、应急通信</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/image-20251223211911588.png" alt="image-20251223211911588"></img></p>
+<h4 id="wlan-协议栈"><a name="wlan-协议栈" class="anchor-navigation-ex-anchor" href="#wlan-协议栈"><i class="fa fa-link" aria-hidden="true"></i></a>WLAN 协议栈</h4>
+<p>WLAN（无线局域网）协议栈核心遵循 IEEE 802 标准，与有线以太网（802.3）上层完全兼容，仅在数据链路层（MAC 子层）和物理层适配无线信道特性</p>
+<p>同时通过 MAC 层双工作模式、帧间间隔（IFS）、专用 MAC 帧结构保障无线传输有序可靠</p>
+<p>WLAN 与 有线以太网</p>
+<ul>
+<li>上层（应用层→网络层）：WLAN 与有线以太网完全共用，无需额外适配，比如电脑连接 Wi-Fi 或网线，浏览器、办公软件的使用体验一致。</li>
+<li>下层（数据链路层→物理层）：因传输介质不同（无线开放信道 vs 有线封闭信道），MAC 子层的冲突处理机制（CSMA/CA vs CSMA/CD）、帧结构，以及物理层的信号处理方式存在本质区别。</li>
+</ul>
+<h5 id="wlan-mac层"><a name="wlan-mac层" class="anchor-navigation-ex-anchor" href="#wlan-mac层"><i class="fa fa-link" aria-hidden="true"></i></a>WLAN MAC层</h5>
+<p>WLAN MAC 层通过 “<strong>争用 + 无争用</strong>” 双模式，适配不同优先级数据传输，避免无线信道冲突：</p>
+<p>争用服务：分布协调功能（DCF）</p>
+<ul>
+<li>基于 CSMA/CA（载波侦听多路访问 / 冲突避免），是 WLAN 默认工作模式。</li>
+<li>站点发送数据前先侦听信道，空闲则等待帧间间隔（IFS）后发送；忙则持续侦听，待信道空闲后按退避算法重试，通过 RTS/CTS（信道预约）和 ACK 确认避免冲突。</li>
+<li>适用场景：<strong>普通数据</strong>传输（如网页浏览、文件下载），分布式竞争，无需集中控制。</li>
+</ul>
+<p>无争用服务：点协调功能（PCF）</p>
+<ul>
+<li>集中控制，由<strong>接入点（AP）主导分配</strong>信道使用权。</li>
+<li>AP 通过轮询方式，依次允许各站点发送数据，站点无需竞争信道，直接在分配时隙内传输。</li>
+<li>适用场景：<strong>高优先级数据</strong>（如语音通话、视频会议），无冲突、低延迟，依赖 AP 的集中调度。</li>
+</ul>
+<p><img src="assets/image-20251223212205362.png" alt="image-20251223212205362"></img></p>
+<h5 id="帧间间隔（ifs）"><a name="帧间间隔（ifs）" class="anchor-navigation-ex-anchor" href="#帧间间隔（ifs）"><i class="fa fa-link" aria-hidden="true"></i></a>帧间间隔（IFS）</h5>
+<p>IFS 是站点发送帧后的<strong>强制等待时间</strong>，通过长度差异划分帧优先级，减少冲突概率：</p>
+<ul>
+<li>帧间间隔长度取决于该站欲发送的帧的类型</li>
+<li>优先级越高，等待时间越短，越容易抢占信道；低优先级帧若遇高优先级帧发送，需重新等待，避免冲突。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IFS 类型</th>
+<th>中文名称</th>
+<th>长度关系</th>
+<th>适用帧类型</th>
+<th>核心作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIFS</td>
+<td>短帧间间隔</td>
+<td>最短（基础单位）</td>
+<td>ACK 帧、CTS 帧、分片后的数据帧、AP 查询响应帧、PCF 模式下 AP 发送的帧</td>
+<td>保障同一对话的帧连续传输（如数据帧 + ACK 帧），站点可快速切换收发状态</td>
+</tr>
+<tr>
+<td>PIFS</td>
+<td>点协调功能帧间间隔</td>
+<td>SIFS + 1 个时隙</td>
+<td>PCF 模式下 AP 发送的轮询帧、控制帧</td>
+<td>确保 AP 在 PCF 模式下优先抢占信道，主导无争用传输</td>
+</tr>
+<tr>
+<td>DIFS</td>
+<td>分布协调功能帧间间隔</td>
+<td>PIFS + 1 个时隙</td>
+<td>DCF 模式下的普通数据帧、管理帧（认证帧、关联帧等）</td>
+<td>普通数据传输的默认间隔，平衡信道利用率与冲突概率</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/image-20251223212942958.png" alt="image-20251223212942958" style="zoom:33%;"></img></p>
+<h5 id="80211-mac-帧结构"><a name="80211-mac-帧结构" class="anchor-navigation-ex-anchor" href="#80211-mac-帧结构"><i class="fa fa-link" aria-hidden="true"></i></a>802.11 MAC 帧结构</h5>
+<p>MAC 帧是 WLAN 数据传输的基本单元，首部（30 字节）包含关键控制信息，适配 AP 转发场景</p>
+<ul>
+<li>帧控制： 含协议版本（固定为 0）、帧类型（管理 / 控制 / 数据）、子类型（认证 / 探测 / ACK 等）、传输方向（到 DS / 从 DS）等</li>
+<li>持续期：标识信道占用时间，其他站点通过此字段设置 NAV，避免冲突</li>
+</ul>
+<p><img src="assets/image-20251223213052305.png" alt="image-20251223213052305"></img></p>
+<ul>
+<li><p>示例</p>
+<p><img src="assets/image-20251223213337347.png" alt="image-20251223213337347" style="zoom:33%;"></img></p>
+<ol>
+<li>A→AP：到 DS=1、从 DS=0，地址 1=AP 的 MAC、地址 2=A 的 MAC、地址 3=B 的 MAC；</li>
+<li>AP→B：到 DS=0、从 DS=1，地址 1=B 的 MAC、地址 2=AP 的 MAC、地址 3=A 的 MAC；</li>
+</ol>
+</li>
+</ul>
+<h4 id="csmaca协议"><a name="csmaca协议" class="anchor-navigation-ex-anchor" href="#csmaca协议"><i class="fa fa-link" aria-hidden="true"></i></a>CSMA/CA协议</h4>
+<p>为什么不采用有限以太网的CSMA/CD协议？</p>
+<blockquote>
+<ul>
+<li><p>无线设备难以同时收发信号；CSMA/CD 的核心逻辑是 “发送数据的同时检测冲突”；</p>
+</li>
+<li><p>冲突检测方式不兼容无线信道；无线信道是开放介质，信号易受干扰、衰减、反射，无法通过单一物理指标（如电压）判断冲突</p>
+</li>
+<li><p>隐蔽站问题导致冲突检测失效</p>
+<p><img src="assets/image-20251223213858048.png" alt="image-20251223213858048" style="zoom:25%;"></img></p>
+<ul>
+<li>站点 A 和 C 都在站点 B 的通信范围，但 A 和 C 互不可见（信号覆盖无重叠），A 和 C 检测信道时均认为 “空闲”，同时向 B 发送数据，导致信号在 B 处冲突，但 A 和 C 无法检测到（因彼此信号无法到达）。</li>
+<li>CSMA/CD 的 “冲突检测” 仅能感知本地信道状态，无法解决远距离站点的隐蔽冲突，导致冲突频繁且无法及时处理。</li>
+</ul>
+</li>
+<li><p>暴露站问题</p>
+<p><img src="assets/image-20251223213941658.png" alt="image-20251223213941658" style="zoom:25%;"></img></p>
+<ul>
+<li>站点 B 向 A 发送数据，站点 C 检测到信道有信号（B 的传输），误以为自己无法发送数据（实际 C 向 D 发送数据不会干扰 B→A 的传输），导致信道利用率下降。</li>
+<li>关键：暴露站问题不影响协议正常工作，但说明无线信道的 “忙闲状态” 无法通过简单侦听判断</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>CSMA/CA 的核心是 “<strong>提前避免冲突</strong>”，而非 “冲突后处理”</p>
+<ol>
+<li>站点有数据要发送时，先侦听信道（能量 / 载波检测）。</li>
+<li>信道空闲：等待帧间间隔（IFS）后再次侦听，仍空闲则发送数据。</li>
+<li>信道忙碌：持续侦听至传输结束，等待 IFS 后，按 “二进制指数退避算法” 随机等待一段时间，再重新侦听发送。</li>
+</ol>
+<p><img src="assets/image-20251223214119267.png" alt="image-20251223214119267" style="zoom:25%;"></img></p>
+<p>二进制指数退避算法（减少重复冲突）</p>
+<ul>
+<li>第 i 次退避就在 <code>2^(2 + i)</code> 个时隙中随机地选择一个</li>
+<li>第 i 次冲突时，退避时隙范围为 {0,1,...,2^(2+i)-1}（第 1 次退避 8 个时隙，第 2 次 16 个时隙，最多 6 次退避后时隙数固定为 255）。</li>
+<li><p>通过随机等待时间，降低多个站点同时抢占信道的概率，避免重复冲突。</p>
+<p>信道预约（RTS/CTS 机制）：解决隐蔽站问题</p>
+</li>
+</ul>
+<p>源站点发送数据前，先通过短控制帧预约信道，让周边站点知晓 “信道即将被占用”，主动避让，而非直接发送数据引发冲突。</p>
+<ul>
+<li><strong>RTS（请求发送）</strong>：源站发送的短控制帧，包含 3 个关键信息 —— 源 MAC 地址、目的 MAC 地址、本次通信总持续时间（含数据帧发送 + 应答帧接收的全部时间）。</li>
+<li><strong>CTS（允许发送）</strong>：目的站响应的短控制帧，会复制 RTS 中的 “持续时间”，告知所有能接收的站点 “信道占用时长”。</li>
+<li><strong>NAV（网络分配向量）</strong>：所有站点的 “信道忙闲计时器”，收到 RTS/CTS 后，会将 NAV 设置为帧中指定的持续时间，期间不再侦听信道，直接判定为 “忙”，不发送任何数据。</li>
+</ul>
+<p><img src="assets/image-20251223214353228.png" alt="image-20251223214353228" style="zoom:25%;"></img></p>
+<p><img src="assets/image-20251223214408054.png" alt="image-20251223214408054"></img></p>
+<p><strong>正向确认(ACK机制）</strong>：接收站正确收到数据要发确认帧,否则源站点重复发送数据帧</p>
+<blockquote>
+<p>[!note]</p>
+<p>CSMA/CA 的冲突避免技术，是 “主动预约” 与 “被动确认” 的结合：</p>
+<ul>
+<li>RTS/CTS+NAV 机制：提前锁定信道，让周边站点主动避让，从源头避免冲突（尤其是隐藏站冲突）；</li>
+<li>正向 ACK 机制：事后验证传输结果，解决信号丢失、失真等问题，保障可靠性；</li>
+<li>两者协同，让无线信道在开放共享的环境下，实现有序、可靠的数据传输，是 WLAN 的核心技术之一。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="数据链路层网络互连"><a name="数据链路层网络互连" class="anchor-navigation-ex-anchor" href="#数据链路层网络互连"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层网络互连</h2>
+<p>数据链路层网络互连的核心是通过<strong>网桥</strong>和<strong>二层交换机</strong>两种设备，实现局域网的扩展与互连，解决单局域网覆盖范围有限、主机数量不足的问题，虚拟局域网（VLAN）则进一步优化互连后的网络性能与安全性</p>
+<h3 id="网桥"><a name="网桥" class="anchor-navigation-ex-anchor" href="#网桥"><i class="fa fa-link" aria-hidden="true"></i></a>网桥</h3>
+<p>网桥是工作在物理层和数据链路层的局域网互连设备，在数据链路层进行帧的存储与转发，专门用于连接不同类型或不同网段的局域网</p>
+<p>网桥属于 DCE 级端到端连接，是<strong>局域网间的 “桥梁”</strong>，仅用于局域网互连，不涉及广域网。</p>
+<p>网桥同时作用于 <strong>OSI 的物理层和数据链路层</strong>，底层适配物理链路，上层聚焦帧的处理与转发。</p>
+<p>网桥的核心组成的是实现帧处理与转发的关键</p>
+<ul>
+<li><strong>站表</strong>：存储站点地址与对应接口的映射关系，用于判断帧的转发路径。</li>
+<li><strong>接口管理软件</strong>：管理网桥的物理接口，适配不同网段的物理层特性。</li>
+<li><strong>网桥协议实体</strong>：核心处理单元，负责帧的接收、解析、路由判断与转发。</li>
+<li><strong>缓存</strong>：接口 1 和接口 2 分别对应两个互连的网段（如网段 A、网段 B），用于临时存储待转发的帧，缓解传输速率差异带来的冲突。</li>
+</ul>
+<p><img src="assets/image-20251223215244466.png" alt="image-20251223215244466" style="zoom:25%;"></img></p>
+<p>网桥的优势：过滤通信量仅仅转发网段的数据；连接多个局域网扩大了物理范围；可互连不同物理层、不同 MAC 子层和不同速率的局域网</p>
+<p>网桥的缺点：增加存储转发时延特别是异构网段互连；MAC子层无法流量控制</p>
+<h4 id="网桥的功能"><a name="网桥的功能" class="anchor-navigation-ex-anchor" href="#网桥的功能"><i class="fa fa-link" aria-hidden="true"></i></a>网桥的功能</h4>
+<p>网桥的核心价值是 “精准转发、适配异构、隔离冲突”</p>
+<ol>
+<li><p>帧路由：按目的地址精准转发</p>
+<ul>
+<li>网桥就像 “局域网间的交通指挥员”，收到帧后先查看帧的目的 MAC 地址，再通过自身的 “站表”（记录站点地址与对应网段的映射）判断该帧是否需要跨网段传输。</li>
+<li>若目的站点与发送站点在同一网段，网桥直接丢弃该帧，不转发，避免冗余流量；</li>
+</ul>
+<p><img src="assets/image-20251223215712420.png" alt="image-20251223215712420" style="zoom:25%;"></img></p>
+</li>
+<li><p>错误检测</p>
+<ul>
+<li>网桥接收帧后，会通过 CRC 校验等方式检查帧的完整性（如比特错误、帧格式异常）</li>
+<li>若检测到错误帧，直接丢弃，不转发到其他网段，保障跨网段传输的数据可靠性</li>
+</ul>
+</li>
+<li><p>帧格式转换</p>
+<ul>
+<li>不同局域网的 <strong>MAC 子层协议</strong>可能不同（如以太网 802.3、令牌总线 802.4），对应的帧格式也有差异，网桥可在数据链路层完成帧格式转换</li>
+</ul>
+</li>
+<li><p>隔离通信：划分独立冲突域</p>
+<ul>
+<li><p>网桥将互连的多个局域网划分为独立的 “冲突域”，每个网段内的设备竞争信道时，不会影响其他网段，减少跨网段的冲突概率</p>
+<p><img src="assets/image-20251223215919623.png" alt="image-20251223215919623" style="zoom: 25%;"></img></p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="网桥路由"><a name="网桥路由" class="anchor-navigation-ex-anchor" href="#网桥路由"><i class="fa fa-link" aria-hidden="true"></i></a>网桥路由</h4>
+<p>网桥决定转发哪个帧和往哪儿转发的过程被称为路由</p>
+<p><strong>路由表</strong>是网桥转发决策的依据，记录 “目标站点 - 下一局域网” 的映射关系，网桥接收帧后，通过查询目标站点对应的条目，决定是否转发及转发到哪个局域网。</p>
+<p>仅转发跨局域网的帧，同一局域网内的帧直接丢弃</p>
+<p>三类核心路由算法</p>
+<ol>
+<li><p>固定路由算法（静态路由）</p>
+<ul>
+<li>路由表由人工手工配置，配置完成后固定不变，不支持动态调整。</li>
+<li>适用于拓扑稳定、站点数量少的小型网络。</li>
+</ul>
+</li>
+<li><p>透明路由算法（动态路由，IEEE 802.1D 标准）</p>
+<ul>
+<li><p>“透明” 指站点无需知晓网桥存在，网桥自动完成路由表生成与维护，是目前最常用的路由算法，核心包含 “逆向学习” 和 “生成树协议（STP）” 两大机制。</p>
+</li>
+<li><p>逆向学习（路由表自动生成与修改）</p>
+<blockquote>
+<p>自动修改和生成路由表的能力称为路由学习或地址学习</p>
+<ul>
+<li>路由表初始化：网桥刚启动时路由表为空，收到未知目标站点的帧时，采用 “扩散算法”，向所有连接的局域网广播该帧，确保目标站点能收到。</li>
+<li>自动学习：网桥接收帧时，提取帧的 “源 MAC 地址” 和 “入端口对应的局域网”，更新路由表（如从 L1 收到 A 发送的帧，记录 “A- L1”）。</li>
+<li>动态更新：路由表项带定时器，超时未收到该站点的帧则删除表项；表项满时，通过替换算法淘汰不常用表项，适配动态拓扑。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><strong>生成树协议（STP）</strong>—— 解决帧循环问题</p>
+<blockquote>
+<p>[!important]</p>
+<ul>
+<li><p>多网桥互连易形成网络环路，导致帧循环转发（广播风暴），阻塞网络。</p>
+</li>
+<li><p>不改变物理拓扑，逻辑上阻断冗余链路，形成<strong>无环路的树状结构</strong>，冗余链路作为备份。</p>
+<ul>
+<li>选择 “树根”：确定一个核心设备（根网桥），作为所有帧转发的起点；</li>
+<li>确定最短路径：所有站点到根网桥的路径唯一且最短，避免多路径导致循环；</li>
+<li>阻塞冗余链路：将多余的环路链路逻辑关闭（端口阻塞），仅保留最优路径，形成无环路的树状拓扑；</li>
+<li>冗余备份：被阻塞的链路仍作为备份，当最优路径故障时自动激活。</li>
+</ul>
+<p>STP 是专门解决帧循环的二层协议，通过自动选举和端口控制，实现无环路拓扑，核心流程如下：</p>
+<ul>
+<li>BPDU：网桥间的 “通信语言”，用于<strong>传递拓扑信息（如网桥 ID、路径费用）</strong>；</li>
+<li>根网桥：树状结构的 “根”，由网桥 ID（唯一标识）决定，ID 最小的网桥当选；</li>
+<li>根端口：每个非根网桥中 “到根网桥路径最短” 的端口，负责接收根网桥方向的帧；</li>
+<li>指定端口：每个局域网中 “到根网桥路径最短” 的端口，负责转发该局域网的帧；</li>
+<li><p>阻塞端口：既非根端口也非指定端口的端口，逻辑关闭，仅监听不转发数据帧（冗余备份）。</p>
+<p>STP 工作流程（三步构建无环路拓扑）</p>
+</li>
+</ul>
+<p>（1）第一步：选举根网桥（确定树状结构的根节点）</p>
+<ul>
+<li>所有网桥启动后，通过 BPDU 广播自身 ID；</li>
+<li>网桥接收 BPDU 后，对比 ID 大小，最终<strong>ID 最小的网桥当选根网桥</strong>（如文档示例中 ID 为 41.13.92 的 B92）。</li>
+</ul>
+<p>（2）第二步：非根网桥选举根端口（确定到根的最优路径）</p>
+<p>每个非根网桥选择 1 个 “<strong>到根网桥路径</strong>费用最低” 的端口作为根端口，选举优先级：</p>
+<ol>
+<li>路径费用最低（带宽越大，费用越低）；</li>
+<li>费用相同时，选发送方网桥 ID 最小的；</li>
+<li>仍相同时，选发送方端口 ID 最小的。</li>
+</ol>
+<p>（3）第三步：为每个局域网指定网桥与指定端口（确定唯一转发端口）</p>
+<ul>
+<li>每个局域网需选举 1 个 “指定网桥” 和 1 个 “指定端口”，确保该局域网的帧仅通过唯一端口转发，避免环路</li>
+<li>剩余端口自动设为 “阻塞端口”，逻辑关闭，仅监听 BPDU，不转发数据帧；</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>源路由算法（动态路由）</p>
+<ul>
+<li><p>路由由 “源站点” 决定，而非网桥：源站点通过 “路由探索” 确定到目标站点的路径，将路由信息（局域网号 + 网桥 ID 序列）封装在帧的路由字段中。</p>
+<p><img src="assets/image-20251223223658339.png" alt="image-20251223223658339"></img></p>
+</li>
+<li><p>网桥仅按帧中路由指示转发：接收帧后，提取下一个路由指示，转发到对应局域网，无需自主决策。</p>
+<blockquote>
+<p>路由生成又称 “路由探索（route discovery）”，是源站点主动查找并确定到目的站点通信路径的过程</p>
+<ul>
+<li>源站点：全路由广播帧 + 目标站点：非广播响应帧</li>
+<li>源站点：单路由广播帧（沿生成树）+ 目标站点：全路由广播响应帧</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<hr></hr>
+<h3 id="二层交换机"><a name="二层交换机" class="anchor-navigation-ex-anchor" href="#二层交换机"><i class="fa fa-link" aria-hidden="true"></i></a>二层交换机</h3>
+<p>“多端口网桥 + MAC 地址转发 + 隔离冲突域”</p>
+<p>工作在 OSI 数据链路层，基于以太网帧的目的 MAC 地址寻址转发，本质是<strong>多接口网桥</strong>（硬件 ASIC 实现，比传统网桥更快）</p>
+<p>替代集线器、隔离冲突域、提升带宽利用率，是局域网的核心接入与互联设备。</p>
+<ul>
+<li><p><strong>端口与双工</strong>：多端口设计，每端口可接主机 / 交换机，支持全双工（同时收发，带宽翻倍）。</p>
+</li>
+<li><p>MAC 地址学习与地址 - 端口表</p>
+<ul>
+<li>收到帧时提取源 MAC，绑定到入端口并写入地址表，超时自动删除，适配主机移动。</li>
+<li>转发决策：查地址表，命中则单端口转发；未命中则广播（泛洪），收到回应后更新表项。</li>
+</ul>
+<p><img src="assets/image-20251223224204747.png" alt="image-20251223224204747"></img></p>
+</li>
+<li><p><strong>交换引擎</strong>：硬件交换矩阵 / 总线，实现多端口并行转发，保障并发通信效率。</p>
+</li>
+<li><p><strong>冲突域隔离</strong>：每个端口是独立冲突域，消除带宽竞争；对比集线器所有端口共享 1 个冲突域、N 用户平均带宽 B/N，交换机每个用户独占端口带宽 B。</p>
+</li>
+</ul>
+<p>三类转发模式（延迟与可靠性的平衡）</p>
+<table>
+<thead>
+<tr>
+<th>转发模式</th>
+<th>触发条件</th>
+<th>核心优点</th>
+<th>核心缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直通式</td>
+<td>读取目的 MAC 即转发</td>
+<td>延迟最小，速度最快</td>
+<td>无 CRC 校验，可能转发错误帧；没有缓存不支持速率适配</td>
+</tr>
+<tr>
+<td>存储转发</td>
+<td>收完帧并做 CRC 校验</td>
+<td>过滤错误帧，支持多速率端口</td>
+<td>延迟大（需缓存完整帧）</td>
+</tr>
+<tr>
+<td>无碎片</td>
+<td>收到 64 字节（最小帧长）后转发</td>
+<td>过滤冲突碎片，兼顾速度与基础可靠性</td>
+<td>无 CRC 校验，无法完全避免错误帧</td>
+</tr>
+</tbody>
+</table>
+<p>链路层互连的核心优点</p>
+<ol>
+<li><strong>即插即用</strong></li>
+<li><strong>无冲突通信</strong>：单播帧独占信道，无 CSMA/CD 冲突，提升吞吐。</li>
+<li><strong>带宽独享</strong>：端口专属带宽，无竞争，适配高带宽需求主机。</li>
+<li><strong>多速率适配</strong></li>
+</ol>
+<p><img src="assets/image-20251223224443461.png" alt="image-20251223224443461"></img></p>
+<h3 id="虚拟局域网vlan"><a name="虚拟局域网vlan" class="anchor-navigation-ex-anchor" href="#虚拟局域网vlan"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟局域网(VLAN)</h3>
+<p>以太网交换机互连的网络本质是 “单广播域 + 多冲突域” 的架构，这会带来性能与安全问题，而虚拟局域网（VLAN）通过 “逻辑分组” 解决该问题</p>
+<p>交换机的冲突域与广播域的区别</p>
+<ul>
+<li><strong>冲突域</strong>：交换机每个接口是独立冲突域（主机通信无碰撞），这是交换机的核心优势；</li>
+<li><strong>广播域</strong>：交换机互连的所有主机共享<strong>同一个广播域</strong>—— 当交换机收到未知目的 MAC 的帧时，会向所有接口广播该帧，网络中所有主机都能接收到，因此属于广播网络。</li>
+</ul>
+<p>如果整个网络在同个广播域：大量广播报文转发影响网络性能，同时用户信息安全有风险</p>
+<p>针对上述问题的解决方法:虚拟局域网(VLAN)</p>
+<p>虚拟局域网（VLAN）是遵循 <strong>IEEE 802.1Q</strong> 标准的二层网络技术，核心是<strong>打破物理位置限制，将局域网内的主机按逻辑需求划分为独立广播域</strong>，解决传统交换机单广播域的性能与安全问题</p>
+<p>从而缩小广播域；提升网络安全，简化网络管理，扩大网络规模</p>
+<p>VLAN 的核心定义与本质</p>
+<p>VLAN是由局域网网段构成的与物理位置无关的逻辑组，组内网段有共同特征和需求。</p>
+<ul>
+<li><strong>逻辑分组，非物理分组</strong>：不依赖主机的物理接入位置，同一办公室的主机可分属不同 VLAN，不同楼层的主机也可划入同一 VLAN。</li>
+<li><strong>广播域隔离</strong>：同一 VLAN 内的主机处于同一广播域，链路层可直接通信；不同 VLAN 的主机链路层相互隔离，需通过三层设备（路由器 / 三层交换机）才能通信。</li>
+<li><strong>帧标识唯一</strong>：每个 VLAN 的帧都携带专属标识符（VLAN Tag），交换机通过该标识识别帧所属 VLAN，实现精准转发。</li>
+</ul>
+<h4 id="虚拟局域网（vlan）划分"><a name="虚拟局域网（vlan）划分" class="anchor-navigation-ex-anchor" href="#虚拟局域网（vlan）划分"><i class="fa fa-link" aria-hidden="true"></i></a>虚拟局域网（VLAN）划分</h4>
+<p>交换机支持多种 VLAN 划分方式，核心分为<strong>静态划分</strong>和<strong>动态划分</strong>两类，适配不同网络场景：</p>
+<table>
+<thead>
+<tr>
+<th>划分方法</th>
+<th>核心逻辑</th>
+<th>技术层级</th>
+<th>优点</th>
+<th>缺点</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>基于端口（静态划分）</strong></td>
+<td>将交换机的物理端口与 VLAN 强制绑定，端口接入的主机自动归属对应 VLAN</td>
+<td>第一层（物理层）</td>
+<td>配置最简单、最常用，转发效率高</td>
+<td>主机移动时需重新配置端口（如主机从端口 1 换到端口 2，需修改端口的 VLAN 绑定）</td>
+<td>拓扑稳定的场景（如企业部门固定工位、服务器集群）</td>
+</tr>
+<tr>
+<td><strong>基于 MAC 地址（动态划分）</strong></td>
+<td>按主机网卡的 MAC 地址划分 VLAN，交换机内置 “MAC 地址 - VLAN” 映射表</td>
+<td>第二层（数据链路层）</td>
+<td>支持主机自由移动，更换端口无需重新配置</td>
+<td>需录入大量 MAC 地址，管理维护成本高；主机更换网卡后需更新映射表</td>
+<td>主机移动频繁的场景（如会议室移动终端、办公笔记本）</td>
+</tr>
+<tr>
+<td><strong>基于协议类型</strong></td>
+<td>按以太网帧的 “类型” 字段划分（如区分 IP、IPX 协议帧）</td>
+<td>第二层（数据链路层）</td>
+<td>适配多协议共存的网络，自动识别协议类型归类</td>
+<td>协议类型单一的网络中无意义，灵活性有限</td>
+<td>传统多协议混合组网场景（如老旧企业网同时运行 IP 和 IPX）</td>
+</tr>
+<tr>
+<td><strong>基于 IP 子网</strong></td>
+<td>按主机的 IP 子网地址划分（如 192.168.1.0/24 划入 VLAN 10，192.168.2.0/24 划入 VLAN 20）</td>
+<td>第三层（网络层）</td>
+<td>与 IP 子网规划联动，适配网络分层设计，主机 IP 变更时可自动归类</td>
+<td>依赖 IP 地址，对非 IP 协议不支持</td>
+<td>按业务网段划分的企业网、数据中心网络</td>
+</tr>
+<tr>
+<td><strong>基于高层应用 / 服务</strong></td>
+<td>按主机的应用类型或服务划分（如 FTP 服务划入 VLAN 10，Telnet 服务划入 VLAN 30）</td>
+<td>高层（传输层 / 应用层）</td>
+<td>灵活性最高，可精准匹配业务需求</td>
+<td>配置复杂，需识别应用特征，对交换机性能要求高</td>
+<td>对业务隔离性要求高的场景（如企业核心业务与普通办公业务隔离）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="8021q-帧标签（vlan-tag）"><a name="8021q-帧标签（vlan-tag）" class="anchor-navigation-ex-anchor" href="#8021q-帧标签（vlan-tag）"><i class="fa fa-link" aria-hidden="true"></i></a>802.1Q 帧标签（VLAN Tag）</h4>
+<p>传统以太网帧无 VLAN 标识，交换机通过<strong>插入 4 字节 VLAN Tag</strong>实现 VLAN 识别，遵循 <strong>IEEE 802.3ac</strong> 标准</p>
+<p><img src="assets/image-20251223225129319.png" alt="image-20251223225129319"></img></p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 04_数据链路层</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03_物理层.html" class="navigation navigation-prev " aria-label="Previous page: 03_物理层">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05_网络层.html" class="navigation navigation-next " aria-label="Next page: 05_网络层">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04_数据链路层","level":"1.7.4","depth":2,"next":{"title":"05_网络层","level":"1.7.5","depth":2,"path":"docs/Computer_Networking/05_网络层.md","ref":"docs/Computer_Networking/05_网络层.md","articles":[]},"previous":{"title":"03_物理层","level":"1.7.3","depth":2,"path":"docs/Computer_Networking/03_物理层.md","ref":"docs/Computer_Networking/03_物理层.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Computer_Networking/04_数据链路层.md","mtime":"2026-03-09T01:44:20.177Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,3422 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>03_ARM9指令系统 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_嵌入式程序设计.html" />
+    
+    
+    <link rel="prev" href="02_ARM.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="01_嵌入式系统概述.html">
+            
+                <a href="01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="02_ARM.html">
+            
+                <a href="02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3" data-path="03_ARM9指令系统.html">
+            
+                <a href="03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="04_嵌入式程序设计.html">
+            
+                <a href="04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="05_嵌入式内部可编程模块.html">
+            
+                <a href="05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >03_ARM9指令系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#arm-9指令系统"><b></b>ARM 9指令系统</a></li><ul><li><span class="title-icon "></span><a href="#arm处理器的寻址方式"><b></b>ARM处理器的寻址方式</a></li><ul><li><span class="title-icon "></span><a href="#寄存器寻址"><b></b>寄存器寻址</a></li><li><span class="title-icon "></span><a href="#立即寻址"><b></b>立即寻址</a></li><li><span class="title-icon "></span><a href="#寄存器间接寻址"><b></b>寄存器间接寻址</a></li><li><span class="title-icon "></span><a href="#变址寻址"><b></b>变址寻址</a></li><li><span class="title-icon "></span><a href="#寄存器移位寻址"><b></b>寄存器移位寻址</a></li><li><span class="title-icon "></span><a href="#多寄存器寻址"><b></b>多寄存器寻址</a></li><li><span class="title-icon "></span><a href="#堆栈寻址"><b></b>堆栈寻址</a></li><li><span class="title-icon "></span><a href="#相对寻址"><b></b>相对寻址</a></li></ul><li><span class="title-icon "></span><a href="#arm指令集"><b></b>ARM指令集</a></li><ul><li><span class="title-icon "></span><a href="#arm指令格式"><b></b>ARM指令格式</a></li><li><span class="title-icon "></span><a href="#arm-指令条件码"><b></b>ARM 指令条件码</a></li><li><span class="title-icon "></span><a href="#arm-数据处理类指令"><b></b>ARM 数据处理类指令</a></li><li><span class="title-icon "></span><a href="#arm-分支指令"><b></b>ARM 分支指令</a></li><li><span class="title-icon "></span><a href="#arm-存储器访问指令"><b></b>ARM 存储器访问指令</a></li><li><span class="title-icon "></span><a href="#arm-协处理器指令"><b></b>ARM 协处理器指令</a></li><li><span class="title-icon "></span><a href="#arm-软件中断指令（swibkpt）"><b></b>ARM 软件中断指令（SWI/BKPT）</a></li></ul><li><span class="title-icon "></span><a href="#thumb指令集"><b></b>Thumb指令集</a></li></ul></ul></div><a href="#arm-9指令系统" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#arm-9指令系统">ARM 9指令系统</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#arm处理器的寻址方式">ARM处理器的寻址方式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#寄存器寻址">寄存器寻址</a><i></i></div></li>
+<li><div><a href="#立即寻址">立即寻址</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#立即数的形成">立即数的形成</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#寄存器间接寻址">寄存器间接寻址</a><i></i></div></li>
+<li><div><a href="#变址寻址">变址寻址</a><i></i></div></li>
+<li><div><a href="#寄存器移位寻址">寄存器移位寻址</a><i></i></div></li>
+<li><div><a href="#多寄存器寻址">多寄存器寻址</a><i></i></div></li>
+<li><div><a href="#堆栈寻址">堆栈寻址</a><i></i></div></li>
+<li><div><a href="#相对寻址">相对寻址</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#arm指令集">ARM指令集</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#arm指令格式">ARM指令格式</a><i></i></div></li>
+<li><div><a href="#arm-指令条件码">ARM 指令条件码</a><i></i></div></li>
+<li><div><a href="#arm-数据处理类指令">ARM 数据处理类指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#数据传送指令（movmvn）——-寄存器间-搬数据">数据传送指令（MOV/MVN）—— 寄存器间 “搬数据”</a><i></i></div></li>
+<li><div><a href="#算术逻辑运算指令-——-寄存器数据-做运算">算术逻辑运算指令 —— 寄存器数据 “做运算”</a><i></i></div></li>
+<li><div><a href="#比较指令：cmpcmntstteq">比较指令：CMP/CMN/TST/TEQ</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#arm-分支指令">ARM 分支指令</a><i></i></div></li>
+<li><div><a href="#arm-存储器访问指令">ARM 存储器访问指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#单一数据传送指令（ldrstr-系列）">单一数据传送指令（LDR/STR 系列）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#不同数据宽度的-ldrstr-变体">不同数据宽度的 LDR/STR 变体</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#多数据传送指令（ldmstm）">多数据传送指令（LDM/STM）</a><i></i></div></li>
+<li><div><a href="#数据交换指令（swpswpb）">数据交换指令（SWP/SWPB）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#arm-协处理器指令">ARM 协处理器指令</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#cdp（co-processor-data-operation）协处理器数据操作指令">CDP（Co-Processor Data Operation）协处理器数据操作指令</a><i></i></div></li>
+<li><div><a href="#ldcstc-协处理器加载--存储指令">LDC/STC 协处理器加载 / 存储指令</a><i></i></div></li>
+<li><div><a href="#mcrmrc-协处理器指令">MCR/MRC 协处理器指令</a><i></i></div></li>
+<li><div><a href="#arm920t-协处理器（cp14cp15）">ARM920T 协处理器（CP14/CP15）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#arm-软件中断指令（swibkpt）">ARM 软件中断指令（SWI/BKPT）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#arm-程序状态寄存器指令（mrsmsr）">ARM 程序状态寄存器指令（MRS/MSR）</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#thumb指令集">Thumb指令集</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="arm-9指令系统"><a name="arm-9指令系统" class="anchor-navigation-ex-anchor" href="#arm-9指令系统"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 9指令系统</h1>
+<p>在这一章中，首先从ARM处理器的寻址方式理解指令中操作数的来源，然后分别从ARM32指令集和Thumb16指令集学习整个ARM9的指令系统</p>
+<h2 id="arm处理器的寻址方式"><a name="arm处理器的寻址方式" class="anchor-navigation-ex-anchor" href="#arm处理器的寻址方式"><i class="fa fa-link" aria-hidden="true"></i></a>ARM处理器的寻址方式</h2>
+<p>寻址方式的本质是<strong>CPU 根据指令里的操作数信息，找到操作数在内存 / 寄存器中实际物理地址的方法</strong>。</p>
+<ul>
+<li><p>依据指令中给出的操作数的不同格式，ARM指令系统具有8种常见的寻址方式：</p>
+<blockquote>
+<ol>
+<li>寄存器寻址</li>
+<li>立即寻址</li>
+<li>寄存器间接寻址</li>
+<li>变址寻址</li>
+<li>寄存器移位寻址</li>
+<li>多寄存器寻址</li>
+<li>堆栈寻址</li>
+<li>相对寻址</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="寄存器寻址"><a name="寄存器寻址" class="anchor-navigation-ex-anchor" href="#寄存器寻址"><i class="fa fa-link" aria-hidden="true"></i></a>寄存器寻址</h3>
+<p>指令要运算 / 操作的数据，直接存在 CPU 的通用寄存器（R0~R15）里，不用去内存里找，直接拿寄存器里的值当操作数用。即<strong>操作数 = 寄存器中存储的数值</strong></p>
+<p>寄存器寻址是 ARM 处理器<strong>最基础、最高效</strong>的寻址方式</p>
+<pre><code class="lang-assembly">ADD R0，R1，R2  ;R0=R1＋R2
+MOV R0，R1 ;R0=R1
+</code></pre>
+<hr></hr>
+<h3 id="立即寻址"><a name="立即寻址" class="anchor-navigation-ex-anchor" href="#立即寻址"><i class="fa fa-link" aria-hidden="true"></i></a>立即寻址</h3>
+<p>立即寻址是 ARM 指令中<strong>直接把操作数 “嵌在指令里”</strong> 的寻址方式，指令本身直接包含 “要操作的数值”作为指令二进制编码的一部分；</p>
+<ul>
+<li><strong>识别标志</strong>：立即数必须以<code>#</code>（井号）为前缀，这是 ARM 汇编语法的硬性规定，没有<code>#</code>会被编译器判定为错误；</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>进制类型</th>
+<th>前缀标识</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十六进制</td>
+<td><code>0x</code> 或 <code>&amp;</code></td>
+<td><code>#0x55</code>、<code>#&amp;55</code></td>
+</tr>
+<tr>
+<td>二进制</td>
+<td><code>0b</code></td>
+<td><code>#0b101010</code></td>
+</tr>
+<tr>
+<td>十进制</td>
+<td><code>0d</code> 或缺省</td>
+<td><code>#5</code>、<code>#0d100</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-assembly">ADD R0,R1,#5 ;R0=R1+5 
+MOV R0,#0x55 ;R0=0x55
+</code></pre>
+<h4 id="立即数的形成"><a name="立即数的形成" class="anchor-navigation-ex-anchor" href="#立即数的形成"><i class="fa fa-link" aria-hidden="true"></i></a>立即数的形成</h4>
+<p>ARM 是 32 位处理器，但立即数在指令编码中<strong>仅占 12 位</strong>，因此不是所有 32 位数值都能作为 “合法立即数”</p>
+<p>只有满足<strong>「<code>常数 = 8位二进制数（immed_8）循环右移（2×rotate_imm）</code>」</strong>规则的数，才是合法立即数（rotate_imm 是 0~31 的整数）。</p>
+<p>在机械指令中</p>
+<p><img src="assets/image-20251215145011824.png" alt="image-20251215145011824"></img></p>
+<ul>
+<li>对于较大的无法直接使用立即数表示的数，可以采用<code>LDR Rn ,=number</code>将32位数据读到Rn在进行操作</li>
+</ul>
+<hr></hr>
+<h3 id="寄存器间接寻址"><a name="寄存器间接寻址" class="anchor-navigation-ex-anchor" href="#寄存器间接寻址"><i class="fa fa-link" aria-hidden="true"></i></a>寄存器间接寻址</h3>
+<p>寄存器间接寻址是 ARM 中<strong>通过 “地址找数据”</strong> 的基础寻址方式</p>
+<ul>
+<li>寄存器里存的<strong>不是要运算的数值</strong>，而是<strong>数值在内存中的物理地址</strong>；</li>
+<li>CPU 先从这个寄存器里读出内存地址，再到该地址对应的内存单元中，取 / 存真正的操作数</li>
+</ul>
+<p>存放地址的寄存器必须用 <code>[]</code>（中括号）包裹，这是间接寻址的核心语法特征</p>
+<p>比寄存器寻址 / 立即寻址慢（多了 “读地址→访内存” 两步），但比直接内存寻址灵活</p>
+<pre><code class="lang-assembly">STR R0,[R1] ;[R1]=R0 
+LDR R0,[R1] ;R0=[R1]
+</code></pre>
+<hr></hr>
+<h3 id="变址寻址"><a name="变址寻址" class="anchor-navigation-ex-anchor" href="#变址寻址"><i class="fa fa-link" aria-hidden="true"></i></a>变址寻址</h3>
+<p>变址寻址是 ARM 中专门针对 <strong>“基地址 + 偏移量” 访问连续内存 </strong> 设计的寻址方式 </p>
+<p>操作数物理地址 = 基址寄存器的值 + 偏移量（核心公式）<code>[基址寄存器, 偏移量]</code></p>
+<ul>
+<li>其中基址寄存器：任意通用寄存器（R0~R15）</li>
+<li>偏移量类型  两种：① 立即数偏移（如 #5）；② 寄存器偏移（如 R2）；同时偏移量需要注意内存对齐问题</li>
+</ul>
+<pre><code class="lang-assembly">LDR R0，[R1，＃4] ; R0=[R1+4]
+LDR R0，[R1，＃-4] ; R0=[R1-4]
+LDR R0，[R1，R2] ; R0=[R1+R2]
+</code></pre>
+<p>ARM 变址寻址还分 “前变址” 和 “后变址”</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>格式示例</th>
+<th>核心区别</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前变址（课件示例）</td>
+<td><code>LDR R0,[R1,#5]</code></td>
+<td>先算地址（R1+5），再访问，R1 不变</td>
+<td>单次访问固定偏移地址</td>
+</tr>
+<tr>
+<td>后变址</td>
+<td><code>LDR R0,[R1],#4</code></td>
+<td>先访问 R1 地址，再算 R1=R1+4（R1 更新）</td>
+<td>循环遍历连续内存（如数组）</td>
+</tr>
+</tbody>
+</table>
+<p>比如遍历 int 型数组（每个元素 4 字节）：</p>
+<pre><code class="lang-assembly">MOV R1, #&amp;array  ; R1=数组首地址（基址）
+(LOR R1, =array)
+MOV R2, #0       ; R2=偏移量初始值
+loop:
+LDR R0, [R1,R2]  ; 读取R1+R2地址的数组元素
+; 处理元素（比如判断值、运算）
+ADD R2, R2, #4   ; 偏移量+4（下一个int元素）
+CMP R2, #40      ; 判断是否遍历完10个元素（10×4=40）
+BNE loop         ; 没遍历完就循环
+</code></pre>
+<hr></hr>
+<h3 id="寄存器移位寻址"><a name="寄存器移位寻址" class="anchor-navigation-ex-anchor" href="#寄存器移位寻址"><i class="fa fa-link" aria-hidden="true"></i></a>寄存器移位寻址</h3>
+<p>寄存器移位寻址是<strong>ARM 独有的高效寻址方式</strong></p>
+<ul>
+<li>指令中第二个操作数（源操作数）不是直接用寄存器里的原始值，而是先对该寄存器的值做 “移位操作”，再用移位后的结果参与运算 / 赋值；</li>
+<li>移位操作不单独占指令，而是 “嵌在” 数据处理指令（ADD/MOV/AND 等）里，由 ARM 的 “桶型移位器” 硬件完成，同时提升代码密度，提升流水线效率</li>
+</ul>
+<pre><code class="lang-assembly">ADD R0，R1，R2，ROR ＃5 ;R0=R1＋R2循环右移5位
+MOV R0，R1，LSL R3 ;R0=R1逻辑左移R3位
+</code></pre>
+<p><code>通用寄存器, &lt;shift&gt;  操作数</code></p>
+<p>5 种：LSL（ASL）、LSR、ROR、ASR、RRX：每一个指令中最后移出的位都存入状态寄存器 C 位；</p>
+<ol>
+<li>LSL（逻辑左移）/ASL（算术左移）—— 左移补 0，等效 ×2ⁿ</li>
+<li>LSR（逻辑右移）—— 右移补 0，等效无符号数 ÷2ⁿ</li>
+<li>ROR（循环右移）—— 闭合移位，无数据丢失</li>
+<li>ASR（算术右移）—— 右移保符号，等效有符号数 / 2ⁿ</li>
+<li>RRX（带扩展的循环右移）—— 仅移 1 位，结合 C 位循环：寄存器内容<strong>仅向右移 1 位</strong>，左侧<strong>空位由状态寄存器 C 位填充</strong>，右侧移出的位存入 C 位；</li>
+</ol>
+<hr></hr>
+<h3 id="多寄存器寻址"><a name="多寄存器寻址" class="anchor-navigation-ex-anchor" href="#多寄存器寻址"><i class="fa fa-link" aria-hidden="true"></i></a>多寄存器寻址</h3>
+<p>多寄存器寻址是 ARM 中 <strong>“批量搬运数据”</strong> 的高效寻址方式</p>
+<ul>
+<li>一条指令就能完成<strong>多个寄存器</strong>和<strong>连续内存区域</strong>之间的数据批量传输（读 / 写），不用逐一对每个寄存器写指令；</li>
+<li>最多支持一次性操作 16 个通用寄存器（R0~R15）， “连续内存 &lt;-&gt; 多寄存器” </li>
+</ul>
+<p><code>LDM/STM（IA/IB/DA/DB) &lt;基址地址&gt; {寄存器列表}</code></p>
+<ul>
+<li>寄存器列表由<code>{}</code>（大括号）包裹，连续寄存器用<code>-</code>连接（如<code>R1-R5</code>），非连续用<code>,</code>分隔（如<code>R1,R3,R5</code>）</li>
+<li>用 IA/IB/DA/DB 标识，决定内存地址是 “传输前 / 后” 递增 / 递减</li>
+<li>地址每次增减步长固定为 4，对应ARMz中一个字即四个字节</li>
+</ul>
+<pre><code class="lang-assembly">LDMIA R0,{R1-R5} ;R1=[R0] ; R2=[R0+4] ; R3=[R0+8] ; R4=[R0+12] ; R5=[R0+16]
+STMIA R0, {R1-R5} ;把 R1~R5 的值，批量写入以 R0 为起始地址的连续内存
+</code></pre>
+<p><code>IA</code>表示在执行完一次Load操作后，R0自增4。而<code>IB</code>则表示Load前自增；<code>DA/DB</code>则是地址递减（在后面访存指令会由详解）</p>
+<ul>
+<li><code>LDMIA R0,{R1}</code>：先读<code>R0</code>地址→<code>R1</code>，再<code>R0=R0+4</code>；</li>
+<li><code>LDMIB R0,{R1}</code>：先<code>R0=R0+4</code>，再读新<code>R0</code>地址→<code>R1</code>；</li>
+</ul>
+<hr></hr>
+<h3 id="堆栈寻址"><a name="堆栈寻址" class="anchor-navigation-ex-anchor" href="#堆栈寻址"><i class="fa fa-link" aria-hidden="true"></i></a>堆栈寻址</h3>
+<p>堆栈寻址是 ARM 专为 “先进后出（FILO）” 数据存储设计的<strong>特殊多寄存器寻址方式</strong></p>
+<ul>
+<li>划定一块内存区域作为 “堆栈”，用<strong>专用寄存器 SP（R13）</strong>指向栈顶</li>
+<li>一条指令就能批量把寄存器数据 “压入” 堆栈（存），或从堆栈 “弹出” 恢复到寄存器（取）；注意默认从寄存器编号从小到大操作，<strong>和顺序无关</strong></li>
+</ul>
+<pre><code class="lang-assembly">STMFD R13!,{R0,R1,R2,R3,R4} ;将R0-R4中的数据压入堆栈,R13为堆栈指针
+LDMFD R13!,{R0,R1,R2,R3,R4} ;将数据出栈,恢复R0-R4原先的值
+</code></pre>
+<ul>
+<li><code>STMFD</code>（压栈：寄存器→堆栈）/<code>LDMFD</code>（出栈：堆栈→寄存器），FD 是最常用的堆栈类型</li>
+<li><code>!</code>（感叹号）表示指令执行后自动更新 SP 值（栈指针随压栈 / 出栈移动）</li>
+</ul>
+<p>FD：满递减即高地址到低地址；而FA则是满递增从低地址到高地址；</p>
+<p>ED/EA：则表示栈顶指针指向下一个空闲单元即下一个元素入栈的位置，而栈顶元素为指针的上一个位置</p>
+<hr></hr>
+<h3 id="相对寻址"><a name="相对寻址" class="anchor-navigation-ex-anchor" href="#相对寻址"><i class="fa fa-link" aria-hidden="true"></i></a>相对寻址</h3>
+<p>相对寻址是 ARM 专为<strong>程序跳转</strong>设计的寻址方式，本质是 “以 PC 为基址的基址变址寻址”</p>
+<ul>
+<li>把程序计数器 PC（R15）固定作为基址寄存器，指令里的 “跳转标签（如 process1）” 会被编译器转换成相对于 PC 的地址偏移量</li>
+<li>最终通过 “PC 值 + 偏移量” 计算出跳转目标地址，实现程序流程的跳转。</li>
+</ul>
+<pre><code class="lang-assembly">BEQ process1 ;相等则跳转到process1
+</code></pre>
+<p>ARM 相对寻址的偏移量是<strong>24 位有符号数</strong>，且需按 4 字节对齐；</p>
+<ul>
+<li>最大正向跳转：PC + 0x00FFFFFF（约 + 32MB）；</li>
+<li>最大反向跳转：PC - 0x00FFFFFF（约 - 32MB）；</li>
+</ul>
+<p>超出范围时，编译器会报错，需用其他跳转方式（如<code>LDR PC, =process1</code>）。</p>
+<h2 id="arm指令集"><a name="arm指令集" class="anchor-navigation-ex-anchor" href="#arm指令集"><i class="fa fa-link" aria-hidden="true"></i></a>ARM指令集</h2>
+<p>机器指令 / 伪指令 / 宏指令，这三类 “指令” 本质不是同一层级的概念 ——<strong>只有机器指令是 CPU 能直接执行的，伪指令和宏指令是给汇编编译器 “打工” 的辅助指令</strong></p>
+<ul>
+<li><p>机器指令：ARM/Thumb 指令集，二进制编码，CPU 能直接识别并执行；是程序运行的 “<strong>最小执行单元</strong>”</p>
+</li>
+<li><p>伪指令：汇编编译时生效，编译器会把伪指令替换成 1~ 多条机器指令，运行阶段不存在</p>
+<blockquote>
+<p> ARM 立即数有合法性限制（只能 8 位 + 移位），直接写<code>MOV R0,#0x12345678</code>会报错，伪指令<code>LDR R0,=0x12345678</code>就能解决（编译器会把 0x12345678 存入内存，再用<code>LDR R0,[PC,#偏移]</code>加载）；</p>
+</blockquote>
+</li>
+<li><p>宏指令：先定义 “宏体”，再用 “宏指令” 调用，编译时编译器会把 “宏指令” 直接替换成宏体的机器指令序列；</p>
+</li>
+</ul>
+<p>ARM 指令集的核心特性：加载 / 存储型</p>
+<ul>
+<li>所有运算 / 处理指令（ADD/SUB/AND/ORR 等）只能操作<strong>寄存器中的数据</strong>，处理结果也必须放回寄存器；</li>
+<li>要读写内存（系统存储器），必须用专门的<strong>加载 / 存储指令</strong>（LDR/STR/LDM/STM 等），先把内存数据读到寄存器，运算后再写回内存。</li>
+</ul>
+<h3 id="arm指令格式"><a name="arm指令格式" class="anchor-navigation-ex-anchor" href="#arm指令格式"><i class="fa fa-link" aria-hidden="true"></i></a>ARM指令格式</h3>
+<pre><code class="lang-assembly">&lt;opcode&gt; {&lt;cond&gt;} {S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>核心含义</th>
+<th>示例（对应 ADDEQS R1,R2,#5）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;opcode&gt;</code></td>
+<td>操作码：指令要执行的核心动作（加 / 减 / 移 / 比较等）</td>
+<td><code>ADD</code>（算术加法）</td>
+</tr>
+<tr>
+<td><code>{&lt;cond&gt;}</code></td>
+<td>条件域：指令是否执行，取决于 CPSR 标志位</td>
+<td><code>EQ</code>（相等时执行）</td>
+</tr>
+<tr>
+<td><code>{S}</code></td>
+<td>状态位：指令执行后是否更新 CPSR 的标志位（Z/N/C/V）</td>
+<td><code>S</code>（更新 CPSR）</td>
+</tr>
+<tr>
+<td><code>&lt;Rd&gt;</code></td>
+<td>目的寄存器：指令执行结果存入的寄存器</td>
+<td><code>R1</code>（加法结果存 R1）</td>
+</tr>
+<tr>
+<td><code>&lt;Rn&gt;</code></td>
+<td>第一个操作数：只能是寄存器（ARM 运算只操作寄存器）</td>
+<td><code>R2</code>（第一个加数是 R2 的值）</td>
+</tr>
+<tr>
+<td><code>&lt;op2&gt;</code></td>
+<td>第二个操作数：支持 3 种灵活形式（立即数<code>#immed_8r</code> / 寄存器<code>Rm</code> / 移位寄存器<code>Rm,shift</code>）</td>
+<td><code>#5</code>（立即数，第二个加数是 5）</td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt; &gt;</code>：尖括号包裹的是 “必选项”；<code>{ }</code>：大括号包裹的是 “可选项”</p>
+<hr></hr>
+<h3 id="arm-指令条件码"><a name="arm-指令条件码" class="anchor-navigation-ex-anchor" href="#arm-指令条件码"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 指令条件码</h3>
+<p>ARM 指令的条件码（<code>&lt;cond&gt;</code>）是<strong>基于 CPSR（当前程序状态寄存器）的标志位，决定指令是否执行</strong></p>
+<p>“条件执行”的实现方式避免使用分支指令可以消除因分支预测失败或流水线清空带来的性能损失，同时省去了显式的比较-分支指令对（通常需要两条指令：CMP+Bxx）提升了代码密度</p>
+<p>CPSR 中与条件码相关的 4 个核心标志位：</p>
+<table>
+<thead>
+<tr>
+<th>标志位</th>
+<th>含义（通俗版）</th>
+<th>触发场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z（零标志）</td>
+<td>Z=1：运算结果为 0；Z=0：结果非 0</td>
+<td>比较两数相等（R0-R1=0→Z=1）、运算结果清 0</td>
+</tr>
+<tr>
+<td>N（负标志）</td>
+<td>N=1：运算结果为负数；N=0：结果非负</td>
+<td>有符号数运算结果为负（如 5-10=-5→N=1）</td>
+</tr>
+<tr>
+<td>C（进位 / 借位标志）</td>
+<td>C=1：无符号数运算有进位 / 无借位；C=0：有借位 / 无进位</td>
+<td>无符号数加法进位（0xFF+1=0x100→C=1）、减法无借位</td>
+</tr>
+<tr>
+<td>V（溢出标志）</td>
+<td>V=1：有符号数运算溢出；V=0：未溢出</td>
+<td>有符号数超出范围（如 127+1=-128→V=1）</td>
+</tr>
+</tbody>
+</table>
+<p>16 种条件码（实际常用 15 种）可分为 6 组，结合 “标志位 + 含义 + 场景” 逐一讲透：</p>
+<ol>
+<li>相等 / 不相等判断（基于 Z 位）</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>编码</th>
+<th>标志位要求</th>
+<th>含义</th>
+<th>通俗理解</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EQ</td>
+<td>0000</td>
+<td>Z=1（置位）</td>
+<td>相等</td>
+<td>两数相减结果为 0</td>
+<td>判断 R0 是否等于 R1（CMP R0,R1 后，EQ 表示 R0=R1）</td>
+</tr>
+<tr>
+<td>NE</td>
+<td>0001</td>
+<td>Z=0（清零）</td>
+<td>不相等</td>
+<td>两数相减结果非 0</td>
+<td>判断 R0 是否不等于 R1</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>正负判断（基于 N 位）</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>编码</th>
+<th>标志位要求</th>
+<th>含义</th>
+<th>通俗理解</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI</td>
+<td>0100</td>
+<td>N=1（置位）</td>
+<td>负数</td>
+<td>运算结果最高位为 1（有符号数）</td>
+<td>判断运算结果是否为负（如 R0-10&lt;0）</td>
+</tr>
+<tr>
+<td>PL</td>
+<td>0101</td>
+<td>N=0（清零）</td>
+<td>正数 / 零</td>
+<td>运算结果最高位为 0</td>
+<td>判断运算结果是否非负</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>溢出判断（基于 V 位）</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>编码</th>
+<th>标志位要求</th>
+<th>含义</th>
+<th>通俗理解</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VS</td>
+<td>0110</td>
+<td>V=1（置位）</td>
+<td>溢出</td>
+<td>有符号数运算超出范围</td>
+<td>判断 127+1 是否溢出（结果 =-128→V=1）</td>
+</tr>
+<tr>
+<td>VC</td>
+<td>0111</td>
+<td>V=0（清零）</td>
+<td>未溢出</td>
+<td>有符号数运算在范围内</td>
+<td>判断 100+20 是否溢出（结果 = 120→V=0）</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>无符号数比较（基于 C/Z 位）</li>
+</ol>
+<p>无符号数没有正负，只看 “大小 / 进位”，核心是 C（进位）和 Z（相等）的组合：</p>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>编码</th>
+<th>标志位要求</th>
+<th>含义</th>
+<th>通俗理解</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CS/HS</td>
+<td>0010</td>
+<td>C=1</td>
+<td>无符号数≥</td>
+<td>减法无借位（A-B≥0）</td>
+<td>判断无符号数 R0≥R1</td>
+</tr>
+<tr>
+<td>CC/LO</td>
+<td>0011</td>
+<td>C=0</td>
+<td>无符号数 &lt;</td>
+<td>减法有借位（A-B&lt;0）</td>
+<td>判断无符号数 R0&lt;R1</td>
+</tr>
+<tr>
+<td>HI</td>
+<td>1000</td>
+<td>C=1 且 Z=0</td>
+<td>无符号数 &gt;</td>
+<td>减法无借位且不相等</td>
+<td>判断无符号数 R0&gt;R1（课件示例用的 HI）</td>
+</tr>
+<tr>
+<td>LS</td>
+<td>1001</td>
+<td>C=0 或 Z=1</td>
+<td>无符号数≤</td>
+<td>减法有借位或相等</td>
+<td>判断无符号数 R0≤R1（课件示例用的 LS）</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>有符号数比较（基于 N/V/Z 位）</li>
+</ol>
+<p>有符号数要考虑正负和溢出，核心是 N（负）和 V（溢出）的 “相等性”+ Z（相等）：</p>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>编码</th>
+<th>标志位要求</th>
+<th>含义</th>
+<th>通俗理解</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GE</td>
+<td>1010</td>
+<td>N=V</td>
+<td>有符号数≥</td>
+<td>结果非负且未溢出，或结果负且溢出</td>
+<td>判断有符号数 R0≥R1（如 - 5≥-10→GE）</td>
+</tr>
+<tr>
+<td>LT</td>
+<td>1011</td>
+<td>N≠V</td>
+<td>有符号数 &lt;</td>
+<td>结果负且未溢出，或结果非负且溢出</td>
+<td>判断有符号数 R0&lt;R1（如 - 10&lt;-5→LT）</td>
+</tr>
+<tr>
+<td>GT</td>
+<td>1100</td>
+<td>Z=0 且 N=V</td>
+<td>有符号数 &gt;</td>
+<td>不相等且≥</td>
+<td>判断有符号数 R0&gt;R1（如 5&gt;-3→GT）</td>
+</tr>
+<tr>
+<td>LE</td>
+<td>1101</td>
+<td>Z=1 或 N≠V</td>
+<td>有符号数≤</td>
+<td>相等或 &lt;</td>
+<td>判断有符号数 R0≤R1（如 - 3≤5→LE）</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>无条件执行 / 保留</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>条件码</th>
+<th>编码</th>
+<th>标志位要求</th>
+<th>含义</th>
+<th>通俗理解</th>
+<th>示例场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AL</td>
+<td>1110</td>
+<td>忽略</td>
+<td>无条件执行</td>
+<td>不管标志位如何，必执行</td>
+<td>普通指令默认（如 ADD R0,R1,R2 等价于 ADDAL R0,R1,R2）</td>
+</tr>
+<tr>
+<td>1111</td>
+<td>1111</td>
+<td>依版本而定</td>
+<td>保留 / 自定义</td>
+<td>不同 ARM 版本定义不同</td>
+<td>几乎不用，仅架构扩展用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm-数据处理类指令"><a name="arm-数据处理类指令" class="anchor-navigation-ex-anchor" href="#arm-数据处理类指令"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 数据处理类指令</h3>
+<ul>
+<li><strong>仅操作寄存器</strong>：数据处理指令只能对寄存器内容运算，不能直接操作内存数据</li>
+<li><strong>不直接访存</strong>：无法直接读取 / 写入内存，若要操作内存数据，需先通过<code>LDR/STR</code>（加载 / 存储指令）把内存数据读到寄存器，运算后再写回内存；</li>
+<li>数据传送、算术逻辑运算、比较指令，各自分工明确（传送只挪数据、运算会存结果 + 更标志、比较只更标志不存结果）。</li>
+</ul>
+<h4 id="数据传送指令（movmvn）——-寄存器间-搬数据"><a name="数据传送指令（movmvn）——-寄存器间-搬数据" class="anchor-navigation-ex-anchor" href="#数据传送指令（movmvn）——-寄存器间-搬数据"><i class="fa fa-link" aria-hidden="true"></i></a>数据传送指令（MOV/MVN）—— 寄存器间 “搬数据”</h4>
+<p>把数据（立即数 / 寄存器值 / 移位后寄存器值）从一个位置 “搬” 到目的寄存器，是最基础的数据处理指令。</p>
+<ol>
+<li><p>MOV：普通数据传送</p>
+<pre><code class="lang-assembly">MOV{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;op1&gt;    ;Rd = op1, Op1:寄存器､被移位的寄存器､立即数｡
+
+MOV R0, #5 ; R0=5 
+MOV R0, R1 ; R0=R1 
+MOV R0, R1, LSL #5 ; R0=R1左移5位
+</code></pre>
+</li>
+<li><p>MVN：取反数据传送(注意：数值是以<strong>补码</strong>形式存储的)</p>
+<pre><code class="lang-assembly">MVN{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;op1&gt; ;Rd = ~op1
+
+MVN R0, ＃0 ; R0=-1
+</code></pre>
+</li>
+</ol>
+<h4 id="算术逻辑运算指令-——-寄存器数据-做运算"><a name="算术逻辑运算指令-——-寄存器数据-做运算" class="anchor-navigation-ex-anchor" href="#算术逻辑运算指令-——-寄存器数据-做运算"><i class="fa fa-link" aria-hidden="true"></i></a>算术逻辑运算指令 —— 寄存器数据 “做运算”</h4>
+<p>对寄存器数据做加减 / 逻辑 / 乘法运算，<strong>运算结果存目的寄存器</strong>，加<code>S</code>会更新 CPSR 标志位（Z/N/C/V），是嵌入式运算的核心指令。</p>
+<ol>
+<li><p>加法指令（ADD/ADC）—— 基础加 / 带进位加</p>
+<pre><code class="lang-assembly">ADD{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt;   ;Rd = Rn + op2
+
+ADD R0, R1, #5 ; R0=R1+5 
+ADD R0, R1, R2 ; R0=R1+R2 
+ADD R0, R1, R2, LSL #5 ; R0=R1+R2左移5位
+
+ADC{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt;   ;Rd = Rn + op2 + C,该指令用于实现超过32位的数的加法
+
+#{R3,R2}+{R5,R4} -&gt; {R1,R0}
+ADDS R0, R2, R4 ;低32位相加，S表示结果影响条件标志位的值
+ADC R1, R3, R5 ;高32位相加
+</code></pre>
+</li>
+<li><p>减法指令：SUB/SBC/RSB/RSC —— 基础减 / 带借位减 / 反向减 / 带借位反向减</p>
+<pre><code class="lang-assembly">SUB{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn - op2
+
+SUB R0, R1, #5 ; R0=R1-5 
+SUB R0, R1, R2 ; R0=R1-R2 
+SUB R0, R1, R2, LSL #5 ; R0=R1-R2左移5位
+
+SBC{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn - op2 - 借位(!C)
+
+SUBS R0, R2, R4 ; 低32位相减，S表示结果影响条件标志位的值
+SBC R1, R3, R5 ; 高32位相减
+
+RSB{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = op2 - Rn
+
+RSB R0, R1, #5 ; R0=5-R1 
+RSB R0, R1, R2 ; R0=R2-R1 
+RSB R0, R1, R2, LSL #5 ; R0=R2左移5位-R1
+
+RSC{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = op2 - Rn - 借位
+
+RSBS R0, R4, R2 ; 低32位相减，S表示结果影响寄存器CPSR的值
+RSC R1, R5, R3 ; 高32位相减
+</code></pre>
+</li>
+<li><p>逻辑运算指令：AND/ORR/EOR/BIC，与/或/异或/清零</p>
+<pre><code class="lang-assembly">AND{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn &amp; op2,清除指定位,提取某几位
+AND R0, R0, #~(1&lt;&lt;3) ;把 GPIO 寄存器的第 3 位清 0：
+AND R0, R0, #0xFF ;提取 R0 的低 8 位
+
+ORR{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn | op2 ,置位外设寄存器的特定位,合并数据
+ORR R0, R0, #(1&lt;&lt;1) ;把 GPIO 引脚 1 置 1
+ORR R0, R1, R2, LSL #8 ;把两个 8 位数合并成 16 位
+
+EOR{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn ^ op2,翻转指定位,判断两数是否相等
+EORS R0, R1, R2 ;结果为 0 则 Z=1→R1=R2
+
+BIC{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn &amp; (~op2),清除外设寄存器的特定位
+BIC R0, R0, #(1&lt;&lt;5) ;关闭 SPI 的中断位
+</code></pre>
+</li>
+<li><p>乘法指令：MUL/MLA/SMULL/UMULL/SMLAL/UMLAL  ,基础乘/乘加/64/64乘加</p>
+<pre><code class="lang-assembly">MUL{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rd = Rn × op2,仅仅保留低32位，Rn和op2的值为32位的有符号数或无符号数
+MULS R0, R1, R2 ;(R0=R1 × R2) ,结果影响寄存器CPSR的值
+
+MLA{&lt;cond&gt;}{S} &lt;Rd&gt;, &lt;Rn&gt;, &lt;op2&gt;, &lt;op3&gt; ;Rd = Rn×op2 + op3
+MLA R0, R1, R2, R3  ; R0 = R1×R2 + R3
+
+SMULL{&lt;cond&gt;}{S} &lt;Rdl&gt;, &lt;Rdh&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rdh:Rdl = Rn×op2
+UMULL{&lt;cond&gt;}{S} &lt;Rdl&gt;, &lt;Rdh&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rdh:Rdl = Rn×op2（64 位无符号结果）
+
+SMLAL{&lt;cond&gt;}{S} &lt;Rdl&gt;, &lt;Rdh&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rdh:Rdl = Rn×op2 + Rdh:Rdl
+UMULL{&lt;cond&gt;}{S} &lt;Rdl&gt;, &lt;Rdh&gt;, &lt;Rn&gt;, &lt;op2&gt; ;Rdh:Rdl = Rn×op2 + Rdh:Rdl(无符号)
+</code></pre>
+</li>
+</ol>
+<h4 id="比较指令：cmpcmntstteq"><a name="比较指令：cmpcmntstteq" class="anchor-navigation-ex-anchor" href="#比较指令：cmpcmntstteq"><i class="fa fa-link" aria-hidden="true"></i></a>比较指令：CMP/CMN/TST/TEQ</h4>
+<ol>
+<li><p>CMP（基础比较）—— 减法比较，即等同于<code>SUBS</code>，但是仅仅更新 Z/N/C/V 标志位</p>
+<pre><code class="lang-assembly">CMP{&lt;cond&gt;} &lt;Rn&gt;, &lt;op1&gt; ;执行Rn - op1，不保存结果，仅更新 Z/N/C/V 标志位；
+
+CMP R0, #5  ; 计算R0-5，更新标志位
+BEQ equal   ; 若Z=1（R0=5），跳转到equal标签
+ADDGT R0, R0, #1  ; 若R0&gt;5（Z=0且N=V），R0=R0+1
+</code></pre>
+</li>
+<li><p>CMN（反值比较）—— 加法比较（等效比较负数）</p>
+<pre><code class="lang-assembly">CMN{&lt;cond&gt;} &lt;Rn&gt;, &lt;op1&gt; ;执行Rn + op1（等效于Rn - (-op1)），更新标志位；
+
+CMN R0, #5  ; 等效比较R0和-5（R0 - (-5) = R0+5）
+BMI negative  ; 若N=1（R0+5&lt;0 → R0&lt;-5），跳转到negative
+</code></pre>
+</li>
+<li><p>TST（位测试）—— 按位与比较，同时更新 Z 标志位</p>
+<pre><code class="lang-assembly">TST{&lt;cond&gt;} &lt;Rn&gt;, &lt;op1&gt; ;执行Rn &amp; op1，更新 Z 标志位；
+
+TST R0, #(1&lt;&lt;3)  ; 测试R0的第3位是否为1
+BNE bit_set     ; 若Z=0（第3位=1），跳转到bit_set
+</code></pre>
+</li>
+<li><p>TEQ（相等测试）—— 按位异或比较，同时更新 Z 标志位</p>
+<pre><code class="lang-assembly">TEQ{&lt;cond&gt;} &lt;Rn&gt;, &lt;op1&gt; ;执行Rn ^ op1，更新 Z 标志位
+
+TEQ R0, R1  ; 判断R0是否等于R1
+BEQ equal   ; 若Z=1（R0=R1），跳转
+</code></pre>
+</li>
+</ol>
+<h3 id="arm-分支指令"><a name="arm-分支指令" class="anchor-navigation-ex-anchor" href="#arm-分支指令"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 分支指令</h3>
+<p>ARM 分支指令是控制程序 “跳转到指定位置执行” 或 “切换指令状态（ARM/Thumb）” 的核心指令，核心分为 4 类：B（基础跳转）、BL（带返回跳转）、BX（状态切换跳转）、BLX（带返回 + 状态切换跳转）</p>
+<p>程序跳转的两种方式：跳转指令/直接写（R15）PC寄存器</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>实现逻辑</th>
+<th>跳转范围</th>
+<th>核心用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>跳转指令（B/BL/BX/BLX）</td>
+<td>基于 PC 的相对寻址（PC + 偏移量）</td>
+<td>B/BL：±32MB；BX/BLX：4GB</td>
+<td>常规程序跳转、子程序调用</td>
+</tr>
+<tr>
+<td>直接写 PC 寄存器</td>
+<td><code>MOV PC, #0x12345678</code> 或 <code>LDR PC, =addr</code></td>
+<td>4GB 全地址空间</td>
+<td>超出 ±32MB 的远距离跳转</td>
+</tr>
+</tbody>
+</table>
+<p>分支指令中的 BX/BLX 是唯一能切换状态的指令，B/BL 仅跳转、不切换状态</p>
+<ol>
+<li>B 指令：基础跳转（Branch）—— 单纯跳，不返回</li>
+</ol>
+<p>最基础的无条件 / 条件跳转指令，仅修改 PC 值实现程序跳转，<strong>不保存返回地址</strong>，适合 “一去不回” 的跳转（如循环、分支判断）。</p>
+<pre><code class="lang-assembly">B{&lt;cond&gt;} &lt;addr&gt; ;PC = PC + (addr &lt;&lt; 2)其中addr可以是标签转为相对于当前PC的24位有符号偏移量值
+
+
+B exit  ; 无条件跳转到exit标签处
+...     ; 这段代码不会执行
+exit:   ; 跳转目标位置
+    MOV R0, #0
+
+MOV R0, #10  ; 初始化循环计数器R0=10
+loop:        ; 循环体开始标签
+  ...        ; 循环要执行的代码
+  SUBS R0, #1; 计数器减1，S更新Z标志位（R0=0时Z=1）
+  BNE loop   ; 若Z=0（R0≠0），跳回loop；Z=1则退出循环
+</code></pre>
+<ol>
+<li>BL 指令：带返回的跳转（Branch with Link）—— 跳出去，能回来</li>
+</ol>
+<p>专为<strong>子程序调用</strong>设计的跳转指令，跳转时自动把 “返回地址” 保存到 LR（R14）寄存器，子程序执行完后，把 LR 值写回 PC 就能返回原位置。<strong>注意需要手动写回PC</strong></p>
+<pre><code class="lang-assembly">BL{&lt;cond&gt;} &lt;addr&gt; ;PC = PC + (addr &lt;&lt; 2),同时保存返回地址到LR(R14)链接寄存器
+
+BL func  ; 1. 保存返回地址到LR；2. 跳转到func子程序
+...      ; 调用完func后，回到这里执行
+func:    ; 子程序入口
+  ...    ; 子程序功能代码
+  MOV PC, LR  ; 把LR的值写入PC，返回调用处
+
+CMP R0, #5   ; 比较R0和5，更新标志位
+BLLT SUB1    ; 若R0&lt;5（LT条件），调用SUB1
+BLGE SUB2    ; 若R0≥5（GE条件），调用SUB2
+</code></pre>
+<ol>
+<li>BX 指令：带状态切换的跳转（Branch and Exchange）—— 跳 + 切换 ARM/Thumb</li>
+</ol>
+<p>唯一能切换 ARM/Thumb 状态的基础跳转指令，跳转目标地址由寄存器指定（而非偏移量），支持 4GB 全地址空间跳转。</p>
+<pre><code class="lang-assembly">BX &lt;Rn&gt; ;目标地址 = Rn 的值 &amp; 0xFFFFFFFE,同时状态切换由 Rn 的最低位决定 0-&gt;ARM,1-&gt;Thumb
+
+ADR R0, exit  ; 伪指令：把exit标签的地址加载到R0（假设exit地址=0x12345678）
+BX R0         ; 1. 目标地址=0x12345678 &amp; 0xFFFFFFFE=0x12345678；2. R0最低位=0 → 切换到ARM状态，跳转到exit
+
+ADR R0, thumb_func  ; thumb_func是Thumb指令标签
+ADD R0, R0, #1      ; R0最低位设为1
+BX R0               ; 切换到Thumb状态，跳转到thumb_func
+</code></pre>
+<ol>
+<li>BLX 指令：带返回 + 状态切换的跳转（Branch with Link and Exchange）—— 调用 + 切换</li>
+</ol>
+<p>BL（带返回）+ BX（状态切换）的组合指令，既保存返回地址到 LR，又能切换 ARM/Thumb 状态，支持两种格式：</p>
+<pre><code class="lang-assembly">BLX &lt;addr&gt; ;相对寻址跳转（±32MB）
+BLX &lt;Rn&gt;   ;寄存器寻址跳转（4GB）
+
+BLX T16  ; 1. 保存返回地址到LR；2. 跳转到T16；3. 切换到Thumb状态
+...
+CODE16   ; 汇编器伪指令：后续指令为16位Thumb指令
+T16:     ; Thumb指令入口
+  ...    ; Thumb指令代码
+</code></pre>
+<hr></hr>
+<h3 id="arm-存储器访问指令"><a name="arm-存储器访问指令" class="anchor-navigation-ex-anchor" href="#arm-存储器访问指令"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 存储器访问指令</h3>
+<p>ARM 存储器访问指令是<strong>连接寄存器和内存的唯一桥梁</strong></p>
+<p>因为 ARM 所有运算指令（ADD/SUB/AND 等）只能操作寄存器，数据若在内存中，必须先通过<code>LDR</code>（加载）读到寄存器，运算后再通过<code>STR</code>（存储）写回内存。</p>
+<ul>
+<li>Load（加载）：内存 → 寄存器；把内存里的数据 “读” 到寄存器里运算</li>
+<li>Store（存储）：寄存器 → 内存；把寄存器运算后的结果 “写” 回内存</li>
+</ul>
+<p>所有存储器访问指令都围绕这两个动作展开，区别仅在于 “单次传多少数据（字 / 半字 / 字节）”；“传多少个数据（单个 / 多个）”；“地址怎么算（寻址方式）”</p>
+<p><img src="assets/image-20251215210028351.png" alt="image-20251215210028351"></img></p>
+<p>所以分为三类Load/Store指令</p>
+<ol>
+<li>单一数据传送指令（LDR和STR等）</li>
+<li>多数据传送指令（LDM和STM）</li>
+<li>数据交换指令（SWP和SWPB）</li>
+</ol>
+<h4 id="单一数据传送指令（ldrstr-系列）"><a name="单一数据传送指令（ldrstr-系列）" class="anchor-navigation-ex-anchor" href="#单一数据传送指令（ldrstr-系列）"><i class="fa fa-link" aria-hidden="true"></i></a>单一数据传送指令（LDR/STR 系列）</h4>
+<p>最常用存储器访问指令<code>LDR</code>（加载）和<code>STR</code>（存储），支持 “字（32 位）、半字（16 位）、字节（8 位）” 三种数据宽度</p>
+<p>LDR（字数据加载）+ STR（字数据存储）</p>
+<pre><code class="lang-assembly">LDR{&lt;cond&gt;} &lt;Rd&gt;, &lt;addr&gt; ; Rd=[addr]
+STR{&lt;cond&gt;} &lt;Rd&gt;, &lt;addr&gt; ; [addr]=Rd
+</code></pre>
+<p>地址<code>addr</code>的寻址方式：</p>
+<table>
+<thead>
+<tr>
+<th>寻址方式</th>
+<th>格式示例</th>
+<th>地址计算逻辑</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直接寻址（无偏移）</td>
+<td><code>LDR R0, [R1]</code></td>
+<td>地址 = R1</td>
+<td>直接访问 Rn 指向的内存地址</td>
+</tr>
+<tr>
+<td>立即数偏移</td>
+<td><code>LDR R0, [R1, #0x12]</code></td>
+<td>地址 = R1 + 0x12（正数）/ R1 - R2（负数）</td>
+<td>偏移量是 12 位无符号数（-4095~4095）</td>
+</tr>
+<tr>
+<td>寄存器偏移</td>
+<td><code>LDR R0, [R1, R2]</code></td>
+<td>地址 = R1 + R2</td>
+<td>偏移量存在寄存器中</td>
+</tr>
+<tr>
+<td>移位寄存器偏移</td>
+<td><code>LDR R0, [R1, R2, LSL #5]</code></td>
+<td>地址 = R1 + (R2 × 32)（LSL#5 = 左移 5 位 =×32）</td>
+<td>偏移量先移位再参与计算</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在地址后加<code>!</code>，表示 “数据传送后，把新地址写回基址寄存器 Rn”，无需额外指令修改 Rn</li>
+</ul>
+<pre><code class="lang-assembly">STR R0, [R1, #4]!
+R1=0x40003000，R0=0x1A27E4F3
+1. 计算地址：0x40003000 + 4 = 0x40003004；
+2. 把R0的32位数据写到0x40003004；
+3. 自动更新R1：R1 = 0x40003004（原R1+4）。
+</code></pre>
+<ul>
+<li>后变址（[, Rm] 后缀）—— <strong>先访问，后更新地址</strong></li>
+<li>地址写为<code>[Rn], 偏移量</code>，表示 “先以 Rn 为地址访问内存，再更新 Rn”</li>
+</ul>
+<pre><code class="lang-assembly">LDR R0, [R1], R2, LSL #2
+1. 先访问地址=R1的内存，数据读到R0；
+2. 再更新R1：R1 = R1 + (R2 × 4)。
+</code></pre>
+<blockquote>
+<p>[!note]</p>
+<p><code>x = (a + b) - c</code>（a/b/c/x 都是内存中的变量）</p>
+<pre><code class="lang-assembly">; 步骤1：把内存中的a读到寄存器R0
+LDR R4, =a    ; 伪指令：把变量a的地址加载到R4
+LDR R0, [R4]  ; 内存地址=R4 → 数据a读到R0
+
+; 步骤2：把内存中的b读到寄存器R1
+LDR R5, =b
+LDR R1, [R5]
+
+; 步骤3：运算a+b → R3
+ADD R3, R0, R1
+
+; 步骤4：把内存中的c读到寄存器R2
+LDR R4, =c
+LDR R2, [R4]
+
+; 步骤5：运算(a+b)-c → R3
+SUB R3, R3, R2
+
+; 步骤6：把结果R3写回内存变量x
+LDR R4, =x
+STR R3, [R4]
+</code></pre>
+<p><code>x = a ×（b+c）</code></p>
+<pre><code class="lang-assembly">ADR R4, b ;变量b处的地址装入R4中
+LDR R0, [R4] ;取b
+ADR R4, c ;变量c处的地址装入R4中
+LDR R1, [R4] ;取c
+ADD R2, R0,R1 ; R0+R1 →R2，即b+c →R2
+ADR R4, a ;变量a处的地址装入R4中
+LDR R0, [R4] ;取a
+MUL R2, R2, R0 ;R2×R0 →R2，即(b+c)×a →R2
+ADR R4, x ;变量x处的地址装入R4中
+STR R2, [R4] ;存x
+</code></pre>
+</blockquote>
+<h5 id="不同数据宽度的-ldrstr-变体"><a name="不同数据宽度的-ldrstr-变体" class="anchor-navigation-ex-anchor" href="#不同数据宽度的-ldrstr-变体"><i class="fa fa-link" aria-hidden="true"></i></a>不同数据宽度的 LDR/STR 变体</h5>
+<p>针对 “字节、半字” 的传送需求，ARM 提供了专用变体，核心区别是 “数据宽度” 和 “符号扩展”</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>数据宽度</th>
+<th>核心功能</th>
+<th>关键特征</th>
+<th>示例（课件）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LDRB</td>
+<td>字节（8 位）</td>
+<td>内存字节 → Rd</td>
+<td>Rd 高 24 位清 0</td>
+<td><code>LDRB R0, [R1]</code> → [R1] 的 1 字节→R0 低 8 位，高 24 位 = 0</td>
+</tr>
+<tr>
+<td>LDRH</td>
+<td>半字（16 位）</td>
+<td>内存半字 → Rd</td>
+<td>Rd 高 16 位清 0</td>
+<td><code>LDRH R0, [R1]</code> → [R1] 的 2 字节→R0 低 16 位，高 16 位 = 0</td>
+</tr>
+<tr>
+<td>LDRSB</td>
+<td>有符号字节</td>
+<td>内存字节 → Rd</td>
+<td>按字节符号位扩展高 24 位</td>
+<td>R1=0x10000000，[R1]=0x93 → <code>LDRSB R0,[R1]</code> → R0=0xFFFFFF93（0x93 是负数，符号位扩展）</td>
+</tr>
+<tr>
+<td>LDRSH</td>
+<td>有符号半字</td>
+<td>内存半字 → Rd</td>
+<td>按半字符号位扩展高 16 位</td>
+<td>R1=0x10000000，[R1]=0x933D → <code>LDRSH R0,[R1]</code> → R0=0xFFFF933D</td>
+</tr>
+<tr>
+<td>STRB</td>
+<td>字节（8 位）</td>
+<td>Rd 低 8 位 → 内存</td>
+<td>仅存低 8 位，高位丢弃</td>
+<td>R0=0x1A27E4F3 → <code>STRB R0,[R1,#4]!</code> → 内存存 0xF3</td>
+</tr>
+<tr>
+<td>STRH</td>
+<td>半字（16 位）</td>
+<td>Rd 低 16 位 → 内存</td>
+<td>仅存低 16 位，高位丢弃</td>
+<td>R0=0x1A27E4F3 → <code>STRH R0,[R1,#4]!</code> → 内存存 0xE4F3</td>
+</tr>
+</tbody>
+</table>
+<p>LDRT/STRBT 等（用户模式访问）</p>
+<p><code>LDRT/STRBT/LDRBT/STRBT</code>的核心是 “强制用户模式访问”—— 无论 CPU 当前处于特权模式（如管理模式），执行这些指令时都<strong>按 “用户模式” 访问内存</strong>，用于系统级编程（如保护内存安全），功能和普通<code>LDR/STR</code>一致，仅访问权限不同。</p>
+<hr></hr>
+<h4 id="多数据传送指令（ldmstm）"><a name="多数据传送指令（ldmstm）" class="anchor-navigation-ex-anchor" href="#多数据传送指令（ldmstm）"><i class="fa fa-link" aria-hidden="true"></i></a>多数据传送指令（LDM/STM）</h4>
+<p>用于 “一次性加载 / 存储多个寄存器数据”（如堆栈操作、批量数据搬运），是嵌入式中 “入栈 / 出栈” 的核心指令。</p>
+<pre><code class="lang-assembly">LDM{&lt;cond&gt;}{&lt;type&gt;} &lt;Rn&gt;{!}, &lt;regs&gt;{^} ;regs = {[Rn],[Rn+4],...}
+STM{&lt;cond&gt;}{&lt;type&gt;} &lt;Rn&gt;{!}, &lt;regs&gt;{^} ;{[Rn],[Rn+4],...} = regs
+</code></pre>
+<ol>
+<li><p><code>&lt;type&gt;</code>：地址增长方式（核心！）</p>
+<blockquote>
+<p><code>&lt;type&gt;</code>决定 “每次传送后地址怎么变”，分两类：通用地址模式（IA/IB/DA/DB）、堆栈专用模式（FD/ED/FA/EA）</p>
+<p>| 通用 type | 含义           | 示例（LDMIA R13!, {R0-R2}）                      |
+| --------- | -------------- | ------------------------------------------------ |
+| IA        | 传送后地址加 4 | 先读 [R13]→R0，再读 [R13+4]→R1，再读 [R13+8]→R2  |
+| IB        | 传送前地址加 4 | 先 R13+4，读 [R13+4]→R0，再 R13+8，读 [R13+8]→R1 |
+| DA        | 传送后地址减 4 | 先读 [R13]→R0，再读 [R13-4]→R1                   |
+| DB        | 传送前地址减 4 | 先 R13-4，读 [R13-4]→R0                          |</p>
+<p>ARM 堆栈分 “满 / 空”“增 / 减” 四种，对应<code>&lt;type&gt;</code>如下，核心是 “栈指针指向哪里”：</p>
+<pre><code class="lang-assembly">STMFD R13!, {R0-R12, LR} ;寄存器入栈（满递减栈）；
+LDMFD R13!, {R0-R12, PC} ;出栈并返回
+</code></pre>
+<p>| 堆栈 type    | 含义                         | 栈指针特征                     |
+| ------------ | ---------------------------- | ------------------------------ |
+| FD（满递减） | 满栈 + 递减（高地址→低地址） | 栈指针指向最后入栈的数据（满） |
+| ED（空递减） | 空栈 + 递减                  | 栈指针指向下一个空闲位置（空） |
+| FA（满递增） | 满栈 + 递增（低地址→高地址） | 栈指针指向最后入栈的数据       |
+| EA（空递增） | 空栈 + 递增                  | 栈指针指向下一个空闲位置       |</p>
+</blockquote>
+</li>
+<li><p><code>!</code>：传送后把最终地址写回基址寄存器 Rn（堆栈操作必加，自动更新栈指针）；</p>
+</li>
+<li><p><code>&lt;regs&gt;</code>：寄存器列表（如<code>{R0-R2, LR}</code>），<strong>按寄存器序号从小到大传送，和书写顺序无关</strong>；</p>
+</li>
+<li><p><code>^</code>：特权模式下，恢复用户模式寄存器（或 SPSR→CPSR，用于异常返回）。</p>
+</li>
+</ol>
+<hr></hr>
+<h4 id="数据交换指令（swpswpb）"><a name="数据交换指令（swpswpb）" class="anchor-navigation-ex-anchor" href="#数据交换指令（swpswpb）"><i class="fa fa-link" aria-hidden="true"></i></a>数据交换指令（SWP/SWPB）</h4>
+<p>实现 “内存数据” 和 “寄存器数据” 的原子交换（不可中断），用于多线程 / 中断中的临界区保护（如共享变量访问）</p>
+<pre><code class="lang-assembly">SWP{&lt;cond&gt;} &lt;Rd&gt;, &lt;op1&gt;, [&lt;op2&gt;] ;Rd=[op2],[op2]=op1
+
+SWP R0, R1, [R2]
+; 执行逻辑（一步完成，不可中断）：
+1. 把内存地址[R2]的32位数据读到R0；
+2. 把R1的32位数据写到内存地址[R2]。
+
+SWP{&lt;cond&gt;}B &lt;Rd&gt;, &lt;op1&gt;, [&lt;op2&gt;]    ;Rd={24'b0,[op2][7:0]},[op2]={24'b0,op1[7:0]}
+
+SWPB R0, R1, [R2]
+; 执行逻辑：
+1. 把[R2]的1字节数据读到R0低8位（R0高24位=0）；
+2. 把R1低8位数据写到[R2]。
+</code></pre>
+<hr></hr>
+<h3 id="arm-协处理器指令"><a name="arm-协处理器指令" class="anchor-navigation-ex-anchor" href="#arm-协处理器指令"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 协处理器指令</h3>
+<p>ARM 协处理器是为了分担 ARM 主处理器特定任务（如浮点运算、系统控制、调试）设计的 “专用助手”，协处理器指令则是 ARM 主处理器和协处理器之间的 “沟通语言”。</p>
+<ul>
+<li>ARM 主处理器最多支持<strong>16 个协处理器</strong>（编号 P0~P15）</li>
+<li>执行指令时，协处理器只会响应 “专属自己的指令”</li>
+</ul>
+<p>ARM协处理器指令可分为3类：</p>
+<ol>
+<li>ARM处理器用于<strong>初始化协处理器</strong>的数据操作指令（CDP）。</li>
+<li><strong>协处理器寄存器和内存单元</strong>之间的数据传送指令（LDC，STC）。</li>
+<li>ARM<strong>处理器寄存器和协处理器寄存器</strong>之间的数据传送指令（MCR，MRC）。</li>
+</ol>
+<hr></hr>
+<h4 id="cdp（co-processor-data-operation）协处理器数据操作指令"><a name="cdp（co-processor-data-operation）协处理器数据操作指令" class="anchor-navigation-ex-anchor" href="#cdp（co-processor-data-operation）协处理器数据操作指令"><i class="fa fa-link" aria-hidden="true"></i></a>CDP（Co-Processor Data Operation）协处理器数据操作指令</h4>
+<p>CDP（Co-Processor Data Operation）是 ARM 主处理器给协处理器发 “<strong>纯内部运算</strong>命令” 的核心指令 —— 全程只让协处理器用自己的寄存器算，不碰 ARM 的寄存器 / 内存，是协处理器专属的 “<strong>内部运算指令</strong>”。</p>
+<pre><code class="lang-assembly">CDP {条件} 协处理器编码，协处理器操作码1，目的寄存器，源寄存器1，源寄存器2，协处理器操作码2
+
+CDP P1，2，C1，C2，C3 ;P1协处理器：C1 = C2 （执行操作码2） C3
+CDPEQ P1，2，C1，C2，C3 ;仅当CPSR的Z标志位=1（运算结果相等）时执行
+</code></pre>
+<ul>
+<li>CDP 里的 C1/C2/C3 是<strong>协处理器的寄存器</strong>（每个协处理器有自己的寄存器空间），不是 ARM 主处理器的 R1/R2/R3；</li>
+</ul>
+<hr></hr>
+<h4 id="ldcstc-协处理器加载--存储指令"><a name="ldcstc-协处理器加载--存储指令" class="anchor-navigation-ex-anchor" href="#ldcstc-协处理器加载--存储指令"><i class="fa fa-link" aria-hidden="true"></i></a>LDC/STC 协处理器加载 / 存储指令</h4>
+<p>LDC 和 STC 是 ARM 主处理器指挥协处理器与<strong>内存交换数据</strong>的核心指令：LDC 是 “内存→协处理器”（加载），STC 是 “协处理器→内存”（存储）,并且通过<strong>ARM 寄存器提供内存地址</strong></p>
+<pre><code class="lang-assembly">LDC {条件} {L} 协处理器编码Pn，目的寄存器Cd，[源寄存器Rs] ;Pn:Cd=[Rs]
+LDC P3，C4，[R5] ;P3:C4=[R5]
+
+STC {条件} {L} 协处理器编码Pn，源寄存器Cs，[目的寄存器Rd] ;[Rd]=Pn:Cs
+STCEQ P2，C4，[R5] ;if(Z=1)[R5]=P2:C4
+</code></pre>
+<ul>
+<li>{L} 选项补充：加 {L} 表示 “长读取/长存储”，比如传输 64 位双精度浮点数据时，会连续读取内存中 2 个 32 位字，存入协处理器的成对寄存器（如 C4/C5）。</li>
+</ul>
+<hr></hr>
+<h4 id="mcrmrc-协处理器指令"><a name="mcrmrc-协处理器指令" class="anchor-navigation-ex-anchor" href="#mcrmrc-协处理器指令"><i class="fa fa-link" aria-hidden="true"></i></a>MCR/MRC 协处理器指令</h4>
+<p>MCR 和 MRC 是 ARM 主处理器与协处理器之间<strong>直接传数据</strong>的核心指令（无需经过内存）</p>
+<p>MCR 是 “ARM 寄存器→协处理器寄存器”，MRC 是 “协处理器寄存器→ARM 寄存器”，是嵌入式中配置 CP15（系统控制协处理器）、CP14（调试协处理器）的高频指令</p>
+<pre><code class="lang-assembly">MCR/MRC {条件} 协处理器编码，协处理器操作码1，目的寄存器，源寄存器1，源寄存器2，协处理器操作码2
+
+MCR P2，3，R2，C4，C5，6
+;指定协处理器P2执行第3种操作，类型6，操作数是 R2，结果放在C4中。
+
+MRC P0，3，R2，C4，C5，6
+;指定协处理器P0执行第3种操作，类型6，操作数C4和C5，结果送给R2
+</code></pre>
+<h4 id="arm920t-协处理器（cp14cp15）"><a name="arm920t-协处理器（cp14cp15）" class="anchor-navigation-ex-anchor" href="#arm920t-协处理器（cp14cp15）"><i class="fa fa-link" aria-hidden="true"></i></a>ARM920T 协处理器（CP14/CP15）</h4>
+<p>ARM920T 是嵌入式经典内核，仅集成<strong>CP14（调试协处理器）</strong> 和<strong>CP15（系统控制协处理器）</strong> 两个协处理器</p>
+<p>CP14 是 ARM920T 专门用于<strong>调试场景</strong>的协处理器，全称 Debug Communication Channel（<strong>调试通信通道</strong>），核心作用是 “连接调试器（如 JLink、GDB）和目标板”，让调试器能给目标板发指令、读数据。</p>
+<ul>
+<li>仅提供2 个 32 位专用寄存器（DCC_TX、DCC_RX）：<ul>
+<li>DCC_TX：目标板 → DCC_TX → 调试器；</li>
+<li>DCC_RX：调试器 → DCC_RX → 目标板；</li>
+</ul>
+</li>
+</ul>
+<p>CP15 是 ARM920T 的 “核心配置中心”，负责管理内核最底层的系统资源，是嵌入式开发中<strong>必须掌握</strong>的协处理器</p>
+<ul>
+<li>配置和控制caches、MMU、保护系统、时钟模式 。</li>
+<li>有16个寄存器：CR0-CR15。并且这些CP15寄存器只能被<strong>MRC和MCR指令访问</strong></li>
+</ul>
+<p>其中寄存器CR0有2个，具体被访问的寄存器由Opcode_2字段的值决定(0-&gt;ID；1-&gt;Cache)</p>
+<blockquote>
+<ol>
+<li><p>ID编码寄存器：只读，返回32位设备ID编码</p>
+<pre><code class="lang-assembly">MRC p15, 0, Rd, c0, c0, 0 ;Rd=ID
+</code></pre>
+</li>
+<li><p>Cache类型寄存器：只读，返回 32 位数据，包含<strong>ICache（指令缓存）、DCache（数据缓存）的大小、行长度、架构版本</strong></p>
+<pre><code class="lang-assembly">MRC p15, 0, Rd, c0, c0, 1 ;Rd=Cache_info
+</code></pre>
+</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h3 id="arm-软件中断指令（swibkpt）"><a name="arm-软件中断指令（swibkpt）" class="anchor-navigation-ex-anchor" href="#arm-软件中断指令（swibkpt）"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 软件中断指令（SWI/BKPT）</h3>
+<p>ARM 的软件中断指令（SWI/BKPT）是实现 “用户模式调用系统资源”“软件调试断点” 的核心指令</p>
+<p>RM指令集中的软件中断指令是唯一一条不使用寄存器的ARM指令，并且可以条件执行的指令。</p>
+<p>其中 SWI 是系统级调用的关键，BKPT 是调试专属指令。</p>
+<ol>
+<li>SWI：软件中断指令</li>
+</ol>
+<p>SWI（Software Interrupt）是<strong>用户模式调用系统服务的唯一合法方式</strong></p>
+<p>通过主动触发 “软件中断异常”，切换到<strong>管理模式</strong>（高权限），执行系统例程（如读写外设、分配内存），执行完后再返回用户模式。</p>
+<pre><code class="lang-assembly">SWI {&lt;cond&gt;} 24位的立即数 ;根据条件执行立即数对应的系统例程
+SWI 0X05  ;调用编号为05的系统例程。
+</code></pre>
+<p>SWI 的 24 位立即数仅用于 “<strong>指定系统服务类型</strong>”，具体参数（如要写串口的数据、要分配的内存大小）需通过通用寄存器传递，核心分两种方式：</p>
+<p>方式 1：立即数非 0（指定服务类型），参数存在其他寄存器</p>
+<pre><code class="lang-assembly">; 示例：调用12号软中断，子功能号34（比如12号是串口服务，34是“写串口”子功能）
+MOV R0, #34  ; R0存子功能号（入口参数）
+SWI 12       ; 24位立即数=12 → 指定调用12号系统例程
+</code></pre>
+<ul>
+<li>逻辑：立即数 12 是 “主服务号”（比如串口服务），R0=34 是 “子功能号”（比如写串口），其他参数可存在 R1/R2 等（如 R1 存要写的字符串地址）。</li>
+</ul>
+<p>方式 2：立即数为 0（忽略），服务类型由 R0 指定</p>
+<pre><code class="lang-assembly">; 示例：同样调用12号软中断，子功能号34
+MOV R0, #12  ; R0存主服务号（12号串口服务）
+MOV R1, #34  ; R1存子功能号（写串口）
+SWI 0        ; 立即数=0 → 服务类型由R0决定
+</code></pre>
+<ul>
+<li>逻辑：立即数 0 是约定俗成的 “占位符”，系统例程会先读 R0 的值，再确定要执行的服务。</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>SWI 指令立即数获取流程：<strong>判断指令类型→找指令地址→读指令码→剥离立即数</strong></p>
+<ul>
+<li><strong>ARM 指令</strong>：32 位指令码，格式为<code>[7位操作码][24位立即数]</code>（立即数占低 24 位）；</li>
+<li><strong>Thumb 指令</strong>：16 位指令码，格式为<code>[8位操作码][8位立即数]</code>（立即数占低 8 位）；</li>
+<li>中断触发后，CPU 自动把 “SWI 下一条指令地址” 存入 LR（R14），因此 SWI 指令的地址 = LR - 指令长度（ARM 指令 4 字节，Thumb 指令 2 字节）。</li>
+</ul>
+<pre><code class="lang-assembly">T_bit EQU 0x20
+SWI_Hander
+    STMFD SP!, {R0-R3, R12, LR} ；现场保护
+    MRS R0, SPSR ；读取SPSR
+    TST R0, #T_bit ；测试T标志位
+    LDRNEH R0, [LR, # -2] ；若是Thumb指令，读取16位指令码
+    BICNE R0, R0, #0xFF00 ；对应位清0，取Thumb指令的8位立即数
+    LDREQ R0, [LR, # -4] ；若是ARM指令，读取32位指令码
+    BICEQ R0, R0, #0xFF000000 ；对应位清0，取ARM指令的24位立即数
+    ...
+    LDMFD SP!, {R0-R3, R12, PC}^ ；恢复现场，同时SPSR→CPSR
+</code></pre>
+</blockquote>
+<ol>
+<li>BKPT：断点中断指令</li>
+</ol>
+<p>BKPT（BreakPoint）是<strong>专门用于软件调试的断点中断指令</strong>—— 触发后 CPU 暂停执行，调试器（如 JLink、GDB）可读取寄存器、内存，查看程序状态，是嵌入式调试的核心指令。</p>
+<pre><code class="lang-assembly">BKPT 16位的立即数
+
+BKPT  ; 省略立即数，默认=0
+BKPT 0xF02C  ; 带16位立即数（0xF02C）
+</code></pre>
+<ul>
+<li>BKPT 触发的是 “断点异常”，优先级和 SWI 相同（6 级）；</li>
+<li>16 位立即数仅用于调试辅助，不影响断点本身的触发（即使填任意值，都会暂停程序）；</li>
+</ul>
+<hr></hr>
+<h4 id="arm-程序状态寄存器指令（mrsmsr）"><a name="arm-程序状态寄存器指令（mrsmsr）" class="anchor-navigation-ex-anchor" href="#arm-程序状态寄存器指令（mrsmsr）"><i class="fa fa-link" aria-hidden="true"></i></a>ARM 程序状态寄存器指令（MRS/MSR）</h4>
+<p>CPSR（当前程序状态寄存器）和 SPSR（备份程序状态寄存器）是 ARM 的 “特权寄存器”，<strong>不能直接赋值 / 修改</strong>（比如<code>MOV CPSR, R0</code>是非法指令）</p>
+<p>MRS/MSR 是<strong>唯一能操作 CPSR/SPSR 的指令</strong>：MRS 负责 “读” 状态寄存器到通用寄存器，MSR 负责 “写” 通用寄存器 / 立即数到状态寄存器</p>
+<pre><code class="lang-assembly">MRS{&lt;cond&gt;} &lt;Rd&gt;, CPSR/SPSR  ;Rd=CPSR/SPSR
+MRS R0, CPSR ;状态寄存器CPSR→R0
+
+MSR{&lt;cond&gt;} CPSR/SPSR_&lt;field&gt;, &lt;op1&gt; ; CPSR/SPSR_&lt;field&gt;=op1
+MSR CPRS_f, R0 ;R0→ CPRS (只修改条件域)
+MRS CPSR_fsxc, #5 ；#5→ CPRS(全修改)
+</code></pre>
+<p><img src="assets/image-20251215222201415.png" alt="image-20251215222201415"></img></p>
+<h2 id="thumb指令集"><a name="thumb指令集" class="anchor-navigation-ex-anchor" href="#thumb指令集"><i class="fa fa-link" aria-hidden="true"></i></a>Thumb指令集</h2>
+<p>Thumb 指令集是 ARM 为<strong>节省内存、提升代码密度</strong>设计的 16 位压缩指令集，本质是 ARM 指令集的 “精简压缩版”—— 指令长度减半，但<strong>数据 / 地址仍保持 32 位</strong></p>
+<ul>
+<li>多数指令仅支持 R0~R7；</li>
+<li>靠 CPSR 的 T 位（第 5 位）：T=0 → ARM 状态；T=1 → Thumb 状态</li>
+<li>缺乘加 / 64 位乘法 / 协处理器 / PSR 等指令；仅 B 指令支持条件执行；第二操作数受限、</li>
+<li>操作结果必须存回操作数寄存器（如<code>ADD Rd,Rn</code> → Rd=Rd+Rn）；</li>
+<li>PUSH和POP指令使用堆栈指针R13作为基址实现满递减堆栈；PUSH指令还可以存储链接寄存器R14，并且POP指令可以加载程序指令PC。</li>
+</ul>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 03_ARM9指令系统</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_ARM.html" class="navigation navigation-prev " aria-label="Previous page: 02_ARM">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_嵌入式程序设计.html" class="navigation navigation-next " aria-label="Next page: 04_嵌入式程序设计">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03_ARM9指令系统","level":"1.9.3","depth":2,"next":{"title":"04_嵌入式程序设计","level":"1.9.4","depth":2,"path":"docs/嵌入式系统设计/04_嵌入式程序设计.md","ref":"docs/嵌入式系统设计/04_嵌入式程序设计.md","articles":[]},"previous":{"title":"02_ARM","level":"1.9.2","depth":2,"path":"docs/嵌入式系统设计/02_ARM.md","ref":"docs/嵌入式系统设计/02_ARM.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/嵌入式系统设计/03_ARM9指令系统.md","mtime":"2026-03-09T01:44:20.916Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

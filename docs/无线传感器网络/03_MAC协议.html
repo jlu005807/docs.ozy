@@ -1,0 +1,2870 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>03_MAC协议 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_路由协议.html" />
+    
+    
+    <link rel="prev" href="02_WSN体系&物理层.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="01_WSN概述.html">
+            
+                <a href="01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="02_WSN体系&物理层.html">
+            
+                <a href="02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.3" data-path="03_MAC协议.html">
+            
+                <a href="03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="04_路由协议.html">
+            
+                <a href="04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="05_拓扑控制.html">
+            
+                <a href="05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="06_通信标准.html">
+            
+                <a href="06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="07_定位技术.html">
+            
+                <a href="07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="08_时间同步技术.html">
+            
+                <a href="08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >03_MAC协议</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#无线传感器网络（wsn）mac-协议"><b></b>无线传感器网络（WSN）MAC 协议</a></li><ul><li><span class="title-icon "></span><a href="#wsn-mac协议概述"><b></b>WSN-MAC协议概述</a></li><ul><li><span class="title-icon "></span><a href="#信道共享方式：多跳共享广播信道"><b></b>信道共享方式：多跳共享广播信道</a></li><li><span class="title-icon "></span><a href="#隐终端和暴露终端"><b></b>隐终端和暴露终端</a></li><li><span class="title-icon "></span><a href="#rtscts-握手机制"><b></b>RTS/CTS 握手机制</a></li><li><span class="title-icon "></span><a href="#mac协议分类"><b></b>MAC协议分类</a></li></ul><li><span class="title-icon "></span><a href="#ieee-80211-dcf"><b></b>IEEE 802.11 DCF</a></li><ul><li><span class="title-icon "></span><a href="#为什么无线不用-csmacd？"><b></b>为什么无线不用 CSMA/CD？</a></li><li><span class="title-icon "></span><a href="#csmaca-（载波监听多路访问--冲突避免）"><b></b>CSMA/CA （载波监听多路访问 / 冲突避免）</a></li><li><span class="title-icon "></span><a href="#rtscts-握手机制（信道预留）"><b></b>RTS/CTS 握手机制（信道预留）</a></li><li><span class="title-icon "></span><a href="#随机退避算法-——-减少同时抢信道的冲突"><b></b>随机退避算法 —— 减少同时抢信道的冲突</a></li></ul></ul><li><span class="title-icon "></span><a href="#s-mac-协议"><b></b>S-MAC 协议</a></li><ul><li><span class="title-icon "></span><a href="#周期性侦听和睡眠"><b></b>周期性侦听和睡眠</a></li><ul><li><span class="title-icon "></span><a href="#占空比"><b></b>占空比</a></li><li><span class="title-icon "></span><a href="#调度同步：邻居节点-作息对齐-才能通信"><b></b>调度同步：邻居节点 “作息对齐” 才能通信</a></li><li><span class="title-icon "></span><a href="#时间同步的维护：解决-时钟漂移-问题"><b></b>时间同步的维护：解决 “时钟漂移” 问题</a></li><li><span class="title-icon "></span><a href="#侦听时段的细分：同步和通信-分工"><b></b>侦听时段的细分：同步和通信 “分工”</a></li></ul><li><span class="title-icon "></span><a href="#邻居节点休眠机制"><b></b>邻居节点休眠机制</a></li><li><span class="title-icon "></span><a href="#消息传递机制"><b></b>消息传递机制</a></li><li><span class="title-icon "></span><a href="#流量自适应侦听（al）"><b></b>流量自适应侦听（AL）</a></li></ul><li><span class="title-icon "></span><a href="#分配型-mac-协议"><b></b>分配型 MAC 协议</a></li><ul><li><span class="title-icon "></span><a href="#基于-tdma-的-mac-协议"><b></b>基于 TDMA 的 MAC 协议</a></li><ul><li><span class="title-icon "></span><a href="#trama（流量自适应-tdma）"><b></b>TRAMA（流量自适应 TDMA）</a></li></ul><li><span class="title-icon "></span><a href="#dmac-协议"><b></b>DMAC 协议</a></li></ul><li><span class="title-icon "></span><a href="#拓展"><b></b>拓展</a></li><ul><li><span class="title-icon "></span><a href="#t-mac-协议"><b></b>T-MAC 协议</a></li><li><span class="title-icon "></span><a href="#b-mac（berkeley-mac）协议"><b></b>B-MAC（Berkeley MAC）协议</a></li><li><span class="title-icon "></span><a href="#sift-协议"><b></b>Sift 协议</a></li></ul></ul></div><a href="#无线传感器网络（wsn）mac-协议" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#无线传感器网络（wsn）mac-协议">无线传感器网络（WSN）MAC 协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#wsn-mac协议概述">WSN-MAC协议概述</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#信道共享方式：多跳共享广播信道">信道共享方式：多跳共享广播信道</a><i></i></div></li>
+<li><div><a href="#隐终端和暴露终端">隐终端和暴露终端</a><i></i></div></li>
+<li><div><a href="#rtscts-握手机制">RTS/CTS 握手机制</a><i></i></div></li>
+<li><div><a href="#mac协议分类">MAC协议分类</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#ieee-80211-dcf">IEEE 802.11 DCF</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#为什么无线不用-csmacd？">为什么无线不用 CSMA/CD？</a><i></i></div></li>
+<li><div><a href="#csmaca-（载波监听多路访问--冲突避免）">CSMA/CA （载波监听多路访问 / 冲突避免）</a><i></i></div></li>
+<li><div><a href="#rtscts-握手机制（信道预留）">RTS/CTS 握手机制（信道预留）</a><i></i></div></li>
+<li><div><a href="#随机退避算法-——-减少同时抢信道的冲突">随机退避算法 —— 减少同时抢信道的冲突</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#s-mac-协议">S-MAC 协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#周期性侦听和睡眠">周期性侦听和睡眠</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#占空比">占空比</a><i></i></div></li>
+<li><div><a href="#调度同步：邻居节点-作息对齐-才能通信">调度同步：邻居节点 “作息对齐” 才能通信</a><i></i></div></li>
+<li><div><a href="#时间同步的维护：解决-时钟漂移-问题">时间同步的维护：解决 “时钟漂移” 问题</a><i></i></div></li>
+<li><div><a href="#侦听时段的细分：同步和通信-分工">侦听时段的细分：同步和通信 “分工”</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#邻居节点休眠机制">邻居节点休眠机制</a><i></i></div></li>
+<li><div><a href="#消息传递机制">消息传递机制</a><i></i></div></li>
+<li><div><a href="#流量自适应侦听（al）">流量自适应侦听（AL）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#分配型-mac-协议">分配型 MAC 协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基于-tdma-的-mac-协议">基于 TDMA 的 MAC 协议</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#trama（流量自适应-tdma）">TRAMA（流量自适应 TDMA）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#neighbor-protocol-np协议">Neighbor Protocol (NP协议)</a><i></i></div></li>
+<li><div><a href="#schedule-exchange-protocol（sep-协议）">Schedule Exchange Protocol（SEP 协议）</a><i></i></div></li>
+<li><div><a href="#自适应选举算法（aea）">自适应选举算法（AEA）</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#dmac-协议">DMAC 协议</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#拓展">拓展</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#t-mac-协议">T-MAC 协议</a><i></i></div></li>
+<li><div><a href="#b-mac（berkeley-mac）协议">B-MAC（Berkeley MAC）协议</a><i></i></div></li>
+<li><div><a href="#sift-协议">Sift 协议</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="无线传感器网络（wsn）mac-协议"><a name="无线传感器网络（wsn）mac-协议" class="anchor-navigation-ex-anchor" href="#无线传感器网络（wsn）mac-协议"><i class="fa fa-link" aria-hidden="true"></i></a>无线传感器网络（WSN）MAC 协议</h1>
+<h2 id="wsn-mac协议概述"><a name="wsn-mac协议概述" class="anchor-navigation-ex-anchor" href="#wsn-mac协议概述"><i class="fa fa-link" aria-hidden="true"></i></a>WSN-MAC协议概述</h2>
+<p>WSN（无线传感器网络）核心特征决定了它的 MAC 协议不能直接套用传统设计：</p>
+<ol>
+<li>传感器节点资源受限：电池供电，计算和存储能力有限</li>
+<li>高密度、大规模随机分布</li>
+<li>动态、自组织：节点的网络拓扑界面动态变化</li>
+<li>应用相关、以数据（任务）为中心：采集数据为主</li>
+</ol>
+<p>根据上述特定，则MAC 协议的设计要抓住三个核心目标：节能；可拓展；网络效率</p>
+<ol>
+<li><strong>节省能量</strong><ul>
+<li>能耗分析：组成模块的能耗以及无线通信模块的状态</li>
+<li>冲突碰撞，串音，空闲监听，控制信息开销都会浪费能量</li>
+</ul>
+</li>
+<li><strong>可扩展性</strong>：不管是节点数量增加（比如从 100 个加到 1000 个）、拓扑变化（节点移动 / 故障），还是流量变化（突然有大量数据要传），协议都能适应，不用重新设计。</li>
+<li><strong>网络效率</strong>：在节能的前提下，要保证数据传得又快又稳。</li>
+</ol>
+<h3 id="信道共享方式：多跳共享广播信道"><a name="信道共享方式：多跳共享广播信道" class="anchor-navigation-ex-anchor" href="#信道共享方式：多跳共享广播信道"><i class="fa fa-link" aria-hidden="true"></i></a>信道共享方式：多跳共享广播信道</h3>
+<p>“信道” 就是无线信号传输的通道，不同网络的节点共享信道的方式不一样：</p>
+<p>传统网络采用点对点（两个节点共享无线信道），点对多点（固定基础设施控制的无线信道），多点共享（多个终端共享一个无线信道）等方式</p>
+<p>而WSN采用<strong>多跳共享广播信道</strong></p>
+<p>WSN 的<strong>节点通信范围有限</strong>（比如只能传 10 米），只有 “邻居节点”（在通信范围内）能收到它的信号，覆盖范围以外的节点感知不到任何通信的存在</p>
+<ul>
+<li>所以WSN的<strong>频率空间复用度高</strong>， 比如 A 节点在 10 米内发数据，10 米外的 B 节点可以同时发数据，互不干扰，不用抢同一个信道。</li>
+<li>但是同时会导致一些问题：冲突和节点的位置有关；会出现 “局部事件”（比如某个区域的节点感知到事件）和 “全局事件”（整个网络的节点都感知到）的差异；进而引发后续的隐藏终端、暴露终端问题</li>
+</ul>
+<h3 id="隐终端和暴露终端"><a name="隐终端和暴露终端" class="anchor-navigation-ex-anchor" href="#隐终端和暴露终端"><i class="fa fa-link" aria-hidden="true"></i></a>隐终端和暴露终端</h3>
+<p>这是 WSN 多跳共享信道特有的两个 “坑”，直接影响通信效率：</p>
+<ol>
+<li><p><strong>隐终端问题</strong>（Hidden-terminal problem）</p>
+<ul>
+<li>隐藏终端是指在<strong>接收节点的覆盖范围内而在发送节点的覆盖范围外</strong>的节点<ul>
+<li>节点 C 在接收节点 B 的通信范围内，但不在发送节点 A 的通信范围内 ——A 看不到 C，C 也看不到 A。</li>
+</ul>
+</li>
+<li>节点之间<strong>无法互相监听对方</strong>。但当其不可以同时传输时，其同时传输，从而导致冲突发生。<ul>
+<li>即A 向 B 发数据时，C 也可能向 B 发数据，两个信号在 B 那里撞车（冲突），数据都传失败，浪费能量还降低效率。</li>
+</ul>
+</li>
+<li>注意：<strong>隐终端是相对的</strong>，比如下图当C相对于B是A的隐终端，而A相对于B也是C的隐终端</li>
+</ul>
+<p><img src="assets/image-20251224203631578.png" alt="image-20251224203631578" style="zoom: 33%;"></img></p>
+</li>
+<li><p><strong>暴露终端问题</strong>（Exposed-terminal problem）</p>
+<ul>
+<li>暴露终端是指在<strong>发送节点的覆盖范围内而在接收节点的覆盖范围外</strong>的节点<ul>
+<li>节点 C 在发送节点 B 的通信范围内，但不在接收节点 A 的通信范围内 ——C 能看到 B 在发数据，以为信道忙。D就是一个暴露终端</li>
+</ul>
+</li>
+<li>节点之间能够<strong>互相监听</strong>对方。但其可以同时传输时，其不传输，从而造成浪费。<ul>
+<li>同上图，C 本来可以向其他节点（比如 D，不在 B 的通信范围内）发数据，但因为看到 B 在忙，就不敢发了，白白浪费了信道资源。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="rtscts-握手机制"><a name="rtscts-握手机制" class="anchor-navigation-ex-anchor" href="#rtscts-握手机制"><i class="fa fa-link" aria-hidden="true"></i></a>RTS/CTS 握手机制</h3>
+<p>为了缓解隐终端和暴露终端，设计了 “RTS/CTS 握手” 的协调机制，相当于通信前先 “打个招呼”</p>
+<ul>
+<li>主要应对<strong>隐发送终端问题</strong>：避免 “发送节点看不到的潜在竞争者” 干扰通信，减少数据冲突和能量浪费；</li>
+<li>辅助实现<strong>信道预约</strong>：通过短消息让邻居节点提前知晓 “即将有数据传输”，合理安排休眠或等待，提升信道利用率。</li>
+</ul>
+<p>具体流程：</p>
+<ul>
+<li>发送节点先发一个短控制消息 RTS（Request to Send，请求发送），告诉接收节点 “我要给你发数据了”；</li>
+<li>接收节点回应一个短控制消息 CTS（Clear to Send，允许发送），告诉周围节点 “我要接收数据了，你们先别发”；</li>
+<li>之后发送节点收到CTS后再发真正的数据（DATA），接收节点收到后回复确认（ACK）。</li>
+<li>注意：如果A未收到CTS，A认为发生了冲突，延迟重发RTS；</li>
+</ul>
+<p>周围的邻居节点听到 RTS 或 CTS 后，就知道信道被占用了，会暂时不发数据主动延迟自己的发送请求，避免和正在传输的数据冲突，能解决大部分隐终端问题</p>
+<p>但是注意无法解决单信道时的隐接收终端问题</p>
+<ul>
+<li>场景：C 收到 B 的 CTS 后，暂停向 B 发送数据；此时节点 D（在 C 的通信范围内、不在 B 的通信范围内）想给 C 发数据，于是向 C 发送 RTS；</li>
+<li>矛盾：C 因为要避让 A 和 B 的通信，不能回复 D 的 RTS（怕干扰 B）；</li>
+<li>后果：D 没收到 CTS 回应，无法判断是 “RTS 冲突”“C 没开机” 还是 “C 是隐终端”，只能反复重发 RTS，白白浪费能量，这个问题单信道下握手机制解决不了。</li>
+</ul>
+<p>还有就是RTS 之间的碰撞也会导致问题</p>
+<ul>
+<li>场景：节点 C 正在向节点 D 发送自己的 RTS（请求给 D 发数据），此时节点 A 向 B 发送 RTS，B 回应 CTS；</li>
+<li>矛盾：C 因为正在发送自己的 RTS，听不到 B 的 CTS，不知道 A 和 B 即将传输数据；</li>
+<li>后果：C 继续向 D 发送数据，可能和 A 向 B 发送的数据发生冲突，导致双方传输失败。</li>
+</ul>
+<p><img src="assets/image-20251224204950845.png" alt="image-20251224204950845" style="zoom: 25%;"></img></p>
+<h3 id="mac协议分类"><a name="mac协议分类" class="anchor-navigation-ex-anchor" href="#mac协议分类"><i class="fa fa-link" aria-hidden="true"></i></a>MAC协议分类</h3>
+<p>MAC 协议的分类核心是从 “信道怎么用”“用多少信道”“谁来管信道” 三个维度划分</p>
+<ol>
+<li><p>按分配信道的方式（核心分类维度）</p>
+<p>这个维度决定了节点 “如何获取信道使用权”，是 MAC 协议最核心的划分依据。</p>
+<ul>
+<li>竞争型（Contention-based MAC protocol）<ul>
+<li>信道是 “共享资源”，节点需要发数据时，先检测信道是否空闲，空闲就发，冲突了就按规则重试（比如等随机时间再抢）。</li>
+<li>CSMA/CA、S-MAC、T-MAC、B-MAC、Sift。</li>
+</ul>
+</li>
+<li>分配型（Schedule-based MAC protocol）<ul>
+<li>提前把信道资源 “分配到户”，节点按固定 “配额” 使用 —— 比如分配固定的时间片、频率段，节点只在自己的配额内通信，不用抢，自然无冲突。</li>
+<li>TDMA（时分多址）、FDMA（频分多址）、CDMA（码分多址）、TRAMA、DMAC。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>按使用的信道数目</p>
+<ul>
+<li>单信道，双信道，多信道</li>
+</ul>
+</li>
+<li><p>控制类型</p>
+<ul>
+<li>集中式（中心节点统一管理信道），控制式（节点之间通过交互信息自主协商信道使用）</li>
+</ul>
+</li>
+</ol>
+<h2 id="ieee-80211-dcf"><a name="ieee-80211-dcf" class="anchor-navigation-ex-anchor" href="#ieee-80211-dcf"><i class="fa fa-link" aria-hidden="true"></i></a>IEEE 802.11 DCF</h2>
+<p>IEEE 802.11 DCF（分布式协调功能）是 WiFi 等无线局域网的基础 MAC 机制，核心是通过 “冲突避免” 解决无线信道无法检测冲突的问题，同时用 RTS/CTS 握手机制优化信道占用</p>
+<h3 id="为什么无线不用-csmacd？"><a name="为什么无线不用-csmacd？" class="anchor-navigation-ex-anchor" href="#为什么无线不用-csmacd？"><i class="fa fa-link" aria-hidden="true"></i></a>为什么无线不用 CSMA/CD？</h3>
+<p>有线网络用 CSMA/CD（载波监听多路访问 / 冲突检测），发送数据时能实时检测是否冲突，一旦冲突就立即停止发送，节省能量。但无线局域网（WLAN）做不到：</p>
+<ul>
+<li>设备同一时间只能要么发数据、要么收数据，<strong>没法同时 “发送 + 检测冲突”</strong>；</li>
+<li>就算发送端显示发送正常，也可能因为信号衰减、遮挡等问题，数据根本没传到接收端，检测不到这种 “隐性失败”。</li>
+</ul>
+<p>所以无线场景下，把 “冲突检测” 改成了 “<strong>冲突避免</strong>”，也就是 CSMA/CA 机制 —— 核心思路是 “发送前先确认信道空闲，忙就避让，减少冲突概率”。</p>
+<h3 id="csmaca-（载波监听多路访问--冲突避免）"><a name="csmaca-（载波监听多路访问--冲突避免）" class="anchor-navigation-ex-anchor" href="#csmaca-（载波监听多路访问--冲突避免）"><i class="fa fa-link" aria-hidden="true"></i></a>CSMA/CA （载波监听多路访问 / 冲突避免）</h3>
+<p>CSMA/CA 的核心是 “先监听、再发送，忙则退避”</p>
+<ol>
+<li>发送前监听信道：节点要发数据时，先通过两种方式<strong>判断信道是否空闲</strong>：<ul>
+<li>物理载波监听（CS）：直接检测无线信号的能量或质量，有信号就认为信道忙；</li>
+<li>虚拟载波监听（CS）：看 MAC 报头或 RTS/CTS 报文中的 <strong>NAV 字段</strong>，NAV 值没减到 0，就认为信道还被占用。</li>
+<li>只要两种监听中有一个显示 “忙”，就不发送数据。</li>
+</ul>
+</li>
+<li>信道状态处理<ul>
+<li>若信道空闲：等待 DIFS（分布式协调帧隙）时间后，直接发送数据；</li>
+<li>若信道忙：先等信道空闲，再等待一段 “随机退避时间”，之后再监听信道，空闲就发送。</li>
+<li>关键：每个节点的退避时间不一样，能大幅减少多个节点同时抢信道的冲突。</li>
+</ul>
+</li>
+</ol>
+<p>其中通过帧间间隔（IFS）实现优先级控制：</p>
+<blockquote>
+<ul>
+<li>SIFS（短帧隙）：优先级最高（比如 10μs/802.11b），用于需要立即响应的控制帧，比如 ACK、CTS，不用等退避，直接发送；</li>
+<li>DIFS（分布式协调帧隙）：优先级中等（比如 50μs/802.11b），用于发送数据帧和普通管理帧，必须等 DIFS 时间后，确认信道空闲才能发送；</li>
+<li>PIFS（点协调帧隙）：优先级介于 SIFS 和 DIFS 之间（比如 30μs/802.11b），用于 PCF（点协调功能）模式，能优先抢占信道。</li>
+</ul>
+</blockquote>
+<p><img src="assets/image-20251227223936308.png" alt="image-20251227223936308" style="zoom: 25%;"></img></p>
+<h3 id="rtscts-握手机制（信道预留）"><a name="rtscts-握手机制（信道预留）" class="anchor-navigation-ex-anchor" href="#rtscts-握手机制（信道预留）"><i class="fa fa-link" aria-hidden="true"></i></a>RTS/CTS 握手机制（信道预留）</h3>
+<p>CSMA/CA 的优化补充，用来解决 “隐终端” 问题，同时明确信道占用时长，流程像 “打电话前先问对方是否方便”：</p>
+<ol>
+<li><strong>RTS（请求发送）</strong>：发送节点先发一个短控制消息，告诉接收节点 “我要给你发数据，<strong>预计占用信道多久</strong>”；</li>
+<li><strong>CTS（允许发送）</strong>：接收节点收到 RTS 后，立即回一个短控制消息，告诉周围所有节点 “信道忙”；</li>
+<li><strong>数据传输 + ACK 确认</strong>：发送节点收到 CTS 后，才开始发真正的数据；接收节点收到数据后，回复 ACK（确认消息），告诉发送节点 “数据收到了”。</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li>发送节点：等 DIFS 时间→发 RTS；</li>
+<li>接收节点：收到 RTS 后，等 SIFS 时间→发 CTS；</li>
+<li>发送节点：收到 CTS 后，等 SIFS 时间→发数据；</li>
+<li>接收节点：收到数据后，等 SIFS 时间→发 ACK；</li>
+<li>其他节点：听到 RTS/CTS 后，根据 NAV 值避让，等 NAV 倒计时结束后，再等 DIFS 时间 + 随机退避时间，才能竞争信道。</li>
+</ol>
+<p><img src="assets/image-20251227224119417.png" alt="image-20251227224119417" style="zoom: 33%;"></img></p>
+</blockquote>
+<h3 id="随机退避算法-——-减少同时抢信道的冲突"><a name="随机退避算法-——-减少同时抢信道的冲突" class="anchor-navigation-ex-anchor" href="#随机退避算法-——-减少同时抢信道的冲突"><i class="fa fa-link" aria-hidden="true"></i></a>随机退避算法 —— 减少同时抢信道的冲突</h3>
+<p>当多个节点都检测到信道忙，等信道空闲后，不会同时发送，而是通过 “随机退避” 决定发送顺序：</p>
+<ol>
+<li>退避时间计算：<strong>退避时间 = 随机数（Random ()）× 时隙时间（aSlottime）</strong>；<ul>
+<li>随机数（Random ()）：从 [0, CW] 区间里选一个均匀分布的整数，CW 是 “竞争窗口”；</li>
+<li>时隙时间（aSlottime）：固定值（比如 20μs/802.11b），包含发射启动、信号传播、检测响应的时间；</li>
+</ul>
+</li>
+<li>CW 的动态调整：类似于计网中TCP的拥塞控制<ul>
+<li>第一次发送时，CW 用最小竞争窗（CWmin），比如 802.11b 的 CWmin=31；</li>
+<li>如果发送后没收到 ACK（说明冲突或传输失败），CW 就加倍（比如 31→62→124…），直到达到最大竞争窗（CWmax）；</li>
+<li><strong>冲突越多，退避时间的随机性越大</strong>，越能减少再次冲突的概率。</li>
+</ul>
+</li>
+<li><strong>退避过程</strong>：多个节点同时进入退避时，退避时间最短的节点会最先竞争到信道，直接发送数据。</li>
+</ol>
+<p><img src="assets/image-20251227224543550.png" alt="image-20251227224543550" style="zoom:33%;"></img></p>
+<h1 id="s-mac-协议"><a name="s-mac-协议" class="anchor-navigation-ex-anchor" href="#s-mac-协议"><i class="fa fa-link" aria-hidden="true"></i></a>S-MAC 协议</h1>
+<p>S-MAC 是专为无线传感器网络（WSN）设计的<strong>竞争型 MAC 协议</strong>，核心是在 WSN 资源受限的场景下，平衡节能与网络可用性</p>
+<p>S-MAC 的设计基于 3 个关键场景假设，所有机制都围绕这些前提展开：</p>
+<ol>
+<li><strong>单信道通信</strong>：所有传感器节点共用一个无线信道</li>
+<li><strong>平均数据率很低</strong>：不需要高频次传输数据，数据发送间隔较长；</li>
+<li><strong>可容忍一定通信延迟</strong>：优先保证节点低功耗运行，允许数据传输有一定延迟</li>
+</ol>
+<p>S-MAC 的设计目标优先级为 “节能＞扩展性”：最大化节点空闲（Idle）时间，减少能量浪费 —— 重点规避冲突、串音、空闲监听、控制消息开销这四类能耗源头；</p>
+<p>S-MAC 的核心思想：</p>
+<ol>
+<li><strong>周期性休眠 / 侦听</strong>：节点按固定周期交替 “唤醒（侦听 / 收发数据）” 和 “休眠（关闭射频）”，从根源降低idle时间，减少空闲监听能耗</li>
+<li><strong>邻居节点休眠机制</strong>：当某两个节点正在收发数据时，无关的邻居节点主动进入休眠，既<strong>避免了串音</strong>（听无关数据），又减少了冲突（抢信道），双重节能；</li>
+<li><strong>消息传递机制</strong>：针对长消息重传代价高、短消息控制开销大的问题，优化数据传输方式，减少控制消息带来的能耗；</li>
+<li><strong>自适应侦听机制</strong>：缓解周期性休眠导致的延迟累加问题，在不增加太多能耗的前提下，让数据能更快地在多跳网络中传输。</li>
+</ol>
+<h2 id="周期性侦听和睡眠"><a name="周期性侦听和睡眠" class="anchor-navigation-ex-anchor" href="#周期性侦听和睡眠"><i class="fa fa-link" aria-hidden="true"></i></a>周期性侦听和睡眠</h2>
+<p>周期性侦听和睡眠：本质是让传感器节点 “按时间表上下班”—— 定时唤醒处理通信、其余时间休眠省电；即<strong>周期性唤醒</strong></p>
+<ul>
+<li>每个节点都有一套固定的 “通信时间表”，核心由 3 个时段和 1 个关键参数构成：<ul>
+<li><strong>唤醒周期（Wakeup Period，也称调度周期 Tw）</strong>：整个作息（<strong>侦听时段+睡眠时段</strong>）的循环时长，比如 “100 秒一个周期”，是节点作息的 “总时长”；</li>
+<li><strong>侦听时段（Active Period，也称活跃时段 Ta）</strong>：周期内节点唤醒的时间，比如 “100 秒周期中唤醒 10 秒”，这段时间节点可收发数据、交换同步信息，相当于 “工作时间”；</li>
+<li><strong>睡眠时段（Sleep Period）</strong>：周期内节点休眠的时间，即 “Tw - Ta”（比如 100 秒 - 10 秒 = 90 秒），这段时间节点关闭射频模块，完全不处理通信，相当于 “休息时间”；</li>
+<li><strong>占空比（Duty Cycle）</strong>：核心参数，公式是 “占空比 = Ta/Tw”，直白说就是 “节点每个周期的<strong>工作时间占比</strong>”（比如 10 秒 / 100 秒 = 10%），直接决定节能效果和通信效率。</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20251228143122137.png" alt="image-20251228143122137"></img></p>
+<h3 id="占空比"><a name="占空比" class="anchor-navigation-ex-anchor" href="#占空比"><i class="fa fa-link" aria-hidden="true"></i></a>占空比</h3>
+<p>占空比没有 “绝对最优值”，选大或选小要根据场景权衡，核心是 “节能” 和 “通信效率” 的取舍</p>
+<ol>
+<li>小占空比（比如 Ta=1 秒，Tw=100 秒，占空比 1%）<ul>
+<li>优点：节点 99% 的时间都在休眠，能最大程度避免 “没事却一直监听信道” 的空闲能耗，<strong>超级省电，延长节点生命周期</strong>；</li>
+<li>缺点：所有邻居节点的通信都要挤在 1 秒的活跃时段，<strong>容易引发信道竞争和冲突</strong>；多跳场景下，每跳都要等节点唤醒，等待时间会累积，导致端到端延迟变大（比如 10 跳每跳等 100 秒，总延迟就达 1000 秒）。</li>
+</ul>
+</li>
+<li>大占空比（比如 Ta=30 秒，Tw=100 秒，占空比 30%）<ul>
+<li>优点：活跃时间长，通信不用扎堆，冲突少；多跳传输时不用长时间等待，延迟小，通信效率高；</li>
+<li>缺点：休眠时间短，节点空闲监听的能耗增加，电池消耗更快，节能效果打折扣。</li>
+</ul>
+</li>
+</ol>
+<h3 id="调度同步：邻居节点-作息对齐-才能通信"><a name="调度同步：邻居节点-作息对齐-才能通信" class="anchor-navigation-ex-anchor" href="#调度同步：邻居节点-作息对齐-才能通信"><i class="fa fa-link" aria-hidden="true"></i></a>调度同步：邻居节点 “作息对齐” 才能通信</h3>
+<p>节点不能各自按自己的时间表来，否则 “你工作时我休眠”，数据根本传不了，所以必须实现 “邻居作息同步”：</p>
+<p>分别有节点启动时的同步流程和工作中的同步维护</p>
+<ol>
+<li><p>节点启动时的同步流程</p>
+<ul>
+<li>主要是侦听是否存在邻居节点的同步帧 “同步广播（SYNC 帧）”，<strong>优先 “抄邻居的作息”，没邻居就 “自己定作息”</strong></li>
+</ul>
+<p><img src="assets/image-20251228143515211.png" alt="image-20251228143515211" style="zoom:25%;"></img></p>
+<ul>
+<li><p>例如：A 启动时没有邻居，后来 B 加入，流程如下：</p>
+<ol>
+<li><p>A 启动后侦听，没收到 SYNC→自己定作息，广播 “ASYNC”；</p>
+</li>
+<li><p>B 加入，广播自己的作息 “BSYNC”；</p>
+</li>
+<li><p>因为 A 没有其他邻居，所以直接采纳 B 的 “BSYNC”，和 B 同步作息</p>
+<p><img src="assets/image-20251228144059878.png" alt="image-20251228144059878" style="zoom:25%;"></img></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>工作中的同步维护</p>
+<ul>
+<li><p>工作中遇到新调度，<strong>优先保持原作息，仅记录新调度</strong>（避免频繁改作息）。</p>
+<p><img src="assets/image-20251228143529366.png" alt="image-20251228143529366" style="zoom:25%;"></img></p>
+</li>
+<li><p>其中工作中的维护例如：A 启动时已有邻居（N），后来 B 加入，流程如下：</p>
+<ol>
+<li>A 启动后侦听，没收到 SYNC→自己定作息 “ASYNC”，和邻居 N 同步；</li>
+<li>B 加入，广播自己的作息 “BSYNC”；</li>
+<li>因为 A 已有邻居，所以<strong>同时记录 “ASYNC” 和 “BSYNC”</strong>，既和原邻居 N 通信，也能和 B 通信。</li>
+</ol>
+<p><img src="assets/image-20251228144118048.png" alt="image-20251228144118048" style="zoom:25%;"></img></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>相邻节点同步后，会形成 “虚拟簇”（也称 “时间表同步的岛屿”），簇内所有节点作息完全相同，通信顺畅；</p>
+<p><img src="assets/image-20251228144314988.png" alt="image-20251228144314988" style="zoom:25%;"></img></p>
+<ul>
+<li>同一个簇内的所有节点，作息（调度周期、活跃 / 睡眠时段）完全一致；</li>
+<li>不同簇的作息可能不同，但簇内通信是顺畅的（因为作息同步）。</li>
+</ul>
+<p>但是如果一个节点同时属于<strong>两个或多个簇</strong>（比如节点 G 既在簇 1 的通信范围内，又在簇 2 的通信范围内），它就是<strong>边界节点</strong>：</p>
+<ol>
+<li><strong>需要记录多个调度</strong>：既要记住簇 1 的作息，也要记住簇 2 的作息；</li>
+<li><strong>睡眠时间更短</strong>：为了能和不同簇的节点通信，边界节点的活跃时段会覆盖多个簇的作息，相当于 “要同时上多个班”，所以睡眠时段被压缩，能耗会比普通节点高一些。</li>
+</ol>
+<h3 id="时间同步的维护：解决-时钟漂移-问题"><a name="时间同步的维护：解决-时钟漂移-问题" class="anchor-navigation-ex-anchor" href="#时间同步的维护：解决-时钟漂移-问题"><i class="fa fa-link" aria-hidden="true"></i></a>时间同步的维护：解决 “时钟漂移” 问题</h3>
+<p>节点的内置时钟会有 “漂移”（比如 A 的时钟每天快 2 秒，B 的每天慢 1 秒），时间久了作息就会不同步，S-MAC 用 <strong>“相对时间戳”</strong> 解决：</p>
+<ol>
+<li><strong>发送节点记录 Ts</strong>：发送完数据包后，记录自己 “从发完包到进入睡眠还需要等多久”（比如等 5 秒，记为<code>Ts=5</code>）；</li>
+<li><strong>接收节点记录 Tr</strong>：接收这个数据包时，记录自己 “接收包用了多久”（比如用了 2 秒，记为<code>Tr=2</code>）；</li>
+<li><strong>接收节点调整时钟</strong>：用<code>Ts - Tr</code>（5-2=3 秒）调整自己的时钟，确保和发送节点的作息对齐；</li>
+<li><strong>辅助保障：定期全周期监听</strong>：节点会定期 “全周期不睡觉”，专门接收邻居的 SYNC 帧，进一步修正时钟偏差。</li>
+</ol>
+<h3 id="侦听时段的细分：同步和通信-分工"><a name="侦听时段的细分：同步和通信-分工" class="anchor-navigation-ex-anchor" href="#侦听时段的细分：同步和通信-分工"><i class="fa fa-link" aria-hidden="true"></i></a>侦听时段的细分：同步和通信 “分工”</h3>
+<p>节点的<strong>活跃时段（Listen period）会分成两段</strong>，避免混乱：</p>
+<ol>
+<li><strong>同步时段</strong>：专门交换 SYNC 帧，确认邻居的作息是否有变化，保持调度同步；</li>
+<li><strong>控制时段</strong>：处理实际数据传输，节点要发数据前，必须先用 CSMA 机制侦听信道（看看有没有其他节点在用），避免冲突。</li>
+</ol>
+<p><img src="assets/image-20251228144529187.png" alt="image-20251228144529187"></img></p>
+<hr></hr>
+<h2 id="邻居节点休眠机制"><a name="邻居节点休眠机制" class="anchor-navigation-ex-anchor" href="#邻居节点休眠机制"><i class="fa fa-link" aria-hidden="true"></i></a>邻居节点休眠机制</h2>
+<p>串音：节点会收到<strong>和自己无关的其他节点的通信数据</strong></p>
+<p>所以信道忙时，<strong>邻居节点主动休眠</strong>，当两个节点（比如 A 和 B）正在通信时：</p>
+<ul>
+<li><strong>谁休眠？</strong>：A 和 B 的<strong>所有直接邻居</strong>（比如 A 旁边的 C、B 旁边的 D）；</li>
+<li>通过 RTS/CTS 报文中的<strong>NAV 字段</strong>（信道占用倒计时）决定休眠时间 —— 邻居节点看到 NAV 值，就知道 “信道还要忙多久”，这段时间直接休眠，不用监听。</li>
+</ul>
+<p><img src="assets/image-20251228145046563.png" alt="image-20251228145046563"></img></p>
+<h2 id="消息传递机制"><a name="消息传递机制" class="anchor-navigation-ex-anchor" href="#消息传递机制"><i class="fa fa-link" aria-hidden="true"></i></a>消息传递机制</h2>
+<p>消息(Message)：是具有密切的内部联系的<strong>数据的集合</strong>，只有得到完整的数据才可以在网络内部进行数据处理、聚合</p>
+<p>其中消息又分为长消息（重传代价大）和短消息（传输代价大）</p>
+<p>所以“一次预约，分段传输”：把长消息拆成多个短数据段（DATA），流程是：</p>
+<ol>
+<li>发<strong>1 次 RTS/CTS</strong>：预约整个长消息的信道占用时间；</li>
+<li>逐个发数据段：每个 DATA 都带 ACK 确认（确保传输成功）；</li>
+<li>重传只重传失败段：某一个 DATA 没收到 ACK，只重传这一段，不用重新预约信道。</li>
+</ol>
+<p>以此降低重传代价和减少竞争延迟</p>
+<p><img src="assets/image-20251228145345737.png" alt="image-20251228145345737"></img></p>
+<h2 id="流量自适应侦听（al）"><a name="流量自适应侦听（al）" class="anchor-navigation-ex-anchor" href="#流量自适应侦听（al）"><i class="fa fa-link" aria-hidden="true"></i></a>流量自适应侦听（AL）</h2>
+<p>周期性休眠会导致<strong>多跳延迟累加</strong>：比如 A→B→C 的传输，B 收到 A 的数据后，C 可能在休眠，B 得等 C 下一个活跃时段才能传，延迟变大。</p>
+<p>解决办法：通信结束后，<strong>邻居节点额外唤醒</strong></p>
+<p><img src="assets/image-20251228145458891.png" alt="image-20251228145458891" style="zoom: 25%;"></img></p>
+<p>当 A 和 B 通信结束时：</p>
+<ul>
+<li>B 的邻居（比如 C）会通过 NAV 知道 “传输何时结束”；</li>
+<li>传输结束后，C<strong>额外唤醒一段时间</strong>（自适应侦听窗口）；</li>
+<li>若 B 有数据传给 C，可直接发 RTS，C 不用等下一个活跃时段，直接接收。</li>
+</ul>
+<p><img src="assets/image-20251228145638483.png" alt="image-20251228145638483" style="zoom:25%;"></img></p>
+<p>但是S-MAC协议也有其缺点：</p>
+<ul>
+<li>调度周期固定：低流量时，活跃时段还是按高负载设计，会浪费能量；</li>
+<li>边界节点能耗快：要适配多个簇的作息，睡眠少；</li>
+<li>延迟优化有限：仅减少 1 跳延迟，多跳场景延迟仍大。</li>
+</ul>
+<p>针对上述问题的相对应的改进协议</p>
+<ul>
+<li><strong>T-MAC</strong>：解决 “固定活跃时间” 问题，动态调整活跃时长；</li>
+<li><strong>B-MAC</strong>：解决 “严格同步” 问题，采用异步通信（不用同步作息）；</li>
+<li><strong>Sift</strong>：解决 “事件响应慢” 问题，适配灾害报警等事件驱动场景。</li>
+</ul>
+<h1 id="分配型-mac-协议"><a name="分配型-mac-协议" class="anchor-navigation-ex-anchor" href="#分配型-mac-协议"><i class="fa fa-link" aria-hidden="true"></i></a>分配型 MAC 协议</h1>
+<p>分配型 MAC 协议是为解决竞争型协议 “冲突浪费” 问题而生的 WSN 关键技术，核心是 “提前划分信道资源 + 按需分配”，从根源避免冲突</p>
+<p>竞争型协议（如 S-MAC、CSMA/CA）的最大痛点是<strong>冲突</strong>：</p>
+<ul>
+<li>多个节点同时抢信道，信号碰撞导致数据重传，既浪费节点能量（重传耗电），又降低带宽利用率（信道被无效数据占用）；</li>
+<li>还会产生串音（接收无关数据）、空闲监听（无数据时仍监听信道）等额外能耗。</li>
+</ul>
+<p>分配型协议的解决方案很直接：</p>
+<ol>
+<li>把无线信道拆分成多个 “子信道”（按时隙、频率、编码等维度）；</li>
+<li>用 “<strong>调度表</strong>” 把这些子信道静态或动态分配给节点；</li>
+<li>节点只在自己分配到的子信道上通信，彻底避免冲突，同时减少串音和空闲监听。</li>
+</ol>
+<p>简单说：竞争型是 “先抢后用”，分配型是 “先分后用”，适配对冲突敏感、需节能的 WSN 场景。</p>
+<p>分配型协议的核心是 “如何拆分信道”，主流有三种方式，适配不同场景：</p>
+<ol>
+<li><p>FDMA（频分多址）：按 “频率” 划分</p>
+<ul>
+<li>把整个可用频段分成多个独立的子频段，每个节点独占一个子频段，只能在自己的频段内发送数据。</li>
+<li>就像多个电台用不同频率广播，听众调对频率就能收到，互不干扰。</li>
+</ul>
+</li>
+<li><p>TDMA（时分多址）：按 “时间” 划分</p>
+<ul>
+<li>把时间轴分成固定长度的 “时间帧”（也称超帧），每个时间帧再拆成多个 “时隙”（比如 1 个超帧 = 10 个时隙）；每个节点分配到固定的时隙，只能在自己的时隙内收发数据，其他时间休眠。</li>
+<li>就像会议室排发言表，每个人分配固定时间段，到点发言，其他人等待，不会抢话。</li>
+</ul>
+</li>
+<li><p>CDMA（码分多址）：按 “编码” 划分</p>
+<ul>
+<li>所有节点共用同一个频段，但每个节点有专属的 “编码”；发送数据时，节点用自己的编码调制信号，接收节点只有用相同的编码才能解调数据，相当于 “专属密码”。</li>
+<li>就像多人在同一房间用不同语言聊天，只有懂对应语言的人才能听懂，互不干扰。</li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20260101213517142.png" alt="image-20260101213517142" style="zoom:33%;"></img></p>
+<h2 id="基于-tdma-的-mac-协议"><a name="基于-tdma-的-mac-协议" class="anchor-navigation-ex-anchor" href="#基于-tdma-的-mac-协议"><i class="fa fa-link" aria-hidden="true"></i></a>基于 TDMA 的 MAC 协议</h2>
+<p>基于 TDMA 的 MAC 协议是分配型协议的核心分支，核心逻辑是 “按时间划分时隙，节点独占时隙通信”</p>
+<ul>
+<li><strong>超帧（时间帧）</strong>：时间轴被划分为固定长度的 “超帧”，每个超帧包含固定数量的 “时隙”（比如 1 个超帧 = 8 个时隙），超帧循环重复；</li>
+<li><strong>时隙独占</strong>：每个节点被分配 1 个或多个专属时隙，只能在自己的时隙内收发数据，其他时隙完全休眠（关闭射频节能）；</li>
+</ul>
+<p>要让 TDMA 正常工作，必须解决 4 个核心问题：</p>
+<ol>
+<li><strong>超帧格式</strong>：确定超帧长度、时隙数量（比如根据数据传输量，设置 10 个时隙 / 超帧）；</li>
+<li><strong>时隙时长</strong>：每个时隙的长度要足够容纳 1 个数据帧 + ACK 帧，避免数据传输超时；</li>
+<li><strong>时隙分配</strong>：按调度表将时隙分配给节点，分两种调度方式；</li>
+<li><strong>时间同步</strong>：所有节点的时钟必须严格对齐（误差小于时隙时长的 10%），否则时隙重叠会导致冲突。</li>
+</ol>
+<p>两种时隙调度表设计</p>
+<table>
+<thead>
+<tr>
+<th>调度表类型</th>
+<th>核心逻辑</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全局调度表</td>
+<td>由中心节点（如 Sink）统一分配所有节点的时隙，确保全局无冲突</td>
+<td>调度简单、无冲突，但中心节点故障会导致网络瘫痪</td>
+<td>一跳共享网络（节点都在中心节点通信范围内）</td>
+</tr>
+<tr>
+<td>分布式调度表</td>
+<td>节点自主协商时隙分配，仅保证 “两跳内邻居不同时发送”</td>
+<td>无中心节点、可扩展性好，但协商逻辑复杂</td>
+<td>多跳共享网络（节点需通过中继转发数据）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/image-20260101213810979.png" alt="image-20260101213810979"></img></p>
+<h3 id="trama（流量自适应-tdma）"><a name="trama（流量自适应-tdma）" class="anchor-navigation-ex-anchor" href="#trama（流量自适应-tdma）"><i class="fa fa-link" aria-hidden="true"></i></a>TRAMA（流量自适应 TDMA）</h3>
+<p>TRAMA 是基于 TDMA 的<strong>动态分配协议</strong>，解决了传统 TDMA“时隙固定分配、不适应流量变化” 的问题，核心是 “按流量动态调整时隙，空闲时隙可释放”。</p>
+<p>本质是将物理信道<strong>划分为多个时隙</strong>，每个时隙的无冲突发送者由 “<strong>两跳内邻居信息</strong>” 决定；</p>
+<ul>
+<li>时间帧交替分为两个时段，各司其职：<ol>
+<li><strong>随机接入时段</strong>：节点交换邻居信息、同步时钟，维护网络拓扑（不传输业务数据）；</li>
+<li><strong>分配接入时段</strong>：根据流量动态分配时隙，节点在专属时隙内发送数据，无数据则放弃时隙。</li>
+</ol>
+</li>
+</ul>
+<p><img src="assets/image-20260101213910174.png" alt="image-20260101213910174" style="zoom:25%;"></img></p>
+<p>同时依赖三大算法或者协议实现动态时隙分配：NP协议维护邻居信息，SEP协议生成流量自适应调度表，AEA算法动态决定节点状态（发送 / 接收 / 休眠）</p>
+<h4 id="neighbor-protocol-np协议"><a name="neighbor-protocol-np协议" class="anchor-navigation-ex-anchor" href="#neighbor-protocol-np协议"><i class="fa fa-link" aria-hidden="true"></i></a>Neighbor Protocol (NP协议)</h4>
+<p>NP 协议的核心作用是让每个节点都能实时掌握 “谁是我的邻居”“邻居的邻居是谁”，相当于给节点建一张动态更新的 “网络通讯录”</p>
+<ol>
+<li>交换邻居更新信息：让节点知道周围哪些节点是活跃的（可通信的）；</li>
+<li>同步时钟信息：为 TDMA 时隙分配提供时间基准，避免时钟漂移导致冲突。</li>
+</ol>
+<p>NP 协议只在<strong>随机接入时段</strong>工作，在这个阶段中所有节点都处于活跃状态，专门用于交换控制信息</p>
+<p>具体实现逻辑：</p>
+<ol>
+<li>周期性发送控制信息，一是自己的 “一跳邻居列表”（当前能直接通信的节点），二是时钟同步信息（确保所有节点时间对齐）</li>
+<li>邻居状态判断：节点会持续监听邻居的控制信息广播，超过时间没收到更新，就判定该邻居 “失效”</li>
+<li>重传机制：如果节点没收到邻居的确认（或判断信息可能丢失），会在后续的随机接入时段重新广播控制信息</li>
+<li>维护两跳邻居表：每个节点最终会生成并维护一张 “两跳邻居表”（包括一跳邻居）</li>
+</ol>
+<p><img src="assets/image-20260102193322755.png" alt="image-20260102193322755"></img></p>
+<h4 id="schedule-exchange-protocol（sep-协议）"><a name="schedule-exchange-protocol（sep-协议）" class="anchor-navigation-ex-anchor" href="#schedule-exchange-protocol（sep-协议）"><i class="fa fa-link" aria-hidden="true"></i></a>Schedule Exchange Protocol（SEP 协议）</h4>
+<p>SEP 协议是 TRAMA 协议的核心调度技术，本质是 “<strong>基于流量的动态时隙分配机制</strong>”，负责生成和同步调度表，让节点知道 “哪个时隙该自己用”</p>
+<p>建立并维护<strong>流量自适应的调度表</strong>—— 节点有数据时优先占用时隙，无数据时释放时隙，避免传统 TDMA 时隙浪费的问题，同时通过广播同步调度信息，让全网节点达成 “时隙使用共识”。</p>
+<ol>
+<li><p>确定调度间隔：<code>Schedule_Interval</code>（调度间隔），即一次分配接入时段包含的时隙数</p>
+</li>
+<li><p>计算 “赢时隙”：在<code>[t, t+Schedule_Interval]</code>的时隙范围内，节点基于 “两跳邻居信息”（由 NP 协议提供），计算每个时隙的优先级，选出自己在两跳内优先级最高的时隙 —— 这就是 “赢时隙”，节点在该时隙中发送数据无冲突</p>
+<blockquote>
+<p>[!important]</p>
+<p><strong>优先级计算公式</strong>：<code>Priority(u,t) = hash(u ⊕ t)</code>，其中<code>u</code>是节点唯一编号，<code>t</code>是时隙编号；</p>
+<p>通过哈希函数生成，确保每个节点在不同时隙的优先级随机且唯一；</p>
+</blockquote>
+</li>
+<li><p>时隙占用决策：有数据则保留，无数据则放弃“赢时隙”</p>
+</li>
+<li><p>调度信息广播：节点将自己的时隙分配结果（哪些时隙保留、哪些放弃、接收者是谁）封装到 “调度分组（schedule package）” 中；按固定周期广播调度分组，邻居节点接收后，更新自己的调度表，明确 “哪个节点在哪个时隙使用信道”，避免冲突。</p>
+<p><img src="assets/image-20260102194018943.png" alt="image-20260102194018943"></img></p>
+<ul>
+<li>格式包含<code>SourceAddr</code>（发送节点 ID）、<code>Timeout</code>（调度有效时间）、<code>Bitmaps</code>（时隙状态位图，标记保留 / 放弃）等字段；</li>
+</ul>
+</li>
+</ol>
+<p>由于调度分组可能因信道干扰丢失，导致邻居节点调度不同步；</p>
+<p>在发送业务数据的分组中，携带 “调度摘要”（核心调度信息），即使调度分组丢失，邻居也能通过数据分组获取调度信息，确保同步一致性。</p>
+<h4 id="自适应选举算法（aea）"><a name="自适应选举算法（aea）" class="anchor-navigation-ex-anchor" href="#自适应选举算法（aea）"><i class="fa fa-link" aria-hidden="true"></i></a>自适应选举算法（AEA）</h4>
+<p>AEA 的核心作用是<strong>实时判定节点状态</strong>，让有数据的节点按优先级占用时隙，无数据的节点休眠节能，在某一时隙“t”上：</p>
+<ol>
+<li>节点具有两跳邻居内<strong>最高优先级并且有数据</strong>需要发送，则进入发送状态。确保两跳内仅一个节点发送数据，彻底避免冲突；</li>
+<li>让指定接收节点保持接收状态，不遗漏数据；</li>
+<li>其余节点休眠，最大化节能效果。</li>
+</ol>
+<p>每个时隙的状态判定流程</p>
+<ol>
+<li>节点先基于 NP 协议的两跳邻居表，和 SEP 协议的优先级数据，算出 tx (u)、atx (u)、ntx (u) 三个核心角色</li>
+<li>按 “绝对胜者→相对胜者→急需胜者→休眠” 的顺序判断，优先级从高到低</li>
+<li>“指定接收方”→进入<strong>接收状态</strong></li>
+</ol>
+<p>节点仅知道两跳内信息，可能出现 “认知偏差”—— 比如 A 不知道两跳外的 D 优先级更高，误以为自己是最高优先级</p>
+<p><img src="assets/image-20260102200840450.png" alt="image-20260102200840450" style="zoom:67%;"></img></p>
+<blockquote>
+<p>[!tip]</p>
+<p>TRAMA 是 “为节能和无冲突牺牲了复杂度与延迟” 的协议，是<strong>静态 / 半静态、周期性传输 WSN 场景的适配方案</strong>，但不适合动态拓扑、高实时性的场景</p>
+</blockquote>
+<h2 id="dmac-协议"><a name="dmac-协议" class="anchor-navigation-ex-anchor" href="#dmac-协议"><i class="fa fa-link" aria-hidden="true"></i></a>DMAC 协议</h2>
+<p>DMAC 是专为 <strong>数据采集树型 WSN（节点向 Sink 单向传数据）</strong> 设计的时分复用 MAC 协议，核心解决传统协议（如 S-MAC/T-MAC）的 “数据转发中断” 问题</p>
+<p>“数据转发中断（DFI）”：S-MAC/T-MAC 的周期性休眠机制存在缺陷：</p>
+<ul>
+<li>通信范围外的节点会在活跃期后休眠，导致多跳传输中断，产生中断数据转发</li>
+<li>每个唤醒周期最多转发 2 跳，多跳场景下延迟累积严重。</li>
+</ul>
+<p>DMAC 仅适用于以下固定场景：</p>
+<blockquote>
+<ol>
+<li>拓扑为<strong>数据采集树</strong>（节点分层，数据向 Sink 单向传输）；</li>
+<li>节点静态、路由稳定；</li>
+<li>节点时钟严格同步。</li>
+</ol>
+</blockquote>
+<ol>
+<li>交错唤醒机制：解决转发中断<ul>
+<li>多跳路径上的节点<strong>依次交错唤醒</strong>，形成 “接收→发送→睡眠” 的链式节奏，保证数据持续传输。</li>
+<li>下层节点的唤醒时间比上层节点<strong>提前 1 个时段（u）</strong></li>
+<li>用 “ACK + 重传” 保障可靠性，省去 RTS/CTS 降低控制开销；</li>
+<li>同层节点通过 “固定退避 / 随机退避 / 短周期” 避免碰撞。</li>
+</ul>
+</li>
+<li>自适应占空比：适配多数据包传输<ul>
+<li>节点需连续发送多个数据包时，固定占空比会导致传输中断。因此在数据帧 / ACK 帧中加入 “more data flag” 标记<ul>
+<li>标记为 “1”：表示 “还有数据要发 / 准备好接收”；</li>
+<li>连续发送的节点在睡眠 3u 后唤醒，避免冲突。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据预测机制：解决父节点早睡（兄弟干扰）<ul>
+<li>上层节点（父节点）子节点多，竞争失败的子节点会延迟发送。</li>
+<li>节点接收到数据后，<strong>预测子节点仍有数据</strong>，在发送周期结束后休眠 3u，重新切换为接收状态，等待子节点发送。</li>
+</ul>
+</li>
+<li>MTS 帧机制：解决跨父节点干扰<ul>
+<li>不同父节点的节点（如 M 和 N）通信范围重叠，N 竞争胜出会导致 M 及其父节点 F 无传输时段，数据预测机制失效。</li>
+<li>引入<strong>MTS（More To Send）帧</strong>：包含目的地址和MTS标志位<ul>
+<li>MTS 请求（标志位 1）：节点因信道忙未发送数据，或收到子节点的 MTS 请求时，向父节点发送请求；</li>
+<li>MTS 清除（标志位 0）：节点缓冲区为空且收到所有子节点的清除帧后，向发送过“MTS请求”帧，但没有
+发送过“MTS清除”帧的父节点发送清除，恢复原占空比；</li>
+<li>发送 / 接收 MTS 请求的节点每隔 3u 唤醒一次，保障数据传输。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="拓展"><a name="拓展" class="anchor-navigation-ex-anchor" href="#拓展"><i class="fa fa-link" aria-hidden="true"></i></a>拓展</h1>
+<p>针对S-MAC存在的问题进行改进的协议</p>
+<ul>
+<li><strong>T-MAC</strong>：解决 “固定活跃时间” 问题，动态调整活跃时长；</li>
+<li><strong>B-MAC</strong>：解决 “严格同步” 问题，采用异步通信（不用同步作息）；</li>
+<li><strong>Sift</strong>：解决 “事件响应慢” 问题，适配灾害报警等事件驱动场景。</li>
+</ul>
+<h2 id="t-mac-协议"><a name="t-mac-协议" class="anchor-navigation-ex-anchor" href="#t-mac-协议"><i class="fa fa-link" aria-hidden="true"></i></a>T-MAC 协议</h2>
+<p>为了优化 S-MAC 的固定活跃时间缺陷，在低流量场景下减少空闲监听能耗。</p>
+<p>T-MAC 的核心改进思路：<strong>动态调整活跃时间长度</strong>—— 在活跃时段内，若持续 TA 时间无激活事件，则提前进入睡眠。</p>
+<p>节点处于<strong>侦听（活跃）状态</strong>，直到满足以下条件之一：</p>
+<ol>
+<li>调度周期定时器溢出；</li>
+<li>持续 TA 时间内<strong>无激活事件</strong>（激活事件包括：收到数据、感知到通信、侦听到 RTS-CTS 帧）。</li>
+</ol>
+<p>此时节点会提前进入睡眠状态，减少空闲监听能耗</p>
+<p>TA 是 “最短空闲侦听时间”，需满足约束：<code>TA &gt; C + R + T</code>，C为信道竞争时间，R为发送RTS时间，T为状态切换时间</p>
+<p>实际取值通常为：TA=1.5×(<em>C</em>+<em>R</em>+<em>T</em>)</p>
+<p>通过<strong>未来请求发送（FRTS）帧</strong>解决早睡问题：发送节点转发节点发送<strong>FRTS 帧</strong>，提前唤醒下一跳节点和目的节点：</p>
+<p>为避免节点缓冲区已满时丢失数据，T-MAC 增加规则：若节点缓冲区已满，<strong>优先发送自身缓存的数据</strong>，再接收其他节点的数据；</p>
+<blockquote>
+<p>[!tip]</p>
+<p>T-MAC 是<strong>S-MAC 的低流量优化版本</strong>，通过 “动态活跃时间 + FRTS 机制”，在流量波动较大、对节能敏感的 WSN 场景（如环境监测）中，平衡了节能与传输效率，但额外开销使其不适用于高流量场景。</p>
+</blockquote>
+<hr></hr>
+<h2 id="b-mac（berkeley-mac）协议"><a name="b-mac（berkeley-mac）协议" class="anchor-navigation-ex-anchor" href="#b-mac（berkeley-mac）协议"><i class="fa fa-link" aria-hidden="true"></i></a>B-MAC（Berkeley MAC）协议</h2>
+<p>B-MAC 的节能与通信逻辑均基于 “异步休眠 - 唤醒” 设计，最小化空闲监听（idle listening）能耗</p>
+<ol>
+<li>低功耗侦听（LPL)<ul>
+<li>无需像 S-MAC 那样严格同步邻居作息，节点可自主设定休眠 - 唤醒间隔</li>
+<li>节点按自定义的 “检查间隔（Check Interval）” 周期性醒来，检查前导码作为发送请求的信号</li>
+<li>发送者使用一个很长的前导码来提醒接收者，接收者没有检测到前导码立即休眠</li>
+</ul>
+</li>
+<li>自适应前导侦听<ul>
+<li>发送者在传输数据前，先发送一段 “足够长的前导码”（长度需覆盖接收者的最大休眠间隔）确保接收到</li>
+<li>接收者周期性唤醒检测到前导码后，会停止休眠，保持接收状态直到数据传输完成（或超时）</li>
+<li>前导码长度可根据网络拓扑（如节点休眠间隔、通信距离）动态调整</li>
+</ul>
+</li>
+<li>信道空闲检测（CCA）<ul>
+<li>发送前先检测信道是否空闲，发现空闲再发出前导码</li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20260102204243823.png" alt="image-20260102204243823" style="zoom:25%;"></img></p>
+<hr></hr>
+<h2 id="sift-协议"><a name="sift-协议" class="anchor-navigation-ex-anchor" href="#sift-协议"><i class="fa fa-link" aria-hidden="true"></i></a>Sift 协议</h2>
+<p>解决<strong>事件驱动型无线传感器网络（WSN）的实时响应问题</strong>，即“感知突发事件并快速上报”，而非周期性传输数据</p>
+<p>Sift 协议的核心是<strong>非均匀概率时隙选择</strong>：</p>
+<ul>
+<li><p>采用<strong>固定长度的竞争窗口 CW</strong>（无需动态调整窗口大小，简化逻辑）；</p>
+</li>
+<li><p>节点在竞争窗口的不同时隙（<em>r</em>=1,2,...,<em>CW</em>）选择发送数据的概率<strong>呈几何递增</strong></p>
+<p><img src="assets/image-20260102204945200.png" alt="image-20260102204945200"></img></p>
+</li>
+</ul>
+<p>让早期时隙优先 “筛选” 少量节点发送，后期时隙通过高概率确保剩余节点快速竞争，减少冲突次数，缩短事件上报总时间。</p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 03_MAC协议</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_WSN体系&物理层.html" class="navigation navigation-prev " aria-label="Previous page: 02_WSN体系&物理层">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_路由协议.html" class="navigation navigation-next " aria-label="Next page: 04_路由协议">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03_MAC协议","level":"1.10.3","depth":2,"next":{"title":"04_路由协议","level":"1.10.4","depth":2,"path":"docs/无线传感器网络/04_路由协议.md","ref":"docs/无线传感器网络/04_路由协议.md","articles":[]},"previous":{"title":"02_WSN体系&物理层","level":"1.10.2","depth":2,"path":"docs/无线传感器网络/02_WSN体系&物理层.md","ref":"docs/无线传感器网络/02_WSN体系&物理层.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/无线传感器网络/03_MAC协议.md","mtime":"2026-03-09T01:44:20.975Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

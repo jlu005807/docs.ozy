@@ -1,0 +1,2507 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>01_WSN概述 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02_WSN体系&物理层.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.10.1" data-path="01_WSN概述.html">
+            
+                <a href="01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="02_WSN体系&物理层.html">
+            
+                <a href="02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="03_MAC协议.html">
+            
+                <a href="03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="04_路由协议.html">
+            
+                <a href="04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="05_拓扑控制.html">
+            
+                <a href="05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="06_通信标准.html">
+            
+                <a href="06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="07_定位技术.html">
+            
+                <a href="07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="08_时间同步技术.html">
+            
+                <a href="08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >01_WSN概述</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#wsn概述"><b></b>WSN概述</a></li><ul><li><span class="title-icon "></span><a href="#基于基础设施的无线网络"><b></b>基于基础设施的无线网络</a></li><li><span class="title-icon "></span><a href="#wireless-ad-hoc-网络"><b></b>Wireless ad hoc 网络</a></li><li><span class="title-icon "></span><a href="#无线传感器网络（wsn）发展历程简洁总结"><b></b>无线传感器网络（WSN）发展历程简洁总结</a></li><li><span class="title-icon "></span><a href="#无线传感器网络wireless-sensor-networks"><b></b>无线传感器网络(Wireless Sensor Networks)</a></li><ul><li><span class="title-icon "></span><a href="#wsn的概念"><b></b>WSN的概念</a></li><li><span class="title-icon "></span><a href="#传感器网络三要素"><b></b>传感器网络三要素</a></li><li><span class="title-icon "></span><a href="#传感器网络结构"><b></b>传感器网络结构</a></li><li><span class="title-icon "></span><a href="#无线传感器网络的特征"><b></b>无线传感器网络的特征</a></li><li><span class="title-icon "></span><a href="#无线传感器网络与物联网、计算机网络的关系"><b></b>无线传感器网络与物联网、计算机网络的关系</a></li></ul><li><span class="title-icon "></span><a href="#wsn-与-manet-的对比及三种网络关系"><b></b>WSN 与 MANET 的对比及三种网络关系</a></li></ul></ul></div><a href="#wsn概述" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#wsn概述">WSN概述</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基于基础设施的无线网络">基于基础设施的无线网络</a><i></i></div></li>
+<li><div><a href="#wireless-ad-hoc-网络">Wireless ad hoc 网络</a><i></i></div></li>
+<li><div><a href="#无线传感器网络（wsn）发展历程简洁总结">无线传感器网络（WSN）发展历程简洁总结</a><i></i></div></li>
+<li><div><a href="#无线传感器网络wireless-sensor-networks">无线传感器网络(Wireless Sensor Networks)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#wsn的概念">WSN的概念</a><i></i></div></li>
+<li><div><a href="#传感器网络三要素">传感器网络三要素</a><i></i></div></li>
+<li><div><a href="#传感器网络结构">传感器网络结构</a><i></i></div></li>
+<li><div><a href="#无线传感器网络的特征">无线传感器网络的特征</a><i></i></div></li>
+<li><div><a href="#无线传感器网络与物联网、计算机网络的关系">无线传感器网络与物联网、计算机网络的关系</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#wsn-与-manet-的对比及三种网络关系">WSN 与 MANET 的对比及三种网络关系</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="wsn概述"><a name="wsn概述" class="anchor-navigation-ex-anchor" href="#wsn概述"><i class="fa fa-link" aria-hidden="true"></i></a>WSN概述</h1>
+<p> <strong>“先讲传统方案（基于基础设施的无线网络）→ 暴露其痛点 → 给出替代方案（Ad hoc 网络）→ 详解方案特点与挑战”</strong></p>
+<h2 id="基于基础设施的无线网络"><a name="基于基础设施的无线网络" class="anchor-navigation-ex-anchor" href="#基于基础设施的无线网络"><i class="fa fa-link" aria-hidden="true"></i></a>基于基础设施的无线网络</h2>
+<p>这类无线网络的本质是 <strong>“所有终端都靠固定设施连接，没有设施就没法通信”</strong>。</p>
+<p>常见类型</p>
+<ul>
+<li>蜂窝移动网络：GSM（2G）、UMTS（3G）、5G（我们手机常用的网络）；</li>
+<li>有线主干网延伸的无线网络：比如企业 WiFi（靠路由器 / AP，而路由器要连有线宽带）、校园网 WiFi。</li>
+</ul>
+<p>通信终端和基站的关系</p>
+<ul>
+<li>通信终端以<strong>无线</strong>的方式与基站通信</li>
+<li>通信终端之间的通信要通过<strong>基站以及主干网</strong>来完成</li>
+<li>移动性通过<strong>基站的切换</strong>来支持</li>
+</ul>
+<p><img src="assets/image-20251219165424800.png" alt="image-20251219165424800" style="zoom:33%;"></img></p>
+<p>局限性：基础设施失效；成本太高 / 不方便部署；没有时间部署设施</p>
+<h2 id="wireless-ad-hoc-网络"><a name="wireless-ad-hoc-网络" class="anchor-navigation-ex-anchor" href="#wireless-ad-hoc-网络"><i class="fa fa-link" aria-hidden="true"></i></a>Wireless ad hoc 网络</h2>
+<p>对于上述基于基础设施的无线网络的局限性，可以<strong>用 Wireless ad hoc 网络解决</strong>；</p>
+<ul>
+<li>利用无线终端<strong>自身的组网</strong>能力,构造一个不需要通信基础设施的“专用的”网络｡</li>
+<li>不用基站、路由器这些固定设施，全靠无线终端自己的能力，<strong>临时搭建</strong>一个 “只为当前场景服务” 的专用网络。</li>
+</ul>
+<p><img src="assets/image-20251219223811814.png" alt="image-20251219223811814" style="zoom:25%;"></img></p>
+<p>Ad hoc 网络的两大核心特点（无基础设施带来的 “天生属性”）</p>
+<ul>
+<li>没有核心设备 → 自组织 + 多跳通信<ul>
+<li>网络里所有终端地位平等，终端开机后会自动扫描周围的同类设备，主动建立连接、形成网络</li>
+<li>MAC 是分布式的；</li>
+<li><strong>路由靠邻居</strong> —— 单个终端通信距离有限（比如几十米），要给远处的设备发数据，就找中间的 “邻居终端” 帮忙转发，这就是 “多跳（multi-hop）”</li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20251219223935147.png" alt="image-20251219223935147" style="zoom:33%;"></img></p>
+<ul>
+<li>支持移动 → 灵活但复杂（衍生出 MANET）<ul>
+<li>这类 “支持移动的 Ad hoc 网络” 叫 <strong>MANET</strong>（mobile ad hoc networks，移动自组织网络）</li>
+<li>终端移动后，原来的 “邻居” 可能断开连接</li>
+<li>需要 “<strong>自适应协议</strong>”—— 网络能实时感知拓扑变化，自动调整数据转发路径，保证通信不中断</li>
+</ul>
+</li>
+</ul>
+<p>Ad hoc 网络的最大挑战：<strong>电池电源约束</strong></p>
+<ul>
+<li>考虑节能型网络协议：路由协议节能：选 “能耗最低” 的转发路径；网络实时监测每个终端的电池电量，动态调整任务</li>
+</ul>
+<p>传感器（Sensors）：</p>
+<p>能 “感受” 物理量（比如温度、声音、振动、压力），并把这些物理量转换成计算机能识别的电信号的设备。</p>
+<p>即可以通过传感器实现对环境、现象或对象的感知，然后将数据提供给网络</p>
+<h2 id="无线传感器网络（wsn）发展历程简洁总结"><a name="无线传感器网络（wsn）发展历程简洁总结" class="anchor-navigation-ex-anchor" href="#无线传感器网络（wsn）发展历程简洁总结"><i class="fa fa-link" aria-hidden="true"></i></a>无线传感器网络（WSN）发展历程简洁总结</h2>
+<ol>
+<li><strong>概念萌芽（1980 年）</strong>：卡内基 - 梅隆大学启动 DSN 项目，明确 “分布式、低功耗、自主协作” 的 WSN 核心理念。</li>
+<li><strong>技术攻坚（1993-2004 年）</strong>：DARPA 等资助 WINS、Smart Dust 等项目，突破硬件集成、低功耗、微型化等核心技术，以军事需求为导向。</li>
+<li><strong>民用拓展（2002-2003 年）</strong>：英特尔明确 WSN 民用场景，美国 NSFC 资助基础理论研究，推动技术从军用转向通用。</li>
+<li><strong>全球推广（2006 年后）</strong>：中国将 WSN 纳入国家科技战略，“感知中国” 推动其与物联网融合，应用场景全面拓展，释放近距离、密集观测潜能。</li>
+</ol>
+<h2 id="无线传感器网络wireless-sensor-networks"><a name="无线传感器网络wireless-sensor-networks" class="anchor-navigation-ex-anchor" href="#无线传感器网络wireless-sensor-networks"><i class="fa fa-link" aria-hidden="true"></i></a>无线传感器网络(Wireless Sensor Networks)</h2>
+<h3 id="wsn的概念"><a name="wsn的概念" class="anchor-navigation-ex-anchor" href="#wsn的概念"><i class="fa fa-link" aria-hidden="true"></i></a>WSN的概念</h3>
+<p>WSN 的核心是 “<strong>分布式感知 + 自组织组网</strong>”</p>
+<blockquote>
+<p>[!note]</p>
+<p>由部署在<strong>监测区域</strong>内的大量、廉价、微型、<strong>传感器节点</strong>组成，通过<strong>无线通信</strong>方式形成的一个<strong>多跳、自组织</strong>的<strong>网络系统</strong>，其目的是协作地感知、采集和处理网络覆盖区域中感知对象的信息，并发送给观察者。</p>
+</blockquote>
+<ul>
+<li>在监测区域部署大量 “微型传感器节点”</li>
+<li>节点之间通过无线信号通信，能自动连接形成网络（自组织）；同时节点间距远，数据会通过多个节点接力转发（多跳）</li>
+<li>所有节点协同工作，共同感知、采集环境或对象的信息，再对数据简单处理后，最终把有效信息传递给需要的人或系统</li>
+</ul>
+<p><img src="assets/image-20251219231523471.png" alt="image-20251219231523471" style="zoom:33%;"></img></p>
+<h3 id="传感器网络三要素"><a name="传感器网络三要素" class="anchor-navigation-ex-anchor" href="#传感器网络三要素"><i class="fa fa-link" aria-hidden="true"></i></a>传感器网络三要素</h3>
+<p>传感器网络的核心是 “<strong>谁来采集(传感器节点）→采集什么（感知对象）→谁用数据（观察者）</strong>”</p>
+<ol>
+<li>传感器节点：网络的 “数据采集执行者”<ul>
+<li>部署在监测区域的 “微型智能终端”，比如微型的嵌入式系统（体积小能耗小）</li>
+<li>实现环境、现象或对象的物理感知（感知能力）</li>
+<li>可以对采集的信号进行预处理（计算能力）</li>
+<li>通过无线通信技术报告感知信息（通信能力）</li>
+</ul>
+</li>
+<li>感知对象：网络的 “监测目标”<ul>
+<li>观察者感兴趣、由传感器网络感知的对象，是数据采集的核心指向。</li>
+<li>一个观察者可以在一个或多个传感器网络环境中观测多种现象</li>
+</ul>
+</li>
+<li>观察者：网络的 “数据使用者与指令发起者”<ul>
+<li>需要利用传感器数据的人、系统或设备</li>
+<li>传感器网络发布的感知信息的用户</li>
+<li>向传感器网络发出查询并接受回答</li>
+<li>根据感知信息进行各种决策</li>
+</ul>
+</li>
+</ol>
+<h3 id="传感器网络结构"><a name="传感器网络结构" class="anchor-navigation-ex-anchor" href="#传感器网络结构"><i class="fa fa-link" aria-hidden="true"></i></a>传感器网络结构</h3>
+<p>传感器网络的结构核心是 “<strong>三层节点分工协作</strong>”，底层<strong>传感器节点</strong>负责 “采集数据”，<strong>中间汇聚节点</strong>负责 “中转数据”，顶层<strong>任务管理节点</strong>负责 “调度与用数据”，再加上传感器节点内部的 “四大功能模块”，构成完整工作体系</p>
+<p>网络层面：三层核心节点（数据从采集到使用的链路）</p>
+<ol>
+<li>传感器节点（底层 “<strong>数据采集</strong>小兵”）<ul>
+<li>直接接触监测现场，数量最多，密集部署在监测区域。</li>
+<li>采集、处理、控制和通信</li>
+<li>网络功能：兼顾网络终端和路由器</li>
+<li>微型化（比如 CrossBow Mica Motes 仅指甲盖大小）、低成本、电池供电（Active 模式 8mA，休眠模式 &lt; 15μA，靠 2 节 AA 电池就能用很久）</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>节点层面：传感器节点的 “四大内部模块”</p>
+<p>每个传感器节点是微型智能设备，内部由 4 个模块组成</p>
+<p><img src="assets/image-20251220173801731.png" alt="image-20251220173801731" style="zoom:33%;"></img></p>
+<ul>
+<li><p>传感器模块（“感知器官”）：直接 “感受” 环境，把温度、湿度、风力、噪声、物体移动等物理信号，转换成电信号（原始数据），即负责监测区域内<strong>信息的采集和数据转换</strong></p>
+<p><img src="assets/image-20251220173918820.png" alt="image-20251220173918820" style="zoom:25%;"></img></p>
+</li>
+<li><p>处理器模块（“大脑核心”）：控制整个节点的操作，存储和处理本身采集的数据，也处理其他节点发来的数据；</p>
+<p>可选：微控制器( Microcontroller)；数字信号处理器（DSP）；可编程逻辑阵列（FPGA）；专用集成电路（ASIC）</p>
+<p><img src="assets/image-20251220174059289.png" alt="image-20251220174059289"></img></p>
+</li>
+<li><p>无线通信模块（“嘴巴和耳朵”）：和其他传感器节点、汇聚节点进行<strong>无线通信</strong>，收发采集数据和控制指令；</p>
+<p>支持射频（RF，比如 CrossBow 用的 CC2420，2.4G 频段、250kbps 速率）、光、声音等介质，支持低功耗模式（省电池）</p>
+</li>
+<li><p>能量供应模块（“心脏”）：给整个传感器节点供电，核心是电池，部分支持光电池、振动发电等辅助供电；</p>
+</li>
+</ul>
+</blockquote>
+<ol>
+<li><p>汇聚节点（中间 “数据中转站”，Sink 节点）</p>
+<ul>
+<li>网络的 “网关”；连接<strong>外部网络，转协议，收发数据</strong></li>
+<li>收发数据：收集所有传感器节点（或经多跳转发）传来的数据；把处理后的批量数据转发给管理节点，同时把管理节点的任务指令下发给传感器节点；</li>
+<li>转协议：把传感器网络的专用协议，转换成互联网、卫星等外部网络能识别的协议；实现两种协议栈之间的通信协议转换</li>
+<li>连接外部网络：连接传感器网络与Internet等外部网络</li>
+</ul>
+</li>
+<li><p>管理节点（顶层 “指挥中心”）</p>
+<ul>
+<li>网络配置和管理；</li>
+<li>发布监测任务，收集监测数据</li>
+</ul>
+</li>
+</ol>
+<hr></hr>
+<h3 id="无线传感器网络的特征"><a name="无线传感器网络的特征" class="anchor-navigation-ex-anchor" href="#无线传感器网络的特征"><i class="fa fa-link" aria-hidden="true"></i></a>无线传感器网络的特征</h3>
+<ol>
+<li>WSN 节点的核心短板：资源受限<ul>
+<li>能量有限：多数节点靠传统电池供电，野外 / 偏远场景无法充电；</li>
+<li>通信能力有限：单个节点只能传几十到 100 米，远了要靠多跳转发；</li>
+<li>能量消耗和通信距离关系 ：<code>E = k * d^n (2&lt;n&lt;4)</code></li>
+<li>计算和存储能力有限</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>传感器网络的六大核心特点：</p>
+<ol>
+<li>大规模网络：节点数量大､分布广､密集</li>
+<li>自组织网络：无需基础设施，未知区域自动组网，撒播节点就能快速形成网络</li>
+<li>动态网络：网络结构随时变：比如节点电池没电故障、通信信号中断、部分节点移动，或新节点加入，都会让网络连接关系（拓扑）改变</li>
+<li>可靠网络：硬件可靠､通信保密数据安全</li>
+<li>应用相关网络：不同的应用背景,对硬件､软件､网络协议影响巨大</li>
+<li>以数据（任务）为中心：用户不关心 “某个节点是否正常”，只关心 “事件结果”</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h3 id="无线传感器网络与物联网、计算机网络的关系"><a name="无线传感器网络与物联网、计算机网络的关系" class="anchor-navigation-ex-anchor" href="#无线传感器网络与物联网、计算机网络的关系"><i class="fa fa-link" aria-hidden="true"></i></a>无线传感器网络与物联网、计算机网络的关系</h3>
+<p>三者是 <strong>“局部 - 整体 - 支撑”</strong> 的协同关系，核心逻辑：WSN 是物联网的 “感知核心”，计算机网络是物联网的 “传输通道”，共同构成 “感知 - 传输 - 应用” 的完整闭环</p>
+<p><strong>物联网（IoT）：“万物互联” 的整体框架</strong>：涵盖 <strong>感知层、网络层、应用层</strong> 三层架构</p>
+<p><strong>WSN：物联网 “感知层” 的核心技术</strong>：WSN 的核心作用是 “采集物理世界数据”</p>
+<p><strong>计算机网络：物联网 “网络层” 的传输支撑</strong>：计算机网络（包括互联网、局域网、5G/WiFi 等）是数据传输的 “通道”</p>
+<p>物联网是 “完整的智能系统”，WSN 负责 “收集信息”，计算机网络负责 “传递信息”，三者缺一不可：没有 WSN，物联网就 “看不见、听不见”；没有计算机网络，WSN 采集的数据就 “传不出去、用不起来”。</p>
+<hr></hr>
+<h2 id="wsn-与-manet-的对比及三种网络关系"><a name="wsn-与-manet-的对比及三种网络关系" class="anchor-navigation-ex-anchor" href="#wsn-与-manet-的对比及三种网络关系"><i class="fa fa-link" aria-hidden="true"></i></a>WSN 与 MANET 的对比及三种网络关系</h2>
+<p>WSN 与 MANET，两者都是 “无需人工干预” 的无线自组织网络，不用依赖基站、路由器等固定基础设施</p>
+<ul>
+<li>节点通过无线通信传输数据</li>
+<li>节点开机自动发现邻居，动态组网</li>
+<li>单个节点通信距离有限，数据靠中间节点多跳转发</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>WSN（无线传感器网络）</th>
+<th>MANET（移动自组织网络）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>节点数量</td>
+<td>极其庞大（几百到几千个）</td>
+<td>较少（几十到上百个）</td>
+</tr>
+<tr>
+<td>节点状态</td>
+<td>多数静止（比如部署在森林、桥梁的传感器）</td>
+<td>全移动（比如士兵携带的终端、移动设备）</td>
+</tr>
+<tr>
+<td>节点分布</td>
+<td>密集部署（监测区域内均匀 / 重点覆盖）</td>
+<td>分布较松散（随节点移动动态变化）</td>
+</tr>
+<tr>
+<td>拓扑变化原因</td>
+<td>主要因节点能量耗尽、故障导致（多数节点不动）</td>
+<td>主要因节点移动导致（能量充足，节点位置频繁变）</td>
+</tr>
+<tr>
+<td>能量约束</td>
+<td>严格（靠电池供电，无法持续补充，需极致节能）</td>
+<td>宽松（可充电或持续供电，无需过度考虑能耗）</td>
+</tr>
+<tr>
+<td>通信模式</td>
+<td>多对一（所有节点向汇聚节点 / Sink 节点传数据）</td>
+<td>点到点（任意节点之间可直接通信，无固定接收端）</td>
+</tr>
+</tbody>
+</table>
+<p>三种网络的关系（WSN、Ad hoc、无线宽带网络）</p>
+<table>
+<thead>
+<tr>
+<th>网络类型</th>
+<th>核心拓扑结构</th>
+<th>通信模式</th>
+<th>核心优化目标</th>
+<th>典型代表 / 场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WSN</td>
+<td>准静态拓扑（多数节点不动，仅少数故障 / 新增）</td>
+<td>多对一（节点→Sink 节点）</td>
+<td>功耗优化（省电池，延长网络寿命）</td>
+<td>森林火险监测、桥梁结构监测</td>
+</tr>
+<tr>
+<td>Ad hoc</td>
+<td>动态拓扑（节点移动，连接关系频繁变）</td>
+<td>分组传输（任意节点间灵活通信）</td>
+<td>适配拓扑变化（保证移动时通信稳定）</td>
+<td>战场单兵通信、灾区临时组网</td>
+</tr>
+<tr>
+<td>无线宽带网络</td>
+<td>固定拓扑（依赖基站 / 路由器等基础设施）</td>
+<td>点对多 / 多对点（终端→基站→终端）</td>
+<td>带宽优化（提升传输速率，支持大量数据）</td>
+<td>5G、WiFi、GSM（手机通信）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/image-20251220183259533.png" alt="image-20251220183259533" style="zoom:33%;"></img></p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 01_WSN概述</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 无线传感器网络">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02_WSN体系&物理层.html" class="navigation navigation-next " aria-label="Next page: 02_WSN体系&物理层">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"01_WSN概述","level":"1.10.1","depth":2,"next":{"title":"02_WSN体系&物理层","level":"1.10.2","depth":2,"path":"docs/无线传感器网络/02_WSN体系&物理层.md","ref":"docs/无线传感器网络/02_WSN体系&物理层.md","articles":[]},"previous":{"title":"无线传感器网络","level":"1.10","depth":1,"path":"docs/无线传感器网络/README.md","ref":"docs/无线传感器网络/README.md","articles":[{"title":"01_WSN概述","level":"1.10.1","depth":2,"path":"docs/无线传感器网络/01_WSN概述.md","ref":"docs/无线传感器网络/01_WSN概述.md","articles":[]},{"title":"02_WSN体系&物理层","level":"1.10.2","depth":2,"path":"docs/无线传感器网络/02_WSN体系&物理层.md","ref":"docs/无线传感器网络/02_WSN体系&物理层.md","articles":[]},{"title":"03_MAC协议","level":"1.10.3","depth":2,"path":"docs/无线传感器网络/03_MAC协议.md","ref":"docs/无线传感器网络/03_MAC协议.md","articles":[]},{"title":"04_路由协议","level":"1.10.4","depth":2,"path":"docs/无线传感器网络/04_路由协议.md","ref":"docs/无线传感器网络/04_路由协议.md","articles":[]},{"title":"05_拓扑控制","level":"1.10.5","depth":2,"path":"docs/无线传感器网络/05_拓扑控制.md","ref":"docs/无线传感器网络/05_拓扑控制.md","articles":[]},{"title":"06_通信标准","level":"1.10.6","depth":2,"path":"docs/无线传感器网络/06_通信标准.md","ref":"docs/无线传感器网络/06_通信标准.md","articles":[]},{"title":"07_定位技术","level":"1.10.7","depth":2,"path":"docs/无线传感器网络/07_定位技术.md","ref":"docs/无线传感器网络/07_定位技术.md","articles":[]},{"title":"08_时间同步技术","level":"1.10.8","depth":2,"path":"docs/无线传感器网络/08_时间同步技术.md","ref":"docs/无线传感器网络/08_时间同步技术.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/无线传感器网络/01_WSN概述.md","mtime":"2026-03-09T01:44:20.974Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

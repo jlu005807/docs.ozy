@@ -1,0 +1,3682 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>03_SQL · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_SQL进阶.html" />
+    
+    
+    <link rel="prev" href="02_关系模型.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="01_引言.html">
+            
+                <a href="01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="02_关系模型.html">
+            
+                <a href="02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.3" data-path="03_SQL.html">
+            
+                <a href="03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="04_SQL进阶.html">
+            
+                <a href="04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="05_高级SQL.html">
+            
+                <a href="05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="06_E-R模型.html">
+            
+                <a href="06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="07_关系数据库设计.html">
+            
+                <a href="07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="08_事务.html">
+            
+                <a href="08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="09_并发控制.html">
+            
+                <a href="09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >03_SQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#sql-查询语言概览"><b></b>SQL 查询语言概览</a></li><ul><ul><li><span class="title-icon "></span><a href="#sql-语言的组成部分"><b></b>SQL 语言的组成部分</a></li></ul></ul><li><span class="title-icon "></span><a href="#sql-数据定义语言（ddl）"><b></b>SQL 数据定义语言（DDL）</a></li><ul><li><span class="title-icon "></span><a href="#sql-核心数据类型"><b></b>SQL 核心数据类型</a></li><li><span class="title-icon "></span><a href="#create-table"><b></b>CREATE TABLE</a></li></ul><li><span class="title-icon "></span><a href="#sql-表数据与结构修改"><b></b>SQL 表数据与结构修改</a></li><ul><li><span class="title-icon "></span><a href="#insert：向表中插入新数据"><b></b>Insert：向表中插入新数据</a></li><li><span class="title-icon "></span><a href="#delete：从表中删除数据"><b></b>Delete：从表中删除数据</a></li><li><span class="title-icon "></span><a href="#drop-table：彻底删除表"><b></b>Drop Table：彻底删除表</a></li><li><span class="title-icon "></span><a href="#alter-table：修改表结构"><b></b>Alter Table：修改表结构</a></li><li><span class="title-icon "></span><a href="#updating更新表操作"><b></b>Updating:更新表操作</a></li></ul><li><span class="title-icon "></span><a href="#sql-基础查询"><b></b>SQL 基础查询</a></li><ul><li><span class="title-icon "></span><a href="#sql-基础查询结构：整体框架与核心定义"><b></b>SQL 基础查询结构：整体框架与核心定义</a></li><li><span class="title-icon "></span><a href="#select-子句：选择要返回的属性（投影操作）"><b></b>SELECT 子句：选择要返回的属性（投影操作）</a></li><ul><li><span class="title-icon "></span><a href="#基础用法：指定属性（单属性--多属性）"><b></b>基础用法：指定属性（单属性 / 多属性）</a></li><li><span class="title-icon "></span><a href="#去重操作：distinct-与-all"><b></b>去重操作：DISTINCT 与 ALL</a></li><li><span class="title-icon "></span><a href="#通配符：-表示-所有属性"><b></b>通配符：* 表示 “所有属性”</a></li><li><span class="title-icon "></span><a href="#字面量属性：返回常量值（无--有-from-子句）"><b></b>字面量属性：返回常量值（无 / 有 FROM 子句）</a></li><li><span class="title-icon "></span><a href="#算术表达式：对属性进行计算"><b></b>算术表达式：对属性进行计算</a></li></ul><li><span class="title-icon "></span><a href="#where-子句：筛选符合条件的元组（选择操作）"><b></b>WHERE 子句：筛选符合条件的元组（选择操作）</a></li><ul><li><span class="title-icon "></span><a href="#基础用法：简单条件筛选"><b></b>基础用法：简单条件筛选</a></li><li><span class="title-icon "></span><a href="#组合条件筛选（逻辑连接符）"><b></b>组合条件筛选（逻辑连接符）</a></li><li><span class="title-icon "></span><a href="#扩展用法：对算术表达式结果筛选"><b></b>扩展用法：对算术表达式结果筛选</a></li></ul><li><span class="title-icon "></span><a href="#from-子句：指定查询涉及的关系（笛卡尔积操作）"><b></b>FROM 子句：指定查询涉及的关系（笛卡尔积操作）</a></li><ul><li><span class="title-icon "></span><a href="#基础用法：单表查询"><b></b>基础用法：单表查询</a></li><li><span class="title-icon "></span><a href="#多表查询（笛卡尔积）"><b></b>多表查询（笛卡尔积）</a></li></ul></ul><li><span class="title-icon "></span><a href="#sql-重命名操作（as-子句）"><b></b>SQL 重命名操作（AS 子句）</a></li><li><span class="title-icon "></span><a href="#sql-字符串匹配（like-运算符）"><b></b>SQL 字符串匹配（LIKE 运算符）</a></li><li><span class="title-icon "></span><a href="#sql-排序（order-by）"><b></b>SQL 排序（ORDER BY）</a></li><ul><ul><li><span class="title-icon "></span><a href="#多属性排序"><b></b>多属性排序</a></li></ul></ul><li><span class="title-icon "></span><a href="#范围查询（between）"><b></b>范围查询（BETWEEN）</a></li><li><span class="title-icon "></span><a href="#元组比较（tuple-comparison）"><b></b>元组比较（Tuple Comparison）</a></li><li><span class="title-icon "></span><a href="#sql-重复元组（multiset）与关系代数运算符的多集版本"><b></b>SQL 重复元组（Multiset）与关系代数运算符的多集版本</a></li><ul><li><span class="title-icon "></span><a href="#集合（set）与多集（multiset）的区别"><b></b>集合（Set）与多集（Multiset）的区别</a></li><ul><li><span class="title-icon "></span><a href="#多集选择（σθr₁）：筛选重复元组，保留次数不变"><b></b>多集选择（σ_θ(r₁)）：筛选重复元组，保留次数不变</a></li><li><span class="title-icon "></span><a href="#多集投影（πa-r₁）：投影后重复次数与原元组次数一致"><b></b>多集投影（Π_A (r₁)）：投影后重复次数与原元组次数一致</a></li><li><span class="title-icon "></span><a href="#多集笛卡尔积（r₁-×-r₂）：重复次数相乘"><b></b>多集笛卡尔积（r₁ × r₂）：重复次数相乘</a></li></ul><li><span class="title-icon "></span><a href="#sql-重复语义：查询与多集关系代数的等价性"><b></b>SQL 重复语义：查询与多集关系代数的等价性</a></li></ul><li><span class="title-icon "></span><a href="#sql-集合操作（unionintersectexcept）"><b></b>SQL 集合操作（UNION/INTERSECT/EXCEPT）</a></li><ul><ul><li><span class="title-icon "></span><a href="#union（并集）：或-逻辑，合并两个结果集"><b></b>UNION（并集）：“或” 逻辑，合并两个结果集</a></li><li><span class="title-icon "></span><a href="#intersect（交集）：且-逻辑，取两个结果集的公共部分"><b></b>INTERSECT（交集）：“且” 逻辑，取两个结果集的公共部分</a></li><li><span class="title-icon "></span><a href="#except（差集）：除了-逻辑，取第一个结果集独有的部分"><b></b>EXCEPT（差集）：“除了” 逻辑，取第一个结果集独有的部分</a></li></ul></ul><li><span class="title-icon "></span><a href="#sql-中-null-值"><b></b>SQL 中 NULL 值</a></li><ul><li><span class="title-icon "></span><a href="#基本逻辑"><b></b>基本逻辑</a></li><li><span class="title-icon "></span><a href="#null-值的替换：coalesce-函数"><b></b>NULL 值的替换：COALESCE 函数</a></li></ul><li><span class="title-icon "></span><a href="#sql-聚合函数（aggregate-functions）"><b></b>SQL 聚合函数（Aggregate Functions）</a></li><ul><ul><li><span class="title-icon "></span><a href="#avg：计算平均值"><b></b>avg：计算平均值</a></li><li><span class="title-icon "></span><a href="#min：查找最小值"><b></b>min：查找最小值</a></li><li><span class="title-icon "></span><a href="#3-max：查找最大值"><b></b>3. max：查找最大值</a></li><li><span class="title-icon "></span><a href="#4-sum：计算总和"><b></b>4. sum：计算总和</a></li><li><span class="title-icon "></span><a href="#5-count：统计数量"><b></b>5. count：统计数量</a></li></ul><li><span class="title-icon "></span><a href="#group-by-子句与按组统计"><b></b>GROUP BY 子句与按组统计</a></li><li><span class="title-icon "></span><a href="#having-子句"><b></b>HAVING 子句</a></li></ul><li><span class="title-icon "></span><a href="#sql-子查询（subquery）的嵌套机制"><b></b>SQL 子查询（subquery）的嵌套机制</a></li><ul><ul><li><span class="title-icon "></span><a href="#子查询的限制规则"><b></b>子查询的限制规则</a></li><li><span class="title-icon "></span><a href="#with-子句：定义临时关系"><b></b>WITH 子句：定义临时关系</a></li></ul></ul><li><span class="title-icon "></span><a href="#sql-子句顺序"><b></b>SQL 子句顺序</a></li></ul></div><a href="#sql-查询语言概览" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#sql-查询语言概览">SQL 查询语言概览</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#sql-语言的组成部分">SQL 语言的组成部分</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#sql-数据定义语言（ddl）">SQL 数据定义语言（DDL）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#sql-核心数据类型">SQL 核心数据类型</a><i></i></div></li>
+<li><div><a href="#create-table">CREATE TABLE</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#sql-表数据与结构修改">SQL 表数据与结构修改</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#insert：向表中插入新数据">Insert：向表中插入新数据</a><i></i></div></li>
+<li><div><a href="#delete：从表中删除数据">Delete：从表中删除数据</a><i></i></div></li>
+<li><div><a href="#drop-table：彻底删除表">Drop Table：彻底删除表</a><i></i></div></li>
+<li><div><a href="#alter-table：修改表结构">Alter Table：修改表结构</a><i></i></div></li>
+<li><div><a href="#updating更新表操作">Updating:更新表操作</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#sql-基础查询">SQL 基础查询</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#sql-基础查询结构：整体框架与核心定义">SQL 基础查询结构：整体框架与核心定义</a><i></i></div></li>
+<li><div><a href="#select-子句：选择要返回的属性（投影操作）">SELECT 子句：选择要返回的属性（投影操作）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基础用法：指定属性（单属性--多属性）">基础用法：指定属性（单属性 / 多属性）</a><i></i></div></li>
+<li><div><a href="#去重操作：distinct-与-all">去重操作：DISTINCT 与 ALL</a><i></i></div></li>
+<li><div><a href="#通配符：-表示-所有属性">通配符：* 表示 “所有属性”</a><i></i></div></li>
+<li><div><a href="#字面量属性：返回常量值（无--有-from-子句）">字面量属性：返回常量值（无 / 有 FROM 子句）</a><i></i></div></li>
+<li><div><a href="#算术表达式：对属性进行计算">算术表达式：对属性进行计算</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#where-子句：筛选符合条件的元组（选择操作）">WHERE 子句：筛选符合条件的元组（选择操作）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基础用法：简单条件筛选">基础用法：简单条件筛选</a><i></i></div></li>
+<li><div><a href="#组合条件筛选（逻辑连接符）">组合条件筛选（逻辑连接符）</a><i></i></div></li>
+<li><div><a href="#扩展用法：对算术表达式结果筛选">扩展用法：对算术表达式结果筛选</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#from-子句：指定查询涉及的关系（笛卡尔积操作）">FROM 子句：指定查询涉及的关系（笛卡尔积操作）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基础用法：单表查询">基础用法：单表查询</a><i></i></div></li>
+<li><div><a href="#多表查询（笛卡尔积）">多表查询（笛卡尔积）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#核心定义">核心定义</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#sql-重命名操作（as-子句）">SQL 重命名操作（AS 子句）</a><i></i></div></li>
+<li><div><a href="#sql-字符串匹配（like-运算符）">SQL 字符串匹配（LIKE 运算符）</a><i></i></div></li>
+<li><div><a href="#sql-排序（order-by）">SQL 排序（ORDER BY）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#多属性排序">多属性排序</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#范围查询（between）">范围查询（BETWEEN）</a><i></i></div></li>
+<li><div><a href="#元组比较（tuple-comparison）">元组比较（Tuple Comparison）</a><i></i></div></li>
+<li><div><a href="#sql-重复元组（multiset）与关系代数运算符的多集版本">SQL 重复元组（Multiset）与关系代数运算符的多集版本</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#集合（set）与多集（multiset）的区别">集合（Set）与多集（Multiset）的区别</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#多集选择（σθr₁）：筛选重复元组，保留次数不变">多集选择（σ_θ(r₁)）：筛选重复元组，保留次数不变</a><i></i></div></li>
+<li><div><a href="#多集投影（πa-r₁）：投影后重复次数与原元组次数一致">多集投影（Π_A (r₁)）：投影后重复次数与原元组次数一致</a><i></i></div></li>
+<li><div><a href="#多集笛卡尔积（r₁-×-r₂）：重复次数相乘">多集笛卡尔积（r₁ × r₂）：重复次数相乘</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#sql-重复语义：查询与多集关系代数的等价性">SQL 重复语义：查询与多集关系代数的等价性</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#sql-集合操作（unionintersectexcept）">SQL 集合操作（UNION/INTERSECT/EXCEPT）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#union（并集）：或-逻辑，合并两个结果集">UNION（并集）：“或” 逻辑，合并两个结果集</a><i></i></div></li>
+<li><div><a href="#intersect（交集）：且-逻辑，取两个结果集的公共部分">INTERSECT（交集）：“且” 逻辑，取两个结果集的公共部分</a><i></i></div></li>
+<li><div><a href="#except（差集）：除了-逻辑，取第一个结果集独有的部分">EXCEPT（差集）：“除了” 逻辑，取第一个结果集独有的部分</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#sql-中-null-值">SQL 中 NULL 值</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基本逻辑">基本逻辑</a><i></i></div></li>
+<li><div><a href="#null-值的替换：coalesce-函数">NULL 值的替换：COALESCE 函数</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#sql-聚合函数（aggregate-functions）">SQL 聚合函数（Aggregate Functions）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#avg：计算平均值">avg：计算平均值</a><i></i></div></li>
+<li><div><a href="#min：查找最小值">min：查找最小值</a><i></i></div></li>
+<li><div><a href="#3-max：查找最大值">3. max：查找最大值</a><i></i></div></li>
+<li><div><a href="#4-sum：计算总和">4. sum：计算总和</a><i></i></div></li>
+<li><div><a href="#5-count：统计数量">5. count：统计数量</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#group-by-子句与按组统计">GROUP BY 子句与按组统计</a><i></i></div></li>
+<li><div><a href="#having-子句">HAVING 子句</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#sql-子查询（subquery）的嵌套机制">SQL 子查询（subquery）的嵌套机制</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#子查询的限制规则">子查询的限制规则</a><i></i></div></li>
+<li><div><a href="#with-子句：定义临时关系">WITH 子句：定义临时关系</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#sql-子句顺序">SQL 子句顺序</a><i></i></div></li>
+</ul>
+</div>
+
+<h1 id="sql-查询语言概览"><a name="sql-查询语言概览" class="anchor-navigation-ex-anchor" href="#sql-查询语言概览"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 查询语言概览</h1>
+<p>SQL：结构化查询语言（Structured Query Language），是用于管理关系型数据库并对其中的数据进行一系列操作（包括数据插入、查询、修改、删除等）的一种语言。</p>
+<ul>
+<li>SQL 语言<strong>不区分大小写</strong>（关键字如 SELECT、FROM 可小写），但数据库表名、列名的大小写敏感性依赖于数据库和操作系统（如 Linux 下的 MySQL 区分表名大小写，Windows 下不区分）。</li>
+<li>SQL 是关系型数据库的 "通用语言"，所有主流关系型数据库（MySQL、Oracle、SQL Server 等）都支持 SQL，只是存在少量语法差异（称为 "方言"），核心功能完全一致。</li>
+</ul>
+<h3 id="sql-语言的组成部分"><a name="sql-语言的组成部分" class="anchor-navigation-ex-anchor" href="#sql-语言的组成部分"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 语言的组成部分</h3>
+<ol>
+<li>数据定义语言（DDL）：用于定义和修改<strong>数据库结构</strong>，提供创建、修改、删除关系模式、索引、视图的命令。</li>
+<li>数据操纵语言（DML）：用于<strong>查询和更新数据</strong>，提供从数据库中查询数据，以及插入数据、修改数据、删除数据的命令。</li>
+<li>数据控制语言（DCL）：用于创建<strong>用户角色和权限</strong>，以及控制数据库访问。</li>
+<li>事务控制：用于管理<strong>事务处理</strong>，定义事务开始和结束，以确保在错误发生时事务可以完成或者回滚。</li>
+<li>存储过程和函数：是<strong>一段 SQL 语句的集合</strong>。通过编写存储过程和函数，可以重复地执行一段操作数据库的 SQL 语句集合。</li>
+<li>触发器：是与表相关的<strong>特殊的存储过程</strong>，在满足特定条件时，触发器中的 SQL 语句会被触发执行。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>核心命令</th>
+<th>应用场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDL</td>
+<td>CREATE、ALTER、DROP</td>
+<td>数据库结构设计</td>
+<td>创建学生表：CREATE TABLE student (ID char (5), name varchar (20));</td>
+</tr>
+<tr>
+<td>DML</td>
+<td>SELECT、INSERT、UPDATE、DELETE</td>
+<td>日常数据操作</td>
+<td>查询学生姓名：SELECT name FROM student;</td>
+</tr>
+<tr>
+<td>DCL</td>
+<td>GRANT、REVOKE</td>
+<td>权限管理</td>
+<td>授予用户查询权限：GRANT SELECT ON student TO user1;</td>
+</tr>
+<tr>
+<td>事务控制</td>
+<td>COMMIT、ROLLBACK</td>
+<td>数据一致性保障</td>
+<td>转账操作：执行扣款后若转账失败，ROLLBACK 撤销扣款</td>
+</tr>
+<tr>
+<td>存储过程 / 函数</td>
+<td>CREATE PROCEDURE、CREATE FUNCTION</td>
+<td>复杂逻辑复用</td>
+<td>编写计算学生平均分的函数，供多个查询调用</td>
+</tr>
+<tr>
+<td>触发器</td>
+<td>CREATE TRIGGER</td>
+<td>自动响应事件</td>
+<td>学生表插入新记录时，自动在日志表中添加操作记录</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sql-数据定义语言（ddl）"><a name="sql-数据定义语言（ddl）" class="anchor-navigation-ex-anchor" href="#sql-数据定义语言（ddl）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 数据定义语言（DDL）</h1>
+<p><strong>数据定义语言（DDL）</strong> 的核心作用是 “定义和管理数据库的结构”，而非操作表中的具体数据。</p>
+<p>在 SQL 中，“关系（Relation）” 就是我们日常说的 “表（Table）”，是数据库中存储数据的基本结构。DDL 通过<code>CREATE</code>（创建）、<code>ALTER</code>（修改）、<code>DROP</code>（删除）等命令，为这些表 “制定规则”—— 包括表的结构、数据的格式、数据的有效性约束，以及表的存储和访问权限等，确保数据库结构合法、数据可靠、访问安全。</p>
+<ul>
+<li><p>每个关系的模式：表中包含哪些属性（列）、每个属性的名称，以及属性之间的逻辑关联。</p>
+</li>
+<li><p>每个属性关联的值域：“值域”（Domain）指<strong>某个属性允许存储的数据类型和范围</strong></p>
+</li>
+<li><p>完整性约束：确保表中数据<strong>准确、一致、合法</strong>的 “规则”，防止无效或矛盾的数据存入数据库</p>
+<ul>
+<li>每个关系要维护的索引集：索引（Index）是为了<strong>加速查询</strong>而创建的 “数据结构”，相当于给表的某个属性 “建目录”</li>
+<li>每个关系的安全和授权信息：控制 “谁能访问表、能做什么操作”</li>
+<li>每个关系在磁盘上的物理存储结构：指定表在磁盘上的 “存储方式”</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 先创建被引用的“部门表”（主键dept_name）</span>
+<span class="hljs-keyword">CREATE TABLE</span> department (
+    dept_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">PRIMARY KEY</span>,  <span class="hljs-comment">-- 部门名称唯一，非空</span>
+    building <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>),
+    budget <span class="hljs-type">NUMERIC</span>(<span class="hljs-number">10</span>,<span class="hljs-number">2</span>)
+);
+
+<span class="hljs-comment">-- 创建“教师表”，添加完整的完整性约束</span>
+<span class="hljs-keyword">CREATE TABLE</span> instructor (
+    ID <span class="hljs-type">CHAR</span>(<span class="hljs-number">5</span>) <span class="hljs-keyword">PRIMARY KEY</span>,  <span class="hljs-comment">-- 主键：教师编号唯一、非空</span>
+    name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">NOT NULL</span>,<span class="hljs-comment">-- 非空：教师必须有姓名</span>
+    dept_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>),
+    salary <span class="hljs-type">NUMERIC</span>(<span class="hljs-number">8</span>,<span class="hljs-number">2</span>) <span class="hljs-keyword">CHECK</span> (salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>),<span class="hljs-comment">-- 检查：薪资必须为正数</span>
+    <span class="hljs-comment">-- 外键：关联部门表，确保教师的部门存在</span>
+    <span class="hljs-keyword">FOREIGN KEY</span> (dept_name) <span class="hljs-keyword">REFERENCES</span> department(dept_name)
+);
+
+<span class="hljs-comment">-- 给instructor表的ID属性建唯一索引（主键默认会自动建索引）</span>
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">UNIQUE</span> INDEX idx_instructor_id <span class="hljs-keyword">ON</span> instructor(ID);
+<span class="hljs-comment">-- 给dept_name建普通索引（加速按部门查询教师）</span>
+<span class="hljs-keyword">CREATE</span> INDEX idx_instructor_dept <span class="hljs-keyword">ON</span> instructor(dept_name);
+
+<span class="hljs-comment">-- 授予用户“student_user”查询course表的权限</span>
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ON</span> course <span class="hljs-keyword">TO</span> student_user;
+<span class="hljs-comment">-- 授予用户“teacher_user”查询和修改instructor表的权限</span>
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SELECT</span>, <span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">ON</span> instructor <span class="hljs-keyword">TO</span> teacher_user;
+<span class="hljs-comment">-- 回收“student_user”修改student表的权限（若之前授予过）</span>
+<span class="hljs-keyword">REVOKE</span> <span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">ON</span> student <span class="hljs-keyword">FROM</span> student_user;
+
+<span class="hljs-comment">-- 创建表空间（指定磁盘路径）</span>
+<span class="hljs-keyword">CREATE</span> TABLESPACE ts_instructor DATAFILE <span class="hljs-string">'D:\oracle\data\instructor.dbf'</span> SIZE <span class="hljs-number">100</span>M;
+<span class="hljs-comment">-- 在指定表空间创建instructor表（物理存储在D盘的instructor.dbf文件中）</span>
+<span class="hljs-keyword">CREATE TABLE</span> instructor (
+    ID <span class="hljs-type">CHAR</span>(<span class="hljs-number">5</span>) <span class="hljs-keyword">PRIMARY KEY</span>,
+    name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">20</span>) <span class="hljs-keyword">NOT NULL</span>
+) TABLESPACE ts_instructor;
+</code></pre>
+</li>
+</ul>
+<h2 id="sql-核心数据类型"><a name="sql-核心数据类型" class="anchor-navigation-ex-anchor" href="#sql-核心数据类型"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 核心数据类型</h2>
+<p><img src="assets/2288178-20220710230014115-221710226.png" alt="img" style="zoom: 50%;"></img></p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>中文名称</th>
+<th>核心定义与参数说明</th>
+<th>存储特点 / 精度</th>
+<th>适用场景</th>
+<th>关键优势</th>
+<th>易错点与注意事项</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char(n)</code></td>
+<td>固定长度字符串</td>
+<td><code>n</code>为用户指定固定长度（正整数），不足<code>n</code>时补空格，查询时部分数据库自动去尾空格</td>
+<td>占用<code>n</code>字节，长度固定</td>
+<td>身份证号、学号、性别等长度固定的文本</td>
+<td>查询效率高，存储结构稳定</td>
+<td>1. 存储变长文本会浪费空间；2. 不同数据库对尾空格处理不同（MySQL 去、Oracle 留）；3. 不可存超<code>n</code>长度的文本</td>
+</tr>
+<tr>
+<td><code>varchar(n)</code></td>
+<td>可变长度字符串</td>
+<td><code>n</code>为用户指定最大长度（正整数），实际长度由数据决定，仅存 “内容 + 1 字节长度标识”</td>
+<td>占用 “实际长度 + 1 字节”，长度可变</td>
+<td>姓名、地址、商品描述等长度不固定的文本</td>
+<td>节省存储空间，适配长度差异大的场景</td>
+<td>1. 查询效率略低于<code>char(n)</code>（差异极小）；2. 不可存超<code>n</code>长度的文本；3. 避免盲目设<code>n=255</code>浪费资源</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>标准整数</td>
+<td>机器相关有限子集，主流数据库为 4 字节，取值范围<code>-2147483648~2147483647</code>（±21 亿）</td>
+<td>4 字节，取值范围大</td>
+<td>订单号、用户数、年龄等大范围整数</td>
+<td>通用性强，数据库优化优先，无溢出风险</td>
+<td>1. 小范围整数用<code>int</code>浪费空间；2. 超范围存储会报 “数值溢出” 错误</td>
+</tr>
+<tr>
+<td><code>smallint</code></td>
+<td>小整数</td>
+<td>机器相关有限子集，主流数据库为 2 字节，取值范围<code>-32768~32767</code>（±<strong>3.2 万</strong>）</td>
+<td>2 字节，取值范围小</td>
+<td>班级人数、分数、月份等小范围整数</td>
+<td>节省存储空间，大表优化效果显著</td>
+<td>1. 超范围存储会报 “数值溢出”；2. 不适合存储超过 3.2 万的数值（如商品库存 10 万）</td>
+</tr>
+<tr>
+<td><code>numeric(p,d)</code></td>
+<td>定点数（精确小数）</td>
+<td><code>p</code>= 总位数（整数 + 小数），<code>d</code>= 小数位数（0≤d≤p），完全精确存储，无误差</td>
+<td>精度完全可控，无误差</td>
+<td>金额、税率、精确分数等需精确计算的场景</td>
+<td>计算无精度丢失，数值范围明确</td>
+<td>1. 超<code>p</code>/<code>d</code>范围无法存储（如<code>numeric(3,1)</code>不可存<code>444.5</code>）；2. 计算性能略低于浮点数</td>
+</tr>
+<tr>
+<td><code>real precision</code></td>
+<td>单精度浮点数</td>
+<td>机器依赖精度，主流为 4 字节，有效数字约 6~7 位，近似存储</td>
+<td>4 字节，近似精度（6~7 位有效数字）</td>
+<td>温度、重量等允许微小误差的场景</td>
+<td>存储紧凑，计算效率高</td>
+<td>1. 不可用于金额、税率等精确计算（有精度丢失）；2. 极端值可能溢出为<code>INF</code></td>
+</tr>
+<tr>
+<td><code>double precision</code></td>
+<td>双精度浮点数</td>
+<td>机器依赖精度，主流为 8 字节，有效数字约 15~17 位，近似存储</td>
+<td>8 字节，近似精度高（15~17 位有效数字）</td>
+<td>地理坐标、高精度实验数据等需高近似精度的场景</td>
+<td>精度高于<code>real</code>，适配高精度近似需求</td>
+<td>1. 仍有微小精度误差，不可用于精确计算；2. 存储占用比<code>real</code>多一倍</td>
+</tr>
+<tr>
+<td><code>float(n)</code></td>
+<td>自定义精度浮点数</td>
+<td><code>n</code>= 至少需要的有效数字位数，<code>n≤24</code>按<code>real</code>（4 字节）存储，<code>n≥25</code>按<code>double</code>（8 字节）存储</td>
+<td>存储字节随<code>n</code>动态适配，近似精度</td>
+<td>需动态调整精度的近似数据（如传感器数据）</td>
+<td>精度灵活，无需手动选择<code>real</code>/<code>double</code></td>
+<td>1. 本质是近似存储，有精度误差；2. <code>n</code>仅表示 “最小精度”，实际精度由机器决定</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip]</p>
+<p><strong>VARCHAR vs CHAR</strong></p>
+<p><code>CHAR</code> 和 <code>VARCHAR</code> 类型都可以存储比较短的字符串。</p>
+<p> CHAR类型</p>
+<ul>
+<li><code>CHAR(M)</code> 类型一般需要预先定义字符串长度。如果不指定(M)，则表示长度默认是1个字符。</li>
+<li>如果保存时，数据的实际长度比 <code>CHAR</code> 类型声明的长度小，则会在<strong>右侧填充空格</strong>以达到指定的长度；如果数据的实际长度比 <code>CHAR</code> 类型声明的长度大，则会截取前 <code>M</code> 个字符。当 <code>MySQL</code> 检索 <code>CHAR</code> 类型的数据时，<code>CHAR</code> 类型的字段会去除尾部的空格。</li>
+<li>🔔 定义 <code>CHAR</code> 类型字段时，声明的字段长度即为 <code>CHAR</code> 类型字段所占的存储空间的字节数。</li>
+<li>🌋 固定长度；浪费存储空间；<strong>效率高</strong>；适用于存储不大，速度要求高的情况</li>
+</ul>
+<p>VARCHAR类型</p>
+<ul>
+<li><code>VARCHAR(M)</code> 定义时， 必须指定长度 <code>M</code>，否则报错。</li>
+<li><code>MySQL4.0</code> 版本以下，<code>varchar(20)</code>：指的是 20 字节，如果存放 <code>UTF8</code> 汉字时，只能存 6 个（每个汉字 3 字节）；<code>MySQL5.0</code>版本以上，<code>varchar(20)</code>：指的是 20 字符。</li>
+<li>🔔 检索 <code>VARCHAR</code> 类型的字段数据时，会保留数据尾部的空格。<code>VARCHAR</code> 类型的字段所占用的存储空间为字符串实际长度加 1 个字节。</li>
+<li>🌋 可变长度；<strong>节省存储空间</strong>；效率低；适合非 <code>CHAR</code> 的情况</li>
+</ul>
+<p><strong>CLOB vs BLOB</strong></p>
+<ul>
+<li><code>CLOB</code> 类型<ul>
+<li>将字符大对象 (Character Large Object) 存储为数据库表某一行中的一个列值，使用 <code>CHAR</code> 来保存数据</li>
+</ul>
+</li>
+<li><code>BLOB</code> 类型<ul>
+<li>可以存储一个二进制的大对象(Binary Large Object)，比如 图片 、音频和视频等</li>
+</ul>
+</li>
+<li>当查询结果是个大对象时，返回的不是对象本身，而是一个定位器</li>
+</ul>
+</blockquote>
+<h2 id="create-table"><a name="create-table" class="anchor-navigation-ex-anchor" href="#create-table"><i class="fa fa-link" aria-hidden="true"></i></a><code>CREATE TABLE</code></h2>
+<p><strong>SQL 关系（表）通过<code>CREATE TABLE</code>命令定义</strong>，语法结构如下：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE TABLE</span> r (
+    A1 D1,          <span class="hljs-comment">-- 属性1 + 数据类型</span>
+    A2 D2,          <span class="hljs-comment">-- 属性2 + 数据类型</span>
+    ...,
+    An Dn,          <span class="hljs-comment">-- 属性n + 数据类型</span>
+    integrity<span class="hljs-operator">-</span>constraint1,  <span class="hljs-comment">-- 完整性约束1（可选）</span>
+    ...,
+    integrity<span class="hljs-operator">-</span>constraintk   <span class="hljs-comment">-- 完整性约束k（可选）</span>
+);
+</code></pre>
+<ul>
+<li><code>r</code>：<strong>关系名（表名）</strong>，需符合数据库命名规范（如不能含特殊字符、不与关键字冲突），示例中<code>instructor</code>（教师表）、<code>student</code>（学生表）均为关系名。</li>
+<li><code>Ai</code>：<strong>属性名（列名）</strong>，对应表中的一列，需唯一且语义清晰，示例中<code>ID</code>（编号）、<code>name</code>（姓名）、<code>dept_name</code>（所属部门）均为属性名。</li>
+<li><code>Di</code>：<strong>属性的数据类型</strong>，即该列允许存储的数据格式（如<code>char(5)</code>、<code>numeric(8,2)</code>），需结合属性语义选择（如 “薪资” 用<code>numeric</code>确保精确）。</li>
+<li><code>integrity-constraint</code>：<strong>完整性约束</strong>（可选），是保障数据有效性的规则（如 “主键唯一”“属性非空”），教材后续重点补充了<code>not null</code>、<code>primary key</code>、<code>foreign key</code>三种核心约束。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>约束关键词</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>primary key (A1, ..., An)</code></td>
+<td>主键（唯一+非空）</td>
+</tr>
+<tr>
+<td><code>foreign key (Am, ..., An) references r</code></td>
+<td>外键</td>
+</tr>
+<tr>
+<td><code>UNIQUE</code></td>
+<td>唯一约束</td>
+</tr>
+<tr>
+<td><code>NOT NULL</code></td>
+<td>非空约束</td>
+</tr>
+<tr>
+<td><code>CHECK(p)</code></td>
+<td>谓词约束</td>
+</tr>
+<tr>
+<td><code>INDEX</code></td>
+<td>普通索引</td>
+</tr>
+</tbody>
+</table>
+<h1 id="sql-表数据与结构修改"><a name="sql-表数据与结构修改" class="anchor-navigation-ex-anchor" href="#sql-表数据与结构修改"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 表数据与结构修改</h1>
+<p> 4 类核心操作（<code>Insert</code>插入数据、<code>Delete</code>删除数据、<code>Drop Table</code>删除表、<code>Alter Table</code>修改表结构）</p>
+<h2 id="insert：向表中插入新数据"><a name="insert：向表中插入新数据" class="anchor-navigation-ex-anchor" href="#insert：向表中插入新数据"><i class="fa fa-link" aria-hidden="true"></i></a><code>Insert</code>：向表中插入新数据</h2>
+<p><code>Insert</code>是<strong>数据操纵语言（DML）</strong> 命令，作用是向已存在的表中<strong>添加新元组（记录）</strong>，是数据库 “写入数据” 的基础操作。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 语法：INSERT INTO 表名 VALUES (值1, 值2, ..., 值n);</span>
+<span class="hljs-keyword">INSERT INTO</span> instructor <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">'10211'</span>, <span class="hljs-string">'Smith'</span>, <span class="hljs-string">'Biology'</span>, <span class="hljs-number">66000</span>);
+</code></pre>
+<ul>
+<li><p><strong>适用场景</strong>：向表中添加单条或多条新记录（如新增教师、学生、订单信息）。</p>
+</li>
+<li><p>部分插入</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 语法：INSERT INTO 表名 (属性1, 属性2, ..., 属性k) VALUES (值1, 值2, ..., 值k);</span>
+<span class="hljs-keyword">INSERT INTO</span> instructor (ID, name, salary) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">'10212'</span>, <span class="hljs-string">'Jones'</span>, <span class="hljs-number">72000</span>);
+</code></pre>
+</li>
+<li><p>查询结果插入多个元组</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">insert into</span> student
+<span class="hljs-keyword">select</span> ID, name, dept_name, <span class="hljs-number">0</span> <span class="hljs-keyword">from</span> instructor;  <span class="hljs-comment">-- 用select结果作为插入数据</span>
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>❶ 顺序 / 数量不匹配：若表属性顺序是<code>ID→name→dept_name→salary</code>，却按<code>ID→salary→name→dept_name</code>插入（如<code>VALUES ('10211', 66000, 'Smith', 'Biology')</code>），会导致数据错位（<code>salary</code>存为字符串<code>'Smith'</code>，触发数据类型错误）。</li>
+<li>❷ 违反完整性约束：<ul>
+<li>插入<code>name</code>为<code>NULL</code>（如<code>VALUES ('10211', NULL, 'Biology', 66000)</code>）：触发<code>not null</code>约束，插入失败；</li>
+<li>插入<code>ID</code>重复（如已有<code>ID=10211</code>）：触发<code>primary key</code>约束，插入失败；</li>
+<li>插入<code>dept_name</code>不存在（如<code>'NoSuchDept'</code>）：触发<code>foreign key</code>约束，插入失败。</li>
+</ul>
+</li>
+<li>❸ <strong>字符串未加单引号</strong>：如<code>VALUES (10211, Smith, Biology, 66000)</code>（<code>ID</code>、<code>name</code>、<code>dept_name</code>是字符串，需加<code>' '</code>），会被识别为 “列名”，触发 “未知列” 错误。</li>
+</ul>
+</blockquote>
+<h2 id="delete：从表中删除数据"><a name="delete：从表中删除数据" class="anchor-navigation-ex-anchor" href="#delete：从表中删除数据"><i class="fa fa-link" aria-hidden="true"></i></a>Delete：从表中删除数据</h2>
+<p><code>Delete</code>也是<strong>DML 命令</strong>，作用是从表中<strong>删除符合条件的元组（记录）</strong>，仅删除数据，<strong>保留表结构</strong>（与<code>Drop Table</code>本质不同）。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 语法1：删除所有记录（无WHERE条件）</span>
+<span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> student;  <span class="hljs-comment">-- 删除student表中所有学生记录，表结构仍在</span>
+
+<span class="hljs-comment">-- 语法2：删除符合条件的记录（带WHERE条件）</span>
+<span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Biology'</span>;  <span class="hljs-comment">-- 仅删除生物系的教师记录</span>
+</code></pre>
+<ul>
+<li><strong>适用场景</strong>：清理无效数据（如删除过期订单）、批量删除特定记录（如删除某部门员工）。  </li>
+</ul>
+<blockquote>
+<p>[!tip] </p>
+<p><strong>外键约束阻止删除</strong>：若<code>student</code>表的<code>ID</code>被<code>takes</code>表（选课表）外键引用（<code>takes.ID</code>关联<code>student.ID</code>），删除<code>student</code>表中某<code>ID</code>时（如<code>DELETE FROM student WHERE ID='U001'</code>），若<code>takes</code>表有该<code>ID</code>的选课记录，会触发外键约束报错（需先删除<code>takes</code>表中的关联记录，或配置 “级联删除”）。</p>
+</blockquote>
+<h2 id="drop-table：彻底删除表"><a name="drop-table：彻底删除表" class="anchor-navigation-ex-anchor" href="#drop-table：彻底删除表"><i class="fa fa-link" aria-hidden="true"></i></a>Drop Table：彻底删除表</h2>
+<p><code>Drop Table</code>是<strong>数据定义语言（DDL）</strong> 命令，作用是<strong>彻底删除表的 “结构 + 所有数据”</strong>，不可逆（删除后表完全消失，无法恢复）。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 语法：DROP TABLE 表名;</span>
+<span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> r;  <span class="hljs-comment">-- 删除表r，包括表结构、数据、约束、索引</span>
+</code></pre>
+<ul>
+<li><strong>适用场景</strong>：删除废弃的表（如业务下线后，删除不再使用的 “旧订单表”）。</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li>❶ 混淆<code>Delete</code>与<code>Drop</code>：误将<code>DROP TABLE student</code>当作 “删除数据”，导致表结构丢失（需重新创建表并恢复数据，成本极高），实际开发中<code>Drop Table</code>需经过严格审批。</li>
+<li>❷ 依赖表阻止删除：若<code>instructor</code>表外键关联<code>department</code>表（<code>instructor.dept_name</code>引用<code>department.dept_name</code>），直接<code>DROP TABLE department</code>会报错（因<code>instructor</code>表依赖其结构），需先删除<code>instructor</code>表或解除外键约束。</li>
+<li>❸ 无备份删除：<code>Drop Table</code>不可逆，删除前必须备份表数据（如用<code>CREATE TABLE 备份表 AS SELECT * FROM 原表</code>创建备份）。</li>
+</ul>
+</blockquote>
+<h2 id="alter-table：修改表结构"><a name="alter-table：修改表结构" class="anchor-navigation-ex-anchor" href="#alter-table：修改表结构"><i class="fa fa-link" aria-hidden="true"></i></a>Alter Table：修改表结构</h2>
+<p><code>Alter Table</code>是<strong>DDL 命令</strong>，作用是<strong>修改已存在表的结构</strong>（如添加 / 删除属性、修改数据类型、添加约束），教材重点介绍了 “添加属性” 和 “删除属性” 两种基础用法。</p>
+<p>用法 1：添加属性（<code>Alter Table Add</code>）</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 语法：ALTER TABLE 表名 ADD 新属性名 数据类型;</span>
+<span class="hljs-keyword">ALTER TABLE</span> instructor <span class="hljs-keyword">ADD</span> age <span class="hljs-type">int</span>;  <span class="hljs-comment">-- 给instructor表添加“age”属性（int类型）</span>
+</code></pre>
+<ul>
+<li>❶ 现有记录的新属性值：<strong>自动设为<code>NULL</code></strong>（因此<strong>新属性不能直接加<code>not null</code>约束</strong>，如<code>ALTER TABLE instructor ADD age int not null</code>会报错 —— 现有记录的<code>age</code>为<code>NULL</code>，违反<code>not null</code>）。添加属性时指定默认值（如<code>ALTER TABLE instructor ADD age int DEFAULT 0 not null</code>，现有记录的<code>age</code>设为<code>0</code>，符合<code>not null</code>）。</li>
+<li>❷ 属性名唯一性：新属性名不能与表中已有属性重名（如<code>ALTER TABLE instructor ADD ID int</code>会报错，因<code>ID</code>已存在）。</li>
+<li>❸ 数据类型兼容性：新属性的数据类型需符合数据库规则（如<code>age</code>用<code>int</code>合理，用<code>varchar(10)</code>存储年龄虽可行，但不符合语义）。</li>
+</ul>
+<p>用法 2：删除属性（<code>Alter Table Drop</code>）</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 语法：ALTER TABLE 表名 DROP 待删除属性名;</span>
+<span class="hljs-keyword">ALTER TABLE</span> instructor <span class="hljs-keyword">DROP</span> age;  <span class="hljs-comment">-- 从instructor表中删除“age”属性</span>
+</code></pre>
+<ul>
+<li>❶ 数据丢失：删除属性会<strong>永久删除该属性的所有数据</strong>（不可逆），如删除<code>age</code>后，所有教师的年龄数据消失，需谨慎。</li>
+<li><p>❷ 数据库兼容性差：教材明确指出 “多数数据库不支持删除属性”（如 MySQL 默认禁用，Oracle 需通过 “重新创建表迁移数据” 实现），因删除属性会破坏表的存储结构、影响索引和外键，实际开发中极少使用。</p>
+<ul>
+<li>替代方案：若某属性不再使用，建议标记为 “废弃”（如<code>age</code>改名为<code>age_deprecated</code>），而非删除属性。</li>
+</ul>
+<p>扩展用法：修改属性（<code>Alter Table Modify</code>，教材未提但常用）</p>
+</li>
+</ul>
+<p>除了添加 / 删除属性，<code>Alter Table</code>还可修改现有属性的数据类型或约束（语法因数据库略有差异，以 MySQL 为例）：</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 修改数据类型：将age从int改为smallint</span>
+<span class="hljs-keyword">ALTER TABLE</span> instructor MODIFY age <span class="hljs-type">smallint</span>;
+
+<span class="hljs-comment">-- 添加约束：给age加not null和默认值</span>
+<span class="hljs-keyword">ALTER TABLE</span> instructor MODIFY age <span class="hljs-type">smallint</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-number">0</span> <span class="hljs-keyword">not null</span>;
+</code></pre>
+<ul>
+<li><p>注意：修改数据类型时，需确保现有数据可兼容（如<code>age</code>从<code>smallint</code>改为<code>int</code>可行，从<code>int</code>改为<code>char(5)</code>需确保所有<code>age</code>值可转为字符串）。</p>
+</li>
+<li><p>❶ 添加<code>not null</code>属性无默认值：如<code>ALTER TABLE instructor ADD age int not null</code>，因现有记录<code>age</code>为<code>NULL</code>，触发<code>not null</code>约束报错，正确做法是加默认值（<code>DEFAULT 0</code>）。</p>
+</li>
+<li>❷ 删除关键属性：如删除<code>instructor</code>表的<code>ID</code>属性（主键），会破坏表的唯一标识，导致后续无法定位记录，绝对禁止。</li>
+<li>❸ 大表修改性能问题：对百万级记录的大表执行<code>Alter Table</code>（如添加属性），会锁表并消耗大量资源（需扫描所有记录设置<code>NULL</code>），建议在业务低峰期执行。</li>
+</ul>
+<h2 id="updating更新表操作"><a name="updating更新表操作" class="anchor-navigation-ex-anchor" href="#updating更新表操作"><i class="fa fa-link" aria-hidden="true"></i></a><code>Updating</code>:更新表操作</h2>
+<p>更新操作用于修改表中已有元组的值，基本语法为 <code>update 表名 set 列 = 新值 where 条件;</code>。</p>
+<ul>
+<li><p>分条件调整教师薪资</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 薪资超10万的涨3%</span>
+<span class="hljs-keyword">update</span> instructor <span class="hljs-keyword">set</span> salary <span class="hljs-operator">=</span> salary <span class="hljs-operator">*</span> <span class="hljs-number">1.03</span> <span class="hljs-keyword">where</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">100000</span>;
+<span class="hljs-comment">-- 其余涨5%（注意执行顺序，避免重复更新）</span>
+<span class="hljs-keyword">update</span> instructor <span class="hljs-keyword">set</span> salary <span class="hljs-operator">=</span> salary <span class="hljs-operator">*</span> <span class="hljs-number">1.05</span> <span class="hljs-keyword">where</span> salary <span class="hljs-operator">&lt;=</span> <span class="hljs-number">100000</span>;
+</code></pre>
+</li>
+<li><p>用一条语句实现上述薪资调整</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">update</span> instructor
+<span class="hljs-keyword">set</span> salary <span class="hljs-operator">=</span> <span class="hljs-keyword">case</span>
+  <span class="hljs-keyword">when</span> salary <span class="hljs-operator">&lt;=</span> <span class="hljs-number">100000</span> <span class="hljs-keyword">then</span> salary <span class="hljs-operator">*</span> <span class="hljs-number">1.05</span>  <span class="hljs-comment">-- 条件1：低薪资涨5%</span>
+  <span class="hljs-keyword">else</span> salary <span class="hljs-operator">*</span> <span class="hljs-number">1.03</span>  <span class="hljs-comment">-- 条件2：高薪资涨3%</span>
+<span class="hljs-keyword">end</span>;
+</code></pre>
+</li>
+<li><p><strong>更新学生的总学分（根据已修课程计算）</strong>：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">update</span> student S
+<span class="hljs-keyword">set</span> tot_cred <span class="hljs-operator">=</span> (
+  <span class="hljs-keyword">select</span> <span class="hljs-built_in">sum</span>(credits)
+  <span class="hljs-keyword">from</span> takes, course
+  <span class="hljs-keyword">where</span> takes.course_id <span class="hljs-operator">=</span> course.course_id 
+    <span class="hljs-keyword">and</span> S.ID <span class="hljs-operator">=</span> takes.ID  <span class="hljs-comment">-- 关联当前学生</span>
+    <span class="hljs-keyword">and</span> takes.grade <span class="hljs-operator">&lt;&gt;</span> <span class="hljs-string">'F'</span>  <span class="hljs-comment">-- 排除不及格课程</span>
+    <span class="hljs-keyword">and</span> takes.grade <span class="hljs-keyword">is</span> <span class="hljs-keyword">not null</span>  <span class="hljs-comment">-- 排除无成绩课程</span>
+);
+</code></pre>
+<p>可优化为 “未选课学生总学分为 0”：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">set</span> tot_cred <span class="hljs-operator">=</span> <span class="hljs-keyword">case</span>
+  <span class="hljs-keyword">when</span> <span class="hljs-built_in">sum</span>(credits) <span class="hljs-keyword">is</span> <span class="hljs-keyword">not null</span> <span class="hljs-keyword">then</span> <span class="hljs-built_in">sum</span>(credits)
+  <span class="hljs-keyword">else</span> <span class="hljs-number">0</span>  <span class="hljs-comment">-- 无课程记录时设为0</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+</li>
+</ul>
+<h1 id="sql-基础查询"><a name="sql-基础查询" class="anchor-navigation-ex-anchor" href="#sql-基础查询"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 基础查询</h1>
+<h2 id="sql-基础查询结构：整体框架与核心定义"><a name="sql-基础查询结构：整体框架与核心定义" class="anchor-navigation-ex-anchor" href="#sql-基础查询结构：整体框架与核心定义"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 基础查询结构：整体框架与核心定义</h2>
+<p><strong>典型的 SQL 查询由 <code>SELECT</code>、<code>FROM</code>、<code>WHERE</code> 三个核心子句组成</strong>，语法框架如下：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> A1, A2, ..., An  <span class="hljs-comment">-- 选择要返回的属性（列）</span>
+<span class="hljs-keyword">FROM</span> r1, r2, ..., rm    <span class="hljs-comment">-- 指定查询涉及的关系（表）</span>
+<span class="hljs-keyword">WHERE</span> P                 <span class="hljs-comment">-- 筛选符合条件的元组（行）</span>
+
+<span class="hljs-keyword">SELECT</span> [<span class="hljs-keyword">DISTINCT</span>] 列名<span class="hljs-operator">/</span>表达式 [<span class="hljs-keyword">AS</span> 别名]  <span class="hljs-comment">-- 投影：选哪些列（去重/重命名）</span>
+<span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span>, 表<span class="hljs-number">2.</span>..                        <span class="hljs-comment">-- 笛卡尔积：从哪些表查</span>
+<span class="hljs-keyword">WHERE</span> 条件（<span class="hljs-keyword">AND</span><span class="hljs-operator">/</span><span class="hljs-keyword">OR</span><span class="hljs-operator">/</span><span class="hljs-keyword">NOT</span>）                <span class="hljs-comment">-- 选择：留哪些行</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> 列名 [<span class="hljs-keyword">ASC</span><span class="hljs-operator">/</span><span class="hljs-keyword">DESC</span>]                <span class="hljs-comment">-- 排序：最后执行，NULL 排最前</span>
+</code></pre>
+<p>各组成部分的核心定义（教材重点强调）：</p>
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>符号表示</th>
+<th>核心含义</th>
+<th>关系代数对应操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SELECT</code> 子句</td>
+<td><code>A1,A2,...An</code></td>
+<td>列出查询结果中需要包含的<strong>属性（列）</strong>，如教师姓名、部门名称等，可理解为 “选哪些列”</td>
+<td>投影（Projection，Π）</td>
+</tr>
+<tr>
+<td><code>FROM</code> 子句</td>
+<td><code>r1,r2,...rm</code></td>
+<td>列出查询涉及的<strong>关系（表）</strong>，如教师表（<code>instructor</code>）、课程表（<code>course</code>）等，可理解为 “从哪些表查”</td>
+<td>笛卡尔积（Cartesian Product，×）</td>
+</tr>
+<tr>
+<td><code>WHERE</code> 子句</td>
+<td><code>P</code></td>
+<td>定义<strong>谓词（条件）</strong>，筛选出满足条件的元组（行），可理解为 “留哪些行”</td>
+<td>选择（Selection，σ）</td>
+</tr>
+<tr>
+<td>查询结果</td>
+<td>-</td>
+<td>最终返回的是一个<strong>新关系（表）</strong>，结构由 <code>SELECT</code> 子句定义，数据由 <code>FROM</code> 和 <code>WHERE</code> 子句共同筛选</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>实际数据库执行顺序是：<code>FROM；WHERE；SELECT</code><ol>
+<li><strong><code>FROM</code> 子句</strong>：先确定查询涉及的表，计算这些表的笛卡尔积（生成所有可能的行组合）；</li>
+<li><strong><code>WHERE</code> 子句</strong>：对笛卡尔积的结果进行筛选，保留满足条件的元组；</li>
+<li><strong><code>SELECT</code> 子句</strong>：对筛选后的元组进行投影，保留需要的属性（列），生成最终结果。</li>
+</ol>
+</li>
+</ul>
+<hr></hr>
+<h2 id="select-子句：选择要返回的属性（投影操作）"><a name="select-子句：选择要返回的属性（投影操作）" class="anchor-navigation-ex-anchor" href="#select-子句：选择要返回的属性（投影操作）"><i class="fa fa-link" aria-hidden="true"></i></a><code>SELECT</code> 子句：选择要返回的属性（投影操作）</h2>
+<p><code>SELECT</code> 子句是查询的 “结果定义器”，决定最终返回的表包含哪些列</p>
+<h3 id="基础用法：指定属性（单属性--多属性）"><a name="基础用法：指定属性（单属性--多属性）" class="anchor-navigation-ex-anchor" href="#基础用法：指定属性（单属性--多属性）"><i class="fa fa-link" aria-hidden="true"></i></a>基础用法：指定属性（单属性 / 多属性）</h3>
+<p>从 <code>FROM</code> 子句指定的表中，<strong>选择需要的属性</strong>，对应关系代数的 “投影操作”（仅保留指定列，删除其他列）。</p>
+<ul>
+<li><p>示例 1：查询所有教师的姓名（单属性）</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> name  <span class="hljs-comment">-- 仅返回“name”列</span>
+<span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>执行效果：返回一个仅含 “姓名” 列的表，行数与 <code>instructor</code> 表一致（含重复姓名，如两个 “Smith”）。</li>
+</ul>
+</li>
+<li><p>示例 2：查询教师的编号、姓名和薪资（多属性）</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> ID, name, salary  <span class="hljs-comment">-- 返回“ID”“name”“salary”三列</span>
+<span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>执行效果：返回三列的表，列顺序与 <code>SELECT</code> 子句中属性的顺序一致（先 <code>ID</code>，再 <code>name</code>，最后 <code>salary</code>）。</li>
+</ul>
+</li>
+</ul>
+<p>易错点：<strong>属性名大小写不敏感</strong></p>
+<h3 id="去重操作：distinct-与-all"><a name="去重操作：distinct-与-all" class="anchor-navigation-ex-anchor" href="#去重操作：distinct-与-all"><i class="fa fa-link" aria-hidden="true"></i></a>去重操作：<code>DISTINCT</code> 与 <code>ALL</code></h3>
+<p>SQL 允许表中存在重复元组（行），<strong>查询结果默认也会保留重复</strong>（如多个教师属于同一部门，查询 <code>dept_name</code> 会返回重复的部门名称）。<code>DISTINCT</code> 和 <code>ALL</code> 用于控制是否保留重复。</p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>作用</th>
+<th>语法示例（查询教师部门，控制重复）</th>
+<th>执行效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DISTINCT</code></td>
+<td><strong>删除重复结果</strong>（仅保留唯一的属性组合）</td>
+<td><code>SELECT DISTINCT dept_name FROM instructor;</code></td>
+<td>若有 5 个教师属于 “Comp. Sci.”，仅返回 1 次 “Comp. Sci.”，无重复。</td>
+</tr>
+<tr>
+<td><code>ALL</code></td>
+<td><strong>保留重复结果</strong>（默认，可省略）</td>
+<td><code>SELECT ALL dept_name FROM instructor;</code> 或 <code>SELECT dept_name FROM instructor;</code></td>
+<td>若有 5 个教师属于 “Comp. Sci.”，返回 5 次 “Comp. Sci.”，保留所有重复。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="通配符：-表示-所有属性"><a name="通配符：-表示-所有属性" class="anchor-navigation-ex-anchor" href="#通配符：-表示-所有属性"><i class="fa fa-link" aria-hidden="true"></i></a>通配符：<code>*</code> 表示 “所有属性”</h3>
+<p>当需要返回表中<strong>所有属性</strong>时，无需逐一列出，用 <code>*</code> 代替即可，简化语法。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span>  <span class="hljs-comment">-- 返回instructor表的所有列（ID、name、dept_name、salary）</span>
+<span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>执行效果：返回的表结构与 <code>instructor</code> 表完全一致</li>
+</ul>
+<h3 id="字面量属性：返回常量值（无--有-from-子句）"><a name="字面量属性：返回常量值（无--有-from-子句）" class="anchor-navigation-ex-anchor" href="#字面量属性：返回常量值（无--有-from-子句）"><i class="fa fa-link" aria-hidden="true"></i></a>字面量属性：返回常量值（无 / 有 <code>FROM</code> 子句）</h3>
+<p>“字面量” 指固定的常量值（如字符串 <code>'437'</code>、数字 <code>100</code>），<code>SELECT</code> 子句可将字面量作为 “虚拟属性” 返回，无需依赖表中的数据，分为 “无 <code>FROM</code> 子句” 和 “有 <code>FROM</code> 子句” 两种情况。</p>
+<p>注意字符串需要使用单引号<code>' '</code>括起来</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>语法示例</th>
+<th>执行效果</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无 <code>FROM</code> 子句</td>
+<td><code>SELECT '437' AS FOO;</code></td>
+<td>返回一个表：1 列（列名 <code>FOO</code>），1 行（值 <code>'437'</code>）</td>
+<td>生成单个常量值（如测试查询语法）</td>
+</tr>
+<tr>
+<td>有 <code>FROM</code> 子句</td>
+<td><code>SELECT 'A' FROM instructor;</code></td>
+<td>返回一个表：1 列（默认列名 <code>'A'</code>），<code>N</code> 行（<code>N</code> 是 <code>instructor</code> 表的行数），每行值均为 <code>'A'</code></td>
+<td>给查询结果添加固定标识（如区分数据来源）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="算术表达式：对属性进行计算"><a name="算术表达式：对属性进行计算" class="anchor-navigation-ex-anchor" href="#算术表达式：对属性进行计算"><i class="fa fa-link" aria-hidden="true"></i></a>算术表达式：对属性进行计算</h3>
+<p><code>SELECT</code> 子句支持对属性或常量进行<strong>算术运算</strong>（<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code>），生成新的计算列（如将年薪转为月薪、计算折扣价等）</p>
+<ul>
+<li><p>示例 1：计算教师的月薪（年薪 <code>salary</code> 除以 12）</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> ID, name, salary<span class="hljs-operator">/</span><span class="hljs-number">12</span>  <span class="hljs-comment">-- 新增“salary/12”列，值为月薪</span>
+<span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>执行效果：返回的表含 <code>ID</code>、<code>name</code>、<code>salary/12</code> 三列，<code>salary/12</code> 列的值为对应教师薪资除以 12（如薪资 66000 对应月薪 5500.00）。</li>
+</ul>
+</li>
+<li><p>示例 2：给计算列重命名（<code>AS</code> 子句）上述示例中，计算列的默认名是 <code>salary/12</code>（不直观），可用 <code>AS</code> 子句指定别名：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> ID, name, salary<span class="hljs-operator">/</span><span class="hljs-number">12</span> <span class="hljs-keyword">AS</span> monthly_salary  <span class="hljs-comment">-- 计算列名改为“monthly_salary”（直观）</span>
+<span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>注意：<strong><code>AS</code> 子句可省略</strong>（如 <code>salary/12 monthly_salary</code>），但建议保留，提高可读性。</li>
+</ul>
+</li>
+</ul>
+<p>若算术表达式中涉及 <code>NULL</code>，结果会自动设为 <code>NULL</code>（如某教师薪资为 <code>NULL</code>，则 <code>salary/12</code> 也为 <code>NULL</code>），需用 <code>COALESCE</code> 函数处理（如 <code>COALESCE(salary, 0)/12</code>，将 <code>NULL</code> 薪资视为 0）。</p>
+<h2 id="where-子句：筛选符合条件的元组（选择操作）"><a name="where-子句：筛选符合条件的元组（选择操作）" class="anchor-navigation-ex-anchor" href="#where-子句：筛选符合条件的元组（选择操作）"><i class="fa fa-link" aria-hidden="true"></i></a><code>WHERE</code> 子句：筛选符合条件的元组（选择操作）</h2>
+<h3 id="基础用法：简单条件筛选"><a name="基础用法：简单条件筛选" class="anchor-navigation-ex-anchor" href="#基础用法：简单条件筛选"><i class="fa fa-link" aria-hidden="true"></i></a>基础用法：简单条件筛选</h3>
+<p>通过 “属性与值的比较” 筛选元组，支持的比较运算符包括：<code>=</code>（等于）、<code>&lt;&gt;</code>（不等于）、<code>&gt;</code>（大于）、<code>&lt;</code>（小于）、<code>&gt;=</code>（大于等于）、<code>&lt;=</code>（小于等于）。</p>
+<ul>
+<li><p>示例：查询计算机系（Comp. Sci.）的教师姓名</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> name
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span>;  <span class="hljs-comment">-- 条件：部门名称等于“Comp. Sci.”</span>
+</code></pre>
+<ul>
+<li>执行逻辑：先获取 <code>instructor</code> 表所有元组（<code>FROM</code> 子句），再筛选出 <code>dept_name</code> 为 <code>'Comp. Sci.'</code> 的元组（<code>WHERE</code> 子句），最后保留 <code>name</code> 列（<code>SELECT</code> 子句）。</li>
+</ul>
+</li>
+<li><p>字符串值必须用<strong>单引号</strong>包裹（如 <code>'Comp. Sci.'</code>），若用双引号（如 <code>"Comp. Sci."</code>）或无引号（如 <code>Comp. Sci.</code>），会被识别为 “属性名”，触发 “未知列” 错误；</p>
+</li>
+<li>数值类型（如 <code>salary</code>、<code>age</code>）无需加引号（如 <code>salary &gt; 80000</code>，不能写成 <code>salary &gt; '80000'</code>，虽部分数据库会自动转换，但不推荐）。</li>
+</ul>
+<h3 id="组合条件筛选（逻辑连接符）"><a name="组合条件筛选（逻辑连接符）" class="anchor-navigation-ex-anchor" href="#组合条件筛选（逻辑连接符）"><i class="fa fa-link" aria-hidden="true"></i></a>组合条件筛选（逻辑连接符）</h3>
+<p>当需要多个筛选条件时，用逻辑连接符 <code>AND</code>、<code>OR</code>、<code>NOT</code> 组合，实现复杂筛选逻辑。</p>
+<table>
+<thead>
+<tr>
+<th>逻辑连接符</th>
+<th>作用</th>
+<th>示例（查询计算机系薪资超 8 万的教师姓名）</th>
+<th>逻辑规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AND</code></td>
+<td>同时满足多个条件</td>
+<td><code>WHERE dept_name = 'Comp. Sci.' AND salary &gt; 80000</code></td>
+<td>只有两个条件都为 “真”，结果才为 “真”（如部门是 Comp. Sci. <strong>且</strong> 薪资 &gt; 80000）</td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td>满足任意一个条件</td>
+<td><code>WHERE dept_name = 'Comp. Sci.' OR salary &gt; 80000</code></td>
+<td>只要有一个条件为 “真”，结果就为 “真”（如部门是 Comp. Sci. <strong>或</strong> 薪资 &gt; 80000）</td>
+</tr>
+<tr>
+<td><code>NOT</code></td>
+<td>否定某个条件（取反）</td>
+<td><code>WHERE NOT dept_name = 'Comp. Sci.'</code></td>
+<td>条件为 “真” 时结果为 “假”，条件为 “假” 时结果为 “真”（如部门<strong>不是</strong>Comp. Sci.）</td>
+</tr>
+</tbody>
+</table>
+<p>逻辑连接符的优先级：<strong><code>NOT</code> &gt; <code>AND</code> &gt; <code>OR</code></strong>，若需要调整顺序，用括号 <code>()</code> 包裹。例如：</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 需求：查询“计算机系且薪资&gt;8万”或“生物系且薪资&gt;7万”的教师姓名</span>
+<span class="hljs-keyword">SELECT</span> name
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> (dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span> <span class="hljs-keyword">AND</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">80000</span>) 
+   <span class="hljs-keyword">OR</span> (dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Biology'</span> <span class="hljs-keyword">AND</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">70000</span>);
+</code></pre>
+<ul>
+<li>若省略括号，会按默认优先级执行（先 <code>AND</code> 后 <code>OR</code>），结果一致；但复杂条件下建议保留括号，避免逻辑错误。</li>
+</ul>
+<h3 id="扩展用法：对算术表达式结果筛选"><a name="扩展用法：对算术表达式结果筛选" class="anchor-navigation-ex-anchor" href="#扩展用法：对算术表达式结果筛选"><i class="fa fa-link" aria-hidden="true"></i></a>扩展用法：对算术表达式结果筛选</h3>
+<p><code>WHERE</code> 子句的条件不仅可以针对表的原始属性，还可以针对 <code>SELECT</code> 子句中定义的算术表达式结果（需注意执行顺序：<code>WHERE</code> 执行时 <code>SELECT</code> 尚未执行，因此<strong>不能直接用计算列的别名</strong>，需重复写算术表达式）。</p>
+<ul>
+<li><p>需求：查询月薪超 7000 的教师姓名（月薪 = 年薪 / 12）</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> name, salary<span class="hljs-operator">/</span><span class="hljs-number">12</span> <span class="hljs-keyword">AS</span> monthly_salary
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> salary<span class="hljs-operator">/</span><span class="hljs-number">12</span> <span class="hljs-operator">&gt;</span> <span class="hljs-number">7000</span>;  <span class="hljs-comment">-- 条件：对算术表达式“salary/12”筛选，不能写“monthly_salary &gt; 7000”</span>
+</code></pre>
+<ul>
+<li>原因：<code>WHERE</code> 子句执行时，<code>SELECT</code> 子句的 <code>monthly_salary</code> 别名尚未生成，因此必须重复写 <code>salary/12</code>；若想使用别名，需用子查询或 <code>HAVING</code> 子句（后续章节讲解）。</li>
+</ul>
+</li>
+</ul>
+<h2 id="from-子句：指定查询涉及的关系（笛卡尔积操作）"><a name="from-子句：指定查询涉及的关系（笛卡尔积操作）" class="anchor-navigation-ex-anchor" href="#from-子句：指定查询涉及的关系（笛卡尔积操作）"><i class="fa fa-link" aria-hidden="true"></i></a><code>FROM</code> 子句：指定查询涉及的关系（笛卡尔积操作）</h2>
+<p><code>FROM</code> 子句是查询的 “数据来源器”，指定查询涉及的表，并计算这些表的笛卡尔积</p>
+<h3 id="基础用法：单表查询"><a name="基础用法：单表查询" class="anchor-navigation-ex-anchor" href="#基础用法：单表查询"><i class="fa fa-link" aria-hidden="true"></i></a>基础用法：单表查询</h3>
+<p>当查询仅涉及一个表时，<code>FROM</code> 子句仅需指定该表，此时无笛卡尔积计算（或视为 “表与自身的笛卡尔积”，但结果与原表一致）。</p>
+<ul>
+<li><p>查询所有教师的编号和姓名（仅涉及instructor</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> ID, name
+<span class="hljs-keyword">FROM</span> instructor;  <span class="hljs-comment">-- 单表，无笛卡尔积计算</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="多表查询（笛卡尔积）"><a name="多表查询（笛卡尔积）" class="anchor-navigation-ex-anchor" href="#多表查询（笛卡尔积）"><i class="fa fa-link" aria-hidden="true"></i></a>多表查询（笛卡尔积）</h3>
+<h4 id="核心定义"><a name="核心定义" class="anchor-navigation-ex-anchor" href="#核心定义"><i class="fa fa-link" aria-hidden="true"></i></a>核心定义</h4>
+<p>当 <code>FROM</code> 子句指定多个表时，数据库会计算这些表的<strong>笛卡尔积</strong>（Cartesian Product）：将第一个表的每一行与第二个表的每一行组合，生成所有可能的行组合，行数 = 表 1 行数 × 表 2 行数 ×...× 表 m 行数。</p>
+<ul>
+<li><code>instructor</code> 与 <code>teaches</code> 表的笛卡尔积</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span>  <span class="hljs-comment">-- 返回两个表的所有列</span>
+<span class="hljs-keyword">FROM</span> instructor, teaches;  <span class="hljs-comment">-- 计算instructor × teaches的笛卡尔积</span>
+</code></pre>
+<h1 id="sql-重命名操作（as-子句）"><a name="sql-重命名操作（as-子句）" class="anchor-navigation-ex-anchor" href="#sql-重命名操作（as-子句）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 重命名操作（AS 子句）</h1>
+<p><strong>SQL 通过 <code>AS</code> 子句实现 “关系（表）” 或 “属性（列）” 的重命名</strong>，本质是给表 / 列起一个 “临时别名”，仅在当前查询中生效（不修改数据库中表 / 列的实际名称）</p>
+<table>
+<thead>
+<tr>
+<th>重命名对象</th>
+<th>基础语法</th>
+<th>简化语法（省略 AS，可选）</th>
+<th>核心说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关系（表）</td>
+<td><code>表名 AS 别名</code></td>
+<td><code>表名 别名</code></td>
+<td>给表起临时别名，后续查询中可用别名代替原表名（如 <code>instructor AS T</code> 可简写为 <code>instructor T</code>）</td>
+</tr>
+<tr>
+<td>属性（列）</td>
+<td><code>属性名 AS 别名</code></td>
+<td><code>属性名 别名</code></td>
+<td>给列起临时别名，仅影响查询结果的列名（如 <code>salary/12 AS monthly_sal</code> 可简写为 <code>salary/12 monthly_sal</code>）</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 完整语法（带 AS）</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> T.name  <span class="hljs-comment">-- T是instructor表的别名，代表“薪资更高的教师”</span>
+<span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">AS</span> T, instructor <span class="hljs-keyword">AS</span> S  <span class="hljs-comment">-- 同一表instructor用两个别名：T和S</span>
+<span class="hljs-keyword">WHERE</span> T.salary <span class="hljs-operator">&gt;</span> S.salary  <span class="hljs-comment">-- T的薪资 &gt; S的薪资</span>
+  <span class="hljs-keyword">AND</span> S.dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span>;  <span class="hljs-comment">-- S是“计算机系的教师”</span>
+
+<span class="hljs-comment">-- 简化语法（省略 AS）</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> T.name
+<span class="hljs-keyword">FROM</span> instructor T, instructor S  <span class="hljs-comment">-- 省略AS，直接写别名T、S</span>
+<span class="hljs-keyword">WHERE</span> T.salary <span class="hljs-operator">&gt;</span> S.salary 
+  <span class="hljs-keyword">AND</span> S.dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span>;
+</code></pre>
+<h1 id="sql-字符串匹配（like-运算符）"><a name="sql-字符串匹配（like-运算符）" class="anchor-navigation-ex-anchor" href="#sql-字符串匹配（like-运算符）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 字符串匹配（LIKE 运算符）</h1>
+<p><strong>QL 提供 <code>LIKE</code> 运算符用于字符型数据的 “模糊匹配”</strong>，它不要求字符串完全相等，而是通过 “模式（Pattern）” 和 “通配符” 定义匹配规则，实现 “包含某子串”“以某字符开头 / 结尾”“固定长度字符串” 等灵活查询需求。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> 列名
+<span class="hljs-keyword">FROM</span> 表名
+<span class="hljs-keyword">WHERE</span> 列名 <span class="hljs-keyword">LIKE</span> <span class="hljs-string">'_100\%'</span> <span class="hljs-keyword">ESCAPE</span> <span class="hljs-string">'\'</span>;
+</code></pre>
+<ul>
+<li><code>字符型列名</code>：必须是字符串类型（如 <code>char(n)</code>、<code>varchar(n)</code>），如教师姓名 <code>name</code>、部门名称 <code>dept_name</code>；</li>
+<li><code>模式字符串</code>：由 “普通字符” 和 “通配符” 组成，用于定义匹配规则（必须用单引号 <code>' '</code> 包裹）；</li>
+<li>匹配结果：若列值符合模式规则，则返回该记录；否则排除。</li>
+<li><strong>默认情况下，<code>LIKE</code> 运算符的模式匹配是 “大小写敏感” 的</strong>：WHERE LOWER(name) LIKE LOWER('%Intro%');  -- LOWER() 函数：将字符串转为小写可以实现大小写不敏感</li>
+</ul>
+<p><code>%</code> 是 “多字符通配符”，可匹配 <strong>0 个、1 个或多个任意字符组成的子串</strong>（相当于 “任意内容”），是最常用的通配符，适用于 “包含某子串”“以某字符开头 / 结尾” 等场景。</p>
+<p><code>_</code> 是 “单字符通配符”，仅能匹配 <strong>1 个任意字符</strong>（不能匹配 0 个或多个），适用于 “固定长度字符串”“特定位置字符不确定” 的场景。</p>
+<p><code>ESCAPE '\'</code>：声明 “反斜杠（\）是转义字符”；</p>
+<h1 id="sql-排序（order-by）"><a name="sql-排序（order-by）" class="anchor-navigation-ex-anchor" href="#sql-排序（order-by）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 排序（ORDER BY）</h1>
+<p><code>ORDER BY</code> 是 SQL 中用于<strong>对查询结果集按指定属性排序</strong>的子句，它不影响数据的存储方式，仅改变查询结果的显示顺序，是 “美化结果、便于阅读” 的核心工具。</p>
+<p>“按字母顺序列出所有教师的姓名（去重）”，对应的 SQL 语句如下：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> name  <span class="hljs-comment">-- DISTINCT：去重（避免重复姓名）</span>
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> name;  <span class="hljs-comment">-- 按 name 属性排序，默认升序（A→Z，0→9）</span>
+
+<span class="hljs-comment">-- 升序（默认，可省略 ASC）</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> 属性名 <span class="hljs-keyword">ASC</span>;
+<span class="hljs-comment">-- 降序（必须显式写 DESC）</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> 属性名 <span class="hljs-keyword">DESC</span>;
+</code></pre>
+<ul>
+<li><strong>默认排序方向</strong>：<code>ORDER BY 属性名</code> 未指定方向时，默认按 <strong>升序（ASC，Ascending）</strong> 排序（如字母从 A 到 Z，数字从 0 到 9）；可通过 <code>ASC</code> 或 <code>DESC</code> 明确指定排序方向</li>
+<li><strong><code>DISTINCT</code> 与 <code>ORDER BY</code> 的配合</strong>：<code>DISTINCT</code> 先去重，<code>ORDER BY</code> 再对去重后的结果排序（若先排序再去重，结果一致，但数据库内部执行顺序通常是 “去重→排序”）；</li>
+<li><strong>适用数据类型</strong>：<code>ORDER BY</code> 支持字符串（按字符编码排序，如 ASCII 码）、数值（按大小排序）、日期（按时间先后排序）等类型。</li>
+</ul>
+<h3 id="多属性排序"><a name="多属性排序" class="anchor-navigation-ex-anchor" href="#多属性排序"><i class="fa fa-link" aria-hidden="true"></i></a>多属性排序</h3>
+<p>当需要按 “多个属性分层排序” 时（如 “先按部门升序，同一部门内按姓名升序”），可在 <code>ORDER BY</code> 后列出多个属性，属性间用逗号分隔，排序优先级为 “先第一个属性，再第二个属性，以此类推”。</p>
+<p>可对不同属性指定不同方向：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> dept_name, name, salary
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> dept_name <span class="hljs-keyword">ASC</span>, salary <span class="hljs-keyword">DESC</span>;  <span class="hljs-comment">-- 部门升序，同部门薪资降序</span>
+</code></pre>
+<p><code>ORDER BY</code> 位置错误：<code>ORDER BY</code> 必须是查询语句的<strong>最后一个子句</strong>（顺序：<strong><code>SELECT</code> → <code>FROM</code> → <code>WHERE</code> → <code>GROUP BY</code> → <code>HAVING</code> → <code>ORDER BY</code></strong></p>
+<p>字符串排序的大小写敏感性：与 <code>LIKE</code> 类似，默认按字符编码排序（如 ASCII 码中大写字母 &lt;小写字母，“A” &lt; “a”）</p>
+<p><code>NULL</code> 值的排序位置：<code>NULL</code> 视为 “最小的值”，升序时排在最前面，降序时排在最后面；</p>
+<h1 id="范围查询（between）"><a name="范围查询（between）" class="anchor-navigation-ex-anchor" href="#范围查询（between）"><i class="fa fa-link" aria-hidden="true"></i></a>范围查询（BETWEEN）</h1>
+<p><code>BETWEEN</code> 是 SQL 中用于<strong>筛选 “属性值在指定范围内” 的元组</strong>的比较运算符，本质是简化 “<code>&gt;= 下界 AND &lt;= 上界</code>” 的逻辑，属于 “闭区间范围”（包含下界和上界）。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> 列名
+<span class="hljs-keyword">FROM</span> 表名
+<span class="hljs-keyword">WHERE</span> 数值型列名 <span class="hljs-keyword">BETWEEN</span> 下界值 <span class="hljs-keyword">AND</span> 上界值;
+</code></pre>
+<ul>
+<li><strong>等价逻辑</strong>：<code>列名 BETWEEN 下界 AND 上界</code> ≡ <code>列名 &gt;= 下界 AND 列名 &lt;= 上界</code>；</li>
+<li><strong>适用数据类型</strong>：<strong>仅支持数值型</strong>（如 <code>int</code>、<code>numeric</code>）、日期型（如 <code>DATE</code>），不支持字符串型（字符串需用 <code>LIKE</code> 匹配，而非 <code>BETWEEN</code>）。</li>
+</ul>
+<p>反向范围：<code>NOT BETWEEN</code>。若需要筛选 “属性值在范围之外” 的元组，可使用 <code>NOT BETWEEN</code>，等价于 “<code>&lt;= 下界 OR &gt;= 上界</code>”。</p>
+<h1 id="元组比较（tuple-comparison）"><a name="元组比较（tuple-comparison）" class="anchor-navigation-ex-anchor" href="#元组比较（tuple-comparison）"><i class="fa fa-link" aria-hidden="true"></i></a>元组比较（Tuple Comparison）</h1>
+<p>教材简要提及 “元组比较”，这是 SQL 中对 “多属性组合” 进行比较的高级功能，核心是 “将多个属性视为一个‘元组’，按属性顺序依次比较，直到找到第一个不相等的属性，确定元组的大小关系”。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> 列名<span class="hljs-number">1</span>, 列名<span class="hljs-number">2</span>, ...
+<span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span>, 表<span class="hljs-number">2</span>, ...
+<span class="hljs-keyword">WHERE</span> (表<span class="hljs-number">1.</span>属性<span class="hljs-number">1</span>, 表<span class="hljs-number">1.</span>属性<span class="hljs-number">2</span>, ...) 比较运算符 (表<span class="hljs-number">2.</span>属性<span class="hljs-number">1</span>, 表<span class="hljs-number">2.</span>属性<span class="hljs-number">2</span>, ...);
+</code></pre>
+<ul>
+<li><p>比较逻辑</p>
+<p>设元组<code>T = (t1, t2, ..., tn)</code>，元组 <code>S = (s1, s2, ..., sn)</code>，比较 <code>T 运算符 S</code> 时：</p>
+<ol>
+<li>比如<code>&gt;</code>；先比较第一个属性 <code>t1</code> 和 <code>s1</code>：<ul>
+<li>若 <code>t1 &gt; s1</code>，则 <code>T &gt; S</code>；若 <code>t1 &lt; s1</code>，则 <code>T &lt; S</code>；</li>
+<li>若 <code>t1 = s1</code>，则比较第二个属性 <code>t2</code> 和 <code>s2</code>，以此类推；</li>
+</ul>
+</li>
+<li>若所有属性都相等，则 <code>T = S</code>。</li>
+</ol>
+</li>
+</ul>
+<h1 id="sql-重复元组（multiset）与关系代数运算符的多集版本"><a name="sql-重复元组（multiset）与关系代数运算符的多集版本" class="anchor-navigation-ex-anchor" href="#sql-重复元组（multiset）与关系代数运算符的多集版本"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 重复元组（Multiset）与关系代数运算符的多集版本</h1>
+<h2 id="集合（set）与多集（multiset）的区别"><a name="集合（set）与多集（multiset）的区别" class="anchor-navigation-ex-anchor" href="#集合（set）与多集（multiset）的区别"><i class="fa fa-link" aria-hidden="true"></i></a>集合（Set）与多集（Multiset）的区别</h2>
+<p>在理解重复元组之前，需先明确 “集合” 与 “多集” 的本质差异 —— 这是 SQL 处理重复数据的基础：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>核心特征</th>
+<th>示例（教师表的 <code>dept_name</code> 属性）</th>
+<th>关系代数默认类型</th>
+<th>SQL 默认类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集合（Set）</td>
+<td>元素唯一，无重复</td>
+<td><code>{Comp. Sci., Finance, Math}</code></td>
+<td>是（经典关系代数）</td>
+<td>否（需用 <code>DISTINCT</code> 实现）</td>
+</tr>
+<tr>
+<td>多集（Multiset）</td>
+<td>元素可重复，保留重复次数</td>
+<td><code>{Comp. Sci., Comp. Sci., Finance}</code></td>
+<td>否（扩展多集关系代数）</td>
+<td>是（默认保留重复）</td>
+</tr>
+</tbody>
+</table>
+<p>SQL 中的关系（表）默认是 “多集”—— 即表中允许存在完全相同的元组（行），查询结果也默认保留这些重复元组（除非用 <code>DISTINCT</code> 去重）。而经典关系代数中的关系是 “集合”，不允许重复，因此需要扩展出 “多集版本的关系代数运算符”，以匹配 SQL 的重复语义。</p>
+<h3 id="多集选择（σθr₁）：筛选重复元组，保留次数不变"><a name="多集选择（σθr₁）：筛选重复元组，保留次数不变" class="anchor-navigation-ex-anchor" href="#多集选择（σθr₁）：筛选重复元组，保留次数不变"><i class="fa fa-link" aria-hidden="true"></i></a>多集选择（σ_θ(r₁)）：筛选重复元组，保留次数不变</h3>
+<p>设多集关系 <code>r₁</code> 中，元组 <code>t₁</code> 出现了 <code>c₁</code> 次（<code>c₁ ≥ 1</code>），若 <code>t₁</code> 满足选择条件 <code>θ</code>（即 <code>t₁</code> 符合 <code>WHERE</code> 子句的筛选逻辑），则在结果集 <code>σ_θ(r₁)</code> 中，<code>t₁</code> 仍出现 <code>c₁</code> 次；若 <code>t₁</code> 不满足 <code>θ</code>，则结果集中不包含 <code>t₁</code>。</p>
+<p>“选择运算只筛选‘是否保留元组’，不改变‘保留元组的重复次数’”—— 符合条件的重复元组，多少次进就多少次出；不符合的直接剔除。</p>
+<h3 id="多集投影（πa-r₁）：投影后重复次数与原元组次数一致"><a name="多集投影（πa-r₁）：投影后重复次数与原元组次数一致" class="anchor-navigation-ex-anchor" href="#多集投影（πa-r₁）：投影后重复次数与原元组次数一致"><i class="fa fa-link" aria-hidden="true"></i></a>多集投影（Π_A (r₁)）：投影后重复次数与原元组次数一致</h3>
+<p>设多集关系 <code>r₁</code> 中，元组 <code>t₁</code> 出现了 <code>c₁</code> 次，对 <code>t₁</code> 按属性集 <code>A</code> 投影（即保留 <code>A</code> 中的属性，删除其他属性），得到投影后的元组 <code>Π_A(t₁)</code>。则在结果集 <code>Π_A(r₁)</code> 中，<code>Π_A(t₁)</code> 的出现次数等于 <code>t₁</code> 在 <code>r₁</code> 中的出现次数 <code>c₁</code>。</p>
+<p>“投影运算只‘裁剪元组的属性’，不改变‘元组的重复次数’”—— 原元组有多少次，投影后的元组就有多少次（即使投影后不同原元组变成了相同的投影元组，次数会累加）。</p>
+<h3 id="多集笛卡尔积（r₁-×-r₂）：重复次数相乘"><a name="多集笛卡尔积（r₁-×-r₂）：重复次数相乘" class="anchor-navigation-ex-anchor" href="#多集笛卡尔积（r₁-×-r₂）：重复次数相乘"><i class="fa fa-link" aria-hidden="true"></i></a>多集笛卡尔积（r₁ × r₂）：重复次数相乘</h3>
+<p>设多集关系 <code>r₁</code> 中，元组 <code>t₁</code> 出现 <code>c₁</code> 次；多集关系 <code>r₂</code> 中，元组 <code>t₂</code> 出现 <code>c₂</code> 次。则在笛卡尔积结果 <code>r₁ × r₂</code> 中，组合元组 <code>(t₁, t₂)</code>（即 <code>t₁</code> 与 <code>t₂</code> 拼接成的新元组）的出现次数为 <code>c₁ × c₂</code>（<code>t₁</code> 的次数乘以 <code>t₂</code> 的次数）。</p>
+<p>“笛卡尔积的重复次数是‘左表元组次数 × 右表元组次数’”—— 左表某元组出现 <code>c₁</code> 次，右表某元组出现 <code>c₂</code> 次，它们的组合就会出现 <code>c₁*c₂</code> 次。</p>
+<h2 id="sql-重复语义：查询与多集关系代数的等价性"><a name="sql-重复语义：查询与多集关系代数的等价性" class="anchor-navigation-ex-anchor" href="#sql-重复语义：查询与多集关系代数的等价性"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 重复语义：查询与多集关系代数的等价性</h2>
+<p><strong>SQL 的基础查询（<code>SELECT A1,A2,...An FROM r1,r2,...rm WHERE P</code>）等价于 “多集版本的关系代数表达式”</strong>，具体等价关系为：</p>
+<p>Π<em>A</em>1,<em>A</em>2,...,<em>An</em>(<em>σP</em>(<em>r</em>1×<em>r</em>2×...×<em>rm</em>))即 SQL 查询的执行逻辑（按多集语义）可拆解为 3 步：</p>
+<ol>
+<li><strong>多集笛卡尔积</strong>：计算 <code>FROM</code> 子句中所有表的笛卡尔积 <code>r1 × r2 × ... × rm</code>，重复次数按 “各表元组次数相乘” 计算；</li>
+<li><strong>多集选择</strong>：对笛卡尔积结果应用 <code>WHERE</code> 子句的条件 <code>P</code>，筛选出满足条件的元组，重复次数保留不变；</li>
+<li><strong>多集投影</strong>：对选择后的结果按 <code>SELECT</code> 子句的属性 <code>A1,A2,...An</code> 投影，重复次数保留不变；</li>
+<li><strong>（可选）去重</strong>：若 <code>SELECT</code> 后有 <code>DISTINCT</code>，则将投影结果从 “多集” 转为 “集合”，删除所有重复元组（仅保留 1 次）。</li>
+</ol>
+<p>“查找计算机系教师姓名” 的查询为例：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> name  <span class="hljs-comment">-- 步骤3：投影 name 属性（多集）</span>
+<span class="hljs-keyword">FROM</span> instructor  <span class="hljs-comment">-- 步骤1：仅一个表，笛卡尔积就是自身（多集）</span>
+<span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span>;  <span class="hljs-comment">-- 步骤2：选择 dept_name 为 Comp. Sci. 的元组（多集）</span>
+</code></pre>
+<ul>
+<li>若 <code>instructor</code> 表中 “计算机系教师姓名” 为 <code>{(Alice), (Alice), (Bob)}</code>（多集），则查询结果也为 <code>{(Alice), (Alice), (Bob)}</code>（默认保留重复）；</li>
+<li>若加 <code>DISTINCT</code>（<code>SELECT DISTINCT name</code>），则结果为 <code>{(Alice), (Bob)}</code>（转为集合，去重）。</li>
+</ul>
+<h1 id="sql-集合操作（unionintersectexcept）"><a name="sql-集合操作（unionintersectexcept）" class="anchor-navigation-ex-anchor" href="#sql-集合操作（unionintersectexcept）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 集合操作（UNION/INTERSECT/EXCEPT）</h1>
+<p><strong>SQL 三大核心集合操作</strong>（<code>UNION</code> 并集、<code>INTERSECT</code> 交集、<code>EXCEPT</code> 差集）</p>
+<p>确 SQL 集合操作的<strong>通用前提</strong>（教材隐含强调）：</p>
+<ol>
+<li><strong>结果集结构一致</strong>：参与集合操作的两个子查询（如 <code>UNION</code> 左右两侧的查询），必须满足 “<strong>列数相同 + 对应列数据类型兼容</strong>”（如左侧查 <code>course_id</code>（字符串），右侧也必须查字符串类型列，不能查数值型）；</li>
+<li><strong>默认去重</strong>：<code>UNION</code>/<code>INTERSECT</code>/<code>EXCEPT</code> 均为 “集合版本” 操作，自动删除结果中的重复元组（相当于对最终结果加 <code>DISTINCT</code>）；</li>
+<li><strong>多集版本可选</strong>：若需保留重复元组，需用对应的 “多集版本” 操作（<code>UNION ALL</code>/<code>INTERSECT ALL</code>/<code>EXCEPT ALL</code>），按规则保留重复次数。</li>
+</ol>
+<h3 id="union（并集）：或-逻辑，合并两个结果集"><a name="union（并集）：或-逻辑，合并两个结果集" class="anchor-navigation-ex-anchor" href="#union（并集）：或-逻辑，合并两个结果集"><i class="fa fa-link" aria-hidden="true"></i></a>UNION（并集）：“或” 逻辑，合并两个结果集</h3>
+<p><code>UNION</code> 用于合并两个子查询的结果集，返回 “属于第一个结果集 <strong>或</strong> 属于第二个结果集” 的所有元组（自动去重），对应数学中的 “并集” 概念（<code>A ∪ B</code>）。</p>
+<p>找到 “2009 年秋季（Fall 2009）开设的课程” <strong>或</strong> “2010 年春季（Spring 2010）开设的课程”，本质是合并两个子查询的 <code>course_id</code> 结果。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 子查询1：2009年秋季开设的课程ID</span>
+(<span class="hljs-keyword">SELECT</span> course_id 
+ <span class="hljs-keyword">FROM</span> section 
+ <span class="hljs-keyword">WHERE</span> semester <span class="hljs-operator">=</span> <span class="hljs-string">'Fall'</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">2009</span>)
+
+<span class="hljs-keyword">UNION</span>  <span class="hljs-comment">-- 合并两个结果集，自动去重</span>
+
+<span class="hljs-comment">-- 子查询2：2010年春季开设的课程ID</span>
+(<span class="hljs-keyword">SELECT</span> course_id 
+ <span class="hljs-keyword">FROM</span> section 
+ <span class="hljs-keyword">WHERE</span> semester <span class="hljs-operator">=</span> <span class="hljs-string">'Spring'</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">2010</span>);
+</code></pre>
+<h3 id="intersect（交集）：且-逻辑，取两个结果集的公共部分"><a name="intersect（交集）：且-逻辑，取两个结果集的公共部分" class="anchor-navigation-ex-anchor" href="#intersect（交集）：且-逻辑，取两个结果集的公共部分"><i class="fa fa-link" aria-hidden="true"></i></a>INTERSECT（交集）：“且” 逻辑，取两个结果集的公共部分</h3>
+<p><code>INTERSECT</code> 用于取两个子查询结果集的 “交集”，返回 “既属于第一个结果集 <strong>又</strong> 属于第二个结果集” 的所有元组（自动去重），对应数学中的 “交集” 概念（<code>A ∩ B</code>）。</p>
+<p>找到 “2009 年秋季开设” <strong>且</strong> “2010 年春季也开设” 的课程，即两个学期的 “共同课程”。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 子查询1：2009年秋季开设的课程ID</span>
+(<span class="hljs-keyword">SELECT</span> course_id 
+ <span class="hljs-keyword">FROM</span> section 
+ <span class="hljs-keyword">WHERE</span> semester <span class="hljs-operator">=</span> <span class="hljs-string">'Fall'</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">2009</span>)
+
+<span class="hljs-keyword">INTERSECT</span>  <span class="hljs-comment">-- 取两个结果集的交集，自动去重</span>
+
+<span class="hljs-comment">-- 子查询2：2010年春季开设的课程ID</span>
+(<span class="hljs-keyword">SELECT</span> course_id 
+ <span class="hljs-keyword">FROM</span> section 
+ <span class="hljs-keyword">WHERE</span> semester <span class="hljs-operator">=</span> <span class="hljs-string">'Spring'</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">2010</span>);
+</code></pre>
+<h3 id="except（差集）：除了-逻辑，取第一个结果集独有的部分"><a name="except（差集）：除了-逻辑，取第一个结果集独有的部分" class="anchor-navigation-ex-anchor" href="#except（差集）：除了-逻辑，取第一个结果集独有的部分"><i class="fa fa-link" aria-hidden="true"></i></a>EXCEPT（差集）：“除了” 逻辑，取第一个结果集独有的部分</h3>
+<p><code>EXCEPT</code> 用于取两个子查询结果集的 “差集”，返回 “属于第一个结果集 <strong>但不属于</strong> 第二个结果集” 的所有元组（自动去重），对应数学中的 “差集” 概念（<code>A - B</code>）。</p>
+<p>找到 “2009 年秋季有开设” <strong>但</strong> “2010 年春季没有开设” 的课程，即秋季独有的课程。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 子查询1（被减集 A）：2009年秋季开设的课程ID</span>
+(<span class="hljs-keyword">SELECT</span> course_id 
+ <span class="hljs-keyword">FROM</span> section 
+ <span class="hljs-keyword">WHERE</span> semester <span class="hljs-operator">=</span> <span class="hljs-string">'Fall'</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">2009</span>)
+
+<span class="hljs-keyword">EXCEPT</span>  <span class="hljs-comment">-- 取 A - B 的差集，自动去重</span>
+
+<span class="hljs-comment">-- 子查询2（减数集 B）：2010年春季开设的课程ID</span>
+(<span class="hljs-keyword">SELECT</span> course_id 
+ <span class="hljs-keyword">FROM</span> section 
+ <span class="hljs-keyword">WHERE</span> semester <span class="hljs-operator">=</span> <span class="hljs-string">'Spring'</span> <span class="hljs-keyword">AND</span> <span class="hljs-keyword">year</span> <span class="hljs-operator">=</span> <span class="hljs-number">2010</span>);
+</code></pre>
+<h1 id="sql-中-null-值"><a name="sql-中-null-值" class="anchor-navigation-ex-anchor" href="#sql-中-null-值"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 中 NULL 值</h1>
+<h2 id="基本逻辑"><a name="基本逻辑" class="anchor-navigation-ex-anchor" href="#基本逻辑"><i class="fa fa-link" aria-hidden="true"></i></a>基本逻辑</h2>
+<p> <strong>NULL 值的核心含义</strong>、<strong>算术运算规则</strong>、<strong>三值逻辑（True/False/Unknown）</strong>类似于<a href="02_关系模型.html">02_关系模型</a>的NULL 值（Null Values）部分</p>
+<p><strong>NULL 表示 “未知值” 或 “不存在的值”</strong>，不是 “空字符串”“0”，而是 “无法确定的值”</p>
+<p><strong>任何包含 NULL 的算术运算，结果都为 NULL</strong>（因为 “未知值” 参与计算，结果也无法确定）。</p>
+<ul>
+<li><p>NULL 的判断：<code>IS NULL</code> / <code>IS NOT NULL</code></p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 正确写法：用 IS NULL</span>
+<span class="hljs-keyword">SELECT</span> name
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> salary <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;
+</code></pre>
+</li>
+<li><p>三值逻辑的运算规则，核心是 “Unknown 参与运算时，结果倾向于‘保留未知’”：</p>
+</li>
+<li><p><strong>WHERE 子句中，Unknown 会被视为 False</strong>（即包含 Unknown 的条件会过滤掉对应元组）,如果想要保留<code>NULL</code>的元组可以额外判断</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 筛选“薪资 &gt; 80000 或薪资为 NULL”的教师</span>
+<span class="hljs-keyword">SELECT</span> name
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">80000</span> <span class="hljs-keyword">OR</span> salary <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;
+</code></pre>
+</li>
+</ul>
+<h2 id="null-值的替换：coalesce-函数"><a name="null-值的替换：coalesce-函数" class="anchor-navigation-ex-anchor" href="#null-值的替换：coalesce-函数"><i class="fa fa-link" aria-hidden="true"></i></a>NULL 值的替换：<code>COALESCE</code> 函数</h2>
+<p>为了避免 NULL 导致的计算错误，课件中使用 <code>COALESCE</code> 函数<strong>将 NULL 替换为指定的默认值</strong>（这是处理 NULL 最常用的方法）。</p>
+<p>函数定义：<code>COALESCE(表达式1, 表达式2, ...)</code>：返回第一个<strong>非 NULL</strong>的表达式值。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 正确写法：用 COALESCE 替换 NULL</span>
+<span class="hljs-keyword">SELECT</span> EMPNO, SALARY, COMM,
+       SALARY <span class="hljs-operator">+</span> <span class="hljs-built_in">COALESCE</span>(COMM, <span class="hljs-number">0</span>) <span class="hljs-keyword">AS</span> TOTAL_INCOME
+<span class="hljs-keyword">FROM</span> EMPLOYEE;
+
+<span class="hljs-keyword">SELECT</span> DEPTNAME,
+       <span class="hljs-built_in">COALESCE</span>(MGRNO, <span class="hljs-string">'UNKNOWN'</span>) <span class="hljs-keyword">AS</span> MANAGER
+<span class="hljs-keyword">FROM</span> DEPARTMENT
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> DEPTNAME;
+</code></pre>
+<ul>
+<li>需要注意，如果进行排序时未知值<code>NULL</code>表示最小值</li>
+</ul>
+<hr></hr>
+<h1 id="sql-聚合函数（aggregate-functions）"><a name="sql-聚合函数（aggregate-functions）" class="anchor-navigation-ex-anchor" href="#sql-聚合函数（aggregate-functions）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 聚合函数（Aggregate Functions）</h1>
+<p>聚合函数（Aggregate Functions）是 SQL 中用于对一组数据进行计算并返回单一结果的函数，它们操作的是表中某一列的 “多集值”（即可能包含重复值的集合）。</p>
+<h3 id="avg：计算平均值"><a name="avg：计算平均值" class="anchor-navigation-ex-anchor" href="#avg：计算平均值"><i class="fa fa-link" aria-hidden="true"></i></a>avg：计算平均值</h3>
+<p>计算指定列中所有非 NULL 值的算术平均值。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span>(列名) <span class="hljs-keyword">FROM</span> 表名;
+</code></pre>
+<p><strong>示例</strong>：计算教师表中所有教师的平均薪资</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">AS</span> avg_salary <span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>计算逻辑：总和（所有非 NULL 薪资）÷ 数量（非 NULL 薪资的个数）</li>
+<li>注意：NULL 值会被自动排除，不参与计算</li>
+</ul>
+<h3 id="min：查找最小值"><a name="min：查找最小值" class="anchor-navigation-ex-anchor" href="#min：查找最小值"><i class="fa fa-link" aria-hidden="true"></i></a>min：查找最小值</h3>
+<p>返回指定列中的最小值（忽略 NULL 值）。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MIN</span>(列名) <span class="hljs-keyword">FROM</span> 表名;
+</code></pre>
+<p><strong>示例</strong>：查找教师表中最低的薪资</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MIN</span>(salary) <span class="hljs-keyword">AS</span> min_salary <span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>适用类型：数值、字符串（按字符顺序）、日期（按时间先后）</li>
+</ul>
+<h3 id="3-max：查找最大值"><a name="3-max：查找最大值" class="anchor-navigation-ex-anchor" href="#3-max：查找最大值"><i class="fa fa-link" aria-hidden="true"></i></a>3. max：查找最大值</h3>
+<p>返回指定列中的最大值（忽略 NULL 值）。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(列名) <span class="hljs-keyword">FROM</span> 表名;
+</code></pre>
+<p><strong>示例</strong>：查找教师表中最高的薪资</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(salary) <span class="hljs-keyword">AS</span> max_salary <span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<ul>
+<li>与 min 对应，同样适用于多种数据类型</li>
+</ul>
+<h3 id="4-sum：计算总和"><a name="4-sum：计算总和" class="anchor-navigation-ex-anchor" href="#4-sum：计算总和"><i class="fa fa-link" aria-hidden="true"></i></a>4. sum：计算总和</h3>
+<p>计算指定列中所有非 NULL 值的总和。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">SUM</span>(列名) <span class="hljs-keyword">FROM</span> 表名;
+</code></pre>
+<p><strong>示例</strong>：计算某部门所有教师的薪资总和</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">SUM</span>(salary) <span class="hljs-keyword">AS</span> total_salary 
+<span class="hljs-keyword">FROM</span> instructor 
+<span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span>;
+</code></pre>
+<ul>
+<li>注意：仅适用于数值型列，字符串或日期类型不能使用 sum</li>
+</ul>
+<h3 id="5-count：统计数量"><a name="5-count：统计数量" class="anchor-navigation-ex-anchor" href="#5-count：统计数量"><i class="fa fa-link" aria-hidden="true"></i></a>5. count：统计数量</h3>
+<p>统计指定列中非 NULL 值的数量，或表中的总行数。</p>
+<p><code>count(*)</code> 是特殊用法，统计所有行数（包括含 NULL 的行），而 <code>count(列名)</code> 只统计该列非 NULL 值的数量。</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 统计列中非NULL值的数量</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(列名) <span class="hljs-keyword">FROM</span> 表名;
+
+<span class="hljs-comment">-- 统计所有行数（包括含有NULL的行）</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">FROM</span> 表名;
+
+<span class="hljs-comment">-- 统计列中不重复的非NULL值数量</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> 列名) <span class="hljs-keyword">FROM</span> 表名;
+</code></pre>
+<p><strong>示例</strong>：</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 统计有薪资记录的教师人数（排除salary为NULL的教师）</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(salary) <span class="hljs-keyword">AS</span> paid_instructors <span class="hljs-keyword">FROM</span> instructor;
+
+<span class="hljs-comment">-- 统计教师表的总人数（包括salary为NULL的教师）</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">AS</span> total_instructors <span class="hljs-keyword">FROM</span> instructor;
+
+<span class="hljs-comment">-- 统计不同部门的数量</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-keyword">DISTINCT</span> dept_name) <span class="hljs-keyword">AS</span> dept_count <span class="hljs-keyword">FROM</span> instructor;
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li><strong>聚合函数的可用位置</strong>：仅能出现在 <strong><code>SELECT</code> 子句或 <code>HAVING</code></strong> 子句中，不能在 <code>WHERE</code>/<code>GROUP BY</code> 等其他子句中使用。</li>
+<li><strong>聚合函数不能嵌套</strong>：不能写成 <code>AVG(SUM(SAL))</code> 这类嵌套形式。</li>
+<li><strong>除 <code>count(*)</code> 外，所有聚合函数都忽略聚合列上为 NULL 的元组</strong>；</li>
+<li>若聚合列中所有值都是 NULL（没有非 NULL 值）：<ul>
+<li><code>sum</code>、<code>avg</code>、<code>min</code>、<code>max</code> 返回 <strong>NULL</strong>（因为没有有效数据可计算）；</li>
+<li><code>count(列名)</code> 返回 <strong>0</strong>（统计非 NULL 值的数量，此时为 0）。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="group-by-子句与按组统计"><a name="group-by-子句与按组统计" class="anchor-navigation-ex-anchor" href="#group-by-子句与按组统计"><i class="fa fa-link" aria-hidden="true"></i></a><code>GROUP BY</code> 子句与按组统计</h2>
+<p>group by一般用于<strong>分组统计</strong>，它表达的逻辑就是根据一定的规则，进行分组。</p>
+<p>按部门计算平均薪资：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> dept_name, <span class="hljs-built_in">avg</span>(salary) <span class="hljs-keyword">as</span> avg_salary
+<span class="hljs-keyword">from</span> instructor
+<span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> dept_name;
+</code></pre>
+<p>将 <code>instructor</code> 表中的教师按 <code>dept_name</code>（部门名称）分组，然后计算每个部门内教师的平均薪资。</p>
+<ol>
+<li><strong>分组</strong>：按 <code>dept_name</code> 将所有教师分成若干组（比如 “Comp. Sci.” 组、“Finance” 组等）；</li>
+<li><strong>组内计算</strong>：对每个组单独应用 <code>avg(salary)</code> 函数，计算该组的平均薪资；</li>
+<li><strong>结果展示</strong>：每个组返回一行结果，包含部门名称和对应的平均薪资。</li>
+</ol>
+<blockquote>
+<p>[!important]</p>
+<p>若<code>SELECT</code>子句中同时包含<strong>非聚合列</strong>（如部门、教育等级）和<strong>聚合函数</strong>（如<code>SUM</code>、<code>AVG</code>），则<strong>所有非聚合列必须出现在<code>GROUP BY</code>子句中</strong>。</p>
+<ul>
+<li>正确示例：<code>SELECT dept_name, avg(salary) FROM instructor GROUP BY dept_name</code>（<code>dept_name</code>是非聚合列，出现在<code>GROUP BY</code>中）；</li>
+<li>错误示例：<code>SELECT dept_name, ID, avg(salary) FROM instructor GROUP BY dept_name</code>（<code>ID</code>是非聚合列，但未出现在<code>GROUP BY</code>中，数据库无法确定显示哪个<code>ID</code>）。</li>
+</ul>
+</blockquote>
+<h2 id="having-子句"><a name="having-子句" class="anchor-navigation-ex-anchor" href="#having-子句"><i class="fa fa-link" aria-hidden="true"></i></a><code>HAVING</code> 子句</h2>
+<p><code>HAVING</code> 子句在分组后作用于组，<code>WHERE</code> 子句在分组前作用于行，这是两者的核心区别。</p>
+<p>由于sql实际的子句执行顺序中，<code>where</code>的执行在分组前，所以无法使用聚合函数</p>
+<blockquote>
+<p>查询「教师人数 ≥ 3 人」的所有部门名称</p>
+</blockquote>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> dept_name 
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> dept_name  <span class="hljs-comment">-- 按部门分组</span>
+<span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">COUNT</span>(<span class="hljs-operator">*</span>) <span class="hljs-operator">&gt;=</span> <span class="hljs-number">3</span>;  <span class="hljs-comment">-- 聚合条件：统计每组人数，筛选人数≥3的组</span>
+</code></pre>
+<blockquote>
+<p>需求：查询「部门平均薪资 &gt; 80000」的部门名称和该部门平均薪</p>
+</blockquote>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> dept_name, <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">AS</span> avg_sal 
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> dept_name
+<span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-operator">&gt;</span> <span class="hljs-number">80000</span>;
+</code></pre>
+<p>进阶用法 → 聚合函数 + 分组字段 组合筛选</p>
+<blockquote>
+<p>需求：查询「计算机系（Comp. Sci.）中，平均薪资 &gt; 80000」的部门名称和平均薪资</p>
+</blockquote>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> dept_name, <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">AS</span> avg_sal 
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> dept_name
+<span class="hljs-keyword">HAVING</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span> <span class="hljs-keyword">AND</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-operator">&gt;</span> <span class="hljs-number">80000</span>;
+</code></pre>
+<p>⚠注意：这种写法<strong>语法正确，但性能一般</strong>，应该在分组前就选择计算机系进行过滤</p>
+<p>最优写法 → 使用「SELECT 聚合别名」简化代码</p>
+<p><code>HAVING</code> 执行在 <code>GROUP BY</code> 之后、<code>SELECT</code> 之前，主流数据库都支持在 <code>HAVING</code> 中直接引用 <code>SELECT</code> 里定义的聚合别名，代码更简洁，可读性更高</p>
+<blockquote>
+<p>需求：同上，查询平均薪资 &gt; 80000 的部门，用别名简化</p>
+</blockquote>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> dept_name, <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">AS</span> avg_sal 
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> dept_name
+<span class="hljs-keyword">HAVING</span> avg_sal <span class="hljs-operator">&gt;</span> <span class="hljs-number">80000</span>;  <span class="hljs-comment">-- 直接用 SELECT 的别名 avg_sal，替代完整的 AVG(salary)</span>
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<ul>
+<li><strong><code>WHERE</code> 子句</strong>：在分组（<code>GROUP BY</code>）<strong>之前</strong>执行，作用是筛选<strong>原始数据行</strong>，<strong>绝对不能使用聚合函数</strong>。</li>
+<li><strong><code>HAVING</code> 子句</strong>：在分组（<code>GROUP BY</code>）<strong>之后</strong>执行，作用是筛选<strong>分组后的结果集</strong>，<strong>可以任意使用聚合函数</strong>。</li>
+</ul>
+</blockquote>
+<h1 id="sql-子查询（subquery）的嵌套机制"><a name="sql-子查询（subquery）的嵌套机制" class="anchor-navigation-ex-anchor" href="#sql-子查询（subquery）的嵌套机制"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 子查询（subquery）的嵌套机制</h1>
+<p><strong>子查询</strong>是一个嵌套在其他查询中的 <code>SELECT-FROM-WHERE</code> 表达式（即完整的查询语句）。它的作用是为外层的主查询提供数据或条件，从而实现更复杂的查询逻辑。</p>
+<ol>
+<li><p>替换 <code>SELECT</code> 子句中的列（<code>A1, A2, ..., An</code>）</p>
+</li>
+<li><p>子查询必须返回<strong>单一值</strong>（单个数据，不是多个值或多行）。</p>
+</li>
+<li>将子查询的结果作为主查询结果集中的一列</li>
+</ol>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> 
+    name,  <span class="hljs-comment">-- 教师姓名</span>
+      (<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">FROM</span> instructor i2 <span class="hljs-keyword">WHERE</span> i2.dept_name <span class="hljs-operator">=</span> i1.dept_name) <span class="hljs-keyword">AS</span> dept_avg_salary  <span class="hljs-comment">-- 子查询替换列</span>
+<span class="hljs-keyword">FROM</span> instructor i1;  <span class="hljs-comment">-- 主查询的表</span>
+</code></pre>
+<p>子查询 <code>(SELECT AVG(salary) ...)</code> 为每位教师（<code>i1</code>）返回<strong>其所在部门的平均薪资</strong>，作为结果集中的 <code>dept_avg_salary</code> 列。</p>
+<ol>
+<li><p>替换 <code>FROM</code> 子句中的表（<code>r1, r2, ..., rm</code>）</p>
+</li>
+<li><p>子查询可以返回任意有效的结果集（可视为一张 “临时表”）。</p>
+</li>
+<li>将子查询的结果作为主查询的数据源。</li>
+</ol>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> i.name
+<span class="hljs-keyword">FROM</span> instructor i,  <span class="hljs-comment">-- 主查询的教师表</span>
+     (<span class="hljs-keyword">SELECT</span> dept_name <span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> dept_name <span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-operator">&gt;</span> <span class="hljs-number">50000</span>) <span class="hljs-keyword">AS</span> high_avg_depts  <span class="hljs-comment">-- 子查询替换表</span>
+<span class="hljs-keyword">WHERE</span> i.dept_name <span class="hljs-operator">=</span> high_avg_depts.dept_name;  <span class="hljs-comment">-- 关联条件</span>
+</code></pre>
+<p>子查询 <code>(SELECT dept_name ...)</code> 返回平均薪资超 50000 的部门，作为临时表 <code>high_avg_depts</code>，主查询从该临时表关联教师信息。</p>
+<ol>
+<li><p>替换 <code>WHERE</code> 子句中的条件（<code>P</code>）</p>
+</li>
+<li><p>条件表达式为 <code>B &lt;operation&gt; (subquery)</code>，其中 <code>B</code> 是主查询中的一个属性，<code>&lt;operation&gt;</code> 是后续会定义的操作符（如 <code>IN</code>、<code>ANY</code>、<code>ALL</code> 等）。</p>
+</li>
+<li>用子查询的结果作为筛选条件，过滤主查询的数据。</li>
+</ol>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> name
+<span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> salary <span class="hljs-operator">&gt;</span>  <span class="hljs-comment">-- B 是 salary，&lt;operation&gt; 是 &gt;</span>
+  (<span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span>);  <span class="hljs-comment">-- 子查询返回计算机系平均薪资</span>
+</code></pre>
+<p>子查询返回计算机系的平均薪资，主查询用 <code>salary &gt; 子查询结果</code> 筛选出薪资更高的教师。</p>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li><p><strong>集合成员测试（Set Membership）</strong>判断主查询中的数据是否 “属于” 子查询返回的集合（用 <code>IN</code> 或 <code>NOT IN</code> 操作符）。</p>
+<ul>
+<li><code>IN</code> ：满足 → 字段值 <strong>存在于</strong> 子查询的集合中 → 保留该行</li>
+<li><code>NOT IN</code> ：满足 → 字段值 <strong>不存在于</strong> 子查询的集合中 → 保留该行</li>
+</ul>
+<pre><code class="lang-sql">#查询「选修了 CS<span class="hljs-number">-101</span> 课程」的所有学生姓名
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> student
+<span class="hljs-keyword">WHERE</span> ID <span class="hljs-keyword">IN</span> (
+    <span class="hljs-keyword">SELECT</span> ID <span class="hljs-keyword">FROM</span> takes <span class="hljs-keyword">WHERE</span> course_id <span class="hljs-operator">=</span> <span class="hljs-string">'CS-101'</span>
+);
+
+#查询「没有选修任何课程」的所有学生姓名
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> student
+<span class="hljs-keyword">WHERE</span> ID <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> ID <span class="hljs-keyword">FROM</span> takes
+);
+</code></pre>
+</li>
+<li><p><strong>集合比较测试（Set Comparisons）</strong>将主查询数据与子查询返回的集合进行比较（用 <code>ANY</code>/<code>ALL</code>/<code>SOME</code> 配合比较运算符，如 <code>&gt; ANY</code>、<code>&lt; ALL</code> 等）。</p>
+<ul>
+<li><code>SOME</code> 和 <code>ANY</code> 是<strong>完全等价</strong>的，写法可以互换，无任何区别，只是不同数据库的习惯写法不同；</li>
+<li>必须和「比较运算符」搭配使用，不能单独写</li>
+</ul>
+<pre><code class="lang-sql">#查询薪资「高于 生物系任意一位教师」的所有教师姓名
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ANY</span> (
+    <span class="hljs-keyword">SELECT</span> salary <span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Biology'</span>
+);
+
+# 查询薪资「高于 生物系所有教师」的所有教师姓名（薪资最高的一批）
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> instructor
+<span class="hljs-keyword">WHERE</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ALL</span> (
+    <span class="hljs-keyword">SELECT</span> salary <span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Biology'</span>
+);
+</code></pre>
+</li>
+<li><p><strong>集合基数测试（Set Cardinality）</strong>判断子查询返回的集合 “数量” 是否满足条件（如用 <code>EXISTS</code> 判断是否存在数据，或结合聚合函数判断数量）。</p>
+<ul>
+<li><strong>基数 = 集合的行数 / 数量</strong>，这类测试的核心：不关心子查询返回的具体值，只关心「子查询有没有返回结果」（<strong>子查询的结果集是不是空集</strong>）</li>
+<li><code>EXISTS(子查询)</code> ：子查询返回的结果集 <strong>非空</strong>（至少有 1 行） → 返回 <code>TRUE</code> → 主查询保留该行</li>
+<li><code>NOT EXISTS(子查询)</code> ：子查询返回的结果集 <strong>为空</strong>（0 行） → 返回 <code>TRUE</code> → 主查询保留该行</li>
+</ul>
+<pre><code class="lang-sql">#查询「至少开设过一门课程」的所有教师姓名
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> instructor <span class="hljs-keyword">AS</span> T
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">EXISTS</span> (
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> teaches <span class="hljs-keyword">AS</span> S <span class="hljs-keyword">WHERE</span> S.ID <span class="hljs-operator">=</span> T.ID
+);
+
+   #查询「修完 生物系所有课程」的学生,这个需求是<span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>的经典应用，无法用 <span class="hljs-keyword">IN</span><span class="hljs-operator">/</span><span class="hljs-keyword">ANY</span><span class="hljs-operator">/</span><span class="hljs-keyword">ALL</span> 实现，是面试必考原题！
+<span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> S.ID, S.name <span class="hljs-keyword">FROM</span> student <span class="hljs-keyword">AS</span> S
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (
+    <span class="hljs-comment">-- 子查询1：生物系的所有课程</span>
+    <span class="hljs-keyword">SELECT</span> course_id <span class="hljs-keyword">FROM</span> course <span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Biology'</span>
+    <span class="hljs-keyword">EXCEPT</span>
+    <span class="hljs-comment">-- 子查询2：该学生已经选修过的课程</span>
+    <span class="hljs-keyword">SELECT</span> T.course_id <span class="hljs-keyword">FROM</span> takes <span class="hljs-keyword">AS</span> T <span class="hljs-keyword">WHERE</span> T.ID <span class="hljs-operator">=</span> S.ID
+);
+
+   #查询「没有选修任何课程」的学生（替代 <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span>，性能更好）
+<span class="hljs-comment">-- 写法1：NOT IN（基础写法）</span>
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> student <span class="hljs-keyword">WHERE</span> ID <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">IN</span> (<span class="hljs-keyword">SELECT</span> ID <span class="hljs-keyword">FROM</span> takes);
+<span class="hljs-comment">-- 写法2：NOT EXISTS（性能更优，推荐写法）</span>
+<span class="hljs-keyword">SELECT</span> name <span class="hljs-keyword">FROM</span> student <span class="hljs-keyword">AS</span> S
+<span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> (
+    <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> takes <span class="hljs-keyword">AS</span> T <span class="hljs-keyword">WHERE</span> T.ID <span class="hljs-operator">=</span> S.ID
+);
+</code></pre>
+<ol>
+<li>能写 <code>IN</code> 的场景，优先写 <code>IN</code>（最简单）；</li>
+<li>需要做「大小比较」的场景，用 <code>ANY/ALL</code>；</li>
+<li>遇到「是否存在」「所有条件满足」「无关联数据」的场景，<strong>必须用 <code>EXISTS/NOT EXISTS</code></strong>；</li>
+<li>大数据量下，<strong>尽量用 <code>EXISTS</code> 替代 <code>IN</code></strong>，性能差距非常明显！</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h3 id="子查询的限制规则"><a name="子查询的限制规则" class="anchor-navigation-ex-anchor" href="#子查询的限制规则"><i class="fa fa-link" aria-hidden="true"></i></a>子查询的限制规则</h3>
+<ol>
+<li>子查询在<code>WHERE</code>或<code>HAVING</code>子句中使用时，必须位于搜索条件的<strong>右侧</strong></li>
+<li>子查询必须用<strong>括号<code>()</code>包裹</strong>。</li>
+<li>子查询可以返回<strong>单个值</strong>或<strong>多个值</strong>，但返回值的数量需与外层查询的操作符兼容（如<code>=</code>要求子查询返回单值，<code>IN</code>要求返回多值）</li>
+<li>子查询返回的列数，必须与它所比较的列表的列数<strong>一致</strong>（如多列比较<code>(a,b) IN (子查询)</code>，子查询需返回两列）</li>
+</ol>
+<h3 id="with-子句：定义临时关系"><a name="with-子句：定义临时关系" class="anchor-navigation-ex-anchor" href="#with-子句：定义临时关系"><i class="fa fa-link" aria-hidden="true"></i></a><code>WITH</code> 子句：定义临时关系</h3>
+<p><code>WITH</code> 子句用于在查询开始时定义一个或多个<strong>临时关系</strong>（类似临时表），这些关系仅在当前查询中有效，可简化多层嵌套的复杂查询。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">with</span> max_budget (<span class="hljs-keyword">value</span>) <span class="hljs-keyword">as</span> (  <span class="hljs-comment">-- 定义临时关系max_budget，包含一列value</span>
+  <span class="hljs-keyword">select</span> <span class="hljs-built_in">max</span>(budget)  <span class="hljs-comment">-- 计算所有部门的最高预算</span>
+  <span class="hljs-keyword">from</span> department
+)
+<span class="hljs-comment">-- 主查询：关联部门表和临时关系，找到预算等于最大值的部门</span>
+<span class="hljs-keyword">select</span> department.name
+<span class="hljs-keyword">from</span> department, max_budget
+<span class="hljs-keyword">where</span> department.budget <span class="hljs-operator">=</span> max_budget.value;
+</code></pre>
+<pre><code class="lang-sql"><span class="hljs-keyword">with</span> 
+  dept_total (dept_name, <span class="hljs-keyword">value</span>) <span class="hljs-keyword">as</span> (  <span class="hljs-comment">-- 第一个临时关系：各部门的总薪资</span>
+    <span class="hljs-keyword">select</span> dept_name, <span class="hljs-built_in">sum</span>(salary)
+    <span class="hljs-keyword">from</span> instructor
+    <span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> dept_name
+  ),
+  dept_total_avg (<span class="hljs-keyword">value</span>) <span class="hljs-keyword">as</span> (  <span class="hljs-comment">-- 第二个临时关系：所有部门总薪资的平均值</span>
+    <span class="hljs-keyword">select</span> <span class="hljs-built_in">avg</span>(<span class="hljs-keyword">value</span>)
+    <span class="hljs-keyword">from</span> dept_total
+  )
+<span class="hljs-comment">-- 主查询：找到总薪资超过平均值的部门</span>
+<span class="hljs-keyword">select</span> dept_name
+<span class="hljs-keyword">from</span> dept_total, dept_total_avg
+<span class="hljs-keyword">where</span> dept_total.value <span class="hljs-operator">&gt;</span> dept_total_avg.value;
+</code></pre>
+<ul>
+<li>支持定义多个临时关系（用逗号分隔），前一个临时关系的结果可被后一个使用（如 <code>dept_total_avg</code> 引用 <code>dept_total</code>）；</li>
+<li>相比多层嵌套子查询，结构更扁平，可读性更高，尤其适合多步骤分析场景。</li>
+</ul>
+<h1 id="sql-子句顺序"><a name="sql-子句顺序" class="anchor-navigation-ex-anchor" href="#sql-子句顺序"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 子句顺序</h1>
+<p>首先分为书写顺序和执行顺序</p>
+<p>一是书写顺序</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> → <span class="hljs-keyword">FROM</span> → <span class="hljs-keyword">WHERE</span> → <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> → <span class="hljs-keyword">HAVING</span> → <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> → LIMIT
+</code></pre>
+<p>语法规定的固定书写顺序，写乱了直接报错；</p>
+<p>但是实际上SQL不会按照书写的顺序去执行各个子句</p>
+<p>而是根据实际的顺序进行执行</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">FROM</span> → <span class="hljs-keyword">WHERE</span> → <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> → <span class="hljs-keyword">HAVING</span> → <span class="hljs-keyword">SELECT</span> → <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> → LIMIT
+</code></pre>
+<p>具体七个步骤</p>
+<ol>
+<li><p>【第一步】<code>FROM / JOIN</code> —— 组装数据源，造 “大表”</p>
+</li>
+<li><p>执行逻辑：先确定查询的<strong>所有数据表 / 视图</strong>，如果有多表就做 <code>JOIN</code> 关联，最终生成一张「所有数据的笛卡尔积中间大表」。</p>
+</li>
+<li>核心作用：<strong>确定数据来源</strong>，所有后续操作都基于这张中间大表执行。</li>
+<li><p>必记规则：所有表关联、多表查询的逻辑，都在这一步完成。</p>
+</li>
+<li><p>【第二步】<code>WHERE</code> —— 行级过滤，「筛行」，<strong>最早过滤数据</strong></p>
+</li>
+<li><p>执行逻辑：基于第一步的中间大表，<strong>逐行判断条件</strong>，只保留满足条件的行，删除不满足的行。</p>
+</li>
+<li><p>核心作用：<strong>过滤无效行数据</strong>，越早过滤，后续处理的数据量越少，查询越快（性能核心优化点）。</p>
+</li>
+<li><p>✔ 必记铁律：</p>
+<pre><code>WHERE 子句中，绝对不能使用聚合函数（sum/avg/count/max/min）
+</code></pre><blockquote>
+<p>原因：聚合函数需要基于「分组」计算，此时分组还没执行，<strong>没有聚合结果可用</strong>；同时<code>WHERE</code>也不能用<code>SELECT</code>里的列别名。</p>
+</blockquote>
+</li>
+<li><p>【第三步】<code>GROUP BY</code> —— 分组，把行变成「组」</p>
+</li>
+<li><p>执行逻辑：将第二步过滤后的有效行，按照指定的「一列 / 多列」进行分组，<strong>相同值的行被合并成一个组</strong>。</p>
+</li>
+<li>核心作用：为「聚合计算」做准备，聚合函数（sum/avg 等）<strong>必须基于分组生效</strong>。</li>
+<li><p>✔️ 必记铁律：</p>
+<ol>
+<li><code>SELECT</code>中如果同时写「普通列」和「聚合函数」，<strong>所有普通列必须出现在 GROUP BY 里</strong>；</li>
+<li><code>GROUP BY</code> 分组后，「一行代表一个组」，不再是原表的一行数据。</li>
+</ol>
+</li>
+<li><p>【第四步】<code>HAVING</code> —— 组级过滤，「筛组」，唯一能用聚合函数的过滤</p>
+</li>
+<li><p>执行逻辑：对第三步分组后的「每个组」进行条件判断，只保留满足条件的组，删除不满足的组。</p>
+</li>
+<li>核心作用：<strong>过滤分组后的结果</strong>，弥补<code>WHERE</code>不能用聚合函数的缺陷。</li>
+<li><p>✔️ 必记规则：</p>
+<ol>
+<li><code>HAVING</code> 必须跟在 <code>GROUP BY</code> 之后，没有分组就不能用 <code>HAVING</code>；</li>
+<li><code>HAVING</code> 里<strong>可以直接用聚合函数</strong>（这是它的核心价值），也可以用分组的列。</li>
+</ol>
+</li>
+<li><p>【第五步】<code>SELECT</code> —— 最终投影，「选列 + 计算」，最后确定返回内容</p>
+</li>
+<li><p>执行逻辑：经过前面 4 步的筛选、分组后，才开始执行<code>SELECT</code>，只保留你指定的列、计算表达式（如 salary*12）、聚合函数结果，同时给列起别名。</p>
+</li>
+<li><p>核心作用：<strong>确定最终返回给用户的列和值</strong>，也是 SQL 书写时写在最前面的子句，但却是数据库最后才处理的核心筛选步骤。</p>
+</li>
+<li><p>✔️ 必记铁律：</p>
+<p>前面所有子句（FROM/WHERE/GROUP BY/HAVING）都不能使用 SELECT 里的「列别名」</p>
+<blockquote>
+<p>原因：执行顺序上，SELECT 是第五步，前面的步骤执行时，列别名还没被定义，数据库不认识！</p>
+</blockquote>
+</li>
+<li><p>【第六步】<code>ORDER BY</code> —— 排序，对最终结果排序</p>
+</li>
+<li><p>执行逻辑：基于第五步<code>SELECT</code>生成的最终结果集，按照指定的列 / 别名 / 表达式进行升序 (ASC)/ 降序 (DESC) 排序。</p>
+</li>
+<li>核心作用：<strong>调整结果展示顺序</strong>，不影响数据本身，只影响展示效果。</li>
+<li><p>✔️ 必记规则：</p>
+<ol>
+<li><code>ORDER BY</code> 是<strong>第一个可以使用 SELECT 列别名</strong>的子句（执行顺序在 SELECT 之后）；</li>
+<li>排序时遇到<code>NULL</code>值，默认把<code>NULL</code>当作「最小值」，升序排最前，降序排最后；</li>
+<li>可以按「多列排序」，优先级从左到右。</li>
+</ol>
+</li>
+<li><p>【第七步】<code>LIMIT / OFFSET</code> —— 分页 / 截断，取结果子集</p>
+</li>
+<li><p>执行逻辑：对第六步排序后的结果集，截取指定行数的子集（比如只取前 10 行、跳过前 5 行取后 10 行）。</p>
+</li>
+<li>核心作用：<strong>实现分页查询、限制返回行数</strong>，是 SQL 分页的核心语法。</li>
+<li>✔️ 必记规则：<code>LIMIT</code> 必须写在 SQL 的最后面，是执行的最后一步，所有数据库都通用（MySQL 用 LIMIT，SQLServer 用 TOP，Oracle 用 ROWNUM，逻辑一致）。</li>
+</ol>
+<p>需求：查询「计算机系」薪资 &gt; 50000 的教师，按部门分组后筛选平均薪资 &gt; 80000 的部门，展示部门名和平均薪资，按平均薪资降序排列，只取前 2 个部门。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span> dept_name, <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-keyword">AS</span> avg_sal  <span class="hljs-comment">-- 5. 选列+聚合+别名</span>
+<span class="hljs-keyword">FROM</span> instructor                          <span class="hljs-comment">-- 1. 数据源：教师表</span>
+<span class="hljs-keyword">WHERE</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Comp. Sci.'</span> <span class="hljs-keyword">AND</span> salary <span class="hljs-operator">&gt;</span> <span class="hljs-number">50000</span>  <span class="hljs-comment">-- 2. 筛行：只留计算机系+薪资&gt;5万的教师</span>
+<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> dept_name                       <span class="hljs-comment">-- 3. 分组：按部门分组</span>
+<span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">AVG</span>(salary) <span class="hljs-operator">&gt;</span> <span class="hljs-number">80000</span>               <span class="hljs-comment">-- 4. 筛组：只留平均薪资&gt;8万的部门</span>
+<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> avg_sal <span class="hljs-keyword">DESC</span>                    <span class="hljs-comment">-- 6. 排序：按平均薪资降序（能用别名）</span>
+LIMIT <span class="hljs-number">2</span>;                                 <span class="hljs-comment">-- 7. 分页：只取前2个</span>
+</code></pre>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 03_SQL</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02_关系模型.html" class="navigation navigation-prev " aria-label="Previous page: 02_关系模型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04_SQL进阶.html" class="navigation navigation-next " aria-label="Next page: 04_SQL进阶">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03_SQL","level":"1.8.3","depth":2,"next":{"title":"04_SQL进阶","level":"1.8.4","depth":2,"path":"docs/Database_System/04_SQL进阶.md","ref":"docs/Database_System/04_SQL进阶.md","articles":[]},"previous":{"title":"02_关系模型","level":"1.8.2","depth":2,"path":"docs/Database_System/02_关系模型.md","ref":"docs/Database_System/02_关系模型.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Database_System/03_SQL.md","mtime":"2026-03-09T01:44:20.678Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

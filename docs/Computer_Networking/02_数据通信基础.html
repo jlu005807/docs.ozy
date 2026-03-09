@@ -1,0 +1,3204 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>02_数据通信基础 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_物理层.html" />
+    
+    
+    <link rel="prev" href="01_概述.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="01_概述.html">
+            
+                <a href="01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="02_数据通信基础.html">
+            
+                <a href="02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="03_物理层.html">
+            
+                <a href="03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="04_数据链路层.html">
+            
+                <a href="04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="05_网络层.html">
+            
+                <a href="05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="06_传输层.html">
+            
+                <a href="06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="07_应用层.html">
+            
+                <a href="07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >02_数据通信基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#数据通信基础"><b></b>数据通信基础</a></li><ul><li><span class="title-icon "></span><a href="#数据通信系统"><b></b>数据通信系统</a></li><ul><li><span class="title-icon "></span><a href="#通信系统的两大传输方式"><b></b>通信系统的两大传输方式</a></li><li><span class="title-icon "></span><a href="#数据通信系统的组成"><b></b>数据通信系统的组成</a></li><li><span class="title-icon "></span><a href="#主要技术指标"><b></b>主要技术指标</a></li></ul><li><span class="title-icon "></span><a href="#信号和数据编码"><b></b>信号和数据编码</a></li><ul><li><span class="title-icon "></span><a href="#模拟信号：连续变化的-波形"><b></b>模拟信号：连续变化的 “波形”</a></li><li><span class="title-icon "></span><a href="#数字信号：离散跳变的-脉冲"><b></b>数字信号：离散跳变的 “脉冲”</a></li><li><span class="title-icon "></span><a href="#信息编码"><b></b>信息编码</a></li></ul><li><span class="title-icon "></span><a href="#傅里叶分析与有限带宽信号"><b></b>傅里叶分析与有限带宽信号</a></li><ul><li><span class="title-icon "></span><a href="#傅里叶分析了解即可"><b></b>傅里叶分析(了解即可)</a></li><li><span class="title-icon "></span><a href="#基带信号和带通信号了解即可"><b></b>基带信号和带通信号(了解即可)</a></li><li><span class="title-icon "></span><a href="#奈氏准则"><b></b>奈氏准则</a></li><li><span class="title-icon "></span><a href="#香农shannon定理"><b></b>香农(Shannon)定理</a></li></ul><li><span class="title-icon "></span><a href="#多路复用技术"><b></b>多路复用技术</a></li><ul><li><span class="title-icon "></span><a href="#频分多路复用（fdm：frequency-division-multiplexing）"><b></b>频分多路复用（FDM：Frequency Division Multiplexing）</a></li><li><span class="title-icon "></span><a href="#时分多路复用（tdm：time-division-multiplexing）"><b></b>时分多路复用（TDM：Time Division Multiplexing）</a></li><li><span class="title-icon "></span><a href="#波分多路复用（wdm：wavelength-division-multiplexing）"><b></b>波分多路复用（WDM：Wavelength Division Multiplexing）</a></li><li><span class="title-icon "></span><a href="#码分多路复用（cdm：code-division-multiplexing）"><b></b>码分多路复用（CDM：Code Division Multiplexing）</a></li></ul><li><span class="title-icon "></span><a href="#数据交换技术"><b></b>数据交换技术</a></li><ul><li><span class="title-icon "></span><a href="#电路交换"><b></b>电路交换</a></li><li><span class="title-icon "></span><a href="#报文交换"><b></b>报文交换</a></li><li><span class="title-icon "></span><a href="#分组交换"><b></b>分组交换</a></li></ul><li><span class="title-icon "></span><a href="#错误检测编码"><b></b>错误检测编码</a></li><ul><li><span class="title-icon "></span><a href="#奇偶校验码"><b></b>奇偶校验码</a></li><li><span class="title-icon "></span><a href="#循环冗余校验码（crc）"><b></b>循环冗余校验码（CRC）</a></li><li><span class="title-icon "></span><a href="#校验和"><b></b>校验和</a></li></ul></ul></ul></div><a href="#数据通信基础" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#数据通信基础">数据通信基础</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#数据通信系统">数据通信系统</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#通信系统的两大传输方式">通信系统的两大传输方式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#模拟传输">模拟传输</a><i></i></div></li>
+<li><div><a href="#数字传输">数字传输</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#数据通信系统的组成">数据通信系统的组成</a><i></i></div></li>
+<li><div><a href="#主要技术指标">主要技术指标</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#信号和数据编码">信号和数据编码</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#模拟信号：连续变化的-波形">模拟信号：连续变化的 “波形”</a><i></i></div></li>
+<li><div><a href="#数字信号：离散跳变的-脉冲">数字信号：离散跳变的 “脉冲”</a><i></i></div></li>
+<li><div><a href="#信息编码">信息编码</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#数字-—-数字编码">数字 — 数字编码</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#单极性编码">单极性编码</a><i></i></div></li>
+<li><div><a href="#极化编码">极化编码</a><i></i></div></li>
+<li><div><a href="#双极性编码">双极性编码</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#数字—模拟编码">数字—模拟编码</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#幅移键控（ask：amplitude-shift-keying）">幅移键控（ASK：Amplitude Shift Keying）</a><i></i></div></li>
+<li><div><a href="#频移键控（fsk：frequency-shift-keying）">频移键控（FSK：Frequency Shift Keying）</a><i></i></div></li>
+<li><div><a href="#相移键控（psk：phase-shift-keying）">相移键控（PSK：Phase Shift Keying）</a><i></i></div></li>
+<li><div><a href="#正交调幅（qam：quadrature-amplitude-modulation）">正交调幅（QAM：Quadrature Amplitude Modulation）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#模拟—数字编码">模拟—数字编码</a><i></i></div></li>
+<li><div><a href="#模拟-—-模拟编码">模拟 — 模拟编码</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#傅里叶分析与有限带宽信号">傅里叶分析与有限带宽信号</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#傅里叶分析了解即可">傅里叶分析(了解即可)</a><i></i></div></li>
+<li><div><a href="#基带信号和带通信号了解即可">基带信号和带通信号(了解即可)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#基带信号（基本频带信号）">基带信号（基本频带信号）</a><i></i></div></li>
+<li><div><a href="#带通信号">带通信号</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#奈氏准则">奈氏准则</a><i></i></div></li>
+<li><div><a href="#香农shannon定理">香农(Shannon)定理</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#多路复用技术">多路复用技术</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#频分多路复用（fdm：frequency-division-multiplexing）">频分多路复用（FDM：Frequency Division Multiplexing）</a><i></i></div></li>
+<li><div><a href="#时分多路复用（tdm：time-division-multiplexing）">时分多路复用（TDM：Time Division Multiplexing）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#同步时分多路复用-tdm">同步时分多路复用 TDM</a><i></i></div></li>
+<li><div><a href="#异步时分多路复用（stdm）">异步时分多路复用（STDM）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#波分多路复用（wdm：wavelength-division-multiplexing）">波分多路复用（WDM：Wavelength Division Multiplexing）</a><i></i></div></li>
+<li><div><a href="#码分多路复用（cdm：code-division-multiplexing）">码分多路复用（CDM：Code Division Multiplexing）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#数据交换技术">数据交换技术</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#电路交换">电路交换</a><i></i></div></li>
+<li><div><a href="#报文交换">报文交换</a><i></i></div></li>
+<li><div><a href="#分组交换">分组交换</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#错误检测编码">错误检测编码</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#奇偶校验码">奇偶校验码</a><i></i></div></li>
+<li><div><a href="#循环冗余校验码（crc）">循环冗余校验码（CRC）</a><i></i></div></li>
+<li><div><a href="#校验和">校验和</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="数据通信基础"><a name="数据通信基础" class="anchor-navigation-ex-anchor" href="#数据通信基础"><i class="fa fa-link" aria-hidden="true"></i></a>数据通信基础</h1>
+<p>计算机网络的核心基础 —— 数据通信基础。因为计算机网络本质就是 “计算机技术 + 数据通信技术” 的结合体</p>
+<h2 id="数据通信系统"><a name="数据通信系统" class="anchor-navigation-ex-anchor" href="#数据通信系统"><i class="fa fa-link" aria-hidden="true"></i></a>数据通信系统</h2>
+<p>计算机网络技术是计算机技术和数据通信技术相结合的产物</p>
+<p>计算机负责 “产生和处理数据”，而数据通信系统负责 “把数据准确、高效地送到目的地”</p>
+<h3 id="通信系统的两大传输方式"><a name="通信系统的两大传输方式" class="anchor-navigation-ex-anchor" href="#通信系统的两大传输方式"><i class="fa fa-link" aria-hidden="true"></i></a>通信系统的两大传输方式</h3>
+<p>数据传输的核心是 “<strong>信号的传递</strong>”，根据信号处理方式不同，分为模拟传输和数字传输</p>
+<h4 id="模拟传输"><a name="模拟传输" class="anchor-navigation-ex-anchor" href="#模拟传输"><i class="fa fa-link" aria-hidden="true"></i></a>模拟传输</h4>
+<p>只关注信号的 “波形本身”，不关心信号承载的内容。</p>
+<ul>
+<li>传输过程中，核心目标是尽量减少信号的衰减（信号强度减弱）和外界噪声干扰。</li>
+<li><strong>长距离传输方案</strong>：使用 “信号放大器”—— 把衰减后的信号幅度放大，让信号能继续传输。但是<strong>放大器会同时放大信号和混入的噪声</strong></li>
+<li>老式有线广播、早期无绳电话、传统有线电视（未数字化前）</li>
+</ul>
+<h4 id="数字传输"><a name="数字传输" class="anchor-navigation-ex-anchor" href="#数字传输"><i class="fa fa-link" aria-hidden="true"></i></a>数字传输</h4>
+<p>关注信号承载的 “数字内容”（即 0 和 1 的比特序列），而非单纯的波形。</p>
+<ul>
+<li><strong>兼容性强</strong>：既能直接传输电脑产生的数字信号，也能先把模拟信号（如语音、音乐）转换成数字信号后再传输。</li>
+<li><strong>长距离传输方案</strong>：使用 “转发器”（也叫<strong>中继器</strong>）—— 转发器会先识别接收信号中的 0 和 1，然后 “<strong>重新生成</strong>” 一个无噪声的干净信号发送出去，从根本上<strong>消除了噪声累积</strong>。</li>
+<li>互联网、手机数据网络、光纤通信。</li>
+</ul>
+<hr></hr>
+<h3 id="数据通信系统的组成"><a name="数据通信系统的组成" class="anchor-navigation-ex-anchor" href="#数据通信系统的组成"><i class="fa fa-link" aria-hidden="true"></i></a>数据通信系统的组成</h3>
+<ol>
+<li><p>信源：产生要发送数据的设备，是数据的源头。</p>
+<ul>
+<li>实例：发送邮件的你的电脑、录制语音的手机、上传文件的服务器。</li>
+</ul>
+</li>
+<li><p>发送设备：将信源产生的原始数据，转换成适合在传输系统中传输的信号，即对数据进行编码</p>
+<ul>
+<li>实例： “<strong>调制解调器</strong>（Modem）”—— 电脑产生的是数字比特流，而公用电话网只能传模拟信号，Modem 就负责把数字信号 “调制” 成模拟信号，这个过程就是 “编码”。</li>
+</ul>
+</li>
+<li><p>传输系统：连接源系统和目的系统的物理线路或网络，是数据传输的载体。</p>
+<ul>
+<li>实例：网线、光纤、无线电波、公用电话网、互联网骨干网。上面示例中，“公用电话网” 就是核心传输系统。</li>
+</ul>
+</li>
+<li><p>接收设备：将传输系统送来的信号，解码还原成信宿能识别的原始数据（与发送设备的功能相反）。</p>
+<ul>
+<li>实例：接收方 PC 机上的 “调制解调器”—— 把电话网传来的模拟信号 “解调” 回数字比特流，交给 PC 机处理。</li>
+</ul>
+</li>
+<li><p>信宿：接收并处理数据的目的设备，是数据传输的终点。</p>
+<ul>
+<li>实例：接收邮件的朋友的电脑、播放语音的耳机、存储文件的云服务器。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!note]</p>
+<ol>
+<li>信源（你的 PC 机）产生输入信息（比如一份文档），转换成数字比特流；</li>
+<li>发送设备（你的 Modem）将数字比特流编码成模拟信号；</li>
+<li>模拟信号通过传输系统（公用电话网）远距离传输；</li>
+<li>接收设备（朋友的 Modem）将模拟信号解码回数字比特流；</li>
+<li>信宿（朋友的 PC 机）接收数字比特流，还原成文档并显示 —— 整个数据通信过程完成。</li>
+</ol>
+</blockquote>
+<h3 id="主要技术指标"><a name="主要技术指标" class="anchor-navigation-ex-anchor" href="#主要技术指标"><i class="fa fa-link" aria-hidden="true"></i></a>主要技术指标</h3>
+<ol>
+<li><p>码元速率（波特率）</p>
+</li>
+<li><p><strong>定义</strong>：每秒通过信道传输的 “码元数”（码元是承载数据信息的基本信号单元，比如一个高电平、一个相位变化、一个频率变化）。或者说是每秒中信道的电平变化数</p>
+</li>
+<li><p><strong>单位</strong>：波特（Baud），1 波特 = 1 个码元 / 秒。</p>
+</li>
+<li><p><strong>物理意义</strong>：描述信号的 “传输节奏”—— 码元速率越高，信号变化越频繁，信道的带宽需求越大。</p>
+</li>
+</ol>
+<ol>
+<li><p>数据传输率（比特率）</p>
+</li>
+<li><p><strong>定义</strong>：每秒通过信道传输的 “二进制位数”（即 0 和 1 的个数）。</p>
+</li>
+<li><strong>单位</strong>：比特 / 秒（bps 或 b/s），常用单位有 kbps（千比特 / 秒）、Mbps（兆比特 / 秒）、Gbps（吉比特 / 秒），换算关系：1Gbps=1000Mbps=10⁶kbps=10⁹bps。</li>
+<li><strong>物理意义</strong>：描述数据的 “传输速度”—— 这是我们最常说的 “网速”，比如 100Mbps 宽带、5G 的 1Gbps 峰值速率，本质都是数据传输率。</li>
+<li><p>与码元速率的关系：<strong>数据传输率 S = 码元速率 B × log₂N</strong>（N 是码元的状态数，即一个码元能表示的比特数）。</p>
+<ul>
+<li>例 1：N=2（每个码元表示 1 个比特，比如高电平 = 1，低电平 = 0），则 S=B×log₂2=B（码元速率 = 比特率）；</li>
+<li>例 2：N=4（每个码元表示 2 个比特，比如 4-PSK 调制，4 种相位对应 00、01、10、11），则 S=B×log₂4=2B（比特率是码元速率的 2 倍）。</li>
+</ul>
+</li>
+<li><p>误码率（码元差错率）</p>
+</li>
+<li><p><strong>定义</strong>：传输过程中 “出错的码元数” 占 “传输的总码元数” 的比例。</p>
+</li>
+<li><strong>公式</strong>：误码率 Pₑ = 出错的码元数 / 总码元数。</li>
+<li><p><strong>物理意义</strong>：描述系统的 “码元传输准确性”—— 误码率越低，码元传输越可靠。</p>
+</li>
+<li><p>误比特率（比特差错率）</p>
+</li>
+<li><p><strong>定义</strong>：传输过程中 “出错的比特数” 占 “传输的总比特数” 的比例。</p>
+</li>
+<li><strong>公式</strong>：误比特率 Pᵦ = 出错的比特数 / 总比特数。</li>
+<li><strong>物理意义</strong>：描述系统的 “比特传输准确性”—— 这是最常用的可靠性指标（因为数据最终以比特为单位存储和处理）。</li>
+<li><strong>与误码率的关系</strong>：当每个码元只表示 1 个比特（N=2）时，误比特率≈误码率；当每个码元表示多个比特（N&gt;2）时，一个码元出错可能导致多个比特出错，此时误比特率 &gt; 误码率。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>指标名称</th>
+<th>定义核心</th>
+<th>单位</th>
+<th>核心作用</th>
+<th>典型数值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>码元速率（B）</td>
+<td>码元数 / 秒</td>
+<td>波特（Baud）</td>
+<td>描述信号传输节奏，决定带宽需求</td>
+<td>电话线：几千波特；光纤：几十万波特</td>
+</tr>
+<tr>
+<td>数据传输率（S）</td>
+<td>比特数 / 秒</td>
+<td>bps</td>
+<td>描述数据传输速度（网速）</td>
+<td>宽带：100Mbps；5G：1Gbps</td>
+</tr>
+<tr>
+<td>误码率（Pₑ）</td>
+<td>出错码元数 / 总码元数</td>
+<td>无（比例）</td>
+<td>描述码元传输准确性</td>
+<td>光纤：&lt;10⁻⁹；铜线：10⁻⁶</td>
+</tr>
+<tr>
+<td>误比特率（Pᵦ）</td>
+<td>出错比特数 / 总比特数</td>
+<td>无（比例）</td>
+<td>描述比特传输准确性（常用）</td>
+<td>互联网：&lt;10⁻⁶；存储：&lt;10⁻¹²</td>
+</tr>
+</tbody>
+</table>
+<h2 id="信号和数据编码"><a name="信号和数据编码" class="anchor-navigation-ex-anchor" href="#信号和数据编码"><i class="fa fa-link" aria-hidden="true"></i></a>信号和数据编码</h2>
+<p>信息→数据→信号（编码的本质）</p>
+<ul>
+<li><strong>信息</strong>：我们要传递的 “内容”（比如微信消息 “晚上吃火锅”、图片、文件）；</li>
+<li><strong>数据</strong>：信息的 “数字化表示”—— 计算机只能处理 0 和 1，所以所有信息都会被转换成二进制比特流（比如 “晚上吃火锅” 会被编码成一串 0 和 1）；</li>
+<li><strong>信号</strong>：数据的 “物理载体”——0 和 1 是抽象的，必须转换成电磁信号（比如网线里的电压变化）或光信号（比如光纤里的激光明暗变化），才能在传输媒体上传输。</li>
+<li>承载数字信息的信号有两种选择：<strong>可以是模拟信号，也可以是数字信号</strong></li>
+</ul>
+<h3 id="模拟信号：连续变化的-波形"><a name="模拟信号：连续变化的-波形" class="anchor-navigation-ex-anchor" href="#模拟信号：连续变化的-波形"><i class="fa fa-link" aria-hidden="true"></i></a>模拟信号：连续变化的 “波形”</h3>
+<ul>
+<li>随时间连续变化的信号</li>
+</ul>
+<p>模拟信号的核心是 “连续”—— 它的数值不会突然跳变，而是平滑过渡。</p>
+<ul>
+<li><strong>单模拟信号</strong>：最典型的是正弦波（比如数学里的正弦函数图像），是构成所有复杂模拟信号的 “基本单元”；<ul>
+<li>简单模拟信号的核心：正弦波三要素（考点重点）；数学表达式是：<em>x</em>(<em>t</em>)=<em>A</em>sin(2<em>π</em>f<em>t</em>+<em>φ</em>)</li>
+<li><strong>振幅 A</strong>：信号的 “强弱程度”（对应声音的 “大小”）；<strong>频率 f</strong>：信号每秒振动的次数（单位：赫兹 Hz），对应 “信号变化的快慢”；<strong>相位 φ</strong>：信号的 “起始位置”</li>
+</ul>
+</li>
+<li><strong>复杂模拟信号</strong>：由多个不同频率、振幅、相位的正弦波叠加而成</li>
+</ul>
+<h3 id="数字信号：离散跳变的-脉冲"><a name="数字信号：离散跳变的-脉冲" class="anchor-navigation-ex-anchor" href="#数字信号：离散跳变的-脉冲"><i class="fa fa-link" aria-hidden="true"></i></a>数字信号：离散跳变的 “脉冲”</h3>
+<ul>
+<li>离散的、值的变化瞬时发生的信号</li>
+</ul>
+<p>数字信号的核心是 “离散” 和 “跳变”—— 它的数值只有有限个（比如只有高、低两个电平），而且数值变化是瞬间完成的（没有中间过渡）。</p>
+<ul>
+<li>数字信号是为了传递 0 和 1，所以参数都和 “比特（bit）” 相关：<ul>
+<li><strong>比特间隙</strong>：发送 1 个比特（1 或 0）所用的时间</li>
+<li><strong>比特率</strong>：每秒能发送的比特数（单位：bps 或 b/s，比特 / 秒），是衡量数字信号<strong>传输速度</strong>的核心指标。</li>
+</ul>
+</li>
+</ul>
+<hr></hr>
+<h3 id="信息编码"><a name="信息编码" class="anchor-navigation-ex-anchor" href="#信息编码"><i class="fa fa-link" aria-hidden="true"></i></a>信息编码</h3>
+<p><strong>编码 = 信息用信号来表示的方法</strong>。这里的 “信息” 可以是数字形式（0/1），也可以是模拟形式（比如声音、声波）；“信号” 也分模拟和数字两类</p>
+<p>编码的四种方式，本质是 “<strong>输入信息类型” 和 “输出信号类型” 的组合</strong></p>
+<table>
+<thead>
+<tr>
+<th>编码方式</th>
+<th>输入（要传递的信息）</th>
+<th>输出（传输的物理信号）</th>
+<th>核心用途（场景）</th>
+<th>通俗类比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字 — 数字编码</td>
+<td>数字信息（0/1 比特流）</td>
+<td>数字信号（高低电平 / 脉冲）</td>
+<td>网线、光纤、U 盘等 “直接传 0/1” 场景</td>
+<td>把中文（0/1）翻译成中文电报码（数字脉冲），直接在有线信道传递</td>
+</tr>
+<tr>
+<td>数字 — 模拟编码</td>
+<td>数字信息（0/1 比特流）</td>
+<td>模拟信号（正弦波参数变化）</td>
+<td>电话线、无线电、早期卫星通信</td>
+<td>把中文（0/1）翻译成英文口语（模拟声波），在只能传声音的信道传递</td>
+</tr>
+<tr>
+<td>模拟 — 数字编码</td>
+<td>模拟信息（声音 / 声波等）</td>
+<td>数字信号（0/1 比特流）</td>
+<td>录音、视频采集、语音通话数字化</td>
+<td>把英文口语（模拟信号）翻译成中文文字（0/1），方便计算机存储 / 传输</td>
+</tr>
+<tr>
+<td>模拟 — 模拟编码</td>
+<td>模拟信息（声音 / 声波等）</td>
+<td>模拟信号（正弦波参数变化）</td>
+<td>传统广播、有线电视（未数字化）</td>
+<td>把小声的英文口语（弱模拟信号）放大成大声的英文口语（强模拟信号），不改变信号类型</td>
+</tr>
+</tbody>
+</table>
+<h4 id="数字-—-数字编码"><a name="数字-—-数字编码" class="anchor-navigation-ex-anchor" href="#数字-—-数字编码"><i class="fa fa-link" aria-hidden="true"></i></a>数字 — 数字编码</h4>
+<ol>
+<li><strong>用数字信号（脉冲电压）表示数字信息（0/1）</strong>，不需要中间转换成模拟信号，直接在有线媒体上传输；</li>
+<li>传输载体：网线（双绞线）、铜线、光纤（光信号本质也是数字脉冲，明暗对应高低电平）；</li>
+<li>关键需求：① 抗干扰（电压变化不易被噪声误判）；② 同步（接收方知道每个比特的起止时间）；③ 低带宽占用（节省传输资源）。</li>
+</ol>
+<h5 id="单极性编码"><a name="单极性编码" class="anchor-navigation-ex-anchor" href="#单极性编码"><i class="fa fa-link" aria-hidden="true"></i></a>单极性编码</h5>
+<p><strong>高电平代表 1，低电平代表 0</strong></p>
+<ol>
+<li>有直流电平：长期高电平会导致导线发热，且需要宽带宽传输（直流信号的低频成分占用带宽）；</li>
+<li>无法同步：连续多个 1 或 0 时，接收方不知道 “每个比特的边界”，必须额外拉一条 “同步线” 传递时钟信号，增加成本。</li>
+</ol>
+<p><img src="assets/image-20251210211757182.png" alt="image-20251210211757182" style="zoom: 33%;"></img></p>
+<h5 id="极化编码"><a name="极化编码" class="anchor-navigation-ex-anchor" href="#极化编码"><i class="fa fa-link" aria-hidden="true"></i></a>极化编码</h5>
+<p><strong>采用正、负两种电压（比如 + 5V 和 - 5V），取消低电平（0V）</strong>，从根源上减轻直流分量（正负电压平均后接近 0V）</p>
+<p>（1）<strong>非归零编码</strong>（NRZ：Non-Return to Zero）—— 基础款，应用广</p>
+<p><strong>每个比特间隙内，信号电平保持不变（不回到 0V）</strong>，直到下一个比特才可能变化。分为两种：NRZ-L 和 NRZ-</p>
+<p>NRZ-L（非归零电平编码） 是 “电平代表比特”</p>
+<p>NRZ-I（非归零反相编码） 是 “翻转代表比特”：<strong>电平翻转代表1，否则代表0</strong></p>
+<p><img src="assets/image-20251210212009131.png" alt="image-20251210212009131" style="zoom:33%;"></img></p>
+<p>（2）<strong>归零编码</strong>（RZ：Return to Zero）—— 同步友好但带宽浪费</p>
+<p><strong>每个比特间隙的中间，信号必须回到 0V</strong>（归零），通过 “跳变方向” 表示 0/1，中间跳变同时实现同步。</p>
+<ul>
+<li>电平：正电平（+5V）、负电平（-5V）、零电平（0V）；</li>
+<li>比特 1：正电平→零电平的跳变（中间归零）；比特 0：负电平→零电平的跳变（中间归零）；</li>
+<li>同步：每个比特中间都有跳变，接收方以跳变作为时钟同步（比如看到跳变就知道 “一个比特结束，下一个开始”）。</li>
+</ul>
+<p><img src="assets/image-20251210212222389.png" alt="image-20251210212222389" style="zoom:33%;"></img></p>
+<p>（3）<strong>双相位编码</strong> —— 同步 + 抗干扰最优，网络核心编码</p>
+<p><strong>每个比特间隙的中间必须跳变（不归零）</strong>，跳变既用于同步，又用于表示比特（或仅用于同步），完美解决同步问题，抗干扰性强。</p>
+<p>分为两种：<strong>曼彻斯特编码（MPE）</strong> 和<strong>差分曼彻斯特编码（DME）</strong></p>
+<table>
+<thead>
+<tr>
+<th>编码类型</th>
+<th>核心规则（同步 + 比特表示）</th>
+<th>优缺点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>曼彻斯特编码（MPE）</td>
+<td>1. 同步：每个比特中间必须跳变（时钟同步）；2. 比特表示：跳变方向决定比特 ———— 负电平→正电平（上升沿）= 比特 1；—— 正电平→负电平（下降沿）= 比特 0；（课件明确约定，不同标准可能相反，但考试按课件记！）</td>
+<td>优点：同步能力强（中间跳变）、抗干扰强（跳变明显，噪声难掩盖）；缺点：带宽占用高（比 NRZ 高一倍，每个比特都有跳变）</td>
+<td>以太网（网线传输）的核心编码！（IEEE 802.3 标准强制要求）</td>
+</tr>
+<tr>
+<td>差分曼彻斯特编码（DME）</td>
+<td>1. 同步：每个比特中间必须跳变（仅用于同步，和比特值无关）；2. 比特表示：比特间隙开始位置是否跳变决定比特 ———— 开始位置有跳变 = 比特 0；—— 开始位置无跳变 = 比特 1；（中间跳变仅同步，不代表比特！）</td>
+<td>优点：抗干扰性比曼彻斯特更强（开始跳变比中间跳变更易识别）；缺点：实现复杂（需要区分 “开始跳变” 和 “中间跳变”）</td>
+<td>令牌环网、工业控制网络（对干扰敏感的场景）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>曼彻斯特编码：中间跳变→既同步又表示比特；<strong>将时钟信号与数据信号通过异或运算融合</strong>，使生成的 MPE 信号自带同步信息 </li>
+</ul>
+<p><img src="assets/image-20251214163837514.png" alt="image-20251214163837514" style="zoom:33%;"></img></p>
+<ul>
+<li>差分曼彻斯特编码：中间跳变→仅同步，开始跳变→表示比特。</li>
+</ul>
+<p><img src="assets/image-20251210212422405.png" alt="image-20251210212422405" style="zoom:33%;"></img></p>
+<p>（4）4B/5B 编码 —— 解决连续 0/1 的终极方案</p>
+<p>4B/5B 编码的目标是 “用 5 个比特表示 4 个比特”，从根源上避免连续 0/1，解决连续0或1导致的同步丢失问
+题；同时提升编码效率。</p>
+<ul>
+<li>映射关系：4 位二进制数（16 种组合）→ 5 位二进制数（32 种组合中选 16 种）；</li>
+<li>选取原则（关键！）：每个 5 比特码组中，<strong>不含多于 3 个连续 0</strong>，且<strong>不少于 2 个 1</strong>（确保有足够的跳变，避免同步丢失）；</li>
+</ul>
+<p><img src="assets/image-20251210212710738.png" alt="image-20251210212710738" style="zoom: 50%;"></img></p>
+<h5 id="双极性编码"><a name="双极性编码" class="anchor-navigation-ex-anchor" href="#双极性编码"><i class="fa fa-link" aria-hidden="true"></i></a>双极性编码</h5>
+<p>和极化编码类似，使用<strong>正、负、零三个电平</strong>，但编码逻辑更侧重 “平衡传输”（正负电平交替，进一步消除直流分量）</p>
+<ul>
+<li>比特 0：零电平（0V）；</li>
+<li>比特 1：正负电平交替出现（比如第一个 1→+5V，第二个 1→-5V，第三个 1→+5V，以此类推）。</li>
+</ul>
+<p>比如：信号交替反转码（AMI：Alternate Mark Inversion）</p>
+<ul>
+<li>编码规则：0→0V；1→+V 和 - V 交替（Mark 代表 1，Inversion 代表反转）；</li>
+<li>改进版：B8ZS（8 零替换）、HDB3（高密度双极性 3 零编码）—— 当出现连续 0 时，用特定的正负电平组合替换（比如 HDB3 用 “+V→0→0→-V” 替换 4 个连续 0），解决同步问题。</li>
+</ul>
+<p><img src="assets/image-20251210212942254.png" alt="image-20251210212942254" style="zoom:33%;"></img></p>
+<h4 id="数字—模拟编码"><a name="数字—模拟编码" class="anchor-navigation-ex-anchor" href="#数字—模拟编码"><i class="fa fa-link" aria-hidden="true"></i></a>数字—模拟编码</h4>
+<p>利用模拟信号表示数字信息的技术；即用模拟信号的三个关键参数（振幅、频率、相位）的变化来代表 0 和 1，这一过程也叫 “调制”（对应英文 “Modulation”）。</p>
+<p>所以根据三个参数的选择分为幅移键控（ASK）；频移键控（FSK）；相移键控（PSK）；正交调幅（QAM）</p>
+<h5 id="幅移键控（ask：amplitude-shift-keying）"><a name="幅移键控（ask：amplitude-shift-keying）" class="anchor-navigation-ex-anchor" href="#幅移键控（ask：amplitude-shift-keying）"><i class="fa fa-link" aria-hidden="true"></i></a>幅移键控（ASK：Amplitude Shift Keying）</h5>
+<p>用振幅变化表示 0/1</p>
+<ul>
+<li>频率和相位不变，只有振幅随 0/1 变化。</li>
+<li>抗干扰能力极差 —— 噪声容易改变信号振幅</li>
+</ul>
+<p><img src="assets/image-20251210213431069.png" alt="image-20251210213431069" style="zoom:33%;"></img></p>
+<h5 id="频移键控（fsk：frequency-shift-keying）"><a name="频移键控（fsk：frequency-shift-keying）" class="anchor-navigation-ex-anchor" href="#频移键控（fsk：frequency-shift-keying）"><i class="fa fa-link" aria-hidden="true"></i></a>频移键控（FSK：Frequency Shift Keying）</h5>
+<p>用频率变化表示 0/1</p>
+<ul>
+<li>振幅和相位不变，只有频率随 0/1 切换。</li>
+<li>抗干扰能力比 ASK 强 —— 噪声很难改变信号频率。但是带宽占用比 ASK 高</li>
+</ul>
+<p><img src="assets/image-20251210213541094.png" alt="image-20251210213541094" style="zoom:33%;"></img></p>
+<h5 id="相移键控（psk：phase-shift-keying）"><a name="相移键控（psk：phase-shift-keying）" class="anchor-navigation-ex-anchor" href="#相移键控（psk：phase-shift-keying）"><i class="fa fa-link" aria-hidden="true"></i></a>相移键控（PSK：Phase Shift Keying）</h5>
+<p>用相位变化表示 0/1</p>
+<ul>
+<li>振幅和频率不变，只有相位随 0/1 跳变。</li>
+</ul>
+<p><img src="assets/image-20251210213641115.png" alt="image-20251210213641115" style="zoom:33%;"></img></p>
+<blockquote>
+<p>[!tip]</p>
+<p>多进制 PSK：</p>
+<p>相位可以有多个角度（比如 0°、90°、180°、270°），每个角度代表一组二进制比特；</p>
+<ol>
+<li>（4-PSK）：0° 相位 → 00；90° 相位 → 01；180° 相位 → 10；270° 相位 → 11；</li>
+<li>（8-PSK）：8 个相位状态（0°、45°、90°…315°），每个状态表示 3 个比特（比如 000、001…111）</li>
+</ol>
+<p>相移键控星座图” 是 PSK 的直观表示：星座图的 “每个点” 代表一个相位状态；星座图越密集（点数越多），每个状态承载的比特数越多，传输效率越高</p>
+<p><img src="assets/image-20251210215257515.png" alt="image-20251210215257515" style="zoom: 25%;"></img></p>
+</blockquote>
+<h5 id="正交调幅（qam：quadrature-amplitude-modulation）"><a name="正交调幅（qam：quadrature-amplitude-modulation）" class="anchor-navigation-ex-anchor" href="#正交调幅（qam：quadrature-amplitude-modulation）"><i class="fa fa-link" aria-hidden="true"></i></a>正交调幅（QAM：Quadrature Amplitude Modulation）</h5>
+<p>QAM 是 “幅移键控 + 相移键控” 的混合技术，同时操控 “振幅” 和 “相位” 两个参数，让每个信号状态承载更多比特 —— 相当于 “双重叠加提升效率”。</p>
+<p><img src="assets/image-20251210215347209.png" alt="image-20251210215347209" style="zoom:33%;"></img></p>
+<p>正交调幅星座图</p>
+<p>QAM 的星座图是 “振幅 - 相位” 的二维分布：</p>
+<ul>
+<li>横轴 / 纵轴：代表不同的相位分量；</li>
+<li>每个点的 “位置”：既体现振幅（离原点的距离），又体现相位（与横轴的夹角）；</li>
+</ul>
+<p>两种16相位QAM星座图：</p>
+<p><img src="assets/image-20251210215419436.png" alt="image-20251210215419436" style="zoom:25%;"></img></p>
+<h4 id="模拟—数字编码"><a name="模拟—数字编码" class="anchor-navigation-ex-anchor" href="#模拟—数字编码"><i class="fa fa-link" aria-hidden="true"></i></a>模拟—数字编码</h4>
+<p>模拟 — 数字编码，本质是 “将连续变化的模拟信号（比如声音、温度、电压），转换成离散的二进制比特流（0/1）”，这个过程也叫 “模数转换（A/D 转换）”。</p>
+<p>模拟 — 数字编码要经过 “采样→量化→编码” 三个不可逆步骤：</p>
+<ul>
+<li>采样 —— 将连续的模拟信号离散化；<strong>采样频率（每秒采样次数）必须大于信号最高频率的 2 倍</strong>；</li>
+<li>量化—— 离散的采样值用2进制位数量化；<strong>量化位数（二进制位数）</strong>—— 量化级的数量 = 2^ 量化位数；</li>
+<li>编码—— 对量化后的数据用2进制编码</li>
+</ul>
+<p>模拟信号→采样点→量化等级→二进制比特流，完成 A/D 编码。</p>
+<p><strong>采样定理:采样频率大于信号最高频率的2倍｡</strong></p>
+<h4 id="模拟-—-模拟编码"><a name="模拟-—-模拟编码" class="anchor-navigation-ex-anchor" href="#模拟-—-模拟编码"><i class="fa fa-link" aria-hidden="true"></i></a>模拟 — 模拟编码</h4>
+<p>本质是 “用一个模拟信号去承载另一个模拟信号”，没有数字化过程，只是对原始模拟信号的参数（振幅、频率）进行调整，方便远距离传输或多信号复用。</p>
+<ul>
+<li>传统有线电视、电话系统等</li>
+<li>“声音信号的频率范围 20Hz~20kHz，主要能量集中在 300Hz~3000Hz”。即放大信号 / 频率搬移</li>
+</ul>
+<h2 id="傅里叶分析与有限带宽信号"><a name="傅里叶分析与有限带宽信号" class="anchor-navigation-ex-anchor" href="#傅里叶分析与有限带宽信号"><i class="fa fa-link" aria-hidden="true"></i></a>傅里叶分析与有限带宽信号</h2>
+<h3 id="傅里叶分析了解即可"><a name="傅里叶分析了解即可" class="anchor-navigation-ex-anchor" href="#傅里叶分析了解即可"><i class="fa fa-link" aria-hidden="true"></i></a>傅里叶分析(了解即可)</h3>
+<ul>
+<li><p><strong>任何复杂的模拟信号，都可以被分解为多个不同频率、振幅、相位的正弦波（简单模拟信号）的叠加</strong>—— 这就是傅里叶分析的核心思想</p>
+</li>
+<li><p>介质带宽（Hz）：传输介质的 “频率通行证”</p>
+</li>
+<li><p>传输介质（网线、光纤、无线电波）只能有效传输 “某一频率范围” 内的信号，这个频率范围就是介质带宽（比如网线的带宽是 100MHz，意味着它能有效传输 0~100MHz 的信号）；</p>
+</li>
+<li><p>本质：介质的物理特性决定（比如导线的电阻、电容会阻碍高频信号传输），超出这个范围的信号会被大幅衰减（信号强度变弱）或失真；</p>
+</li>
+<li><p>有效带宽（Hz）：信号还原的 “最低频率要求”</p>
+</li>
+<li><p>定义：数字信号（或复杂模拟信号）由多个谐波叠加而成，若只传输 “有重要振幅分量” 的谐波（能保证信号还原精度的谐波），这些谐波的最高频率就是有效带宽；</p>
+</li>
+<li><p>通俗理解：有效带宽是 “还原信号所需的最小频率范围”—— 只要介质的带宽≥信号的有效带宽，就能以合理精度还原信号；若介质带宽小于有效带宽，部分关键谐波会被过滤，信号失真；</p>
+</li>
+<li><p>信道：信号传输的 “单向通道”</p>
+</li>
+<li><p>定义：表示 “向某一方向传送信息的媒体”—— 注意 “单向” 是核心（比如从 A 到 B 的网线是一条信道，从 B 到 A 的是另一条信道）；</p>
+</li>
+<li><p>与 “传输介质” 的区别：传输介质是物理载体（比如一根网线），信道是介质上的 “逻辑通道”；</p>
+<ul>
+<li>例：一根网线可以同时承载两条信道（A→B 和 B→A），实现双向通信；</li>
+</ul>
+</li>
+<li><p>信道容量（bps）：传输介质的 “最大传输速度”</p>
+</li>
+<li><p>定义：传输介质在单位时间内可以传输的最大比特数（单位 bps），是衡量介质传输能力的核心指标；</p>
+</li>
+<li>关键影响因素：<ul>
+<li>介质带宽：带宽越大，能传输的谐波越多，信道容量越高（比如光纤带宽远大于铜线，信道容量也远高于铜线）；</li>
+<li>编码技术：相同带宽下，高效编码（比如 QAM、曼彻斯特编码）能提升信道容量（比如 64-QAM 比 2-PSK 的容量高 6 倍）；</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>傅里叶分析→复杂信号由多个谐波组成→需要传输关键谐波（有效带宽）→传输介质的带宽必须≥信号有效带宽（否则失真）→介质带宽 + 编码技术决定信道容量（最大传输速度）。</p>
+</blockquote>
+<h3 id="基带信号和带通信号了解即可"><a name="基带信号和带通信号了解即可" class="anchor-navigation-ex-anchor" href="#基带信号和带通信号了解即可"><i class="fa fa-link" aria-hidden="true"></i></a>基带信号和带通信号(了解即可)</h3>
+<p><strong>基带信号</strong>和<strong>带通信号</strong>，它们的本质区别是 “是否经过载波调制（频谱搬移）”</p>
+<h4 id="基带信号（基本频带信号）"><a name="基带信号（基本频带信号）" class="anchor-navigation-ex-anchor" href="#基带信号（基本频带信号）"><i class="fa fa-link" aria-hidden="true"></i></a>基带信号（基本频带信号）</h4>
+<p>基带信号是<strong>来自信源的原始信号，未经过任何频谱搬移和变换</strong></p>
+<ol>
+<li>包含较多低频成分，甚至有直流分量（0Hz）：<ul>
+<li>直流分量：信号的平均电平不为 0（比如单极性编码的高电平持续存在，相当于直流）；</li>
+<li>低频成分：信号变化缓慢的部分（比如连续多个 0 对应的低电平，频率接近 0）。</li>
+<li>解决方法：发送设备产生一个高频信号作为基波来承载信息信号((基波称为载波信号)</li>
+</ul>
+</li>
+<li>传输受限：许多信道不能传输低频或直流分量 —— 比如无线电波信道、传统电话线信道，会过滤掉低频信号，导致基带信号失真或无法传输。</li>
+</ol>
+<h4 id="带通信号"><a name="带通信号" class="anchor-navigation-ex-anchor" href="#带通信号"><i class="fa fa-link" aria-hidden="true"></i></a>带通信号</h4>
+<p>带通信号是<strong>基带信号经过载波调制后的信号</strong>—— 通过高频载波信号 “承载” 基带信号，让原本不能远距离传输的基带信号，能在特定信道中传输。</p>
+<ul>
+<li>使用载波信号传输基带信号的过程称为调制(modulation)</li>
+</ul>
+<h3 id="奈氏准则"><a name="奈氏准则" class="anchor-navigation-ex-anchor" href="#奈氏准则"><i class="fa fa-link" aria-hidden="true"></i></a>奈氏准则</h3>
+<p>奈氏准则的核心是：<strong>无噪声情况下，信道的最大码元速率（波特率）是信道带宽的 2 倍</strong>，再结合码元状态数，就能算出最大比特率（数据传输率），它为无噪声信道的传输能力划定了理论上限。</p>
+<ol>
+<li><strong>码元</strong>：携带数据信息的最小信号单元，比如一个高电平、一个相位变化、一个频率跳变，都可以是一个码元（相当于 “信号的基本包装单位”）；</li>
+<li><strong>二进制码元</strong>：最基础的码元类型，只有 2 种状态（比如高 = 1、低 = 0），单位时间内的这种信号间隔叫 “码元长度”（比如 1 个码元长度 = 0.125 秒，意味着每秒能传 8 个码元）；</li>
+<li><strong>码元速率（波特率 B）</strong>：每秒传输的码元个数，单位是 “波特（Baud）”，描述的是 “信号单元传输的快慢”（不是数据传输的快慢）。</li>
+</ol>
+<p>公式 1：无噪声信道的最大码元速率（波特率上限）<code>B=2×W(单位：Baud)</code>;<code>W</code> 是信道带宽（单位：Hz），<code>B</code>是最大波特率</p>
+<p>公式 2：无噪声信道的最大比特率（数据传输率上限）<em>S</em>=<em>B</em>×log2<em>N</em>=2×<em>W</em>×log2<em>N</em>(单位：bps)；S 是最大比特率，N 是码元状态数</p>
+<h3 id="香农shannon定理"><a name="香农shannon定理" class="anchor-navigation-ex-anchor" href="#香农shannon定理"><i class="fa fa-link" aria-hidden="true"></i></a>香农(Shannon)定理</h3>
+<p>信道总是要受到噪声的干扰，所以需要使用香农定理弥补奈氏准则</p>
+<p>香农定理的核心是：<strong>有噪声时，信道的最大传输速率（信道容量）由 “信道带宽” 和 “信噪比” 共同决定</strong>，与码元状态数无关，它为现实信道的传输能力划定了理论上限。</p>
+<p>噪声环境中有限带宽介质信道的最大传输速率C与信道带宽和信号噪声功率比之间的关系</p>
+<p><em>C</em>=<em>W</em>×log2(1+<em>S</em>/<em>N</em>)（单位：bps）</p>
+<p><strong>W：信道带宽（Hz）</strong>；<strong>S：平均信号功率（W）</strong>；<strong>N：平均噪声功率（W）</strong></p>
+<ul>
+<li><strong>信噪比（S/N）与分贝（dB）换算</strong></li>
+<li>信噪比（S/N）：信号功率与噪声功率的比值，是 “信号清晰度” 的指标（S/N 越大，信号越清晰）；</li>
+<li>信噪比（dB)=10×log10(S/N)</li>
+</ul>
+<h2 id="多路复用技术"><a name="多路复用技术" class="anchor-navigation-ex-anchor" href="#多路复用技术"><i class="fa fa-link" aria-hidden="true"></i></a>多路复用技术</h2>
+<p>多路复用技术是数据通信的 “资源优化神器”—— 核心逻辑是<strong>用一条物理链路同时传输多路信号</strong>，最大化利用传输介质的带宽，降低通信成本。</p>
+<p>四类核心技术：频分多路复用（FDM）、时分多路复用（TDM，含同步 / 异步）、波分多路复用（WDM）、码分多路复用（CDM）。</p>
+<table>
+<thead>
+<tr>
+<th>技术类型</th>
+<th>核心区分维度</th>
+<th>适用信号</th>
+<th>带宽利用率</th>
+<th>典型场景</th>
+<th>核心特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FDM</td>
+<td>频率划分</td>
+<td>模拟信号为主</td>
+<td>低</td>
+<td>有线电视、广播</td>
+<td>独占子频带，有警戒频带</td>
+</tr>
+<tr>
+<td>TDM - 同步</td>
+<td>固定时间片</td>
+<td>数字信号（连续）</td>
+<td>中</td>
+<td>电话交换机、实时控制</td>
+<td>时间片固定，实时性强</td>
+</tr>
+<tr>
+<td>TDM - 异步</td>
+<td>动态时间片</td>
+<td>数字信号（突发）</td>
+<td>高</td>
+<td>互联网核心交换</td>
+<td>按需分配，利用率高</td>
+</tr>
+<tr>
+<td>WDM</td>
+<td>波长划分（光）</td>
+<td>光信号</td>
+<td>极高</td>
+<td>光纤骨干网</td>
+<td>速率 T 级，抗干扰强</td>
+</tr>
+<tr>
+<td>CDM</td>
+<td>码片序列划分</td>
+<td>数字信号</td>
+<td>高</td>
+<td>3G、卫星通信</td>
+<td>共享频率时间，抗干扰强</td>
+</tr>
+</tbody>
+</table>
+<h3 id="频分多路复用（fdm：frequency-division-multiplexing）"><a name="频分多路复用（fdm：frequency-division-multiplexing）" class="anchor-navigation-ex-anchor" href="#频分多路复用（fdm：frequency-division-multiplexing）"><i class="fa fa-link" aria-hidden="true"></i></a>频分多路复用（FDM：Frequency Division Multiplexing）</h3>
+<ul>
+<li>把物理链路的<strong>总带宽分割成多个互不重叠的子频带</strong>（每个子频带 = 一个独立信道）；</li>
+<li>每个用户独占一个子频带，从通信开始到结束全程占用，不同用户的信号在不同频率上并行传输；</li>
+<li>关键：子频带之间必须留 “警戒频带/隔离频带”（空白频率），避免不同信道的信号相互干扰。</li>
+<li>注意：FDM 的 “带宽” 是<strong>频率带宽</strong>（Hz），不是数据传输率（bps）</li>
+</ul>
+<p><img src="assets/image-20251211221134040.png" alt="image-20251211221134040" style="zoom:33%;"></img></p>
+<h3 id="时分多路复用（tdm：time-division-multiplexing）"><a name="时分多路复用（tdm：time-division-multiplexing）" class="anchor-navigation-ex-anchor" href="#时分多路复用（tdm：time-division-multiplexing）"><i class="fa fa-link" aria-hidden="true"></i></a>时分多路复用（TDM：Time Division Multiplexing）</h3>
+<ul>
+<li>把物理链路的<strong>总传输时间分割成固定长度的 “时间片”</strong>（每个时间片 = 一个独立信道）；</li>
+<li>每个用户轮流占用一个时间片，按顺序循环使用链路</li>
+<li>关键：所有用户共享同一带宽，只是在不同时间占用，适用于数字信号传输。</li>
+<li>仅适用于数字信号（比如 0/1 比特流），因为数字信号是离散的，可在固定时间片内精准传输。</li>
+</ul>
+<p><img src="assets/image-20251211222103665.png" alt="image-20251211222103665" style="zoom:33%;"></img></p>
+<ul>
+<li>时隙周期性出现：每个用户的时间片会按固定周期重复</li>
+<li>共享频带宽度：所有用户在不同时间占用<strong>同样的频带宽度</strong>，只是时间上错开，不会冲突。</li>
+<li>定义：将多个用户的时间片组合成一个 “帧”（比如 A、B、C、D 各 1 个时间片，组成 1 个 TDM 帧）；</li>
+<li>周期：1 个 TDM 帧的长度就是用户时间片的重复周期（比如帧长 = 4ms，用户 A 每 4ms 占用 1 次 1ms 时间片）；</li>
+</ul>
+<h4 id="同步时分多路复用-tdm"><a name="同步时分多路复用-tdm" class="anchor-navigation-ex-anchor" href="#同步时分多路复用-tdm"><i class="fa fa-link" aria-hidden="true"></i></a>同步时分多路复用 TDM</h4>
+<p>时间片分配 “固定不变”</p>
+<ul>
+<li>复用器给每个用户分配<strong>固定数量的时间片</strong>，无论用户是否有数据要传，时间片都预留着，位置固定不变；</li>
+</ul>
+<p><img src="assets/image-20251211222224061.png" alt="image-20251211222224061" style="zoom:33%;"></img></p>
+<ul>
+<li>同步TDM可能浪费资源</li>
+<li>用户 3 只有 c、c 数据，用户 4 只有 d 数据，但同步 TDM 仍为它们预留固定时间片，导致链路资源浪费</li>
+</ul>
+<p><img src="assets/image-20251211222327608.png" alt="image-20251211222327608" style="zoom:33%;"></img></p>
+<h4 id="异步时分多路复用（stdm）"><a name="异步时分多路复用（stdm）" class="anchor-navigation-ex-anchor" href="#异步时分多路复用（stdm）"><i class="fa fa-link" aria-hidden="true"></i></a>异步时分多路复用（STDM）</h4>
+<p>时间片 “按需动态分配”</p>
+<ul>
+<li>又称 “<strong>统计复用</strong>”，复用器不预留固定时间片，只给<strong>有数据要传的用户</strong>分配时间片；</li>
+<li>所以每帧的时间片数量小于输入设备数量；</li>
+<li>数据单元需附带<strong>地址信息</strong>，方便解复用器识别归属；</li>
+</ul>
+<p><img src="assets/image-20251211222443304.png" alt="image-20251211222443304" style="zoom:33%;"></img></p>
+<ul>
+<li>STDM帧 中的时隙不是固定地分配给某个用户，因此每个时隙中还必须要有 <code>用户的地址信息</code>，因此造成开销</li>
+<li>如下图，输出线路上每个时隙之前的 <code>短时隙（白色）</code> 用于存放 <code>用户地址信息</code></li>
+</ul>
+<p><img src="assets/5750110690fb9626e9390f568105d013.png" alt="img" style="zoom: 50%;"></img></p>
+<blockquote>
+<p>[!tip]</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>同步 TDM</th>
+<th>异步 TDM（STDM）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间片分配</td>
+<td>固定不变，为每个用户预留</td>
+<td>按需分配，只给有数据的用户</td>
+</tr>
+<tr>
+<td>帧大小</td>
+<td>固定（时间片数量固定）</td>
+<td>可变（时间片数量随数据量变化）</td>
+</tr>
+<tr>
+<td>资源利用率</td>
+<td>低（空闲时间片浪费）</td>
+<td>高（无空闲浪费）</td>
+</tr>
+<tr>
+<td>实时性</td>
+<td>强（无排队延迟）</td>
+<td>较弱（可能排队等待）</td>
+</tr>
+<tr>
+<td>额外开销</td>
+<td>无（无需地址信息）</td>
+<td>有（数据带地址，需缓存）</td>
+</tr>
+<tr>
+<td>适用数据类型</td>
+<td>连续数据（语音、实时控制）</td>
+<td>突发数据（上网、文件传输）</td>
+</tr>
+<tr>
+<td>核心设备要求</td>
+<td>简单（无需缓存和队列管理）</td>
+<td>复杂（需缓存、队列管理、地址识别）</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr></hr>
+<h3 id="波分多路复用（wdm：wavelength-division-multiplexing）"><a name="波分多路复用（wdm：wavelength-division-multiplexing）" class="anchor-navigation-ex-anchor" href="#波分多路复用（wdm：wavelength-division-multiplexing）"><i class="fa fa-link" aria-hidden="true"></i></a>波分多路复用（WDM：Wavelength Division Multiplexing）</h3>
+<ul>
+<li>本质：FDM 在<strong>光纤通信</strong>中的特殊应用 —— 把 “频率” 换成 “光的波长”；</li>
+<li>用多个激光器产生不同波长的激光（每个波长 = 一个独立信道），将多路光信号调制到不同波长上，通过合波器合并后，在单根光纤中传输；</li>
+<li>同时各个信道之间也有类似于FDM一样的隔离频带</li>
+<li>接收端用分波器将不同波长的光信号分离，分别解调还原数据。</li>
+</ul>
+<p><img src="assets/image-20251211223121055.png" alt="image-20251211223121055" style="zoom:33%;"></img></p>
+<h3 id="码分多路复用（cdm：code-division-multiplexing）"><a name="码分多路复用（cdm：code-division-multiplexing）" class="anchor-navigation-ex-anchor" href="#码分多路复用（cdm：code-division-multiplexing）"><i class="fa fa-link" aria-hidden="true"></i></a>码分多路复用（CDM：Code Division Multiplexing）</h3>
+<p>码分多路复用（又称码分多址复用，CDMA）是一种<strong>所有用户共享同一频率和带宽，仅通过 “独特码型” 区分信号</strong>的复用技术，核心是 “码片序列的正交性”。</p>
+<ul>
+<li><p>码分多路复用又称码分多址复用CDMA</p>
+</li>
+<li><p><strong>码片</strong>：将每个比特的传输时间细分为<code>m</code>个更短的时间间隔（课件中<code>m=8</code>），每个间隔称为 1 个 “码片”；</p>
+</li>
+<li><strong>码片序列</strong>：为每个用户分配一个长度为<code>m</code>的二进制码（课件中站点 A 的码片序列是<code>0 0 0 1 1 0 1 1</code>）；</li>
+<li><strong>双极型表示</strong>：为了计算正交性，将码片中的<code>0</code>映射为<code>-1</code>、<code>1</code>映射为<code>+1</code>（课件中 A 的双极型码片序列是<code>-1 -1 -1 +1 +1 -1 +1 +1</code>）。</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>CDMA 的关键是<strong>不同用户的码片序列相互正交</strong>，即两个不同用户的码片序列做 “内积运算” 结果为 0。</p>
+<ul>
+<li><strong>内积运算规则</strong>：两个码片序列对应位置的元素相乘，再求和，最后除以码片长度<code>m</code>；</li>
+<li><strong>正交性定义</strong>：若用户 X 和 Y 的码片序列内积为 0，则两者正交（信号互不干扰）；若内积为 1，则是同一用户的信号；若内积为 - 1，则是该用户的反码（对应发送比特 0）。</li>
+</ul>
+</blockquote>
+<p>信号发送规则(站点A （0 0 0 1 1 0 1 1）)</p>
+<ul>
+<li>发送比特<code>1</code>：发送自身的双极型码片序列（如站点 A 发送<code>-1 -1 -1 +1 +1 -1 +1 +1</code>）；</li>
+<li>发送比特<code>0</code>：发送自身码片序列的反码（如站点 A 的反码是<code>+1 +1 +1 -1 -1 +1 -1 -1</code>）。</li>
+</ul>
+<p><img src="assets/v2-39fb72339d3ceda37656720cf327e0cd_r.jpg" alt="img" style="zoom:33%;"></img></p>
+<h2 id="数据交换技术"><a name="数据交换技术" class="anchor-navigation-ex-anchor" href="#数据交换技术"><i class="fa fa-link" aria-hidden="true"></i></a>数据交换技术</h2>
+<ul>
+<li>当网络中有大量设备时，不可能每两台设备都直接连接物理链路（成本极高）</li>
+<li>数据交换技术的核心是通过<strong>中间设备</strong>（交换机、路由器）为设备间<strong>临时建立通信路径</strong>，实现<strong>无直接物理连接</strong>（没有物理链路直接连接）的设备互通。</li>
+</ul>
+<p>三种基本交换方式</p>
+<table>
+<thead>
+<tr>
+<th>交换方式</th>
+<th>核心特征</th>
+<th>延迟</th>
+<th>链路利用率</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>电路交换</td>
+<td>独占物理链路</td>
+<td>最小（实时）</td>
+<td>低</td>
+<td>语音通话、视频会议（实时通信）</td>
+</tr>
+<tr>
+<td>报文交换</td>
+<td>存储完整报文转发</td>
+<td>最大</td>
+<td>中</td>
+<td>早期电报（已淘汰）</td>
+</tr>
+<tr>
+<td>分组交换</td>
+<td>存储分组转发</td>
+<td>中</td>
+<td>高</td>
+<td>互联网、文件传输、手机数据（突发 / 非实时通信）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="assets/image-20251212144108629.png" alt="image-20251212144108629" style="zoom:33%;"></img></p>
+<p>其它交换技术： ATM交换（信元交换）；帧中继</p>
+<h3 id="电路交换"><a name="电路交换" class="anchor-navigation-ex-anchor" href="#电路交换"><i class="fa fa-link" aria-hidden="true"></i></a>电路交换</h3>
+<ul>
+<li>电路交换是<strong>早期通信网络的核心交换技术</strong>，核心逻辑是 “为通信双方建立一条临时<strong>独占</strong>的物理链路”</li>
+<li>通信前，在两个设备之间建立一条<strong>完全独占的物理通路</strong></li>
+<li>电路交换机可以理解为 “可动态切换的多路开关”—— 通过切换开关位置，为不同设备对（如 A-B、B-C）接通对应的物理链路。</li>
+</ul>
+<p>电路交换过程包括：电路建立、数据传输、电路拆除</p>
+<p><img src="assets/image-20251212143836122.png" alt="image-20251212143836122" style="zoom:33%;"></img></p>
+<h3 id="报文交换"><a name="报文交换" class="anchor-navigation-ex-anchor" href="#报文交换"><i class="fa fa-link" aria-hidden="true"></i></a>报文交换</h3>
+<p>报文交换是<strong>第二代数据交换技术</strong>，核心标签就是你提到的<strong>存储转发</strong>—— 它彻底改变了电路交换 “独占链路” 的模式，也是分组交换技术的前身。</p>
+<ul>
+<li>通信双方不需要提前建立物理通路，发送方直接将完整的<strong>报文</strong>（发送到网络中。</li>
+<li>网络中的中间节点（如交换机、路由器）收到完整报文后，先将其<strong>全部存入本地缓存</strong>；然后校验转发</li>
+<li><strong>传输延迟极大</strong>：中间节点必须等待<strong>整个报文完全接收并校验完毕</strong>，才能开始转发。</li>
+<li>同时报文错误后，重传的代价很大，必须传递整个大报文</li>
+</ul>
+<h3 id="分组交换"><a name="分组交换" class="anchor-navigation-ex-anchor" href="#分组交换"><i class="fa fa-link" aria-hidden="true"></i></a>分组交换</h3>
+<p>分组交换的核心是<strong>将较长的报文拆分为较短的数据包，以包为单位存储转发</strong></p>
+<ul>
+<li>在报文交换的基础上，将完整的长报文拆分成若干个<strong>等长的短数据单元</strong>。</li>
+<li>给每个短数据单元<strong>附加通信控制信息</strong>，最终形成一个独立的<strong>分组（Packet）</strong>。比如源IP，目的IP，分组编号以及校验码等</li>
+<li>包长度一般比报文短得多，只要包到达后就可以转发，不必等待报文全部到达，缩短传输延迟；类似于”流水线“</li>
+<li>同时<strong>容错性强</strong>：单个分组传输失败（比如丢失、损坏），只需重传这一个分组，无需重传整个报文</li>
+</ul>
+<p>分组交换的两种类型</p>
+<ol>
+<li><p>数据报：无连接、独立传输的 “自由分组”</p>
+<blockquote>
+<p>核心就是 <strong>“每个分组独立处理，链路共享，乱序到达”</strong>。</p>
+<ul>
+<li><strong>每个包独立于其他包处理</strong></li>
+<li><strong>任何一条链路可同时为多对设备服务</strong></li>
+<li><strong>分组乱序到达，传输层负责重新排序</strong></li>
+</ul>
+<p><img src="assets/image-20251212144950588.png" alt="image-20251212144950588" style="zoom:25%;"></img></p>
+</blockquote>
+</li>
+<li><p>虚电路：有连接、有序传输的 “逻辑专线”</p>
+<blockquote>
+<p>虚电路是 <strong>“分组交换 + 电路交换” 的结合体 </strong>;核心是 “维持同一次通信的所有包的关系，<strong>提前选定路径</strong>”</p>
+<ul>
+<li><strong>同一次通信的所有包维持关系，提前选定路径</strong></li>
+<li><strong>传输分组时仅需携带虚电路号，减少开销</strong></li>
+</ul>
+<p>虚电路与电路交换的本质区别：</p>
+<p>| 对比维度 | 虚电路（分组交换）                                           | 电路交换                                                   |
+| -------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| 链路性质 | 建立的是<strong>逻辑路径</strong>，同一物理链路可同时承载多条虚电路（链路共享） | 建立的是<strong>物理独占链路</strong>，链路只能被一对设备使用           |
+| 资源占用 | 仅在传输分组时占用链路，无分组传输时链路可分配给其他虚电路   | 通信全程独占链路，即使无数据传输，链路也无法被其他设备使用 |
+| 技术归属 | 属于分组交换，基于 “存储 - 转发” 机制                        | 属于电路交换，无存储转发，直接比特流传输                   |</p>
+<p>同时根据虚电路的存在时间，分为<strong>交换虚电路（SVC）</strong> 和<strong>永久虚电路（PVC）</strong>，两者的核心区别是 “是否按需创建”。</p>
+<ul>
+<li>交换虚电路（SVC）:<strong>按需创建，用完即删</strong>。</li>
+<li>永久虚电路（PVC）：<strong>长期存在，固定分配</strong>。</li>
+</ul>
+<p>优点：分组有序到达，无需传输层排序；控制信息开销小；延迟稳定，通信质量可控</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<p>分组交换 vs 电路交换：</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>电路交换</th>
+<th>分组交换</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>链路占用方式</td>
+<td>独占物理链路，通信全程专用</td>
+<td>共享链路，多路分组穿插传输</td>
+</tr>
+<tr>
+<td>资源利用率</td>
+<td>极低（空闲时链路浪费）</td>
+<td>极高（链路始终高效利用）</td>
+</tr>
+<tr>
+<td>拥塞 / 流量控制</td>
+<td>无，要么通要么断</td>
+<td>有，缓存排队导致延迟增大</td>
+</tr>
+<tr>
+<td>通信模式支持</td>
+<td>仅支持点对点通信</td>
+<td>支持点对点、广播、多播</td>
+</tr>
+<tr>
+<td>设备兼容性</td>
+<td>仅支持同类、同速率设备</td>
+<td>支持异构设备（电脑 / 手机 / 传感器等）</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>语音通话、视频会议等<strong>实时性要求极高</strong>的业务</td>
+<td>网页浏览、文件下载、直播等<strong>突发式、非实时</strong>的业务</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h2 id="错误检测编码"><a name="错误检测编码" class="anchor-navigation-ex-anchor" href="#错误检测编码"><i class="fa fa-link" aria-hidden="true"></i></a>错误检测编码</h2>
+<p>错误检测编码的本质是<strong>通过添加冗余码，建立 “原始数据” 和 “校验信息” 的关联规则</strong>，以此判断数据在传输过程中是否发生失真。</p>
+<ul>
+<li><strong>发送方操作：添加冗余码</strong>，按照<strong>预设的校验规则</strong>计算出一段<strong>冗余码</strong>，将数据和冗余码一起发送</li>
+<li><strong>接收方操作：规则校验</strong>：接收方收到 “原始数据 + 冗余码” 后，<strong>使用和发送方完全相同的校验规则</strong>重新计算；</li>
+<li><strong>编码效率</strong>：数据信息在整个发送信息中的比重，即<em>R</em>=<em>n/k</em>=原始数据比特数/(原始数据比特数+冗余码比特数)；</li>
+</ul>
+<p>检错码 vs 纠错码</p>
+<ul>
+<li>检错码：只 “查错” 不 “纠错”，即给发送信息加上冗余位，使其具备检错功能，所以检测到错误后，一般通过<strong>重传机制</strong>请求发送方重新传输数据</li>
+<li>纠错码：既 “查错” 又 “纠错”，即能检错，同时能纠正错误的冗余码</li>
+</ul>
+<p>数据在传输中受电磁干扰、信号衰减等影响，会出现不同类型的比特错误，将其分为三类</p>
+<ol>
+<li>单比特错误：同一传输单元中，<strong>仅有 1 个比特位发生翻转</strong>；</li>
+<li>多比特错误：同一传输单元中，<strong>有 2 个及以上不连续的比特位发生翻转</strong>；</li>
+<li>突发错误：同一传输单元中，<strong>连续多个比特位发生翻转</strong>，是实际传输中<strong>最常见的错误类型</strong></li>
+</ol>
+<h3 id="奇偶校验码"><a name="奇偶校验码" class="anchor-navigation-ex-anchor" href="#奇偶校验码"><i class="fa fa-link" aria-hidden="true"></i></a>奇偶校验码</h3>
+<p>奇偶校验码是最简单、最常用的检错码，核心是通过<strong>添加 1 位校验位</strong>，让数据中 “1” 的个数满足 “奇数” 或 “偶数” 规则，以此检测传输错误。</p>
+<ol>
+<li>偶校验：让 <code>数据单元 + 校验位</code> 中 <strong>“1” 的总数为偶数</strong>；<em>r</em>=<em>b</em>1⊕<em>b</em>2⊕<em>b</em>3⊕⋯⊕<em>bm</em></li>
+<li>奇校验：让 <code>数据单元 + 校验位</code> 中 <strong>“1” 的总数为奇数</strong>；<em>r</em>=<em>b</em>1⊕<em>b</em>2⊕<em>b</em>3⊕⋯⊕<em>b</em>m⊕1`即在偶校验结果的基础上<strong>异或 1</strong>，翻转结果的奇偶性；</li>
+</ol>
+<p>发送方发送数据时，连同校验位<code>r</code>一起发送；接收方根据结果，判断是否发生差错</p>
+<p>当传输<strong>多块数据</strong>时，单一的 “逐块校验”（垂直校验）检错能力有限，因此衍生出水平校验和纵横校验</p>
+<ol>
+<li>垂直（纵向）偶校验：<strong>对每一块数据单独计算校验位</strong>，附加在该块数据的末尾；</li>
+</ol>
+<p><img src="assets/image-20251213214941684.png" alt="image-20251213214941684" style="zoom:50%;"></img></p>
+<ol>
+<li>水平(横向)偶校验：<strong>对多块数据的 “相同位置比特” 进行偶校验</strong>，生成 1 个 “水平校验块”；</li>
+</ol>
+<p><img src="assets/image-20251213215015868.png" alt="image-20251213215015868" style="zoom:50%;"></img></p>
+<ol>
+<li>水平垂直（纵横）偶校验：<strong>同时做垂直校验和水平校验</strong>，形成 “数据矩阵 + 校验矩阵”；</li>
+</ol>
+<p><img src="assets/image-20251213215055927.png" alt="image-20251213215055927" style="zoom:50%;"></img></p>
+<p>奇偶校验码<strong>只能检错，不能纠错</strong>，不同校验方式的检错能力差异很大：</p>
+<table>
+<thead>
+<tr>
+<th>校验方式</th>
+<th>能检测的错误</th>
+<th>不能检测的错误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>垂直偶校验</strong></td>
+<td>1. 单个数据单元内的<strong>单比特错误</strong>（1 个比特翻转）2. 单个数据单元内的<strong>奇数个比特错误</strong>（如 3、5 个比特翻转）</td>
+<td>1. 单个数据单元内的<strong>偶数个比特错误</strong>（如 2、4 个比特翻转，奇偶性不变）2. 跨数据块的同一位错误</td>
+</tr>
+<tr>
+<td><strong>水平偶校验</strong></td>
+<td>1. 多块数据中<strong>同一位的奇数个错误</strong>（如块 1、块 3 的第 2 位同时翻转，共 2 个？不，奇数个：块 1、块 3、块 4 的第 2 位翻转，共 3 个）2. 单个数据单元内的<strong>突发错误</strong>（连续多个比特翻转，若总数为奇数）</td>
+<td>1. 多块数据中同一位的<strong>偶数个错误</strong>2. 同一数据单元内的偶数个比特错误</td>
+</tr>
+<tr>
+<td><strong>水平垂直（纵横）偶校验</strong></td>
+<td>几乎所有错误：1. 单比特 / 奇数个比特错误2. 跨块同一位错误3. 大部分突发错误</td>
+<td><strong>唯一漏检情况</strong>：数据块中 <strong>偶数个数据单元</strong> 的 <strong>偶数个相同位</strong> 同时出错（比如块 1 和块 2 的第 2、3 位同时翻转，共 2 个单元 ×2 个比特 = 4 个错误，奇偶性不变）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="循环冗余校验码（crc）"><a name="循环冗余校验码（crc）" class="anchor-navigation-ex-anchor" href="#循环冗余校验码（crc）"><i class="fa fa-link" aria-hidden="true"></i></a>循环冗余校验码（CRC）</h3>
+<p>CRC 的本质是<strong>基于 “模 2 除法” 的余数校验</strong></p>
+<ol>
+<li>通信双方提前约定一个<strong>生成多项式Gx)</strong>（相当于校验规则）；如 G(x)=x^4+x^3+1=11001，即m=4</li>
+<li>发送方将待发送数据 <em>U</em>(<em>x</em>) 左移 <em>m</em> 位（<em>m</em> 是 <em>G</em>(<em>x</em>) 的最高阶数），再用模 2 除法除以 <em>G</em>(<em>x</em>)，得到 <em>m</em> 位余数 <em>R</em>(<em>x</em>)；</li>
+<li>发送方将余数 <em>R</em>(<em>x</em>) 拼接在原始数据 <em>U</em>(<em>x</em>) 末尾，形成完整传输数据；</li>
+<li>接收方用同样的<em>G</em>(<em>x</em>)对收到的完整数据做模 2 除法：<ul>
+<li>若余数为 <strong>0</strong> → 判定数据传输无误；</li>
+<li>若余数不为 <strong>0</strong> → 判定数据传输出错。</li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20251213215429645.png" alt="image-20251213215429645"></img></p>
+<p>接收方收到 <code>11010111010</code> 后，用 <em>G</em>(<em>x</em>)=11001 做模 2 除法：</p>
+<blockquote>
+<p>[!tip]</p>
+<p>明确 CRC 的除法是<strong>无借位的模 2 法则</strong>，和我们日常的十进制除法完全不同，规则如下：</p>
+<ol>
+<li><p><strong>模 2 加法 / 减法</strong>：等价于<strong>异或运算</strong>，规则：相同为 0，不同为 1。</p>
+</li>
+<li><p>被除数的<strong>最高位与除数对齐</strong>，从高位开始逐位计算；</p>
+</li>
+<li><p>若被除数当前最高位是 <strong>1</strong>：用除数与被除数对应位做<strong>模 2 减法（异或）</strong>，得到新的被除数；</p>
+</li>
+<li><p>若被除数当前最高位是 <strong>0</strong>：用全 0 序列与被除数对应位做异或，得到新的被除数；</p>
+</li>
+<li><p>重复上述步骤，直到被除数的长度<strong>小于除数长度</strong>，此时的被除数就是余数 <em>R</em>(<em>x</em>)。余数长度<strong>必须等于 G(x) 的最高阶 m</strong>，不足时高位补 0；</p>
+</li>
+</ol>
+</blockquote>
+<p>CRC 的检错能力由<strong>生成多项式 G(x) 的最高阶 r</strong> 决定</p>
+<ol>
+<li><strong>能检测出所有奇数位的突发性错误</strong>：无论错误比特数是 3、5、7 等奇数，CRC 都能 100% 检测；</li>
+<li><strong>能检测出所有长度小于 r 的突发性错误</strong>：比如 <em>r</em>=4，长度 1~3 位的连续错误，100% 检测；</li>
+<li><strong>检测长度为 r+1 的突发性错误的概率为(2^r-1)/2^r</strong>：比如 <em>r</em>=4，长度 5 位的突发错误，检测概率为 15/16=93.75%；</li>
+<li><strong>检测长度大于r+1 的突发性错误的概率为(2^r-1)/2^r </strong>：概率同样极高。</li>
+</ol>
+<p><strong>CRC-32</strong> 是应用最广的标准，生成多项式为：</p>
+<p><img src="assets/image-20251213215920245.png" alt="image-20251213215920245"></img></p>
+<h3 id="校验和"><a name="校验和" class="anchor-navigation-ex-anchor" href="#校验和"><i class="fa fa-link" aria-hidden="true"></i></a>校验和</h3>
+<p> 发送方通过 “求和 + 取反” 生成校验和，接收方通过 “求和 + 校验” 判断数据是否出错，核心规则是<strong>二进制加法 + 进位循环 + 按位取反</strong>。</p>
+<p><strong>数据分段</strong>：待传输的数据被分成 <strong>4 个 8 比特（1 字节）的数据段</strong>；整个数据单元分成大小都为n（一般为16）</p>
+<ul>
+<li>加法：<strong>二进制无符号加法</strong>，产生的进位需<strong>循环加到结果的最低位</strong>（这是校验和的关键规则即<strong>反码加法</strong>）；</li>
+<li>取反：<strong>按位取反</strong>，0 变 1，1 变 0；</li>
+<li>校验准则：接收方将所有数据段 + 校验和求和，若结果为 <strong>全 1（8 比特则为<code>11111111</code>）</strong>，判定数据无错。</li>
+</ul>
+<p>对于发送方：</p>
+<p><strong>“4 个数据段求和 → 处理进位 → 取反得到校验和”</strong></p>
+<ol>
+<li>4 个数据段逐次二进制求和（含进位循环）</li>
+<li>溢出的进位需要<strong>循环加到 8 位结果的最低位</strong>即<strong>反码加法</strong></li>
+<li>按位取反，得到校验和</li>
+</ol>
+<p>对于接收方：</p>
+<p><strong>“4 个数据段 + 校验和求和 → 处理进位 → 判断是否全 1”</strong></p>
+<ol>
+<li>接收方收到 4 个数据段和校验和后，执行与发送方相同的二进制加法，包括<strong>进位循环</strong>：</li>
+<li>(数据段总和+校验和)=(数据段总和)+~(数据段总和)；所以将数据和加上校验和判断是否为全<code>1</code></li>
+</ol>
+<p><img src="assets/image-20251213220716461.png" alt="image-20251213220716461" style="zoom: 33%;"></img></p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 02_数据通信基础</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_概述.html" class="navigation navigation-prev " aria-label="Previous page: 01_概述">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_物理层.html" class="navigation navigation-next " aria-label="Next page: 03_物理层">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02_数据通信基础","level":"1.7.2","depth":2,"next":{"title":"03_物理层","level":"1.7.3","depth":2,"path":"docs/Computer_Networking/03_物理层.md","ref":"docs/Computer_Networking/03_物理层.md","articles":[]},"previous":{"title":"01_概述","level":"1.7.1","depth":2,"path":"docs/Computer_Networking/01_概述.md","ref":"docs/Computer_Networking/01_概述.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Computer_Networking/02_数据通信基础.md","mtime":"2026-03-09T01:44:20.177Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,3100 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>02_关系模型 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03_SQL.html" />
+    
+    
+    <link rel="prev" href="01_引言.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="01_引言.html">
+            
+                <a href="01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="02_关系模型.html">
+            
+                <a href="02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="03_SQL.html">
+            
+                <a href="03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="04_SQL进阶.html">
+            
+                <a href="04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="05_高级SQL.html">
+            
+                <a href="05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="06_E-R模型.html">
+            
+                <a href="06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="07_关系数据库设计.html">
+            
+                <a href="07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="08_事务.html">
+            
+                <a href="08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="09_并发控制.html">
+            
+                <a href="09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >02_关系模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#关系模型导论"><b></b>关系模型导论</a></li><ul><li><span class="title-icon "></span><a href="#属性（attributes）"><b></b>属性（attributes）</a></li><li><span class="title-icon "></span><a href="#关系模式和关系实例"><b></b>关系模式和关系实例</a></li><ul><li><span class="title-icon "></span><a href="#关系模式（relation-schema）"><b></b>关系模式（Relation Schema）</a></li><li><span class="title-icon "></span><a href="#关系实例（relation-instance）"><b></b>关系实例（Relation Instance）</a></li></ul><li><span class="title-icon "></span><a href="#关系（relation）"><b></b>关系（relation）</a></li><li><span class="title-icon "></span><a href="#码键（keys）"><b></b>码/键（keys）</a></li><li><span class="title-icon "></span><a href="#elational-query-languages（关系查询语言）"><b></b>elational Query Languages（关系查询语言）</a></li></ul><li><span class="title-icon "></span><a href="#关系代数relational-algebra"><b></b>关系代数(Relational Algebra)</a></li><ul><li><span class="title-icon "></span><a href="#选择运算（select-operation）"><b></b>选择运算（Select Operation）</a></li><li><span class="title-icon "></span><a href="#投影运算（project-operation）"><b></b>投影运算（Project Operation）</a></li><li><span class="title-icon "></span><a href="#并运算（union-operation）"><b></b>并运算（Union Operation）</a></li><li><span class="title-icon "></span><a href="#差运算（set-difference-operation）"><b></b>差运算（Set Difference Operation）</a></li><li><span class="title-icon "></span><a href="#笛卡尔积（cartesian-product-operation）"><b></b>笛卡尔积（Cartesian-Product Operation）</a></li><li><span class="title-icon "></span><a href="#重命名运算（配合笛卡尔积使用）"><b></b>重命名运算（配合笛卡尔积使用）</a></li><li><span class="title-icon "></span><a href="#自连接对比--集合差"><b></b>自连接对比 + 集合差</a></li></ul><li><span class="title-icon "></span><a href="#关系代数的附加运算（additional-operations）"><b></b>关系代数的附加运算（Additional Operations）</a></li><ul><li><span class="title-icon "></span><a href="#集合交运算（set-intersection-operation）"><b></b>集合交运算（Set-Intersection Operation）</a></li><li><span class="title-icon "></span><a href="#连接运算（join-operation）"><b></b>连接运算（Join Operation）</a></li><ul><li><span class="title-icon "></span><a href="#笛卡尔积的冗余"><b></b>笛卡尔积的冗余</a></li><li><span class="title-icon "></span><a href="#连接运算（θ--连接）的正式定义与符号"><b></b>连接运算（θ- 连接）的正式定义与符号</a></li></ul><li><span class="title-icon "></span><a href="#自然连接运算（natural-join-operation）"><b></b>自然连接运算（Natural-Join Operation）</a></li><li><span class="title-icon "></span><a href="#除法运算（division-operation）"><b></b>除法运算（Division Operation）</a></li><li><span class="title-icon "></span><a href="#赋值运算（assignment-operation）"><b></b>赋值运算（Assignment Operation）</a></li></ul><li><span class="title-icon "></span><a href="#扩展关系代数运算（extended-relational-algebra-operations）"><b></b>扩展关系代数运算（Extended Relational-Algebra Operations）</a></li><ul><li><span class="title-icon "></span><a href="#广义投影（generalized-projection）"><b></b>广义投影（Generalized Projection）</a></li><li><span class="title-icon "></span><a href="#聚集函数与聚集运算（aggregate-functions-and-operations）"><b></b>聚集函数与聚集运算（Aggregate Functions and Operations）</a></li><ul><li><span class="title-icon "></span><a href="#聚集函数（aggregate-functions）"><b></b>聚集函数（Aggregate Functions）</a></li><li><span class="title-icon "></span><a href="#聚集运算（aggregate-operation）"><b></b>聚集运算（Aggregate Operation）</a></li></ul><li><span class="title-icon "></span><a href="#外连接（outer-join）"><b></b>外连接（Outer Join）</a></li><ul><li><span class="title-icon "></span><a href="#1-左外连接（left-outer-join）：保留左表所有行"><b></b>1. 左外连接（Left Outer Join）：保留左表所有行</a></li><li><span class="title-icon "></span><a href="#2-右外连接（right-outer-join）：保留右表所有行"><b></b>2. 右外连接（Right Outer Join）：保留右表所有行</a></li><li><span class="title-icon "></span><a href="#3-全外连接（full-outer-join）：保留两侧所有行"><b></b>3. 全外连接（Full Outer Join）：保留两侧所有行</a></li></ul></ul><li><span class="title-icon "></span><a href="#null-值（null-values）"><b></b>NULL 值（Null Values）</a></li><ul><ul><li><span class="title-icon "></span><a href="#算术运算：含-null-的表达式结果必为-null"><b></b>算术运算：含 NULL 的表达式结果必为 NULL</a></li><li><span class="title-icon "></span><a href="#聚集函数：自动忽略-null-值"><b></b>聚集函数：自动忽略 NULL 值</a></li><li><span class="title-icon "></span><a href="#去重（duplicate-elimination）与分组（grouping）：null-视为相同值"><b></b>去重（Duplicate Elimination）与分组（Grouping）：NULL 视为相同值</a></li></ul><li><span class="title-icon "></span><a href="#null-值的比较逻辑：三值逻辑（three-valued-logic）"><b></b>NULL 值的比较逻辑：三值逻辑（Three-Valued Logic）</a></li></ul><li><span class="title-icon "></span><a href="#修改关系代数（modification-of-the-database）"><b></b>修改关系代数（Modification of the Database）</a></li><ul><li><span class="title-icon "></span><a href="#删除操作（deletion）"><b></b>删除操作（Deletion）</a></li><li><span class="title-icon "></span><a href="#插入操作（insertion）"><b></b>插入操作（Insertion）</a></li><li><span class="title-icon "></span><a href="#更新操作（updating）"><b></b>更新操作（Updating）</a></li></ul></ul></div><a href="#关系模型导论" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#关系模型导论">关系模型导论</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#属性（attributes）">属性（attributes）</a><i></i></div></li>
+<li><div><a href="#关系模式和关系实例">关系模式和关系实例</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#关系模式（relation-schema）">关系模式（Relation Schema）</a><i></i></div></li>
+<li><div><a href="#关系实例（relation-instance）">关系实例（Relation Instance）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#关系（relation）">关系（relation）</a><i></i></div></li>
+<li><div><a href="#码键（keys）">码/键（keys）</a><i></i></div></li>
+<li><div><a href="#elational-query-languages（关系查询语言）">elational Query Languages（关系查询语言）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#关系代数relational-algebra">关系代数(Relational Algebra)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#选择运算（select-operation）">选择运算（Select Operation）</a><i></i></div></li>
+<li><div><a href="#投影运算（project-operation）">投影运算（Project Operation）</a><i></i></div></li>
+<li><div><a href="#并运算（union-operation）">并运算（Union Operation）</a><i></i></div></li>
+<li><div><a href="#差运算（set-difference-operation）">差运算（Set Difference Operation）</a><i></i></div></li>
+<li><div><a href="#笛卡尔积（cartesian-product-operation）">笛卡尔积（Cartesian-Product Operation）</a><i></i></div></li>
+<li><div><a href="#重命名运算（配合笛卡尔积使用）">重命名运算（配合笛卡尔积使用）</a><i></i></div></li>
+<li><div><a href="#自连接对比--集合差">自连接对比 + 集合差</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#关系代数的附加运算（additional-operations）">关系代数的附加运算（Additional Operations）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#集合交运算（set-intersection-operation）">集合交运算（Set-Intersection Operation）</a><i></i></div></li>
+<li><div><a href="#连接运算（join-operation）">连接运算（Join Operation）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#笛卡尔积的冗余">笛卡尔积的冗余</a><i></i></div></li>
+<li><div><a href="#连接运算（θ--连接）的正式定义与符号">连接运算（θ- 连接）的正式定义与符号</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#自然连接运算（natural-join-operation）">自然连接运算（Natural-Join Operation）</a><i></i></div></li>
+<li><div><a href="#除法运算（division-operation）">除法运算（Division Operation）</a><i></i></div></li>
+<li><div><a href="#赋值运算（assignment-operation）">赋值运算（Assignment Operation）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#扩展关系代数运算（extended-relational-algebra-operations）">扩展关系代数运算（Extended Relational-Algebra Operations）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#广义投影（generalized-projection）">广义投影（Generalized Projection）</a><i></i></div></li>
+<li><div><a href="#聚集函数与聚集运算（aggregate-functions-and-operations）">聚集函数与聚集运算（Aggregate Functions and Operations）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#聚集函数（aggregate-functions）">聚集函数（Aggregate Functions）</a><i></i></div></li>
+<li><div><a href="#聚集运算（aggregate-operation）">聚集运算（Aggregate Operation）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#外连接（outer-join）">外连接（Outer Join）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1-左外连接（left-outer-join）：保留左表所有行">1. 左外连接（Left Outer Join）：保留左表所有行</a><i></i></div></li>
+<li><div><a href="#2-右外连接（right-outer-join）：保留右表所有行">2. 右外连接（Right Outer Join）：保留右表所有行</a><i></i></div></li>
+<li><div><a href="#3-全外连接（full-outer-join）：保留两侧所有行">3. 全外连接（Full Outer Join）：保留两侧所有行</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#null-值（null-values）">NULL 值（Null Values）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#算术运算：含-null-的表达式结果必为-null">算术运算：含 NULL 的表达式结果必为 NULL</a><i></i></div></li>
+<li><div><a href="#聚集函数：自动忽略-null-值">聚集函数：自动忽略 NULL 值</a><i></i></div></li>
+<li><div><a href="#去重（duplicate-elimination）与分组（grouping）：null-视为相同值">去重（Duplicate Elimination）与分组（Grouping）：NULL 视为相同值</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#null-值的比较逻辑：三值逻辑（three-valued-logic）">NULL 值的比较逻辑：三值逻辑（Three-Valued Logic）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#（1）or-运算（逻辑或）：只要有一个为真，结果为真；全为假则为假；否则为未知">（1）OR 运算（逻辑或）：只要有一个为真，结果为真；全为假则为假；否则为未知</a><i></i></div></li>
+<li><div><a href="#（2）and-运算（逻辑与）：只有全为真，结果为真；有一个为假则为假；否则为未知">（2）AND 运算（逻辑与）：只有全为真，结果为真；有一个为假则为假；否则为未知</a><i></i></div></li>
+<li><div><a href="#（3）not-运算（逻辑非）：取反；未知的非仍为未知">（3）NOT 运算（逻辑非）：取反；未知的非仍为未知</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#修改关系代数（modification-of-the-database）">修改关系代数（Modification of the Database）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#删除操作（deletion）">删除操作（Deletion）</a><i></i></div></li>
+<li><div><a href="#插入操作（insertion）">插入操作（Insertion）</a><i></i></div></li>
+<li><div><a href="#更新操作（updating）">更新操作（Updating）</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="关系模型导论"><a name="关系模型导论" class="anchor-navigation-ex-anchor" href="#关系模型导论"><i class="fa fa-link" aria-hidden="true"></i></a>关系模型导论</h1>
+<p><img src="assets/2288178-20220710180358291-1092618611-1764064352433-1.png" alt="img" style="zoom:50%;"></img></p>
+<h2 id="属性（attributes）"><a name="属性（attributes）" class="anchor-navigation-ex-anchor" href="#属性（attributes）"><i class="fa fa-link" aria-hidden="true"></i></a><strong>属性</strong>（attributes）</h2>
+<p><strong>属性</strong>（attributes）：表中每一列数据。<code>A1, A2, …, An</code></p>
+<ul>
+<li>域（Domain）的定义<ul>
+<li>每个属性允许的值集合称为该属性的域。</li>
+<li>域就是属性的 “取值规则表”，规定了这个属性能填哪些值、不能填哪些值。</li>
+</ul>
+</li>
+<li>原子性（Atomicity）<ul>
+<li>属性值（通常）要求是原子的，即不可分割的。</li>
+<li>属性值必须是 “最小不可拆分单元”，不能包含多个独立信息的组合。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>特殊值 NULL 是每个域的成员，表示值 “未知”。NULL 值会给许多操作的定义带来复杂性。</p>
+<p>不管域的正常取值是什么，都默认包含 NULL 这个 “特殊值”，专门用来表示 “不知道这个属性的值”，但它会让运算规则变得复杂。</p>
+</blockquote>
+<hr></hr>
+<h2 id="关系模式和关系实例"><a name="关系模式和关系实例" class="anchor-navigation-ex-anchor" href="#关系模式和关系实例"><i class="fa fa-link" aria-hidden="true"></i></a>关系模式和关系实例</h2>
+<p>关系模式是关系的 “结构定义”（静态框架），关系实例是关系的 “具体数据”（动态内容）</p>
+<h3 id="关系模式（relation-schema）"><a name="关系模式（relation-schema）" class="anchor-navigation-ex-anchor" href="#关系模式（relation-schema）"><i class="fa fa-link" aria-hidden="true"></i></a>关系模式（Relation Schema）</h3>
+<p>设 <code>A₁、A₂、…、Aₙ</code>为属性，则<code>R = (A₁, A₂, …, Aₙ)</code>是一个关系模式。</p>
+<ul>
+<li>示例：教师（ID，姓名，部门名称，薪资）。</li>
+<li>关系模式就是给 “表” 下的 “结构定义”，规定了这张表有哪些列、列的名称是什么，相当于一张 “空表的表头”，只定规则不包含具体数据。同时模式还隐含了各属性对应的 “域”（允许的取值范围）</li>
+</ul>
+<hr></hr>
+<h3 id="关系实例（relation-instance）"><a name="关系实例（relation-instance）" class="anchor-navigation-ex-anchor" href="#关系实例（relation-instance）"><i class="fa fa-link" aria-hidden="true"></i></a>关系实例（Relation Instance）</h3>
+<p>关系的当前值<strong>（关系实例）</strong>由一张表指定。关系 r 中的元素 t 是一个元组，由表中的一行表示。</p>
+<ul>
+<li>形式上，给定集合 D₁、D₂、…、Dₙ（各属性的域），关系 r 是 D₁×D₂×…×Dₙ的子集。因此，关系是 n 元组（a₁,a₂,…,aₙ）的集合，其中每个 aᵢ∈Dᵢ（aᵢ属于 Dᵢ）。</li>
+<li>D₁×D₂×…×Dₙ是所有属性域的 “笛卡尔积”（简单说就是 “所有可能的组合”），而关系实例 r 是其中 “有实际意义的子集”，这些子集以 “n 元组”（即表中的行）形式存在，且每个元组的每个值都符合对应属性的域规则。</li>
+<li>关系实例就是 “填了数据的表”，表中的每一行就是一个元组（tuple），每一列对应关系模式中定义的一个属性，且当前所有行的集合构成了该关系在某一时刻的实例。</li>
+</ul>
+<h2 id="关系（relation）"><a name="关系（relation）" class="anchor-navigation-ex-anchor" href="#关系（relation）"><i class="fa fa-link" aria-hidden="true"></i></a>关系（relation）</h2>
+<p>系是无序的。元组的顺序无关紧要（元组可以以任意顺序存储）。</p>
+<ul>
+<li>关系本质是 “集合”（数学中的集合），而集合的特点是 “元素无序”—— 就像你手里的一堆苹果，不管是先拿红的还是先拿绿的，这堆苹果的本质没变。对应到数据库表中，就是行的排列顺序不影响表的内容和意义。</li>
+<li>元组的集合完全相同，只是顺序不同，不影响数据的本质含义。即<strong>元组进行不同排序但是集合相同的表视为一个关系实例</strong></li>
+</ul>
+<h2 id="码键（keys）"><a name="码键（keys）" class="anchor-navigation-ex-anchor" href="#码键（keys）"><i class="fa fa-link" aria-hidden="true"></i></a><strong>码/键</strong>（keys）</h2>
+<ul>
+<li><strong>超码</strong>（super key）：一个或一组属性，能够唯一区分一个关系的任何一个元组。例如 <code>{ID, name}</code>，<code>{ID}</code><ul>
+<li>设 K 是关系模式 R 的属性子集（K⊆R）。若 K 的属性值足以唯一标识关系模式 R 的任何可能关系实例 r (R) 中的每个元组，则 K 是 R 的超键。但是需要注意超键中可能会有冗余属性， “多余属性不影响唯一性”</li>
+<li>超键就是 “能唯一找到一行数据的属性组合”，只要知道超键的取值，就能确定唯一的元组，不会重复。</li>
+</ul>
+</li>
+<li><strong>候选码</strong>（candidate key）：最小的（包含属性个数最少）超码。例如 <code>{ID}</code><ul>
+<li>若超键 K 是 “最小的”（即移除 K 中的任何一个属性后，K 就不再是超键），则 K 是候选键。</li>
+<li>候选键是 “精简版超键”，不能再去掉任何一个属性，否则就失去唯一标识能力，是 “最经济” 的超键。</li>
+</ul>
+</li>
+<li><strong>主码</strong>（primary key）：候选码中挑出一个作为主码，<strong>任何关系只能有一个主码</strong><ul>
+<li>从多个候选键中选择一个作为主键（通常选最常用、最简单的）。</li>
+<li>主键是 “官方指定的候选键”，是关系中唯一的 “主要标识”，用于日常数据操作（如查询、关联其他表），是数据库设计中人为选定的。</li>
+<li>优先选属性个数少（最好单属性）、取值稳定（不会轻易修改，如 ID）、非空的候选键。</li>
+</ul>
+</li>
+<li><strong>外码</strong>（foreign key）：一个表中某一列的<strong>所有</strong>值一定出现在另一张表的某一列，且在另一张表中为<strong>主码</strong><ul>
+<li>外键约束是指 “一个关系中的某个属性值，必须在另一个关系的主键中存在”。其中，包含外键的关系叫 “引用关系”，被引用的关系叫 “被引用关系”。</li>
+<li>外键是 “跨表的关联纽带”，确保两个表之间的数据一致性，避免出现 “无对应记录” 的无效数据。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li><strong>候选键可能多个</strong>：不是所有关系都只有一个候选键。例如 “学生选课” 关系（学号，课程 ID，成绩），候选键是 {学号，课程 ID}（单独学号对应多个选课记录，单独课程 ID 也对应多个记录，组合后才唯一）；若增加 “选课编号” 且唯一，则 {选课编号} 和 {学号，课程 ID} 都是候选键，需选一个作为主键。</li>
+<li>外键不一定是单属性：外键可以是属性组合，但必须<strong>与被引用表的主键结构一致</strong>（被引用表主键是组合属性，外键也需对应组合）。例如 “订单详情” 表的外键 {订单号，商品 ID}，引用 “订单商品” 表的主键 {订单号，商品 ID}。</li>
+<li>外键允许 NULL：外键约束是 “<strong>值存在则必须在被引用表中</strong>”，但可以取 NULL（表示 “暂时无关联”）。例如教师表中 dept_name 为 NULL，可能表示 “教师暂未分配部门”，这是允许的（除非额外设置非空约束）。</li>
+<li>主键必须非空且唯一：主键是关系的核心标识，不能取 NULL（否则无法标识元组），也不能重复，这是数据库自动强制的约束；而候选键本身也隐含 “非空唯一” 特性（否则无法唯一标识）。</li>
+</ol>
+</blockquote>
+<p><strong>大学数据库模式图</strong></p>
+<p><img src="assets/2288178-20220712233002154-795963329.png" alt="image-20220710184350453" style="zoom:50%;"></img></p>
+<blockquote>
+<p><strong>系/部门表</strong> — 存储大学各院系的信息，包括系名、所在建筑和预算</p>
+<ul>
+<li><strong>department</strong>(<strong>dept_name</strong>,building,budget);</li>
+</ul>
+<p><strong>教师表</strong> — 存储教师信息，包括工号、姓名、所属系和工资</p>
+<ul>
+<li><strong>instructor</strong>(<strong>ID</strong>, name,dept_name,salary);</li>
+</ul>
+<p><strong>课程表</strong> — 存储课程信息，包括课程号、课程名称、开课系和学分</p>
+<ul>
+<li><strong>course</strong>(<strong>course_id</strong>,title,dept_name,credits);</li>
+</ul>
+<p><strong>课程班表</strong> — 存储课程的具体开课班次信息，包括课程号、班次号、学期、年份、上课地点和时间</p>
+<ul>
+<li><strong>section</strong>(<strong>course_id</strong>,<strong>sec_id</strong>,<strong>semester</strong>,<strong>year</strong>,building,room_number,time_slot_id);</li>
+</ul>
+<p><strong>授课表</strong> — 关联教师与课程班，记录哪位教师教授哪个课程班</p>
+<ul>
+<li><strong>teaches</strong>(<strong>ID</strong>,<strong>course_id</strong>,<strong>section_id</strong>,<strong>semester</strong>,<strong>year</strong>);</li>
+</ul>
+<p><strong>学生表</strong> — 存储学生信息，包括学号、姓名、所属系和总学分</p>
+<ul>
+<li><strong>student</strong>(<strong>ID</strong>,name,dept_name,tot_cred);</li>
+</ul>
+<p><strong>先修课表</strong> — 存储课程之间的先修关系（哪门课是另一门课的先修课）</p>
+<ul>
+<li><strong>prereq</strong>(<strong>course_id</strong>,<strong>prereq_id</strong>);</li>
+</ul>
+<p><strong>导师表</strong> — 关联学生与教师，记录哪位教师指导哪位学生</p>
+<ul>
+<li><strong>Advisor</strong>(<strong>s_id</strong>,<strong>i_id</strong>)</li>
+</ul>
+<p><strong>选课表</strong> — 记录学生选课情况及成绩</p>
+<ul>
+<li><strong>takes</strong>(<strong>ID</strong>,<strong>course_id</strong>,<strong>sec_id</strong>,<strong>semester</strong>,<strong>year</strong>,grade)</li>
+</ul>
+<p><strong>教室表</strong> — 存储教室信息，包括建筑名、房间号和容量</p>
+<ul>
+<li><strong>classroom</strong>(<strong>building</strong>,<strong>room_number</strong>,capacity)</li>
+</ul>
+<p><strong>时间段表</strong> — 存储上课时间段信息，包括时间段ID、星期、开始时间和结束时间</p>
+<ul>
+<li><strong>time_slot</strong>(<strong>time_slot_id</strong>,<strong>day</strong>,<strong>start_time</strong>,end_time)</li>
+</ul>
+<p>其中<strong>粗体</strong>字段表示<strong>主键（Primary Key）</strong>，用于唯一标识表中的每条记录。</p>
+</blockquote>
+<h2 id="elational-query-languages（关系查询语言）"><a name="elational-query-languages（关系查询语言）" class="anchor-navigation-ex-anchor" href="#elational-query-languages（关系查询语言）"><i class="fa fa-link" aria-hidden="true"></i></a>elational Query Languages（关系查询语言）</h2>
+<ul>
+<li><strong>关系数据库语言</strong>：包含关系运算、关系代数语言、关系演算语言，是实现数据定义、查询、操纵的工具。</li>
+<li><strong>关系运算</strong>：是关系查询语言的<strong>理论基础</strong>，分为 6 个基本运算（选择、投影等）。</li>
+<li><strong>关系代数语言</strong>：过程化语言（需要描述 “怎么查”），比如用选择、投影的组合来写查询。</li>
+<li><strong>关系演算语言</strong>：声明式语言（只需描述 “查什么”），分为<strong>元组关系演算</strong>（以元组为变量）和<strong>域关系演算</strong>（以属性域为变量）。</li>
+<li><strong>SQL</strong>：是实际应用的数据库语言，<strong>基于关系代数和关系演算的理论</strong>（比如 SQL 的<code>SELECT</code>对应投影，<code>WHERE</code>对应选择）。</li>
+</ul>
+<p><img src="assets/image-20251125223826864.png" alt="image-20251125223826864"></img></p>
+<ul>
+<li>关系查询语言分为两类，核心区别是 “是否描述查询过程”：</li>
+<li><strong>过程化语言（如关系代数）</strong>：<ul>
+<li>需要明确写出 “查询的步骤”（先选哪些行、再选哪些列、怎么组合表）。</li>
+</ul>
+</li>
+<li><strong>声明式语言（如关系演算）</strong>：<ul>
+<li>只需描述 “想要的结果满足什么条件”，不用管 “怎么得到结果”。</li>
+</ul>
+</li>
+</ul>
+<p>关系运算的基本操作，直接对应 SQL 的语法：</p>
+<table>
+<thead>
+<tr>
+<th>关系运算</th>
+<th>SQL 语法示例</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选择（σ）</td>
+<td><code>WHERE 部门名称="计算机科学"</code></td>
+<td>筛选行</td>
+</tr>
+<tr>
+<td>投影（Π）</td>
+<td><code>SELECT 姓名</code></td>
+<td>筛选列</td>
+</tr>
+<tr>
+<td>并（∪）</td>
+<td><code>UNION</code></td>
+<td>合并结果（去重）</td>
+</tr>
+<tr>
+<td>笛卡尔积（×）</td>
+<td><code>FROM 教师, 课程</code></td>
+<td>表的组合（需配合<code>WHERE</code>筛选）</td>
+</tr>
+<tr>
+<td>自然连接（⋈）</td>
+<td><code>FROM 教师 JOIN 课程 ON 教师.ID=课程.教师ID</code></td>
+<td>基于共有属性连接表</td>
+</tr>
+</tbody>
+</table>
+<p><strong>大学数据库 E-R 图</strong></p>
+<p><img src="assets/2288178-20220712154525854-1033631213.png" alt="img" style="zoom:50%;"></img></p>
+<h1 id="关系代数relational-algebra"><a name="关系代数relational-algebra" class="anchor-navigation-ex-anchor" href="#关系代数relational-algebra"><i class="fa fa-link" aria-hidden="true"></i></a>关系代数(Relational Algebra)</h1>
+<ul>
+<li><p><strong>Procedural language（过程化语言）</strong></p>
+<ul>
+<li>关系代数是一种过程化语言。</li>
+<li>过程化意味着需要明确描述 “查询的步骤”—— 比如 “先筛选行、再选列、最后合并”，而不是只说 “想要什么结果”。</li>
+</ul>
+</li>
+<li><p><strong>Six basic operators（6 个基本运算）</strong>关系代数的 6 个基本运算，是所有复杂查询的 “基础积木”：</p>
+<p>| 运算名称                      | 符号 | 作用                                 | 输入数量 |
+| ----------------------------- | ---- | ------------------------------------ | -------- |
+| 选择（select）                | σ    | 筛选关系中的元组（行）               | 1 个关系 |
+| 投影（project）               | Π    | 选择关系中的属性（列）               | 1 个关系 |
+| 并（union）                   | ∪    | 合并两个关系的元组（去重）           | 2 个关系 |
+| 差（set difference）          | –    | 取属于第一个关系但不属于第二个的元组 | 2 个关系 |
+| 笛卡尔积（Cartesian product） | ×    | 组合两个关系的所有元组               | 2 个关系 |
+| 重命名（rename）              | ρ    | 给关系或属性起新名字                 |          |</p>
+</li>
+<li><p><strong>运算的封闭性</strong></p>
+<ul>
+<li>这些运算以一个或两个关系为输入，产生一个新关系作为结果。</li>
+<li>无论用哪个运算，<strong>输出都是 “关系”（二维表）</strong>，这保证了运算可以 “链式组合”（比如先做选择，再做投影，结果还是关系，能继续参与其他运算）。</li>
+</ul>
+</li>
+</ul>
+<hr></hr>
+<h2 id="选择运算（select-operation）"><a name="选择运算（select-operation）" class="anchor-navigation-ex-anchor" href="#选择运算（select-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>选择运算（Select Operation）</h2>
+<ul>
+<li><p><strong>符号</strong>：<code>σ_p(r)</code></p>
+<ul>
+<li><code>σ</code>：选择运算的符号（读作 “sigma”）</li>
+<li><code>p</code>：选择谓词（Selection Predicate），即筛选条件</li>
+<li><code>r</code>：要操作的关系（输入的表）</li>
+</ul>
+</li>
+<li><p><strong>形式化定义</strong>：<code>σ_p(r) = {t | t ∈ r 且 p(t)}</code></p>
+<ul>
+<li>选择运算的结果是<strong>所有属于关系 r、且满足谓词 p 的元组 t 的集合</strong>。</li>
+<li>从表 r 中，把满足条件 p 的行挑出来，组成一个新表。</li>
+</ul>
+</li>
+<li>选择谓词<code>p</code>是<strong>命题演算公式</strong>，由 “项” 通过逻辑连接符组合而成：<ul>
+<li><strong>逻辑连接符</strong>：<code>∧</code>（与，同时满足）、<code>∨</code>（或，满足任意一个）、<code>¬</code>（非，不满足）</li>
+<li>项的形式<ol>
+<li><code>&lt;属性&gt; op &lt;属性&gt;</code>（属性之间比较，比如 “薪资&gt; 平均薪资”）</li>
+<li><code>&lt;属性&gt; op &lt;常量&gt;</code>（属性与固定值比较，比如 “部门名称 = 'Physics'”）</li>
+</ol>
+</li>
+<li><strong>比较运算符（op）</strong>：<code>=</code>（等于）、<code>≠</code>（不等于）、<code>&gt;</code>（大于）、<code>≥</code>（大于等于）、<code>&lt;</code>（小于）、<code>≤</code>（小于等于）</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li><strong>谓词的逻辑优先级</strong>：<ul>
+<li>逻辑连接符的优先级是：<code>¬</code>（非） &gt; <code>∧</code>（与） &gt; <code>∨</code>（或）。</li>
+<li>若不确定优先级，建议用括号明确顺序，比如<code>σ_(dept_name="Physics" ∨ dept_name="Comp. Sci.") ∧ salary&gt;80000(r)</code>（先选部门，再筛薪资）。</li>
+</ul>
+</li>
+<li><strong>与投影运算的顺序</strong>：<ul>
+<li>若需要 “先筛选行，再选列”，必须<strong>先做选择、再做投影</strong>（否则投影会去掉筛选需要的属性）。</li>
+<li>错误示例：<code>Π_name(σ_dept_name="Physics"(instructor))</code>是对的；但<code>σ_dept_name="Physics"(Π_name(instructor))</code>会出错（投影后只剩 name 列，没有 dept_name 列，无法筛选）。</li>
+</ul>
+</li>
+<li><strong>NULL 值的影响</strong>：<ul>
+<li><strong>若属性值为 NULL，比较结果是 “未知”，不会被筛选出来。</strong>比如 “薪资 = NULL” 的教师，不会被<code>σ_salary&gt;60000</code>选中，也不会被<code>σ_salary≤60000</code>选中。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h2 id="投影运算（project-operation）"><a name="投影运算（project-operation）" class="anchor-navigation-ex-anchor" href="#投影运算（project-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>投影运算（Project Operation）</h2>
+<ul>
+<li><strong>符号</strong>：<code>Π_{A₁,A₂,…,Aₖ}(r)</code><ul>
+<li><code>Π</code>：投影运算的符号（读作 “pi”）</li>
+<li><code>A₁,A₂,…,Aₖ</code>：要保留的属性名列表</li>
+<li><code>r</code>：要操作的关系（输入的表）</li>
+</ul>
+</li>
+<li><strong>定义</strong>：投影运算的结果是 “从关系 r 中删除未被列出的列后，得到的 k 列关系”；同时，因为关系是<strong>集合</strong>（不允许重复元组），结果会<strong>自动移除重复的行</strong>。</li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li><strong>投影会丢失信息</strong>：投影是 “不可逆” 的 —— 如果投影后删除了某列，无法从投影结果恢复原关系的完整数据。比如投影<code>Π_{name}(instructor)</code>后，无法知道每个 name 对应的 ID 或薪资。</li>
+<li><strong>投影后的重复行必被删除</strong>：即使原关系没有重复行，投影后可能因 “保留列的值相同” 产生重复，此时会自动去重（因为关系是集合）。比如两个不同教师的 name 和 salary 完全相同，投影<code>Π_{name,salary}</code>后会合并为一行。</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h2 id="并运算（union-operation）"><a name="并运算（union-operation）" class="anchor-navigation-ex-anchor" href="#并运算（union-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>并运算（Union Operation）</h2>
+<ul>
+<li>符号:<code>r ∪ s</code><ul>
+<li><code>r</code>和<code>s</code>：两个待合并的关系（输入的表）</li>
+<li><code>∪</code>：并运算符号，读作 “union”</li>
+</ul>
+</li>
+<li>形式化定义 <code>r ∪ s = {t | t ∈ r or t ∈ s}</code><ul>
+<li>并运算的结果是 “所有属于关系 r、或属于关系 s、或同时属于两者的元组 t 的集合”。</li>
+<li>把两个表的行合并到一起，<strong>自动去掉重复的行</strong>，最终得到 “包含两个表所有不重复元组” 的新表。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!important]</p>
+<p>并运算不是任意两个表都能做，有严格的兼容性要求：</p>
+<ol>
+<li><strong>相同元数（arity）</strong>：两个关系的<strong>属性个数（列数）必须完全一致</strong>。比如 r 有 3 列，s 也必须有 3 列，不能一个 3 列一个 2 列。</li>
+<li><strong>属性域兼容</strong>：对应位置的属性域（取值类型）必须相同。比如 r 的第 2 列是 “整数型薪资”，s 的第 2 列也必须是 “整数型”（不能是字符串或日期），确保合并后列的含义一致。</li>
+</ol>
+<p>[!tip]</p>
+<ol>
+<li><strong>与 SQL 中 UNION 的区别</strong>：关系代数的并运算<strong>默认去重</strong>；SQL 中<code>UNION</code>也去重，但<code>UNION ALL</code>不去重（保留所有重复元组），实际应用中需注意区分。</li>
+<li><strong>属性名不影响有效性</strong>：只要列数相同、对应列域兼容，即使属性名不同也能运算（结果的属性名通常取第一个关系的）。比如 r 的第 1 列是 “course_id”，s 的第 1 列是 “c_id”，只要都是课程 ID 的整数类型，就能合并。</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h2 id="差运算（set-difference-operation）"><a name="差运算（set-difference-operation）" class="anchor-navigation-ex-anchor" href="#差运算（set-difference-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>差运算（Set Difference Operation）</h2>
+<ul>
+<li><p>符号 <code>r – s</code>（注意：部分教材<code>r \ s</code>)</p>
+<ul>
+<li><code>r</code>：被减关系（主关系，保留其独有元组）</li>
+<li><code>s</code>：减关系（用于剔除元组的参考关系）</li>
+<li><code>–</code>：差运算符号，读作 “set difference”</li>
+</ul>
+</li>
+<li><p>形式化定义 <code>r – s = {t | t ∈ r and t ∉ s}</code></p>
+<ul>
+<li>差运算的结果是 “所有属于关系 r、但不属于关系 s 的元组 t 的集合”。</li>
+<li>以 r 为 “基准表”，把 r 中与 s 完全相同的行去掉，剩下的就是结果，相当于 “只留 r 独有的数据”。</li>
+</ul>
+</li>
+</ul>
+<p>差运算和并运算的兼容性要求完全一致，缺一不可:<strong>相同元数（arity）</strong>和<strong>属性域兼容</strong>：</p>
+<hr></hr>
+<h2 id="笛卡尔积（cartesian-product-operation）"><a name="笛卡尔积（cartesian-product-operation）" class="anchor-navigation-ex-anchor" href="#笛卡尔积（cartesian-product-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>笛卡尔积（Cartesian-Product Operation）</h2>
+<ul>
+<li>符号 <code>r × s</code><ul>
+<li><code>r</code>和<code>s</code>：待组合的两个关系（输入表）</li>
+<li><code>×</code>：笛卡尔积运算符号，读作 “Cartesian product”</li>
+</ul>
+</li>
+<li>形式化定义 <code>r × s = {t⌒q | t ∈ r and q ∈ s}</code><ul>
+<li>笛卡尔积的结果是 “所有由关系 r 中的元组 t 和关系 s 中的元组 q 连接而成的新元组的集合”（<code>t⌒q</code>表示将 t 和 q 拼接成一个新元组）。</li>
+<li>把 r 的每一行和 s 的每一行都 “配对” 一次，生成所有可能的组合行，比如 r 有 3 行、s 有 2 行，结果就有 3×2=6 行。</li>
+</ul>
+</li>
+</ul>
+<p>属性不相交假设</p>
+<ul>
+<li>默认假设 r (R) 和 s (S) 的属性集不相交（即 R∩S=∅，没有重名属性）。</li>
+<li>含义：若两关系属性名完全不同，组合后新关系的属性名直接保留原属性名（如 r 的 A、B 和 s 的 C、D，组合后为 A、B、C、D）。</li>
+<li>重命名要求：若属性名重复（如 r 和 s 都有属性 B），必须先用<strong>重命名运算（ρ）</strong> 给重复属性改名，否则无法区分（比如改为 r.B 和 s.B）。</li>
+</ul>
+<h2 id="重命名运算（配合笛卡尔积使用）"><a name="重命名运算（配合笛卡尔积使用）" class="anchor-navigation-ex-anchor" href="#重命名运算（配合笛卡尔积使用）"><i class="fa fa-link" aria-hidden="true"></i></a>重命名运算（配合笛卡尔积使用）</h2>
+<ul>
+<li><strong>符号</strong>：<code>ρ_X(E)</code> 或 <code>ρ_新关系名(新属性1,新属性2)(E)</code></li>
+<li>作用：给关系或属性起新名字，解决笛卡尔积中的 “属性名冲突” 问题。</li>
+<li>示例：<code>ρ_s(r)</code> 表示将关系 r 重命名为 s；<code>ρ_r(ra=A, rb=B)(r)</code> 表示将 r 的属性 A 改为 ra、B 改为 rb。</li>
+</ul>
+<h2 id="自连接对比--集合差"><a name="自连接对比--集合差" class="anchor-navigation-ex-anchor" href="#自连接对比--集合差"><i class="fa fa-link" aria-hidden="true"></i></a>自连接对比 + 集合差</h2>
+<ul>
+<li>利用自连接对比 + 集合差求出最大值</li>
+<li><strong>排除所有 “非最大值”，剩下的就是最大值</strong>。</li>
+<li><code>Π_{balance}(account) - Π_{account.balance}(σ_{account.balance &lt; d.balance}(account × ρ_d(account)))</code></li>
+<li><code>ρ_d(account)</code>：将<code>account</code>表重命名为<code>d</code>（区分两个 “账户表”，一个是原始表<code>account</code>，一个是对比表<code>d</code>）。</li>
+<li><code>account × ρ_d(account)</code>：做自连接，生成 “所有余额两两对比” 的组合（7 行 ×7 行 = 49 行）</li>
+<li>筛选 “非最大值”（σ_{account.balance &lt; d.balance}）</li>
+<li>集合差运算（总余额 - 非最大值余额）</li>
+</ul>
+<h1 id="关系代数的附加运算（additional-operations）"><a name="关系代数的附加运算（additional-operations）" class="anchor-navigation-ex-anchor" href="#关系代数的附加运算（additional-operations）"><i class="fa fa-link" aria-hidden="true"></i></a>关系代数的附加运算（Additional Operations）</h1>
+<ul>
+<li>附加运算<strong>不增加关系代数的计算能力</strong>（所有附加运算都能通过 6 个基本运算组合实现），但能将复杂的基本运算组合 “封装” 成更简洁的形式，大幅简化常见查询的表达式，降低书写和理解成本。简化查询的 “语法糖”</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>附加运算</th>
+<th>核心价值（简化的场景）</th>
+<th>等价的基本运算组合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>集合交</td>
+<td>求两个兼容关系的共有元组</td>
+<td>差运算组合（r - (r - s)）</td>
+</tr>
+<tr>
+<td>自然连接</td>
+<td>基于共有属性的关联（自动去重共有列）</td>
+<td>笛卡尔积 + 选择 + 投影</td>
+</tr>
+<tr>
+<td>除运算</td>
+<td>解决 “对于所有” 的查询（如选修所有课程）</td>
+<td>投影 + 笛卡尔积 + 差运算</td>
+</tr>
+<tr>
+<td>赋值运算</td>
+<td>拆分复杂查询，降低嵌套深度</td>
+<td>表达式直接替换（无新增运算）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="集合交运算（set-intersection-operation）"><a name="集合交运算（set-intersection-operation）" class="anchor-navigation-ex-anchor" href="#集合交运算（set-intersection-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>集合交运算（Set-Intersection Operation）</h2>
+<p>集合交运算是一种简化的集合操作，用于提取 “<strong>同时存在于两个兼容关系中的所有元组</strong>”，不新增关系代数的计算能力（完全可通过差运算推导）</p>
+<ul>
+<li><p><strong>符号</strong>：<code>r ∩ s</code>（读作 “r 交 s”，<code>∩</code>是集合交的专用符号）</p>
+</li>
+<li><p>定义翻译：<code>r ∩ s = { t | t ∈ r and t ∈ s }</code></p>
+<p>即 “关系 r 和 s 的交集，是所有既属于 r、又属于 s 的元组 t 的集合”。</p>
+</li>
+<li><p>把两个表想象成 “两个数据集合”，交集就是 “两个集合重叠的部分”—— 只有那些在两个表中<strong>完全相同的行</strong>，才会出现在交集结果中。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!caution]</p>
+<p>和并运算（∪）、差运算（–）一样，集合交运算对输入关系有 “兼容性” 要求，否则无法判断 “元组是否相同”：即<strong>相同元数（arity）</strong>和<strong>属性域兼容</strong>，其中属性域兼容即同一位置的列的属性可以比较即可</p>
+</blockquote>
+<ul>
+<li><p>核心公式：<code>r ∩ s = r – (r – s)</code></p>
+<p>即 “r 和 s 的交集，等于从 r 中剔除‘属于 r 但不属于 s 的元组’后剩余的部分”。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li><p><strong>误解 “交集” 与 “自然连接” 的区别</strong>：</p>
+<ul>
+<li><p>交集（<code>r ∩ s</code>）：要求两关系<strong>结构完全兼容</strong>，结果是 “共有元组”，列数与原关系相同；</p>
+</li>
+<li><p>自然连接（r ⋈ s）：基于共有属性关联，结果是 “关联后的新元组”，列数是两关系列数之和减去重复的共有属性列数。</p>
+<p>例：r（客户名）和 s（客户名）的交集是 “共有客户名”（1 列）；r（客户名，贷款号）和 s（客户名，账户号）的自然连接是 “客户 - 贷款 - 账户”（3 列），二者完全不同。</p>
+</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="连接运算（join-operation）"><a name="连接运算（join-operation）" class="anchor-navigation-ex-anchor" href="#连接运算（join-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>连接运算（Join Operation）</h2>
+<ul>
+<li>连接运算（Join Operation）是关系代数中实现<strong>多表数据关联</strong>的核心运算，本质是 “笛卡尔积 + 选择运算” 的封装 —— 先将两个关系的所有元组两两组合（笛卡尔积），再筛选出满足特定条件的有效组合，最终生成包含两表关键信息的新关系。</li>
+</ul>
+<h3 id="笛卡尔积的冗余"><a name="笛卡尔积的冗余" class="anchor-navigation-ex-anchor" href="#笛卡尔积的冗余"><i class="fa fa-link" aria-hidden="true"></i></a>笛卡尔积的冗余</h3>
+<p>“为什么需要连接”—— 因为直接使用笛卡尔积会产生大量无意义的冗余数据，而连接运算通过筛选条件剔除冗余，保留有效关联</p>
+<ul>
+<li><strong>笛卡尔积定义</strong>：<code>instructor × teaches</code>会将<code>instructor</code>（教师表）的每个元组，与<code>teaches</code>（授课表）的每个元组强制组合。</li>
+<li>假设<code>instructor</code>有 10 个教师，<code>teaches</code>有 20 条授课记录，笛卡尔积会生成<code>10×20=200</code>条记录。</li>
+<li>这 200 条记录中，大部分是 “教师与非其授课课程” 的无效组合（比如 “爱因斯坦” 关联到 “计算机科学” 的课程），只有 “教师 ID 与授课表教师 ID 一致” 的组合才有效。</li>
+</ul>
+<p>而连接运算的核心作用：剔除冗余，保留有效关联，即从笛卡尔积中筛选出 “教师与其实际授课” 的有效记录，需要添加<strong>选择条件</strong>：σ_{instructor.id = teaches.id}(instructor × teaches)</p>
+<h3 id="连接运算（θ--连接）的正式定义与符号"><a name="连接运算（θ--连接）的正式定义与符号" class="anchor-navigation-ex-anchor" href="#连接运算（θ--连接）的正式定义与符号"><i class="fa fa-link" aria-hidden="true"></i></a>连接运算（θ- 连接）的正式定义与符号</h3>
+<p>连接运算（通常指<strong>θ- 连接</strong>，Theta-Join）是 “笛卡尔积” 与 “选择运算” 的结合，可直接用一个运算符封装这两个步骤，避免表达式冗长。</p>
+<ul>
+<li><p>符号：<code>r ⋈_θ s</code></p>
+<p>（读作 “r theta 连接 s”）</p>
+<ul>
+<li><code>r</code>和<code>s</code>：参与连接的两个关系（左表、右表）；</li>
+<li><code>θ</code>（theta）：连接谓词（筛选条件），由属性、比较运算符（=、≠、&gt;、≥等）和逻辑运算符（∧、∨）组成。</li>
+</ul>
+</li>
+<li><p>形式化公式：<code>r ⋈_θ s = σ_θ (r × s)</code></p>
+<p>即 “连接运算的结果 = 对 r 和 s 的笛卡尔积，应用选择谓词 θ 筛选后的关系”。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p><strong>等值连接</strong>（Equi-Join）：θ 为 “属性相等” 的特殊 θ- 连接</p>
+<ul>
+<li><strong>定义</strong>：当连接谓词<code>θ</code>仅由 “属性 = 属性” 的等式组成时，称为等值连接，是实际应用中最常用的连接类型。</li>
+<li><strong>示例</strong>：<code>instructor ⋈_{instructor.id = teaches.id} teaches</code>就是典型的等值连接（通过<code>id</code>相等关联）。</li>
+<li><strong>特点</strong>：结果中会保留重复的 “连接属性”（如上述例子中，结果会同时包含<code>instructor.id</code>和<code>teaches.id</code>两列，且值完全相同）。</li>
+</ul>
+</blockquote>
+<h2 id="自然连接运算（natural-join-operation）"><a name="自然连接运算（natural-join-operation）" class="anchor-navigation-ex-anchor" href="#自然连接运算（natural-join-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>自然连接运算（Natural-Join Operation）</h2>
+<p>自然连接（Natural-Join）是<strong>θ- 连接（等值连接）的简化与优化版</strong>，无需手动指定关联条件，自动基于两个关系的 “共有属性”（<strong>名称和域都相同</strong>的属性）做等值连接，同时自动删除重复的共有属性列，最终生成结构简洁、语义清晰的关联结果。</p>
+<ul>
+<li>设关系<code>r</code>基于模式<code>R</code>（属性集合），关系<code>s</code>基于模式<code>S</code>（属性集合），自然连接的前提是：<code>R</code>和<code>S</code>存在<strong>共有属性</strong>（即<code>R ∩ S ≠ ∅</code>），且共有属性的<strong>域（取值类型）完全兼容</strong>（如<code>r</code>的<code>B</code>是整数，<code>s</code>的<code>B</code>也必须是整数）</li>
+</ul>
+<p>自然连接<code>r ⋈ s</code>（符号<code>⋈</code>无下标，代表 “自动关联”）的运算分 3 步：</p>
+<ol>
+<li><strong>找共有属性</strong>：自动识别<code>r</code>和<code>s</code>的共有属性（如<code>R=(A,B,C,D)</code>、<code>S=(E,B,D)</code>，共有属性是<code>B</code>和<code>D</code>）；</li>
+<li><strong>等值关联筛选</strong>：对<code>r × s</code>（笛卡尔积）做选择运算，仅保留 “<strong>所有共有属性值完全相等</strong>” 的元组（即<code>σ_{r.B=s.B ∧ r.D=s.D}(r × s)</code>）；</li>
+<li><p><strong>去重共有属性</strong>：从筛选结果中，删除重复的共有属性列（仅保留一套共有属性，如删除<code>s.B</code>和<code>s.D</code>，只留<code>r.B</code>和<code>r.D</code>）。</p>
+</li>
+<li><p>自然连接是 “笛卡尔积 + 选择 + 投影” ：<code>r ⋈ s = Π_{r.A, r.B, r.C, r.D, s.E}(σ_{r.B=s.B ∧ r.D=s.D}(r × s))</code></p>
+</li>
+</ol>
+<hr></hr>
+<h2 id="除法运算（division-operation）"><a name="除法运算（division-operation）" class="anchor-navigation-ex-anchor" href="#除法运算（division-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>除法运算（Division Operation）</h2>
+<p>若<em>q</em>=<em>r</em>÷<em>s</em>，则<em>q</em>是满足<em>q</em>×<em>s</em>⊆<em>r</em>的最大关系”。通俗来讲，<em>q</em>是所有符合 “其与<em>s</em>做笛卡尔积后，结果完全包含在原关系<em>r</em>中” 这一条件的关系里，范围最大的那个。</p>
+<ul>
+<li>定义：r÷s</li>
+<li>R=(A1,A2,...Am,B1,B2,...Bn),S=(B1,B2,...Bn)</li>
+<li>解释：前提是 <code>s</code> 表的属性包含于 <code>r</code> 表。则 <code>r</code> 表属性去掉 <code>s</code> 表的属性之后，<code>r</code> 表中包含 <code>s</code> 表所有数据的元组被选出。</li>
+<li><code>r ÷ s = ∏_{R-S}(r) – ∏_{R-S}( (∏_{R-S}(r) × s) – ∏_{R-S,S}(r) )</code></li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<p>除法运算的本质是 <strong>“验证包含关系”</strong>：</p>
+<ul>
+<li>输入：关系<code>r</code>（“主体 - 客体” 关联）、关系<code>s</code>（“所有客体”）。</li>
+<li>过程：通过 “候选集生成→理想组合→排除不满足候选”，筛选出 “与<code>s</code>中所有客体都有关联的主体”。</li>
+<li>输出：满足 “包含所有客体” 的主体集合（即<code>r ÷ s</code>）。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="赋值运算（assignment-operation）"><a name="赋值运算（assignment-operation）" class="anchor-navigation-ex-anchor" href="#赋值运算（assignment-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>赋值运算（Assignment Operation）</h2>
+<p>赋值运算的本质是 <strong>“给中间结果起名字”</strong>：当查询需要多步运算（如除法、多表嵌套关联）时，直接写嵌套表达式会非常冗长（比如除法的基础运算表达式），而赋值运算可以用 “临时变量” 存储每一步的结果，让查询逻辑像 “分步解题” 一样清晰。</p>
+<ul>
+<li><code>temp←expression</code>，查询结果保存在临时表</li>
+<li>赋值的<strong>左部必须是 “临时关系变量”</strong></li>
+</ul>
+<p>比如 <code>r ÷ s = ∏_{R-S}(r) – ∏_{R-S}( (∏_{R-S}(r) × s) – ∏_{R-S,S}(r) )</code>,可以通过赋值运算拆分</p>
+<pre><code>// 步骤1：筛选Perryridge有贷款的客户
+temp1 ← ∏_{customer_name}(σ_{branch_name="Perryridge"}(borrower ⋈ loan))
+// 步骤2：筛选Redwood有账户的客户
+temp2 ← ∏_{customer_name}(σ_{branch_name="Redwood"}(depositor ⋈ account))
+// 步骤3：输出最终结果
+result = temp1 – temp2
+</code></pre><h1 id="扩展关系代数运算（extended-relational-algebra-operations）"><a name="扩展关系代数运算（extended-relational-algebra-operations）" class="anchor-navigation-ex-anchor" href="#扩展关系代数运算（extended-relational-algebra-operations）"><i class="fa fa-link" aria-hidden="true"></i></a>扩展关系代数运算（Extended Relational-Algebra Operations）</h1>
+<ul>
+<li><strong>扩展关系代数运算（Extended Relational-Algebra Operations）</strong> 是对传统关系代数（并、交、差、笛卡尔积、选择、投影）的补充和增强。</li>
+<li>扩展运算中最核心的三类：<strong>广义投影（Generalized Projection）</strong>、<strong>聚集函数（Aggregate Functions）</strong> 和 <strong>外连接（Outer Join）</strong>，包括其定义、解决的问题、语法 / 逻辑及实例。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>扩展运算</th>
+<th>解决的核心问题</th>
+<th>关键应用场景</th>
+<th>对应 SQL 能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>广义投影</td>
+<td>传统投影无法生成计算列</td>
+<td>数据转换、派生字段（如总价、年龄）</td>
+<td><code>SELECT</code>中的表达式（如<code>price*qty</code>）</td>
+</tr>
+<tr>
+<td>聚集函数</td>
+<td>无法对多行数据汇总统计</td>
+<td>统计分析（如平均成绩、销售总和）</td>
+<td><code>COUNT()</code>/<code>AVG()</code>+<code>GROUP BY</code></td>
+</tr>
+<tr>
+<td>外连接</td>
+<td>传统连接丢弃非匹配行，导致数据丢失</td>
+<td>完整保留数据（如未选课的学生）</td>
+<td><code>LEFT/RIGHT/FULL JOIN</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="广义投影（generalized-projection）"><a name="广义投影（generalized-projection）" class="anchor-navigation-ex-anchor" href="#广义投影（generalized-projection）"><i class="fa fa-link" aria-hidden="true"></i></a>广义投影（Generalized Projection）</h2>
+<p>广义投影是对传统关系代数中<strong>投影运算（Projection）的扩展</strong>，核心是允许在投影过程中使用 “算术表达式、函数或常量组合”，而非仅选择关系中已有的属性列。</p>
+<ul>
+<li>广义投影允许在 “投影列表” 中写<strong>算术表达式</strong>（如<code>limit – credit_balance</code>），基于已有属性生成新的计算结果。</li>
+<li>输入：任意关系代数表达式<code>E</code>（可以是一张基础表，也可以是筛选、连接后的结果关系）；</li>
+<li>输出：包含<code>F₁, F₂, …, Fₙ</code>的关系，每个<code>F</code>是 “表达式结果列”（可给列起别名，如<code>credit-available</code>）。</li>
+<li>表达式规则：F₁~Fₙ必须是 “合法的算术表达式”，可包含：<ul>
+<li>关系<code>E</code>的属性（如<code>limit</code>、<code>credit_balance</code>）；</li>
+<li>算术运算符（<code>+</code>、<code>-</code>、<code>×</code>、<code>/</code>等）；</li>
+<li>常量（如<code>100</code>、<code>0.8</code>等，例：<code>π_customer_name, credit_balance×0.8 (credit_info)</code>）；</li>
+<li>部分教材还扩展支持内置函数（如字符串函数<code>UPPER(customer_name)</code>、日期函数<code>YEAR(register_date)</code>）。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!tip]</p>
+<p>算 “每个客户还能再消费多少金额”—— 即 “可支配额度 = 信贷额度（limit） - 信贷余额（credit_balance）”。</p>
+<pre><code class="lang-plaintext">π_customer_name, (limit – credit_balance) AS credit-available (credit_info)
+</code></pre>
+<p>[!CAUTION]</p>
+<p>若表达式中某属性值为<code>NULL</code>（如某客户的<code>limit</code>为<code>NULL</code>），则整个表达式结果为<code>NULL</code>（如<code>NULL - 1500 = NULL</code>），需提前通过筛选（<code>σ</code>）处理<code>NULL</code>值。</p>
+</blockquote>
+<hr></hr>
+<h2 id="聚集函数与聚集运算（aggregate-functions-and-operations）"><a name="聚集函数与聚集运算（aggregate-functions-and-operations）" class="anchor-navigation-ex-anchor" href="#聚集函数与聚集运算（aggregate-functions-and-operations）"><i class="fa fa-link" aria-hidden="true"></i></a>聚集函数与聚集运算（Aggregate Functions and Operations）</h2>
+<p>聚集函数（Aggregate Functions）与聚集运算（Aggregate Operation）是关系代数中用于<strong>对多行数据进行汇总统计</strong>的核心扩展能力。传统关系代数仅能处理 “行级” 数据（如筛选某一行、组合两行），而聚集运算通过 “分组 + 函数计算”，实现了 “多行→单一值” 或 “分组→组内单一值” 的统计分析，是实现业务中 “<strong>求和、求平均、计数</strong>” 等需求的关键工具。</p>
+<h3 id="聚集函数（aggregate-functions）"><a name="聚集函数（aggregate-functions）" class="anchor-navigation-ex-anchor" href="#聚集函数（aggregate-functions）"><i class="fa fa-link" aria-hidden="true"></i></a>聚集函数（Aggregate Functions）</h3>
+<p>聚集函数的核心是<strong>接收一组数据（集合），返回一个单一结果值</strong>，用于描述这组数据的 “汇总特征”。</p>
+<table>
+<thead>
+<tr>
+<th>聚集函数</th>
+<th>核心作用</th>
+<th>适用数据类型</th>
+<th>示例（基于账户余额<code>balance</code>）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>avg</code></td>
+<td>计算一组值的<strong>平均值</strong></td>
+<td>数值型（整数、小数）</td>
+<td><code>avg(balance)</code>：计算所有账户的平均余额</td>
+</tr>
+<tr>
+<td><code>min</code></td>
+<td>找出一组值的<strong>最小值</strong></td>
+<td>数值型、日期型、字符串型</td>
+<td><code>min(balance)</code>：找出余额最小的账户金额</td>
+</tr>
+<tr>
+<td><code>max</code></td>
+<td>找出一组值的<strong>最大值</strong></td>
+<td>数值型、日期型、字符串型</td>
+<td><code>max(balance)</code>：找出余额最大的账户金额</td>
+</tr>
+<tr>
+<td><code>sum</code></td>
+<td>计算一组值的<strong>总和</strong></td>
+<td>数值型</td>
+<td><code>sum(balance)</code>：计算所有账户的余额总和</td>
+</tr>
+<tr>
+<td><code>count</code></td>
+<td>统计一组值的<strong>非空值个数</strong>（或行数）</td>
+<td>任意类型（通常用于主键 / 非空列）</td>
+<td><code>count(account_number)</code>：统计账户总数</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!TIP]</p>
+<ul>
+<li><strong>输入是 “集合”</strong>：函数的参数必须是 “一组数据”（如某列的所有值、某分组内某列的值），而非单个值；</li>
+<li><strong>输出是 “单值”</strong>：无论输入集合有多少行，输出始终是一个结果值（如 100 个账户的<code>avg(balance)</code>结果是一个数字）；</li>
+<li><strong>忽略 NULL 值</strong>：若集合中存在<code>NULL</code>值（如某账户的<code>balance</code>为<code>NULL</code>），聚集函数会自动忽略该值（<code>count</code>除外：<code>count(*)</code>统计所有行数，包括<code>NULL</code>行；<code>count(列名)</code>仅统计非空行）。</li>
+</ul>
+</blockquote>
+<h3 id="聚集运算（aggregate-operation）"><a name="聚集运算（aggregate-operation）" class="anchor-navigation-ex-anchor" href="#聚集运算（aggregate-operation）"><i class="fa fa-link" aria-hidden="true"></i></a>聚集运算（Aggregate Operation）</h3>
+<p><strong>聚集运算</strong>正是将 “分组（Grouping）” 与 “聚集函数” 结合，实现更灵活的统计分析。</p>
+<p>聚集运算的语法为：<code>G₁, G₂, ..., Gₙ ℑ F₁(A₁), F₂(A₂), ..., Fₖ(Aₖ) (E)</code>（符号<code>ℑ</code>表示聚集运算，部分教材也用<code>γ</code>）</p>
+<blockquote>
+<p>各部分含义解析：</p>
+<ul>
+<li><code>E</code>：任意关系代数表达式（输入关系，可以是基础表、筛选结果、连接结果等）；</li>
+<li><code>G₁, G₂, ..., Gₙ</code>：<strong>分组属性</strong>（Grouping Attributes）—— 按这些属性的值对<code>E</code>中的行分组，相同值的行归为一组（若为空，则不分组，对整个关系做全局汇总）；</li>
+<li><code>F₁(A₁), ..., Fₖ(Aₖ)</code>：<strong>聚集项</strong>—— 对每个分组，应用聚集函数<code>F</code>到属性<code>A</code>上（如<code>sum(balance)</code>、<code>avg(age)</code>）；</li>
+<li>最终结果：包含 “分组属性列” 和 “聚集结果列” 的关系。</li>
+</ul>
+</blockquote>
+<hr></hr>
+<h2 id="外连接（outer-join）"><a name="外连接（outer-join）" class="anchor-navigation-ex-anchor" href="#外连接（outer-join）"><i class="fa fa-link" aria-hidden="true"></i></a>外连接（Outer Join）</h2>
+<p>外连接（Outer Join）是传统连接（如自然连接、θ 连接）的<strong>关键扩展</strong>，核心解决了传统连接 “仅保留匹配行、丢弃非匹配行” 导致的数据丢失问题。</p>
+<p>在保留 “匹配行” 的基础上，通过<code>NULL</code>值填充，完整保留某一侧或两侧关系中的 “非匹配行”，确保原始数据的信息完整性，是实际业务中 “全量展示关联结果”（如 “所有客户及其订单，包括无订单客户”）的核心运算。</p>
+<ol>
+<li><strong>运算逻辑：“匹配行 + 非匹配行”</strong>外连接的运算分两步：<ul>
+<li>第一步：执行传统连接（如自然连接），得到所有 “匹配行”；</li>
+<li>第二步：将 “某一侧关系中未参与匹配的行” 添加到结果中，对这些行的 “非匹配列”（即来自另一侧关系的列）填充<code>NULL</code>。</li>
+</ul>
+</li>
+</ol>
+<p>根据 “保留哪一侧非匹配行”，外连接分为<strong>左外连接、右外连接、全外连接</strong>三类。</p>
+<h3 id="1-左外连接（left-outer-join）：保留左表所有行"><a name="1-左外连接（left-outer-join）：保留左表所有行" class="anchor-navigation-ex-anchor" href="#1-左外连接（left-outer-join）：保留左表所有行"><i class="fa fa-link" aria-hidden="true"></i></a>1. 左外连接（Left Outer Join）：保留左表所有行</h3>
+<ul>
+<li><strong>定义</strong>：以 “左表（如<code>loan</code>）” 为基准，保留左表的<strong>所有行</strong>，右表（如<code>borrower</code>）仅保留匹配行；右表非匹配列填<code>NULL</code>。</li>
+<li><strong>符号</strong>：<code>左表 ⟕ 右表</code>（或<code>左表 LEFT OUTER JOIN 右表</code>）。</li>
+</ul>
+<h3 id="2-右外连接（right-outer-join）：保留右表所有行"><a name="2-右外连接（right-outer-join）：保留右表所有行" class="anchor-navigation-ex-anchor" href="#2-右外连接（right-outer-join）：保留右表所有行"><i class="fa fa-link" aria-hidden="true"></i></a>2. 右外连接（Right Outer Join）：保留右表所有行</h3>
+<ul>
+<li><strong>定义</strong>：以 “右表（如<code>borrower</code>）” 为基准，保留右表的<strong>所有行</strong>，左表（如<code>loan</code>）仅保留匹配行；左表非匹配列填<code>NULL</code>。</li>
+<li><strong>符号</strong>：<code>左表 ⟖ 右表</code>（或<code>左表 RIGHT OUTER JOIN 右表</code>）。</li>
+</ul>
+<h3 id="3-全外连接（full-outer-join）：保留两侧所有行"><a name="3-全外连接（full-outer-join）：保留两侧所有行" class="anchor-navigation-ex-anchor" href="#3-全外连接（full-outer-join）：保留两侧所有行"><i class="fa fa-link" aria-hidden="true"></i></a>3. 全外连接（Full Outer Join）：保留两侧所有行</h3>
+<ul>
+<li><strong>定义</strong>：保留左表和右表的<strong>所有行</strong>，两侧非匹配列均填<code>NULL</code>（即左外连接 + 右外连接的并集）。</li>
+<li><strong>符号</strong>：<code>左表 ⟗ 右表</code>（或<code>左表 FULL OUTER JOIN 右表</code>）。</li>
+</ul>
+<h1 id="null-值（null-values）"><a name="null-值（null-values）" class="anchor-navigation-ex-anchor" href="#null-值（null-values）"><i class="fa fa-link" aria-hidden="true"></i></a>NULL 值（Null Values）</h1>
+<p><strong>NULL 值</strong>是用于表示 “数据未知、数据不存在或数据不适用于该元组” 的特殊标记，并非 “空字符串” 或 “0” 等具体值。</p>
+<ul>
+<li><strong>“未知值”（Unknown Value）</strong>：数据存在，但当前无法获取（如 “某客户的年龄已存在，但未录入系统”）；</li>
+<li><strong>“不存在值”（Non-Existent Value）</strong>：数据本身不适用于该元组（如 “未选课的学生，其‘课程成绩’属性不存在”）；</li>
+<li><strong>≠ 空字符串 / 0</strong>：NULL 不是 “”（空字符串），也不是 “0”（数字）—— 空字符串是 “已知的空数据”，0 是 “已知的数值”，而 NULL 是 “未知 / 不存在” 的状态。</li>
+</ul>
+<h3 id="算术运算：含-null-的表达式结果必为-null"><a name="算术运算：含-null-的表达式结果必为-null" class="anchor-navigation-ex-anchor" href="#算术运算：含-null-的表达式结果必为-null"><i class="fa fa-link" aria-hidden="true"></i></a>算术运算：含 NULL 的表达式结果必为 NULL</h3>
+<blockquote>
+<p>“The result of any arithmetic expression involving null is null.”</p>
+</blockquote>
+<ul>
+<li>由于 NULL 是 “未知值”，任何包含未知值的计算结果也必然是未知的；</li>
+<li>示例：<ul>
+<li><code>3 + NULL = NULL</code>（已知数 + 未知值 = 未知）；</li>
+<li><code>NULL × 10 = NULL</code>（未知值 × 已知数 = 未知）；</li>
+<li><code>(loan.amount - NULL) = NULL</code>（贷款金额 - 未知值 = 未知）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="聚集函数：自动忽略-null-值"><a name="聚集函数：自动忽略-null-值" class="anchor-navigation-ex-anchor" href="#聚集函数：自动忽略-null-值"><i class="fa fa-link" aria-hidden="true"></i></a>聚集函数：自动忽略 NULL 值</h3>
+<blockquote>
+<p>“Aggregate functions simply ignore null values (as in SQL)”</p>
+</blockquote>
+<ul>
+<li>逻辑：聚集函数（<code>sum</code>/<code>avg</code>/<code>min</code>/<code>max</code>/<code>count</code>）统计 “已知数据”，NULL 作为未知值不参与计算；</li>
+<li>注意：<code>count(*)</code>是例外 ——<code>count(*)</code>统计元组总数（包括含 NULL 的元组），<code>count(列名)</code>仅统计该列非 NULL 值的个数；</li>
+</ul>
+<h3 id="去重（duplicate-elimination）与分组（grouping）：null-视为相同值"><a name="去重（duplicate-elimination）与分组（grouping）：null-视为相同值" class="anchor-navigation-ex-anchor" href="#去重（duplicate-elimination）与分组（grouping）：null-视为相同值"><i class="fa fa-link" aria-hidden="true"></i></a>去重（Duplicate Elimination）与分组（Grouping）：NULL 视为相同值</h3>
+<blockquote>
+<p>“For duplicate elimination and grouping, null is treated like any other value, and two nulls are assumed to be the same (as in SQL)”</p>
+</blockquote>
+<ul>
+<li>逻辑：为了保证去重和分组的一致性，即使 NULL 是 “未知值”，也默认两个 NULL 代表 “相同的未知状态”；</li>
+<li>示例：<ul>
+<li>去重（<code>δ</code>运算）：若某列有两个 NULL 值，去重后仅保留 1 个 NULL；</li>
+<li>分组（<code>GROUP BY</code>）：若按 “课程成绩” 分组，所有成绩为 NULL 的元组会被归为同一组。</li>
+</ul>
+</li>
+</ul>
+<h2 id="null-值的比较逻辑：三值逻辑（three-valued-logic）"><a name="null-值的比较逻辑：三值逻辑（three-valued-logic）" class="anchor-navigation-ex-anchor" href="#null-值的比较逻辑：三值逻辑（three-valued-logic）"><i class="fa fa-link" aria-hidden="true"></i></a>NULL 值的比较逻辑：三值逻辑（Three-Valued Logic）</h2>
+<p>传统逻辑只有 “真（True）” 和 “假（False）”，但由于 NULL 的存在，关系代数中的比较运算引入了<strong>第三值 “未知（Unknown）”</strong>—— 这是理解 NULL 比较的核心</p>
+<p>任何与 NULL 的直接比较（如 “等于、大于、小于”）都无法确定结果，因此返回 “Unknown”；</p>
+<h4 id="（1）or-运算（逻辑或）：只要有一个为真，结果为真；全为假则为假；否则为未知"><a name="（1）or-运算（逻辑或）：只要有一个为真，结果为真；全为假则为假；否则为未知" class="anchor-navigation-ex-anchor" href="#（1）or-运算（逻辑或）：只要有一个为真，结果为真；全为假则为假；否则为未知"><i class="fa fa-link" aria-hidden="true"></i></a>（1）OR 运算（逻辑或）：只要有一个为真，结果为真；全为假则为假；否则为未知</h4>
+<ul>
+<li><code>T OR T = T</code></li>
+<li><code>T OR F = T</code></li>
+<li><code>T OR U = T</code>（真与任何值 OR，结果都是真）</li>
+<li><code>F OR F = F</code></li>
+<li><code>F OR U = U</code>（假与未知 OR，结果无法确定，为未知）</li>
+<li><code>U OR U = U</code>（未知与未知 OR，结果无法确定，为未知）</li>
+</ul>
+<h4 id="（2）and-运算（逻辑与）：只有全为真，结果为真；有一个为假则为假；否则为未知"><a name="（2）and-运算（逻辑与）：只有全为真，结果为真；有一个为假则为假；否则为未知" class="anchor-navigation-ex-anchor" href="#（2）and-运算（逻辑与）：只有全为真，结果为真；有一个为假则为假；否则为未知"><i class="fa fa-link" aria-hidden="true"></i></a>（2）AND 运算（逻辑与）：只有全为真，结果为真；有一个为假则为假；否则为未知</h4>
+<ul>
+<li><code>T AND T = T</code></li>
+<li><code>T AND F = F</code></li>
+<li><code>T AND U = U</code>（真与未知 AND，结果无法确定，为未知）</li>
+<li><code>F AND F = F</code></li>
+<li><code>F AND U = F</code>（假与任何值 AND，结果都是假）</li>
+<li><code>U AND U = U</code>（未知与未知 AND，结果无法确定，为未知）</li>
+</ul>
+<h4 id="（3）not-运算（逻辑非）：取反；未知的非仍为未知"><a name="（3）not-运算（逻辑非）：取反；未知的非仍为未知" class="anchor-navigation-ex-anchor" href="#（3）not-运算（逻辑非）：取反；未知的非仍为未知"><i class="fa fa-link" aria-hidden="true"></i></a>（3）NOT 运算（逻辑非）：取反；未知的非仍为未知</h4>
+<ul>
+<li><code>NOT T = F</code></li>
+<li><code>NOT F = T</code></li>
+<li><code>NOT U = U</code>（未知的否定仍是未知，无法确定）</li>
+</ul>
+<h1 id="修改关系代数（modification-of-the-database）"><a name="修改关系代数（modification-of-the-database）" class="anchor-navigation-ex-anchor" href="#修改关系代数（modification-of-the-database）"><i class="fa fa-link" aria-hidden="true"></i></a>修改关系代数（<strong>Modification of the Database</strong>）</h1>
+<p> “Modification of the Database” 指<strong>修改关系代数</strong>，它是对数据库中的数据内容进行变更的操作，主要包含删除（Deletion）、插入（Insertion）和更新（Updating）三类核心操作</p>
+<h2 id="删除操作（deletion）"><a name="删除操作（deletion）" class="anchor-navigation-ex-anchor" href="#删除操作（deletion）"><i class="fa fa-link" aria-hidden="true"></i></a>删除操作（Deletion）</h2>
+<p><strong>删除操作（Deletion）</strong> 是用于从关系（表）中移除符合特定条件的 “完整元组（行）” 的核心修改操作，而非仅删除某列的部分值。</p>
+<p><strong><code>r ← r – E</code></strong></p>
+<ul>
+<li><code>r</code>：待删除数据的目标关系（如<code>account</code>表、<code>loan</code>表）；</li>
+<li><code>E</code>：关系代数查询表达式，用于筛选出 “需要从<code>r</code>中删除的元组”（结果是<code>r</code>的子集）；</li>
+<li><code>←</code>：赋值运算符，将 “原关系<code>r</code>减去待删元组<code>E</code>后的新关系” 重新赋值给<code>r</code>，实现数据覆盖（即完成删除）。</li>
+<li>删除后的关系 = 原关系中 “不包含在<code>E</code>中的元组”，确保仅移除符合条件的行。</li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li><strong>“先查询，后删除”</strong>：<code>E</code>本质是一个查询，建议先单独执行<code>E</code>（如<code>σ_branch_name="Perryridge" (account)</code>），确认筛选出的元组是预期要删除的，再执行<code>r ← r – E</code>；</li>
+<li><strong>级联删除（Cascading Deletion）</strong>：若删除的元组在其他关系中存在 “引用”（如<code>account</code>表的<code>account_number</code>被<code>depositor</code>表引用），需同步删除关联关系中的元组（教材示例 2 明确体现了这一点），否则会导致 “悬空元组”（引用了不存在的数据）；</li>
+<li><strong>无条件删除风险</strong>：若<code>E</code>等于<code>r</code>（如<code>account ← account – account</code>），会删除<code>r</code>中的所有元组（清空表），需谨慎使用；</li>
+<li><strong>权限控制</strong>：删除操作通常需要数据库的 “删除权限（DELETE privilege）”，普通用户可能无权限删除系统表或其他用户的表。</li>
+</ol>
+</blockquote>
+<hr></hr>
+<h2 id="插入操作（insertion）"><a name="插入操作（insertion）" class="anchor-navigation-ex-anchor" href="#插入操作（insertion）"><i class="fa fa-link" aria-hidden="true"></i></a>插入操作（Insertion）</h2>
+<p><strong>插入操作（Insertion）</strong> 是向关系（表）中添加新元组（行）的核心修改操作，支持 “单条元组插入” 和 “批量查询结果插入” 两种模式。</p>
+<p><strong><code>r ← r ∪ E</code></strong></p>
+<ul>
+<li><code>r</code>：待插入数据的目标关系（如<code>account</code>表、<code>depositor</code>表）；</li>
+<li><code>E</code>：“待插入元组集合” 的来源，既可以是 “常量元组构成的集合”（如<code>{(“A-973”, “Perryridge”, 1200)}</code>），也可以是 “关系代数查询的结果”（如<code>π_loan_number, branch_name, 200 (r1)</code>）；</li>
+<li><p><code>←</code>：赋值运算符，将 “原关系<code>r</code>与待插入元组<code>E</code>的并集” 重新赋值给<code>r</code>，实现数据覆盖（即完成插入）；</p>
+</li>
+<li><p>插入后的关系 = 原关系<code>r</code>中所有元组 + <code>E</code>中所有元组（自动去重）。</p>
+</li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li><strong>属性数量与类型匹配</strong>：<code>E</code>中的元组必须与目标关系<code>r</code>的 “属性数量一致、类型匹配”—— 如<code>account</code>表有<code>(account_number, branch_name, balance)</code>3 个属性，<code>E</code>中的元组必须是 3 个值，且分别为字符串、字符串、数值类型；</li>
+<li><strong>主键唯一性</strong>：若<code>r</code>定义了主键（如<code>account</code>表的<code>account_number</code>为主键），<code>E</code>中的元组主键值不能与<code>r</code>中已有的主键值重复，否则会触发 “主键冲突”，插入失败；</li>
+<li><strong>非空约束</strong>：若<code>r</code>的某属性定义为 “非空（NOT NULL）”（如<code>branch_name</code>不允许为<code>NULL</code>），<code>E</code>中的元组该属性不能为<code>NULL</code>，否则插入失败；</li>
+<li><strong>外键约束</strong>：若<code>r</code>的某属性是外键（如<code>depositor</code>表的<code>account_number</code>引用<code>account</code>表的<code>account_number</code>），<code>E</code>中的元组外键值必须在被引用表中存在（或为<code>NULL</code>，若允许），否则会触发 “外键冲突”，插入失败。</li>
+</ol>
+</blockquote>
+<h2 id="更新操作（updating）"><a name="更新操作（updating）" class="anchor-navigation-ex-anchor" href="#更新操作（updating）"><i class="fa fa-link" aria-hidden="true"></i></a>更新操作（Updating）</h2>
+<p><strong>更新操作（Updating）</strong> 是用于修改关系（表）中已有元组（行）特定属性值的核心修改操作，无需改变元组的所有属性（区别于 “删除旧元组 + 插入新元组” 的间接修改方式）</p>
+<p><code>r ← ρ_r( π_{F1, F2, ..., Fl}(r) )</code></p>
+<ul>
+<li>符号含义：<ul>
+<li><code>r</code>：待更新数据的目标关系（如<code>account</code>表）；</li>
+<li><code>F1, F2, ..., Fl</code>：广义投影的表达式列表，对应 <code>r</code>的每一个属性：<ul>
+<li>若属性<strong>不更新</strong>：<code>Fi</code>直接取原属性（如<code>account_number</code>不修改，<code>F1=account_number</code>）；</li>
+<li>若属性<strong>需更新</strong>：<code>Fi</code>是 “基于原属性或常量的算术表达式”（如余额增加 5%，<code>F3=balance×1.05</code>）；</li>
+</ul>
+</li>
+<li><code>π_{F1,...Fl}(r)</code>：通过广义投影生成 “所有元组修改后的值”，形成新的关系集合；</li>
+<li><code>ρ_r(...)</code>：将投影结果重命名为<code>r</code>（确保与原关系名一致）；</li>
+<li><code>←</code>：赋值运算符，用 “修改后的新关系” 覆盖原关系<code>r</code>，完成更新。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>[!TIP]</p>
+<ol>
+<li><strong>表达式合法性</strong>：需修改属性的表达式<code>Fi</code>必须合法 —— 仅含原关系的属性、常量和有效运算符（如<code>balance×1.05</code>合法，<code>balance+name</code>不合法，因类型不匹配）；</li>
+<li><strong>属性覆盖完整性</strong>：<code>F1~Fl</code>必须覆盖<code>r</code>的所有属性 —— 即使某属性不修改，也需在投影列表中明确保留（如<code>account</code>表有 3 个属性，投影列表必须包含 “账号、分行名、余额”，不能遗漏）；</li>
+<li><strong>约束不破坏</strong>：修改后的值需满足原关系的约束（如主键唯一性、非空约束、外键约束）—— 例如将<code>account_number</code>修改为已存在的值，会触发主键冲突；</li>
+<li><strong>条件筛选精准性</strong>：若仅更新部分元组（如 “仅余额超 10000 的账户加息”），需先通过选择运算（<code>σ</code>）筛选出目标元组，再执行投影，避免误改无关元组。</li>
+</ol>
+</blockquote>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 02_关系模型</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01_引言.html" class="navigation navigation-prev " aria-label="Previous page: 01_引言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03_SQL.html" class="navigation navigation-next " aria-label="Next page: 03_SQL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02_关系模型","level":"1.8.2","depth":2,"next":{"title":"03_SQL","level":"1.8.3","depth":2,"path":"docs/Database_System/03_SQL.md","ref":"docs/Database_System/03_SQL.md","articles":[]},"previous":{"title":"01_引言","level":"1.8.1","depth":2,"path":"docs/Database_System/01_引言.md","ref":"docs/Database_System/01_引言.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Database_System/02_关系模型.md","mtime":"2026-03-09T01:44:20.678Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

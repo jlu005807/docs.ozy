@@ -1,0 +1,2660 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>05_高级SQL · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06_E-R模型.html" />
+    
+    
+    <link rel="prev" href="04_SQL进阶.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="01_引言.html">
+            
+                <a href="01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="02_关系模型.html">
+            
+                <a href="02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="03_SQL.html">
+            
+                <a href="03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="04_SQL进阶.html">
+            
+                <a href="04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.5" data-path="05_高级SQL.html">
+            
+                <a href="05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="06_E-R模型.html">
+            
+                <a href="06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="07_关系数据库设计.html">
+            
+                <a href="07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="08_事务.html">
+            
+                <a href="08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="09_并发控制.html">
+            
+                <a href="09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >05_高级SQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#高级sql"><b></b>高级SQL</a></li><ul><li><span class="title-icon "></span><a href="#程序与数据库服务器的交互accessing-sql-from-a-programming-language"><b></b>程序与数据库服务器的交互(Accessing SQL From a Programming Language)</a></li><ul><li><span class="title-icon "></span><a href="#jdbc（java-database-connectivity）"><b></b>JDBC（Java Database Connectivity）</a></li><li><span class="title-icon "></span><a href="#odbc（open-database-connectivity，开放数据库连接）"><b></b>ODBC（Open Database Connectivity，开放数据库连接）</a></li><li><span class="title-icon "></span><a href="#嵌入式-sql-embedded-sql"><b></b>嵌入式 SQL (Embedded SQL)</a></li></ul><li><span class="title-icon "></span><a href="#sql-的扩展（extensions-to-sql）"><b></b>SQL 的扩展（Extensions to SQL）</a></li><ul><li><span class="title-icon "></span><a href="#函数（function）"><b></b>函数（Function）</a></li><li><span class="title-icon "></span><a href="#存储过程（procedure）"><b></b>存储过程（Procedure）</a></li></ul><li><span class="title-icon "></span><a href="#触发器（trigger）"><b></b>触发器（Trigger）</a></li><ul><li><span class="title-icon "></span><a href="#触发器的本质"><b></b>触发器的本质</a></li><li><span class="title-icon "></span><a href="#新旧数据的引用规则"><b></b>新旧数据的引用规则</a></li><li><span class="title-icon "></span><a href="#两大触发时机：before-vs-after"><b></b>两大触发时机：before vs after</a></li><li><span class="title-icon "></span><a href="#两种触发范围：行级触发-vs-语句级触发"><b></b>两种触发范围：行级触发 vs 语句级触发</a></li><li><span class="title-icon "></span><a href="#核心用途"><b></b>核心用途</a></li></ul><li><span class="title-icon "></span><a href="#递归查询（recursive-queries）"><b></b>递归查询（Recursive Queries）</a></li></ul></ul></div><a href="#高级sql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#高级sql">高级SQL</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#程序与数据库服务器的交互accessing-sql-from-a-programming-language">程序与数据库服务器的交互(Accessing SQL From a Programming Language)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#jdbc（java-database-connectivity）">JDBC（Java Database Connectivity）</a><i></i></div></li>
+<li><div><a href="#odbc（open-database-connectivity，开放数据库连接）">ODBC（Open Database Connectivity，开放数据库连接）</a><i></i></div></li>
+<li><div><a href="#嵌入式-sql-embedded-sql">嵌入式 SQL (Embedded SQL)</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#游标（cursor）——-处理多行查询结果">游标（Cursor）—— 处理多行查询结果</a><i></i></div></li>
+<li><div><a href="#嵌入式-sql-的更新操作：通过游标修改数据">嵌入式 SQL 的更新操作：通过游标修改数据</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#sql-的扩展（extensions-to-sql）">SQL 的扩展（Extensions to SQL）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#函数（function）">函数（Function）</a><i></i></div></li>
+<li><div><a href="#存储过程（procedure）">存储过程（Procedure）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#触发器（trigger）">触发器（Trigger）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#触发器的本质">触发器的本质</a><i></i></div></li>
+<li><div><a href="#新旧数据的引用规则">新旧数据的引用规则</a><i></i></div></li>
+<li><div><a href="#两大触发时机：before-vs-after">两大触发时机：before vs after</a><i></i></div></li>
+<li><div><a href="#两种触发范围：行级触发-vs-语句级触发">两种触发范围：行级触发 vs 语句级触发</a><i></i></div></li>
+<li><div><a href="#核心用途">核心用途</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#递归查询（recursive-queries）">递归查询（Recursive Queries）</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="高级sql"><a name="高级sql" class="anchor-navigation-ex-anchor" href="#高级sql"><i class="fa fa-link" aria-hidden="true"></i></a>高级SQL</h1>
+<p>数据库开发从基础应用走向复杂业务实现的关键，涵盖了程序语言与 SQL 的交互、函数与存储过程、触发器、递归查询等核心内容</p>
+<h2 id="程序与数据库服务器的交互accessing-sql-from-a-programming-language"><a name="程序与数据库服务器的交互accessing-sql-from-a-programming-language" class="anchor-navigation-ex-anchor" href="#程序与数据库服务器的交互accessing-sql-from-a-programming-language"><i class="fa fa-link" aria-hidden="true"></i></a>程序与数据库服务器的交互(Accessing SQL From a Programming Language)</h2>
+<p>SQL 是数据库的查询语言，但实际开发中，程序（如 Java/C++ 代码）不会直接在数据库终端执行 SQL，而是通过<strong>应用程序接口（API）</strong> 与数据库服务器交互，通用流程为：</p>
+<ol>
+<li>建立与数据库服务器的连接；</li>
+<li>向服务器发送 SQL 命令（查询 / 更新 / 插入等）；</li>
+<li>将查询结果逐行提取到程序变量中；</li>
+<li>处理执行过程中的错误。</li>
+</ol>
+<p>支持该交互的主流工具分为三类：<strong>JDBC、ODBC、嵌入式 SQL</strong>。</p>
+<p><img src="assets/image-20251215135328706.png" alt="image-20251215135328706" style="zoom:20%;"></img></p>
+<h3 id="jdbc（java-database-connectivity）"><a name="jdbc（java-database-connectivity）" class="anchor-navigation-ex-anchor" href="#jdbc（java-database-connectivity）"><i class="fa fa-link" aria-hidden="true"></i></a>JDBC（Java Database Connectivity）</h3>
+<p>JDBC 是一套 Java API，用于与支持 SQL 的数据库系统进行通信。</p>
+<ol>
+<li><strong>核心操作：增删改查</strong></li>
+<li><strong>查数据库 “本身的结构”（元数据）</strong>:数据库里有哪些表、某张表有哪些字段 </li>
+</ol>
+<p>Java 程序用 JDBC 连数据库，必须走这四步：</p>
+<ol>
+<li><strong>连数据库</strong>：先和数据库服务器建立连接（输地址、账号密码）；</li>
+<li><strong>准备 SQL “执行器”</strong>：创建一个叫<code>Statement</code>的对象，专门用来装要执行的 SQL；</li>
+<li><strong>发 SQL + 拿结果</strong>：通过<code>Statement</code>把 SQL 发给数据库，再把返回的结果（比如查询到的用户列表）取回来；</li>
+<li><strong>处理出错情况</strong>：如果连不上数据库、SQL 写错了，JDBC 会用 “异常” 告诉你哪里出了问题，方便排查。</li>
+</ol>
+<h3 id="odbc（open-database-connectivity，开放数据库连接）"><a name="odbc（open-database-connectivity，开放数据库连接）" class="anchor-navigation-ex-anchor" href="#odbc（open-database-connectivity，开放数据库连接）"><i class="fa fa-link" aria-hidden="true"></i></a>ODBC（Open Database Connectivity，开放数据库连接）</h3>
+<p>ODBC 本质是一套<strong>标准化的应用程序接口（API）</strong>，程序通过调用这些 API 能完成和数据库的全流程交互，核心就三件事：</p>
+<ol>
+<li><strong>建立连接</strong>：通过 API 打开和数据库服务器的连接（输入数据库地址、账号密码），这是所有操作的基础；</li>
+<li><strong>发送指令</strong>：通过 API 把 SQL 查询（比如查数据）、更新（比如改数据 / 删数据）指令发给数据库；</li>
+<li><strong>获取结果</strong>：通过 API 接收数据库返回的执行结果（比如查询到的表格数据、更新是否成功的状态）。</li>
+</ol>
+<h3 id="嵌入式-sql-embedded-sql"><a name="嵌入式-sql-embedded-sql" class="anchor-navigation-ex-anchor" href="#嵌入式-sql-embedded-sql"><i class="fa fa-link" aria-hidden="true"></i></a>嵌入式 SQL (Embedded SQL)</h3>
+<p>嵌入式 SQL 是把 SQL 语句直接写到 C、C++、Java 等编程语言（称为<strong>宿主语言</strong>）代码里的技术，SQL 标准统一规定了它在不同宿主语言中的嵌入规则</p>
+<ol>
+<li><p><strong>标识 SQL 语句</strong>：让编译器识别 SQL</p>
+</li>
+<li><p>通用格式：用<code>EXEC SQL</code>开头标记嵌入式 SQL 语句，结尾默认用分号（<code>;</code>），如<code>EXEC SQL &lt;SQL语句&gt;;</code>；</p>
+</li>
+<li><p>语言差异：</p>
+<ul>
+<li>COBOL 语言：结尾用<code>END-EXEC</code>替代分号；</li>
+<li>Java 语言：格式改为<code>#SQL { &lt;SQL语句&gt; };</code>。</li>
+</ul>
+</li>
+<li><p><strong>数据库连接</strong>：操作前的必备步骤</p>
+</li>
+</ol>
+<p>执行任何嵌入式 SQL 前，必须先通过以下语句建立程序与数据库的连接：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">EXEC</span> <span class="hljs-keyword">SQL</span> <span class="hljs-keyword">connect</span> <span class="hljs-keyword">to</span> server <span class="hljs-keyword">user</span> 用户名 <span class="hljs-keyword">using</span> 密码;
+</code></pre>
+<p>其中<code>server</code>是数据库服务器的标识（如 IP + 端口），这是所有数据库操作的前提。</p>
+<ol>
+<li><p>宿主语言变量的使用：区分程序变量和 SQL 变量</p>
+</li>
+<li><p>标记规则：程序里的变量（如<code>credit_amount</code>）在 SQL 中使用时，必须加冒号（<code>:</code>）前缀（如<code>:credit_amount</code>），避免和 SQL 自身的变量混淆；</p>
+</li>
+<li>声明规则：这类变量必须放在<code>EXEC SQL BEGIN DECLARE SECTION</code>和<code>EXEC SQL END DECLARE SECTION</code>之间，变量的声明语法遵循宿主语言规则（比如 C 语言用<code>int</code>、Java 用<code>int</code>/<code>String</code>）</li>
+</ol>
+<pre><code class="lang-sql"><span class="hljs-keyword">EXEC</span> <span class="hljs-keyword">SQL</span> <span class="hljs-keyword">BEGIN</span> <span class="hljs-keyword">DECLARE</span> SECTION;
+  <span class="hljs-type">int</span> credit_amount; <span class="hljs-comment">-- 宿主语言变量（C语言语法）</span>
+<span class="hljs-keyword">EXEC</span> <span class="hljs-keyword">SQL</span> <span class="hljs-keyword">END</span> <span class="hljs-keyword">DECLARE</span> SECTION;
+</code></pre>
+<h4 id="游标（cursor）——-处理多行查询结果"><a name="游标（cursor）——-处理多行查询结果" class="anchor-navigation-ex-anchor" href="#游标（cursor）——-处理多行查询结果"><i class="fa fa-link" aria-hidden="true"></i></a>游标（Cursor）—— 处理多行查询结果</h4>
+<p>宿主语言无法直接接收 SQL 返回的 “多行结果集”，游标相当于 “结果集的指针”，逐行读取数据，核心流程分 4 步：</p>
+<ol>
+<li>声明游标：绑定要执行的 SQL 查询</li>
+</ol>
+<p>语法：<code>EXEC SQL declare 游标名 cursor for &lt;SQL查询&gt;</code>，示例（查询学分超过<code>:credit_amount</code>的学生）：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">EXEC</span> <span class="hljs-keyword">SQL</span>
+<span class="hljs-keyword">declare</span> c <span class="hljs-keyword">cursor</span> <span class="hljs-keyword">for</span>
+<span class="hljs-keyword">select</span> ID, name
+<span class="hljs-keyword">from</span> student
+<span class="hljs-keyword">where</span> tot_cred <span class="hljs-operator">&gt;</span> :credit_amount
+END_EXEC; <span class="hljs-comment">-- COBOL结尾，其他语言可用;</span>
+</code></pre>
+<p>作用：把 SQL 查询和游标<code>c</code>绑定，此时不执行查询，仅定义规则。</p>
+<ol>
+<li>打开游标：执行查询并保存结果</li>
+</ol>
+<p>语法：<code>EXEC SQL open 游标名;</code>（如<code>EXEC SQL open c;</code>）；作用：数据库执行绑定的 SQL 查询，把结果存入临时数据集，<strong>使用此时宿主变量（如<code>:credit_amount</code>）的当前值</strong>。</p>
+<ol>
+<li>提取数据：逐行读取结果到程序变量</li>
+</ol>
+<p>语法：<code>EXEC SQL fetch 游标名 into :变量1, :变量2;</code>（如<code>EXEC SQL fetch c into :si, :sn END_EXEC;</code>）；作用：把临时数据集里的一行数据存入程序变量（<code>si</code>存学生 ID，<code>sn</code>存姓名），重复调用<code>fetch</code>可读取下一行。</p>
+<ol>
+<li><p>终止与关闭：判断结束 + 释放资源</p>
+</li>
+<li><p>结束标识：SQL 通信区（SQLCA）里的<code>SQLSTATE</code>变量会被设为<code>'02000'</code>，表示没有更多数据；</p>
+</li>
+<li>关闭游标：<code>EXEC SQL close 游标名;</code>（如<code>EXEC SQL close c;</code>），删除临时数据集，释放数据库资源；</li>
+<li>语言差异：Java 中用 “迭代器（Iterator）” 替代游标逐行遍历结果，逻辑一致但语法不同。</li>
+</ol>
+<h4 id="嵌入式-sql-的更新操作：通过游标修改数据"><a name="嵌入式-sql-的更新操作：通过游标修改数据" class="anchor-navigation-ex-anchor" href="#嵌入式-sql-的更新操作：通过游标修改数据"><i class="fa fa-link" aria-hidden="true"></i></a>嵌入式 SQL 的更新操作：通过游标修改数据</h4>
+<p>声明可更新的游标：加<code>for update</code>关键字，示例（锁定 Music 系讲师数据）：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">EXEC</span> <span class="hljs-keyword">SQL</span>
+<span class="hljs-keyword">declare</span> c <span class="hljs-keyword">cursor</span> <span class="hljs-keyword">for</span>
+<span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> instructor <span class="hljs-keyword">where</span> dept_name <span class="hljs-operator">=</span> <span class="hljs-string">'Music'</span>
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">update</span>;
+</code></pre>
+<p>遍历游标并更新：先通过<code>fetch</code>读取一行数据，再用<code>where current of 游标名</code>定位当前行并修改，示例（给当前行讲师涨薪 1000）：</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">update</span> instructor
+<span class="hljs-keyword">set</span> salary <span class="hljs-operator">=</span> salary <span class="hljs-operator">+</span> <span class="hljs-number">1000</span>
+<span class="hljs-keyword">where</span> <span class="hljs-keyword">current</span> <span class="hljs-keyword">of</span> c;
+</code></pre>
+<h2 id="sql-的扩展（extensions-to-sql）"><a name="sql-的扩展（extensions-to-sql）" class="anchor-navigation-ex-anchor" href="#sql-的扩展（extensions-to-sql）"><i class="fa fa-link" aria-hidden="true"></i></a>SQL 的扩展（Extensions to SQL）</h2>
+<p>SQL:1999 及各数据库厂商扩展了<strong>函数、存储过程</strong>等 “过程式” 特性，核心是让 SQL 能处理复杂逻辑、复用代码、提升执行效率</p>
+<h3 id="函数（function）"><a name="函数（function）" class="anchor-navigation-ex-anchor" href="#函数（function）"><i class="fa fa-link" aria-hidden="true"></i></a>函数（Function）</h3>
+<p>封装一段可复用的逻辑，执行后返回<strong>单个值 / 表对象</strong>（表值函数）；</p>
+<p>既可以用 SQL 本身写，也能用 C、Java 等外部语言</p>
+<ul>
+<li>创建：<code>CREATE FUNCTION</code>，必须指定返回值类型（<code>RETURNS</code>），函数体必须有<code>RETURN</code>语句；</li>
+<li>参数：仅支持<code>IN</code>类型（输入参数）；</li>
+<li>调用：可直接嵌入查询语句中（如<code>SELECT</code>/<code>WHERE</code>子句）。</li>
+</ul>
+<p><strong>不能执行 insert/update/delete 等更新操作</strong></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">FUNCTION</span> <span class="hljs-operator">&lt;</span>函数名<span class="hljs-operator">&gt;</span> ([参数,..,参数])
+    <span class="hljs-keyword">RETURNS</span> <span class="hljs-operator">&lt;</span>数据类型<span class="hljs-operator">&gt;</span>
+    <span class="hljs-keyword">BEGIN</span>
+        <span class="hljs-operator">&lt;</span><span class="hljs-keyword">SQL</span>语句块<span class="hljs-operator">&gt;</span>
+    <span class="hljs-keyword">END</span><span class="hljs-operator">&lt;</span>终止符<span class="hljs-operator">&gt;</span>
+
+
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">function</span> dept_count (dept_name <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>))  <span class="hljs-comment">-- 输入参数：部门名</span>
+    <span class="hljs-keyword">returns</span> <span class="hljs-type">integer</span>  <span class="hljs-comment">-- 返回值类型：整数（讲师数量）</span>
+    <span class="hljs-keyword">begin</span>
+      <span class="hljs-keyword">declare</span> d_count <span class="hljs-type">integer</span>;  <span class="hljs-comment">-- 声明局部变量存统计结果</span>
+          <span class="hljs-keyword">select</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span> ) <span class="hljs-keyword">into</span> d_count  <span class="hljs-comment">-- 统计指定部门的讲师数，存入变量</span>
+          <span class="hljs-keyword">from</span> instructor
+          <span class="hljs-keyword">where</span> instructor.dept_name <span class="hljs-operator">=</span> dept_name;
+      <span class="hljs-keyword">return</span> d_count;  <span class="hljs-comment">-- 返回统计结果</span>
+    <span class="hljs-keyword">end</span>                       
+
+<span class="hljs-keyword">select</span> dept_name, budget
+<span class="hljs-keyword">from</span> department
+<span class="hljs-keyword">where</span> dept_count (dept_name) <span class="hljs-operator">&gt;</span> <span class="hljs-number">12</span>;  <span class="hljs-comment">-- 函数直接用在WHERE子句中</span>
+</code></pre>
+<hr></hr>
+<h3 id="存储过程（procedure）"><a name="存储过程（procedure）" class="anchor-navigation-ex-anchor" href="#存储过程（procedure）"><i class="fa fa-link" aria-hidden="true"></i></a>存储过程（Procedure）</h3>
+<p>封装一段复杂业务逻辑（可包含<strong>更新、循环、条件判断</strong>），编译后存储在数据库中，调用时直接执行；</p>
+<ul>
+<li>创建：<code>CREATE PROCEDURE</code>，无需指定返回值类型；</li>
+<li>参数：支持<code>IN</code>（输入）、<code>OUT</code>（输出）、<code>INOUT</code>（输入输出），可返回多个值；</li>
+<li>调用：必须用<code>CALL</code>语句（如<code>CALL 过程名(参数)</code>），不能嵌入查询语句。</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">PROCEDURE</span> <span class="hljs-operator">&lt;</span>存储过程名<span class="hljs-operator">&gt;</span> ([参数,..,参数]) #参数的格式为:[<span class="hljs-keyword">IN</span><span class="hljs-operator">/</span><span class="hljs-keyword">OUT</span><span class="hljs-operator">/</span><span class="hljs-keyword">INOUT</span>] 参数名 参数数据类型
+    <span class="hljs-keyword">BEGIN</span>
+        <span class="hljs-operator">&lt;</span><span class="hljs-keyword">SQL</span>语句块<span class="hljs-operator">&gt;</span>
+    <span class="hljs-keyword">END</span><span class="hljs-operator">&lt;</span>终止符<span class="hljs-operator">&gt;</span>
+
+
+DELIMITER <span class="hljs-operator">/</span><span class="hljs-operator">/</span> #将数据库的终止符修改为<span class="hljs-operator">/</span><span class="hljs-operator">/</span>,因为数据库的默认终止符为分号,为了避免与存储过程中<span class="hljs-keyword">SQL</span>语句块中的终止符(即分号)冲突
+    <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">PROCEDURE</span> PROC_COURSE_AVG_ GRADE (<span class="hljs-keyword">IN</span> course_id <span class="hljs-type">CHAR</span>(<span class="hljs-number">4</span>),<span class="hljs-keyword">OUT</span> avg_grade <span class="hljs-type">FLOAT</span>)
+    <span class="hljs-keyword">BEGIN</span>
+        <span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">AVG</span> (GRADE) <span class="hljs-keyword">INTO</span> avg_grade <span class="hljs-keyword">FROM</span> SC <span class="hljs-keyword">WHERE</span> Cno<span class="hljs-operator">=</span>course_id;
+    <span class="hljs-keyword">END</span> <span class="hljs-operator">/</span><span class="hljs-operator">/</span>
+
+DELIMITER; #恢复默认终止符
+<span class="hljs-keyword">CALL</span> PROC COURSE AVG GRADE ("1",<span class="hljs-variable">@avg_grade</span>);
+# @ 符号用于表示用户定义的变量。
+</code></pre>
+<blockquote>
+<p>[!tip]</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>存储过程</th>
+<th>函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>返回值</td>
+<td>多值（OUT/INOUT 参数）</td>
+<td>单值 / 表（RETURN）</td>
+</tr>
+<tr>
+<td>参数类型</td>
+<td>IN/OUT/INOUT</td>
+<td>仅 IN</td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>CALL 独立执行</td>
+<td>嵌入 SELECT 等查询</td>
+</tr>
+<tr>
+<td>数据操作</td>
+<td>可增删改查</td>
+<td>仅查询，不可修改</td>
+</tr>
+<tr>
+<td>语法要求</td>
+<td>无需 RETURN</td>
+<td>必须 RETURNS</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>存储过程 = 数据库里的 “小程序”：能改数据、返多值、独立运行，适合复杂业务；</li>
+<li>函数 = 数据库里的 “计算器”：仅查数据、返单值、嵌在查询里用，适合简单计算 / 查询。</li>
+</ul>
+</blockquote>
+<h2 id="触发器（trigger）"><a name="触发器（trigger）" class="anchor-navigation-ex-anchor" href="#触发器（trigger）"><i class="fa fa-link" aria-hidden="true"></i></a>触发器（Trigger）</h2>
+<h3 id="触发器的本质"><a name="触发器的本质" class="anchor-navigation-ex-anchor" href="#触发器的本质"><i class="fa fa-link" aria-hidden="true"></i></a>触发器的本质</h3>
+<p>触发器就是数据库的 “自动响应机器人”，当有人增 / 删 / 改数据时，它会自动按预设规则干活。</p>
+<ol>
+<li><strong>自动触发，无需人工干预</strong>：由数据库系统自行检测、自行执行的 “后台程序”</li>
+<li><strong>触发前提：仅在数据库数据被修改时触发</strong>：触发器不会无故执行，只有当数据库发生<strong>数据修改操作</strong>时才会被激活，这里的修改仅指三类核心操作：插入（<code>insert</code>）、删除（<code>delete</code>）、更新（<code>update</code>）</li>
+<li><strong>本质属性：数据修改的 “附加副作用”</strong>：触发器执行的逻辑（比如 “<strong>自动累加该学生的总学分</strong>”）并不是核心操作本身，而是核心操作带来的附加、连带动作</li>
+</ol>
+<p>设计一个可用的触发器，必须完成两个关键配置，缺一不可</p>
+<ol>
+<li><strong>明确触发条件（“什么时候干活”）</strong><ul>
+<li>这是触发器的 “执行门槛”，需要定义清楚 “满足什么情况什么事件才会启动”，不是只要数据修改就触发。</li>
+</ul>
+</li>
+<li><strong>明确触发动作（“具体干什么活”）</strong><ul>
+<li>这是触发器的 “核心业务逻辑”，需要定义清楚 “满足条件后，要执行哪些操作”。比如一条或者多条SQL语句</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>[!tip]</p>
+<ol>
+<li>触发器本质：数据库数据修改（增 / 删 / 改）时自动执行的 “附加逻辑程序”，无需手动调用；</li>
+<li>设计核心：必须同时明确 “触发条件”（执行门槛）和 “触发动作”（业务逻辑）；</li>
+</ol>
+</blockquote>
+<p>触发器的触发前提是数据库发生<strong>数据修改操作</strong>，仅支持三种核心事件，无其他额外触发类型：<code>insert</code>、<code>delete</code>、<code>update</code></p>
+<p>其中普通<code>update</code>触发器会在表的<strong>任意字段</strong>被修改时触发，而我们可以对其进行精准限制，仅当<strong>指定字段</strong>被修改时才激活触发器</p>
+<pre><code class="lang-sql">#仅当takes表（学生选课成绩表）的grade字段（成绩字段）被更新后，该触发器才会执行
+after <span class="hljs-keyword">update</span> <span class="hljs-keyword">of</span> takes <span class="hljs-keyword">on</span> grade
+</code></pre>
+<h3 id="新旧数据的引用规则"><a name="新旧数据的引用规则" class="anchor-navigation-ex-anchor" href="#新旧数据的引用规则"><i class="fa fa-link" aria-hidden="true"></i></a>新旧数据的引用规则</h3>
+<p>触发器支持引用数据修改前后的字段值，用于条件判断或业务计算，不同操作对应不同的引用方式，规则固定：</p>
+<table>
+<thead>
+<tr>
+<th>触发事件</th>
+<th>可引用的数据</th>
+<th>引用语法</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delete</code></td>
+<td>仅旧数据（删除前的行数据）</td>
+<td><code>referencing old row as 别名</code>（如 orow）</td>
+<td>记录被删除的数据、做删除前校验</td>
+</tr>
+<tr>
+<td><code>insert</code></td>
+<td>仅新数据（插入后的行数据）</td>
+<td><code>referencing new row as 别名</code>（如 nrow）</td>
+<td>校验插入的数据、基于插入数据更新关联表</td>
+</tr>
+<tr>
+<td><code>update</code></td>
+<td>旧数据（更新前）+ 新数据（更新后）</td>
+<td>旧数据：<code>referencing old row as 别名</code>新数据：<code>referencing new row as 别名</code></td>
+<td>对比数据变化（如工资是否上涨）、基于变化执行逻辑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="两大触发时机：before-vs-after"><a name="两大触发时机：before-vs-after" class="anchor-navigation-ex-anchor" href="#两大触发时机：before-vs-after"><i class="fa fa-link" aria-hidden="true"></i></a>两大触发时机：<code>before</code> vs <code>after</code></h3>
+<ol>
+<li><p><strong><code>before</code>（事件执行前触发）</strong></p>
+<ul>
+<li><p>作为<strong>额外的数据约束 / 数据预处理</strong>，在数据正式写入 / 修改到数据库前，对数据进行校验或修正，保证数据合法性。</p>
+</li>
+<li><p>示例：将空白成绩（<code>''</code>）自动转为<code>null</code>（避免脏数据存入数据库），对应<code>setnull_trigger</code>触发器。</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">trigger</span> setnull_trigger 
+before <span class="hljs-keyword">update</span> <span class="hljs-keyword">of</span> takes  <span class="hljs-comment">-- 触发时机：更新takes表之前</span>
+<span class="hljs-keyword">referencing</span> <span class="hljs-keyword">new</span> <span class="hljs-type">row</span> <span class="hljs-keyword">as</span> nrow  <span class="hljs-comment">-- 引用更新后的行数据（别名nrow）</span>
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span> <span class="hljs-type">row</span>  <span class="hljs-comment">-- 行级触发：每更新一行数据就执行一次</span>
+<span class="hljs-keyword">when</span> (nrow.grade <span class="hljs-operator">=</span> <span class="hljs-string">' '</span>)  <span class="hljs-comment">-- 触发条件：更新后的grade字段是空白字符串</span>
+<span class="hljs-keyword">begin</span> <span class="hljs-keyword">atomic</span>  <span class="hljs-comment">-- 原子执行：要么全部成功，要么全部回滚</span>
+  <span class="hljs-keyword">set</span> nrow.grade <span class="hljs-operator">=</span> <span class="hljs-keyword">null</span>;  <span class="hljs-comment">-- 触发动作：将空白成绩转为null</span>
+<span class="hljs-keyword">end</span>;
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong><code>after</code>（事件执行后触发）</strong></p>
+<ul>
+<li><strong>维护关联数据、记录审计日志</strong>，在数据已经成功修改后，执行连带的业务逻辑，不影响原数据的修改操作。</li>
+<li>示例：学生成绩从不及格转为及格后，自动累加对应课程学分，对应<code>credits_earned</code>触发器。</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">trigger</span> credits_earned 
+after <span class="hljs-keyword">update</span> <span class="hljs-keyword">of</span> takes <span class="hljs-keyword">on</span> (grade)  <span class="hljs-comment">-- 触发时机：takes表的grade字段更新后</span>
+<span class="hljs-keyword">referencing</span> <span class="hljs-keyword">new</span> <span class="hljs-type">row</span> <span class="hljs-keyword">as</span> nrow  <span class="hljs-comment">-- 新数据：更新后的成绩行</span>
+<span class="hljs-keyword">referencing</span> <span class="hljs-keyword">old</span> <span class="hljs-type">row</span> <span class="hljs-keyword">as</span> orow  <span class="hljs-comment">-- 旧数据：更新前的成绩行</span>
+<span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span> <span class="hljs-type">row</span>  <span class="hljs-comment">-- 行级触发：逐行处理成绩更新</span>
+<span class="hljs-comment">-- 触发条件：从“不及格/无成绩”转为“及格”</span>
+<span class="hljs-keyword">when</span> nrow.grade <span class="hljs-operator">&lt;&gt;</span> <span class="hljs-string">'F'</span> <span class="hljs-keyword">and</span> nrow.grade <span class="hljs-keyword">is</span> <span class="hljs-keyword">not null</span>
+  <span class="hljs-keyword">and</span> (orow.grade <span class="hljs-operator">=</span> <span class="hljs-string">'F'</span> <span class="hljs-keyword">or</span> orow.grade <span class="hljs-keyword">is</span> <span class="hljs-keyword">null</span>)
+<span class="hljs-keyword">begin</span> <span class="hljs-keyword">atomic</span>
+  <span class="hljs-comment">-- 触发动作：累加对应课程的学分到学生总学分</span>
+  <span class="hljs-keyword">update</span> student
+  <span class="hljs-keyword">set</span> tot_cred<span class="hljs-operator">=</span> tot_cred <span class="hljs-operator">+</span>
+  (<span class="hljs-keyword">select</span> credits <span class="hljs-keyword">from</span> course <span class="hljs-keyword">where</span> course.course_id<span class="hljs-operator">=</span> nrow.course_id)
+  <span class="hljs-keyword">where</span> student.id <span class="hljs-operator">=</span> nrow.id;
+<span class="hljs-keyword">end</span>;
+</code></pre>
+</li>
+</ol>
+<h3 id="两种触发范围：行级触发-vs-语句级触发"><a name="两种触发范围：行级触发-vs-语句级触发" class="anchor-navigation-ex-anchor" href="#两种触发范围：行级触发-vs-语句级触发"><i class="fa fa-link" aria-hidden="true"></i></a>两种触发范围：行级触发 vs 语句级触发</h3>
+<p>触发器按执行粒度分为两种，适用于不同数据量场景，效率差异明显：</p>
+<ol>
+<li>行级触发：<strong><code>for each row</code></strong>（默认常用）<ul>
+<li>对<strong>每一条受修改操作影响的行</strong>，都独立执行一次触发器逻辑；</li>
+</ul>
+</li>
+<li>语句级触发：<strong><code>for each statement</code></strong><ul>
+<li>无论多少行数据受影响，<strong>仅对整个修改语句执行一次触发器逻辑</strong>；</li>
+</ul>
+</li>
+</ol>
+<h3 id="核心用途"><a name="核心用途" class="anchor-navigation-ex-anchor" href="#核心用途"><i class="fa fa-link" aria-hidden="true"></i></a>核心用途</h3>
+<ol>
+<li><strong>保障数据完整性</strong>：<ul>
+<li>通过触发器补充数据库基础约束的不足，确保存入 / 修改后的数据库数据是<strong>合法、一致、完整</strong>的，避免脏数据（无效 / 混乱数据）产生。</li>
+<li>插入前校验；更新或者删除时的级联操作</li>
+</ul>
+</li>
+<li><strong>实现数据审计</strong>：<ul>
+<li>通过触发器自动跟踪数据库中<strong>数据的变化轨迹</strong>，留存完整的修改痕迹，同时校验数据变化是否符合业务规则，确保业务数据的正确性与合理性，便于后续追溯问题、排查责任。</li>
+<li>日志</li>
+</ul>
+</li>
+<li><strong>强化数据安全性</strong><ul>
+<li>通过触发器实现 “场景化安全校验”，补充数据库传统账号权限的不足，限制非法数据操作，保障核心业务数据的安全。</li>
+</ul>
+</li>
+<li><strong>实现数据备份与同步</strong><ul>
+<li>当数据发生增、删、改操作时，触发器自动触发<strong>数据备份或跨表 / 跨库同步</strong>操作，无需人工手动干预，避免数据丢失，同时保证多表 / 多库数据的一致性。</li>
+</ul>
+</li>
+</ol>
+<p>触发器有上述核心作用，但是下面有些情况不应该使用触发器</p>
+<ol>
+<li><strong>对于维护汇总数据</strong>（实时统计聚合信息）：替代方案 - <strong>物化视图（Materialized View）</strong></li>
+<li><strong>实现数据库复制</strong>（主从 / 多库数据同步）：替代方案 - <strong>数据库原生复制功能</strong></li>
+<li>同时<strong>封装更新方法</strong>替代了多数触发器场景：手动定义专门的 “字段更新方法”，将触发器动作封装到该更新方法中</li>
+</ol>
+<hr></hr>
+<h2 id="递归查询（recursive-queries）"><a name="递归查询（recursive-queries）" class="anchor-navigation-ex-anchor" href="#递归查询（recursive-queries）"><i class="fa fa-link" aria-hidden="true"></i></a>递归查询（Recursive Queries）</h2>
+<p>递归查询（Recursive Queries）是 SQL 的高级特性（SQL:1999 正式纳入标准），核心用于解决<strong>层次化数据</strong>和<strong>传递闭包</strong>问题</p>
+<p>递归查询就是 “查询结果可以反复调用自身” 的查询方式，像 “循环解题” 一样：</p>
+<ul>
+<li>先获取基础数据（初始条件），再用基础数据的结果作为新的输入，反复迭代，直到满足终止条件，最终得到完整结果。</li>
+<li>处理<strong>有层级关系</strong>或<strong>传递关系</strong>的数据</li>
+</ul>
+<p>传递闭包（Transitive Closure，层次传递闭包）</p>
+<ul>
+<li>这是递归查询最核心的应用场景，指 “从直接关系推导出自接（间接）关系的完整集合”。</li>
+</ul>
+<p><strong>SQL:1999 这个官方标准，正式支持「递归视图」的定义</strong>，对于递归视图的内容可以看<a href="04_SQL进阶.html">04_SQL进阶中的视图</a></p>
+<p>对于找出某一门特定课程的<strong>所有先修课程</strong>，需要使用递归查询</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- 1. 定义递归公用表表达式（递归视图）rec_prereq</span>
+<span class="hljs-keyword">WITH</span> <span class="hljs-keyword">RECURSIVE</span> rec_prereq(course_id, prereq_id) <span class="hljs-keyword">AS</span> (
+  <span class="hljs-comment">-- 第一部分：非递归查询（基础查询/初始条件）</span>
+  <span class="hljs-keyword">SELECT</span> course_id, prereq_id
+  <span class="hljs-keyword">FROM</span> prereq
+  <span class="hljs-comment">-- 连接非递归查询和递归查询（UNION自动去重，UNION ALL效率更高）</span>
+  <span class="hljs-keyword">UNION</span>
+  <span class="hljs-comment">-- 第二部分：递归查询（自我调用，推导间接关系）</span>
+  <span class="hljs-keyword">SELECT</span> rec_prereq.course_id, prereq.prereq_id
+  <span class="hljs-keyword">FROM</span> rec_prereq, prereq  <span class="hljs-comment">-- 递归自连接：递归结果与原始先修表连接</span>
+  <span class="hljs-keyword">WHERE</span> rec_prereq.prereq_id <span class="hljs-operator">=</span> prereq.course_id  <span class="hljs-comment">-- 递归关联核心条件</span>
+)
+<span class="hljs-comment">-- 2. 查询递归视图的最终结果（所有直接+间接先修关系）</span>
+<span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span>
+<span class="hljs-keyword">FROM</span> rec_prereq;
+</code></pre>
+<ul>
+<li><strong><code>WITH RECURSIVE</code></strong>：SQL:1999 中定义递归视图 / 公用表表达式（CTE）的核心关键字，标志着后续定义的是递归结构；</li>
+</ul>
+<p><strong>这个递归视图<code>rec_prereq</code>，被称为<code>prereq</code>关系的「传递闭包」</strong>（这是理解递归查询的核心概念）。</p>
+<ul>
+<li><code>prereq</code>表（原始关系）：仅存储「直接关系」（A→B、B→C、C→D）；</li>
+<li>传递闭包（<code>rec_prereq</code>视图）：存储「所有直接关系 + 所有间接关系」的完整集合（A→B、A→C、A→D、B→C、B→D、C→D）；</li>
+<li>从 “直接关联” 推导 “间接关联”，完整覆盖层级化的传递关系，这正是递归查询的本质作用。</li>
+</ul>
+<blockquote>
+<p>[!note]</p>
+<p>普通非递归查询的本质局限：<strong>无法适配任意层级的传递关系</strong>，层级数超过预设的连接次数后，查询就会失效</p>
+<p>递归视图使得某些查询（例如传递闭包查询）的编写成为可能，而这类查询离开递归或迭代是无法实现的。</p>
+</blockquote>
+<p>递归视图<strong>必须满足单调性约束</strong>，这是 SQL 标准对递归视图的强制要求，目的是保证迭代能稳定收敛到唯一的不动点。</p>
+<ul>
+<li>单调性的具体定义是：当我们向原始关系<code>prereq</code>表中添加新的元组（行数据，比如新增一门课程的直接先修关系）时，递归视图<code>rec_prereq</code>的结果集<strong>只会保持不变或增加新的元组</strong>，绝不会减少原有已存在的元组，但是可能会增加</li>
+</ul>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-03-09 01:44:20
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-03-09T01:44:34.529Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 05_高级SQL</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04_SQL进阶.html" class="navigation navigation-prev " aria-label="Previous page: 04_SQL进阶">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06_E-R模型.html" class="navigation navigation-next " aria-label="Next page: 06_E-R模型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05_高级SQL","level":"1.8.5","depth":2,"next":{"title":"06_E-R模型","level":"1.8.6","depth":2,"path":"docs/Database_System/06_E-R模型.md","ref":"docs/Database_System/06_E-R模型.md","articles":[]},"previous":{"title":"04_SQL进阶","level":"1.8.4","depth":2,"path":"docs/Database_System/04_SQL进阶.md","ref":"docs/Database_System/04_SQL进阶.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/Database_System/05_高级SQL.md","mtime":"2026-03-09T01:44:20.678Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-03-09T01:44:31.398Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
