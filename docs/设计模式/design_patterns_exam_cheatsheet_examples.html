@@ -1,0 +1,3391 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>design_patterns_exam_cheatsheet_examples · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../物联网安全/" />
+    
+    
+    <link rel="prev" href="设计模式_开卷考速查表.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="设计模式_开卷考速查表.html">
+            
+                <a href="设计模式_开卷考速查表.html">
+            
+                    
+                    设计模式_开卷考速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14.2" data-path="design_patterns_exam_cheatsheet_examples.html">
+            
+                <a href="design_patterns_exam_cheatsheet_examples.html">
+            
+                    
+                    design_patterns_exam_cheatsheet_examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../物联网安全/">
+            
+                <a href="../物联网安全/">
+            
+                    
+                    物联网安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../物联网安全/01_物联网安全概述.html">
+            
+                <a href="../物联网安全/01_物联网安全概述.html">
+            
+                    
+                    01_物联网安全概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../物联网安全/02_密码技术基础.html">
+            
+                <a href="../物联网安全/02_密码技术基础.html">
+            
+                    
+                    02_密码技术基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../物联网安全/03_感知层安全.html">
+            
+                <a href="../物联网安全/03_感知层安全.html">
+            
+                    
+                    03_感知层安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../物联网安全/04_网络攻防实例.html">
+            
+                <a href="../物联网安全/04_网络攻防实例.html">
+            
+                    
+                    04_网络攻防实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../物联网安全/05_防火墙技术.html">
+            
+                <a href="../物联网安全/05_防火墙技术.html">
+            
+                    
+                    05_防火墙技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../物联网安全/06_入侵检测技术.html">
+            
+                <a href="../物联网安全/06_入侵检测技术.html">
+            
+                    
+                    06_入侵检测技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../物联网安全/07_IPSec与VPN.html">
+            
+                <a href="../物联网安全/07_IPSec与VPN.html">
+            
+                    
+                    07_IPSec与VPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../物联网安全/08_网络访问控制.html">
+            
+                <a href="../物联网安全/08_网络访问控制.html">
+            
+                    
+                    08_网络访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="../物联网安全/review.html">
+            
+                <a href="../物联网安全/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../智能终端与边缘计算/">
+            
+                <a href="../智能终端与边缘计算/">
+            
+                    
+                    智能终端与边缘计算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../智能终端与边缘计算/01_智能终端与边缘计算概述.html">
+            
+                <a href="../智能终端与边缘计算/01_智能终端与边缘计算概述.html">
+            
+                    
+                    01_智能终端与边缘计算概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../智能终端与边缘计算/02_移动通信与智能终端的融合.html">
+            
+                <a href="../智能终端与边缘计算/02_移动通信与智能终端的融合.html">
+            
+                    
+                    02_移动通信与智能终端的融合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../智能终端与边缘计算/03_计算迁移与智能终端.html">
+            
+                <a href="../智能终端与边缘计算/03_计算迁移与智能终端.html">
+            
+                    
+                    03_计算迁移与智能终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../智能终端与边缘计算/04_边缘计算安全.html">
+            
+                <a href="../智能终端与边缘计算/04_边缘计算安全.html">
+            
+                    
+                    04_边缘计算安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../智能终端与边缘计算/05_物联网边缘计算应用.html">
+            
+                <a href="../智能终端与边缘计算/05_物联网边缘计算应用.html">
+            
+                    
+                    05_物联网边缘计算应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../智能终端与边缘计算/06_边缘计算开源平台.html">
+            
+                <a href="../智能终端与边缘计算/06_边缘计算开源平台.html">
+            
+                    
+                    06_边缘计算开源平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../智能终端与边缘计算/07_边缘计算与人工智能的融合.html">
+            
+                <a href="../智能终端与边缘计算/07_边缘计算与人工智能的融合.html">
+            
+                    
+                    07_边缘计算与人工智能的融合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../智能终端与边缘计算/08_智能终端与边缘计算应用与案例分析.html">
+            
+                <a href="../智能终端与边缘计算/08_智能终端与边缘计算应用与案例分析.html">
+            
+                    
+                    08_智能终端与边缘计算应用与案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../智能终端与边缘计算/review.html">
+            
+                <a href="../智能终端与边缘计算/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../智能终端与边缘计算/习题.html">
+            
+                <a href="../智能终端与边缘计算/习题.html">
+            
+                    
+                    习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../智能终端与边缘计算/简答.html">
+            
+                <a href="../智能终端与边缘计算/简答.html">
+            
+                    
+                    简答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../无线网络技术/">
+            
+                <a href="../无线网络技术/">
+            
+                    
+                    无线网络技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../无线网络技术/01_从计算机网络到无线网络.html">
+            
+                <a href="../无线网络技术/01_从计算机网络到无线网络.html">
+            
+                    
+                    01_从计算机网络到无线网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../无线网络技术/02_无线通信和网络仿真基础.html">
+            
+                <a href="../无线网络技术/02_无线通信和网络仿真基础.html">
+            
+                    
+                    02_无线通信和网络仿真基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../无线网络技术/03_无线局域网.html">
+            
+                <a href="../无线网络技术/03_无线局域网.html">
+            
+                    
+                    03_无线局域网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../无线网络技术/04_无线城域网广域网.html">
+            
+                <a href="../无线网络技术/04_无线城域网广域网.html">
+            
+                    
+                    04_无线城域网广域网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../无线网络技术/05_卫星网络.html">
+            
+                <a href="../无线网络技术/05_卫星网络.html">
+            
+                    
+                    05_卫星网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../无线网络技术/06_无线自组织网络.html">
+            
+                <a href="../无线网络技术/06_无线自组织网络.html">
+            
+                    
+                    06_无线自组织网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >design_patterns_exam_cheatsheet_examples</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#设计模式考试纸质速查表（模式识别--uml--意图--关键代码）"><b></b>设计模式考试纸质速查表（模式识别 + UML + 意图 + 关键代码）</a></li><ul><li><span class="title-icon "></span><a href="#0-考场答题通用模板"><b></b>0. 考场答题通用模板</a></li><ul><li><span class="title-icon "></span><a href="#01-识别模式的-4-步"><b></b>0.1 识别模式的 4 步</a></li><li><span class="title-icon "></span><a href="#02-答题段落模板"><b></b>0.2 答题段落模板</a></li><li><span class="title-icon "></span><a href="#03-uml-关系速记"><b></b>0.3 UML 关系速记</a></li></ul><li><span class="title-icon "></span><a href="#1-面向对象设计原则速记"><b></b>1. 面向对象设计原则速记</a></li><li><span class="title-icon "></span><a href="#2-模式识别总表"><b></b>2. 模式识别总表</a></li><ul><li><span class="title-icon "></span><a href="#21-生活例子速判表"><b></b>2.1 生活例子速判表</a></li></ul></ul><li><span class="title-icon "></span><a href="#3-创建型模式"><b></b>3. 创建型模式</a></li><ul><li><span class="title-icon "></span><a href="#31-简单工厂-simple-factory"><b></b>3.1 简单工厂 Simple Factory</a></li><li><span class="title-icon "></span><a href="#32-工厂方法-factory-method"><b></b>3.2 工厂方法 Factory Method</a></li><li><span class="title-icon "></span><a href="#33-抽象工厂-abstract-factory"><b></b>3.3 抽象工厂 Abstract Factory</a></li><li><span class="title-icon "></span><a href="#34-建造者-builder"><b></b>3.4 建造者 Builder</a></li><li><span class="title-icon "></span><a href="#35-原型-prototype"><b></b>3.5 原型 Prototype</a></li><li><span class="title-icon "></span><a href="#36-单例-singleton"><b></b>3.6 单例 Singleton</a></li></ul><li><span class="title-icon "></span><a href="#4-结构型模式"><b></b>4. 结构型模式</a></li><ul><li><span class="title-icon "></span><a href="#41-适配器-adapter"><b></b>4.1 适配器 Adapter</a></li><li><span class="title-icon "></span><a href="#42-桥接-bridge"><b></b>4.2 桥接 Bridge</a></li><li><span class="title-icon "></span><a href="#43-组合-composite"><b></b>4.3 组合 Composite</a></li><li><span class="title-icon "></span><a href="#44-装饰-decorator"><b></b>4.4 装饰 Decorator</a></li><li><span class="title-icon "></span><a href="#45-外观-facade"><b></b>4.5 外观 Facade</a></li><li><span class="title-icon "></span><a href="#46-代理-proxy"><b></b>4.6 代理 Proxy</a></li></ul><li><span class="title-icon "></span><a href="#5-行为型模式"><b></b>5. 行为型模式</a></li><ul><li><span class="title-icon "></span><a href="#51-策略-strategy"><b></b>5.1 策略 Strategy</a></li><li><span class="title-icon "></span><a href="#52-模板方法-template-method"><b></b>5.2 模板方法 Template Method</a></li><li><span class="title-icon "></span><a href="#53-观察者-observer"><b></b>5.3 观察者 Observer</a></li><li><span class="title-icon "></span><a href="#54-命令-command"><b></b>5.4 命令 Command</a></li><li><span class="title-icon "></span><a href="#55-职责链-chain-of-responsibility"><b></b>5.5 职责链 Chain of Responsibility</a></li><li><span class="title-icon "></span><a href="#56-状态-state"><b></b>5.6 状态 State</a></li><li><span class="title-icon "></span><a href="#57-中介者-mediator"><b></b>5.7 中介者 Mediator</a></li><li><span class="title-icon "></span><a href="#58-备忘录-memento"><b></b>5.8 备忘录 Memento</a></li></ul><li><span class="title-icon "></span><a href="#6-高频混淆题速判"><b></b>6. 高频混淆题速判</a></li><li><span class="title-icon "></span><a href="#7-典型场景答题小抄"><b></b>7. 典型场景答题小抄</a></li><li><span class="title-icon "></span><a href="#7-快速画-uml-的套路"><b></b>7. 快速画 UML 的套路</a></li><ul><li><span class="title-icon "></span><a href="#万能代码骨架"><b></b>万能代码骨架</a></li></ul></ul></div><a href="#设计模式考试纸质速查表（模式识别--uml--意图--关键代码）" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#设计模式考试纸质速查表（模式识别--uml--意图--关键代码）">设计模式考试纸质速查表（模式识别 + UML + 意图 + 关键代码）</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#0-考场答题通用模板">0. 考场答题通用模板</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#01-识别模式的-4-步">0.1 识别模式的 4 步</a><i></i></div></li>
+<li><div><a href="#02-答题段落模板">0.2 答题段落模板</a><i></i></div></li>
+<li><div><a href="#03-uml-关系速记">0.3 UML 关系速记</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#1-面向对象设计原则速记">1. 面向对象设计原则速记</a><i></i></div></li>
+<li><div><a href="#2-模式识别总表">2. 模式识别总表</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#21-生活例子速判表">2.1 生活例子速判表</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#3-创建型模式">3. 创建型模式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#31-简单工厂-simple-factory">3.1 简单工厂 Simple Factory</a><i></i></div></li>
+<li><div><a href="#32-工厂方法-factory-method">3.2 工厂方法 Factory Method</a><i></i></div></li>
+<li><div><a href="#33-抽象工厂-abstract-factory">3.3 抽象工厂 Abstract Factory</a><i></i></div></li>
+<li><div><a href="#34-建造者-builder">3.4 建造者 Builder</a><i></i></div></li>
+<li><div><a href="#35-原型-prototype">3.5 原型 Prototype</a><i></i></div></li>
+<li><div><a href="#36-单例-singleton">3.6 单例 Singleton</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#4-结构型模式">4. 结构型模式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#41-适配器-adapter">4.1 适配器 Adapter</a><i></i></div></li>
+<li><div><a href="#42-桥接-bridge">4.2 桥接 Bridge</a><i></i></div></li>
+<li><div><a href="#43-组合-composite">4.3 组合 Composite</a><i></i></div></li>
+<li><div><a href="#44-装饰-decorator">4.4 装饰 Decorator</a><i></i></div></li>
+<li><div><a href="#45-外观-facade">4.5 外观 Facade</a><i></i></div></li>
+<li><div><a href="#46-代理-proxy">4.6 代理 Proxy</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#5-行为型模式">5. 行为型模式</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#51-策略-strategy">5.1 策略 Strategy</a><i></i></div></li>
+<li><div><a href="#52-模板方法-template-method">5.2 模板方法 Template Method</a><i></i></div></li>
+<li><div><a href="#53-观察者-observer">5.3 观察者 Observer</a><i></i></div></li>
+<li><div><a href="#54-命令-command">5.4 命令 Command</a><i></i></div></li>
+<li><div><a href="#55-职责链-chain-of-responsibility">5.5 职责链 Chain of Responsibility</a><i></i></div></li>
+<li><div><a href="#56-状态-state">5.6 状态 State</a><i></i></div></li>
+<li><div><a href="#57-中介者-mediator">5.7 中介者 Mediator</a><i></i></div></li>
+<li><div><a href="#58-备忘录-memento">5.8 备忘录 Memento</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#6-高频混淆题速判">6. 高频混淆题速判</a><i></i></div></li>
+<li><div><a href="#7-典型场景答题小抄">7. 典型场景答题小抄</a><i></i></div></li>
+<li><div><a href="#7-快速画-uml-的套路">7. 快速画 UML 的套路</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#万能代码骨架">万能代码骨架</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="设计模式考试纸质速查表（模式识别--uml--意图--关键代码）"><a name="设计模式考试纸质速查表（模式识别--uml--意图--关键代码）" class="anchor-navigation-ex-anchor" href="#设计模式考试纸质速查表（模式识别--uml--意图--关键代码）"><i class="fa fa-link" aria-hidden="true"></i></a>设计模式考试纸质速查表（模式识别 + UML + 意图 + 关键代码）</h1>
+<blockquote>
+<p>适用题型：给定场景，识别模式，画 UML 类图，说明设计意图，写关键代码。<br></br>不包含：享元、迭代器、访问者、解释器。代码均为“伪 Java 骨架”，考试时按题目类名替换即可。<br></br>本版增加“生活例子 / 考题套话”，用于纸质考试时快速识别场景。</p>
+</blockquote>
+<hr></hr>
+<h2 id="0-考场答题通用模板"><a name="0-考场答题通用模板" class="anchor-navigation-ex-anchor" href="#0-考场答题通用模板"><i class="fa fa-link" aria-hidden="true"></i></a>0. 考场答题通用模板</h2>
+<h3 id="01-识别模式的-4-步"><a name="01-识别模式的-4-步" class="anchor-navigation-ex-anchor" href="#01-识别模式的-4-步"><i class="fa fa-link" aria-hidden="true"></i></a>0.1 识别模式的 4 步</h3>
+<ol>
+<li>找变化点：对象创建变化？接口不兼容？树形结构？算法可替换？对象状态变化？请求要排队/撤销？</li>
+<li>定抽象层：先写接口/抽象类，如 Product、Strategy、Component、Subject。</li>
+<li>分配角色：抽象角色 + 具体角色 + 客户端/上下文/工厂/装饰器/代理/接收者等。</li>
+<li>说明原则：开闭原则、依赖倒置、单一职责、组合优于继承、迪米特原则。</li>
+</ol>
+<h3 id="02-答题段落模板"><a name="02-答题段落模板" class="anchor-navigation-ex-anchor" href="#02-答题段落模板"><i class="fa fa-link" aria-hidden="true"></i></a>0.2 答题段落模板</h3>
+<p>本题适合使用【X 模式】。因为场景中存在【变化点/问题】，若直接在客户端使用 if-else/new/类型判断，会导致系统与具体类强耦合，新增功能需要修改原有代码。该模式通过引入【抽象角色】和【协作角色】，将【变化部分】封装起来，使客户端依赖抽象而非具体实现，符合开闭原则和依赖倒置原则。</p>
+<h3 id="03-uml-关系速记"><a name="03-uml-关系速记" class="anchor-navigation-ex-anchor" href="#03-uml-关系速记"><i class="fa fa-link" aria-hidden="true"></i></a>0.3 UML 关系速记</h3>
+<ul>
+<li>依赖：虚线箭头 A ..&gt; B，A 临时使用 B，如方法参数/局部变量。</li>
+<li>关联：实线 A --&gt; B，A 持有 B 成员引用。</li>
+<li>聚合：空心菱形在整体端，整体管理部分，部分可独立存在。</li>
+<li>组合：实心菱形在整体端，整体与部分同生共死。</li>
+<li>泛化：实线空心三角箭头指向父类。</li>
+<li>实现：虚线空心三角箭头指向接口。</li>
+</ul>
+<hr></hr>
+<h2 id="1-面向对象设计原则速记"><a name="1-面向对象设计原则速记" class="anchor-navigation-ex-anchor" href="#1-面向对象设计原则速记"><i class="fa fa-link" aria-hidden="true"></i></a>1. 面向对象设计原则速记</h2>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>一句话</th>
+<th>理解例子</th>
+<th>考试套话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单一职责 SRP</td>
+<td>一个类只负责一类变化</td>
+<td><code>Student</code> 只管学生信息，成绩统计交给 <code>ScoreService</code>，报表导出交给 <code>ReportExporter</code>。</td>
+<td>避免一个类承担过多职责，降低修改影响范围。</td>
+</tr>
+<tr>
+<td>开闭原则 OCP</td>
+<td>对扩展开放，对修改关闭</td>
+<td>新增“三角形绘制”时新增 <code>Triangle implements Shape</code>，不修改原来的 <code>drawShapes()</code>。</td>
+<td>新需求通过新增类/实现扩展，而不是修改稳定代码。</td>
+</tr>
+<tr>
+<td>里氏替换 LSP</td>
+<td>子类能透明替换父类</td>
+<td><code>Bird</code> 有 <code>fly()</code> 不合适，因为企鹅不能飞；应拆成 <code>Flyable</code> 接口。</td>
+<td>继承要保证行为一致，不要破坏父类约定。</td>
+</tr>
+<tr>
+<td>依赖倒置 DIP</td>
+<td>依赖抽象，不依赖具体</td>
+<td><code>OrderService</code> 依赖 <code>Payment</code> 接口，而不是直接依赖 <code>AliPay</code>。</td>
+<td>高层模块和低层模块都面向接口编程。</td>
+</tr>
+<tr>
+<td>接口隔离 ISP</td>
+<td>接口小而专一</td>
+<td>打印机接口拆成 <code>Printable</code>、<code>Scannable</code>，普通打印机不用实现扫描。</td>
+<td>不强迫类依赖它不需要的方法。</td>
+</tr>
+<tr>
+<td>迪米特 LoD</td>
+<td>只和直接朋友通信</td>
+<td>用户只找“前台”办理入住，不直接找保洁、财务、仓库。</td>
+<td>减少对象间直接耦合，不要“朋友的朋友”。</td>
+</tr>
+<tr>
+<td>合成复用 CARP</td>
+<td>多用组合，少用继承</td>
+<td>汽车“有一个”发动机，用 <code>Car</code> 持有 <code>Engine</code>，不要让 <code>Car extends Engine</code>。</td>
+<td>用“拥有 has-a”复用功能，避免继承滥用。</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="2-模式识别总表"><a name="2-模式识别总表" class="anchor-navigation-ex-anchor" href="#2-模式识别总表"><i class="fa fa-link" aria-hidden="true"></i></a>2. 模式识别总表</h2>
+<table>
+<thead>
+<tr>
+<th>问题信号</th>
+<th>优先模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>根据参数创建不同产品，产品少、变化少</td>
+<td>简单工厂</td>
+</tr>
+<tr>
+<td>产品经常新增，希望新增产品不改工厂核心</td>
+<td>工厂方法</td>
+</tr>
+<tr>
+<td>创建一组相关对象，同一品牌/风格/数据库族</td>
+<td>抽象工厂</td>
+</tr>
+<tr>
+<td>复杂对象分步骤构建，构建过程相同但表示不同</td>
+<td>建造者</td>
+</tr>
+<tr>
+<td>复制已有复杂对象，创建成本高</td>
+<td>原型</td>
+</tr>
+<tr>
+<td>全局唯一对象：配置、日志、连接池</td>
+<td>单例</td>
+</tr>
+<tr>
+<td>老接口和新接口不兼容，需要复用旧类</td>
+<td>适配器</td>
+</tr>
+<tr>
+<td>两个独立变化维度，避免类爆炸</td>
+<td>桥接</td>
+</tr>
+<tr>
+<td>树形结构，统一处理叶子与容器</td>
+<td>组合</td>
+</tr>
+<tr>
+<td>运行时动态增加职责，可多层叠加</td>
+<td>装饰</td>
+</tr>
+<tr>
+<td>子系统复杂，需要统一入口</td>
+<td>外观</td>
+</tr>
+<tr>
+<td>控制访问：权限、远程、缓存、延迟加载</td>
+<td>代理</td>
+</tr>
+<tr>
+<td>多种算法可替换</td>
+<td>策略</td>
+</tr>
+<tr>
+<td>算法流程固定，部分步骤由子类实现</td>
+<td>模板方法</td>
+</tr>
+<tr>
+<td>一对多通知，发布-订阅</td>
+<td>观察者</td>
+</tr>
+<tr>
+<td>请求封装成对象，支持队列、日志、撤销</td>
+<td>命令</td>
+</tr>
+<tr>
+<td>多个处理者按链传递请求</td>
+<td>职责链</td>
+</tr>
+<tr>
+<td>对象行为随内部状态改变</td>
+<td>状态</td>
+</tr>
+<tr>
+<td>多对象网状通信复杂，交给中心协调</td>
+<td>中介者</td>
+</tr>
+<tr>
+<td>保存并恢复对象历史状态</td>
+<td>备忘录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-生活例子速判表"><a name="21-生活例子速判表" class="anchor-navigation-ex-anchor" href="#21-生活例子速判表"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 生活例子速判表</h3>
+<table>
+<thead>
+<tr>
+<th>场景例子</th>
+<th>优先想到</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>输入“圆形/方形”创建按钮，产品少</td>
+<td>简单工厂</td>
+</tr>
+<tr>
+<td>日志系统新增文件日志、数据库日志，每种日志一个工厂</td>
+<td>工厂方法</td>
+</tr>
+<tr>
+<td>Windows 风格按钮+文本框、Mac 风格按钮+文本框</td>
+<td>抽象工厂</td>
+</tr>
+<tr>
+<td>组装电脑：CPU、内存、硬盘、显卡一步步配置</td>
+<td>建造者</td>
+</tr>
+<tr>
+<td>游戏中复制大量相似敌人/地图对象</td>
+<td>原型</td>
+</tr>
+<tr>
+<td>系统配置、日志记录器、连接池只有一个</td>
+<td>单例</td>
+</tr>
+<tr>
+<td>旧接口 <code>playMp3()</code>，新系统要求 <code>play()</code></td>
+<td>适配器</td>
+</tr>
+<tr>
+<td>消息类型（普通/加急） × 发送渠道（短信/邮件）</td>
+<td>桥接</td>
+</tr>
+<tr>
+<td>文件夹和文件都可以执行 <code>show()</code> / <code>getSize()</code></td>
+<td>组合</td>
+</tr>
+<tr>
+<td>咖啡加奶、加糖、加巧克力，可叠加</td>
+<td>装饰</td>
+</tr>
+<tr>
+<td>一键加密文件：读取、加密、保存由门面统一调用</td>
+<td>外观</td>
+</tr>
+<tr>
+<td>图片懒加载、权限校验、远程对象本地代表</td>
+<td>代理</td>
+</tr>
+<tr>
+<td>不同支付方式、不同排序算法、不同折扣算法</td>
+<td>策略</td>
+</tr>
+<tr>
+<td>做菜流程固定：备菜-烹饪-装盘，具体菜不同</td>
+<td>模板方法</td>
+</tr>
+<tr>
+<td>公众号发文后所有订阅者收到通知</td>
+<td>观察者</td>
+</tr>
+<tr>
+<td>遥控器按钮封装“开灯/关灯/撤销”命令</td>
+<td>命令</td>
+</tr>
+<tr>
+<td>报销审批：组长-经理-总监-校长逐级处理</td>
+<td>职责链</td>
+</tr>
+<tr>
+<td>订单：待支付、已支付、已发货、已完成行为不同</td>
+<td>状态</td>
+</tr>
+<tr>
+<td>聊天室中用户不直接互发，由聊天室转发</td>
+<td>中介者</td>
+</tr>
+<tr>
+<td>文本编辑器撤销、游戏存档恢复</td>
+<td>备忘录</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h1 id="3-创建型模式"><a name="3-创建型模式" class="anchor-navigation-ex-anchor" href="#3-创建型模式"><i class="fa fa-link" aria-hidden="true"></i></a>3. 创建型模式</h1>
+<h2 id="31-简单工厂-simple-factory"><a name="31-简单工厂-simple-factory" class="anchor-navigation-ex-anchor" href="#31-简单工厂-simple-factory"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 简单工厂 Simple Factory</h2>
+<p><strong>识别</strong>：客户端根据 type/new 创建不同产品；产品种类少，变化不频繁。<br></br><strong>理解例子</strong>：一个按钮库根据字符串 <code>"circle"/"rect"</code> 创建圆形按钮或矩形按钮；考试里看到“根据参数创建不同对象”先想到它。<br></br><strong>意图</strong>：封装创建逻辑，客户端只依赖 Product。<br></br><strong>UML</strong>：Factory -&gt; Product；ConcreteProductA/B 实现 Product。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Product</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ProductA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Product</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ProductB</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Product</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Factory</span> {
+  <span class="hljs-keyword">static</span> Product <span class="hljs-title function_">create</span><span class="hljs-params">(String type)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">"A"</span>.equals(type)) <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ProductA</span>();
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">"B"</span>.equals(type)) <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ProductB</span>();
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>();
+  }
+}
+</code></pre>
+<p><strong>优点</strong>：客户端无需知道具体类；创建集中。<br></br><strong>缺点</strong>：新增产品要改 Factory，违反开闭原则。
+<strong>答题例句</strong>：把 <code>new ProductA()</code>、<code>new ProductB()</code> 集中到工厂中，客户端只拿到 <code>Product</code>，但产品变化频繁时应升级为工厂方法。</p>
+<h2 id="32-工厂方法-factory-method"><a name="32-工厂方法-factory-method" class="anchor-navigation-ex-anchor" href="#32-工厂方法-factory-method"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 工厂方法 Factory Method</h2>
+<p><strong>识别</strong>：产品扩展频繁，希望新增产品不改已有工厂；“一个产品一个工厂”。<br></br><strong>理解例子</strong>：日志系统中 <code>FileLoggerFactory</code> 创建文件日志，<code>DBLoggerFactory</code> 创建数据库日志；新增云日志只新增 <code>CloudLoggerFactory</code>。<br></br><strong>意图</strong>：定义创建对象接口，让子类决定实例化哪个产品。<br></br><strong>UML</strong>：Product &lt;- ConcreteProduct；Factory &lt;- ConcreteFactory；ConcreteFactory 创建 ConcreteProduct。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Product</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ProductA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Product</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Factory</span> { <span class="hljs-keyword">abstract</span> Product <span class="hljs-title function_">create</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">FactoryA</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Factory</span> {
+  Product <span class="hljs-title function_">create</span><span class="hljs-params">()</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ProductA</span>(); }
+}
+</code></pre>
+<p><strong>优点</strong>：符合开闭原则、单一职责。<br></br><strong>缺点</strong>：类数量增加。
+<strong>答题例句</strong>：把原来简单工厂中的条件分支拆到各个具体工厂中，新增产品只新增产品类和工厂类。</p>
+<h2 id="33-抽象工厂-abstract-factory"><a name="33-抽象工厂-abstract-factory" class="anchor-navigation-ex-anchor" href="#33-抽象工厂-abstract-factory"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 抽象工厂 Abstract Factory</h2>
+<p><strong>识别</strong>：需要创建“一组相关对象”，如海尔电视+海尔空调、Windows 按钮+文本框。<br></br><strong>理解例子</strong>：皮肤主题系统中，<code>WindowsFactory</code> 同时创建 Windows 按钮和文本框，<code>MacFactory</code> 同时创建 Mac 按钮和文本框，保证风格统一。<br></br><strong>核心概念</strong>：产品等级结构 = TV/AC；产品族 = HaierTV+HaierAC。<br></br><strong>UML</strong>：AbstractFactory 有 createA/createB；ConcreteFactory1 创建 ProductA1/ProductB1。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">ProductA</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">a</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">ProductB</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">b</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Factory</span> { ProductA <span class="hljs-title function_">createA</span><span class="hljs-params">()</span>; ProductB <span class="hljs-title function_">createB</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Factory1</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Factory</span> {
+  <span class="hljs-keyword">public</span> ProductA <span class="hljs-title function_">createA</span><span class="hljs-params">()</span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ProductA1</span>(); }
+  <span class="hljs-keyword">public</span> ProductB <span class="hljs-title function_">createB</span><span class="hljs-params">()</span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ProductB1</span>(); }
+}
+</code></pre>
+<p><strong>优点</strong>：保证同一产品族一致；切换产品族方便。<br></br><strong>缺点</strong>：新增产品等级结构困难，要改所有工厂接口。
+<strong>答题例句</strong>：一个具体工厂负责一个产品族，适合“成套创建”，但如果新增产品种类如 <code>createMenu()</code>，所有工厂都要改。</p>
+<h2 id="34-建造者-builder"><a name="34-建造者-builder" class="anchor-navigation-ex-anchor" href="#34-建造者-builder"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 建造者 Builder</h2>
+<p><strong>识别</strong>：对象复杂，包含很多部件/参数；构建步骤稳定，但每步实现不同。<br></br><strong>理解例子</strong>：组装电脑需要 CPU、内存、硬盘、显卡；办公电脑和游戏电脑的装配步骤类似，但具体部件不同。<br></br><strong>意图</strong>：分离复杂对象的构建过程和表示。<br></br><strong>UML</strong>：Director 使用 Builder；ConcreteBuilder 构造 Product。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Product</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">setA</span><span class="hljs-params">(String a)</span>{} <span class="hljs-keyword">void</span> <span class="hljs-title function_">setB</span><span class="hljs-params">(String b)</span>{} }
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Builder</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">buildA</span><span class="hljs-params">()</span>; <span class="hljs-keyword">void</span> <span class="hljs-title function_">buildB</span><span class="hljs-params">()</span>; Product <span class="hljs-title function_">getResult</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Builder1</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Builder</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-type">Product</span> <span class="hljs-variable">p</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Product</span>();
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">buildA</span><span class="hljs-params">()</span>{ p.setA(<span class="hljs-string">"A1"</span>); }
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">buildB</span><span class="hljs-params">()</span>{ p.setB(<span class="hljs-string">"B1"</span>); }
+  <span class="hljs-keyword">public</span> Product <span class="hljs-title function_">getResult</span><span class="hljs-params">()</span>{ <span class="hljs-keyword">return</span> p; }
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Director</span> {
+  Product <span class="hljs-title function_">construct</span><span class="hljs-params">(Builder b)</span>{ b.buildA(); b.buildB(); <span class="hljs-keyword">return</span> b.getResult(); }
+}
+</code></pre>
+<p><strong>易混</strong>：抽象工厂创建一族产品；建造者一步步组装一个复杂产品。
+<strong>答题例句</strong>：把复杂对象的“构建步骤”交给 Director，把每一步的具体实现交给 Builder。</p>
+<h2 id="35-原型-prototype"><a name="35-原型-prototype" class="anchor-navigation-ex-anchor" href="#35-原型-prototype"><i class="fa fa-link" aria-hidden="true"></i></a>3.5 原型 Prototype</h2>
+<p><strong>识别</strong>：大量相似对象；创建成本高；希望通过复制已有对象得到新对象。<br></br><strong>理解例子</strong>：游戏中敌人对象初始化很复杂，先创建一个“敌人原型”，后续通过 clone 快速复制，再改位置和血量。<br></br><strong>意图</strong>：用原型实例指定对象种类，通过 clone 创建新对象。<br></br><strong>UML</strong>：Prototype 定义 clone；ConcretePrototype 实现 clone。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Prototype</span> { Prototype <span class="hljs-title function_">clone</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ConcretePrototype</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Prototype</span> {
+  <span class="hljs-keyword">public</span> Prototype <span class="hljs-title function_">clone</span><span class="hljs-params">()</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ConcretePrototype</span>(<span class="hljs-comment">/* copy fields */</span>); }
+}
+</code></pre>
+<p><strong>浅克隆</strong>：复制基本字段，共享引用对象。<br></br><strong>深克隆</strong>：引用对象也复制一份，互不影响。
+<strong>答题例句</strong>：当构造过程复杂或客户端不知道具体类时，可通过原型对象的克隆方法创建新对象。</p>
+<h2 id="36-单例-singleton"><a name="36-单例-singleton" class="anchor-navigation-ex-anchor" href="#36-单例-singleton"><i class="fa fa-link" aria-hidden="true"></i></a>3.6 单例 Singleton</h2>
+<p><strong>识别</strong>：一个类只能有一个实例，如配置、日志、连接池。<br></br><strong>理解例子</strong>：全局配置 <code>ConfigManager</code> 只应有一个，否则不同模块读到的配置可能不一致。<br></br><strong>意图</strong>：保证全局唯一实例，并提供访问点。<br></br><strong>UML</strong>：Singleton 私有构造，静态 instance，getInstance。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Singleton</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Singleton</span> <span class="hljs-variable">INSTANCE</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Singleton</span>();
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">Singleton</span><span class="hljs-params">()</span> {}
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Singleton <span class="hljs-title function_">getInstance</span><span class="hljs-params">()</span> { <span class="hljs-keyword">return</span> INSTANCE; }
+}
+</code></pre>
+<p><strong>优点</strong>：节省资源，统一状态。<br></br><strong>缺点</strong>：全局状态可能降低可测试性，需注意线程安全。
+<strong>答题例句</strong>：私有构造方法防止外部 new，静态成员保存唯一实例，静态方法提供全局访问点。</p>
+<hr></hr>
+<h1 id="4-结构型模式"><a name="4-结构型模式" class="anchor-navigation-ex-anchor" href="#4-结构型模式"><i class="fa fa-link" aria-hidden="true"></i></a>4. 结构型模式</h1>
+<h2 id="41-适配器-adapter"><a name="41-适配器-adapter" class="anchor-navigation-ex-anchor" href="#41-适配器-adapter"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 适配器 Adapter</h2>
+<p><strong>识别</strong>：已有类功能可用，但接口不符合客户端要求；第三方库/旧系统接入。<br></br><strong>理解例子</strong>：旧播放器只有 <code>playMp3()</code>，新系统要求调用 <code>play()</code>，用 Adapter 把 <code>play()</code> 转成 <code>playMp3()</code>。<br></br><strong>意图</strong>：将 Adaptee 接口转换成 Target 接口。<br></br><strong>UML</strong>：Client -&gt; Target；Adapter 实现 Target，并持有 Adaptee。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Target</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">request</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Adaptee</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">specificRequest</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Adapter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Target</span> {
+  <span class="hljs-keyword">private</span> Adaptee adaptee;
+  Adapter(Adaptee a){ <span class="hljs-built_in">this</span>.adaptee = a; }
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">request</span><span class="hljs-params">()</span>{ adaptee.specificRequest(); }
+}
+</code></pre>
+<p><strong>关键词</strong>：接口不兼容、转换、复用旧类。
+<strong>答题例句</strong>：客户端面向 Target，适配器内部调用 Adaptee，从而在不修改旧类的情况下复用旧功能。</p>
+<h2 id="42-桥接-bridge"><a name="42-桥接-bridge" class="anchor-navigation-ex-anchor" href="#42-桥接-bridge"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 桥接 Bridge</h2>
+<p><strong>识别</strong>：两个独立变化维度，如 形状×颜色、消息类型×发送渠道、平台×窗口。<br></br><strong>理解例子</strong>：消息系统中“普通/加急/特急消息”和“短信/邮件/微信发送”独立变化，若继承会出现 3×3 个类，桥接可拆成两个维度。<br></br><strong>意图</strong>：抽象部分与实现部分分离，使二者可独立变化。<br></br><strong>UML</strong>：Abstraction 持有 Implementor；二者各自扩展。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Implementor</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">impl</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ImplA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Implementor</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">impl</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Abstraction</span> {
+  <span class="hljs-keyword">protected</span> Implementor impl;
+  Abstraction(Implementor i){ impl = i; }
+  <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>;
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">RefinedAbstraction</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Abstraction</span> {
+  RefinedAbstraction(Implementor i){ <span class="hljs-built_in">super</span>(i); }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{ impl.impl(); }
+}
+</code></pre>
+<p><strong>优点</strong>：避免 m×n 类爆炸；符合组合复用原则。
+<strong>答题例句</strong>：抽象类中持有实现接口，把两个变化维度通过组合连接起来，而不是用多层继承绑定。</p>
+<h2 id="43-组合-composite"><a name="43-组合-composite" class="anchor-navigation-ex-anchor" href="#43-组合-composite"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 组合 Composite</h2>
+<p><strong>识别</strong>：树形结构；文件夹/文件、菜单/菜单项、部门/员工；希望统一处理整体和部分。<br></br><strong>理解例子</strong>：文件夹里可以有文件，也可以有子文件夹；客户端调用 <code>getSize()</code> 时不必区分文件和文件夹。<br></br><strong>意图</strong>：让客户端一致地使用叶子对象和组合对象。<br></br><strong>UML</strong>：Component；Leaf；Composite 持有 List<component>。</component></p>
+<pre><code class="lang-java"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Component</span> { <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Leaf</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Component</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Composite</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Component</span> {
+  <span class="hljs-keyword">private</span> List&lt;Component&gt; children = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(Component c)</span>{ children.add(c); }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{ <span class="hljs-keyword">for</span>(Component c: children) c.operation(); }
+}
+</code></pre>
+<p><strong>关键词</strong>：树、递归、整体-部分、一致处理。
+<strong>答题例句</strong>：抽象组件统一叶子和容器接口，容器内部保存子组件列表，并递归调用子组件方法。</p>
+<h2 id="44-装饰-decorator"><a name="44-装饰-decorator" class="anchor-navigation-ex-anchor" href="#44-装饰-decorator"><i class="fa fa-link" aria-hidden="true"></i></a>4.4 装饰 Decorator</h2>
+<p><strong>识别</strong>：不改原类，运行时动态增加功能；功能可叠加，如 Java IO、加密叠加、咖啡加料。<br></br><strong>理解例子</strong>：一杯基础咖啡可以动态加奶、加糖、加巧克力，每种配料都是一个装饰器，可任意叠加。<br></br><strong>意图</strong>：用组合代替继承，动态给对象添加职责。<br></br><strong>UML</strong>：Decorator 实现 Component，并持有 Component；ConcreteDecorator 扩展功能。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Component</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ConcreteComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Component</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Decorator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Component</span> {
+  <span class="hljs-keyword">protected</span> Component c;
+  Decorator(Component c){ <span class="hljs-built_in">this</span>.c = c; }
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{ c.operation(); }
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">DecoratorA</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Decorator</span> {
+  DecoratorA(Component c){ <span class="hljs-built_in">super</span>(c); }
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{ <span class="hljs-built_in">super</span>.operation(); added(); }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">added</span><span class="hljs-params">()</span>{}
+}
+</code></pre>
+<p><strong>易混</strong>：装饰 = 增强功能；适配器 = 转换接口；代理 = 控制访问。
+<strong>答题例句</strong>：装饰器和被装饰对象实现同一接口，装饰器内部先调用原对象功能，再添加额外职责。</p>
+<h2 id="45-外观-facade"><a name="45-外观-facade" class="anchor-navigation-ex-anchor" href="#45-外观-facade"><i class="fa fa-link" aria-hidden="true"></i></a>4.5 外观 Facade</h2>
+<p><strong>识别</strong>：子系统很复杂，客户端调用多个类且顺序固定；希望提供统一入口。<br></br><strong>理解例子</strong>：文件加密需要读取文件、加密、保存文件，客户端只调用 <code>EncryptFacade.encrypt()</code> 即可。<br></br><strong>意图</strong>：为子系统提供高层统一接口，降低客户端与子系统耦合。<br></br><strong>UML</strong>：Client -&gt; Facade；Facade -&gt; SubSystemA/B/C。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SubA</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">a</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">SubB</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">b</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Facade</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-type">SubA</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SubA</span>();
+  <span class="hljs-keyword">private</span> <span class="hljs-type">SubB</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SubB</span>();
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{ a.a(); b.b(); }
+}
+</code></pre>
+<p><strong>关键词</strong>：统一入口、简化调用、迪米特原则。
+<strong>答题例句</strong>：外观类封装对子系统的调用顺序，客户端不再直接依赖多个子系统类。</p>
+<h2 id="46-代理-proxy"><a name="46-代理-proxy" class="anchor-navigation-ex-anchor" href="#46-代理-proxy"><i class="fa fa-link" aria-hidden="true"></i></a>4.6 代理 Proxy</h2>
+<p><strong>识别</strong>：不直接访问真实对象，需要权限控制、远程访问、缓存、日志、延迟加载。<br></br><strong>理解例子</strong>：大图片加载很慢，先显示代理对象，真正需要显示时再加载真实图片。也可用于权限校验后再访问真实服务。<br></br><strong>意图</strong>：为真实对象提供代理，并控制对真实对象的访问。<br></br><strong>UML</strong>：Subject；RealSubject；Proxy 持有 RealSubject。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Subject</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">request</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">RealSubject</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Subject</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">request</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Proxy</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Subject</span> {
+  <span class="hljs-keyword">private</span> RealSubject real;
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">request</span><span class="hljs-params">()</span>{
+    <span class="hljs-keyword">if</span>(real == <span class="hljs-literal">null</span>) real = <span class="hljs-keyword">new</span> <span class="hljs-title class_">RealSubject</span>();
+    <span class="hljs-comment">// check/cache/log</span>
+    real.request();
+  }
+}
+</code></pre>
+<p><strong>易混</strong>：代理和真实对象接口相同，重点是控制访问；装饰重点是增加职责。
+<strong>答题例句</strong>：代理类与真实类实现同一接口，代理在调用真实对象前后加入权限、缓存、日志或延迟加载逻辑。</p>
+<hr></hr>
+<h1 id="5-行为型模式"><a name="5-行为型模式" class="anchor-navigation-ex-anchor" href="#5-行为型模式"><i class="fa fa-link" aria-hidden="true"></i></a>5. 行为型模式</h1>
+<h2 id="51-策略-strategy"><a name="51-策略-strategy" class="anchor-navigation-ex-anchor" href="#51-策略-strategy"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 策略 Strategy</h2>
+<p><strong>识别</strong>：同一任务有多种算法/策略，可自由切换，如排序、支付、折扣、出行路线。<br></br><strong>理解例子</strong>：购物结算时可选择满减、打折、会员价；支付时可选择微信、支付宝、银行卡。<br></br><strong>意图</strong>：封装算法族，使算法可互换。<br></br><strong>UML</strong>：Context 持有 Strategy；ConcreteStrategy 实现算法。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Strategy</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">algorithm</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">StrategyA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Strategy</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">algorithm</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Context</span> {
+  <span class="hljs-keyword">private</span> Strategy s;
+  Context(Strategy s){ <span class="hljs-built_in">this</span>.s = s; }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span><span class="hljs-params">()</span>{ s.algorithm(); }
+}
+</code></pre>
+<p><strong>优点</strong>：消除大量 if-else，符合开闭原则。<br></br><strong>易混</strong>：策略通常由外部选择；状态由对象内部状态变化驱动。
+<strong>答题例句</strong>：将不同算法封装成策略类，Context 只依赖策略接口，从而消除大量 if-else。</p>
+<h2 id="52-模板方法-template-method"><a name="52-模板方法-template-method" class="anchor-navigation-ex-anchor" href="#52-模板方法-template-method"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 模板方法 Template Method</h2>
+<p><strong>识别</strong>：流程固定，如“打开文件-读取-处理-关闭”，某些步骤由子类实现。<br></br><strong>理解例子</strong>：泡茶和泡咖啡流程都包含“烧水-冲泡-倒入杯中-加调料”，但冲泡内容和调料不同。<br></br><strong>意图</strong>：父类定义算法骨架，子类重定义某些步骤。<br></br><strong>UML</strong>：AbstractClass.templateMethod() 调用 primitiveOperation()；子类实现步骤。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AbstractClass</span> {
+  <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">templateMethod</span><span class="hljs-params">()</span>{ step1(); step2(); hook(); }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">step1</span><span class="hljs-params">()</span>{}
+  <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">step2</span><span class="hljs-params">()</span>;
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">hook</span><span class="hljs-params">()</span>{}
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ConcreteClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">AbstractClass</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">step2</span><span class="hljs-params">()</span>{} }
+</code></pre>
+<p><strong>关键词</strong>：流程骨架、固定步骤、钩子方法。
+<strong>答题例句</strong>：父类定义不可变的算法骨架，子类只重写变化步骤，适合流程稳定但步骤可变的场景。</p>
+<h2 id="53-观察者-observer"><a name="53-观察者-observer" class="anchor-navigation-ex-anchor" href="#53-观察者-observer"><i class="fa fa-link" aria-hidden="true"></i></a>5.3 观察者 Observer</h2>
+<p><strong>识别</strong>：一个对象变化，多个对象自动更新；消息订阅、事件监听、GUI。<br></br><strong>理解例子</strong>：公众号发布文章后，所有订阅用户收到通知；按钮被点击后多个监听器执行响应。<br></br><strong>意图</strong>：建立一对多依赖，让主题变化时通知所有观察者。<br></br><strong>UML</strong>：Subject 持有 List<observer>；Observer.update()。</observer></p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Observer</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Subject</span> {
+  <span class="hljs-keyword">private</span> List&lt;Observer&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">attach</span><span class="hljs-params">(Observer o)</span>{ list.add(o); }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">notifyAllObs</span><span class="hljs-params">()</span>{ <span class="hljs-keyword">for</span>(Observer o: list) o.update(); }
+}
+</code></pre>
+<p><strong>优点</strong>：主题和观察者解耦；支持广播通知。<br></br><strong>缺点</strong>：通知链复杂时调试困难。
+<strong>答题例句</strong>：Subject 保存观察者集合，状态变化时统一调用 <code>update()</code>，实现一对多通知。</p>
+<h2 id="54-命令-command"><a name="54-命令-command" class="anchor-navigation-ex-anchor" href="#54-命令-command"><i class="fa fa-link" aria-hidden="true"></i></a>5.4 命令 Command</h2>
+<p><strong>识别</strong>：请求需要排队、记录日志、撤销/恢复、宏命令；调用者不应知道接收者细节。<br></br><strong>理解例子</strong>：遥控器按钮不直接操作电灯，而是绑定 <code>LightOnCommand</code>、<code>LightOffCommand</code>；以后还能记录和撤销。<br></br><strong>意图</strong>：将请求封装成对象。<br></br><strong>UML</strong>：Invoker -&gt; Command；ConcreteCommand 持有 Receiver。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Command</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Receiver</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">action</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ConcreteCommand</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Command</span> {
+  <span class="hljs-keyword">private</span> Receiver r;
+  ConcreteCommand(Receiver r){ <span class="hljs-built_in">this</span>.r = r; }
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">execute</span><span class="hljs-params">()</span>{ r.action(); }
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Invoker</span> { <span class="hljs-keyword">private</span> Command c; <span class="hljs-keyword">void</span> <span class="hljs-title function_">call</span><span class="hljs-params">()</span>{ c.execute(); } }
+</code></pre>
+<p><strong>关键词</strong>：请求对象化、撤销、队列、日志、遥控器按钮。
+<strong>答题例句</strong>：把请求封装为命令对象，调用者只执行命令，命令内部再调用真正接收者。</p>
+<h2 id="55-职责链-chain-of-responsibility"><a name="55-职责链-chain-of-responsibility" class="anchor-navigation-ex-anchor" href="#55-职责链-chain-of-responsibility"><i class="fa fa-link" aria-hidden="true"></i></a>5.5 职责链 Chain of Responsibility</h2>
+<p><strong>识别</strong>：请求有多个可能处理者，按顺序尝试，如请假审批、报销审批、过滤器链。<br></br><strong>理解例子</strong>：报销金额小由科长批，中等由处长批，更大由副校长或校长批；请求沿审批链向后传递。<br></br><strong>意图</strong>：让多个对象都有机会处理请求，避免发送者与接收者耦合。<br></br><strong>UML</strong>：Handler 持有 next；ConcreteHandler 处理或转发。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Handler</span> {
+  <span class="hljs-keyword">protected</span> Handler next;
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">setNext</span><span class="hljs-params">(Handler n)</span>{ next = n; }
+  <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">handle</span><span class="hljs-params">(<span class="hljs-type">int</span> req)</span>;
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">HandlerA</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Handler</span> {
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">handle</span><span class="hljs-params">(<span class="hljs-type">int</span> req)</span>{ <span class="hljs-keyword">if</span>(req &lt; <span class="hljs-number">100</span>) { } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(next != <span class="hljs-literal">null</span>) next.handle(req); }
+}
+</code></pre>
+<p><strong>优点</strong>：动态调整链；符合开闭原则。<br></br><strong>缺点</strong>：请求可能无人处理，链过长影响性能。
+<strong>答题例句</strong>：每个处理者持有下一个处理者，能处理就处理，不能处理就转发。</p>
+<h2 id="56-状态-state"><a name="56-状态-state" class="anchor-navigation-ex-anchor" href="#56-状态-state"><i class="fa fa-link" aria-hidden="true"></i></a>5.6 状态 State</h2>
+<p><strong>识别</strong>：对象在不同状态下行为不同，状态可转换；电梯、订单、播放器、TCP 连接。<br></br><strong>理解例子</strong>：订单在“待支付”时可以付款，在“已发货”时可以确认收货，在“已完成”时不能再取消。<br></br><strong>意图</strong>：将状态相关行为封装到状态类中，使状态变化看起来像改变了对象的类。<br></br><strong>UML</strong>：Context 持有 State；State.handle(Context)。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">State</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">handle</span><span class="hljs-params">(Context c)</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Context</span> {
+  State state;
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">setState</span><span class="hljs-params">(State s)</span>{ state = s; }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">request</span><span class="hljs-params">()</span>{ state.handle(<span class="hljs-built_in">this</span>); }
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">StateA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">State</span> {
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">handle</span><span class="hljs-params">(Context c)</span>{ <span class="hljs-comment">/* behavior */</span> c.setState(<span class="hljs-keyword">new</span> <span class="hljs-title class_">StateB</span>()); }
+}
+</code></pre>
+<p><strong>易混</strong>：状态强调“状态迁移”；策略强调“算法替换”。
+<strong>答题例句</strong>：把不同状态下的行为放入不同状态类，Context 将请求委托给当前状态对象处理。</p>
+<h2 id="57-中介者-mediator"><a name="57-中介者-mediator" class="anchor-navigation-ex-anchor" href="#57-中介者-mediator"><i class="fa fa-link" aria-hidden="true"></i></a>5.7 中介者 Mediator</h2>
+<p><strong>识别</strong>：多个对象互相引用、关系网复杂；聊天室、GUI 控件联动。<br></br><strong>理解例子</strong>：聊天室中用户不直接互相持有引用，而是把消息发给聊天室，由聊天室转发给其他用户。<br></br><strong>意图</strong>：用中介对象封装对象间交互，降低多对多耦合。<br></br><strong>UML</strong>：Colleague 只和 Mediator 通信；Mediator 协调各 Colleague。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Mediator</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">notify</span><span class="hljs-params">(Colleague c, String event)</span>; }
+<span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Colleague</span> { <span class="hljs-keyword">protected</span> Mediator m; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ConcreteMediator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Mediator</span> {
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">notify</span><span class="hljs-params">(Colleague c, String event)</span>{ <span class="hljs-comment">/* coordinate */</span> }
+}
+</code></pre>
+<p><strong>优点</strong>：对象间解耦；集中控制交互。<br></br><strong>缺点</strong>：中介者可能过于复杂。
+<strong>答题例句</strong>：同事类只与中介者通信，中介者集中协调对象之间的交互，降低网状耦合。</p>
+<h2 id="58-备忘录-memento"><a name="58-备忘录-memento" class="anchor-navigation-ex-anchor" href="#58-备忘录-memento"><i class="fa fa-link" aria-hidden="true"></i></a>5.8 备忘录 Memento</h2>
+<p><strong>识别</strong>：需要撤销/恢复历史状态，且不暴露对象内部细节。<br></br><strong>理解例子</strong>：文本编辑器保存编辑前的状态，点击撤销时恢复；游戏保存存档，失败后读档。<br></br><strong>意图</strong>：在不破坏封装的前提下保存对象状态。<br></br><strong>UML</strong>：Originator 创建/恢复 Memento；Caretaker 保存 Memento。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Memento</span> { String state; Memento(String s){ state = s; } }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Originator</span> {
+  <span class="hljs-keyword">private</span> String state;
+  Memento <span class="hljs-title function_">save</span><span class="hljs-params">()</span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Memento</span>(state); }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">restore</span><span class="hljs-params">(Memento m)</span>{ state = m.state; }
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Caretaker</span> { <span class="hljs-keyword">private</span> Memento m; }
+</code></pre>
+<p><strong>关键词</strong>：快照、撤销、历史记录、恢复。
+<strong>答题例句</strong>：Originator 负责创建和恢复快照，Caretaker 只保存快照，不直接访问对象内部状态。</p>
+<hr></hr>
+<h1 id="6-高频混淆题速判"><a name="6-高频混淆题速判" class="anchor-navigation-ex-anchor" href="#6-高频混淆题速判"><i class="fa fa-link" aria-hidden="true"></i></a>6. 高频混淆题速判</h1>
+<table>
+<thead>
+<tr>
+<th>混淆组</th>
+<th>区分方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>简单工厂 vs 工厂方法</td>
+<td>简单工厂一个工厂 + if/switch；工厂方法抽象工厂 + 多个具体工厂。</td>
+</tr>
+<tr>
+<td>工厂方法 vs 抽象工厂</td>
+<td>工厂方法创建一种产品；抽象工厂创建一族产品。</td>
+</tr>
+<tr>
+<td>抽象工厂 vs 建造者</td>
+<td>抽象工厂强调产品族；建造者强调复杂对象分步骤构建。</td>
+</tr>
+<tr>
+<td>适配器 vs 外观</td>
+<td>适配器解决接口不兼容；外观简化复杂子系统入口。</td>
+</tr>
+<tr>
+<td>适配器 vs 装饰</td>
+<td>适配器改变接口；装饰不改变接口，只增强功能。</td>
+</tr>
+<tr>
+<td>装饰 vs 代理</td>
+<td>装饰增加职责；代理控制访问。二者结构相似但意图不同。</td>
+</tr>
+<tr>
+<td>桥接 vs 适配器</td>
+<td>桥接是设计前期拆分两个维度；适配器是事后兼容旧接口。</td>
+</tr>
+<tr>
+<td>组合 vs 装饰</td>
+<td>组合表示树形整体-部分；装饰表示功能叠加。</td>
+</tr>
+<tr>
+<td>策略 vs 状态</td>
+<td>策略由外部选择算法；状态由内部状态迁移改变行为。</td>
+</tr>
+<tr>
+<td>策略 vs 模板方法</td>
+<td>策略用组合替换算法；模板用继承固定流程、重写步骤。</td>
+</tr>
+<tr>
+<td>命令 vs 策略</td>
+<td>命令封装“请求/动作”；策略封装“算法”。</td>
+</tr>
+<tr>
+<td>职责链 vs 命令</td>
+<td>职责链多个处理者传递请求；命令把请求对象化交给接收者执行。</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h1 id="7-典型场景答题小抄"><a name="7-典型场景答题小抄" class="anchor-navigation-ex-anchor" href="#7-典型场景答题小抄"><i class="fa fa-link" aria-hidden="true"></i></a>7. 典型场景答题小抄</h1>
+<table>
+<thead>
+<tr>
+<th>场景描述</th>
+<th>答题抓手</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“新增一种产品不能修改原有代码”</td>
+<td>用工厂方法：抽象工厂 + 具体工厂，新增产品新增工厂。</td>
+</tr>
+<tr>
+<td>“同一风格的一组控件/设备要一起创建”</td>
+<td>用抽象工厂：一个工厂对应一个产品族。</td>
+</tr>
+<tr>
+<td>“对象有很多组成部分，构建顺序复杂”</td>
+<td>用建造者：Director 控制流程，Builder 构造部件。</td>
+</tr>
+<tr>
+<td>“第三方类功能能用但方法名不一样”</td>
+<td>用适配器：Adapter 实现目标接口，内部调用旧接口。</td>
+</tr>
+<tr>
+<td>“两个维度组合导致类数量成倍增长”</td>
+<td>用桥接：两个维度分别抽象，用组合连接。</td>
+</tr>
+<tr>
+<td>“整体和部分形成树，客户端不想区分”</td>
+<td>用组合：Component 统一 Leaf 和 Composite。</td>
+</tr>
+<tr>
+<td>“在不改对象的情况下叠加功能”</td>
+<td>用装饰：装饰器包裹组件，可多层包装。</td>
+</tr>
+<tr>
+<td>“多个系统调用太复杂，想一键完成”</td>
+<td>用外观：Facade 封装调用顺序。</td>
+</tr>
+<tr>
+<td>“执行前要权限/缓存/延迟加载”</td>
+<td>用代理：Proxy 控制对 RealSubject 的访问。</td>
+</tr>
+<tr>
+<td>“算法很多，经常切换”</td>
+<td>用策略：Context 持有 Strategy。</td>
+</tr>
+<tr>
+<td>“流程固定，步骤不同”</td>
+<td>用模板方法：父类定骨架，子类改步骤。</td>
+</tr>
+<tr>
+<td>“状态变了行为也变”</td>
+<td>用状态：Context 委托给当前 State。</td>
+</tr>
+<tr>
+<td>“请求逐级上报或过滤”</td>
+<td>用职责链：Handler 持有 next。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="7-快速画-uml-的套路"><a name="7-快速画-uml-的套路" class="anchor-navigation-ex-anchor" href="#7-快速画-uml-的套路"><i class="fa fa-link" aria-hidden="true"></i></a>7. 快速画 UML 的套路</h1>
+<ol>
+<li>先画抽象：接口/抽象类放上方，如 Product、Component、Strategy、Subject。</li>
+<li>再画具体：ConcreteX 放下方，用实现/泛化箭头指向抽象。</li>
+<li>再画持有关系：谁内部有谁，就画关联/聚合线，如 Context 持有 Strategy，Decorator 持有 Component。</li>
+<li>再画 Client：客户端一般只依赖抽象，不直接依赖具体类。</li>
+<li>类名按题目替换：如 Logger/Product、Payment/Strategy、File/Composite。</li>
+</ol>
+<h2 id="万能代码骨架"><a name="万能代码骨架" class="anchor-navigation-ex-anchor" href="#万能代码骨架"><i class="fa fa-link" aria-hidden="true"></i></a>万能代码骨架</h2>
+<pre><code class="lang-java"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Abstraction</span> { <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ConcreteA</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Abstraction</span> { <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">operation</span><span class="hljs-params">()</span>{} }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Context</span> {
+  <span class="hljs-keyword">private</span> Abstraction obj;
+  Context(Abstraction obj){ <span class="hljs-built_in">this</span>.obj = obj; }
+  <span class="hljs-keyword">void</span> <span class="hljs-title function_">business</span><span class="hljs-params">()</span>{ obj.operation(); }
+}
+</code></pre>
+<p>只要题目强调“可扩展、可替换、减少 if-else”，基本都可以先抽象接口，再由 Context/Factory/Facade/Decorator 等角色使用该接口。</p>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-06-10 09:21:08
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-06-10T09:21:21.373Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - design_patterns_exam_cheatsheet_examples</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="设计模式_开卷考速查表.html" class="navigation navigation-prev " aria-label="Previous page: 设计模式_开卷考速查表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../物联网安全/" class="navigation navigation-next " aria-label="Next page: 物联网安全">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"design_patterns_exam_cheatsheet_examples","level":"1.14.2","depth":2,"next":{"title":"物联网安全","level":"1.15","depth":1,"path":"docs/物联网安全/README.md","ref":"docs/物联网安全/README.md","articles":[{"title":"01_物联网安全概述","level":"1.15.1","depth":2,"path":"docs/物联网安全/01_物联网安全概述.md","ref":"docs/物联网安全/01_物联网安全概述.md","articles":[]},{"title":"02_密码技术基础","level":"1.15.2","depth":2,"path":"docs/物联网安全/02_密码技术基础.md","ref":"docs/物联网安全/02_密码技术基础.md","articles":[]},{"title":"03_感知层安全","level":"1.15.3","depth":2,"path":"docs/物联网安全/03_感知层安全.md","ref":"docs/物联网安全/03_感知层安全.md","articles":[]},{"title":"04_网络攻防实例","level":"1.15.4","depth":2,"path":"docs/物联网安全/04_网络攻防实例.md","ref":"docs/物联网安全/04_网络攻防实例.md","articles":[]},{"title":"05_防火墙技术","level":"1.15.5","depth":2,"path":"docs/物联网安全/05_防火墙技术.md","ref":"docs/物联网安全/05_防火墙技术.md","articles":[]},{"title":"06_入侵检测技术","level":"1.15.6","depth":2,"path":"docs/物联网安全/06_入侵检测技术.md","ref":"docs/物联网安全/06_入侵检测技术.md","articles":[]},{"title":"07_IPSec与VPN","level":"1.15.7","depth":2,"path":"docs/物联网安全/07_IPSec与VPN.md","ref":"docs/物联网安全/07_IPSec与VPN.md","articles":[]},{"title":"08_网络访问控制","level":"1.15.8","depth":2,"path":"docs/物联网安全/08_网络访问控制.md","ref":"docs/物联网安全/08_网络访问控制.md","articles":[]},{"title":"review","level":"1.15.9","depth":2,"path":"docs/物联网安全/review.md","ref":"docs/物联网安全/review.md","articles":[]}]},"previous":{"title":"设计模式_开卷考速查表","level":"1.14.1","depth":2,"path":"docs/设计模式/设计模式_开卷考速查表.md","ref":"docs/设计模式/设计模式_开卷考速查表.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/设计模式/design_patterns_exam_cheatsheet_examples.md","mtime":"2026-06-10T09:21:08.883Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-06-10T09:21:17.908Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

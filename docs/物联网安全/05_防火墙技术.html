@@ -1,0 +1,3116 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>05_防火墙技术 · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06_入侵检测技术.html" />
+    
+    
+    <link rel="prev" href="04_网络攻防实例.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../计算机教育中缺失的一课/">
+            
+                <a href="../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../DataStructure_and_Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../DataStructure_and_Algorithms/Data_structure/">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                <a href="../DataStructure_and_Algorithms/Data_structure/data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../DataStructure_and_Algorithms/Algorithms/">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                <a href="../DataStructure_and_Algorithms/Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cpp/">
+            
+                <a href="../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Cpp/C++-Primer/">
+            
+                <a href="../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Cpp/Effective-Modern-C++/">
+            
+                <a href="../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Cpp/Pre-knowledge/">
+            
+                <a href="../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../计算机组成原理/">
+            
+                <a href="../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Operating_System/">
+            
+                <a href="../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Operating_System/01_概论.html">
+            
+                <a href="../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Operating_System/02_进程管理.html">
+            
+                <a href="../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Operating_System/06_主存管理.html">
+            
+                <a href="../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../Operating_System/review.html">
+            
+                <a href="../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Computer_Networking/">
+            
+                <a href="../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Computer_Networking/01_概述.html">
+            
+                <a href="../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Computer_Networking/03_物理层.html">
+            
+                <a href="../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Computer_Networking/05_网络层.html">
+            
+                <a href="../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../Computer_Networking/06_传输层.html">
+            
+                <a href="../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../Computer_Networking/07_应用层.html">
+            
+                <a href="../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Database_System/">
+            
+                <a href="../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Database_System/01_引言.html">
+            
+                <a href="../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Database_System/02_关系模型.html">
+            
+                <a href="../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Database_System/03_SQL.html">
+            
+                <a href="../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Database_System/04_SQL进阶.html">
+            
+                <a href="../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Database_System/05_高级SQL.html">
+            
+                <a href="../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Database_System/06_E-R模型.html">
+            
+                <a href="../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Database_System/07_关系数据库设计.html">
+            
+                <a href="../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Database_System/08_事务.html">
+            
+                <a href="../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Database_System/09_并发控制.html">
+            
+                <a href="../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../嵌入式系统设计/">
+            
+                <a href="../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../无线传感器网络/">
+            
+                <a href="../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../无线传感器网络/04_路由协议.html">
+            
+                <a href="../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../无线传感器网络/06_通信标准.html">
+            
+                <a href="../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../无线传感器网络/07_定位技术.html">
+            
+                <a href="../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../物联网控制技术/">
+            
+                <a href="../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../物联网控制技术/02_单片机.html">
+            
+                <a href="../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../物联网控制技术/04_C51语言.html">
+            
+                <a href="../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../物联网控制技术/08_review.html">
+            
+                <a href="../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../RFID/">
+            
+                <a href="../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../RFID/01_射频识别技术概论.html">
+            
+                <a href="../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../RFID/02_RFID基础与前端.html">
+            
+                <a href="../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../RFID/03_编码和调制.html">
+            
+                <a href="../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../RFID/06_RFID标准.html">
+            
+                <a href="../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../RFID/review.html">
+            
+                <a href="../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../传感器技术/">
+            
+                <a href="../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../传感器技术/传感器.html">
+            
+                <a href="../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../设计模式/">
+            
+                <a href="../设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../设计模式/设计模式_开卷考速查表.html">
+            
+                <a href="../设计模式/设计模式_开卷考速查表.html">
+            
+                    
+                    设计模式_开卷考速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../设计模式/design_patterns_exam_cheatsheet_examples.html">
+            
+                <a href="../设计模式/design_patterns_exam_cheatsheet_examples.html">
+            
+                    
+                    design_patterns_exam_cheatsheet_examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    物联网安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="01_物联网安全概述.html">
+            
+                <a href="01_物联网安全概述.html">
+            
+                    
+                    01_物联网安全概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="02_密码技术基础.html">
+            
+                <a href="02_密码技术基础.html">
+            
+                    
+                    02_密码技术基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="03_感知层安全.html">
+            
+                <a href="03_感知层安全.html">
+            
+                    
+                    03_感知层安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="04_网络攻防实例.html">
+            
+                <a href="04_网络攻防实例.html">
+            
+                    
+                    04_网络攻防实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15.5" data-path="05_防火墙技术.html">
+            
+                <a href="05_防火墙技术.html">
+            
+                    
+                    05_防火墙技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="06_入侵检测技术.html">
+            
+                <a href="06_入侵检测技术.html">
+            
+                    
+                    06_入侵检测技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="07_IPSec与VPN.html">
+            
+                <a href="07_IPSec与VPN.html">
+            
+                    
+                    07_IPSec与VPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="08_网络访问控制.html">
+            
+                <a href="08_网络访问控制.html">
+            
+                    
+                    08_网络访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.9" data-path="review.html">
+            
+                <a href="review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../智能终端与边缘计算/">
+            
+                <a href="../智能终端与边缘计算/">
+            
+                    
+                    智能终端与边缘计算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../智能终端与边缘计算/01_智能终端与边缘计算概述.html">
+            
+                <a href="../智能终端与边缘计算/01_智能终端与边缘计算概述.html">
+            
+                    
+                    01_智能终端与边缘计算概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../智能终端与边缘计算/02_移动通信与智能终端的融合.html">
+            
+                <a href="../智能终端与边缘计算/02_移动通信与智能终端的融合.html">
+            
+                    
+                    02_移动通信与智能终端的融合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../智能终端与边缘计算/03_计算迁移与智能终端.html">
+            
+                <a href="../智能终端与边缘计算/03_计算迁移与智能终端.html">
+            
+                    
+                    03_计算迁移与智能终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../智能终端与边缘计算/04_边缘计算安全.html">
+            
+                <a href="../智能终端与边缘计算/04_边缘计算安全.html">
+            
+                    
+                    04_边缘计算安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../智能终端与边缘计算/05_物联网边缘计算应用.html">
+            
+                <a href="../智能终端与边缘计算/05_物联网边缘计算应用.html">
+            
+                    
+                    05_物联网边缘计算应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../智能终端与边缘计算/06_边缘计算开源平台.html">
+            
+                <a href="../智能终端与边缘计算/06_边缘计算开源平台.html">
+            
+                    
+                    06_边缘计算开源平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../智能终端与边缘计算/07_边缘计算与人工智能的融合.html">
+            
+                <a href="../智能终端与边缘计算/07_边缘计算与人工智能的融合.html">
+            
+                    
+                    07_边缘计算与人工智能的融合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../智能终端与边缘计算/08_智能终端与边缘计算应用与案例分析.html">
+            
+                <a href="../智能终端与边缘计算/08_智能终端与边缘计算应用与案例分析.html">
+            
+                    
+                    08_智能终端与边缘计算应用与案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../智能终端与边缘计算/review.html">
+            
+                <a href="../智能终端与边缘计算/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../智能终端与边缘计算/习题.html">
+            
+                <a href="../智能终端与边缘计算/习题.html">
+            
+                    
+                    习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../智能终端与边缘计算/简答.html">
+            
+                <a href="../智能终端与边缘计算/简答.html">
+            
+                    
+                    简答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../无线网络技术/">
+            
+                <a href="../无线网络技术/">
+            
+                    
+                    无线网络技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../无线网络技术/01_从计算机网络到无线网络.html">
+            
+                <a href="../无线网络技术/01_从计算机网络到无线网络.html">
+            
+                    
+                    01_从计算机网络到无线网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../无线网络技术/02_无线通信和网络仿真基础.html">
+            
+                <a href="../无线网络技术/02_无线通信和网络仿真基础.html">
+            
+                    
+                    02_无线通信和网络仿真基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../无线网络技术/03_无线局域网.html">
+            
+                <a href="../无线网络技术/03_无线局域网.html">
+            
+                    
+                    03_无线局域网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../无线网络技术/04_无线城域网广域网.html">
+            
+                <a href="../无线网络技术/04_无线城域网广域网.html">
+            
+                    
+                    04_无线城域网广域网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../无线网络技术/05_卫星网络.html">
+            
+                <a href="../无线网络技术/05_卫星网络.html">
+            
+                    
+                    05_卫星网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../无线网络技术/06_无线自组织网络.html">
+            
+                <a href="../无线网络技术/06_无线自组织网络.html">
+            
+                    
+                    06_无线自组织网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >05_防火墙技术</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#防火墙技术"><b></b>防火墙技术</a></li><ul><li><span class="title-icon "></span><a href="#防火墙技术概述"><b></b>防火墙技术概述</a></li><ul><li><span class="title-icon "></span><a href="#核心定义"><b></b>核心定义</a></li><li><span class="title-icon "></span><a href="#dmz（隔离区）：解决访问矛盾的缓冲区"><b></b>DMZ（隔离区）：解决访问矛盾的“缓冲区”</a></li><li><span class="title-icon "></span><a href="#部署形式对比"><b></b>部署形式对比</a></li></ul><li><span class="title-icon "></span><a href="#防火墙的核心功能、局限性与设计策略"><b></b>防火墙的核心功能、局限性与设计策略</a></li><ul><li><span class="title-icon "></span><a href="#局限性透视"><b></b>局限性透视</a></li><li><span class="title-icon "></span><a href="#设计策略：最小特权原则"><b></b>设计策略：最小特权原则</a></li></ul><li><span class="title-icon "></span><a href="#防火墙分类"><b></b>防火墙分类</a></li><ul><li><span class="title-icon "></span><a href="#包过滤防火墙（网络层传输层）"><b></b>包过滤防火墙（网络层/传输层）</a></li><li><span class="title-icon "></span><a href="#代理防火墙"><b></b>代理防火墙</a></li><li><span class="title-icon "></span><a href="#代理技术的优缺点"><b></b>代理技术的优缺点</a></li><li><span class="title-icon "></span><a href="#核心技术多维对比"><b></b>核心技术多维对比</a></li></ul><li><span class="title-icon "></span><a href="#4-防火墙规则配置实战解析"><b></b>4. 防火墙规则配置实战解析</a></li><ul><li><span class="title-icon "></span><a href="#1161114x-规则表深度解读"><b></b>116.111.4.x 规则表深度解读</a></li><li><span class="title-icon "></span><a href="#防御逻辑补充：反欺骗与-land-攻击"><b></b>防御逻辑补充：反欺骗与 Land 攻击</a></li></ul><li><span class="title-icon "></span><a href="#状态监测防火墙（stateful-inspection）"><b></b>状态监测防火墙（Stateful Inspection）</a></li><li><span class="title-icon "></span><a href="#zfw（基于区域的策略防火墙）"><b></b>ZFW（基于区域的策略防火墙）</a></li><li><span class="title-icon "></span><a href="#nat（网络地址转换技术）"><b></b>NAT（网络地址转换技术）</a></li></ul></ul></div><a href="#防火墙技术" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li><div><a href="#防火墙技术">防火墙技术</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#防火墙技术概述">防火墙技术概述</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#核心定义">核心定义</a><i></i></div></li>
+<li><div><a href="#dmz（隔离区）：解决访问矛盾的缓冲区">DMZ（隔离区）：解决访问矛盾的“缓冲区”</a><i></i></div></li>
+<li><div><a href="#部署形式对比">部署形式对比</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#防火墙的核心功能、局限性与设计策略">防火墙的核心功能、局限性与设计策略</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#局限性透视">局限性透视</a><i></i></div></li>
+<li><div><a href="#设计策略：最小特权原则">设计策略：最小特权原则</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#防火墙分类">防火墙分类</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#包过滤防火墙（网络层传输层）">包过滤防火墙（网络层/传输层）</a><i></i></div></li>
+<li><div><a href="#代理防火墙">代理防火墙</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#应用层网关代理防火墙（应用层）">应用层网关/代理防火墙（应用层）</a><i></i></div></li>
+<li><div><a href="#电路级网关（会话层）">电路级网关（会话层）</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#代理技术的优缺点">代理技术的优缺点</a><i></i></div></li>
+<li><div><a href="#核心技术多维对比">核心技术多维对比</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#4-防火墙规则配置实战解析">4. 防火墙规则配置实战解析</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#1161114x-规则表深度解读">116.111.4.x 规则表深度解读</a><i></i></div></li>
+<li><div><a href="#防御逻辑补充：反欺骗与-land-攻击">防御逻辑补充：反欺骗与 Land 攻击</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#状态监测防火墙（stateful-inspection）">状态监测防火墙（Stateful Inspection）</a><i></i></div></li>
+<li><div><a href="#zfw（基于区域的策略防火墙）">ZFW（基于区域的策略防火墙）</a><i></i></div></li>
+<li><div><a href="#nat（网络地址转换技术）">NAT（网络地址转换技术）</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<h1 id="防火墙技术"><a name="防火墙技术" class="anchor-navigation-ex-anchor" href="#防火墙技术"><i class="fa fa-link" aria-hidden="true"></i></a>防火墙技术</h1>
+<h2 id="防火墙技术概述"><a name="防火墙技术概述" class="anchor-navigation-ex-anchor" href="#防火墙技术概述"><i class="fa fa-link" aria-hidden="true"></i></a>防火墙技术概述</h2>
+<p><strong>防火墙（Firewall）</strong> 作为不同网络安全域之间的“唯一通道”，根据用户的有关安全策略控制进出不同网络安全域的访问。</p>
+<p>它通过强制执行统一的安全策略，控制跨域访问，是实现物联网边界防御的第一道物理与逻辑屏障。</p>
+<h3 id="核心定义"><a name="核心定义" class="anchor-navigation-ex-anchor" href="#核心定义"><i class="fa fa-link" aria-hidden="true"></i></a>核心定义</h3>
+<ul>
+<li><p>Cheswick 与 Beilovin 的经典定义（1994）：</p>
+<p> 强调防火墙是放置在两个网络之间的一组组件，必须同时具备三项特性：</p>
+<ol>
+<li><strong>唯一性：</strong> 所有双向通信信息必须通过防火墙。</li>
+<li><strong>安全性：</strong> 仅允许本地安全策略授权的信息通过。</li>
+<li><strong>免疫性：</strong> 防火墙本身应具备极高的安全性，不应成为受攻击的薄弱环节。</li>
+</ol>
+</li>
+<li><p><strong>物联网视角：</strong> 防火墙是位于<strong>不同信任程度网络</strong>（如企业内网与 Internet）之间的软硬件组合，通过“强制实施统一安全策略”对两个网络之间的通信进行控制，从而防止对重要信息资源的非法存取和访问。</p>
+</li>
+</ul>
+<h3 id="dmz（隔离区）：解决访问矛盾的缓冲区"><a name="dmz（隔离区）：解决访问矛盾的缓冲区" class="anchor-navigation-ex-anchor" href="#dmz（隔离区）：解决访问矛盾的缓冲区"><i class="fa fa-link" aria-hidden="true"></i></a>DMZ（隔离区）：解决访问矛盾的“缓冲区”</h3>
+<p>物联网企业内网（高度信任）与外部公共网络（不信任）之间存在访问矛盾：外部用户需要访问内网提供的特定服务，但直接开放内网会带来毁灭性风险。</p>
+<p><strong>DMZ（隔离区/非军事化区）</strong> 作为缓冲区应运而生。它位于内外网之间的小型网络区域，放置 WWW、Mail、FTP、DNS 等对公服务器。</p>
+<p>这种设计确保了即便 DMZ 中的系统受损，核心内网依然被防火墙有效隔离，平衡了“业务可达性”与“核心数据安全性”。</p>
+<h3 id="部署形式对比"><a name="部署形式对比" class="anchor-navigation-ex-anchor" href="#部署形式对比"><i class="fa fa-link" aria-hidden="true"></i></a>部署形式对比</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>硬防火墙（硬件防火墙）</th>
+<th>软防火墙（软件防火墙）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>实现方式</strong></td>
+<td>专用硬件 + 定制安全操作系统</td>
+<td>安装在通用系统（Windows/Linux）上的软件</td>
+</tr>
+<tr>
+<td><strong>性能表现</strong></td>
+<td>吞吐量大、时延低、系统稳定性极高</td>
+<td>受限于宿主机性能，处理高并发能力较弱</td>
+</tr>
+<tr>
+<td><strong>安全性</strong></td>
+<td>硬件底层加固，攻击面窄</td>
+<td>依赖宿主机 OS 安全性，易受底层漏洞影响</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>物联网数据中心、工业网关、企业级出口</td>
+<td>个人终端、小型实验室、低预算主机防护</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="防火墙的核心功能、局限性与设计策略"><a name="防火墙的核心功能、局限性与设计策略" class="anchor-navigation-ex-anchor" href="#防火墙的核心功能、局限性与设计策略"><i class="fa fa-link" aria-hidden="true"></i></a>防火墙的核心功能、局限性与设计策略</h2>
+<p>防火墙是<strong>被动的安全策略执行者</strong>。防止外部网络不安全的信息流入内部网络和限制内部网络的重要信息流到外部网络。</p>
+<ul>
+<li><strong>5 大基本功能：</strong> 过滤进出数据、管理访问行为、封堵禁止业务、记录活动日志、检测并报警网络攻击。</li>
+<li>5 大扩展功能：<ol>
+<li><strong>NAT（地址转换）：</strong> 隐藏内网真实 IP。</li>
+<li><strong>双重 DNS：</strong> 对外解析为公网地址，对内解析为内网地址。</li>
+<li><strong>VPN（虚拟专用网）：</strong> 加密远程访问链路。</li>
+<li><strong>扫毒功能：</strong> 集成查杀引擎。</li>
+<li><strong>负载均衡：</strong> 优化流量分布。</li>
+</ol>
+</li>
+</ul>
+<h3 id="局限性透视"><a name="局限性透视" class="anchor-navigation-ex-anchor" href="#局限性透视"><i class="fa fa-link" aria-hidden="true"></i></a>局限性透视</h3>
+<ol>
+<li><strong>路径绕过：</strong> 无法防范不经过防火墙的数据流（如通过后门、拨号或非法接入点）。</li>
+<li><strong>内鬼难防：</strong> 无法防止来自网络内部的攻击、破坏或安全误操作。</li>
+<li><strong>病毒文件传输：</strong> 防火墙无法彻底识别并拦截所有伪装在合法协议中的病毒文件。</li>
+<li><strong>系统与协议缺陷：</strong> 无法防止黑客利用服务器操作系统和网络协议本身存在的固有漏洞进行的攻击。</li>
+<li><strong>数据驱动攻击：</strong> 难以防范通过向程序发送特定数据产生非预期结果的攻击（如<strong>缓冲区溢出、输入验证漏洞</strong>等）。</li>
+<li><strong>内部主动泄密：</strong> 合法用户主动向外传输敏感信息时，防火墙无能为力。</li>
+<li><strong>自身漏洞：</strong> 防火墙软件本身也可能存在安全漏洞，无法绝对保证自身不被攻破。</li>
+<li><strong>配置滞后：</strong> 作为一个被动执行者，无法自动应对未定义在策略中的新式攻击。</li>
+<li><strong>物理/逻辑旁路：</strong> 当内部员工使用移动硬盘或绕过逻辑接口时，边界防御失效。</li>
+</ol>
+<h3 id="设计策略：最小特权原则"><a name="设计策略：最小特权原则" class="anchor-navigation-ex-anchor" href="#设计策略：最小特权原则"><i class="fa fa-link" aria-hidden="true"></i></a>设计策略：最小特权原则</h3>
+<p>防火墙配置的核心是<strong>最小特权原则</strong>（明确允许所需，禁止其余一切）。</p>
+<ul>
+<li><strong>策略一：“除非明确允许，否则禁止”：</strong> 安全性最高，能有效封堵未知风险，是目前物联网主流策略。</li>
+<li><strong>策略二：“除非明确禁止，否则允许”：</strong> 易用性好，但容易遗漏安全隐患，仅适用于极低风险环境。</li>
+</ul>
+<p>防火墙只能识别“已知的非法行为”，无法感知“已潜伏的异常”。</p>
+<p>因此，<strong>防火墙必须与入侵检测系统（IDS）联动</strong>：防火墙负责静态设卡，IDS 负责动态实时监控，共同弥补防御死角。</p>
+<hr></hr>
+<h2 id="防火墙分类"><a name="防火墙分类" class="anchor-navigation-ex-anchor" href="#防火墙分类"><i class="fa fa-link" aria-hidden="true"></i></a>防火墙分类</h2>
+<p>体系结构：包过滤防火墙、应用层代理、电路级网关、地址翻译防火墙、状态防火墙</p>
+<h3 id="包过滤防火墙（网络层传输层）"><a name="包过滤防火墙（网络层传输层）" class="anchor-navigation-ex-anchor" href="#包过滤防火墙（网络层传输层）"><i class="fa fa-link" aria-hidden="true"></i></a>包过滤防火墙（网络层/传输层）</h3>
+<ul>
+<li><strong>机制：</strong> 在选择路由的同时对数据包进行过滤，检查每个数据包的 IP 地址（源/目的）、端口（TCP/UDP/ICMP）、协议类型及方向，同时TCP的序列号和确认号等信息也要检查。</li>
+<li><strong>只检查数据包的“报头（信封）”，绝对不看数据包里的具体内容（信件内容）</strong><ul>
+<li><strong>自上而下，匹配即停（优先级至上）</strong>；<strong>默认拒绝（Default Deny）</strong></li>
+</ul>
+</li>
+<li><strong>静态过滤：</strong> 依据固定的规则表进行匹配。同时，一般防火墙的包过滤的过滤规则是在启动时配置好的， 只有系统管理员才可以修改，是静态存在的</li>
+<li><strong>状态检查（动态过滤）：</strong> 将属于同一连接的包视为整体流，通过“连接状态表”进行动态关联检查。</li>
+<li><strong>优缺点：</strong><ul>
+<li>优点：速度快效率高，用户透明，成本低</li>
+<li>缺点：<strong>防不住“IP欺骗”</strong>，无法检查数据内容，且<strong>对 RPC、X-Window 等动态分配端口的协议不适用</strong>。<strong>规则极难维护</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="assets/image-20260601104933951.png" alt="image-20260601104933951"></img></p>
+<hr></hr>
+<h3 id="代理防火墙"><a name="代理防火墙" class="anchor-navigation-ex-anchor" href="#代理防火墙"><i class="fa fa-link" aria-hidden="true"></i></a>代理防火墙</h3>
+<p>代理防火墙分为<strong>应用层网关防火墙和电路层网关防火墙</strong></p>
+<ul>
+<li>代理防火墙通过编程来<strong>弄清用户应用层的流量</strong>，并能在用户层和应用协议层提供访问控制</li>
+<li>代理防火墙记录所有应用程序的访问情况，<strong>记录和控制所有进出流量</strong>的能力是代理防火墙的主要优点之一</li>
+<li>代理防火墙一般是运行代理服务器的主机</li>
+</ul>
+<p><strong>代理服务器：</strong>代表客户处理与服务器连接的请求的程序，</p>
+<ul>
+<li>通常运行在两个网络之间，它对于客户来说像是一台服务器，而对于外界的服务器来说，它又是一台客户机</li>
+<li><strong>内部网络和外部网络之间没有直接的物理连接</strong>，所有的访问都必须由代理服务器代为了解、取回数据，然后再转交</li>
+</ul>
+<p>代理服务器的工作过程：
+内部客户端先向代理发请求、代理代替客户端向外网发请求、外网服务器把数据发给代理、代理最后把数据转交给客户端</p>
+<p><img src="assets/image-20260601232257544.png" alt="image-20260601232257544"></img></p>
+<h4 id="应用层网关代理防火墙（应用层）"><a name="应用层网关代理防火墙（应用层）" class="anchor-navigation-ex-anchor" href="#应用层网关代理防火墙（应用层）"><i class="fa fa-link" aria-hidden="true"></i></a>应用层网关/代理防火墙（应用层）</h4>
+<ul>
+<li><strong>机制：</strong> 工作在 OSI 最高层，采用“双向代理”技术。对外表现为服务器，对内表现为客户端，实现内外网的物理隔断。</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li><strong>深度校验：</strong> 它能<strong>校验应用层数据的格式与命令集合</strong>（如只允许 HTTP GET 而禁止 POST）。</li>
+<li><strong>绝对管理控制权</strong>：代理服务可以严格限制命令集合和内部主机支持的服务，授予了网络管理员对每一个服务的完全控制权</li>
+<li><strong>提供审计与认证</strong>：支持强用户身份认证，并且能提供比包过滤详细得多的日志信息</li>
+<li><strong>规则配置更易懂</strong>：应用层网关的过滤规则通常更易于配置和测试</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li><strong>速度慢、延迟高</strong>；<strong>对用户不透明</strong>，需要用户使用特殊的客户端软件；<strong>缺乏通用性</strong>，服务针对的是<strong>特定</strong>的应用层协议</li>
+</ul>
+<h4 id="电路级网关（会话层）"><a name="电路级网关（会话层）" class="anchor-navigation-ex-anchor" href="#电路级网关（会话层）"><i class="fa fa-link" aria-hidden="true"></i></a>电路级网关（会话层）</h4>
+<ul>
+<li><strong>机制：</strong> 工作在 OSI 模型的<strong>会话层</strong>，在 TCP 握手阶段创立电子屏障。它监视握手信息是否合乎逻辑。</li>
+<li><strong>特性：</strong> <strong>特殊的客户程序仅在初次连接时参与安全协商</strong>，一旦连接建立，后续数据传输对用户是透明的，不再进行深度内容过滤。</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li><strong>彻底斩断直连，隐藏内网</strong>：和应用层代理一样，它把跨越防火墙的通信链路<strong>强行砍成两段</strong></li>
+<li><strong>速度比应用层网关快</strong>：因为它只在初次连接时进行安全协商，建立连接后就不再进行耗时的“应用层内容过滤”</li>
+<li><strong>SOCKS 服务器</strong> 就是一种非常强大的电路级网关防火墙，常用于向外连接，这时网络管理员对其内部用户是信任的</li>
+</ul>
+<h3 id="代理技术的优缺点"><a name="代理技术的优缺点" class="anchor-navigation-ex-anchor" href="#代理技术的优缺点"><i class="fa fa-link" aria-hidden="true"></i></a>代理技术的优缺点</h3>
+<p><strong>优点</strong>：</p>
+<ul>
+<li>工作在应用层，能灵活、完全地控制进出流量，甚至能深入高层<strong>过滤文本和扫描病毒</strong></li>
+<li>代理代替用户收发数据，能生成极其详细的日志和记录，<strong>流量分析和事后查账</strong></li>
+<li>为用户提供透明的加解密机制（在 VPN 中极其重要），并且能方便地与认证、授权等其他安全手段联合使用</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li><strong>速度慢、不透明</strong>：要查应用层内容并转发请求，<strong>速度比包过滤慢得多</strong>；要求用户修改配置或安装专用客户端</li>
+<li><strong>“一事一办”，缺乏弹性（扩展死板）</strong>：每一种网络协议都需要一个对应的专属代理服务器。</li>
+<li><strong>防不住底层攻击</strong>：由于代理高高在上（工作在 TCP/IP 之上的应用层），它<strong>不能改善底层通信协议的安全能力</strong>。</li>
+</ul>
+<h3 id="核心技术多维对比"><a name="核心技术多维对比" class="anchor-navigation-ex-anchor" href="#核心技术多维对比"><i class="fa fa-link" aria-hidden="true"></i></a>核心技术多维对比</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>包过滤防火墙</th>
+<th>电路级网关</th>
+<th>应用层网关</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OSI 层级</strong></td>
+<td>网络层 / 传输层</td>
+<td>会话层</td>
+<td>应用层</td>
+</tr>
+<tr>
+<td><strong>处理性能</strong></td>
+<td>极高（硬件实现）</td>
+<td>中等</td>
+<td>低（软件开销大）</td>
+</tr>
+<tr>
+<td><strong>安全性</strong></td>
+<td>较低（仅查包头）</td>
+<td>中等（握手校验）</td>
+<td>最高（协议/内容校验）</td>
+</tr>
+<tr>
+<td><strong>用户透明度</strong></td>
+<td>完全透明</td>
+<td>初次协商后透明</td>
+<td>不透明（需定制软件）</td>
+</tr>
+<tr>
+<td><strong>应用限制</strong></td>
+<td>无法支持动态端口协议</td>
+<td>适用范围有限</td>
+<td>需为每种协议开发代理</td>
+</tr>
+</tbody>
+</table>
+<p>--------------------------------------------------------------------------------</p>
+<h2 id="4-防火墙规则配置实战解析"><a name="4-防火墙规则配置实战解析" class="anchor-navigation-ex-anchor" href="#4-防火墙规则配置实战解析"><i class="fa fa-link" aria-hidden="true"></i></a>4. 防火墙规则配置实战解析</h2>
+<p>针对内网 <code>116.111.4.x</code> 的规则配置，是体现安全逻辑严密性的关键环节。</p>
+<h3 id="1161114x-规则表深度解读"><a name="1161114x-规则表深度解读" class="anchor-navigation-ex-anchor" href="#1161114x-规则表深度解读"><i class="fa fa-link" aria-hidden="true"></i></a>116.111.4.x 规则表深度解读</h3>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>方向</th>
+<th>源 IP</th>
+<th>目的 IP</th>
+<th>协议</th>
+<th>源端口</th>
+<th>目的端口</th>
+<th>ACK 位</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>入</td>
+<td>任意</td>
+<td>116.111.4.0</td>
+<td>TCP</td>
+<td>&gt;1023</td>
+<td>23</td>
+<td>否</td>
+<td>允许</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>入</td>
+<td>202.108.5.6</td>
+<td>116.111.4.0</td>
+<td>TCP</td>
+<td>23</td>
+<td>&gt;1023</td>
+<td>是</td>
+<td><strong>拒绝</strong></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>出</td>
+<td>116.111.4.1</td>
+<td>任意</td>
+<td>TCP</td>
+<td>&gt;1023</td>
+<td>25</td>
+<td>任意</td>
+<td>允许</td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>入</td>
+<td>任意</td>
+<td>116.111.4.1</td>
+<td>TCP</td>
+<td>&gt;1023</td>
+<td>25</td>
+<td>任意</td>
+<td>允许</td>
+</tr>
+<tr>
+<td><strong>K</strong></td>
+<td>入</td>
+<td>98.120.7.0</td>
+<td>116.111.4.5</td>
+<td>TCP</td>
+<td>&gt;1023</td>
+<td>80</td>
+<td>任意</td>
+<td>允许</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Telnet 管理逻辑（Rule A-D）：</strong> 允许内部与外部建立特定远程连接，但通过 Rule B 显式拒绝来自特定 IP 的异常响应，防止反弹 Shell 或未经授权的访问。</li>
+<li><strong>SMTP 邮件服务（Rule E-H）：</strong> 为 IP <code>116.111.4.1</code> 的邮件服务器专门开辟通道。<strong>Rule E/F 负责出站</strong>（内部发邮件），<strong>Rule G/H 负责入站</strong>（接收外部邮件）。通过严格限定 IP 与端口（25），防止内网其他主机沦为垃圾邮件中继。</li>
+<li><strong>WWW 定向访问（Rule K）：</strong> 这是一个典型的“合作伙伴规则”。它仅允许特定的外部网络 <code>98.120.7.0</code> 访问内部 WWW 服务器 <code>116.111.4.5</code> 的 80 端口，实现了精准的权限控制。</li>
+</ul>
+<h3 id="防御逻辑补充：反欺骗与-land-攻击"><a name="防御逻辑补充：反欺骗与-land-攻击" class="anchor-navigation-ex-anchor" href="#防御逻辑补充：反欺骗与-land-攻击"><i class="fa fa-link" aria-hidden="true"></i></a>防御逻辑补充：反欺骗与 Land 攻击</h3>
+<p>在配置中必须包含一项隐形逻辑：<strong>坚决过滤“从外部接口进入、但源地址却是内部 IP”的数据包</strong>。这是防御 <strong>Land 攻击</strong>（攻击者伪造源 IP 与目的 IP 相同，使目标系统陷入无限循环）的关键。</p>
+<p><strong>【专家提醒 —— 性能优化】</strong> 规则配置存在“复杂性陷阱”。随着规则条目增加，防火墙的匹配开销会线性上升，导致吞吐率下降。<strong>优化建议：</strong> 将高频规则（如 WWW 流量）置于顶部，定期清理冗余条目。</p>
+<hr></hr>
+<h2 id="状态监测防火墙（stateful-inspection）"><a name="状态监测防火墙（stateful-inspection）" class="anchor-navigation-ex-anchor" href="#状态监测防火墙（stateful-inspection）"><i class="fa fa-link" aria-hidden="true"></i></a>状态监测防火墙（Stateful Inspection）</h2>
+<p>状态监测防火墙采用了一个在<strong>网关</strong>上执行网络安全策略的软件引擎，称之为检测模块。</p>
+<ul>
+<li><strong>状态表机制</strong>：会抽取各层数据（状态信息）并<strong>动态保存</strong>下来。后续属于同一个连接的数据包再来时，直接查状态表放行</li>
+<li><strong>防内鬼能力</strong>：带有<strong>分布式探测器</strong>，能有效防范来自网络内部的恶意破坏（统计表明大量攻击来自内部）</li>
+</ul>
+<p>优点：支持多种协议扩展；<strong>能监测 RPC 和 UDP 端口</strong>（这是包过滤和代理做不到的）；性能坚固</p>
+<p>缺点：配置非常复杂；同样会一定程度上降低网络速度</p>
+<p>工作流程：</p>
+<ol>
+<li><p><strong>数据包到达</strong>防火墙接口后，首先检查是否属于<strong>已存在的连接</strong>：</p>
+<ul>
+<li><strong>是（已有连接）</strong>：进入<strong>规则集检测</strong>，检测通过后再进行<strong>内容检测</strong>；</li>
+<li><strong>否（新连接）</strong>：直接进行<strong>内容检测</strong>，随后由<strong>策略集</strong>判定是否允许该内容。</li>
+</ul>
+</li>
+<li><p><strong>内容检测/策略判定</strong>：</p>
+<ul>
+<li><strong>允许</strong>：将数据包<strong>转发</strong>至目的地址，<strong>更新会话表</strong>，并记录日志；</li>
+<li><strong>拒绝</strong>：<strong>丢弃</strong>该数据包，并记录日志。</li>
+</ul>
+</li>
+</ol>
+<p><img src="assets/image-20260602103308793.png" alt="image-20260602103308793"></img></p>
+<hr></hr>
+<h2 id="zfw（基于区域的策略防火墙）"><a name="zfw（基于区域的策略防火墙）" class="anchor-navigation-ex-anchor" href="#zfw（基于区域的策略防火墙）"><i class="fa fa-link" aria-hidden="true"></i></a>ZFW（基于区域的策略防火墙）</h2>
+<p><strong>把多个接口打包成一个“区域（Zone）”，把“区域”作为执行安全策略的最小单位</strong></p>
+<ul>
+<li><strong>同区互信，不设防（默认允许）</strong></li>
+<li><strong>跨区禁飞，默认拒（默认丢弃）</strong></li>
+<li><strong>跨区通行必须建“区域对”（Zone-Pair）</strong></li>
+<li><strong>区域接口隔离</strong></li>
+<li><code>pass</code>（放行）、<code>drop</code>（丢弃）和 <code>inspect</code>（检测）</li>
+</ul>
+<h2 id="nat（网络地址转换技术）"><a name="nat（网络地址转换技术）" class="anchor-navigation-ex-anchor" href="#nat（网络地址转换技术）"><i class="fa fa-link" aria-hidden="true"></i></a>NAT（网络地址转换技术）</h2>
+<p>新一代防火墙利用 NAT 技术能<strong>透明地</strong>对所有内部地址作转换</p>
+<ul>
+<li><strong>隐藏内部网络（安全价值）</strong>：对外出站时，防火墙会把内部的私有 IP 换成合法的公网 IP。</li>
+<li><strong>解决 IP 地址枯竭（资源价值）</strong>：它允许内部网络完全使用自己定制的、免费的私用 IP 地址（如 192.168.x.x），极大地节约了公网 IP 资源</li>
+</ul>
+<p>这个转换过程对于用户来说是<strong>完全透明</strong>的，用户不需要做任何特殊设置，而且它可以是<strong>双向</strong>的</p>
+<p><strong>NAT 的五种翻译模式</strong></p>
+<ul>
+<li><p><strong>静态翻译（Static NAT）：一对一的“专属VIP”</strong></p>
+<p><strong>原理</strong>：一个内部私有 IP 永远固定映射到一个外部公网 IP。</p>
+<p><strong>考点</strong>：通常用于内部需要对外提供服务的服务器（比如 Web 服务器），保证外网用户总能通过同一个公网 IP 找到它。</p>
+</li>
+<li><p><strong>动态翻译（Dynamic NAT）：先到先得的“共享池”</strong></p>
+<p><strong>原理</strong>：防火墙手里有一批公网 IP（地址池）。当内网用户要上网时，防火墙就从中<strong>动态随机分配</strong>一个未被使用的公网 IP 给他；用完后再收回。</p>
+<p><strong>局限</strong>：如果同时上网的内网员工数量，超过了防火墙手里的公网 IP 数量，剩下的人就上不了网了。</p>
+</li>
+<li><p><strong>端口转换（PAT / NAPT）：一拖多的“终极魔法”（★ ￥￥￥级核心考点）</strong></p>
+<p><strong>原理</strong>：为了打破动态 NAT 的数量限制，PAT 不仅转换 IP 地址，还<strong>转换传输层的“端口号”</strong>！</p>
+<p><strong>工作机制（必须看懂考卷上的映射表）</strong>：</p>
+<ul>
+<li>员工A（10.0.0.2）和员工B（10.0.0.3）同时上网。</li>
+<li>防火墙把他们<strong>全都映射到同一个公网 IP</strong>（比如 202.202.4.3），但是给他们分配<strong>不同的源端口号</strong>。</li>
+<li>员工A出去的包变成：<code>202.202.4.3 : 30001</code>。</li>
+<li>员工B出去的包变成：<code>202.202.4.3 : 30002</code>。</li>
+<li>当外网数据返回时，防火墙只要看<strong>端口号</strong>是 30001 还是 30002，就能精准地把数据转交给对应的内网员工</li>
+</ul>
+</li>
+<li><p><strong>负载平衡翻译 与 网络冗余翻译</strong></p>
+<p><strong>原理</strong>：将外部对一个公网 IP 的访问请求，按照算法分发到内部多台不同的服务器上（负载均衡），或者在某条链路断开时自动切换（冗余），以保证服务的高可用性。</p>
+</li>
+</ul>
+<p>动态NAT 与 PAT 核心考点：</p>
+<ul>
+<li>看到 <strong>“地址池、先到先得、IP耗尽需排队”</strong> —— 选 <strong>动态NAT</strong>。</li>
+<li>看到 <strong>“带端口号、多对一、共享同一个公网IP”</strong> —— 选 <strong>PAT</strong>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>比较维度</th>
+<th>动态NAT（动态地址翻译）</th>
+<th>PAT（端口地址转换）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>转换内容</strong></td>
+<td><strong>仅</strong>转换 IP 地址</td>
+<td>同时转换 <strong>IP 地址 + 端口号</strong></td>
+</tr>
+<tr>
+<td><strong>映射关系</strong></td>
+<td><strong>一对一</strong>（1:1）</td>
+<td><strong>多对一</strong>（N:1）</td>
+</tr>
+<tr>
+<td><strong>工作原理</strong></td>
+<td>防火墙维护一个公网 IP 的“全局地址池”，内网主机上网时，从池中<strong>动态抽取</strong>一个未使用的公网 IP 临时分配给它。</td>
+<td>多个内网 IP 映射到<strong>同一个公网 IP</strong>，防火墙通过给每个会话分配<strong>不同的外部端口号</strong>来进行精准区分。</td>
+</tr>
+<tr>
+<td><strong>核心机制</strong></td>
+<td>“先到先得”的独占机制</td>
+<td>共享机制（依靠端口号进行复路）</td>
+</tr>
+<tr>
+<td><strong>资源消耗</strong></td>
+<td>较高。需要准备多个合法公网 IP 组成地址池。</td>
+<td><strong>极低</strong>。成百上千的用户可以共享这1个公网 IP。</td>
+</tr>
+<tr>
+<td><strong>局限与触发</strong></td>
+<td>当地址池中的公网 IP 被全部分配完后，其他主机<strong>必须排队等待</strong>别人释放 IP 才能上网。</td>
+<td>完美打破了动态 NAT 的数量限制，通常在动态 NAT 的本地地址池<strong>用尽后会自动启动</strong> PAT。</td>
+</tr>
+<tr>
+<td><strong>实战举例</strong></td>
+<td><code>10.1.1.1</code> 转换为 <code>209.165.200.225</code></td>
+<td><code>10.1.1.4:1025</code> 转换为 <code>209.165.200.228:1055</code><br></br><code>10.1.1.5:1025</code> 转换为 <code>209.165.200.228:1056</code></td>
+</tr>
+</tbody>
+</table>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-06-10 09:21:08
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-06-10T09:21:21.373Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 05_防火墙技术</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04_网络攻防实例.html" class="navigation navigation-prev " aria-label="Previous page: 04_网络攻防实例">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06_入侵检测技术.html" class="navigation navigation-next " aria-label="Next page: 06_入侵检测技术">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05_防火墙技术","level":"1.15.5","depth":2,"next":{"title":"06_入侵检测技术","level":"1.15.6","depth":2,"path":"docs/物联网安全/06_入侵检测技术.md","ref":"docs/物联网安全/06_入侵检测技术.md","articles":[]},"previous":{"title":"04_网络攻防实例","level":"1.15.4","depth":2,"path":"docs/物联网安全/04_网络攻防实例.md","ref":"docs/物联网安全/04_网络攻防实例.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/物联网安全/05_防火墙技术.md","mtime":"2026-06-10T09:21:08.619Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-06-10T09:21:17.908Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
