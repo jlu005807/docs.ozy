@@ -1,0 +1,3602 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>计算机23级数据结构上机实验（第5-6周） · docs.ozy</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.4">
+        <meta name="author" content="ozy">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-treeview-simple/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/honkit-plugin-add-giscus/giscus.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="计算机23级数据结构上级实验（第7周）.html" />
+    
+    
+    <link rel="prev" href="计算机23级数据结构上机实验（第3-4周）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机教育中缺失的一课/">
+            
+                <a href="../../计算机教育中缺失的一课/">
+            
+                    
+                    计算机教育中缺失的一课
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                <a href="../../计算机教育中缺失的一课/01_the_shell.html">
+            
+                    
+                    01_the_shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                <a href="../../计算机教育中缺失的一课/02_Shell_Tools_and_Scripting.html">
+            
+                    
+                    02_Shell_Tools_and_Scripting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                <a href="../../计算机教育中缺失的一课/03_Editors_Vim.html">
+            
+                    
+                    03_Editors_Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                <a href="../../计算机教育中缺失的一课/04_Data_Wrangling.html">
+            
+                    
+                    04_Data_Wrangling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                <a href="../../计算机教育中缺失的一课/05_Command-line_Environment.html">
+            
+                    
+                    05_Command-line Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                <a href="../../计算机教育中缺失的一课/06_Version_Control_Git.html">
+            
+                    
+                    06_Version_Control_Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                <a href="../../计算机教育中缺失的一课/07_Debugging_and_Profiling.html">
+            
+                    
+                    07_Debugging and Profiling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                <a href="../../计算机教育中缺失的一课/08_Metaprogramming.html">
+            
+                    
+                    08_Metaprogramming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Data_structure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="01_Introduction.html">
+            
+                <a href="01_Introduction.html">
+            
+                    
+                    01_Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="02_Linear_List.html">
+            
+                <a href="02_Linear_List.html">
+            
+                    
+                    02_Linear_List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="03_Stack_and_Queue.html">
+            
+                <a href="03_Stack_and_Queue.html">
+            
+                    
+                    03_Stack_and_Queue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="04_Array_and_Matrix.html">
+            
+                <a href="04_Array_and_Matrix.html">
+            
+                    
+                    04_Array_and_Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="05_Character_String.html">
+            
+                <a href="05_Character_String.html">
+            
+                    
+                    05_Character_String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="06_Tree.html">
+            
+                <a href="06_Tree.html">
+            
+                    
+                    06_Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="07_Graph.html">
+            
+                <a href="07_Graph.html">
+            
+                    
+                    07_Graph
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="08_Sort.html">
+            
+                <a href="08_Sort.html">
+            
+                    
+                    08_Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="09_Search.html">
+            
+                <a href="09_Search.html">
+            
+                    
+                    09_Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="data_structure.html">
+            
+                <a href="data_structure.html">
+            
+                    
+                    data_structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="计算机23级数据结构上机实验（第1-2周）.html">
+            
+                <a href="计算机23级数据结构上机实验（第1-2周）.html">
+            
+                    
+                    计算机23级数据结构上机实验（第1-2周）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="计算机23级数据结构上机实验（第3-4周）.html">
+            
+                <a href="计算机23级数据结构上机实验（第3-4周）.html">
+            
+                    
+                    计算机23级数据结构上机实验（第3-4周）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.13" data-path="计算机23级数据结构上机实验（第5-6周）.html">
+            
+                <a href="计算机23级数据结构上机实验（第5-6周）.html">
+            
+                    
+                    计算机23级数据结构上机实验（第5-6周）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.14" data-path="计算机23级数据结构上级实验（第7周）.html">
+            
+                <a href="计算机23级数据结构上级实验（第7周）.html">
+            
+                    
+                    计算机23级数据结构上级实验（第7周）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.15" data-path="计算机23级数据结构上级实验（第8周）.html">
+            
+                <a href="计算机23级数据结构上级实验（第8周）.html">
+            
+                    
+                    计算机23级数据结构上级实验（第8周）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Algorithms/">
+            
+                <a href="../Algorithms/">
+            
+                    
+                    算法设计与分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Algorithms/01_算法在计算中的作用.html">
+            
+                <a href="../Algorithms/01_算法在计算中的作用.html">
+            
+                    
+                    01_算法在计算中的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Algorithms/02_算法基础.html">
+            
+                <a href="../Algorithms/02_算法基础.html">
+            
+                    
+                    02_算法基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Algorithms/03_函数的增长.html">
+            
+                <a href="../Algorithms/03_函数的增长.html">
+            
+                    
+                    03_函数的增长
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Algorithms/04_分治策略.html">
+            
+                <a href="../Algorithms/04_分治策略.html">
+            
+                    
+                    04_分治策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../Algorithms/15_动态规划.html">
+            
+                <a href="../Algorithms/15_动态规划.html">
+            
+                    
+                    15_动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../Algorithms/16_贪心算法.html">
+            
+                <a href="../Algorithms/16_贪心算法.html">
+            
+                    
+                    16_贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../Algorithms/17_回溯.html">
+            
+                <a href="../Algorithms/17_回溯.html">
+            
+                    
+                    17_回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.8" data-path="../Algorithms/18_分支限界.html">
+            
+                <a href="../Algorithms/18_分支限界.html">
+            
+                    
+                    18_分支限界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.9" data-path="../Algorithms/19_NP问题.html">
+            
+                <a href="../Algorithms/19_NP问题.html">
+            
+                    
+                    19_NP问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.10" data-path="../Algorithms/2025年计算机算法分析-1.html">
+            
+                <a href="../Algorithms/2025年计算机算法分析-1.html">
+            
+                    
+                    2025年计算机算法分析-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.11" data-path="../Algorithms/2025年计算机算法分析-2.html">
+            
+                <a href="../Algorithms/2025年计算机算法分析-2.html">
+            
+                    
+                    2025年计算机算法分析-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.12" data-path="../Algorithms/2025年计算机算法分析-3.html">
+            
+                <a href="../Algorithms/2025年计算机算法分析-3.html">
+            
+                    
+                    2025年计算机算法分析-3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Cpp/">
+            
+                <a href="../../Cpp/">
+            
+                    
+                    Cpp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Cpp/C++-Primer/">
+            
+                <a href="../../Cpp/C++-Primer/">
+            
+                    
+                    C++-Primer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                <a href="../../Cpp/C++-Primer/01_泛型算法.html">
+            
+                    
+                    01_泛型算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                <a href="../../Cpp/C++-Primer/02_关联容器.html">
+            
+                    
+                    02_关联容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                <a href="../../Cpp/C++-Primer/03_动态内存.html">
+            
+                    
+                    03_动态内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                <a href="../../Cpp/C++-Primer/04_拷贝控制.html">
+            
+                    
+                    04_拷贝控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                <a href="../../Cpp/C++-Primer/05_重载运算与类型转换.html">
+            
+                    
+                    05_重载运算与类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                <a href="../../Cpp/C++-Primer/06_面向对象程序设计.html">
+            
+                    
+                    06_面向对象程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                <a href="../../Cpp/C++-Primer/07_模板与泛型编程.html">
+            
+                    
+                    07_模板与泛型编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                <a href="../../Cpp/C++-Primer/08_标准库特殊设施.html">
+            
+                    
+                    08_标准库特殊设施
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.9" data-path="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                <a href="../../Cpp/C++-Primer/09_用于大型程序的工具.html">
+            
+                    
+                    09_用于大型程序的工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.10" data-path="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                <a href="../../Cpp/C++-Primer/10_特殊工具与技术.html">
+            
+                    
+                    10_特殊工具与技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.11" data-path="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                <a href="../../Cpp/C++-Primer/11_lambda表达式的类型.html">
+            
+                    
+                    11_lambda表达式的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.12" data-path="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                <a href="../../Cpp/C++-Primer/12_nullptr.html">
+            
+                    
+                    12_nullptr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Cpp/Effective-Modern-C++/">
+            
+                <a href="../../Cpp/Effective-Modern-C++/">
+            
+                    
+                    Effective-Modern-C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_1_Deducing_Types.html">
+            
+                    
+                    CHAPTER_1_Deducing_Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_2_auto.html">
+            
+                    
+                    CHAPTER_2_auto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_3_Moving_to_Modern_C++.html">
+            
+                    
+                    CHAPTER_3_Moving_to_Modern_C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_4_Smart_Pointers.html">
+            
+                    
+                    CHAPTER_4_Smart_Pointers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding.html">
+            
+                    
+                    CHAPTER_5_RValue_References,Move_Semantics_and_Perfect_Forwarding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                <a href="../../Cpp/Effective-Modern-C++/CHAPTER_6_Lambda_Expressions.html">
+            
+                    
+                    CHAPTER_6_Lambda_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/">
+            
+                    
+                    Modern-Cpp-templates-tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/01_函数模板.html">
+            
+                    
+                    01_函数模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                <a href="../../Cpp/Modern-Cpp-templates-tutorial/02_类模板.html">
+            
+                    
+                    02_类模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Cpp/Pre-knowledge/">
+            
+                <a href="../../Cpp/Pre-knowledge/">
+            
+                    
+                    Pre-knowledge
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                <a href="../../Cpp/Pre-knowledge/01_Element-knowledge.html">
+            
+                    
+                    01_Element-knowledge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                <a href="../../Cpp/Pre-knowledge/02_Pointer_and_Reference.html">
+            
+                    
+                    02_Pointer_and_Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                <a href="../../Cpp/Pre-knowledge/03_Class_and_Object.html">
+            
+                    
+                    03_Class_and_Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                <a href="../../Cpp/Pre-knowledge/04_Default_Member_Function.html">
+            
+                    
+                    04_Default_Member_Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                <a href="../../Cpp/Pre-knowledge/05_Conversion_and_Namespace.html">
+            
+                    
+                    05_Conversion_and_Namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/06_Inheritance_and_Virtual.html">
+            
+                    
+                    06_Inheritance_and_Virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                <a href="../../Cpp/Pre-knowledge/07_Polymorphism.html">
+            
+                    
+                    07_Polymorphism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                <a href="../../Cpp/Pre-knowledge/08_Relationship_of_Class.html">
+            
+                    
+                    08_Relationship_of_Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                <a href="../../Cpp/Pre-knowledge/09_Diamond_Inheritance.html">
+            
+                    
+                    09_Diamond_Inheritance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                <a href="../../Cpp/Pre-knowledge/10_dynamic_cast.html">
+            
+                    
+                    10_dynamic_cast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                <a href="../../Cpp/Pre-knowledge/11_Expressions.html">
+            
+                    
+                    11_Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                <a href="../../Cpp/Pre-knowledge/12_Singleton_Pattern.html">
+            
+                    
+                    12_Singleton_Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../../Cpp/Pre-knowledge/13_static.html">
+            
+                <a href="../../Cpp/Pre-knowledge/13_static.html">
+            
+                    
+                    13_static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                <a href="../../Cpp/Pre-knowledge/14_virtual.html">
+            
+                    
+                    14_virtual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                <a href="../../Cpp/Pre-knowledge/15_Miscellaneous.html">
+            
+                    
+                    15_Miscellaneous
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../计算机组成原理/">
+            
+                <a href="../../计算机组成原理/">
+            
+                    
+                    计算机组成原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识.html">
+            
+                    
+                    计算机组成原理基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                <a href="../../计算机组成原理/计算机组成原理基础知识（简答版）.html">
+            
+                    
+                    计算机组成原理基础知识（简答版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../Operating_System/">
+            
+                <a href="../../Operating_System/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../Operating_System/01_概论.html">
+            
+                <a href="../../Operating_System/01_概论.html">
+            
+                    
+                    01_概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../Operating_System/02_进程管理.html">
+            
+                <a href="../../Operating_System/02_进程管理.html">
+            
+                    
+                    02_进程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../Operating_System/03_中断和处理器调度.html">
+            
+                <a href="../../Operating_System/03_中断和处理器调度.html">
+            
+                    
+                    03_中断和处理器调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../Operating_System/04_互斥同步与通讯.html">
+            
+                <a href="../../Operating_System/04_互斥同步与通讯.html">
+            
+                    
+                    04_互斥同步与通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../Operating_System/05_死锁与饥饿.html">
+            
+                <a href="../../Operating_System/05_死锁与饥饿.html">
+            
+                    
+                    05_死锁与饥饿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../Operating_System/06_主存管理.html">
+            
+                <a href="../../Operating_System/06_主存管理.html">
+            
+                    
+                    06_主存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../Operating_System/07_虚拟存储器管理.html">
+            
+                <a href="../../Operating_System/07_虚拟存储器管理.html">
+            
+                    
+                    07_虚拟存储器管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../Operating_System/08_文件与文件系统.html">
+            
+                <a href="../../Operating_System/08_文件与文件系统.html">
+            
+                    
+                    08_文件与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../Operating_System/09_设备与IO管理.html">
+            
+                <a href="../../Operating_System/09_设备与IO管理.html">
+            
+                    
+                    09_设备与IO管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../Operating_System/review.html">
+            
+                <a href="../../Operating_System/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Computer_Networking/">
+            
+                <a href="../../Computer_Networking/">
+            
+                    
+                    Computer_Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../Computer_Networking/01_概述.html">
+            
+                <a href="../../Computer_Networking/01_概述.html">
+            
+                    
+                    01_概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../Computer_Networking/02_数据通信基础.html">
+            
+                <a href="../../Computer_Networking/02_数据通信基础.html">
+            
+                    
+                    02_数据通信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../Computer_Networking/03_物理层.html">
+            
+                <a href="../../Computer_Networking/03_物理层.html">
+            
+                    
+                    03_物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../Computer_Networking/04_数据链路层.html">
+            
+                <a href="../../Computer_Networking/04_数据链路层.html">
+            
+                    
+                    04_数据链路层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../Computer_Networking/05_网络层.html">
+            
+                <a href="../../Computer_Networking/05_网络层.html">
+            
+                    
+                    05_网络层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../Computer_Networking/06_传输层.html">
+            
+                <a href="../../Computer_Networking/06_传输层.html">
+            
+                    
+                    06_传输层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../Computer_Networking/07_应用层.html">
+            
+                <a href="../../Computer_Networking/07_应用层.html">
+            
+                    
+                    07_应用层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../Database_System/">
+            
+                <a href="../../Database_System/">
+            
+                    
+                    Database_System
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../Database_System/01_引言.html">
+            
+                <a href="../../Database_System/01_引言.html">
+            
+                    
+                    01_引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../Database_System/02_关系模型.html">
+            
+                <a href="../../Database_System/02_关系模型.html">
+            
+                    
+                    02_关系模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../Database_System/03_SQL.html">
+            
+                <a href="../../Database_System/03_SQL.html">
+            
+                    
+                    03_SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../Database_System/04_SQL进阶.html">
+            
+                <a href="../../Database_System/04_SQL进阶.html">
+            
+                    
+                    04_SQL进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../Database_System/05_高级SQL.html">
+            
+                <a href="../../Database_System/05_高级SQL.html">
+            
+                    
+                    05_高级SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../Database_System/06_E-R模型.html">
+            
+                <a href="../../Database_System/06_E-R模型.html">
+            
+                    
+                    06_E-R模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../Database_System/07_关系数据库设计.html">
+            
+                <a href="../../Database_System/07_关系数据库设计.html">
+            
+                    
+                    07_关系数据库设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../../Database_System/08_事务.html">
+            
+                <a href="../../Database_System/08_事务.html">
+            
+                    
+                    08_事务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../../Database_System/09_并发控制.html">
+            
+                <a href="../../Database_System/09_并发控制.html">
+            
+                    
+                    09_并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../嵌入式系统设计/">
+            
+                <a href="../../嵌入式系统设计/">
+            
+                    
+                    嵌入式系统设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                <a href="../../嵌入式系统设计/01_嵌入式系统概述.html">
+            
+                    
+                    01_嵌入式系统概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../嵌入式系统设计/02_ARM.html">
+            
+                <a href="../../嵌入式系统设计/02_ARM.html">
+            
+                    
+                    02_ARM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                <a href="../../嵌入式系统设计/03_ARM9指令系统.html">
+            
+                    
+                    03_ARM9指令系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                <a href="../../嵌入式系统设计/04_嵌入式程序设计.html">
+            
+                    
+                    04_嵌入式程序设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                <a href="../../嵌入式系统设计/05_嵌入式内部可编程模块.html">
+            
+                    
+                    05_嵌入式内部可编程模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../无线传感器网络/">
+            
+                <a href="../../无线传感器网络/">
+            
+                    
+                    无线传感器网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../无线传感器网络/01_WSN概述.html">
+            
+                <a href="../../无线传感器网络/01_WSN概述.html">
+            
+                    
+                    01_WSN概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../无线传感器网络/02_WSN体系&物理层.html">
+            
+                <a href="../../无线传感器网络/02_WSN体系&物理层.html">
+            
+                    
+                    02_WSN体系&物理层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../无线传感器网络/03_MAC协议.html">
+            
+                <a href="../../无线传感器网络/03_MAC协议.html">
+            
+                    
+                    03_MAC协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../../无线传感器网络/04_路由协议.html">
+            
+                <a href="../../无线传感器网络/04_路由协议.html">
+            
+                    
+                    04_路由协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../../无线传感器网络/05_拓扑控制.html">
+            
+                <a href="../../无线传感器网络/05_拓扑控制.html">
+            
+                    
+                    05_拓扑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../../无线传感器网络/06_通信标准.html">
+            
+                <a href="../../无线传感器网络/06_通信标准.html">
+            
+                    
+                    06_通信标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../../无线传感器网络/07_定位技术.html">
+            
+                <a href="../../无线传感器网络/07_定位技术.html">
+            
+                    
+                    07_定位技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../../无线传感器网络/08_时间同步技术.html">
+            
+                <a href="../../无线传感器网络/08_时间同步技术.html">
+            
+                    
+                    08_时间同步技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../物联网控制技术/">
+            
+                <a href="../../物联网控制技术/">
+            
+                    
+                    物联网控制技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../物联网控制技术/01_概述物联网控制.html">
+            
+                <a href="../../物联网控制技术/01_概述物联网控制.html">
+            
+                    
+                    01_概述物联网控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../物联网控制技术/02_单片机.html">
+            
+                <a href="../../物联网控制技术/02_单片机.html">
+            
+                    
+                    02_单片机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../物联网控制技术/03_51汇编语言.html">
+            
+                <a href="../../物联网控制技术/03_51汇编语言.html">
+            
+                    
+                    03_51汇编语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../物联网控制技术/04_C51语言.html">
+            
+                <a href="../../物联网控制技术/04_C51语言.html">
+            
+                    
+                    04_C51语言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../物联网控制技术/05_软硬件结合.html">
+            
+                <a href="../../物联网控制技术/05_软硬件结合.html">
+            
+                    
+                    05_软硬件结合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../../物联网控制技术/06_物联网控制算法.html">
+            
+                <a href="../../物联网控制技术/06_物联网控制算法.html">
+            
+                    
+                    06_物联网控制算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../../物联网控制技术/07_物联网控制系统.html">
+            
+                <a href="../../物联网控制技术/07_物联网控制系统.html">
+            
+                    
+                    07_物联网控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../../物联网控制技术/08_review.html">
+            
+                <a href="../../物联网控制技术/08_review.html">
+            
+                    
+                    08_review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../RFID/">
+            
+                <a href="../../RFID/">
+            
+                    
+                    RFID原理及技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../RFID/01_射频识别技术概论.html">
+            
+                <a href="../../RFID/01_射频识别技术概论.html">
+            
+                    
+                    01_射频识别技术概论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../RFID/02_RFID基础与前端.html">
+            
+                <a href="../../RFID/02_RFID基础与前端.html">
+            
+                    
+                    02_RFID基础与前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../RFID/03_编码和调制.html">
+            
+                <a href="../../RFID/03_编码和调制.html">
+            
+                    
+                    03_编码和调制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../RFID/04_数据校验和防碰撞算法.html">
+            
+                <a href="../../RFID/04_数据校验和防碰撞算法.html">
+            
+                    
+                    04_数据校验和防碰撞算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../RFID/05_RFID系统数据传输的安全性.html">
+            
+                <a href="../../RFID/05_RFID系统数据传输的安全性.html">
+            
+                    
+                    05_RFID系统数据传输的安全性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../../RFID/06_RFID标准.html">
+            
+                <a href="../../RFID/06_RFID标准.html">
+            
+                    
+                    06_RFID标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../../RFID/review.html">
+            
+                <a href="../../RFID/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../../RFID/RFID技术模拟考试题.html">
+            
+                <a href="../../RFID/RFID技术模拟考试题.html">
+            
+                    
+                    RFID技术模拟考试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../传感器技术/">
+            
+                <a href="../../传感器技术/">
+            
+                    
+                    传感器技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../传感器技术/传感器.html">
+            
+                <a href="../../传感器技术/传感器.html">
+            
+                    
+                    传感器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../设计模式/">
+            
+                <a href="../../设计模式/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../设计模式/设计模式_开卷考速查表.html">
+            
+                <a href="../../设计模式/设计模式_开卷考速查表.html">
+            
+                    
+                    设计模式_开卷考速查表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../设计模式/design_patterns_exam_cheatsheet_examples.html">
+            
+                <a href="../../设计模式/design_patterns_exam_cheatsheet_examples.html">
+            
+                    
+                    design_patterns_exam_cheatsheet_examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../无线网络技术/">
+            
+                <a href="../../无线网络技术/">
+            
+                    
+                    无线网络技术
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../无线网络技术/01_从计算机网络到无线网络.html">
+            
+                <a href="../../无线网络技术/01_从计算机网络到无线网络.html">
+            
+                    
+                    01_从计算机网络到无线网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../无线网络技术/02_无线通信和网络仿真基础.html">
+            
+                <a href="../../无线网络技术/02_无线通信和网络仿真基础.html">
+            
+                    
+                    02_无线通信和网络仿真基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../无线网络技术/03_无线局域网.html">
+            
+                <a href="../../无线网络技术/03_无线局域网.html">
+            
+                    
+                    03_无线局域网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../无线网络技术/04_无线城域网广域网.html">
+            
+                <a href="../../无线网络技术/04_无线城域网广域网.html">
+            
+                    
+                    04_无线城域网广域网
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../无线网络技术/05_卫星网络.html">
+            
+                <a href="../../无线网络技术/05_卫星网络.html">
+            
+                    
+                    05_卫星网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../../无线网络技术/06_无线自组织网络.html">
+            
+                <a href="../../无线网络技术/06_无线自组织网络.html">
+            
+                    
+                    06_无线自组织网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../物联网安全/">
+            
+                <a href="../../物联网安全/">
+            
+                    
+                    物联网安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../物联网安全/01_物联网安全概述.html">
+            
+                <a href="../../物联网安全/01_物联网安全概述.html">
+            
+                    
+                    01_物联网安全概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../物联网安全/02_密码技术基础.html">
+            
+                <a href="../../物联网安全/02_密码技术基础.html">
+            
+                    
+                    02_密码技术基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../物联网安全/03_感知层安全.html">
+            
+                <a href="../../物联网安全/03_感知层安全.html">
+            
+                    
+                    03_感知层安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../物联网安全/04_网络攻防实例.html">
+            
+                <a href="../../物联网安全/04_网络攻防实例.html">
+            
+                    
+                    04_网络攻防实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../物联网安全/05_防火墙技术.html">
+            
+                <a href="../../物联网安全/05_防火墙技术.html">
+            
+                    
+                    05_防火墙技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../物联网安全/06_入侵检测技术.html">
+            
+                <a href="../../物联网安全/06_入侵检测技术.html">
+            
+                    
+                    06_入侵检测技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../../物联网安全/07_IPSec与VPN.html">
+            
+                <a href="../../物联网安全/07_IPSec与VPN.html">
+            
+                    
+                    07_IPSec与VPN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../../物联网安全/08_网络访问控制.html">
+            
+                <a href="../../物联网安全/08_网络访问控制.html">
+            
+                    
+                    08_网络访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../../物联网安全/review.html">
+            
+                <a href="../../物联网安全/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../../智能终端与边缘计算/">
+            
+                <a href="../../智能终端与边缘计算/">
+            
+                    
+                    智能终端与边缘计算
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../../智能终端与边缘计算/01_智能终端与边缘计算概述.html">
+            
+                <a href="../../智能终端与边缘计算/01_智能终端与边缘计算概述.html">
+            
+                    
+                    01_智能终端与边缘计算概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../../智能终端与边缘计算/02_移动通信与智能终端的融合.html">
+            
+                <a href="../../智能终端与边缘计算/02_移动通信与智能终端的融合.html">
+            
+                    
+                    02_移动通信与智能终端的融合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../../智能终端与边缘计算/03_计算迁移与智能终端.html">
+            
+                <a href="../../智能终端与边缘计算/03_计算迁移与智能终端.html">
+            
+                    
+                    03_计算迁移与智能终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../../智能终端与边缘计算/04_边缘计算安全.html">
+            
+                <a href="../../智能终端与边缘计算/04_边缘计算安全.html">
+            
+                    
+                    04_边缘计算安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../../智能终端与边缘计算/05_物联网边缘计算应用.html">
+            
+                <a href="../../智能终端与边缘计算/05_物联网边缘计算应用.html">
+            
+                    
+                    05_物联网边缘计算应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../../智能终端与边缘计算/06_边缘计算开源平台.html">
+            
+                <a href="../../智能终端与边缘计算/06_边缘计算开源平台.html">
+            
+                    
+                    06_边缘计算开源平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../../智能终端与边缘计算/07_边缘计算与人工智能的融合.html">
+            
+                <a href="../../智能终端与边缘计算/07_边缘计算与人工智能的融合.html">
+            
+                    
+                    07_边缘计算与人工智能的融合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../../智能终端与边缘计算/08_智能终端与边缘计算应用与案例分析.html">
+            
+                <a href="../../智能终端与边缘计算/08_智能终端与边缘计算应用与案例分析.html">
+            
+                    
+                    08_智能终端与边缘计算应用与案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.9" data-path="../../智能终端与边缘计算/review.html">
+            
+                <a href="../../智能终端与边缘计算/review.html">
+            
+                    
+                    review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.10" data-path="../../智能终端与边缘计算/习题.html">
+            
+                <a href="../../智能终端与边缘计算/习题.html">
+            
+                    
+                    习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.11" data-path="../../智能终端与边缘计算/简答.html">
+            
+                <a href="../../智能终端与边缘计算/简答.html">
+            
+                    
+                    简答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >计算机23级数据结构上机实验（第5-6周）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#a-图的创建"><b></b>A 图的创建</a></li><ul><li><span class="title-icon "></span><a href="#解题思路："><b></b>解题思路：</a></li></ul><li><span class="title-icon "></span><a href="#b-图深度优先遍历"><b></b>B 图深度优先遍历</a></li><ul><li><span class="title-icon "></span><a href="#解题思路：_1"><b></b>解题思路：</a></li></ul><li><span class="title-icon "></span><a href="#c-任务排序"><b></b>C 任务排序</a></li><ul><li><span class="title-icon "></span><a href="#解题思路：_2"><b></b>解题思路：</a></li></ul></ul><li><span class="title-icon "></span><a href="#d-冬奥会接驳车"><b></b>D 冬奥会接驳车</a></li><ul><ul><li><span class="title-icon "></span><a href="#解题思路"><b></b>解题思路</a></li></ul><li><span class="title-icon "></span><a href="#e-单源最短路径"><b></b>E 单源最短路径</a></li><li><span class="title-icon "></span><a href="#解题思路_1"><b></b>解题思路</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><div class="treeview__container"><ul>
+<li> 
+<ul>
+<li><div><a href="#a-图的创建">A 图的创建</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#解题思路：">解题思路：</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#b-图深度优先遍历">B 图深度优先遍历</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#解题思路：">解题思路：</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#c-任务排序">C 任务排序</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li><div><a href="#解题思路：">解题思路：</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#d-冬奥会接驳车">D 冬奥会接驳车</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute('state');var nextState = curState === 'opened' ? 'hidden' : 'opened';this.setAttribute('state', nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === 'hidden') {    list.style.display = 'none';} else {    list.style.display = 'block';}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#解题思路">解题思路</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#e-单源最短路径">E 单源最短路径</a><i></i></div></li>
+<li><div><a href="#解题思路">解题思路</a><i></i></div></li>
+</ul></li>
+</ul>
+</div>
+
+<p>﻿# 计算机23级数据结构上级实验（第5-6周）</p>
+<h2 id="a-图的创建"><a name="a-图的创建" class="anchor-navigation-ex-anchor" href="#a-图的创建"><i class="fa fa-link" aria-hidden="true"></i></a><strong>A 图的创建</strong></h2>
+<p>分数 10</p>
+<p>作者 朱允刚</p>
+<p>单位 吉林大学</p>
+<p>请编写程序创建一个有向图。有向图中包含n个顶点，编号为0至n-1。 </p>
+<p>输入格式:</p>
+<p>输入第一行为两个正整数n和e，分别表示图的顶点数和边数，其中n不超过20000，e不超过20000。接下来e行表示每条边的信息，每行为3个非负整数a、b、c，其中a和b表示该边的端点编号，c表示权值。各边并非按端点编号顺序排列。</p>
+<p>输出格式:</p>
+<p>按顶点编号递增顺序输出每个顶点引出的边，每个顶点占一行，若某顶点没有引出边，则不输出。每行表示一个顶点引出的所有边，格式为a:(a,b,w)……，表示有向边a-&gt;b的权值为w，a引出的多条边按编号b的递增序排列。</p>
+<p>输入样例:</p>
+<pre><code class="lang-in">7 7
+0 1 5
+0 3 7
+0 6 6
+1 2 4
+2 5 1
+3 5 3
+6 5 4
+</code></pre>
+<p>输出样例:</p>
+<pre><code class="lang-out">0:(0,1,5)(0,3,7)(0,6,6)
+1:(1,2,4)
+2:(2,5,1)
+3:(3,5,3)
+6:(6,5,4)
+</code></pre>
+<h3 id="解题思路："><a name="解题思路：" class="anchor-navigation-ex-anchor" href="#解题思路："><i class="fa fa-link" aria-hidden="true"></i></a>解题思路：</h3>
+<ol>
+<li><strong>图的创建（<code>CreateGraph</code>）</strong>：我们读取节点数 <code>n</code> 和边数 <code>e</code>，然后根据输入的每条边的起点、终点和权重信息调用 <code>addedge</code> 函数来构建图。</li>
+<li><strong>排序邻接表</strong>：在每次添加边时，我们不立即排序，而是通过调用 <code>std::sort</code> 排序每个节点的邻接边，使其按目标节点编号递增。<ul>
+<li>关键在于目标节点编号递增；</li>
+</ul>
+</li>
+<li><strong>输出图的邻接表</strong>：通过遍历邻接表，打印每个节点的出边信息，格式符合题目要求。</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-comment">// 边类定义，包含两个成员变量：目标节点v和权重w</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">edge</span>
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> v;  <span class="hljs-comment">// 目标节点</span>
+    <span class="hljs-type">int</span> w;  <span class="hljs-comment">// 边的权重</span>
+
+    <span class="hljs-comment">// 构造函数，初始化目标节点和边的权重</span>
+    <span class="hljs-built_in">edge</span>(<span class="hljs-type">int</span> _v, <span class="hljs-type">int</span> _w) :<span class="hljs-built_in">v</span>(_v), <span class="hljs-built_in">w</span>(_w){ }
+};
+
+<span class="hljs-comment">// 存储图的邻接表，vextices[i]表示节点i的所有边</span>
+vector&lt;vector&lt;edge&gt;&gt; vextices;
+
+<span class="hljs-comment">// 比较函数，用于按边的权重排序</span>
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(edge a, edge b)</span>
+</span>{
+    <span class="hljs-keyword">return</span> a.w &lt; b.w;  <span class="hljs-comment">// 比较边的权重，升序排列</span>
+}
+
+<span class="hljs-comment">// 向图中添加一条边，并按权重排序</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addedge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v, <span class="hljs-type">int</span> w)</span>
+</span>{
+    <span class="hljs-function">edge <span class="hljs-title">p</span><span class="hljs-params">(v, w)</span></span>;  <span class="hljs-comment">// 创建边对象</span>
+    vextices[u].<span class="hljs-built_in">push_back</span>(p);  <span class="hljs-comment">// 将边添加到节点u的邻接表</span>
+}
+
+<span class="hljs-comment">// 创建图，输入节点数量和边数量，并添加相应的边</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CreateGraph</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> n, e;
+    cin &gt;&gt; n &gt;&gt; e;  <span class="hljs-comment">// 输入图的节点数n和边数e</span>
+    vextices.<span class="hljs-built_in">resize</span>(n);  <span class="hljs-comment">// 调整vextices大小，确保可以容纳n个节点</span>
+
+    <span class="hljs-comment">// 输入每一条边的信息</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; e; i++)
+    {
+        <span class="hljs-type">int</span> u, v, w;
+        cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;  <span class="hljs-comment">// 输入边的起点u、终点v和权重w</span>
+        <span class="hljs-built_in">addedge</span>(u, v, w);  <span class="hljs-comment">// 添加边到图中</span>
+    }
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)
+    {
+         <span class="hljs-comment">// 按权重对邻接表进行排序</span>
+         std::<span class="hljs-built_in">sort</span>(vextices[i].<span class="hljs-built_in">begin</span>(), vextices[u].<span class="hljs-built_in">end</span>(), cmp);
+    }
+}
+
+<span class="hljs-comment">// 打印图的邻接表</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printGraph</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// 遍历图的所有节点及其邻接边</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vextices.<span class="hljs-built_in">size</span>(); i++)
+    {
+        <span class="hljs-comment">// 如果节点i有邻接边，打印该节点的邻接表</span>
+        <span class="hljs-keyword">if</span> (vextices[i].<span class="hljs-built_in">size</span>() != <span class="hljs-number">0</span>)
+        {
+            cout &lt;&lt; i &lt;&lt; <span class="hljs-string">":"</span>;  <span class="hljs-comment">// 打印当前节点</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; vextices[i].<span class="hljs-built_in">size</span>(); j++)
+            {
+                <span class="hljs-comment">// 打印每一条邻接边的信息，格式：(起点, 终点, 权重)</span>
+                cout &lt;&lt; <span class="hljs-string">"("</span> &lt;&lt; i &lt;&lt; <span class="hljs-string">","</span> &lt;&lt; vextices[i][j].v &lt;&lt; <span class="hljs-string">","</span> &lt;&lt; vextices[i][j].w &lt;&lt; <span class="hljs-string">")"</span>;
+            }
+            cout &lt;&lt; endl;  <span class="hljs-comment">// 换行</span>
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-built_in">CreateGraph</span>();  <span class="hljs-comment">// 创建图</span>
+    <span class="hljs-built_in">printGraph</span>();   <span class="hljs-comment">// 打印图的邻接表</span>
+}
+</code></pre>
+<h2 id="b-图深度优先遍历"><a name="b-图深度优先遍历" class="anchor-navigation-ex-anchor" href="#b-图深度优先遍历"><i class="fa fa-link" aria-hidden="true"></i></a><strong>B 图深度优先遍历</strong></h2>
+<p>分数 10</p>
+<p>作者 朱允刚</p>
+<p>单位 吉林大学</p>
+<p>编写程序对给定的有向图（不一定连通）进行深度优先遍历，图中包含n个顶点，编号为0至n-1。本题限定在深度优先遍历过程中，如果同时出现多个待访问的顶点，则优先选择编号最小的一个进行访问，以顶点0为遍历起点。</p>
+<p>输入格式:</p>
+<p>输入第一行为两个整数n和e，分别表示图的顶点数和边数，其中n不超过20000，e不超过50。接下来e行表示每条边的信息，每行为两个整数a、b，表示该边的端点编号，但各边并非按端点编号顺序排列。</p>
+<p>输出格式:</p>
+<p>输出为一行整数，每个整数后一个空格，即该有向图的深度优先遍历结点序列。</p>
+<p>输入样例1:</p>
+<pre><code class="lang-in">3 3
+0 1
+1 2
+0 2
+</code></pre>
+<p>输出样例1:</p>
+<pre><code class="lang-out">0 1 2
+</code></pre>
+<p>输入样例2:</p>
+<pre><code class="lang-in">4 4
+0 2
+0 1
+1 2
+3 0
+</code></pre>
+<p>输出样例2:</p>
+<pre><code class="lang-out">0 1 2 3
+</code></pre>
+<h3 id="解题思路：_1"><a name="解题思路：_1" class="anchor-navigation-ex-anchor" href="#解题思路：_1"><i class="fa fa-link" aria-hidden="true"></i></a>解题思路：</h3>
+<ol>
+<li><strong>图的创建</strong>：通过输入边的信息，调用 <code>addedge</code> 添加边到邻接表中。</li>
+<li><strong>深度优先搜索</strong>：通过递归的方式遍历图的所有连通分量。</li>
+<li><strong>排序邻接表</strong>：每次添加新边后，使用简单的冒泡排序按目标节点编号排序邻接边。</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-comment">// 边类定义，包含目标节点v和边的权重w，权重默认为1</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">edge</span>
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> v;  <span class="hljs-comment">// 目标节点</span>
+    <span class="hljs-type">int</span> w;  <span class="hljs-comment">// 边的权重，默认值为1</span>
+
+    <span class="hljs-comment">// 构造函数，初始化目标节点v和边的权重w</span>
+    <span class="hljs-built_in">edge</span>(<span class="hljs-type">int</span> _v, <span class="hljs-type">int</span> _w = <span class="hljs-number">1</span>) : <span class="hljs-built_in">v</span>(_v), <span class="hljs-built_in">w</span>(_w) { }
+};
+
+<span class="hljs-comment">// 存储图的邻接表，vextices[i]表示节点i的所有出边</span>
+vector&lt;vector&lt;edge&gt;&gt; vextices;
+
+<span class="hljs-comment">// 访问标记数组，用于记录每个节点是否被访问</span>
+vector&lt;<span class="hljs-type">bool</span>&gt; vis;
+
+<span class="hljs-comment">// 向图中添加一条边(u, v)，并按照目标节点v进行排序</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addedge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v)</span>
+</span>{
+    <span class="hljs-function">edge <span class="hljs-title">p</span><span class="hljs-params">(v)</span></span>;  <span class="hljs-comment">// 创建一个表示边的对象，默认权重为1</span>
+
+    vextices[u].<span class="hljs-built_in">push_back</span>(p);  <span class="hljs-comment">// 将边添加到节点u的邻接表</span>
+
+    <span class="hljs-comment">// 对邻接表按照目标节点v进行排序</span>
+    <span class="hljs-comment">// 用冒泡排序方法将当前添加的边按目标节点编号升序排列</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = vextices[u].<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span> &amp;&amp; vextices[u][i].v &lt; vextices[u][i - <span class="hljs-number">1</span>].v; i--)
+    {
+        <span class="hljs-built_in">swap</span>(vextices[u][i], vextices[u][i - <span class="hljs-number">1</span>]);  <span class="hljs-comment">// 交换位置</span>
+    }
+}
+
+<span class="hljs-comment">// 创建图，输入节点数量n和边数量e，并添加相应的边</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CreateGraph</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e)</span>
+</span>{
+    vextices.<span class="hljs-built_in">resize</span>(n);  <span class="hljs-comment">// 调整vextices大小，确保可以容纳n个节点</span>
+
+    <span class="hljs-comment">// 输入每一条边的信息，并添加到图中</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; e; i++)
+    {
+        <span class="hljs-type">int</span> u, v;
+        cin &gt;&gt; u &gt;&gt; v;  <span class="hljs-comment">// 输入边的起点u和终点v</span>
+        <span class="hljs-built_in">addedge</span>(u, v);   <span class="hljs-comment">// 添加边到图中</span>
+    }
+}
+
+<span class="hljs-comment">// 深度优先搜索（DFS），从节点u开始遍历所有连通节点</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> u)</span>
+</span>{
+    vis[u] = <span class="hljs-literal">true</span>;  <span class="hljs-comment">// 标记节点u为已访问</span>
+    cout &lt;&lt; u &lt;&lt; <span class="hljs-string">" "</span>;  <span class="hljs-comment">// 输出当前节点</span>
+
+    <span class="hljs-comment">// 遍历当前节点u的所有邻接边</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vextices[u].<span class="hljs-built_in">size</span>(); i++)
+    {
+        <span class="hljs-comment">// 如果目标节点v没有被访问过，继续递归DFS</span>
+        <span class="hljs-keyword">if</span> (!vis[vextices[u][i].v])
+        {
+            <span class="hljs-built_in">dfs</span>(vextices[u][i].v);
+        }
+    }
+}
+
+<span class="hljs-comment">// 执行图的深度优先搜索，遍历所有节点，确保每个连通分量都被遍历</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">do_dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span>
+</span>{
+    vis.<span class="hljs-built_in">resize</span>(n, <span class="hljs-literal">false</span>);  <span class="hljs-comment">// 初始化访问标记数组，所有节点未访问</span>
+
+    <span class="hljs-comment">// 遍历所有节点，确保每个连通分量都被访问</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)
+    {
+        <span class="hljs-keyword">if</span> (!vis[i])  <span class="hljs-comment">// 如果节点i未访问过，执行DFS</span>
+        {
+            <span class="hljs-built_in">dfs</span>(i);  <span class="hljs-comment">// 从节点i开始深度优先搜索</span>
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> n, e;
+    cin &gt;&gt; n &gt;&gt; e;  <span class="hljs-comment">// 输入图的节点数n和边数e</span>
+
+    <span class="hljs-built_in">CreateGraph</span>(n, e);  <span class="hljs-comment">// 创建图并添加边</span>
+
+    <span class="hljs-built_in">do_dfs</span>(n);  <span class="hljs-comment">// 从所有未访问的节点开始深度优先搜索并输出结果</span>
+}
+</code></pre>
+<h2 id="c-任务排序"><a name="c-任务排序" class="anchor-navigation-ex-anchor" href="#c-任务排序"><i class="fa fa-link" aria-hidden="true"></i></a><strong>C 任务排序</strong></h2>
+<p>分数 10</p>
+<p>作者 吉林大学</p>
+<p>单位 吉林大学</p>
+<p>一个工程被分解成n个子任务，编号为0至n-1。要完成整个工程需要完成所有的子任务。其中一些子任务必须先于另外一些子任务被完成。给定各子任务之间的先后关系，请编写程序给出一个合理的任务完成顺序，若工程不可行，程序亦能识别。</p>
+<p>输入格式:</p>
+<p>输入第一行为两个整数n和e，均不超过100。n表示子任务数。接下来e行，表示已知的两个子任务间的先后关系，每行为两个整数a和b，表示任务a必须先于任务b完成。</p>
+<p>输出格式:</p>
+<p>若工程不可行（一些子任务以自己为先决条件），输出“unworkable project”；若工程可行，输出为1行整数，每个整数后一个空格，为n个子任务的编号，表示子任务的完成顺序，如果有多种可能的顺序，则输出字典序最小者。</p>
+<p>注：字典序，即对象在字典中的顺序。对于两个数字序列，从第一个数字开始比较，当某一个位置的数字不同时，该位置数字较小的序列，字典序较小，例如1 2 3 9比1 2 4 5小，1 2 8 9比1 2 10 3小。</p>
+<p>输入样例1:</p>
+<pre><code class="lang-in">3 2
+0 1
+1 2
+</code></pre>
+<p>输出样例1:</p>
+<pre><code class="lang-out">0 1 2
+</code></pre>
+<p>输入样例2:</p>
+<pre><code class="lang-in">3 3
+0 1
+1 2
+2 0
+</code></pre>
+<p>输出样例2:</p>
+<pre><code class="lang-out">unworkable project
+</code></pre>
+<h3 id="解题思路：_2"><a name="解题思路：_2" class="anchor-navigation-ex-anchor" href="#解题思路：_2"><i class="fa fa-link" aria-hidden="true"></i></a>解题思路：</h3>
+<ul>
+<li>建图同上题</li>
+<li><strong>拓扑排序</strong>：通过 Kahn 算法，使用入度数组和一个队列（<code>zero_in_degree</code>）来处理入度为零的节点，并按字典序进行排序。如果图中存在环，无法进行拓扑排序。</li>
+<li><strong>注意字典序</strong></li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;queue&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-comment">// 边类，包含目标节点v和边的权重w，默认权重为1</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">edge</span>
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> v;  <span class="hljs-comment">// 目标节点</span>
+    <span class="hljs-type">int</span> w;  <span class="hljs-comment">// 边的权重，默认为1</span>
+
+    <span class="hljs-comment">// 构造函数，初始化目标节点v和边的权重w</span>
+    <span class="hljs-built_in">edge</span>(<span class="hljs-type">int</span> _v, <span class="hljs-type">int</span> _w = <span class="hljs-number">1</span>) : <span class="hljs-built_in">v</span>(_v), <span class="hljs-built_in">w</span>(_w) { }
+};
+
+<span class="hljs-comment">// 图的邻接表表示，vextices[i]表示节点i的所有出边</span>
+vector&lt;vector&lt;edge&gt;&gt; vextices;
+
+<span class="hljs-comment">// 访问标记数组，用于记录每个节点是否被访问</span>
+vector&lt;<span class="hljs-type">bool</span>&gt; vis;
+
+<span class="hljs-comment">// 向图中添加一条边(u, v)，并按照目标节点v对邻接表进行排序</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addedge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v)</span>
+</span>{
+    <span class="hljs-function">edge <span class="hljs-title">p</span><span class="hljs-params">(v)</span></span>;  <span class="hljs-comment">// 创建一个表示边的对象，默认权重为1</span>
+
+    vextices[u].<span class="hljs-built_in">push_back</span>(p);  <span class="hljs-comment">// 将边添加到节点u的邻接表</span>
+
+    <span class="hljs-comment">// 对邻接表按照目标节点v进行排序（升序排列）</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = vextices[u].<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span> &amp;&amp; vextices[u][i].v &lt; vextices[u][i - <span class="hljs-number">1</span>].v; i--)
+    {
+        <span class="hljs-built_in">swap</span>(vextices[u][i], vextices[u][i - <span class="hljs-number">1</span>]);  <span class="hljs-comment">// 交换位置</span>
+    }
+}
+
+<span class="hljs-comment">// 创建图，输入节点数量n和边数量e，并添加相应的边</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CreateGraph</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e)</span>
+</span>{
+    vextices.<span class="hljs-built_in">resize</span>(n);  <span class="hljs-comment">// 调整vextices大小，确保可以容纳n个节点</span>
+
+    <span class="hljs-comment">// 输入每一条边的信息，并添加到图中</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; e; i++)
+    {
+        <span class="hljs-type">int</span> u, v;
+        cin &gt;&gt; u &gt;&gt; v;  <span class="hljs-comment">// 输入边的起点u和终点v</span>
+        <span class="hljs-built_in">addedge</span>(u, v);   <span class="hljs-comment">// 添加边到图中</span>
+    }
+}
+
+
+
+<span class="hljs-comment">// 拓扑排序函数，返回一个拓扑排序的结果</span>
+<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">TopologicalSort</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> number = vextices.<span class="hljs-built_in">size</span>();  <span class="hljs-comment">// 获取图的节点数</span>
+
+    vector&lt;<span class="hljs-type">int</span>&gt; Topo;  <span class="hljs-comment">// 用于记录拓扑排序的结果</span>
+    vector&lt;<span class="hljs-type">int</span>&gt; zero_in_degree;  <span class="hljs-comment">// 用于记录入度为0的顶点</span>
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">indegree</span><span class="hljs-params">(number, <span class="hljs-number">0</span>)</span></span>;  <span class="hljs-comment">// 存储每个节点的入度，初始化为0</span>
+
+    <span class="hljs-comment">// 计算每个节点的入度</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> u = <span class="hljs-number">0</span>; u &lt; number; u++)
+    {
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v = <span class="hljs-number">0</span>; v &lt; vextices[u].<span class="hljs-built_in">size</span>(); v++)
+        {
+            indegree[vextices[u][v].v]++;  <span class="hljs-comment">// 目标节点v的入度加1</span>
+        }
+    }
+
+    <span class="hljs-comment">// 将所有入度为0的节点放入zero_in_degree中，并确保其升序排列</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = number - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--)
+    {
+        <span class="hljs-keyword">if</span> (indegree[i] == <span class="hljs-number">0</span>)
+        {
+            zero_in_degree.<span class="hljs-built_in">push_back</span>(i);  <span class="hljs-comment">// 入度为0的节点加入队列</span>
+        }
+    }
+
+    <span class="hljs-comment">// Kahn算法进行拓扑排序</span>
+    <span class="hljs-keyword">while</span> (!zero_in_degree.<span class="hljs-built_in">empty</span>())
+    {
+        <span class="hljs-comment">// 取出入度为0的节点处理</span>
+        <span class="hljs-type">int</span> u = zero_in_degree.<span class="hljs-built_in">back</span>();
+        zero_in_degree.<span class="hljs-built_in">pop_back</span>();
+
+        <span class="hljs-comment">// 将节点u加入拓扑排序结果</span>
+        Topo.<span class="hljs-built_in">push_back</span>(u);
+
+        <span class="hljs-comment">// 更新邻接边的入度</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vextices[u].<span class="hljs-built_in">size</span>(); i++)
+        {
+            indegree[vextices[u][i].v]--;  <span class="hljs-comment">// 目标节点v的入度减1</span>
+            <span class="hljs-keyword">if</span> (indegree[vextices[u][i].v] == <span class="hljs-number">0</span>)
+            {
+                <span class="hljs-comment">// 如果目标节点v的入度变为0，将其加入zero_in_degree中</span>
+                zero_in_degree.<span class="hljs-built_in">push_back</span>(vextices[u][i].v);
+
+                <span class="hljs-comment">// 保证zero_in_degree队列按节点编号升序排列</span>
+                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = zero_in_degree.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span> &amp;&amp; zero_in_degree[i] &gt; zero_in_degree[i - <span class="hljs-number">1</span>]; i--)
+                {
+                    <span class="hljs-built_in">swap</span>(zero_in_degree[i], zero_in_degree[i - <span class="hljs-number">1</span>]);  <span class="hljs-comment">// 交换节点</span>
+                }
+            }
+        }
+    }
+
+    <span class="hljs-comment">// 检查是否存在环，如果拓扑排序的结果节点数不等于图的节点数，则说明图中有环</span>
+    <span class="hljs-keyword">if</span> (Topo.<span class="hljs-built_in">size</span>() != number)
+    {
+        <span class="hljs-keyword">return</span> {};  <span class="hljs-comment">// 返回空数组表示图中有环</span>
+    }
+
+    <span class="hljs-comment">// 返回拓扑排序的结果</span>
+    <span class="hljs-keyword">return</span> Topo;
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> n, e;
+    cin &gt;&gt; n &gt;&gt; e;  <span class="hljs-comment">// 输入图的节点数n和边数e</span>
+
+    <span class="hljs-built_in">CreateGraph</span>(n, e);  <span class="hljs-comment">// 创建图并添加边</span>
+
+    vector&lt;<span class="hljs-type">int</span>&gt; topo = <span class="hljs-built_in">TopologicalSort</span>();  <span class="hljs-comment">// 获取拓扑排序结果</span>
+
+    <span class="hljs-comment">// 如果拓扑排序结果为空，说明图中有环</span>
+    <span class="hljs-keyword">if</span> (topo.<span class="hljs-built_in">empty</span>())
+    {
+        cout &lt;&lt; <span class="hljs-string">"unworkable project"</span>;  <span class="hljs-comment">// 输出无法完成的项目</span>
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-comment">// 输出拓扑排序的结果</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span> i : topo)
+        {
+            cout &lt;&lt; i &lt;&lt; <span class="hljs-string">" "</span>;  <span class="hljs-comment">// 输出排序后的节点</span>
+        }
+    }
+}
+</code></pre>
+<h1 id="d-冬奥会接驳车"><a name="d-冬奥会接驳车" class="anchor-navigation-ex-anchor" href="#d-冬奥会接驳车"><i class="fa fa-link" aria-hidden="true"></i></a><strong>D 冬奥会接驳车</strong></h1>
+<p>分数 10</p>
+<p>作者 朱允刚</p>
+<p>单位 吉林大学</p>
+<p>2022年冬奥会科技感十足，奥组委配备了无人驾驶的接驳车。假定你是奥组委的软件工程师，请你为无人接驳车编写路径规划程序，使其载着运动员以最短的时间到达目的地。</p>
+<p><img src="D:\Internt_of_Thing\e_book\coding_problem\assets\a6f4053c-5e4d-45b4-b2b2-863fcbc41934.png" alt="che.png"></img></p>
+<p>接驳车的运行范围可以被建模为一张由n行m列单元格组成的地图。有的单元格是空地，可以走；有的单元格处是障碍物，不能走。假定接驳车只可以朝上、下、左、右四个方向行驶，不能斜着走。每行驶过一个位置（单元格）需要1分钟。给定地图以及运动员的起点和终点，请输出接驳车从起点行驶到终点所需的最短时间。</p>
+<p>输入格式:</p>
+<p>输入包含多组数据。每组数据第一行是两个整数n和m (1≤ m, n ≤100)，表示地图的长和宽；接下来是n行，每行m个数字，表示整个地图。空地格子用0表示，障碍物用1表示，运动员所在起点用3表示，目的地用4表示。</p>
+<p>输出格式:</p>
+<p>对于每组数据，如果接驳车能够到达目的地，输出一个整数，表示运动员从起点到目的地所需的最短时间，如果不能到达目的地，输出“unreachable”。</p>
+<p>输入样例:</p>
+<pre><code class="lang-in">5 5
+1 0 1 1 1
+1 0 4 1 0
+1 0 0 1 0
+0 0 0 1 0
+1 0 3 0 1
+5 5
+3 0 1 1 1
+1 0 1 1 0
+1 0 1 1 0
+0 0 0 1 0
+1 0 1 0 4
+</code></pre>
+<p>输出样例:</p>
+<pre><code class="lang-out">3
+unreachable
+</code></pre>
+<h3 id="解题思路"><a name="解题思路" class="anchor-navigation-ex-anchor" href="#解题思路"><i class="fa fa-link" aria-hidden="true"></i></a>解题思路</h3>
+<p>关键点在于直接利用所给的二维数组建立图</p>
+<ol>
+<li><strong>初始化图</strong>：<ul>
+<li>通过输入生成图，并标记起点<code>startpoint</code>和终点<code>endpoint</code>的位置。为了方便处理边界，可以将图的大小扩展为<code>(n+2) * (m+2)</code>，避免边界判断。扩展后的矩阵外层填充<code>1</code>，表示墙壁，确保不越界。</li>
+<li>并记录起始点</li>
+</ul>
+</li>
+<li><strong>BFS广度优先搜索</strong>：<ul>
+<li>由于我们需要找的是从起点到终点的<strong>最短路径</strong>，且每个节点的权重相同（不考虑权重），广度优先搜索（BFS）是一个很合适的选择。</li>
+<li>BFS的特点是按层次进行遍历，保证了每次访问的节点都是离起点最近的。</li>
+</ul>
+</li>
+<li><strong>BFS的操作</strong>：<ul>
+<li>使用队列来进行广度优先遍历，队列中保存当前的节点坐标。</li>
+<li>每次从队列中取出一个节点，遍历该节点的四个邻居（上下左右），如果邻居是一个可行走的节点（即<code>graph[i][j] != 1</code>）并且还没有访问过，就将其加入队列，更新其到起点的距离。</li>
+<li>继续进行直到队列为空或终点被找到。</li>
+</ul>
+</li>
+<li><strong>检查结果</strong>：<ul>
+<li>如果终点的距离不是<code>INT_MAX</code>，表示可以到达，输出距离；否则，输出<code>unreachable</code>。</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;queue&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;climits&gt;</span>  <span class="hljs-comment">// 用于处理INT_MAX，表示无穷大</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-comment">// 图的邻接矩阵表示</span>
+vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; graph;
+
+<span class="hljs-comment">// 起始点和终点的位置</span>
+pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; startpoint;
+pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; endpoint;
+
+<span class="hljs-comment">// 创建图，并初始化起始点和终点</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CreateGraph</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> m)</span>
+</span>{
+    graph.<span class="hljs-built_in">clear</span>();  <span class="hljs-comment">// 清空图数据</span>
+
+    <span class="hljs-comment">// 增大矩阵的大小以避免边界处理，确保图内元素能够存储在一个大小为(n+2)*(m+2)的矩阵中</span>
+    graph.<span class="hljs-built_in">resize</span>(n + <span class="hljs-number">2</span>, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(m + <span class="hljs-number">2</span>, <span class="hljs-number">1</span>));  <span class="hljs-comment">// 将矩阵初始化为1，1表示不可行走的地方</span>
+
+    <span class="hljs-comment">// 输入图的数据并定位起始点和终点</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    {
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= m; j++)
+        {
+            <span class="hljs-type">int</span> v;
+            cin &gt;&gt; v;  <span class="hljs-comment">// 读取每个位置的值</span>
+
+            <span class="hljs-comment">// 记录起始点和终点的位置</span>
+            <span class="hljs-keyword">if</span> (v == <span class="hljs-number">3</span>)  <span class="hljs-comment">// 起始点</span>
+            {
+                startpoint = <span class="hljs-built_in">make_pair</span>(i, j);
+            }
+            <span class="hljs-keyword">if</span> (v == <span class="hljs-number">4</span>)  <span class="hljs-comment">// 终点</span>
+            {
+                endpoint = <span class="hljs-built_in">make_pair</span>(i, j);
+            }
+
+            graph[i][j] = v;  <span class="hljs-comment">// 将输入的值存入图</span>
+        }
+    }
+}
+
+<span class="hljs-comment">// 处理从点u到点v的移动，并更新dist矩阵</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addresspoint</span><span class="hljs-params">(pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; u, pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; v, vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; dist, queue&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt;&amp; q)</span>
+</span>{
+    <span class="hljs-comment">// 如果u等于v，说明已经到达目标点，直接返回</span>
+    <span class="hljs-keyword">if</span> (u == v) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-comment">// 如果v的值是1，表示不可行走的地方，直接返回</span>
+    <span class="hljs-keyword">if</span> (graph[v.first][v.second] == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-comment">// 如果v尚未访问过（dist[v.first][v.second] == INT_MAX），将其加入队列，并更新距离</span>
+    <span class="hljs-keyword">if</span> (dist[v.first][v.second] == INT_MAX)
+    {
+        q.<span class="hljs-built_in">push</span>(v);  <span class="hljs-comment">// 将v加入队列，准备处理</span>
+        dist[v.first][v.second] = dist[u.first][u.second] + <span class="hljs-number">1</span>;  <span class="hljs-comment">// 更新v的最短距离</span>
+    }
+}
+
+<span class="hljs-comment">// 进行广度优先搜索（BFS）来计算从起始点到所有节点的最短路径</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ShortPath</span><span class="hljs-params">(pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; u, vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; dist)</span>
+</span>{
+    <span class="hljs-comment">// 如果起始点已经访问过，直接返回</span>
+    <span class="hljs-keyword">if</span> (dist[u.first][u.second] != INT_MAX) <span class="hljs-keyword">return</span>;
+
+    dist[u.first][u.second] = <span class="hljs-number">0</span>;  <span class="hljs-comment">// 起始点的距离为0</span>
+
+    <span class="hljs-comment">// 创建一个队列用于BFS</span>
+    queue&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt; q;
+    q.<span class="hljs-built_in">push</span>(u);  <span class="hljs-comment">// 将起始点加入队列</span>
+
+    <span class="hljs-comment">// 广度优先搜索</span>
+    <span class="hljs-keyword">while</span> (!q.<span class="hljs-built_in">empty</span>())
+    {
+        pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; v = q.<span class="hljs-built_in">front</span>();  <span class="hljs-comment">// 取队列头部元素</span>
+        q.<span class="hljs-built_in">pop</span>();  <span class="hljs-comment">// 弹出队列头部元素</span>
+
+        <span class="hljs-comment">// 遍历v的四个方向（上下左右），并更新它们的距离</span>
+        <span class="hljs-built_in">addresspoint</span>(v, <span class="hljs-built_in">make_pair</span>(v.first + <span class="hljs-number">1</span>, v.second), dist, q);  <span class="hljs-comment">// 下</span>
+        <span class="hljs-built_in">addresspoint</span>(v, <span class="hljs-built_in">make_pair</span>(v.first - <span class="hljs-number">1</span>, v.second), dist, q);  <span class="hljs-comment">// 上</span>
+        <span class="hljs-built_in">addresspoint</span>(v, <span class="hljs-built_in">make_pair</span>(v.first, v.second + <span class="hljs-number">1</span>), dist, q);  <span class="hljs-comment">// 右</span>
+        <span class="hljs-built_in">addresspoint</span>(v, <span class="hljs-built_in">make_pair</span>(v.first, v.second - <span class="hljs-number">1</span>), dist, q);  <span class="hljs-comment">// 左</span>
+    }
+}
+
+<span class="hljs-comment">// 计算起始点到终点的最短路径，并输出结果</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">do_ShortPath</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> m)</span>
+</span>{
+    <span class="hljs-comment">// 初始化距离矩阵，所有值初始化为INT_MAX，表示不可达</span>
+    vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt; <span class="hljs-built_in">dist</span>(n + <span class="hljs-number">2</span>, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-type">int</span>&gt;(m + <span class="hljs-number">2</span>, INT_MAX));
+
+    <span class="hljs-comment">// 从起始点开始进行广度优先搜索，更新距离矩阵</span>
+    <span class="hljs-built_in">ShortPath</span>(startpoint, dist);
+
+    <span class="hljs-comment">// 如果终点的距离不为INT_MAX，表示可达，输出最短路径距离</span>
+    <span class="hljs-keyword">if</span> (dist[endpoint.first][endpoint.second] != INT_MAX)
+    {
+        cout &lt;&lt; dist[endpoint.first][endpoint.second] &lt;&lt; endl;
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-comment">// 如果终点的距离仍为INT_MAX，表示不可达，输出“unreachable”</span>
+        cout &lt;&lt; <span class="hljs-string">"unreachable"</span> &lt;&lt; endl;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> n, m;
+    <span class="hljs-keyword">while</span> (cin &gt;&gt; n &gt;&gt; m)  <span class="hljs-comment">// 持续输入图的大小和数据</span>
+    {
+        <span class="hljs-built_in">CreateGraph</span>(n, m);  <span class="hljs-comment">// 创建图</span>
+        <span class="hljs-built_in">do_ShortPath</span>(n, m);  <span class="hljs-comment">// 计算并输出从起点到终点的最短路径</span>
+    }
+}
+</code></pre>
+<h2 id="e-单源最短路径"><a name="e-单源最短路径" class="anchor-navigation-ex-anchor" href="#e-单源最短路径"><i class="fa fa-link" aria-hidden="true"></i></a><strong>E 单源最短路径</strong></h2>
+<p>分数 10</p>
+<p>作者 朱允刚</p>
+<p>单位 吉林大学</p>
+<p>请编写程序求给定正权有向图的单源最短路径长度。图中包含n个顶点，编号为0至n-1，以顶点0作为源点。 </p>
+<p>输入格式:</p>
+<p>输入第一行为两个正整数n和e，分别表示图的顶点数和边数，其中n不超过20000，e不超过1000。接下来e行表示每条边的信息，每行为3个非负整数a、b、c，其中a和b表示该边的端点编号，c表示权值。各边并非按端点编号顺序排列。</p>
+<p>输出格式:</p>
+<p>输出为一行整数，为按顶点编号顺序排列的源点0到各顶点的最短路径长度（不含源点到源点），每个整数后一个空格。如源点到某顶点无最短路径，则不输出该条路径长度。</p>
+<p>输入样例:</p>
+<pre><code class="lang-in">4 4
+0 1 1
+0 3 1
+1 3 1
+2 0 1
+</code></pre>
+<p>输出样例:</p>
+<pre><code class="lang-out">1 1
+</code></pre>
+<h2 id="解题思路_1"><a name="解题思路_1" class="anchor-navigation-ex-anchor" href="#解题思路_1"><i class="fa fa-link" aria-hidden="true"></i></a>解题思路</h2>
+<ul>
+<li>重点在于使用优先队列优化算法</li>
+</ul>
+<pre><code class="lang-cpp"><span class="hljs-comment">// 使用优先队列实现Dijkstra算法计算最短路径以优化时间</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">queue_ShortPath</span><span class="hljs-params">(<span class="hljs-type">int</span> start, vector&lt;<span class="hljs-type">int</span>&gt;&amp; dist)</span>
+</span>{
+    dist[start] = <span class="hljs-number">0</span>;  <span class="hljs-comment">// 起点的距离设为0</span>
+
+    <span class="hljs-comment">// 优先队列，存储 (距离, 节点) 对，按距离升序排列</span>
+    priority_queue &lt; pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;, vector&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt;, greater&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt;&gt; pq;
+    pq.<span class="hljs-built_in">push</span>({ <span class="hljs-number">0</span>, start });  <span class="hljs-comment">// 将起点加入队列</span>
+
+    <span class="hljs-comment">// 队列非空时继续处理</span>
+    <span class="hljs-keyword">while</span> (!pq.<span class="hljs-built_in">empty</span>())
+    {
+        <span class="hljs-type">int</span> d = pq.<span class="hljs-built_in">top</span>().first;  <span class="hljs-comment">// 当前节点的距离</span>
+        <span class="hljs-type">int</span> u = pq.<span class="hljs-built_in">top</span>().second; <span class="hljs-comment">// 当前节点</span>
+        pq.<span class="hljs-built_in">pop</span>();
+
+        <span class="hljs-comment">// 如果当前距离大于已知最短距离，跳过，即已经更新的点</span>
+        <span class="hljs-keyword">if</span> (d &gt; dist[u]) <span class="hljs-keyword">continue</span>;
+
+        <span class="hljs-comment">// 遍历当前节点u的所有出边</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; e : vertices[u])
+        {
+            <span class="hljs-type">int</span> v = e.v;  <span class="hljs-comment">// 目标节点</span>
+            <span class="hljs-type">int</span> w = e.w;  <span class="hljs-comment">// 边的权重</span>
+
+            <span class="hljs-comment">// 如果从u到v的距离更短，则更新v的最短距离</span>
+            <span class="hljs-keyword">if</span> (dist[u] + w &lt; dist[v])
+            {
+                dist[v] = dist[u] + w;  <span class="hljs-comment">// 更新v的最短路径</span>
+                pq.<span class="hljs-built_in">push</span>({ dist[v], v });  <span class="hljs-comment">// 将更新后的节点加入队列</span>
+            }
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;queue&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;climits&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-comment">// 边类定义，包含目标节点v和权重w</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">edge</span>
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-type">int</span> v;  <span class="hljs-comment">// 目标节点</span>
+    <span class="hljs-type">int</span> w;  <span class="hljs-comment">// 边的权重</span>
+
+    <span class="hljs-comment">// 构造函数初始化目标节点v和权重w</span>
+    <span class="hljs-built_in">edge</span>(<span class="hljs-type">int</span> _v, <span class="hljs-type">int</span> _w = <span class="hljs-number">1</span>) : <span class="hljs-built_in">v</span>(_v), <span class="hljs-built_in">w</span>(_w) { }
+};
+
+vector&lt;vector&lt;edge&gt;&gt; vertices;  <span class="hljs-comment">// 图的邻接表，保存每个节点的出边</span>
+vector&lt;<span class="hljs-type">bool</span>&gt; vis;  <span class="hljs-comment">// 记录节点是否已经访问</span>
+
+<span class="hljs-comment">// 向图中添加一条边</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addedge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v, <span class="hljs-type">int</span> w)</span>
+</span>{
+    <span class="hljs-comment">// 创建一条从u到v的边，权重为w</span>
+    <span class="hljs-function">edge <span class="hljs-title">p</span><span class="hljs-params">(v, w)</span></span>;
+    vertices[u].<span class="hljs-built_in">push_back</span>(p);
+}
+
+<span class="hljs-comment">// 创建图，输入节点数量n和边的数量e，建立邻接表</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CreateGraph</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> e)</span>
+</span>{
+    vertices.<span class="hljs-built_in">resize</span>(n);  <span class="hljs-comment">// 根据节点数调整邻接表的大小</span>
+
+    <span class="hljs-comment">// 输入每条边的信息，建立图的边</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; e; i++)
+    {
+        <span class="hljs-type">int</span> u, v, w;
+        cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;  <span class="hljs-comment">// 输入边的起点u，终点v和权重w</span>
+        <span class="hljs-built_in">addedge</span>(u, v, w);     <span class="hljs-comment">// 将边添加到图中</span>
+    }
+}
+
+<span class="hljs-comment">// 使用优先队列实现Dijkstra算法计算最短路径以优化时间</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">queue_ShortPath</span><span class="hljs-params">(<span class="hljs-type">int</span> start, vector&lt;<span class="hljs-type">int</span>&gt;&amp; dist)</span>
+</span>{
+    dist[start] = <span class="hljs-number">0</span>;  <span class="hljs-comment">// 起点的距离设为0</span>
+
+    <span class="hljs-comment">// 优先队列，存储 (距离, 节点) 对，按距离升序排列</span>
+    priority_queue &lt; pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;, vector&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt;, greater&lt;pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt;&gt;&gt; pq;
+    pq.<span class="hljs-built_in">push</span>({ <span class="hljs-number">0</span>, start });  <span class="hljs-comment">// 将起点加入队列</span>
+
+    <span class="hljs-comment">// 队列非空时继续处理</span>
+    <span class="hljs-keyword">while</span> (!pq.<span class="hljs-built_in">empty</span>())
+    {
+        <span class="hljs-type">int</span> d = pq.<span class="hljs-built_in">top</span>().first;  <span class="hljs-comment">// 当前节点的距离</span>
+        <span class="hljs-type">int</span> u = pq.<span class="hljs-built_in">top</span>().second; <span class="hljs-comment">// 当前节点</span>
+        pq.<span class="hljs-built_in">pop</span>();
+
+        <span class="hljs-comment">// 如果当前距离大于已知最短距离，跳过，即已经更新的点</span>
+        <span class="hljs-keyword">if</span> (d &gt; dist[u]) <span class="hljs-keyword">continue</span>;
+
+        <span class="hljs-comment">// 遍历当前节点u的所有出边</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span>&amp; e : vertices[u])
+        {
+            <span class="hljs-type">int</span> v = e.v;  <span class="hljs-comment">// 目标节点</span>
+            <span class="hljs-type">int</span> w = e.w;  <span class="hljs-comment">// 边的权重</span>
+
+            <span class="hljs-comment">// 如果从u到v的距离更短，则更新v的最短距离</span>
+            <span class="hljs-keyword">if</span> (dist[u] + w &lt; dist[v])
+            {
+                dist[v] = dist[u] + w;  <span class="hljs-comment">// 更新v的最短路径</span>
+                pq.<span class="hljs-built_in">push</span>({ dist[v], v });  <span class="hljs-comment">// 将更新后的节点加入队列</span>
+            }
+        }
+    }
+}
+
+<span class="hljs-comment">// 经典的Dijkstra算法实现（没有使用优先队列）</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">ShortPath</span><span class="hljs-params">(<span class="hljs-type">int</span> u, vector&lt;<span class="hljs-type">int</span>&gt;&amp; dist, vector&lt;<span class="hljs-type">bool</span>&gt;&amp; vis)</span>
+</span>{
+    vis[u] = <span class="hljs-literal">true</span>;  <span class="hljs-comment">// 标记起点已访问</span>
+    dist[u] = <span class="hljs-number">0</span>;  <span class="hljs-comment">// 起点到自身的距离为0</span>
+
+    <span class="hljs-comment">// 初始化dist数组，起点的邻接边的距离</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; vertices[u].<span class="hljs-built_in">size</span>(); i++)
+    {
+        dist[vertices[u][i].v] = vertices[u][i].w;
+    }
+
+    <span class="hljs-comment">// 遍历所有节点，更新最短路径</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; dist.<span class="hljs-built_in">size</span>(); i++)
+    {
+        <span class="hljs-type">int</span> min = INT_MAX;
+        <span class="hljs-type">int</span> v = u;
+
+        <span class="hljs-comment">// 找到当前未访问的节点中距离最小的节点</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; dist.<span class="hljs-built_in">size</span>(); j++)
+        {
+            <span class="hljs-keyword">if</span> (!vis[j] &amp;&amp; dist[j] &lt; min)
+            {
+                v = j;
+                min = dist[j];
+            }
+        }
+
+        <span class="hljs-comment">// 标记当前节点已访问</span>
+        vis[v] = <span class="hljs-literal">true</span>;
+
+        <span class="hljs-comment">// 更新v的邻接边</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; k &lt; vertices[v].<span class="hljs-built_in">size</span>(); k++)
+        {
+            <span class="hljs-keyword">if</span> (!vis[vertices[v][k].v] &amp;&amp; dist[v] + vertices[v][k].w &lt; dist[vertices[v][k].v])
+            {
+                dist[vertices[v][k].v] = dist[v] + vertices[v][k].w;  <span class="hljs-comment">// 更新最短路径</span>
+            }
+        }
+    }
+}
+
+<span class="hljs-comment">// 计算并输出从起点到所有其他节点的最短路径</span>
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">do_ShortPath</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span>
+</span>{
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">dist</span><span class="hljs-params">(n, INT_MAX)</span></span>;  <span class="hljs-comment">// 初始化dist数组，默认每个节点的距离为无穷大</span>
+
+    <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-comment">// 使用优先队列实现Dijkstra算法，从起点0开始计算最短路径</span>
+    <span class="hljs-built_in">queue_ShortPath</span>(<span class="hljs-number">0</span>, dist);
+
+    <span class="hljs-comment">// 输出从起点到其他节点的最短路径</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)
+    {
+        <span class="hljs-keyword">if</span> (dist[i] != INT_MAX)
+        {
+            cout &lt;&lt; dist[i] &lt;&lt; <span class="hljs-string">" "</span>;  <span class="hljs-comment">// 输出节点i的最短路径</span>
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-type">int</span> n, e;
+    cin &gt;&gt; n &gt;&gt; e;  <span class="hljs-comment">// 输入节点数和边数</span>
+
+    <span class="hljs-built_in">CreateGraph</span>(n, e);  <span class="hljs-comment">// 创建图</span>
+
+    <span class="hljs-built_in">do_ShortPath</span>(n);  <span class="hljs-comment">// 计算并输出最短路径</span>
+}
+</code></pre>
+<p></p><footer class="page-footer" style="font-size:1.0rem;"><span class="copyright">©<a href="https://jlu005807.github.io/" target="_blank">OZY</a> all right reserved</span><span class="footer-modification">该文件修订时间：
+2026-06-14 11:15:13
+</span></footer><script>window.__tbfed_pagefooter_config = {"theme_colors":{"color-theme-1":"#000000ff","color-theme-2":"#d9d9d9ff"}};</script><script src="./gitbook/honkit-plugin-tbfed-pagefooter/footer-theme.js"></script><p></p>
+<!-- Giscus 评论组件开始 - 2026-06-14T11:15:25.183Z -->
+<p><script type="text/javascript">
+/* Giscus Theme Mapping and Config */
+window.giscusThemeMapping = {"color-theme-1":"gruvbox","color-theme-2":"dark_dimmed","default":"light","sepia":"preferred_color_scheme","night":"dark_dimmed","white":"light"};
+window.giscusConfig = {"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","mapping":"pathname","strict":"1","reactionsEnabled":"1","emitMetadata":"0","inputPosition":"bottom","theme":"light","lang":"zh-CN","loading":"eager"};
+</script></p>
+<p></p><div id="giscus-container" style="margin-top: 50px; padding: 10px; border-top: 1px solid #eaecef;"><div class="giscus-page-info" style="margin-bottom: 15px; font-size: 0.9em; color: #666;">评论区 - 计算机23级数据结构上机实验（第5-6周）</div>
+<!-- giscus client.js will be inserted by giscus-theme-switcher.js --><p></p>
+<!-- Giscus 评论组件结束 --></div></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="计算机23级数据结构上机实验（第3-4周）.html" class="navigation navigation-prev " aria-label="Previous page: 计算机23级数据结构上机实验（第3-4周）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="计算机23级数据结构上级实验（第7周）.html" class="navigation navigation-next " aria-label="Next page: 计算机23级数据结构上级实验（第7周）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"计算机23级数据结构上机实验（第5-6周）","level":"1.3.1.13","depth":3,"next":{"title":"计算机23级数据结构上级实验（第7周）","level":"1.3.1.14","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/计算机23级数据结构上级实验（第7周）.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/计算机23级数据结构上级实验（第7周）.md","articles":[]},"previous":{"title":"计算机23级数据结构上机实验（第3-4周）","level":"1.3.1.12","depth":3,"path":"docs/DataStructure_and_Algorithms/Data_structure/计算机23级数据结构上机实验（第3-4周）.md","ref":"docs/DataStructure_and_Algorithms/Data_structure/计算机23级数据结构上机实验（第3-4周）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","search-pro","chapter-fold","expandable-chapters","anchor-navigation-ex","code","page-treeview-simple","flexible-alerts","versions-select","tbfed-pagefooter","add-giscus"],"styles":{"website":"styles/website.css","ebook":"styles/website.css","pdf":"styles/website.css","mobi":"styles/website.css","epub":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy;<a href=\"https://jlu005807.github.io/\">OZY</a>","show_modify_time":true,"font_size":"1.0rem","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss","show_power":false,"hover":true},"chapter-fold":{},"search-pro":{},"code":{"copyButtons":true},"versions-select":{"type":"branches"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"versions":{"options":[{"value":"https://jlu005807.github.io/docs.ozy","text":"docs.ozy","selected":true},{"value":"https://jlu005807.github.io/","text":"github.io.ozy"},{"value":"https://jlu005807.github.io/photo.ozy/","text":"photo.ozy"}]},"add-giscus":{"repo":"jlu005807/docs.ozy","repoId":"R_kgDOPrTeig","category":"General","categoryId":"DIC_kwDOPrTeis4CvFgy","theme_config":{"default":"light","color-theme-1":"gruvbox","color-theme-2":"dark_dimmed"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"page-treeview-simple":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"expandable-chapters":{}},"theme":"default","author":"ozy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"docs.ozy","language":"zh-hans","gitbook":"3.2.3","description":"我的文档站点"},"file":{"path":"docs/DataStructure_and_Algorithms/Data_structure/计算机23级数据结构上机实验（第5-6周）.md","mtime":"2026-06-14T11:15:13.665Z","type":"markdown"},"gitbook":{"version":"6.0.4","time":"2026-06-14T11:15:21.685Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/honkit-plugin-add-giscus/giscus-theme-switcher.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
