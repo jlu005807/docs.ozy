@@ -7,7 +7,8 @@
 - 📁 其中网页各个页面笔记对应的原 Markdown 文件位于 [docs](https://github.com/jlu005807/docs.ozy/tree/master/docs)，已全部上传，方便大家下载到本地离线浏览。
 - 🏠 最后，这是我的个人主页 [ozy.website](https://jlu005807.github.io/)，里面有我的自我介绍以及一些项目的简介，欢迎大家访问浏览并留言评论，谢谢！
 - ⭐ 如果你已经看到了这里，麻烦大家为我的仓库 [docs.ozy](https://github.com/jlu005807/docs.ozy) 以及其他你感兴趣的仓库点个 **Star**，十分感谢！
-
+- 最后的最后，我真切大家可以从中学到很多东西，从中可以想清楚可能课上没想明白的事情，当前我还希望[docs.ozy](https://github.com/jlu005807/docs.ozy)只是一个开始，以后的以后希望可以看到大家的笔记也出现在网上进行分享。
+---
 ### 💬 想交流或反馈问题？
 1. 💡 可以直接在页面底部的评论区发表你的建议。
 2. 🛠️ 在 [docs.ozy](https://github.com/jlu005807/docs.ozy) 仓库提交 Issue。同样欢迎 PR 和改进意见。
@@ -18,7 +19,7 @@
 > [!tip]
 > 🔍 可以通过左上角的**搜索栏**搜索你感兴趣的相关内容。
 
-☕ 如果我的内容对你确实有所帮助，或者你真的从中提取到了知识，不妨请我喝一杯奶茶：蜜雪冰城就行
+☕ 如果我的内容对你确实有所帮助，或者你真的从中学到了一些东西，不妨请我喝一杯奶茶：蜜雪冰城就行
 <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;align-items:center;">
   <img src="assets/alipay.jpg" alt="Alipay" style="max-width:40%;max-height:40vh;width:auto;height:auto;display:block;" />
   <img src="assets/wechat.jpg" alt="Wechat" style="max-width:40%;max-height:40vh;width:auto;height:auto;display:block;" />
