@@ -30,3 +30,9 @@
 - 本项目使用 MIT 许可证，详情请查看仓库中的 [LICENSE](LICENSE) 文件。
 - This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 - SPDX-License-Identifier: MIT
+
+## 提醒
+- 本站内容与网页公开版本均为开源免费分享，请勿随意直接用于商用或收费用途。
+- 如需引用、转载或二次发布，请注明来源与网址，并保留原始链接信息。同时需要注明原始资源为开源免费
+- 如果你在网上看到相同内容被拿去收费或标价，请及时反馈，帮助大家避免上当受骗。
+- 如果你打算将内容用于商业场景，请先自行确认授权与合规性。
